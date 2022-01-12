@@ -12,7 +12,7 @@ git:
         path: user/plugins/markdown-notices
         branch: master
     quark:
-        url: https://github.com/getgrav/grav-theme-quark
+        url: https://github.com/coreBOS/coreBOSDocumentation-theme
         path: user/themes/quark
         branch: master
 links:
@@ -29,6 +29,6 @@ links:
         path: user/plugins/markdown-notices
         scm: github
     quark:
-        src: grav-theme-quark
+        src: coreBOSDocumentation-theme
         path: user/themes/quark
         scm: github
