@@ -5,7 +5,7 @@ declare(strict_types=1);
 /**
  * @package    Grav\Framework\Filesystem
  *
- * @copyright  Copyright (c) 2015 - 2021 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2022 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -239,6 +239,8 @@ class Filesystem implements FilesystemInterface
 
         if (null !== $scheme) {
             $info['scheme'] = $scheme;
+
+            /** @phpstan-ignore-next-line because pathinfo('') doesn't have dirname */
             $dirname = $info['dirname'] ?? '.';
 
             if ('' !== $dirname && '.' !== $dirname) {

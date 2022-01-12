@@ -4,56 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "209e1ceeafd2ef97fbf90bf4b1ec5dd4",
+    "content-hash": "1067938388862c52927c6450e8a36df0",
     "packages": [
-        {
-            "name": "antoligy/dom-string-iterators",
-            "version": "v1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/antoligy/dom-string-iterators.git",
-                "reference": "fae88f66e1970d68c5585fc42db44f1217bf74e6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/antoligy/dom-string-iterators/zipball/fae88f66e1970d68c5585fc42db44f1217bf74e6",
-                "reference": "fae88f66e1970d68c5585fc42db44f1217bf74e6",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "CC0-1.0"
-            ],
-            "authors": [
-                {
-                    "name": "Alex Wilson",
-                    "email": "a@ax.gy"
-                },
-                {
-                    "name": "Kornel Lesinski",
-                    "email": "pornel@pornel.net"
-                },
-                {
-                    "name": "Patrick Galbraith",
-                    "email": "patrick.j.galbraith@gmail.com"
-                }
-            ],
-            "description": "Composer package for DOMWordsIterator and DOMLettersIterator",
-            "support": {
-                "issues": "https://github.com/antoligy/dom-string-iterators/issues",
-                "source": "https://github.com/antoligy/dom-string-iterators/tree/v1.0.1"
-            },
-            "time": "2018-02-03T16:01:11+00:00"
-        },
         {
             "name": "composer/ca-bundle",
             "version": "1.3.1",
@@ -888,16 +840,16 @@
         },
         {
             "name": "itsgoingd/clockwork",
-            "version": "v5.1.1",
+            "version": "v5.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/itsgoingd/clockwork.git",
-                "reference": "2daf30fa6dfc5a1ccfdb2142df59243a72c473d8"
+                "reference": "4f46a69b123635ba2910a3ca8d100edfadc924e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/itsgoingd/clockwork/zipball/2daf30fa6dfc5a1ccfdb2142df59243a72c473d8",
-                "reference": "2daf30fa6dfc5a1ccfdb2142df59243a72c473d8",
+                "url": "https://api.github.com/repos/itsgoingd/clockwork/zipball/4f46a69b123635ba2910a3ca8d100edfadc924e1",
+                "reference": "4f46a69b123635ba2910a3ca8d100edfadc924e1",
                 "shasum": ""
             },
             "require": {
@@ -945,7 +897,7 @@
             ],
             "support": {
                 "issues": "https://github.com/itsgoingd/clockwork/issues",
-                "source": "https://github.com/itsgoingd/clockwork/tree/v5.1.1"
+                "source": "https://github.com/itsgoingd/clockwork/tree/v5.1.2"
             },
             "funding": [
                 {
@@ -953,7 +905,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-11-01T17:38:35+00:00"
+            "time": "2021-12-07T18:24:19+00:00"
         },
         {
             "name": "league/climate",
@@ -2123,16 +2075,16 @@
         },
         {
             "name": "rockettheme/toolbox",
-            "version": "1.5.11",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rockettheme/toolbox.git",
-                "reference": "ea23368c1bf635981c7b33babd842a6236befd86"
+                "reference": "a0eb328b9c416e526c8264b48ccbc1a7519e8618"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rockettheme/toolbox/zipball/ea23368c1bf635981c7b33babd842a6236befd86",
-                "reference": "ea23368c1bf635981c7b33babd842a6236befd86",
+                "url": "https://api.github.com/repos/rockettheme/toolbox/zipball/a0eb328b9c416e526c8264b48ccbc1a7519e8618",
+                "reference": "a0eb328b9c416e526c8264b48ccbc1a7519e8618",
                 "shasum": ""
             },
             "require": {
@@ -2145,9 +2097,9 @@
                 "symfony/yaml": "^3.4|^4.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan": "^1.2",
                 "phpstan/phpstan-deprecation-rules": "^1.0",
-                "phpunit/phpunit": "~8.0"
+                "phpunit/phpunit": "^8.0"
             },
             "type": "library",
             "autoload": {
@@ -2161,7 +2113,10 @@
                     "RocketTheme\\Toolbox\\ResourceLocator\\": "ResourceLocator/src",
                     "RocketTheme\\Toolbox\\Session\\": "Session/src",
                     "RocketTheme\\Toolbox\\StreamWrapper\\": "StreamWrapper/src"
-                }
+                },
+                "exclude-from-classmap": [
+                    "**/tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2175,9 +2130,9 @@
             ],
             "support": {
                 "issues": "https://github.com/rockettheme/toolbox/issues",
-                "source": "https://github.com/rockettheme/toolbox/tree/1.5.11"
+                "source": "https://github.com/rockettheme/toolbox/tree/1.6.0"
             },
-            "time": "2021-11-25T19:43:12+00:00"
+            "time": "2021-12-15T19:20:00+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -3487,16 +3442,16 @@
         },
         {
             "name": "codeception/codeception",
-            "version": "4.1.22",
+            "version": "4.1.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "9777ec3690ceedc4bce2ed13af7af4ca4ee3088f"
+                "reference": "27d18cd5d5a1d77d3f1b01ea776238676faf5dcc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/9777ec3690ceedc4bce2ed13af7af4ca4ee3088f",
-                "reference": "9777ec3690ceedc4bce2ed13af7af4ca4ee3088f",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/27d18cd5d5a1d77d3f1b01ea776238676faf5dcc",
+                "reference": "27d18cd5d5a1d77d3f1b01ea776238676faf5dcc",
                 "shasum": ""
             },
             "require": {
@@ -3546,7 +3501,10 @@
                 "psr-4": {
                     "Codeception\\": "src/Codeception",
                     "Codeception\\Extension\\": "ext"
-                }
+                },
+                "files": [
+                    "functions.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -3570,7 +3528,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Codeception/Codeception/issues",
-                "source": "https://github.com/Codeception/Codeception/tree/4.1.22"
+                "source": "https://github.com/Codeception/Codeception/tree/4.1.23"
             },
             "funding": [
                 {
@@ -3578,7 +3536,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2021-08-06T17:15:34+00:00"
+            "time": "2021-12-11T18:05:26+00:00"
         },
         {
             "name": "codeception/lib-asserts",
@@ -4610,16 +4568,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.14.0",
+            "version": "v1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "d86dfc2e2a3cd366cee475e52c6bb3bbc371aa0e"
+                "reference": "bbcd7380b0ebf3961ee21409db7b38bc31d69a13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/d86dfc2e2a3cd366cee475e52c6bb3bbc371aa0e",
-                "reference": "d86dfc2e2a3cd366cee475e52c6bb3bbc371aa0e",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/bbcd7380b0ebf3961ee21409db7b38bc31d69a13",
+                "reference": "bbcd7380b0ebf3961ee21409db7b38bc31d69a13",
                 "shasum": ""
             },
             "require": {
@@ -4671,9 +4629,9 @@
             ],
             "support": {
                 "issues": "https://github.com/phpspec/prophecy/issues",
-                "source": "https://github.com/phpspec/prophecy/tree/1.14.0"
+                "source": "https://github.com/phpspec/prophecy/tree/v1.15.0"
             },
-            "time": "2021-09-10T09:02:12+00:00"
+            "time": "2021-12-08T12:19:24+00:00"
         },
         {
             "name": "phpstan/phpstan",

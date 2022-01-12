@@ -3,7 +3,7 @@
 /**
  * @package    Grav\Common\Page
  *
- * @copyright  Copyright (c) 2015 - 2021 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2022 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -22,7 +22,12 @@ use Grav\Common\Media\Traits\MediaObjectTrait;
  * Class Medium
  * @package Grav\Common\Page\Medium
  *
+ * @property string $filepath
  * @property string $mime
+ * @property int $size
+ * @property int $modified
+ * @property array $metadata
+ * @property int|string $timestamp
  */
 class Medium extends Data implements RenderableInterface, MediaFileInterface
 {
