@@ -15,6 +15,10 @@ git:
         url: https://github.com/coreBOS/coreBOSDocumentation-theme
         path: user/themes/quark
         branch: master
+    tok:
+        url: https://github.com/trilbymedia/grav-plugin-page-toc
+        path: user/plugins/toc
+        branch: master
 links:
     problems:
         src: grav-plugin-problems
@@ -32,3 +36,7 @@ links:
         src: coreBOSDocumentation-theme
         path: user/themes/quark
         scm: github
+    tok:
+        src: grav-plugin-page-toc
+        path: user/plugins/toc
+        branch: master
