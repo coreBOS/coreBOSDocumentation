@@ -1,0 +1,31 @@
+---
+title: 'Field Set Mapping'
+---
+
+Field Set Mapping
+=================
+
+The purpose of this mapping is to define a heterogeneous set of fields
+that belong to some modules. Simply a bunch of fields. This could be
+used to define a set of fields to launch a mass operation upon or a set
+of fields which must be excluded/included from some global process.
+
+The accepted format is:
+
+     <map>
+      <module>
+      <name>ModuleName</name>
+      <fields>
+        <field>
+          <name>fieldname</name>
+          <info>anything you need</info>
+        </field>
+      .....
+      </fields>
+      </module>
+      ....
+     </map>
+
+You will be able to get the set of fields using the getFieldSet()
+method, and the fields on one module with the getFieldSetModule($module)
+method.
