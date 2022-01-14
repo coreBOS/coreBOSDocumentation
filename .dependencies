@@ -23,6 +23,18 @@ git:
         url: https://github.com/getgrav/grav-plugin-admin
         path: user/plugins/admin
         branch: master
+    modified-date:
+        url: https://github.com/fulltrucker/grav-plugin-modified-date
+        path: user/plugins/modified-date
+        branch: master
+    highlight:
+        url: https://github.com/getgrav/grav-plugin-highlight
+        path: user/plugins/highlight
+        branch: master
+    prism-highlight:
+        url: https://github.com/trilbymedia/grav-plugin-prism-highlight
+        path: user/plugins/prism-highlight
+        branch: master
 links:
     problems:
         src: grav-plugin-problems
@@ -47,4 +59,16 @@ links:
     admin:
         src: grav-plugin-admin
         path: user/plugins/admin
+        branch: master
+    modified-date:
+        src: grav-plugin-modified-date
+        path: user/plugins/modified-date
+        branch: master
+    highlight:
+        src: grav-plugin-highlight
+        path: user/plugins/highlight
+        branch: master
+    prism-highlight:
+        src: grav-plugin-prism-highlight
+        path: user/plugins/prism-highlight
         branch: master
