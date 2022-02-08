@@ -1,5 +1,14 @@
 ---
 title: 'Detail View Layout Mapping'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 Detail View Layout Mapping
@@ -33,7 +42,7 @@ There are 6 types of blocks:
     directly include your code inside
 
 The accepted format is:
-
+```xml
     <map>
       <originmodule>
         <originname></originname>
@@ -55,7 +64,7 @@ The accepted format is:
         </block>
       </blocks>
     </map>
-
+```
 Let's explain the dependencies between the directives and their meaning
 a little more.
 
@@ -82,9 +91,9 @@ directive *handler\_class* to define the name of the widget. In this
 case, the two directives will be used to construct the Detail View
 Widget reference object, with no additional parameters. It would be
 constructed like this:
-
+```
     block://handler_class:loadfrom
-
+```
 If *type* is **CodeWithHeader** or **CodeWithoutHeader** we have two
 options depending on how the code has been created.
 
@@ -97,10 +106,10 @@ If the script is class-based, then you can (optionally), define the name
 of the class to instantiate in the directive *handler\_class* and the
 method to execute in the directive *handler*. If these two directives
 have values the code will be loaded like this:
-
+```
     $dvl = new handler_class();
     $dvl->handler();
-
+```
 Detail View Layout Widget
 =========================
 
@@ -120,28 +129,29 @@ picture.
 
 The name of the widget is **showSetOfFieldsWidget** and the syntax of
 the business action for each type is:
-
+```
     block://showSetOfFieldsWidget:modules/Utilities/showSetOfFieldsWidget.php:record_id=$RECORD$&mapid=detailviewlayout_mapid
-
+```
 to get it in the right action panel you would use:
-
-    module=Utilities&action=UtilitiesAjax&file=showSetOfFieldsWidget&MODULE=HelpDesk&RECORDID=$RECORD$&dvmodule=Products&dvrecord=$product_id&mapid=detailviewlayout_mapid
+ module=Utilities&action=UtilitiesAjax&file=showSetOfFieldsWidget&MODULE=HelpDesk&RECORDID=$RECORD$&dvmodule=Products&dvrecord=$product_id&mapid=detailviewlayout_mapid
 
 The **ApplicationFields** and **FieldList** types require two additional
 parameters which represent the module (dvmodule) and record (dvrecord)
 from where they are supposed to get the fields to show.
 
-    block://showSetOfFieldsWidget:modules/Utilities/showSetOfFieldsWidget.php:record_id=$RECORD$&dvmodule=module_to_show&dvrecord=field_with_recordid&mapid=detailviewlayout_mapid
+```
+block://showSetOfFieldsWidget:modules/Utilities/showSetOfFieldsWidget.php:record_id=$RECORD$&dvmodule=module_to_show&dvrecord=field_with_recordid&mapid=detailviewlayout_mapid
+```
 
 Watch the video presentation to get a full idea of the possibilities
 
-![](youtube>RrTJ19hBBFE)
+<iframe width="542" height="261" src="https://www.youtube.com/embed/RrTJ19hBBFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 You can find next the relation of maps I used for testing and the video
 presentation.
 
 **Detail View Widget**
-
+```xml
     <map>
     <blocks>
       <block>
@@ -151,9 +161,9 @@ presentation.
       </block>
     </blocks>
     </map>
-
+```
 **Application Fields**
-
+```xml
     <map>
     <originmodule>
         <originname>Products</originname>
@@ -165,9 +175,9 @@ presentation.
       </block>
     </blocks>
     </map>
-
+```
 **Code With/Without Header**
-
+```xml
     <map>
     <blocks>
       <block>
@@ -176,15 +186,15 @@ presentation.
       </block>
     </blocks>
     </map>
-
+```
 The *sayhi.php* is a script in the root of the coreBOS install with this
 contents:
-
+```php
     <?php
     echo "hello widget!";
-
+```
 **Field List**
-
+```xml
     <map>
     <originmodule>
         <originname>Products</originname>
@@ -201,9 +211,9 @@ contents:
       </block>
     </blocks>
     </map>
-
+```
 **Related List**
-
+```xml
     <map>
     <originmodule>
         <originname>HelpDesk</originname>
@@ -216,3 +226,4 @@ contents:
       </block>
     </blocks>
     </map>
+```

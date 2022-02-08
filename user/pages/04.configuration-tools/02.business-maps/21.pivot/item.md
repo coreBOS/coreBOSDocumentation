@@ -1,5 +1,14 @@
 ---
 title: 'Pivot View Mapping'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 Pivot View Mapping
@@ -21,7 +30,7 @@ and roles (among other escalation rules) just like most of the other
 maps.
 
 The accepted format is:
-
+```xml
     <map>
         <module>Module name</module>
         <filter>filter name</filter>
@@ -39,9 +48,9 @@ The accepted format is:
             </col>
         </cols>
     </map>
-
+```
 This is a test map you can use to see it in action.
-
+```xml
     <map>
     <module>Accounts</module>
     <filter>All</filter>
@@ -63,7 +72,7 @@ This is a test map you can use to see it in action.
             </col>
     </cols>
     </map>
-
+```
 Which looks like this
 
 ![](/en/adminmanual/businessmappings/preview-screenshot_at_2021-10-08_17-27-20.png)

@@ -1,12 +1,21 @@
 ---
 title: 'Duplicate Records Business Mapping'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 Duplicate Records Business Mapping
 ==================================
 
 The accepted format is
-
+```xml
     <map>
         <originmodule>
             <originname>Contacts</originname> {optional}
@@ -24,7 +33,7 @@ The accepted format is
         </relatedmodules>
         <DuplicateDirectRelations>false</DuplicateDirectRelations> Allowed values: true, false
     </map>
-
+```
 This is a workflow configuration map. It permits you to define the
 related modules that will be duplicated when launching a Duplicate
 Records workflow task.
@@ -58,8 +67,10 @@ related to both records; the original and the duplicate. If the relation
 is 1:n, then new records will be created and related to the duplicate
 record.
 
-&lt;WRAP center round info 80%&gt; Only standard vtlib relations are
-supported (get\_dependents\_list and get\_related\_list) &lt;/WRAP&gt;
+<div class="notices blue">
+Only standard vtlib relations are
+supported (get\_dependents\_list and get\_related\_list)
+</div>
 
 Using the **relatedmodule** directives we can limit the relations we
 want to be duplicated in order to avoid doing more work than necessary
@@ -121,7 +132,7 @@ also a helpful field to have around. You can set it to displaytype 3 or
 4 if you don't want to have it on the display.
 
 This is the code to add the field:
-
+```php
     <?php
 
     // Turn on debugging level
@@ -162,3 +173,4 @@ This is the code to add the field:
     }
 
     ?>
+```

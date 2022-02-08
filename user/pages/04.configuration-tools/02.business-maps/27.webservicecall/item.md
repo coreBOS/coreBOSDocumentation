@@ -1,5 +1,13 @@
 ---
 title: 'REST/SOAP call and retrieval Mapping'
+content:
+    items: '@self.children'
+    limit: '5'
+    order:
+        by: date
+        dir: desc
+    pagination: '1'
+    url_taxonomy_filters: '1'
 ---
 
 REST/SOAP call and retrieval Mapping
@@ -106,7 +114,7 @@ Examples
 
 An example of Map for SOAP Call:
 --------------------------------
-
+```xml
     <map>
     <originmodule>
     <originname>Accounts</originname>
@@ -170,10 +178,10 @@ An example of Map for SOAP Call:
     </field>
     </Response>
     </map>
-
+```
 An example of Map for REST Call:
 --------------------------------
-
+```xml
     <map>
     <originmodule>
     <originname>Accounts</originname>
@@ -223,9 +231,12 @@ An example of Map for REST Call:
     </field>
     </Response>
     </map>
+```
 
 Note how the $coddivisa variable in the URL
-`<wsurl>http://localhost/facturascripts/api/3/divisas/$coddivisa</wsurl>`
+```
+http://localhost/facturascripts/api/3/divisas/$coddivisa
+```
 will be substituted by the actual value that we have in coreBOS as
 defined in the fields section. In this case, the value of the
 tickersymbol field in the Account will be read and $coddivisa will be
@@ -237,7 +248,7 @@ An example of two tasks passing context
 This first map executes an authentication call and loads the
 authorization token into the workflow context and the second task uses
 that value to make an operation call.
-
+```xml
     <map>
     <originmodule>
     <originname>Accounts</originname>
@@ -277,7 +288,8 @@ that value to make an operation call.
     </field>
     </Response>
     </map>
-
+```
+```xml
     <map>
     <originmodule>
     <originname>Accounts</originname>
@@ -327,6 +339,7 @@ that value to make an operation call.
     </field>
     </Response>
     </map>
+```
 
 ### Related Articles
 

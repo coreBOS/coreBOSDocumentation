@@ -1,5 +1,14 @@
 ---
 title: 'Master Detail Mapping'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 Master Detail Mapping
@@ -22,7 +31,7 @@ With this mapping we can specify:
 -   the aggregation fields that need to be calculated and shown
 
 The full syntax of the map looks like this:
-
+```xml
     <map>
       <originmodule>Master Module</originmodule>
       <targetmodule>Detail Module</targetmodule>
@@ -216,7 +225,7 @@ The full syntax of the map looks like this:
           </operation>
       </aggregations>
     </map>
-
+```
 **Other information returned with the map**
 
 Besides the information introduced in the map, the programmer will also
@@ -256,20 +265,19 @@ For this to work, we have to follow some rules and set up two actions.
 -   The **sortfield MUST** be an integer
 -   You must create a business action with the Master-Detail widget,
     something like this
-
-<!-- -->
-
+```
     block://MasterDetailGridLayoutWidget:modules/Utilities/MasterDetailGridLayoutWidget.php:PID=$RECORD$&mapname=Project-ProjectTask
-
+```
 The link type is **DETAILVIEWWIDGET** and the module it is on has to be
 the Master module (Projects in the example above)
 
 -   You must create a business action that loads the Master-Detail
     javascript code, something like this
 
-<!-- -->
 
+```js
     include/js/masterdetailgrid.js
+```
 
 The link type is **HEADERSCRIPT** and the module it is on has to be the
 Master module (Projects in the example above)
@@ -300,7 +308,7 @@ uses to detect the ones to apply and, in this case, the name must be
 Here is a Master-Detail mapping for the PurchaseOrder module
 (PurchaseOrderInventoryDetails) that will permit you to edit
 units\_delivered\_received, a custom field and the product cost:
-
+```xml
     <map>
       <originmodule>PurchaseOrder</originmodule>
       <targetmodule>InventoryDetails</targetmodule>
@@ -335,7 +343,7 @@ units\_delivered\_received, a custom field and the product cost:
        </fields>
       </detailview>
     </map>
-
+```
 See this video for a demonstration:
 
-![](youtube>zfuEuGUhKm0)
+<iframe width="578" height="361" src="https://www.youtube.com/embed/zfuEuGUhKm0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

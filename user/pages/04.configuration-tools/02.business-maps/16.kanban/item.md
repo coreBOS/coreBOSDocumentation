@@ -1,5 +1,14 @@
 ---
 title: 'Kanban View Mapping'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 Kanban View Mapping
@@ -44,7 +53,7 @@ The actions supported are:
 -   morefields: more fields you can choose to see inside a lane's record
 
 The accepted format is:
-
+```xml
     <map>
         <module>Module name</module>
         <lanefield>Module field name</lanefield>
@@ -75,9 +84,9 @@ The accepted format is:
           </morefields>
         </card>
     </map>
-
+```
 Here is a custom template you can try:
-
+```xml
     <map>
         <module>Accounts</module>
         <lanefield>rating</lanefield>
@@ -125,6 +134,9 @@ Here is a custom template you can try:
           </morefields>
         </card>
     </map>
+```
 
-&lt;WRAP center round info 60%&gt; Only module and lanefield are
-mandatory. &lt;/WRAP&gt;
+<div class="notices blue">
+Only module and lanefield are
+mandatory.
+</div>

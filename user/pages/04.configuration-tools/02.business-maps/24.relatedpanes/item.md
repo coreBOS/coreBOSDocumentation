@@ -1,5 +1,13 @@
 ---
 title: 'Related Panes Mapping'
+content:
+    items: '@self.children'
+    limit: '5'
+    order:
+        by: date
+        dir: desc
+    pagination: '1'
+    url_taxonomy_filters: '1'
 ---
 
 Related Panes Mapping
@@ -10,10 +18,12 @@ modules' detail view. The additional panes work exactly as the "More
 Information" pane with a drop down menu that contains the different
 blocks contained in the pane.
 
-&lt;WRAP center round important 90%&gt; Note that when a Related Pane
+<div class="notices yellow">
+Note that when a Related Pane
 mapping is defined for a module, the default "More Information" tab will
-**NOT** be added. If you want it you have to add it into your mapping
-using the **defaultMoreInformation** directive. &lt;/WRAP&gt;
+NOT be added. If you want it you have to add it into your mapping
+using the defaultMoreInformation directive.
+</div>
 
 A pane can contain any combination of 4 types of blocks:
 
@@ -29,7 +39,7 @@ A pane can contain any combination of 4 types of blocks:
     directly include your code inside
 
 The accepted format is:
-
+```xml
     <map>
       <originmodule>
         <originname>Accounts</originname>
@@ -55,7 +65,7 @@ The accepted format is:
         .....
       </panes>
     </map>
-
+```
 As with other business mappings the name of the record is what triggers
 the functionality. In this case the name must be
 **{Module}RelatedPanes**, for example, **AccountsRelatedPanes**
@@ -70,7 +80,7 @@ create additional Smarty variables and context for your code.
 
 Examples
 --------
-
+```xml
     <map>
       <originmodule>
         <originname>Accounts</originname>
@@ -119,12 +129,12 @@ Examples
         </pane>
       </panes>
      </map>
-
+```
 This mapping will add two tabs and the default "More Information" tab.
 In the first tab you will find the Campaigns and Potentials related
 lists. In the second tab you will find the Contacts and Invoice related
 lists.
-
+```xml
     <map>
       <originmodule>
         <originname>Accounts</originname>
@@ -174,7 +184,7 @@ lists.
         </pane>
       </panes>
      </map>
-
+```
 This business map adds two tabs. The first one contains two special code
 blocks which you can see in [this documentation
 page](/en/devel/add_editdetail_block). The second tab contains two

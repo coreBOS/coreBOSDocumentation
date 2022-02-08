@@ -1,5 +1,14 @@
 ---
 title: 'Field Set Mapping'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 Field Set Mapping
@@ -11,7 +20,7 @@ used to define a set of fields to launch a mass operation upon or a set
 of fields which must be excluded/included from some global process.
 
 The accepted format is:
-
+```xml
      <map>
       <module>
       <name>ModuleName</name>
@@ -25,7 +34,7 @@ The accepted format is:
       </module>
       ....
      </map>
-
+```
 You will be able to get the set of fields using the getFieldSet()
 method, and the fields on one module with the getFieldSetModule($module)
 method.

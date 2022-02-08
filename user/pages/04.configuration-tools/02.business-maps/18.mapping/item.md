@@ -1,5 +1,14 @@
 ---
 title: '(Field) Mapping Business Mapping'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 (Field) Mapping Business Mapping
@@ -10,17 +19,18 @@ record when coming from another module's record or setting default
 values for the module you are creating. For example, when creating an
 Invoice from a SalesOrder or an Opportunity from a Contact.
 
-&lt;WRAP center round info 80%&gt; When creating a new record you always
+<div class="notices blue">
+When creating a new record you always
 have access to all the fields of the current user using the FIELD or
 TEMPLATE types. For example: `$(assigned_user_id : (Users) first_name)`
-&lt;/WRAP&gt;
+</div>
 
 It will permit you to define what values you want to copy from the
 origin module or simply what values you want to set by default when
 creating in the way.
 
 The accepted format is:
-
+```xml
      <map>
       <originmodule>
         <originname>SalesOrder</originname>
@@ -85,18 +95,18 @@ The accepted format is:
         </field>
       </fields>
       </map>
-
+```
 The name of the mapping must follow a specific format which is
-
+```
     {OriginModule}2{TargetModule}
-
+```
 you must create the mapping exactly with that name and the module names
 must be exactly their internal module name. If you want to have more
 than one mapping that will be applied depending on the user you must
 also create a new entry in the Global Variable name picklist called
-
+```
     BusinessMapping_{OriginModule}2{TargetModule}
-
+```
 and then define a Global Variable of this type and select the
 corresponding Business Mapping.
 
@@ -108,7 +118,7 @@ stage set to Qualifying.
 Then call the create page of Potentials from a link passing in the
 variable **cbfromid** or from a related list, which already has this
 variable.
-
+```xml
     <map>
       <originmodule>
         <originname>Contacts</originname>
@@ -149,9 +159,9 @@ variable.
         </field>
       </fields>
     </map>
-
+```
 Another example for User default values:
-
+```xml
     <map>
       <originmodule>
         <originname>Users</originname>
@@ -216,7 +226,7 @@ Another example for User default values:
         </field>
     </fields>
     </map>
-
+```
 You can [see an example of converting a Contact into an Account in the
 Business Mapping
 Store](/en/adminmanual/businessmappings/store/contact2accounts).
@@ -242,21 +252,21 @@ For example, we may be given a code that we have to search in another
 module to save a value that comes from there. In this case, we need to
 launch a query so we would set up a Business Map (Rule) of type
 Condition query with something like this:
-
+```sql
     SELECT contactid 
     FROM vtiger_contactdetails
     JOIN vtiger_contactscf on vtiger_contactdetails.contactid = vtiger_contactscf.contactid
     where cf_1518=?
-
+```
 Let's suppose we called this business map "getContactFromSeller", then
 we would add the directive:
-
+```xml
     <Orgfield>
       <OrgfieldName>contact_id</OrgfieldName>
       <OrgfieldID>RULE</OrgfieldID>
       <Rule>getContactFromSeller</Rule>
     </Orgfield>
-
+```
 Accessing via web service
 -------------------------
 

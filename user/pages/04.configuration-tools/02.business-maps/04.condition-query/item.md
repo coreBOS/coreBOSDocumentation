@@ -1,5 +1,13 @@
 ---
 title: 'Condition Query Business Mapping'
+content:
+    items: '@self.children'
+    limit: '5'
+    order:
+        by: date
+        dir: desc
+    pagination: '1'
+    url_taxonomy_filters: '1'
 ---
 
 Condition Query Business Mapping
@@ -25,7 +33,7 @@ In QueryGenerator:
     conditions editor of the application
 
 Examples:
-
+```xml
     <map>
     <sql>
     SELECT accountid,accountname
@@ -35,14 +43,15 @@ Examples:
     </sql>
     <return>accountname</return>    {count|recordset}
     </map>
-
+```
+```xml
     <map>
     <module>Assets</module>
     <fields>assetname,asset_no,productname</fields>
     <conditions>[{"fieldname":"assetname","operation":"contains","value":"j","valuetype":"rawtext","joincondition":"and","groupid":"0"},{"fieldname":"product : (Products) unit_price","operation":"greater than","value":"30","valuetype":"rawtext","joincondition":"and","groupid":"0"}]</conditions>
     <return>recordset</return>
     </map>
-
+```
 Additional Information
 ----------------------
 

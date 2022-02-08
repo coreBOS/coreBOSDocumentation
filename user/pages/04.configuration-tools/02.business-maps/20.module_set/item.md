@@ -1,5 +1,14 @@
 ---
 title: 'Module Set Mapping'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 Module Set Mapping
@@ -11,7 +20,7 @@ modules to launch a mass operation upon or a set of modules that must be
 excluded from some global process.
 
 The accepted format is:
-
+```xml
     <map>
       <modules>
         <module>ModuleName</module>
@@ -19,6 +28,6 @@ The accepted format is:
         ...
       </modules> 
     </map>
-
+```
 You will be able to get the set of modules using the getFullModuleSet()
 method.

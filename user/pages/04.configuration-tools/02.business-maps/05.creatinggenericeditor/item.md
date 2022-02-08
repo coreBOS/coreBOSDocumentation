@@ -1,5 +1,14 @@
 ---
 title: 'Making of the Generic Master-Detail Editor'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 Making of the Generic Master-Detail Editor
@@ -36,13 +45,13 @@ some more buttons and other elements. To such an extent that it looks
 really curious inside a div element.
 
 The parameters is **Module\_Popup\_Edit=1**
-
+```
 <img src="/en/adminmanual/businessmappings/detailviewinsidediv.png" class="align-center" alt="Detail View Inside DIV" />
-
+```
 The instruction to load that div looks like this
-
+```
     masterdetailwork.MDView('mdgridprojectprojecttask', 'ProjectTask', 44570);
-
+```
 Edit view popup
 ---------------
 
@@ -80,4 +89,4 @@ about [reading the official
 documentation](/en/adminmanual/businessmappings/masterdetailmapping) and
 watching the video presentation
 
-![](youtube>pb05jH-HeBA)
+<iframe width="542" height="261" src="https://www.youtube.com/embed/pb05jH-HeBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

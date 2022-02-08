@@ -1,12 +1,21 @@
 ---
 title: 'Information Map Business Mapping'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 Information Map Business Mapping
 ================================
 
 The accepted format is
-
+```xml
     <map>
         <information>
             <infotype>put here some distinctive category of your information</infotype>
@@ -16,7 +25,7 @@ The accepted format is
             <value>...</value>
         </information>
     </map>
-
+```
 This type of map is useful when we have a set of information that we
 want the implementor to be able to change with relative ease but we
 don't want to create a new module just for that as the set is usually
@@ -30,7 +39,7 @@ that list in every workflow where you need to use these functions and
 then have to edit them once a year, we can pass in as a parameter the
 crmid/name of an information business map with the dates, something like
 this:
-
+```xml
     <map>
         <information>
             <infotype>Holidays</infotype>
@@ -83,5 +92,5 @@ this:
             <value>2020-12-26</value>
         </information>
     </map>
-
+```
 Making it much easier to maintain.
