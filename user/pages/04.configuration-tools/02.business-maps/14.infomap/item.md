@@ -1,5 +1,14 @@
 ---
 title: 'Information Map Business Mapping'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 Information Map Business Mapping
