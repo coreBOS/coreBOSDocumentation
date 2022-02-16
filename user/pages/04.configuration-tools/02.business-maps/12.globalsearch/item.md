@@ -1,5 +1,14 @@
 ---
 title: 'Global Search Autocomplete Mapping'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 Global Search Autocomplete Mapping
@@ -14,7 +23,7 @@ As of the creation and implementation of this map, if it exists, you
 will be able to start writing in the global search text box to get an
 autocomplete dropdown with values that it finds in the modules and
 fields defined in the mapping.
-
+```xml
     <map>
       <mincharstosearch>3</mincharstosearch>
       <maxresults>10</maxresults>
@@ -28,7 +37,7 @@ fields defined in the mapping.
        ...
       </searchin>
     </map>
-
+```
 As usual, the mere existence of the mapping with the name
 **GlobalSearchAutocomplete** will activate the functionality and, as
 with all business maps you can define it using the global variable
@@ -39,7 +48,7 @@ This feature was implemented by
 [Albana](https://github.com/AlbanaCelepija): Thank you!!
 
 This is the map I used to test it:
-
+```xml
     <map>
       <mincharstosearch>2</mincharstosearch>
       <maxresults>10</maxresults>
@@ -58,3 +67,4 @@ This is the map I used to test it:
         </module>
       </searchin>
     </map>
+```

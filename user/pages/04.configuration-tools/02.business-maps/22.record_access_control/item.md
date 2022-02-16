@@ -1,18 +1,28 @@
 ---
 title: 'Record Access Control'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 Record Access Control
 =====================
 
-&lt;WRAP center round info 80%&gt; For more advanced customizations of
+<div class="notices blue">
+For more advanced customizations of
 the permission system and how that compares to Record Access Control
 look at the [coreBOS Permission
 Hooks](http://corebos.org/documentation/doku.php?id=en:devel:corebos_permission_hooks).
-&lt;/WRAP&gt;
+</div>
 
 The accepted format is:
-
+```xml
     <map>
       <originmodule>
         <originid>22</originid>  {optional}
@@ -45,9 +55,9 @@ The accepted format is:
         .....
       </relatedlists>
       </map>
-
+```
 where *{condtiongroup}* is
-
+```xml
     <condition>
        <businessrule>{cbMapID}</businessrule>
        <c>1</c>  Add button
@@ -56,7 +66,7 @@ where *{condtiongroup}* is
        <d>1</d>  Delete action
        <s>1</s>  Select button
     </condition>
-
+```
 and the business rule must be of type **ConditionQuery** or
 **ConditionExpression** and return a number bigger than zero, a boolean
 true, the string 'true' or the string 'yes' to be accepted. Any other
@@ -92,7 +102,7 @@ Condition Query Example
 As an example of the use of a condition query, we could add a rule
 whereas we permit adding ProjectTask to a Closed Project if the related
 Account has at least one potential record associated:
-
+```xml
      <relatedlists>
         <relatedlist>
           <modulename>ProjectTask</modulename>
@@ -119,10 +129,10 @@ Account has at least one potential record associated:
           <s>0</s>
         </relatedlist>
       </relatedlists>
-
+```
 where the business rule with crmid=27183 is of type conditionquery and
 contains:
-
+```xml
     <map>
     <sql>SELECT count(*) as numpots
     FROM vtiger_potential
@@ -133,7 +143,7 @@ contains:
     </sql>
     <return>numpots</return>
     </map>
-
+```
 Block Sent Emails Delete and Edit Example
 -----------------------------------------
 
@@ -143,7 +153,7 @@ list view, which would be something like this:
 <img src="/en/corebos/businessmapping/racsentemails.png" class="align-center" width="800" />
 
 with this mapping:
-
+```xml
     <map>
       <originmodule>
         <originname>Emails</originname>
@@ -153,11 +163,11 @@ with this mapping:
       <d>0</d>
         </listview>
       </map>
-
+```
 Block Tickets if assigned user is not creator
 ---------------------------------------------
 
-![](youtube>Iryw1xw78t4)
+<iframe width="578" height="321" src="https://www.youtube.com/embed/Iryw1xw78t4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Accessing via web service
 -------------------------
@@ -173,7 +183,7 @@ coreBOS does exactly this process among some other steps in the function
 rules in our external applications. This can be easily achieved using a
 condition expression business map of type function set to isPermitted
 like this:
-
+```xml
     <map>
     <function>
         <name>isPermitted</name>
@@ -184,9 +194,9 @@ like this:
         </parameters>
     </function>
     </map>
-
+```
 which can be called like this:
-
+```js
     $response = $cbconn->doInvoke(
         'cbRule',
         array(
@@ -203,10 +213,10 @@ which can be called like this:
         'GET'
     );
     var_dump($response);
-
+```
 You can also call this with the map name. Let's suppose that the map
 above has the name **RACRulePermittedCheck** you could do this:
-
+```js
     $response = $cbconn->doInvoke(
         'cbRule',
         array(
@@ -223,9 +233,9 @@ above has the name **RACRulePermittedCheck** you could do this:
         'GET'
     );
     var_dump($response);
-
+```
 In general, the idea is:
-
+```js
     {
      "conditionid": "RACRulePermittedCheck",
      "context": {
@@ -235,3 +245,4 @@ In general, the idea is:
        "permitted_record": in case the action requires an ID of a record put it here
      }
     }
+```

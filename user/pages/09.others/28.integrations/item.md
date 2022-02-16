@@ -1,0 +1,57 @@
+---
+title: 'Integrations with other projects'
+---
+
+Integrations with other projects
+--------------------------------
+
+    *[[en:extensions:extensions:gendoc|OpenOffice]]
+    *[[https://www.youtube.com/watch?v=4pRhhD4ehec&list=PL0oN2FI_W55wuDJo2bxmPW6rTLx0Y-I6N|HubSpot]]
+    *[[:calendar4you_google_integration|Google calendar]]
+    *[[en:contacts|Google Contacts]]
+    *Google apps
+    *[[https://www.integromat.com/en/integrations/corebos?utm_source=corebos&utm_medium=partner&utm_content=partner-page&utm_campaign=corebos-partner-program|Integromat support]]
+    *[[en:integrations:surveys|Survey]] -> Google forms
+    *Google sheets programming
+    *[[en:extensions:extensions:googlemeasurementprotocol|Google Measurement Protocol: Google Analytics]]
+    *[[https://github.com/tsolucio/Spreadsheet|EtherCalc]]
+    *Asterisk
+    *SMS
+    *[[en:integrations:sendgrid|Sendgrid]]
+    *ActON
+    *Thunderbird (needs to be updated)
+    *[[en:integrations:surveys|Survey]] -> [[en:integrations:typeform|Typeform]]
+    *[[en:integrations:elasticsearch|Elastic Search]]
+    *[[en:integrations:maps|GoogleMaps and Openstreetmap. Geodistance]]
+    *Dropbox
+    *Samba
+    *[[en:integrations:webdav|Sabre/DAV WebDAV]]
+    *Webcam photos
+    *Email converter: Nagios, pandorafms
+    *RSS
+    *Pentaho (needs to be updated)
+    *[[en:integrations:oocommerce|WordPress oocommerce]]
+    *[[en:integrations:woocommerce|WordPress Woocommerce]]
+    *Prestashop
+    *[[en:extensions:coreboswswebform|Webforms]]
+    *AEPD 
+    *SEPA
+    *Pasarela pago: Omnipay, Redsys
+    *[[https://github.com/tsolucio/coreBOSOpenKM|OpenKM]]
+    *LogicalDoc
+    *[[https://github.com/tsolucio/coreBOSReportico|Reportico]]
+    *[[es:integrations:facturae|Facturae]]
+    *CFDi Facturación electrónica México
+    *[[en:integrations:corebosmail|Roundcube: coreBOSMail]]
+    *Metabase
+    *Mibew
+    *[[https://github.com/Luke1982/coreBOS-ExactOnline|Exact Online]]
+    *[[en:integrations:dokuwiki|Dokuwiki. HelpMeNow]]
+    *[[en:integrations:tiddlywiki|Tiddlywiki]]
+    *[[en:integrations:whatsapp|Twilio Whatsapp]]
+    *Mattermost
+    *[[en:integrations:onesignal|OneSignal]]
+    *[[en:integrations:sso|Single Sign On]]
+    *PSR-16 Cache: Memcache and Redis
+    *[[https://facturascripts.com/|FacturaScripts]]
+    *[[en:devel:anonymizedb|Masquerade]]

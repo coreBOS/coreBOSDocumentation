@@ -1,5 +1,14 @@
 ---
 title: 'List Columns'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 List Columns
@@ -16,7 +25,7 @@ information in the popup screen. Using the List Columns mapping you can
 adapt these lists to your requirements without modifying the code.
 
 The accepted format is:
-
+```xml
      <map>
       <originmodule>
         <originid>22</originid>  {optional}
@@ -51,7 +60,7 @@ The accepted format is:
         </columns>
       </popup>
      </map>
-
+```
 where we can define a different set of columns per related lists and one
 for the popup screen.
 
@@ -61,7 +70,8 @@ name of the global variable, if you need it to be per user, would be:
 
 The way to understand this map is like this:
 
-&lt;WRAP center round box 80%&gt; this Potentials\_ListColumns map is
+<div class="notices blue">
+this Potentials_ListColumns map is
 for Potentials lists, when you show a list of potential records, in the
 Contacts module I want you to show these columns, when you show that
 list in Accounts I want you to show these others,... when you open a
@@ -70,9 +80,12 @@ popup to select a potential record I want you to show these
 so, all the field references must be fields that are on the Potentials
 
 if you want to change how contacts appear in their lists then you have
-to create a Contacts\_ListColumns and open a related list section for
-Potentials &lt;/WRAP&gt;
+to create a Contacts_ListColumns and open a related list section for
+Potentials 
+</div>
 
-&lt;WRAP center round info 80%&gt; If you need to modify the columns
+<div class="notices blue">
+If you need to modify the columns
 that appear in the Global Search for the module, create a section where
-parentmodule is set to **Utilities**. &lt;/WRAP&gt;
+parentmodule is set to Utilities.
+</div>

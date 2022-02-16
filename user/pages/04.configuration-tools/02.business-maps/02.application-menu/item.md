@@ -1,5 +1,14 @@
 ---
 title: 'Application Menu'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 Application Menu
@@ -12,7 +21,8 @@ editor to define the menus we want and use Global Variables to apply an
 escalation to return different menus to different users.
 
 The accepted format is:
-
+```xml
     <map>
       <menuname>my_useful_menu</menuname> 
     </map>
+```

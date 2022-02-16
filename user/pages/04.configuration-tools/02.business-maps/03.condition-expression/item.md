@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 ---
 title: 'Condition Expression Business Mapping'
 ---
 
+=======
+>>>>>>> d9a6103028e81b44714e2ad52b29f6d46ad9eb7b
 Condition Expression Business Mapping
 =====================================
 
@@ -11,6 +14,29 @@ two formats, one is a direct expression from the workflow expression
 engine and the other is a function expression that can be called from
 inside the system. The function parameters will be changed to the
 current record values if they exist.
+<<<<<<< HEAD
+```xml
+     <map>
+      <expression>uppercase('this string')</expression>
+     </map>
+```
+```xml
+     <map>
+      <expression>accountname</expression>
+     </map>
+```
+```xml
+     <map>
+      <expression>employees + 10</expression>
+     </map>
+```
+```xml
+     <map>
+      <expression>if employees > 10 then 'true' else 'false' end</expression>
+     </map>
+```
+```xml
+=======
 
      <map>
       <expression>uppercase('this string')</expression>
@@ -28,6 +54,7 @@ current record values if they exist.
       <expression>if employees > 10 then 'true' else 'false' end</expression>
      </map>
 
+>>>>>>> d9a6103028e81b44714e2ad52b29f6d46ad9eb7b
     <map>
       <function>
        <name>isPermitted</name>
@@ -38,10 +65,20 @@ current record values if they exist.
        </parameters>
       </function>
      </map>
+<<<<<<< HEAD
+```
+
+the isPermitted mapping above will be converted into:
+
+ ```
+   isPermitted('Accounts','CreateView','74');
+```
+=======
 
 the isPermitted mapping above will be converted into:
 
     isPermitted('Accounts','CreateView','74');
+>>>>>>> d9a6103028e81b44714e2ad52b29f6d46ad9eb7b
 
 Additional Information
 ----------------------

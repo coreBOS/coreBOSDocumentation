@@ -1,5 +1,14 @@
 ---
 title: 'Import Business Mapping'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 Import Business Mapping
@@ -18,11 +27,13 @@ launch the whole process from the command line, making it easy to do
 unattended batch imports without having to go through the UI steps every
 time. All the other application import features are identical.
 
-&lt;WRAP center round important 60%&gt; The import CSV file MUST have a
-header and be in UTF8 format &lt;/WRAP&gt;
+<div class="notices yellow">
+The import CSV file MUST have a
+header and be in UTF8 format
+</div>
 
 The accepted format is
-
+```xml
       <map>
       <mapname>application map name, saved while doing test import</mapname>
       <delimiter>,|;</delimiter>
@@ -34,7 +45,7 @@ The accepted format is
         </fields>
       </duplicates>
       </map>
-
+```
 The map name is mandatory. The idea is that you will launch a test
 import with a few rows and define the map with the field mapping and
 then use the name of that map in the business map so that the import
@@ -46,11 +57,11 @@ The duplicates section may be empty/missing in which no duplicates
 control will be applied.
 
 This is an example of a real import business map:
-
+```xml
     <map>
       <mapname>cbimportBM1</mapname>
     </map>
-
+```
 Direct save import process
 --------------------------
 
@@ -65,7 +76,7 @@ To import relations you must indicate the field to search on in the
 related module in the map.
 
 The accepted format is
-
+```xml
       <map>
       <targetmodule>
       <targetname>ProductDetail</targetname>
@@ -100,20 +111,22 @@ The accepted format is
       <update>FIRST/LAST/ALL</update>
       </options>
       </map>
-
+```
 Execute import process
 ----------------------
 
 To execute the import you have to launch this command from the root of
 your coreBOS install
-
+```php
     php modules/cbMap/processmap/importCSV.php file_to_import.csv name_or_id_of_business_map [thread]
-
+```
 The **thread** optional parameter is an alphanumeric string that will be
 concatenated to the import database temporary table. This permits us to
 launch various imports in parallel as long as different thread
 identifier strings are used.
 
-&lt;WRAP center round info 60%&gt; Since the business map for both
+<div class="notices blue">
+Since the business map for both
 supported methods is different, depending on the type of map found the
-correct process will be launched. &lt;/WRAP&gt;
+correct process will be launched. 
+</div>

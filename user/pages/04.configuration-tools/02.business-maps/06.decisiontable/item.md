@@ -1,5 +1,14 @@
 ---
 title: 'Decision Table Mapping'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 Decision Table Mapping
@@ -15,10 +24,10 @@ environment and infrastructure.
 You can find a few useful links about DMN here:
 
 -   [DMN Tutorial](https://camunda.com/dmn/)
--   <embed src="/en/adminmanual/businessmappings/dmn_tutorial_-_dmn_1.1_tutorial_for_beginners_-_learn_dmn_camunda_bpm.pdf" class="align-center" />
+-   [DMN Tutorial PDF](http://corebos.com/documentation/lib/exe/fetch.php?media=en:adminmanual:businessmappings:dmn_tutorial_-_dmn_1.1_tutorial_for_beginners_-_learn_dmn_camunda_bpm.pdf)
 -   [Decision Table
     Reference](https://docs.camunda.org/manual/latest/reference/dmn11/decision-table/)
--   <embed src="/en/adminmanual/businessmappings/dmndecisiontablereference.pdf" class="align-center" />
+-   [Decision Table Constructor](http://corebos.com/documentation/lib/exe/fetch.php?media=en:adminmanual:businessmappings:dmndecisiontablereference.pdf)
 -   [Decision Table
     Constructor](https://github.com/steffenbrand/dmn-decision-tables)
 -   <https://www.omg.org/spec/DMN/>
@@ -45,9 +54,10 @@ context of the Decision Map. These are exactly like [Condition
 Expression](/en/adminmanual/businessmappings/condition_expression) maps
 but written directly inside this business map.
 
-&lt;WRAP center round info 80%&gt; Since an expression can return any
-type of value, in order to know if an expression has failed it must
-return the reserved string **"\_\_DoesNotPass\_\_"** &lt;/WRAP&gt;
+<div class="notices blue">
+Since an expression can return any type of value, in order to know if an expression has failed it must
+return the reserved string __DoesNotPass__
+</div>
 
 Business Map Name/ID
 --------------------
@@ -58,9 +68,10 @@ Expression](/en/adminmanual/businessmappings/condition_expression) or
 business map, they will be loaded and evaluated in the context of the
 Decision Map
 
-&lt;WRAP center round info 80%&gt; Since an expression can return any
-type of value, in order to know if an expression has failed it must
-return the reserved string **"\_\_DoesNotPass\_\_"** &lt;/WRAP&gt;
+<div class="notices blue">
+Since an expression can return any type of value, in order to know if an expression has failed it must
+return the reserved string __DoesNotPass__
+</div>
 
 Decision Tables
 ---------------
@@ -73,7 +84,7 @@ module and then a set of search conditions to look for records.
 
 Full Map Structure
 ------------------
-
+```xml
     <decision>
     <hitPolicy></hitPolicy>  <!-- U F C A R G -->
     <aggregate></aggregate>  <!-- only available if hitPolicy=G: sum,min,max,count -->
@@ -116,13 +127,14 @@ Full Map Structure
     </rule>
     </rules>
     </decision>
+```
 
-&lt;WRAP center round info 80%&gt; To make this type of map easier to
-construct when we have a large number of input variables, the input
-variables accept the special value **"\_\_IGNORE\_\_"**. When an input
-variable is set to this value the whole search on that column will be
-ignored. This permits us to establish rules that are more generic
-reducing the repetition of very similar rules. &lt;/WRAP&gt;
+
+<div class="notices blue">
+To make this type of map easier to construct when we have a large number of input variables, the input
+variables accept the special value __IGNORE__. When an input variable is set to this value the whole search on that column will be ignored. This permits us to establish rules that are more generic
+reducing the repetition of very similar rules. 
+</div>
 
 Hit Policy
 ----------
@@ -218,7 +230,7 @@ Select Dish with Expressions
 ----------------------------
 
 <img src="/en/adminmanual/businessmappings/dish-feel.png" class="align-center" />
-
+```xml
     <decision>
     <hitPolicy>U</hitPolicy>
     <rules>
@@ -254,7 +266,7 @@ Select Dish with Expressions
     </rule>
     </rules>
     </decision>
-
+```
 Select Dish with Module
 -----------------------
 
@@ -341,6 +353,7 @@ and these records
 </tbody>
 </table>
 
+```xml
     <decision>
     <hitPolicy>U</hitPolicy>
     <rules>
@@ -374,7 +387,7 @@ and these records
     </rule>
     </rules>
     </decision>
-
+```
 In the example above I decided to add two columns for the Guest Count,
 in order to convert the range \[5..8\] into two records. In this
 mindset, I also use the value 10000 as an "infinite" value.
@@ -455,7 +468,7 @@ these records
 </table>
 
 and this map
-
+```xml
     <decision>
     <hitPolicy>F</hitPolicy>
     <rules>
@@ -484,7 +497,7 @@ and this map
     </rule>
     </rules>
     </decision>
-
+```
 In this case, I am playing with the **Hit Policy** which has changed to
 **F**irst, so now my users must understand that the ranges are defined
 from the previous value to the one defined in each record and that
@@ -674,14 +687,14 @@ That would be a record like this in the decision table module.
 </table>
 
 Lets see how that will look on our Decision Table map:
-
+```xml
     <condition>
      <input>guestcount</input> <!-- context variable name -->
      <preprocess>if '$[season]' == 'Spring' then '*' else '$[guestcount]' end</preprocess>  <!-- if present sends the expression to the workflow expression system-->
      <operation>e</operation> <!-- QueryGenerator operators -->
      <field>guestcount</field> <!-- fieldname of module -->
     </condition>
-     
+  ```   
 
 As you can see we are using the preprocess directive. What is inside the
 preprocess directive will be sent to the workflow system.
@@ -701,7 +714,7 @@ look something like the map below. The context would have to send in all
 the role and group of the current user and I'm not totally sure if the
 "module list" would work as it is below, but it will be VERY close and
 enough for you to get an idea of how this map works.
-
+```xml
     <decision>
     <hitPolicy>F</hitPolicy>
     <rules>
@@ -858,3 +871,4 @@ enough for you to get an idea of how this map works.
     </rule>
     </rules>
     </decision>
+```

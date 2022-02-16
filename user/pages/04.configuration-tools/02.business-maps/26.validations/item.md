@@ -1,5 +1,14 @@
 ---
 title: 'Validation Business Mapping'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
 ---
 
 Validation Business Mapping
@@ -9,7 +18,7 @@ This type of map will permit you to add different types of validations
 on the fields of a module.
 
 The accepted format is
-
+```xml
      <map>
       <originmodule>
         <originname>SalesOrder</originname>
@@ -32,26 +41,28 @@ The accepted format is
          .....
         </field>
       </fields>
+ </map> 
+```
 
-where {rule\_name} can be:
+where {rule_name} can be:
 
-    *required - Required field
+    * required - Required field
       *restrictions: none
-    *equals - Field must match another field (email/password confirmation)
+    * equals - Field must match another field (email/password confirmation)
       *restrictions: name of the other field
-    *different - Field must be different than another field
+    * different - Field must be different than another field
       *restrictions: name of the other field
-    *accepted - Checkbox or Radio must be accepted (yes, on, 1, true)
+    * accepted - Checkbox or Radio must be accepted (yes, on, 1, true)
       *restrictions: none
-    *numeric - Must be numeric
+    * numeric - Must be numeric
       *restrictions: none
-    *integer - Must be integer number
+    * integer - Must be integer number
       *restrictions: none
-    *array - Must be an array
+    * array - Must be an array
       *restrictions: none
-    *length - String must be a certain length
+    * length - String must be a certain length
       *restrictions: number
-    *lengthBetween - String must be between given lengths
+    * lengthBetween - String must be between given lengths
       *restrictions: two restrictions of type number
     *lengthMin - String must be greater than given length
       *restrictions: number
@@ -120,7 +131,8 @@ where {rule\_name} can be:
       * restrictions: filename, validation test name, function name and label to show on error (will be translated)
       * parameters: parameters can be passed to custom functions using the parameters-parameter directives 
 
-&lt;WRAP center round info 100%&gt; The parameters directive permits us
+<div class="notices blue">
+The parameters directive permits us
 to send values to our custom validation method with a structure like
 this:
 
@@ -132,7 +144,7 @@ this:
     </parameters>
 
 these parameters will be sent as a name indexed array to the function
-&lt;/WRAP&gt;
+</div>
 
 Validation Message
 ------------------
@@ -144,9 +156,9 @@ established, a standard error message will be returned. Inside this
 custom message you can use the curly brace <span
 class="underline">field</span> tag to indicate where you want the field
 name to appear:
-
+```xml
       <message>This is my custom msg for field: {field}</message>
-
+```
 Besides this option, which covers almost all the use cases, we have run
 into an edge case where we needed the message to be dynamically set. The
 problem with this is that the way the valitron library works we need to
@@ -201,7 +213,7 @@ Accessing other fields in the form
 You can **use the values of other fields on the form** by putting the
 field name inside two curly brackets. For example, the next map will
 validate that the field dtstart is before the value in field dtend.
-
+```xml
     <map>
       <originmodule>
         <originname>cbCalendar</originname>
@@ -220,14 +232,15 @@ validate that the field dtstart is before the value in field dtend.
         </field>
       </fields>
     </map>
-
-&lt;WRAP center round important 85%&gt; There is an important limitation
+```
+<div class="notices yellow">
+There is an important limitation
 when using the values of other fields. These values will only be
 available when editing the whole record. If the user is doing inline
 individual field edit on the detail view, the value of the other fields
 will not be available. To overcome this limitation, you need to create a
 custom validation rule and access the values you need from the database.
-&lt;/WRAP&gt;
+</div>
 
 Other information available during validation
 ---------------------------------------------
@@ -247,13 +260,15 @@ editing an Account, the user has changed the Industry picklist value and
 we want to check what the currently saved value is before accepting the
 change. Let's imagine a rule that says:
 
-&lt;WRAP center round box 60%&gt; Any account who's industry is set to
-Banking, cannot be changed &lt;/WRAP&gt;
+<div class="notices blue">
+Any account who's industry is set to
+Banking, cannot be changed 
+</div>
 
 In this case, we can easily access the value that the user has selected
 by putting the industry field and to access the value saved in the
 application we would use: current\_industry, something like this:
-
+```xml
     <map>
       <originmodule>
         <originname>Accounts</originname>
@@ -272,7 +287,7 @@ application we would use: current\_industry, something like this:
         </field>
       </fields>
     </map>
-
+```
 ### Product lines
 
 In inventory modules, the system will load all the information of the
@@ -302,7 +317,7 @@ Some other examples
 
 Another example of how to limit the accepted values in a picklist, even
 making it mandatory if needed.
-
+```xml
     <map>
       <originmodule>
         <originname>cbCalendar</originname>
@@ -322,7 +337,7 @@ making it mandatory if needed.
         </field>
       </fields>
     </map>
-
+```
 This next example contains a REGEX expression that will not accept any
 alphabetical letter in the accountname field and there must be at least
 one character. Important things to notice in the REGEX expression are:
@@ -333,8 +348,7 @@ one character. Important things to notice in the REGEX expression are:
     below does not need CDATA)
 3.  modifiers are not supported in the expression
 
-<!-- -->
-
+```xml
     <map>
       <originmodule>
         <originname>Accounts</originname>
@@ -353,13 +367,15 @@ one character. Important things to notice in the REGEX expression are:
         </field>
       </fields>
     </map>
-
+```
 ### Forum Post with a very advanced example of a custom validation
 
 <https://discussions.corebos.org/showthread.php?tid=1017&pid=5472#pid5472>
 
-&lt;WRAP center round info 60%&gt; [Thanks
-Luke](https://github.com/Luke1982) &lt;/WRAP&gt;
+<div class="notices blue"> 
+[Thanks
+Luke](https://github.com/Luke1982)
+</div>
 
 Custom Validations
 ------------------
@@ -383,7 +399,7 @@ can be used if necessary:
 
 For example, a validation for a valid CIF on account siccode field looks
 like this:
-
+```xml
     <map>
       <originmodule>
         <originname>Accounts</originname>
@@ -404,13 +420,13 @@ like this:
         </field>
       </fields>
     </map>
-
+```
 Test Validation Business Mapping
 --------------------------------
 
 These are the two validation maps I used while developing the
 integration of the mapping in the save process:
-
+```xml
     <map>
       <originmodule>
         <originname>Accounts</originname>
@@ -440,8 +456,9 @@ integration of the mapping in the save process:
         </field>
       </fields>
     </map>
-
-    <map>
+```
+```xml
+   <map>
       <originmodule>
         <originname>Accounts</originname>
       </originmodule>
@@ -461,18 +478,18 @@ integration of the mapping in the save process:
         </field>
       </fields>
     </map>
-
+```
 both are set for the Accounts module.
 
 This is the custom validation script:
-
+```js
     function validate_testacccemail($field) {
         global $log;$log->fatal('validation for'.$field);
         return true;
     }
-
+```
 ### Expression Map
-
+```xml
     <map>
       <originmodule>
         <originname>Accounts</originname>
@@ -495,9 +512,9 @@ This is the custom validation script:
     <map>
       <expression>if employees > 10 then 1 else 0 end</expression>
     </map>
-
+```
 ### Custom Message Test Map
-
+```xml
     <map>
       <originmodule>
         <originname>Accounts</originname>
@@ -530,3 +547,4 @@ This is the custom validation script:
         </field>
       </fields>
     </map>
+```
