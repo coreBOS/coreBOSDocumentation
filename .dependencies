@@ -12,7 +12,7 @@ git:
         path: user/plugins/markdown-notices
         branch: master
     quark:
-        url: https://github.com/coreBOS/coreBOSDocumentation-theme
+        url: https://github.com/coreBOS/coreBOSDocumentationTheme
         path: user/themes/quark
         branch: master
     page-tok:
@@ -53,7 +53,7 @@ links:
         path: user/plugins/markdown-notices
         scm: github
     quark:
-        src: coreBOSDocumentation-theme
+        src: coreBOSDocumentationTheme
         path: user/themes/quark
         scm: github
     page-tok:

@@ -28,5 +28,9 @@ cards:
         title: "Title 1"
         subtitle: "Subtitle 1"
         path: /
+    -
+        title: "Title 1"
+        subtitle: "Subtitle 1"
+        path: /getting-started/installation
 
 ---
