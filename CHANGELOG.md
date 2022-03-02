@@ -1,8 +1,49 @@
+# v1.7.30
+## 02/07/2022
+
+1. [](#new)
+    * Added twig filter `|field_parent` to get parent field name
+2. [](#bugfix)
+    * Fixed error while deleting retina image in admin
+    * Fixed "Page Authors" field in Security tab, wrongly loading and saving the value [#3525](https://github.com/getgrav/grav/issues/3525)
+    * Fixed accounts filter only matches against email address [getgrav/grav-plugin-admin#2224](https://github.com/getgrav/grav-plugin-admin/issues/2224)
+
+# v1.7.29.1
+## 01/31/2022
+
+1. [](#bugfix)
+    * Fixed `Call to undefined method` error when upgrading from Grav 1.6 [#3523](https://github.com/getgrav/grav/issues/3523)
+
+# v1.7.29
+## 01/28/2022
+
+1. [](#new)
+    * Added support for registering assets from `HtmlBlock`
+    * Added unicode-safe `Utils::basename()` and `Utils::pathinfo()` methods
+2. [](#improved)
+    * Improved `Filesystem::basename()` and `Filesystem::pathinfo()` to be unicode-safe
+    * Made path handling unicode-safe, use new `Utils::basename()` and `Utils::pathinfo()` everywhere
+3. [](#bugfix)
+    * Fixed error on thumbnail image creation
+    * Fixed MimeType for `gzip` (`application/x-gzip`)
+
+# v1.7.28
+## 01/24/2022
+
+1. [](#new)
+    * Added links and modules support to `HtmlBlock` class
+    * Added module support for twig script tag: `{% script module 'theme://js/module.mjs' %}`
+    * Added twig tag for links: `{% link icon 'theme://images/favicon.png' priority: 20 with { type: 'image/png' } %}`
+    * Added `HtmlBlock` support for `{% style %}`, `{% script %}` and `{% link %}` tags
+    * Support for page-level `redirect_default_route` frontmatter header override
+3. [](#bugfix)
+    * Fixed XSS check not detecting escaped `&#58`
+
 # v1.7.27.1
 ## 01/12/2022
 
 3. [](#bugfix)
-   * Fixed a typo in CSS Asset pipeline that was erroneously joining files with `;`  
+   * Fixed a typo in CSS Asset pipeline that was erroneously joining files with `;`
 
 # v1.7.27
 ## 01/12/2022

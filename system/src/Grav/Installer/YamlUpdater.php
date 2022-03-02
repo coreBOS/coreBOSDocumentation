@@ -9,6 +9,7 @@
 
 namespace Grav\Installer;
 
+use Grav\Common\Utils;
 use Symfony\Component\Yaml\Yaml;
 use function assert;
 use function count;
