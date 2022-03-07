@@ -35,9 +35,9 @@ git:
         url: https://github.com/trilbymedia/grav-plugin-prism-highlight
         path: user/plugins/prism-highlight
         branch: master
-    tnt-search:
-        url: https://github.com/trilbymedia/grav-plugin-tntsearch
-        path: user/plugins/tntsearch
+    simplesearch:
+        url: https://github.com/getgrav/grav-plugin-simplesearch.git
+        path: user/plugins/simplesearch
         branch: master
 links:
     problems:
@@ -76,7 +76,7 @@ links:
         src: grav-plugin-prism-highlight
         path: user/plugins/prism-highlight
         branch: master
-    tnt-search:
-        url: grav-plugin-tntsearch
-        path: user/plugins/tntsearch
+    simplesearch:
+        url: grav-plugin-simplesearch
+        path: user/plugins/simplesearch
         branch: master
