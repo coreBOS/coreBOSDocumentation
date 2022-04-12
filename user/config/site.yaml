@@ -1,7 +1,17 @@
-title: Grav
+title: 'coreBOS Documentation'
+default_lang: en
 author:
-  name: Joe Bloggs
-  email: 'joe@example.com'
+  name: 'Joe Bordes'
+  email: joe@corebos.org
+taxonomies:
+  - category
+  - tag
 metadata:
-    description: 'Grav is an easy to use, yet powerful, open source flat-file CMS'
-
+  description: 'coreBOS Documentation Site. Proud member of the coreBOS family! Visit our Website and the Forum.'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+redirects: null
+routes: null
