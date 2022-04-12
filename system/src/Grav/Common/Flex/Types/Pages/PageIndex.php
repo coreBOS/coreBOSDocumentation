@@ -454,7 +454,7 @@ class PageIndex extends FlexPageIndex implements PageCollectionInterface
                 continue;
             }
 
-            // Get the main key without template and langauge.
+            // Get the main key without template and language.
             [$main_key,] = explode('|', $entry['storage_key'] . '|', 2);
 
             // Update storage key and language.
@@ -527,10 +527,7 @@ class PageIndex extends FlexPageIndex implements PageCollectionInterface
         $language = $options['lang'];
 
         $status = 'error';
-        $msg = null;
         $response = [];
-        $children = null;
-        $sub_route = null;
         $extra = null;
 
         // Handle leaf_route
@@ -606,9 +603,11 @@ class PageIndex extends FlexPageIndex implements PageCollectionInterface
                 }
             }
 
+            /** @var PageCollection|PageIndex $children */
+            $children = $page->children();
             /** @var PageIndex $children */
-            $children = $page->children()->getIndex();
-            $selectedChildren = $children->filterBy($filters, true);
+            $children = $children->getIndex();
+            $selectedChildren = $children->filterBy($filters + ['language' => $language], true);
 
             /** @var Header $header */
             $header = $page->header();
@@ -686,6 +685,8 @@ class PageIndex extends FlexPageIndex implements PageCollectionInterface
                     $extras = array_filter($extras, static function ($v) {
                         return $v !== null;
                     });
+
+                    /** @var PageIndex $tmp */
                     $tmp = $child->children()->getIndex();
                     $child_count = $tmp->count();
                     $count = $filters ? $tmp->filterBy($filters, true)->count() : null;
