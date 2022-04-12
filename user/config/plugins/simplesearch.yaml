@@ -4,11 +4,11 @@ built_in_js: true
 display_button: true
 min_query_length: 3
 route: /search_results
-search_content: rendered
+search_content: raw
 template: search_results
 filters:
   category: null
-filter_combinator: and
+filter_combinator: or
 ignore_accented_characters: false
 order:
   by: date
@@ -16,12 +16,9 @@ order:
 searchable_types:
   title: true
   content: true
+  taxonomy: true
   header: false
-  taxonomy: false
 header_keys_ignored:
-  - title
-  - taxonomy
-  - content
   - form
   - forms
   - media_order
