@@ -32,6 +32,11 @@ body {
 	background-color: rgba(0,0,0,0.2);
 }
 
+.doc_documentation_area {
+	min-height: 100px;
+	padding-bottom: 11px;
+}
+
 /* === WRAP === */
 
 #wrap {
