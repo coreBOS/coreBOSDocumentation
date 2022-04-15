@@ -52,7 +52,7 @@ that will be launched and is divided into three sections:
 - &lt;methodname&gt;define the method that should be called&lt;/methodname&gt;
 - wsuser and wspass in case the service uses these
 - wsheader contain keyname and keyvalue pairs with information that must be sent in the header of the call
-  - header keyvalue will be processed in search of the command **getContext(variable\_name)** or **getSetting(variable\_name)** (note that there are no quotes around the variable name). This expression will search for the variable\_name in the workflow context or the coreBOS key-value store and use that instead of the hardcoded value which can be set here also.
+  - header keyvalue will be processed in search of the command **getContext(variable_name)** or **getSetting(variable_name)** (note that there are no quotes around the variable name). This expression will search for the variable_name in the workflow context or the coreBOS key-value store and use that instead of the hardcoded value which can be set here also.
 - &lt;wstype&gt;REST or SOAP&lt;/wstype&gt;
 - &lt;inputtype&gt;XML/URL/JSON/URLRESTFUL&lt;/inputtype&gt;
 - &lt;outputtype&gt;JSON or XML&lt;/outputtype&gt;
@@ -70,7 +70,7 @@ the end-point:
 If the **OUTPUTTYPE** is JSON two additional tasks are performed:
 
 - if the Response section has a "field" value for the response then we will save the value received from the call in the indicated field
-- all the Response values received will be put into the workflow context. If no name is given in the Response section for the variable in the context the application will use the name of the variable returned preceded by the text **wsctx\_**
+- all the Response values received will be put into the workflow context. If no name is given in the Response section for the variable in the context the application will use the name of the variable returned preceded by the text **wsctx_**
 
 ### fields
 
@@ -85,7 +85,7 @@ this section is processed by the same engine that is used in the [Field Mapping 
 - &lt;Response&gt; block that contains the response fields coming from the call and where we have to save the values &lt;/Response&gt;
 - &lt;fieldname&gt; the value we get back from web service call &lt;/fieldname&gt;
 - &lt;destination&gt;&lt;field&gt; fieldname in coreBOS to update with the WS response &lt;/field&gt;&lt;/destination&gt; this directive is optional. If it is not given or is set to an empty value, the field will not be updated.
-- &lt;destination&gt;&lt;context&gt; the name to use to set this value in the workflow context &lt;/context&gt;&lt;/destination&gt; if none is given we will use **wsctx\_{fieldname}**
+- &lt;destination&gt;&lt;context&gt; the name to use to set this value in the workflow context &lt;/context&gt;&lt;/destination&gt; if none is given we will use **wsctx_{fieldname}**
 
 ### Examples
 
