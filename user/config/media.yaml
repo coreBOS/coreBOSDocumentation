@@ -1,0 +1,9 @@
+types:
+  odt:
+    type: file
+    thumb: media/thumb-doc.png
+    mime: application/vnd.oasis.opendocument.text
+  pdf:
+    type: file
+    thumb: media/thumb-pdf.png
+    mime: application/pdf

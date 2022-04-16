@@ -1,0 +1,35 @@
+{%- set object_context = object ?? {} -%}
+{%- set object_layout = object_context.layout ?? ('list-' ~ layout) -%}
+
+<div id="wrap" class="col-lg-8 col-md-8">
+
+<h1>Gendoc Template Store</h1>
+
+<p>Here you can find a whole set of templates which can be used in your application directly or with easy modifications to adapt them to your needs.</p>
+
+<div class="notices blue">Please share your templates with us to enrich this library!</div>
+
+<div id="flex-objects">
+  <div class="text-center">
+    <input class="form-input search" type="text" placeholder="Search by name, description, etc" />
+    <button class="button button-primary sort asc" data-sort="name">
+      Sort by Name
+    </button>
+  </div>
+
+  <ul class="list">
+    {% for object in collection.filterBy({ published: true }) %}
+      <li>
+        {% render object layout: object_layout with object_context %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+</div>
+
+<script>
+    var options = {
+        valueNames: [ 'name', 'type', 'description', 'description', 'module', 'languge', 'author', 'entry-extra' ]
+    };
+    var flexList = new List('flex-objects', options);
+</script>

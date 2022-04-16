@@ -1,0 +1,21 @@
+<div class="entry-details">
+    {% if object.templateurl %}
+        <a href="{{ object.templateurl|e }}"><span class="name">{{ object.name|e }}</span></a>
+    {% else %}
+        <span class="name">{{ object.name|e }}</span>
+    {% endif %}
+    {% if object.description %}
+        <p>{{ object.description|e }}</p>
+    {% endif %}
+    {% if object.module and object.language %}
+        <p>{{ object.module|e }} - {{ object.language|e }}</p>
+    {% endif %}
+    {% if object.pdfexample %}
+        <a href="{{ object.pdfexample|e }}">Example</a>
+    {% endif %}
+</div>
+<div class="entry-extra">
+    {% for tag in object.tags %}
+        <span>{{ tag|e }}</span>
+    {% endfor %}
+</div>

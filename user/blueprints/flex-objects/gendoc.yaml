@@ -1,0 +1,188 @@
+title: GenDoc
+description: List of GenDoc templates.
+type: flex-objects
+
+# Flex Configuration
+config:
+  # Administration Configuration
+  admin:
+    # Admin router (optional)
+    router:
+      path: '/gendoc'
+
+    # Admin menu (optional)
+    menu:
+      list:
+        route: '/gendoc'
+        title: GenDoc
+        icon: fa-address-card-o
+        # Authorization to collection admin
+        authorize: ['admin.gendoc.list', 'admin.super']
+        # Priority -10 .. 10 (highest goes up)
+        priority: 2
+
+    # Admin template type / folder
+    template: default
+
+    # Permissions
+    permissions:
+      # Primary permissions
+      admin.gendoc:
+        type: crudpl
+        label: GenDoc
+
+    # List view
+    list:
+      title: templates
+      fields:
+        published:
+          field:
+            type: toggle
+            label: Publ
+          width: 8
+        name:
+          link: edit
+        description:
+        templateurl:
+        language:
+        module:
+        author:
+
+    # Preview View
+    preview:
+      enabled: false
+      route:
+        #template: '/plugins/flex-objects/directory:gendoc'
+
+    # Data Export
+    export:
+      enabled: true
+      method: 'jsonSerialize'
+      formatter:
+        class: 'Grav\Framework\File\Formatter\YamlFormatter'
+      filename: 'gendoctpls'
+
+  # Site Configuration
+  site:
+    templates:
+      collection:
+        # Lookup for the template layout files for collections of objects
+        paths:
+          - 'flex/{TYPE}/collection/{LAYOUT}{EXT}'
+      object:
+        # Lookup for the template layout files for objects
+        paths:
+          - 'flex/{TYPE}/object/{LAYOUT}{EXT}'
+      defaults:
+        # Default template {TYPE}; overridden by filename of this blueprint if template folder exists
+        type: gendoc
+        # Default template {LAYOUT}; can be overridden in render calls (usually Twig in templates)
+        layout: default
+
+  # Data Configuration
+  data:
+    # Object class to be used, allowing custom methods for the object
+    object: 'Grav\Common\Flex\Types\Generic\GenericObject'
+    # Collection class to be used, allowing custom methods for the collections
+    collection: 'Grav\Common\Flex\Types\Generic\GenericCollection'
+    # Index class to be used, works as a quick database-like lookup index
+    index: 'Grav\Common\Flex\Types\Generic\GenericIndex'
+    storage:
+      # Storage class, use single file storage (does not support images and assets)
+      class: 'Grav\Framework\Flex\Storage\SimpleStorage'
+      options:
+        formatter:
+          # File formatter class, in this case the file is stored in markdown
+          class: 'Grav\Framework\File\Formatter\JsonFormatter'
+        # JSON file where all the objects will be stored
+        folder: user-data://flex-objects/gendoc.json
+    search:
+      # Search options
+      options:
+        contains: 1
+      # Fields to be searched
+      fields:
+        - name
+        - type
+        - description
+        - module
+        - language
+        - author
+
+form:
+  validation: loose
+
+  fields:
+    published:
+      type: toggle
+      label: Published
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+      validate:
+        type: bool
+        required: true
+
+    name:
+      type: text
+      label: Name
+      validate:
+        required: true
+
+    type:
+      type: text
+      label: Type
+      validate:
+        required: true
+
+    templateurl:
+      type: text
+      label: Template
+      validate:
+        required: true
+
+    pdfexample:
+      type: text
+      label: Example
+      validate:
+        required: false
+
+    description:
+      type: text
+      label: Description
+      validate:
+        required: true
+
+    language:
+      type: text
+      label: Language
+      validate:
+        required: true
+
+    module:
+      type: text
+      label: Module
+      validate:
+        required: true
+
+    release:
+      type: date
+      label: Release Date
+      validate:
+        required: true
+
+    author:
+      type: text
+      label: Author
+      validate:
+        required: false
+
+    tags:
+      type: selectize
+      size: large
+      label: Tags
+      classes: fancy
+      validate:
+        type: commalist

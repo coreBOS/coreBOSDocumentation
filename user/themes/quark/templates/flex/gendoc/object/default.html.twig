@@ -1,0 +1,15 @@
+<div class="entry-details">
+    {% if object.templateurl %}
+        <a href="{{ object.templateurl|e }}"><span class="name">{{ object.name|e }}</span></a>
+    {% else %}
+        <span class="name">{{ object.name|e }}</span>
+    {% endif %}
+    {% if object.email %}
+        <p>{{ object.description|e }}"</p>
+    {% endif %}
+</div>
+<div class="entry-extra">
+    {% for tag in object.tags %}
+        <span>{{ tag|e }}</span>
+    {% endfor %}
+</div>
