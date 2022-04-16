@@ -166,11 +166,11 @@ body {
 
 	<li>y</li>
 
-	<li>w</li>
+	<li>e</li>
 
-	<li>v</li>
+	<li>m</li>
 
-	<li>b</li>
+	<li>h</li>
 
 	<li>o</li>
 
@@ -184,6 +184,8 @@ body {
 
 	<li>a</li>
 
+	<li>v</li>
+
 	<li class="four">p</li>
 
 	<li class="five">a</li>
@@ -191,8 +193,6 @@ body {
 	<li class="six">g</li>
 
 	<li class="seven">e</li>
-
-	<li>v</li>
 
 	<li>j</li>
 
@@ -206,7 +206,7 @@ body {
 
 	<li>s</li>
 
-	<li>c</li>
+	<li>n</li>
 
 	<li>e</li>
 
