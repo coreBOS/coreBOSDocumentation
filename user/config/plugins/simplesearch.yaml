@@ -8,7 +8,7 @@ search_content: raw
 template: search_results
 filters:
   category: null
-filter_combinator: or
+filter_combinator: and
 ignore_accented_characters: false
 order:
   by: date

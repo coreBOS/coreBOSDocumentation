@@ -265,8 +265,7 @@ class SimplesearchPlugin extends Plugin
 
             $this->grav['page'] = $page;
         }
-        $this->collection = $this->collection->batch(5)[0];
-        //var_dump($this->collection);die();
+        //$this->collection = $this->collection->batch(25)[0];
     }
 
     /**
