@@ -1,0 +1,20 @@
+<div class="entry-details">
+    {% if object.configurl %}
+        {% set cbid = object.getKey() %}
+        <a href="configuration-store/id:{{ cbid }}"><span class="name">{{ object.name|e }}</span></a>
+    {% else %}
+        <span class="name">{{ object.name|e }}</span>
+    {% endif %}
+    {% if object.description %}
+        <p><strong>{{ object.description|e }}</strong></p>
+    {% endif %}
+    <p>{{ object.configtype|e }} - {{ object.configsubtype|e }}</p>
+    {% if object.author %}
+        <p>{{ object.author|e }}</p>
+    {% endif %}
+</div>
+<div class="entry-extra">
+    {% for tag in object.tags %}
+        <span>{{ tag|e }}</span>
+    {% endfor %}
+</div>

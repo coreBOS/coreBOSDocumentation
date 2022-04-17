@@ -1,0 +1,25 @@
+<div class="entry-details">
+    {% if object.docurl %}
+        {% set cbid = object.getKey() %}
+        <a href="corebosmodules/id:{{ cbid }}"><span class="name">{{ object.name|e }}</span></a>
+    {% else %}
+        <span class="name">{{ object.name|e }}</span>
+    {% endif %}
+    {% if object.description %}
+        <p><strong>{{ object.description|e }}</strong></p>
+    {% endif %}
+    {% if object.type and object.license %}
+        <p>{{ object.type|e }} - {{ object.license|e }}</p>
+    {% endif %}
+    {% if object.price %}
+        Price: {{ object.price|e }}
+    {% endif %}
+    {% if object.author and object.contact %}
+        <p>{{ object.author|e }} - {{ object.contact|e }}</p>
+    {% endif %}
+</div>
+<div class="entry-extra">
+    {% for tag in object.tags %}
+        <span>{{ tag|e }}</span>
+    {% endfor %}
+</div>

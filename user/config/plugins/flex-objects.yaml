@@ -13,3 +13,5 @@ directories:
   - 'blueprints://flex-objects/user-accounts.yaml'
   - 'blueprints://flex-objects/user-groups.yaml'
   - 'blueprints://flex-objects/gendoc.yaml'
+  - 'blueprints://flex-objects/configuration.yaml'
+  - 'blueprints://flex-objects/corebosmodule.yaml'

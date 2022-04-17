@@ -1,0 +1,55 @@
+<style>
+div.dataplugin_entry dl {
+    width: 90%;
+}
+div.dataplugin_entry dl {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin: 1em;
+    font-size: 90%;
+    overflow: auto;
+    width: 70%;
+}
+.cbextkeyword {
+    background: #eee;
+    border-radius: 4px;
+    padding: 3px 5px;
+    font-size: 85%;
+}
+</style>
+<div id="wrap" class="col-lg-8 col-md-8">
+<h1>{{ object.name|e }} {{ object.type|e }}</h1>
+<div class="entry-details">
+<div class="dataplugin_entry">
+<dl>
+<dt class="name">Name<span class="sep">: </span></dt>
+<dd class="name">{{ object.name|e }}</dd>
+<dt class="type">Type<span class="sep">: </span></dt>
+<dd class="type">{{ object.type|e }}</dd>
+<dt class="description">Description<span class="sep">: </span></dt>
+<dd class="description">{{ object.description|e }}</dd>
+<dt class="keywords">Keywords<span class="sep">: </span></dt>
+<dd class="keywords">
+{% for tag in object.tags %}
+<span class="cbextkeyword">{{ tag|e }}</span>
+{% endfor %}
+</dd>
+{% if object.dowloadurl %}
+<dt class="homepage">Download<span class="sep">: </span></dt>
+<dd class="homepage"><a href="{{ object.downloadurl|e }}" rel="nofollow">{{ object.downloadurl|e }}</a></dd>
+{% endif %}
+<dt class="release">Release Date<span class="sep">: </span></dt>
+<dd class="release">{{ object.release|e }}</dd>
+<dt class="license">License<span class="sep">: </span></dt>
+<dd class="license">{{ object.license|e }}</dd>
+<dt class="price">Price<span class="sep">: </span></dt>
+<dd class="price">{{ object.price|e }}</dd>
+<dt class="authorname">Author Name<span class="sep">: </span></dt>
+<dd class="authorname">{{ object.author|e }}</dd>
+<dt class="authoremail">Contact EMail<span class="sep">: </span></dt>
+<dd class="authoremail"><a href="mailto:{{ object.contact|e }}">{{ object.contact|e }}</a></dd>
+</dl>
+</div>
+{% include 'corebosmodule/' ~ object.docurl ~ '/item.md' %}
+</div>
+</div>

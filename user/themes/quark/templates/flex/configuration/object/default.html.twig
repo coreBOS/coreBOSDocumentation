@@ -1,0 +1,58 @@
+<style>
+div.dataplugin_entry dl {
+    width: 90%;
+}
+div.dataplugin_entry dl {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin: 1em;
+    font-size: 90%;
+    overflow: auto;
+    width: 70%;
+}
+.cbextkeyword {
+    background: #eee;
+    border-radius: 4px;
+    padding: 3px 5px;
+    font-size: 85%;
+}
+</style>
+<div id="wrap" class="col-lg-8 col-md-8">
+<h1>{{ object.name|e }}</h1>
+<h2>{{ object.configtype|e }} - {{ object.configsubtype|e }}</h2>
+<div class="entry-details">
+<div class="dataplugin_entry">
+<dl>
+<dt class="name">Name<span class="sep">: </span></dt>
+<dd class="name">{{ object.name|e }}</dd>
+<dt class="type">Type<span class="sep">: </span></dt>
+<dd class="type">{{ object.configtype|e }}</dd>
+<dt class="subtype">Subtype<span class="sep">: </span></dt>
+<dd class="subtype">{{ object.configsubtype|e }}</dd>
+<dt class="description">Description<span class="sep">: </span></dt>
+<dd class="description">{{ object.description|e }}</dd>
+<dt class="keywords">Keywords<span class="sep">: </span></dt>
+<dd class="keywords">
+{% for tag in object.tags %}
+<span class="cbextkeyword">{{ tag|e }}</span>
+{% endfor %}
+</dd>
+<dt class="release">Release Date<span class="sep">: </span></dt>
+<dd class="release">{{ object.release|e }}</dd>
+<dt class="authorname">Author Name<span class="sep">: </span></dt>
+<dd class="authorname">{{ object.author|e }}</dd>
+</dl>
+</div>
+{% if object.configtype == 'Business Mapping' %}
+    {% include 'configuration-store/businessmap/' ~ object.configurl ~ '/item.md' %}
+{% elseif object.configtype == 'Business Actions' > 0 %}
+    {% include 'configuration-store/businessaction/' ~ object.configurl ~ '/item.md' %}
+{% elseif object.configtype == 'changeSet' > 0 %}
+    {% include 'configuration-store/changeset/' ~ object.configurl ~ '/item.md' %}
+{% elseif object.configtype == 'Workflow' > 0 %}
+    {% include 'configuration-store/workflow/' ~ object.configurl ~ '/item.md' %}
+{% elseif object.configtype == 'Menu' > 0 %}
+    {% include 'configuration-store/menu/' ~ object.configurl ~ '/item.md' %}
+{% endif %}
+</div>
+</div>
