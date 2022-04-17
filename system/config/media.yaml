@@ -216,3 +216,7 @@ types:
     type: file
     thumb: media/thumb-json.png
     mime: application/json
+  odt:
+    type: file
+    thumb: media/thumb-doc.png
+    mime: application/vnd.oasis.opendocument.text
