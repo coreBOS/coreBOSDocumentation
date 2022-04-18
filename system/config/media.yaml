@@ -220,3 +220,11 @@ types:
     type: file
     thumb: media/thumb-doc.png
     mime: application/vnd.oasis.opendocument.text
+  odp:
+    type: file
+    thumb: media/thumb-ppt.png
+    mime: application/vnd.oasis.opendocument.presentation
+  ods:
+    type: file
+    thumb: media/thumb-xls.png
+    mime: application/vnd.oasis.opendocument.spreadsheet
