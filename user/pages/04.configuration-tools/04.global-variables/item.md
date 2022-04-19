@@ -1,4 +1,0 @@
----
-title: 'Global Variables'
----
-
