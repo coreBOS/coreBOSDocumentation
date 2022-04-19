@@ -1,4 +1,0 @@
----
-title: 'Business Process Managment'
----
-
