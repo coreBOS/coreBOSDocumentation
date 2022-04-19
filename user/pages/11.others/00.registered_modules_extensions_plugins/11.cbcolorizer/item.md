@@ -1,0 +1,140 @@
+---
+title: 'Color and Condition Fields and Blocks Extension'
+---
+
+Color and Condition Fields and Blocks Extension
+===============================================
+
+This extension permits you to establish different coloring and
+formatting rules for fields on a module depending on conditions based on
+the values of the fields in the record. You can also manipulate blocks
+by closing and hiding them depending on field conditions defined.  
+---- dataentry ---- name : tsolucio/cbColorizer type : corebos-extension
+description\_wiki: This extension permits you to establish different
+coloring and formatting rules for fields on a module depending on
+conditions based on the values of the fields in the record. You can also
+manipulate blocks by closing and hiding them depending on field
+conditions defined. keywords\_tags :
+color,hide,show,close,open,conditions,fields version : 1.0 homepage\_url
+:
+<http://corebos.org/documentation/doku.php?id=en:extensions:extensions:cbcolorizer>
+release\_dt : 2016-01-14 licenses : Vizsage price : 45eur buyemail\_mail
+: paypal(at)tsolucio(dot)com distribution : Sale authorname : JPL
+TSolucio, S.L. authoremail\_mail : info(at)tsolucio(dot)com
+supportemail\_mail : info(at)tsolucio(dot)com
+
+------------------------------------------------------------------------
+
+  
+
+Documentation
+=============
+
+-   Open the extension's Administration page by going to **Settings**
+    -&gt; **Module Manager** -&gt; **Colorizer** -&gt; **Configuration**
+    (hammer icon)
+
+<img src="/en/extensions/extensions/cbcolorizer/cbcolordoc01.png" class="align-center" />
+
+-   Choose the module and field you want to format
+
+<img src="/en/extensions/extensions/cbcolorizer/cbcolordoc02.png" class="align-center" />
+
+-   You can define different conditions, which must be true to apply the
+    field formating selected
+
+<img src="/en/extensions/extensions/cbcolorizer/cbcolordoc03.png" class="align-center" />
+
+-   You have to define the format settings separately for field and
+    label
+    -   Background color, Text color,Border color, Blink feature accept
+        a hex value of the color.
+    -   Font weight accepts only the value *bold*
+    -   Font accepts a name of a Font, which must be available in the
+        browser
+    -   Alignment accepts *left*, *right* or *center*
+    -   Save each line clicking on the **SET** button
+
+<img src="/en/extensions/extensions/cbcolorizer/cbcolordoc04.png" class="align-center" />
+
+<img src="/en/extensions/extensions/cbcolorizer/cbcolordoc05.png" class="align-center" />
+
+-   If you have set all formatting options, it should look something
+    like the next image:
+
+<img src="/en/extensions/extensions/cbcolorizer/cbcolordoc06.png" class="align-center" />
+
+-   Additionally each Condition can launch different Actions like
+    *collapse*, *expand* or *hide* a complete block
+    -   If you want to delete an action, click on *choose action*. These
+        entries will be removed!
+
+<img src="/en/extensions/extensions/cbcolorizer/cbcolordoc07.png" class="align-center" />
+
+-   After you save the configuration with the *Save* Button, you should
+    view your settings on top
+
+<img src="/en/extensions/extensions/cbcolorizer/cbcolordoc08.png" class="align-center" />
+
+Check Reference Fields
+----------------------
+
+If you need to create conditions on reference fields, which contain
+references to other modules, you have to follow special rules.
+
+To check if a value is present and a link exists to any given module do
+this:
+
+-   Field: related\_to
+-   Operation: contains
+-   Value: module={ModuleName} for example: module=Accounts
+
+To check if a specific Record ID is linked inside such field:
+
+-   Field: related\_to
+-   Operation: contains
+-   Value: record=1234
+
+As you may notice, these are parts from the URL of the linked record.
+This means that, in the background, this extensions replaces the content
+of the field with the complete Detail View Link and searches on that
+value.
+
+BBCode
+------
+
+You can enable the usage of BBCode for every field, regardless of it's
+type.
+
+All supported BBCodes can be used to format the text.
+
+Examples:
+
+    [url]http://www.domain.com[/url] – URL in every field
+    [url=http://www.domain.com]link to Domain[/url] - -URL with special label
+    [img]http://www.domain.com/path/to/image.jpg[/img] - Image
+    [img width=50 height=10]http://www.domain.com/path/to/image.jpg[/img] – resized image, linked to the original
+    [b]bold text[/b]
+    [youtube]VideoID[/youtube]
+    [email]receiver@domain.com[/email]
+
+Special Customization::Setup of dynamically changed formatting
+--------------------------------------------------------------
+
+If you want to see any formatting changes happen directly after changing
+a value in DetailView, you have to add one line of code to the
+include/js/dtlviewajax.js file as can be seen in
+<embed src="/en/extensions/extensions/cbcolorizer/dtlajaxedit.diff" class="align-center" />.
+
+    diff --git a/include/js/dtlviewajax.js b/include/js/dtlviewajax.js
+    index d0f9222..85c941a 100644
+    --- a/include/js/dtlviewajax.js
+    +++ b/include/js/dtlviewajax.js
+    @@ -289,6 +289,7 @@ function dtlViewAjaxFinishSave(fieldLabel,module,uitype,tableName,fieldName,crmI
+                                            if(getObj(dtlView) != null) getObj(dtlView).innerHTML = "";
+                                            if(getObj("comments") != null) getObj("comments").value = "";
+                                    }
+    +                                if (typeof colorizer_after_change === "function") { colorizer_after_change(fieldName, tagValue); }
+                                    document.getElementById("vtbusy_info").style.display="none";
+                            }
+                    }
