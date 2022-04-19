@@ -19,6 +19,9 @@ images/*
 !images/.*
 user/accounts/*
 !user/accounts/.*
+user/data/feed/*
+user/data/notifications/*
+user/data/flex/indexes/*
 user/themes/*
 !user/themes/.*
 user/localhost/config/security.yaml
