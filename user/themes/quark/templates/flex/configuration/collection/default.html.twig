@@ -1,7 +1,11 @@
 {%- set object_context = object ?? {} -%}
 {%- set object_layout = object_context.layout ?? ('list-' ~ layout) -%}
-
-<div id="wrap" class="col-lg-8 col-md-8">
+<style>
+#sticky_doc {
+  display: none;
+}
+</style>
+<div id="wrap" class="col-lg-9 col-md-9">
 
 <h1>coreBOS Configuration Options Store</h1>
 
