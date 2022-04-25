@@ -1,7 +1,7 @@
 <div class="entry-details">
     {% if object.docurl %}
         {% set cbid = object.getKey() %}
-        <a href="corebosmodules/id:{{ cbid }}"><span class="name">{{ object.name|e }}</span></a>
+        <a href="corebosmodules/{{ object.docurl }}/id:{{ cbid }}/store:corebosmodule"><span class="name">{{ object.name|e }}</span></a>
     {% else %}
         <span class="name">{{ object.name|e }}</span>
     {% endif %}

@@ -1,6 +1,27 @@
-<h2>Fields</h2>
+---
+title: 'ARCO module'
+metadata:
+    description: 'Acceso, Rectificación, Cancelación y Oposición'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - extension
+    tag:
+        - module
+---
 
-<h3>ARCO Information</h3>
+### Fields
+
+#### ARCO Information
 
 <table class="table table-striped">
 <thead>

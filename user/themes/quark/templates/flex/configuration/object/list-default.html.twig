@@ -1,7 +1,18 @@
 <div class="entry-details">
     {% if object.configurl %}
         {% set cbid = object.getKey() %}
-        <a href="configuration-store/id:{{ cbid }}"><span class="name">{{ object.name|e }}</span></a>
+        {% if object.configtype == 'Business Mapping' %}
+            {% set cburl = 'businessmap' %}
+        {% elseif object.configtype == 'Business Actions' > 0 %}
+            {% set cburl = 'businessaction' %}
+        {% elseif object.configtype == 'changeSet' > 0 %}
+            {% set cburl = 'changeset' %}
+        {% elseif object.configtype == 'Workflow' > 0 %}
+            {% set cburl = 'workflow' %}
+        {% elseif object.configtype == 'Menu' > 0 %}
+            {% set cburl = 'menu' %}
+        {% endif %}
+        <a href="configuration-store/{{ cburl }}/{{ object.configurl }}/id:{{ cbid }}/store:configuration"><span class="name">{{ object.name|e }}</span></a>
     {% else %}
         <span class="name">{{ object.name|e }}</span>
     {% endif %}

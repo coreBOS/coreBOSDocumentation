@@ -16,13 +16,19 @@ div.dataplugin_entry dl {
     padding: 3px 5px;
     font-size: 85%;
 }
+.full-width-doc .documentation_info {
+    padding-top: 15px;
+}
+div.dataplugin_entry dl {
+    width: 90%;
+}
 </style>
-<div id="wrap" class="col-lg-8 col-md-8">
-<h1>{{ object.name|e }}</h1>
-<h2>{{ object.configtype|e }} - {{ object.configsubtype|e }}</h2>
+<div id="wrap">
+<h1 style="text-align:center">{{ object.name|e }}</h1>
+<h2 style="text-align:center">{{ object.configtype|e }} - {{ object.configsubtype|e }}</h2>
 <div class="entry-details">
 <div class="dataplugin_entry">
-<dl>
+<dl style="margin:auto">
 <dt class="name">Name<span class="sep">: </span></dt>
 <dd class="name">{{ object.name|e }}</dd>
 <dt class="type">Type<span class="sep">: </span></dt>
@@ -43,16 +49,5 @@ div.dataplugin_entry dl {
 <dd class="authorname">{{ object.author|e }}</dd>
 </dl>
 </div>
-{% if object.configtype == 'Business Mapping' %}
-    {% include 'configuration-store/businessmap/' ~ object.configurl ~ '/item.md' %}
-{% elseif object.configtype == 'Business Actions' > 0 %}
-    {% include 'configuration-store/businessaction/' ~ object.configurl ~ '/item.md' %}
-{% elseif object.configtype == 'changeSet' > 0 %}
-    {% include 'configuration-store/changeset/' ~ object.configurl ~ '/item.md' %}
-{% elseif object.configtype == 'Workflow' > 0 %}
-    {% include 'configuration-store/workflow/' ~ object.configurl ~ '/item.md' %}
-{% elseif object.configtype == 'Menu' > 0 %}
-    {% include 'configuration-store/menu/' ~ object.configurl ~ '/item.md' %}
-{% endif %}
 </div>
 </div>
