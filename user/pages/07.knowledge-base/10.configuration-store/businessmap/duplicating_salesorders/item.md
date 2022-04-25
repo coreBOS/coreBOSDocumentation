@@ -1,3 +1,26 @@
+---
+title: 'Duplicating Sales Orders'
+metadata:
+    description: 'Business Map to Duplicate Sales Orders'
+    author: 'Luke MajorLabel'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - businessmappings
+        - configuration
+    tag:
+        - fieldmapping
+---
+
+
 <div class="code-toolbar">
 <pre class=" language-xml" tabindex="0">
 <code class="language-xml hljs">
