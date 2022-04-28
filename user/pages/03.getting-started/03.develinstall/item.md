@@ -1,5 +1,5 @@
 ---
-title: 
+title: 'How to set up a coreBOS development environment: git workflow'
 ---
 ## How to set up a coreBOS development environment: git workflow
 
@@ -12,17 +12,15 @@ The purpose is to help everyone have an empowering and welcoming first
 experience as they start contributing to the \<wrap em\>coreBOS Open
 Source project\!\</wrap\>
 
-  - **What you’ll learn**
-      - How to access the code of a coreBOS install.
-      - How to access this coreBOS install via web services.
-      - How to execute all the unit tests accessing the demo data.
+-   **What you’ll learn**
+    -   How to access the code of a coreBOS install.
+    -   How to access this coreBOS install via web services.
+    -   How to execute all the unit tests accessing the demo data.
 
-<!-- end list -->
-
-  - **What you’ll need**
-      - **LAMP**(Linux, Apache, MySQL, PHP) stack.
-      - **Code editor**, anyone you prefer and work with.
-      - And obviously, you need to have **Git** installed because
+-   **What you’ll need**
+    -   **LAMP**(Linux, Apache, MySQL, PHP) stack.
+    -   **Code editor**, anyone you prefer and work with.
+    -   And obviously, you need to have **Git** installed because
         coreBOS is a git-based open source project. That means that
         contributing to the project is basically the same as for any
         other git-based project.
@@ -33,14 +31,13 @@ The real goal of this quick guide is to help you contribute back to the
 coreBOS project, so in order to do that, there are two basic ways to get
 the repository:
 
-  - Firstly, the example of many coreBOS developers on the team. They
+-   Firstly, the example of many coreBOS developers on the team. They
     have permission to push to the coreBOS repository. That means they
     can download directly from the
-    [tsolucio/corebos](https://github.com/tsolucio/corebos) URL. 
+    [tsolucio/corebos](https://github.com/tsolucio/corebos) URL.
 
-<!-- end list -->
 
-  - If you don’t have that permission, then you have to **fork** the
+-   If you don’t have that permission, then you have to **fork** the
     project on your GitHub account. You can do everything you want in
     your forked repository, but in the end, if you want to share the
     code, you have to push it to your fork and then emit a pull request.
@@ -51,11 +48,11 @@ the repository:
 Forking a repository is really straightforward and in most cases just a
 two-step process:
 
-  - Make sure you are logged into GitHub with your account.
-  - Head over to the
+-   Make sure you are logged into GitHub with your account.
+-   Head over to the
     [tsolucio/corebos](https://github.com/tsolucio/corebos) Github
-    repository. This is the place where coreBOS lives. 
-  - Click the **Fork** button on the upper right-hand side of the
+    repository. This is the place where coreBOS lives.
+-   Click the **Fork** button on the upper right-hand side of the
     repository’s page.
 
 It is nice to share some love and click on the \<wrap em\>Star\</wrap\>
@@ -206,13 +203,12 @@ We can see that the install directories have been deleted. Notice that 2
 directories and 1 file have appeared which Git doesn't know what they
 are. Now we should restore these files.
 
-  - move the renamed install directory and file back to their original
+-   move the renamed install directory and file back to their original
     place:
-      - the directory **“install”** and the file **“install.php”** will
+    -   the directory **“install”** and the file **“install.php”** will
         be renamed after the installation. Rename them back to their
         original name:
 
-<!-- end list -->
 
     mv 8432658395801x3fab13af3.42704102install/ install
 
@@ -294,11 +290,10 @@ repository from GitHub, install it, and work there. In this case, both
 config.inc.php and tabdata.php appear in the “git status” commands and
 are always there as you can't commit them. You have two alternatives:
 
-  - one is just ignoring them, it really isn't that much noise and you
+-   one is just ignoring them, it really isn't that much noise and you
     get used to seeing them there
-  - the other is to tell git to not show them to you with the command:
+-   the other is to tell git to not show them to you with the command:
 
-<!-- end list -->
 
     git update-index --skip-worktree config.inc.php tabdata.php
 
@@ -313,16 +308,14 @@ directory named **coreBOSTests**. This coreBOSTests directory is empty
 and we need to download all the unit tests for coreBOS there. The
 comfortable way of doing this is by following these steps:
 
-  - Delete the coreBOSTests directory 
+-   Delete the coreBOSTests directory
 
-<!-- end list -->
 
     rmdir coreBOSTests
 
-  - Do a fork of the coreBOSTests repository and then clone it to our
+-   Do a fork of the coreBOSTests repository and then clone it to our
     local repository.
 
-<!-- end list -->
 
     git  clone https://github.com/USERNAME/coreBOSTests coreBOSTests
 
@@ -489,12 +482,12 @@ Now, go forth and **build**\!
 
 What if you get stuck? That’s perfectly fine.
 
-  - The best place to contact the developer community is on our [Gitter
+-   The best place to contact the developer community is on our [Gitter
     chat group](https://gitter.im/corebos/discuss).
-  - The blog is mostly developer-oriented and there is a lot of
+-   The blog is mostly developer-oriented and there is a lot of
     information on the [documentation
     site](http://corebos.com/documentation/doku.php?id=en:start).
-  - You can ask in the [forum](https://discussions.corebos.org/).
+-   You can ask in the [forum](https://discussions.corebos.org/).
 
 Don't hesitate to get in touch, we are a **really friendly and helpful
 community**.
