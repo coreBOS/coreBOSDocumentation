@@ -1,41 +1,33 @@
 ---
-title: 'Auto Increment Number Field module'
+title: 'Auto Increment Number Field'
+metadata:
+    description: 'Define different increment counters with a prefix for fields in modules and then apply them with conditions using workflows.'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - extension
+    tag:
+        - module
 ---
 
-Auto Increment Number Field module
-==================================
+### Configuration
 
-This configuration module permits you to define different increment
-counters with a prefix for fields in modules and then apply them with
-conditions using workflows. It will permit you to have various
-counter/increment fields on any module or increment differently the same
-field depending on values in the record being saved.  
----- dataentry ---- name : tsolucio/AutoNumberPrefix type :
-corebos-module description\_wiki : This configuration module permits you
-to define different increment counters with a prefix for fields in
-modules and then apply them with conditions using workflows. It will
-permit you to have various counter/increment fields on any module or
-increment differently the same field depending on values in the record
-being saved. keywords\_tags : autoincrement, identifier, field,
-settings, customnumber,counter version : 1.0 homepage\_url :
-<http://corebos.org/documentation/doku.php?id=en:extensions:extensions:autonumberprefix>
-release\_dt : 2015-11-02 licenses : Vizsage price : 120eur
-buyemail\_mail : paypal(at)tsolucio(dot)com distribution : Sale
-authorname : JPL TSolucio, S.L. authoremail\_mail :
-info(at)tsolucio(dot)com supportemail\_mail : info(at)tsolucio(dot)com
+You can create as many "counter" fields as you need. They are created in the module's interface as any other field in any other module.
 
-------------------------------------------------------------------------
+===
 
-  
+The important fields are:
 
-Configuration
-=============
-
-You can create as many "counter" records as you need. They are created
-in the module's interface as any other record in any other module. The
-important fields are:
-
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -44,37 +36,38 @@ important fields are:
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Prefix</td>
 <td>string</td>
 <td>This is the text prefix that will be added to the start of the identifier. It is totally equivalent to the text prefix you can find in the default autonumbering in <strong>Settings</strong>. It may be left empty.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Module</td>
 <td>module multi-list</td>
 <td>This is the module that the counter is for.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Format</td>
 <td>string</td>
-<td><a href="/en/extensions/extensions/autonumberprefix#number_formatting">see below</a></td>
+<td>see Number Formatting below</li>
+</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Workflow Expression</td>
 <td>checkbox</td>
 <td>Indicates if the Format field contains a Workflow Expression that needs to be evaluated.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Active</td>
 <td>checkbox</td>
 <td>Indicates if the counter is active or not. Any record marked as inactive will not be used by the extension.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Current Value</td>
 <td>number</td>
 <td>This is the current maximum value of the counter.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Default</td>
 <td>checkbox</td>
 <td>If more than one counter can be applied, the one marked as default will be used.</td>
@@ -82,8 +75,7 @@ important fields are:
 </tbody>
 </table>
 
-Install
--------
+#### Install
 
 Once you have installed the module normally using module manager, you
 will see that it adds a new function to the workflow system:
@@ -91,53 +83,47 @@ will see that it adds a new function to the workflow system:
 **AutoNumberInc(ANPid)**
 
 You can now use this function in an Update Field workflow task to assign
-the next counter value to any field based on any condition in the
-module.
+the next counter value to any field based on any condition in the module.
 
-<img src="/en/extensions/extensions/autoincmodule/anpwf.png" class="align-center" />
+![Workflow](anpwf.png?width=100%)
 
 The **ANPid** number is the internal CRMID of the record or the value of
 the Increment field you want to use for the sequence. This number can be
 found by looking in the URL of the Detail View of the record.
 
-<img src="/en/extensions/extensions/autoincmodule/anpid.png" class="align-center" />
+![CRMID](anpid.png?width=100%)
 
-Number formatting
------------------
+#### Number formatting
 
 The format field accepts three forms:
 
-1.- Number  
+#### 1.- Number
+
 A string of numbers that indicate both the number of characters and the
 actual counter that must appear in the result. This is the same as the
 default behavior you can find in the autonumber in **Settings**. For
 example, with 000001 you will get the sequence:
 
-000001, 000002,..., 000022, 000023, ...000101,...010001.... always with
-6 numbers in the counter
+000001, 000002,..., 000022, 000023, ...000101,...010001.... always with 6 numbers in the counter
 
-2.- Date/Number  
-An advanced format that accepts any [PHP supported date conversion
-letter](http://php.net/manual/en/function.date.php) and the special
-string **%u** for the number.
+#### 2.- Date/Number
 
-The string **%u** accepts the [PHP sprintf
-format](http://php.net/manual/en/function.sprintf.php). So to obtain the
-same sequence as in point 1 above you would use:
+An advanced format that accepts any [PHP supported date conversion letter](http://php.net/manual/en/function.date.php) and the special string **%u** for the number.
 
-    %'.06u
+The string **%u** accepts the [PHP sprintf format](http://php.net/manual/en/function.sprintf.php). So to obtain the same sequence as in point 1 above you would use:
+
+`%'.06u`
 
 If you want to put the current year followed by the previous 6 number
 format you would use:
 
-    Y-\%'.06\u
+`Y-\%'.06\u`
 
 which would produce the sequence:
 
-2015-000001, 2015-000002,..., 2015-000022, 2015-000023,
-...2015-000101,...2015-010001....
+2015-000001, 2015-000002,..., 2015-000022, 2015-000023, ...2015-000101,...2015-010001....
 
-3.- Workflow Expression
+#### 3.- Workflow Expression
 
 If you activate the "Workflow Expression" checkbox then we will parse
 the format string through sprintf in order to put the correct number in
@@ -148,22 +134,21 @@ formatting combinations.
 
 For example, you could have an expression like
 
-    concat(format_date('y'), '-', duedate)
+`concat(format_date('y'), '-', duedate)`
 
 or
 
-    concat(duedate, '-%'.06u')
+`concat(duedate, '-%'.06u')`
 
 This is a real example from a coreBOS install:
 
-    concat(format_date(get_date('now'),'ym'), '_', $(code_shop : (cbShop) code_shop) , '_%'.04u')
+`concat(format_date(get_date('now'),'ym'), '_', $(code_shop : (cbShop) code_shop) , '_%'.04u')`
 
-Fields
-======
+### Fields
 
-### Auto Number Prefix Information
+#### Auto Number Prefix Information
 
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -172,57 +157,57 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Auto Number Prefix No</td>
 <td>autonumber</td>
 <td><strong>Identifier</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Prefix</td>
 <td>string</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Module</td>
 <td>module multi-list</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Format</td>
 <td>string</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Workflow Expression</td>
 <td>checkbox</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Active</td>
 <td>checkbox</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Current Value</td>
 <td>number</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Default</td>
 <td>checkbox</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Assigned To</td>
 <td>assigned to</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Created Time</td>
 <td>datetime</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Modified Time</td>
 <td>datetime</td>
 <td></td>
@@ -230,9 +215,9 @@ Fields
 </tbody>
 </table>
 
-### Description
+#### Description
 
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -241,7 +226,7 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Description</td>
 <td>text</td>
 <td></td>
