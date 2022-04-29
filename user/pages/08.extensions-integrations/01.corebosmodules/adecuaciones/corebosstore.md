@@ -1,43 +1,29 @@
 ---
 title: 'Adequacy module'
+metadata:
+    description: 'Implementation process in the company designated by the flow and steps modules'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - extension
+    tag:
+        - module
 ---
 
-Adequacy module
-===============
+### Fields
 
-This project-like module is part of the Adequacy functionality. It
-represents the actual implementation process in the company designated
-by the
-[flow](http://corebos.org/documentation/doku.php?id=en:extensions:extensions:flujo)
-and
-[steps](http://corebos.org/documentation/doku.php?id=en:extensions:extensions:pasos)
-and controls the status of implementation of the adequacy project.  
----- dataentry ---- name : tsolucio/Adecuaciones type : corebos-module
-description\_wiki: This project-like module is part of the Adequacy
-functionality. It represents the actual implementation process in the
-company designated by the
-[flow](http://corebos.org/documentation/doku.php?id=en:extensions:extensions:flujo)
-and
-[steps](http://corebos.org/documentation/doku.php?id=en:extensions:extensions:pasos)
-and controls the status of implementation of the adequacy project.
-keywords\_tags : project,steps,process,implementation,adapt version :
-1.0 homepage\_url :
-<http://corebos.org/documentation/doku.php?id=en:extensions:extensions:adecuaciones>
-release\_dt : 2010-03-03 licenses : Vizsage price : 120eur
-buyemail\_mail : paypal(at)tsolucio(dot)com distribution : Sale
-authorname : JPL TSolucio, S.L. authoremail\_mail :
-info(at)tsolucio(dot)com supportemail\_mail : info(at)tsolucio(dot)com
+#### Adequations Information
 
-------------------------------------------------------------------------
-
-  
-
-Fields
-======
-
-### Adecuations Information
-
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -46,57 +32,57 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Name</td>
 <td>string</td>
 <td><strong>Identifier</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Start Date</td>
 <td>date</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>End Date</td>
 <td>date</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>State</td>
 <td>picklist</td>
 <td>-----,Terminado</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Paso Actual</td>
 <td>string</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>% Realizacion</td>
 <td>number</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Assigned To</td>
 <td>assigned to</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Account Name</td>
 <td>relation</td>
 <td>Accounts</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Flujo de Trabajo</td>
 <td>relation</td>
 <td>Flujo</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Created Time</td>
 <td>datetime</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Modified Time</td>
 <td>datetime</td>
 <td></td>
@@ -104,11 +90,9 @@ Fields
 </tbody>
 </table>
 
-### Customer Information
+#### Adequations Description
 
-### Adecuations Description
-
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -117,7 +101,7 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Description</td>
 <td>text</td>
 <td></td>
