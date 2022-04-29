@@ -1,34 +1,29 @@
 ---
-title: 'Attorneys Module'
+title: 'Attorneys'
+metadata:
+    description: 'Contact-like module to register information about the Attorneys in our office.'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - extension
+    tag:
+        - module
 ---
 
-Attorneys Module
-================
+### Fields
 
-Contact-like module to register information about the Attorneys in our
-office.  
-This is part of the **Attorney's Back Office**.  
----- dataentry ---- name : tsolucio/Attorneys type : corebos-module
-description\_wiki: Contact-like module to register information about the
-Attorneys in our office.  
-This is part of the **Attorney's Back Office**. keywords\_tags :
-Attorneys,employee version : 1.0 homepage\_url :
-<http://corebos.org/documentation/doku.php?id=en:extensions:extensions:attorneys>
-release\_dt : 2013-06-12 licenses : Vizsage price : 250eur
-buyemail\_mail : paypal(at)tsolucio(dot)com distribution : Sale
-authorname : JPL TSolucio, S.L. authoremail\_mail :
-info(at)tsolucio(dot)com supportemail\_mail : info(at)tsolucio(dot)com
+#### Attorney Information
 
-------------------------------------------------------------------------
-
-  
-
-Fields
-======
-
-### Attorney Information
-
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -37,37 +32,37 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>First Name</td>
 <td>string</td>
 <td><strong>Identifier</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Record No</td>
 <td>autonumber</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Middle Name</td>
 <td>string</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Date Joined the Firm</td>
 <td>date</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Last Name</td>
 <td>string</td>
 <td><strong>Identifier</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Attorney Supervisor</td>
 <td>relation</td>
 <td>Attorneys</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Assigned To</td>
 <td>assigned to</td>
 <td></td>
@@ -75,9 +70,9 @@ Fields
 </tbody>
 </table>
 
-### Home Address
+#### Home Address
 
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -86,22 +81,22 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Address</td>
 <td>text</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>City</td>
 <td>string</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>State/Province</td>
 <td>picklist</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Zip/Postal Code</td>
 <td>string</td>
 <td></td>
@@ -109,9 +104,9 @@ Fields
 </tbody>
 </table>
 
-### Phones, E-mails, Website, Social Network Information
+#### Phones, E-mails, Website, Social Network Information
 
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -120,52 +115,52 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Home Phone</td>
 <td>11</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Mobile Phone</td>
 <td>11</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Work Phone</td>
 <td>11</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Personal Email</td>
 <td>email</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Work Email</td>
 <td>email</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>LinkedIn Profile</td>
 <td>url</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Twitter Page</td>
 <td>url</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Facebook Page</td>
 <td>url</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Skype ID</td>
 <td>85</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>GTalk ID</td>
 <td>string</td>
 <td></td>
@@ -173,9 +168,9 @@ Fields
 </tbody>
 </table>
 
-### Legal Practice Areas Specialization
+#### Legal Practice Areas Specialization
 
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -184,7 +179,7 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Area of Law Specialization</td>
 <td>multipicklist</td>
 <td></td>
@@ -192,9 +187,9 @@ Fields
 </tbody>
 </table>
 
-### Compensation and Hourly Rates
+#### Compensation and Hourly Rates
 
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -203,12 +198,12 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Yearly Compensation</td>
 <td>string</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Hourly Rate</td>
 <td>string</td>
 <td></td>
@@ -216,9 +211,9 @@ Fields
 </tbody>
 </table>
 
-### Bar Association Information
+#### Bar Association Information
 
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -227,32 +222,32 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Bar Member of the State of</td>
 <td>picklist</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Bar Number</td>
 <td>string</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Bar Member Since</td>
 <td>date</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>County</td>
 <td>relation</td>
 <td>County</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Sections</td>
 <td>text</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Bar Comments</td>
 <td>text</td>
 <td></td>
@@ -260,9 +255,9 @@ Fields
 </tbody>
 </table>
 
-### Education
+#### Education
 
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -271,62 +266,62 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>High School</td>
 <td>string</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>High School Graduation Year</td>
 <td>string</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>High School GPA</td>
 <td>string</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>High School Comments</td>
 <td>text</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Undergraduate School</td>
 <td>string</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Undergraduate School Graduation Year</td>
 <td>string</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Undergraduate School GPA</td>
 <td>string</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Undergraduate School Comments</td>
 <td>text</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Law School</td>
 <td>string</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>LS Graduation Year</td>
 <td>string</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Law School GPA</td>
 <td>string</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Law School Comments</td>
 <td>text</td>
 <td></td>
@@ -334,11 +329,9 @@ Fields
 </tbody>
 </table>
 
-### Custom Information
+#### Description
 
-### Description
-
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -347,7 +340,7 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Description</td>
 <td>text</td>
 <td></td>
@@ -355,9 +348,9 @@ Fields
 </tbody>
 </table>
 
-### Additional Information
+#### Additional Information
 
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -366,12 +359,12 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Created Time</td>
 <td>datetime</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Modified Time</td>
 <td>datetime</td>
 <td></td>
