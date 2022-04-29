@@ -1,64 +1,67 @@
 ---
-title: 'How to set up a coreBOS development environment: git workflow'
+title: 'coreBOS development environment'
+metadata:
+    description: 'How to set up a coreBOS development environment: git workflow'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - installation
+        - development
+        - contribute
+    tag:
+        - install
+        - guidelines
 ---
+
 ## How to set up a coreBOS development environment: git workflow
 
-This is a quick guide which contains all the tools you'll need to
-configure your coreBOS development environment. Along the way, we will
-offer some advice to keep in mind as you actually set up your
-development environment.
+This is a quick guide which contains all the tools you'll need to configure your coreBOS development environment. Along the way, we will offer some advice to keep in mind as you actually set up your development environment.
 
-The purpose is to help everyone have an empowering and welcoming first
-experience as they start contributing to the \<wrap em\>coreBOS Open
-Source project\!\</wrap\>
+===
 
--   **What you’ll learn**
-    -   How to access the code of a coreBOS install.
-    -   How to access this coreBOS install via web services.
-    -   How to execute all the unit tests accessing the demo data.
+The purpose is to help everyone have an empowering and welcoming first experience as they start contributing to the **coreBOS Open Source project!**
 
--   **What you’ll need**
-    -   **LAMP**(Linux, Apache, MySQL, PHP) stack.
-    -   **Code editor**, anyone you prefer and work with.
-    -   And obviously, you need to have **Git** installed because
-        coreBOS is a git-based open source project. That means that
-        contributing to the project is basically the same as for any
-        other git-based project.
+- **What you’ll learn**
+  - How to access the code of a coreBOS install.
+  - How to access this coreBOS install via web services.
+  - How to execute all the unit tests accessing the demo data.
 
-### Let’s get started, shall we?
+<span></span>
+
+- **What you’ll need**
+  - **LAMP** (Linux, Apache, MySQL, PHP) stack.
+  - **Code editor**, anyone you prefer and work with.
+  - And obviously, you need to have **Git** installed because coreBOS is a git-based open source project. That means that contributing to the project is basically the same as for any other git-based project.
+
+## Let’s get started, shall we?
 
 The real goal of this quick guide is to help you contribute back to the
 coreBOS project, so in order to do that, there are two basic ways to get
 the repository:
 
--   Firstly, the example of many coreBOS developers on the team. They
-    have permission to push to the coreBOS repository. That means they
-    can download directly from the
-    [tsolucio/corebos](https://github.com/tsolucio/corebos) URL.
-
-
--   If you don’t have that permission, then you have to **fork** the
-    project on your GitHub account. You can do everything you want in
-    your forked repository, but in the end, if you want to share the
-    code, you have to push it to your fork and then emit a pull request.
-    That’s the path we are going to demonstrate.
+- Firstly, the example of many coreBOS developers on the team. They have permission to push to the coreBOS repository. That means they can download directly from the [tsolucio/corebos](https://github.com/tsolucio/corebos) URL.
+- If you don’t have that permission, then you have to **fork** the project on your GitHub account. You can do everything you want in your forked repository, but in the end, if you want to share the code, you have to push it to your fork and then emit a pull request. That’s the path we are going to demonstrate.
 
 ## Forking the GitHub repository
 
-Forking a repository is really straightforward and in most cases just a
-two-step process:
+Forking a repository is really straightforward and in most cases just a two-step process:
 
--   Make sure you are logged into GitHub with your account.
--   Head over to the
-    [tsolucio/corebos](https://github.com/tsolucio/corebos) Github
-    repository. This is the place where coreBOS lives.
--   Click the **Fork** button on the upper right-hand side of the
-    repository’s page.
+- Make sure you are logged into GitHub with your account.
+- Head over to the [tsolucio/corebos](https://github.com/tsolucio/corebos) Github repository. This is the place where coreBOS lives.
+- Click the **Fork** button on the upper right-hand side of the repository’s page.
 
-It is nice to share some love and click on the \<wrap em\>Star\</wrap\>
-too \!\!
+It is nice to share some love and click on the **Star** too!!
 
-**That’s it\!** You now have a copy of the original repository in your
+**That’s it!** You now have a copy of the original repository in your
 GitHub account. This fork serves as your personal public repository, no
 other developers are allowed to push to it, unless you allow them to,
 but anyone can pull changes from it.
@@ -75,7 +78,7 @@ Go to the root of your Apache web server and start working from there.
 The standard `clone` command creates a local git repository from your
 remote fork on GitHub.
 
-    git clone https://github.com/USERNAME/corebos cbdevel
+`git clone https://github.com/USERNAME/corebos cbdevel`
 
 What are we basically doing is telling Git to connect to this
 repository, which is our coreBOS open-source repository and clone it. If
@@ -85,25 +88,24 @@ going to add our own directory here: **cbdevel**. So it will create this
 cbdevel directory and throw in all the code. Let's jump into this
 directory,
 
-    cd cbdevel
+`cd cbdevel`
 
-and we have here the coreBOS code, just downloaded with the latest
-version.
+and we have here the coreBOS code, just downloaded with the latest version.
 
 In this directory, we can launch a `git log`, for example, and it will
 show us all the commits that have been made till now.
 
-### What else can we do?
+## What else can we do?
 
-    #displays the state of the working directory and the staging area
-    git status
+display the state of the working directory and the staging area
+
+`git status`
 
 Right now, there are no changes, so everything is good.
 
-    git show --summary
+`git show --summary`
 
-It will show the last applied commit; the last code change that coreBOS
-got.
+It will show the last applied commit; the last code change that coreBOS got.
 
 So, okay, this is not something we could have done downloading the zip
 file. The real important thing is that this directory is controlled by
@@ -114,22 +116,21 @@ locally (pull).
 
 For example, if we hit
 
-    vi index.php
+`vi index.php`
 
 and add some lines in this file, if we do the `git status` again it will
-say: **Hey, you modified some files\!** So we know that locally this
+say: **Hey, you modified some files!** So we know that locally this
 file is changed.
 
 If we ask git exactly what changes have been made there:
 
-    git diff index.php
+`git diff index.php`
 
-It will also show us that this bunch of new lines have been entered
-there.
+It will also show us that this bunch of new lines have been entered there.
 
 If we want to undo this change, we can just check out the version:
 
-    git checkout index.php
+`git checkout index.php`
 
 And if we type `vi index.php` we can see that now we are back to where
 we were before and there are no new lines on the index.php. And if we do
@@ -140,7 +141,7 @@ download of the coreBOS code. It’s alive and controlled by git. Git
 knows what’s happening in this directory. It also knows what is
 happening in the parent directory where it came from:
 
-    git remote -v
+`git remote -v`
 
 This shows that this directory is connected to the real repository
 online. So once it changes we can quickly update and know what’s going
@@ -162,11 +163,10 @@ we are working with, the one we are cloning with right now. The group is
 what we are going to use to give access to the Apache server so both the
 group and the user can do whatever they want inside the directory.
 
-    chgrp -R www-data ../cbdevel/
+`chgrp -R www-data ../cbdevel/`
 
-  - `www-data` is the Apache user, and we assign it to cbdevel directory
-  - `-R` flag means it will recursively go down all the directory tree
-    and sign all the files to this group.
+- `www-data` is the Apache user, and we assign it to cbdevel directory
+- `-R` flag means it will recursively go down all the directory tree and sign all the files to this group.
 
 Now our user is the owner of all files (so we can edit them normally
 with our user) and the webserver user is the group (so it can write the
@@ -177,9 +177,7 @@ files it needs to write to work)
 We now have the code and can import the project into our code editor. So
 we can access all the files in that directory and start modifying them.
 
-The next step would be [installing the
-project](http://corebos.com/documentation/doku.php?id=en:extensions:coreboscp:installconfig)
-as we would normally do.
+The next step would be [installing the project](../02.installation) as we would normally do.
 
 At this point, we are already set up to be able to modify coreBOS, study
 the code and be able to do whatever we need to. A few more steps to get
@@ -197,28 +195,19 @@ the install is the same and really nothing changes.
 As soon as the installation is complete, ask git about what it has to
 say of the installation process. You can do so by typing:
 
-    git status
+`git status`
 
 We can see that the install directories have been deleted. Notice that 2
 directories and 1 file have appeared which Git doesn't know what they
 are. Now we should restore these files.
 
--   move the renamed install directory and file back to their original
-    place:
-    -   the directory **“install”** and the file **“install.php”** will
-        be renamed after the installation. Rename them back to their
-        original name:
+- move the renamed install directory and file back to their original place:
+  - the directory **"install"** and the file **"install.php"** will be renamed after the installation. Rename them back to their original name:
 
-
-    mv 8432658395801x3fab13af3.42704102install/ install
-
-    mv 8432658395801x3fab13af3.42704102install.php.txt install.php
-
-``` 
-  * now rename Migration directory back into the modules directory
+```shell
+mv 8432658395801x3fab13af3.42704102install/ install
+mv 8432658395801x3fab13af3.42704102install.php.txt install.php
 ```
-
-    mv 8432658395801x3fab13af3.42704102Migration modules/Migration
 
 Notice that this is a security measure because you don’t want these to
 be able to be read and execute when we are in production. In fact, if it
@@ -263,7 +252,7 @@ in config.inc.php without having to modify that file.
 
 The **config-dev.inc.php** template I use is this one:
 
-``` PHP
+```php
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
@@ -287,19 +276,15 @@ $LOG4PHP_DEBUG = true;
 Another situation that appears from time to time is when you don't have
 a private repository for your install, you just clone the main
 repository from GitHub, install it, and work there. In this case, both
-config.inc.php and tabdata.php appear in the “git status” commands and
+config.inc.php and tabdata.php appear in the "git status" commands and
 are always there as you can't commit them. You have two alternatives:
 
--   one is just ignoring them, it really isn't that much noise and you
-    get used to seeing them there
--   the other is to tell git to not show them to you with the command:
+- one is just ignoring them, it really isn't that much noise and you get used to seeing them there
+- the other is to tell git to not show them to you with the command:
 
+`git update-index --skip-worktree config.inc.php tabdata.php`
 
-    git update-index --skip-worktree config.inc.php tabdata.php
-
-> Please note that these two files must **NEVER** be in any commit you
-> make on the main project. Pull requests that contain any modifications
-> to these files won't be accepted.
+ !! Please note that these two files must **NEVER** be in any commit you make on the main project. Pull requests that contain any modifications to these files won't be accepted.
 
 ## How to execute all the unit tests accessing the demo data?
 
@@ -308,25 +293,21 @@ directory named **coreBOSTests**. This coreBOSTests directory is empty
 and we need to download all the unit tests for coreBOS there. The
 comfortable way of doing this is by following these steps:
 
--   Delete the coreBOSTests directory
+- Delete the coreBOSTests directory
 
+`rmdir coreBOSTests`
 
-    rmdir coreBOSTests
+- Do a fork of the coreBOSTests repository and then clone it to our local repository.
 
--   Do a fork of the coreBOSTests repository and then clone it to our
-    local repository.
-
-
-    git  clone https://github.com/USERNAME/coreBOSTests coreBOSTests
+`git clone https://github.com/USERNAME/coreBOSTests coreBOSTests`
 
 What we just did now was deleting the coreBOSTests directory that comes
-natively with coreBOS and download the exact project of Tests from
-GitHub.
+natively with coreBOS and download the exact project of Tests from GitHub.
 
 Again as we did with the cbdevel directory, we should change the
 permissions for the coreBOSTests
 
-    chgrp -R www-data coreBOSTests
+`chgrp -R www-data coreBOSTests`
 
 Now we have the Test environment installed in its own repository.
 
@@ -344,7 +325,7 @@ fill it up with the information inside **coreBOSTests/database**. Here
 is the **coreBOSTests.sql** database, so we load this information into
 the database that we have just created.
 
-    mysql -u root  -p cbdevel < coreBOSTests.sql
+`mysql -u root -p cbdevel < coreBOSTests.sql`
 
 The idea is that you install coreBOS simply to get the `config file`. We
 could have manually set up the config.inc.php file and directly recover
@@ -358,29 +339,19 @@ process. Anyways both paths are perfectly valid.
 If we notice the coreBOS install has 10 users, and if you see at the
 user privileges directory:
 
-    ls -l user_privileges
+`ls -l user_privileges`
 
 We will see that there is only one, which is the admin user. So we need
 the other ones to be able to log in.
 
-Also when we change the database like this, when we kind of hijack all
-the information that is on the database from an install code base, we
-should regenerate the tab data file. To do that we have a couple of
-commands:
-
-``` 
-#generates the tab data file for us taking into consideration the new database.
-build/HelperScripts/update_tabdata 
-```
-
-``` 
+```shell
 # takes into consideration the new users in the database
 build/HelperScripts/createuserfiles 
 ```
 
 If everything went correctly now when we type
 
-    ls -l user_privileges
+`ls -l user_privileges`
 
 We should have a whole bunch of files in the directory.
 
@@ -388,13 +359,11 @@ We have to go into the `user_privileges` directory and change all of
 these files’ permission to the group `www-data`, so they can be
 regenerated by the application if necessary.
 
-### coreBOS Updater
+## coreBOS Updater
 
 There is a lot of information about this fundamental tool in the coreBOS
 lifecycle, but for the purpose of this tutorial, suffice to say that,
-when we recover the database we must always go to the [coreBOS
-Updater](http://corebos.com/documentation/doku.php?id=en:devel:corebosupdater),
-load the updates and apply them all.
+when we recover the database we must always go to the [coreBOS Updater](http://corebos.com/documentation/doku.php?id=en:devel:corebosupdater), load the updates and apply them all.
 
 ## How to access this coreBOS install via web services?
 
@@ -407,25 +376,22 @@ things like that. Again at the root of our apache webserver, we do a
 clone of our already forked web services repository. We are going to
 name the directory wsdevel.
 
-    git clone https://github.com/USERNAME/coreBOSwsDevelopment wsdevel
+`git clone https://github.com/USERNAME/coreBOSwsDevelopment wsdevel`
 
-This repository doesn’t need anything else to be set. We don’t have to
-change the permissions.
+This repository doesn’t need anything else to be set. We don’t have to change the permissions.
 
-We can access our web service interface by typing **localhost/wsdevel**
-in our browser.
+We can access our web service interface by typing **localhost/wsdevel** in our browser.
 
 It asks us where our install is and we can access it either via password
 or access key. After we are done with that, we can launch web service
 queries and get access to all the information.
 
-### Ready to start collaborating\!
+## Ready to start collaborating!
 
 Now we are actually finished with the coreBOS development application.
 
 We have everything we need: the test data, access to the code, we have
-access with all the users for us to start working and committing pull
-requests.
+access with all the users for us to start working and committing pull requests.
 
 For every change you want to implement you start from the master branch,
 which is the default branch, you create a new branch, develop want you
@@ -455,45 +421,38 @@ Let's suppose that it takes you a few days to finish your feature and in
 that time coreBOS has added a few more commits. You need to add these
 changes to your branch before pushing, to do that we would execute:
 
-    git checkout master (just to make sure)
-    git pull upstream master  (we get the new changes)
-    git checkout new_feature
-    git merge master
-    > Fix conflicts if any appear
+```shell
+git checkout master (just to make sure)
+git pull upstream master  (we get the new changes)
+git checkout new_feature
+git merge master
+# Fix conflicts if any appear
+```
 
 The new commits are now also in your branch.
 
 ## Conflicts: Mergetool
 
-When doing the pull and merge it is possible that we run into some
-conflicts. That means that we are changing a file that has changed in
-the main repository. It is our responsibility to fix that because we are
-the ones who know what our changes are about. To make this process
-easier git has a syntax that helps us, but I usually configure [meld
-merge tool](https://meldmerge.org/) like this:
+When doing the pull and merge it is possible that we run into some conflicts. That means that we are changing a file that has changed in the main repository. It is our responsibility to fix that because we are the ones who know what our changes are about. To make this process easier git has a syntax that helps us, but I usually configure [meld merge tool](https://meldmerge.org/) like this:
 
-    git config --global merge.tool meld
+`git config --global merge.tool meld`
 
 which gives us a nice graphical interface to resolve conflicts.
 
-\<wrap em\>Congratulations\!\</wrap\>
+ !!! **Congratulations!**
 
-Now, go forth and **build**\!
+Now, go forth and **build**!
 
 What if you get stuck? That’s perfectly fine.
 
--   The best place to contact the developer community is on our [Gitter
-    chat group](https://gitter.im/corebos/discuss).
--   The blog is mostly developer-oriented and there is a lot of
-    information on the [documentation
-    site](http://corebos.com/documentation/doku.php?id=en:start).
--   You can ask in the [forum](https://discussions.corebos.org/).
+- The best place to contact the developer community is on our [Gitter chat group](https://gitter.im/corebos/discuss).
+- The blog is mostly developer-oriented and there is a lot of information here in the documentation site.
+- You can ask in the [forum](https://discussions.corebos.org/).
 
-Don't hesitate to get in touch, we are a **really friendly and helpful
-community**.
+Don't hesitate to get in touch, we are a **really friendly and helpful community**.
 
-\*\*Welcome to the coreBOS development team\!
+**Welcome to the coreBOS development team!**
 
-We look forward to seeing your code\!\*\*
+**We look forward to seeing your code!**
 
-![youtube\>579A0MjOeIE](youtube\>579A0MjOeIE)
+[plugin:youtube](https://www.youtube.com/watch?v=579A0MjOeIE)
