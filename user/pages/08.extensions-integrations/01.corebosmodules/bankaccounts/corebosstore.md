@@ -1,42 +1,29 @@
 ---
 title: 'Bank Accounts'
+metadata:
+    description: 'Register information about the bank accounts you work with, either your company or your clients accounts.'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - extension
+    tag:
+        - module
 ---
 
-Bank Accounts
-=============
+### Fields
 
-Bank Accounts module to register information about the bank accounts you
-work with, either your company or your clients accounts.  
-This module is related with the Bank module and should be installed
-together.  
-This is part of the TSolucio **payments extensions** that support **SEPA
-and direct bank charges** to your clients.  
----- dataentry ---- name : tsolucio/BankAccounts type : corebos-module
-description\_wiki: Bank Accounts module to register information about
-the bank accounts you work with, either your company or your clients
-accounts.  
-This module is related with the Bank module and should be installed
-together.  
-This is part of the TSolucio **payments extensions** that support **SEPA
-and direct bank charges** to your clients.  
-keywords\_tags : bank,SEPA,payment version : 1.0 homepage\_url :
-<http://corebos.org/documentation/doku.php?id=en:extensions:extensions:bankaccounts>
-release\_dt : 2015-06-12 licenses : Vizsage distribution : Subscription
-authorname : JPL TSolucio, S.L. authoremail\_mail :
-info(at)tsolucio(dot)com supportemail\_mail : info(at)tsolucio(dot)com
-supportissues\_url : \[subscription Contract\] supportsource\_url :
-\[subscription URI\]/Bank.git
+#### Bank Account Information
 
-------------------------------------------------------------------------
-
-  
-
-Fields
-======
-
-### Bank Account Information
-
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -45,52 +32,52 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Bank Account Number</td>
 <td>1</td>
 <td><strong>Identifier</strong></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Account Current Balance</td>
 <td>7</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Account Status</td>
 <td>15</td>
 <td>--- Please Select ---,Active,Closed</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Bank Account Type</td>
 <td>15</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Related To Client (If Trust Account)</td>
 <td>10</td>
 <td>Contacts</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Bank Name</td>
 <td>10</td>
 <td>Bank</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>GL Account</td>
 <td>10</td>
 <td>GLAccounts</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Account Opening Balance</td>
 <td>71</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Date Account Opened</td>
 <td>5</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Date Account Closed</td>
 <td>5</td>
 <td></td>
@@ -98,9 +85,9 @@ Fields
 </tbody>
 </table>
 
-### Other Miscellaneous Information
+#### Other Miscellaneous Information
 
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -109,57 +96,57 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Account Service Fees</td>
 <td>71</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Account Interest Rate</td>
 <td>1</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Account Overdraft Protection Service Activated</td>
 <td>56</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Account Used for Overdraft Protection</td>
 <td>10</td>
 <td>BankAccounts</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Debit Card Overdraft Protection Service Activated</td>
 <td>56</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Direct Deposit</td>
 <td>56</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Bill Pay Activated</td>
 <td>56</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Account Statement Delivery</td>
 <td>15</td>
 <td>--- Please Select ---,by Mail,On-line,Combined</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Statement Cycle</td>
 <td>1</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Bank Account Nickname</td>
 <td>1</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Authorized Account Signor</td>
 <td>1</td>
 <td></td>
@@ -167,11 +154,9 @@ Fields
 </tbody>
 </table>
 
-### Custom Information
+#### Description
 
-### Description
-
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -180,7 +165,7 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Description</td>
 <td>19</td>
 <td></td>
@@ -188,9 +173,9 @@ Fields
 </tbody>
 </table>
 
-### Additional Information
+#### Additional Information
 
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>Field</th>
@@ -199,22 +184,22 @@ Fields
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Account No</td>
 <td>4</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Assigned To</td>
 <td>53</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Created Time</td>
 <td>70</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Modified Time</td>
 <td>70</td>
 <td></td>
