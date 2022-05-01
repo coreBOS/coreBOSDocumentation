@@ -1,14 +1,27 @@
 ---
 title: 'Vtiger Public License Version 1.1'
+metadata:
+    description: 'VPL 1.1.'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+    tag:
+        - license
+        - vpl
 ---
 
-Vtiger Public License Version 1.1
-=================================
-
-\*\*REPRODUCED HERE FOR FUTURE REFERENCE, Copied from here: [Vtiger
-Public License Version
-1.1](https://www.vtiger.com/vtiger-public-license-1-1/)[.](/en/devel/licensethoughts)
-\*\*
+**REPRODUCED HERE FOR FUTURE REFERENCE, Copied from here: [Vtiger Public License Version
+1.1](https://www.vtiger.com/vtiger-public-license-1-1/)**
 
 Copyright (c) 2004 - 2013 www.vtiger.com All rights reserved.
 

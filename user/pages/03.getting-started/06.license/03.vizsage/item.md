@@ -1,26 +1,34 @@
 ---
 title: 'Vizsage Public License Legal Code'
+metadata:
+    description: 'Vizsage'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+    tag:
+        - license
+        - vizsage
 ---
 
-Vizsage Public License Legal Code
-=================================
+![Vizsage Project Logo](vizsage-logo-180.png?resize=150&classes=float-right)
 
-<table>
-<tbody>
-<tr class="odd">
-<td><img src="/images/vizsage-logo-180.png" class="align-center" alt="Vizsage Project Logo" /></td>
-<td><img src="/images/vizsage-by-nc-sa-icon.png" class="align-center" alt="Vizsage BY-NC-SA License Logo" /></td>
-</tr>
-</tbody>
-</table>
+![Vizsage BY-NC-SA License Logo](vizsage-by-nc-sa-icon.png?resize=150&classes=float-right)
 
-Attribution-NonCommercial-ShareAlike
-------------------------------------
+## Attribution-NonCommercial-ShareAlike
 
-<embed src="/devel/vizsagelicense.zip" class="align-center" />
+[Vizsage License code](vizsagelicense.zip)
 
-License
-=======
+## License
 
 THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS Vizsage
 PUBLIC LICENSE ("VPL" or "LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT
@@ -247,7 +255,7 @@ made subject to and limited by the following restrictions:
     separate license agreement you may have executed with Licensor
     regarding such Contributions.
 
-\*\*5. \*\* **Representations, Warranties and Disclaimer**
+**5. Representations, Warranties and Disclaimer**
 
 UNLESS OTHERWISE MUTUALLY AGREED TO BY THE PARTIES IN WRITING AND TO THE
 FULLEST EXTENT PERMITTED BY APPLICABLE LAW, LICENSOR OFFERS THE WORK
