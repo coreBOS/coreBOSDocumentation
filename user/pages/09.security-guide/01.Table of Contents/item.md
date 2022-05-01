@@ -21,8 +21,8 @@ taxonomy:
         - guide
 ---
 
-- [This Guide](/en/adminmanual/securityguide/ch000)
-- [Chapter 1: Introduction to Role-Based Security.](/en/adminmanual/securityguide/ch001)
+- [This Guide](..)
+- [Chapter 1: Introduction to Role-Based Security.](../02.Introduction%20to%20Role-Based%20Security/)
 - [Chapter 2: Examples](/en/adminmanual/securityguide/ch002)
 - [Chapter 3: Summarized Rules](/en/adminmanual/securityguide/ch003)
 - [License](../LicenseUsageAcknowledgements/)
