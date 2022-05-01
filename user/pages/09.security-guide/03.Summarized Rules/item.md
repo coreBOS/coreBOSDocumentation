@@ -1,13 +1,26 @@
 ---
-title: ''
-media_order: ''
-body_classes: ''
-order_by: ''
-order_manual: ''
+title: 'Security Guide Summarized Rules'
+metadata:
+    description: 'Security Guide Summarized Rules'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - security
+        - manual
+        - securityguide
+    tag:
+        - guide
+        - rule
 ---
-
-Summarized Rules
-----------------
 
 You should configure your system in the following order:
 

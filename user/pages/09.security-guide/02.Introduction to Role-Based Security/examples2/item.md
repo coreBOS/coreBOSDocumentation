@@ -1,19 +1,40 @@
-Examples
---------
+---
+title: 'Security Guide Examples'
+metadata:
+    description: 'Security Guide Examples'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - security
+        - manual
+        - securityguide
+    tag:
+        - guide
+        - example
+---
 
 This chapter discusses the security setup for example organizations and
 explains what individual users are allowed to do on the CRM system. By
 far these examples do not include all possibilities to configure the CRM
 system based on a company needs. However, we believe that the principal
 functions of the security features are covered so that any user might
-become capable to create the own setup  
-**Example 1**  
-This simple example shows how access to certain data can be controlled
-by a group and sharing rules.
+become capable to create the own setup
 
-Let us assume we have a sales team as shown in &lt;wrap em&gt;Figure:
-Example Sales Team 1&lt;/wrap&gt;. The Sales Manager is the supervisor
-for Person 1 and 2 which are members of the group "Team A".  
+**Example 1**
+
+This simple example shows how access to certain data can be controlled by a group and sharing rules.
+
+Let us assume we have a sales team as shown in Figure: Example Sales Team 1. The Sales Manager is the supervisor for Person 1 and 2 which are members of the group "Team A".
+
 <img src="/en/adminmanual/securityguide/sampleteam1.png" class="align-center" />
 **Figure 2.1. Example Sales Team 1**
 
@@ -665,8 +686,7 @@ as shown in the following table:
 
 ------------------------------------------------------------------------
 
-&lt;WRAP right&gt; [Next](/en/adminmanual/securityguide/ch003) |
-Summarized Rules &lt;/WRAP&gt;
+[Next](/en/adminmanual/securityguide/ch003) | Summarized Rules
 
 ------------------------------------------------------------------------
 
