@@ -1,34 +1,57 @@
-Role Based Security Basics
---------------------------
+---
+title: 'Security Guide Role Based Security Basics'
+metadata:
+    description: 'Security Guide Role Based Security Basics'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - security
+        - manual
+        - securityguide
+    tag:
+        - guide
+        - license
+---
 
-### Introduction
+## Introduction
 
 coreBOS implements a state of the art role-based security management
 which utilizes the concepts of roles, similar to the implementation of
 security in many current computer operating systems. Role-based security
 (also called role-based access control) is built on the premise that
 users are authenticated, which is the process of identifying the user.
-Once identified, the user can be authorized or, assigned roles and
-permissions.  
+Once identified, the user can be authorized or, assigned roles and permissions.
+
 Note: Role-based security specifies and enforces enterprise-specific
-security policies in a way that maps naturally to an organization's
-structure.  
+security policies in a way that maps naturally to an organization's structure.
+
 The basis is browsing, delete, create and update permissions given to
-the individual users.  
+the individual users.
+
 Role-based security has become the predominant model for advanced access
-control because it reduces the complexity and cost of security
-administration.  
+control because it reduces the complexity and cost of security administration.
+
 Note: Although role-based security is the main security component at the
 CRM system, the overall outcome of the security settings at the CRM
-system is also influenced by the default organization settings.  
+system is also influenced by the default organization settings.
+
 While role-based security may be overkill in trivial settings (e.g.
 small enterprises with two users who both are allowed to browse, delete
 or update all data) it is an extremely powerful tool to get a handle on
 complex environments. That includes typical company settings where
 various sales teams or customer service teams need to browse, delete or
 update customer related data while at the same time permissions on such
-data may vary depending on the function or task of the employee within
-the company.  
+data may vary depending on the function or task of the employee within the company.
+
 Although role-based security does not promote any protection policy, it
 has been shown to support several well-known security principles and
 policies that are important to commercial and government enterprises
@@ -36,51 +59,50 @@ that process unclassified but sensitive information. These policies can
 be enforced at the time profiles are authorized for a role, at the time
 users are authorized as members of a role, at the time of role
 activation (e.g., when a role is established as part of a user's active
-session), or when a user attempts to perform an operation on data.  
+session), or when a user attempts to perform an operation on data.
 
-### Role-based Security Features and Supporting Policies
+## Role-based Security Features and Supporting Policies
 
 This section explains the features provided by the security settings.
 Policies are described in terms of users, roles, role hierarchies,
-profiles, protected fields, and user groups.  
+profiles, protected fields, and user groups.
+
 Note: Setting up user privileges might not be a trivial task especially
 in larger organizations. You will need a deep understanding of the
 role-based security concept to give each individual user the access to
-the CRM they desire.  
-The security management includes the configuration of the following CRM
-modules:  
-\* Users
+the CRM they desire.
 
--   Roles
--   Profiles
--   Groups
--   Default Organization Sharing Access
--   User Defined Sharing Rules
--   Default Organization Field Access
+The security management includes the configuration of the following CRM modules:
 
-Important: Security settings will become valid not until the next user
-Login!  
-The following sections will explain how these CRM modules can be used.  
+- Users
+- Roles
+- Profiles
+- Groups
+- Default Organization Sharing Access
+- User Defined Sharing Rules
+- Default Organization Field Access
 
-#### Users
+Important: Security settings will become valid not until the next user Login!
+
+The following sections will explain how these CRM modules can be used.
+
+### Users
 
 here are two types of users for the CRM software:  
 
--   Standard user
--   Administrator user
+- Standard user
+- Administrator user
 
-Standard users have limited access to the CRM system to perform CRUD
-(Create, Retrieve, Update, and Delete) operations only.  
-Administrator users are capable to manage the complete software that
-includes:  
+Standard users have limited access to the CRM system to perform CRUD (Create, Retrieve, Update, and Delete) operations only.
 
--   managing users/groups and their access privileges
--   customizing the CRM user interface
--   creating communications templates
--   configuring all organization-wide settings
--   change passwords, deactivate users, list mail server, change the
-    home page order and view the login history
--   exercise CRUD operations  
+Administrator users are capable to manage the complete software that includes:
+
+- managing users/groups and their access privileges
+- customizing the CRM user interface
+- creating communications templates
+- configuring all organization-wide settings
+- change passwords, deactivate users, list mail server, change the home page order and view the login history
+- exercise CRUD operations  
 
 At &lt;wrap em&gt;Figure: Special Admin Function&lt;/wrap&gt; you see
 the edit view of a users data provided by the CRM user management
