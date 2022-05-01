@@ -1,13 +1,26 @@
 ---
-title: ''
-media_order: ''
-body_classes: ''
-order_by: ''
-order_manual: ''
+title: 'Security Examples'
+metadata:
+    description: 'Security Guide Examples'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - security
+        - manual
+        - securityguide
+    tag:
+        - guide
+        - rule
 ---
-
-Examples
---------
 
 This chapter discusses the security setup for example organizations and
 explains what individual users are allowed to do on the CRM system. By

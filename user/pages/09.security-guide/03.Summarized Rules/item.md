@@ -1,5 +1,5 @@
 ---
-title: 'Security Guide Summarized Rules'
+title: 'Summarized Rules'
 metadata:
     description: 'Security Guide Summarized Rules'
     author: 'Joe Bordes'

@@ -1,5 +1,5 @@
 ---
-title: 'Security Guide Introduction'
+title: 'Security Introduction'
 metadata:
     description: 'Security Guide Introduction to Role-Based Security'
     author: 'Joe Bordes'

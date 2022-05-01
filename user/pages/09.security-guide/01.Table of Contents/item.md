@@ -1,5 +1,5 @@
 ---
-title: 'Security Guide Table of Contents'
+title: 'Security Table of Contents'
 metadata:
     description: 'Security Guide Table of Contents'
     author: 'Joe Bordes'
