@@ -1,5 +1,5 @@
 ---
-title: 'Security Guide Role Based Security Basics'
+title: 'Role Based Security Basics'
 metadata:
     description: 'Security Guide Role Based Security Basics'
     author: 'Joe Bordes'
@@ -19,7 +19,7 @@ taxonomy:
         - securityguide
     tag:
         - guide
-        - license
+        - role
 ---
 
 ## Introduction
@@ -581,7 +581,7 @@ For example, let us assume a profile allows to view the website field in leads. 
 
 ------------------------------------------------------------------------
 
-[Next](../examples) | Chapter 2. Examples
+[Next](../03.Examples) | Chapter 2. Examples
 
 ------------------------------------------------------------------------
 

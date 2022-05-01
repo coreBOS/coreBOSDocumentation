@@ -23,8 +23,8 @@ taxonomy:
 
 - [This Guide](..)
 - [Chapter 1: Introduction to Role-Based Security.](../02.Introduction%20to%20Role-Based%20Security/)
-- [Chapter 2: Examples](/en/adminmanual/securityguide/ch002)
-- [Chapter 3: Summarized Rules](/en/adminmanual/securityguide/ch003)
+- [Chapter 2: Examples](../03.Examples/)
+- [Chapter 3: Summarized Rules](../03.Summarized%20Rules/)
 - [License](../LicenseUsageAcknowledgements/)
 
 This book describes the concept of role-based security and other
@@ -55,7 +55,7 @@ installation would obviously be an advantage as you could duplicate the
 setup and investigate your own tweaks to the security configuration.  
 This manual is divided into two parts:
 
-[Chapter 1: Introduction to Role-Based Security.](/en/adminmanual/securityguide/ch001)
+[Chapter 1: Introduction to Role-Based Security.](../02.Introduction%20to%20Role-Based%20Security/)
 
 Describes how role-based security works. Explains in simple terms how to
 prepare yourself to start working with the CRM's security features.
@@ -63,7 +63,7 @@ Provides all the information required to understand role-based security
 supported by the CRM System. Lists all the possibilities of different
 security settings.
 
-[Chapter 2: Examples](/en/adminmanual/securityguide/ch002)
+[Chapter 2: Examples](../03.Examples/)
 
 Explains, with examples, how to use the CRM system to assign privileges.
 Shows real-world examples for setting up complex user hierarchies

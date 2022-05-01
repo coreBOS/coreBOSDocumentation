@@ -101,7 +101,7 @@ permissions of most hierarchical structures of companies.
 
 ------------------------------------------------------------------------
 
-[Next](../ex-ch002) | Examples
+[Next](examples) | Examples
 
 ------------------------------------------------------------------------
 
