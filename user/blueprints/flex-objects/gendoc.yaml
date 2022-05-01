@@ -186,3 +186,9 @@ form:
       classes: fancy
       validate:
         type: commalist
+
+    moreinfo:
+      type: text
+      label: More Information
+      validate:
+        required: false

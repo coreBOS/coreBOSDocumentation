@@ -13,6 +13,9 @@
     {% if object.pdfexample %}
         <a href="{{ object.pdfexample|e }}">Example</a>
     {% endif %}
+    {% if object.moreinfo %}
+       - <a href="{{ object.moreinfo|e }}">More Information</a>
+    {% endif %}
 </div>
 <div class="entry-extra">
     {% for tag in object.tags %}

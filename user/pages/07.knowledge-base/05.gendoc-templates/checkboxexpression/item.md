@@ -1,33 +1,36 @@
 ---
 title: 'GenDoc Template:: Use checkbox to show text conditionaly'
+metadata:
+    description: 'Use checkbox to show text conditionaly.'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - integration
+        - contribute
+    tag:
+        - gendoc
 ---
 
-GenDoc Template:: Use checkbox to show text conditionaly
---------------------------------------------------------
+- [checkboxes on module template](../checkbox_expression_conditions.odt)
+- [checkboxes on module example](../organization_chemex_labs_ltd.odt)
 
 Example of using checkboxes to show different texts in the document
 
----- dataentry ---- name : checkbox\_expression\_conditions type :
-gendoctemplate template\_img :
-:en:gendoc:templatestore:checkbox\_expression\_conditions.odt
-pdfexample\_img:
-:en:gendoc:templatestore:organization\_chemex\_labs\_ltd.odt
-description\_wiki: Example of using checkboxes to show different texts
-in the document keywords\_tags : checkbox,expression,example language:
-EN module: Accounts version : 1 release\_dt : 2020-12-16 licenses : CC
-price : Free distribution : Free authorname : Joe Bordes
-
-------------------------------------------------------------------------
-
-  
 I created a block with 4 checkboxes in Accounts and Contacts.
 
-<img src="/en/gendoc/templatestore/checkboxesonmodules.png" class="align-center" />
+![checkboxes on module](checkboxesonmodules.png?width=100%)
 
-then I created the template above that uses the values of those
-checkboxes inside a FOREACH and a simple normal table to show different
-text.
+then I created the template above that uses the values of those checkboxes inside a FOREACH and a simple normal table to show different text.
 
-<img src="/en/gendoc/templatestore/gendoccheckboxesexampe.png" class="align-center" />
+![checkboxes gendoc example](gendoccheckboxesexampe.png?width=100%)
 
 HTH
