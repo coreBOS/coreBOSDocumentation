@@ -116,6 +116,8 @@ Each `OrgfieldID` directive may have a `postProcess` directive. This permits us 
 - stripslashes - Un-quotes a quoted string
 - htmlspecialchars - Convert special characters to HTML entities
 - quotemeta - Quote meta characters
+- json_encode
+- json_decode
 
 For this map to be applied, the name of the mapping must follow a specific format which is
 
