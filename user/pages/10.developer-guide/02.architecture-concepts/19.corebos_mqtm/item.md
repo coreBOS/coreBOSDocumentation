@@ -1,14 +1,30 @@
 ---
 title: 'coreBOS Message Queue and Task Manager'
+metadata:
+    description: 'Documentation woes.'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        - messagequeue
+    tag:
+        - message
+        - queue
 ---
 
-coreBOS Message Queue and Task Manager
-======================================
-
-Following the marvelous work of [Martin
-Fowler](https://martinfowler.com/) in his book about [Enterprise
-Integration Patterns](https://martinfowler.com/books/eip.html) we have
+Following the marvelous work of [Martin Fowler](https://martinfowler.com/) in his book about [Enterprise Integration Patterns](https://martinfowler.com/books/eip.html) we have
 added a native Message Queue and Task Manager to coreBOS.
+
+===
 
 This is a developers enhancement which can be used to solve a wide range
 of client requests elegantly and easily, taking coreBOS to another level
@@ -17,40 +33,34 @@ system: **your core Business Operating System**.
 
 Let's see how this works.
 
-Message Queue
--------------
+## Message Queue
 
-coreBOS [has an abstract
-class](https://github.com/tsolucio/corebos/blob/master/include/cbmqtm/cbmqtm_manager.php)
-which defines the interface to work with the message queue. The methods
+coreBOS [has an abstract class](https://github.com/tsolucio/corebos/blob/master/include/cbmqtm/cbmqtm_manager.php) which defines the interface to work with the message queue. The methods
 are:
 
--   sendMessage
--   getMessage
--   rejectMessage
--   isMessageWaiting
--   subscribeToChannel
--   unsubscribeToChannel
+- sendMessage
+- getMessage
+- rejectMessage
+- isMessageWaiting
+- subscribeToChannel
+- unsubscribeToChannel
 
-So we need to implement a real class that instantiates these methods in
-order for the Message Queue to work.
+So we need to implement a real class that instantiates these methods in order for the Message Queue to work.
 
-We also have a message queue loader process. This process will look up
-two variables in the [coreBOS settings](/en/devel/corebos_settings)
-store:
+We also have a message queue loader process. This process will look up two variables in the [coreBOS settings](../23.corebos_setting/item.md) store:
 
--   file
--   class
+- file
+- class
 
-And create a Singleton named **corebos\_mq** using that file and class
-name.
+And create a Singleton named **corebos_mq** using that file and class name.
 
-With this setup we can program using the **corebos\_mq object**, sending
-and receiving messages without knowing how the implementation is done.
-We could be sending the message to a
-[RabbitMQ](https://www.rabbitmq.com/),
-[Kafka](http://kafka.apache.org/),
-[ActiveMQ](http://activemq.apache.org/) or simply to a database table.
+With this setup we can program using the **corebos_mq object**, sending and receiving messages without knowing how the implementation is done. We could be sending the message to a
+
+- [RabbitMQ](https://www.rabbitmq.com/),
+- [Kafka](http://kafka.apache.org/),
+- [ActiveMQ](http://activemq.apache.org/)
+- [NATS.io – Cloud Native, Open Source, High-performance Messaging](https://nats.io/)
+- or simply to a database table.
 
 By default, **coreBOS has a native Message Queue** implemented in the
 database. We did it this way because it would just work on all existing
@@ -63,16 +73,16 @@ Let's explain how coreBOS implements the Message Queue in the database.
 
 In order to send a message we need to define these parameters:
 
-1.- Channel  
-2.- Producer  
-3.- Consumer  
-4.- Type  
-5.- Share  
-6.- Sequence  
-7.- Expires  
-8.- Deliver after  
-9.- User  
-10.- Message  
+1. Channel
+2. Producer
+3. Consumer
+4. Type
+5. Share
+6. Sequence
+7. Expires
+8. Deliver after
+9. User
+10. Message
 
 #### Channel
 
@@ -80,18 +90,15 @@ The channel can be any string that both producer and consumer agree
 upon. The producer will write messages on the channel and the consumer
 will read (and delete) messages from the channel.
 
-There are some special reserved channels by coreBOS which cannot be used
-freely.
+There are some special reserved channels by coreBOS which cannot be used freely.
 
 #### Producer
 
-The producer is a string uniquely identifying the creator of the
-message.
+The producer is a string uniquely identifying the creator of the message.
 
 #### Consumer
 
-The consumer is a string uniquely identifying the desired receptor of
-the message.
+The consumer is a string uniquely identifying the desired receptor of the message.
 
 #### Type
 
@@ -121,8 +128,7 @@ subscribers will get the message.
 
 #### Sequence
 
-This is an integer that represents the sequence of this message from the
-producer.
+This is an integer that represents the sequence of this message from the producer.
 
 The only use the message queue has of this value is to sort the messages
 by it if there are more than one message waiting, but the message queue
@@ -131,9 +137,7 @@ of messages must be done by the consumer.
 
 #### Expires
 
-This is the amount of seconds that the message can stay on the queue.
-After this time the message will be moved to the **cbInvalid channel**
-and marked as **invalid**.
+This is the amount of seconds that the message can stay on the queue. After this time the message will be moved to the **cbInvalid channel** and marked as **invalid**.
 
 #### Deliver After
 
@@ -141,8 +145,7 @@ Messages can be deferred to be sent in the future with this value. The
 message will be accepted and put on the queue, the expire time will be
 set to the number of seconds given added to the deliver after time.
 
-The message will be totally ignored until the established time to
-deliver is reached.
+The message will be totally ignored until the established time to deliver is reached.
 
 #### User
 
@@ -176,8 +179,7 @@ will define which task must be executed when a message arrives. This
 task can be defined in one of two ways: as a file name and a function or
 as a file name, a class name and a method.
 
-Task Manager
-------------
+## Task Manager
 
 In conjunction with the Message Queue, the task manager is capable of
 processing the queue and launching tasks.
@@ -195,20 +197,20 @@ subscribers​ and launches the defined task when one arrives.
 The task manager is an independent process that must be launched or
 initiated manually with the "run" command like this:
 
-    cd your_corebos_install_top_directory
-    php include/cbmqtm/run.php -d
+```shell
+cd your_corebos_install_top_directory
+php include/cbmqtm/run.php -d
+```
 
 This will run forever in an infinite loop that, on every iteration of
 the loop will check and expires messages accordingly. If a message must
 be delivered it will launch the indicated tasks for all subscribers so
 they can consume the messages.
 
-This is implemented using the OSS
-[PHP-Daemon](https://github.com/shaneharter/PHP-Daemon) project
+This is implemented using the OSS [PHP-Daemon](https://github.com/shaneharter/PHP-Daemon) project
 (thanks!!)
 
-Examples and Ideas
-------------------
+## Examples and Ideas
 
 ### Integrations
 
@@ -244,8 +246,7 @@ the deliver after date to Monday morning on the last Friday launch.
 
 ### Feedback for long running processes
 
-&lt;WRAP center round info 60%&gt; This is a future development which I
-personally want to implement. &lt;/WRAP&gt;
+ !!! This is a future development which I personally want to implement.
 
 Mass editing can be a very long running process. Sending a request to
 modify a couple of fields on 1000 records can take a long time.
@@ -257,21 +258,19 @@ done. Then the task manager will do the work in background so there is
 no timeout issues and no blocking in the browser. The background task
 will report its progress as messages on the queue which will be consumed
 by a browser process that reads the messages and informs of the progress
-on screen. This will probably be implemented using [server side
-events](/en/devel/corebos_sse) and service workers.
+on screen. This will probably be implemented using [server side events](../24.corebos_sse/item.md) and service workers.
 
 ### Logging
 
 Send log messages to the queue and have some process read them and send
 them to a specialized platform like [Elastic](https://www.elastic.co/)
 
-Comparing with Martin Fowler's proposal
----------------------------------------
+## Comparing with Martin Fowler's proposal
 
 I would like to end this description with a quick comparison to the
 global view defined by Martin Fowler:
 
-<img src="/en/devel/mfmq.png" class="align-center" alt="Martin Fowler&#39;s Message Queue" />
+![Martin Fowler's Message Queue](mfmq.png?width=100%)
 
 The **Message Channel** and the **Message** itself are the parameters on
 each of the calls of each method.
@@ -282,13 +281,10 @@ message along the queue to it's destination.
 
 The **Message Endpoint** is simply the getMessage method.
 
-&lt;WRAP center round tip 60%&gt; I look forward to seeing what you
-construct with this powerful new feature. &lt;/WRAP&gt;
+ ! I look forward to seeing what you construct with this powerful new feature.
 
-References
-----------
+## References
 
--   [Queues](http://queues.io/)
--   [Martin Fowler](https://martinfowler.com/)
--   [Enterprise Integration
-    Patterns](https://martinfowler.com/books/eip.html)
+- [Queues](http://queues.io/)
+- [Martin Fowler](https://martinfowler.com/)
+- [Enterprise Integration Patterns](https://martinfowler.com/books/eip.html)
