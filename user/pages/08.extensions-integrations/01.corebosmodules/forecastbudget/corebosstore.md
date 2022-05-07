@@ -23,9 +23,6 @@ Plan a whole range of budgeting target against each Salesman / product / period 
 
 ===
 
-**Project Demo** : [coreBOSCRM](https://coreboscrm.es/) Look for Forecast in the Sales menu
-Plan a whole range of budgeting target against each Salesman / product / period based on potential Closed Won
-
 ![forecastfunnel](forecast_funnel.png?width=100%)
 
 Forecasting provides real-time insight for tracking the sales against opportunities, which helps the organization to fine-tune the sales process. For sales managers, forecast feature provides an overall picture of the company's sales pipeline, as well as those of individual staff performance. Sales representatives can use forecasting to meet/exceed quotas assigned to them and in turn increase company profits.
@@ -72,18 +69,16 @@ We have modified the reporting system to establish the relations on the forecast
 This extension is almost completely vtlib compatible except for the modifications in the reporting system.
 
 ### FAQ
-```
-Looking at the graph en the image below, shouldn't it be a funnel or similar graph?
-![forecast_strang_funnel](forecast_strang_funnel.png?width=100%)
----
-The graph is drawn based on the status of the related opportunities, if your sales process doesn't look like a traditional funnel then this will be reflected in the graph. For example, in our company we do very little prospection, almost all our opportunities are like you which arrives in an advanced status of the sales process, thus, our graph is more like a top, fat in the middle. In the image above there are status with no opportunities and that is why they are empty.
-```
 
-```
-Is it possible to select more than one product associated to a forecast?
----
+> Looking at the graph en the image below, shouldn't it be a funnel or similar graph?
+
+![forecast_strang_funnel](forecast_strang_funnel.png?width=100%)
+
+The graph is drawn based on the status of the related opportunities, if your sales process doesn't look like a traditional funnel then this will be reflected in the graph. For example, in our company we do very little prospection, almost all our opportunities are like you which arrives in an advanced status of the sales process, thus, our graph is more like a top, fat in the middle. In the image above there are status with no opportunities and that is why they are empty.
+
+> Is it possible to select more than one product associated to a forecast?
+
 You can only relate one product to a forecast directly, BUT you can create forecasts based on product category, so if you create a new category (picklist editor) and put various products inside that category then you can control more than one product in the forecast.
-```
 
 
 

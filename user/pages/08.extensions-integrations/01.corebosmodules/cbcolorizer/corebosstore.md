@@ -94,19 +94,20 @@ Examples:
 ```
 
 ### Special Customization::Setup of dynamically changed formatting
+
 If you want to see any formatting changes happen directly after changing a value in DetailView, you have to add one line of code to the include/js/dtlviewajax.js file as can be seen in the next patch.
 
-```js
+```diff
 diff --git a/include/js/dtlviewajax.js b/include/js/dtlviewajax.js
 index d0f9222..85c941a 100644
 --- a/include/js/dtlviewajax.js
 +++ b/include/js/dtlviewajax.js
 @@ -289,6 +289,7 @@ function dtlViewAjaxFinishSave(fieldLabel,module,uitype,tableName,fieldName,crmI
-                                        if(getObj(dtlView) != null) getObj(dtlView).innerHTML = "";
-                                        if(getObj("comments") != null) getObj("comments").value = "";
-                                }
-+                                if (typeof colorizer_after_change === "function") { colorizer_after_change(fieldName, tagValue); }
-                                document.getElementById("vtbusy_info").style.display="none";
-                        }
-                }
+                if(getObj(dtlView) != null) getObj(dtlView).innerHTML = "";
+                if(getObj("comments") != null) getObj("comments").value = "";
+        }
++        if (typeof colorizer_after_change === "function") { colorizer_after_change(fieldName, tagValue); }
+        document.getElementById("vtbusy_info").style.display="none";
+    }
+}
 ```

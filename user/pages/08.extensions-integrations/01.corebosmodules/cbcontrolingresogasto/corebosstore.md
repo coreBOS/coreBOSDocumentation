@@ -17,6 +17,8 @@ taxonomy:
         - extension
     tag:
         - module
+        - payments
+        - ingress
 ---
 
 An accounting type module to register incoming and outgoing money charges that happen against different records in the application.

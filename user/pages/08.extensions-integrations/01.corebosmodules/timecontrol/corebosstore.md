@@ -1,7 +1,7 @@
 ---
 title: 'Time/Resource Control'
 metadata:
-    description: 'This module adds time control to coreBOS. The idea is that you will be able to register in the system time slots spent on the majority of the entities in the application. So a sales person can register time spent on a lead, a technician can register time spent on a trouble ticket or administration can register time spent on an invoice.'
+    description: 'This module adds time control to coreBOS.'
     author: 'Joe Bordes'
 content:
     items:
@@ -17,44 +17,35 @@ taxonomy:
         - extension
     tag:
         - module
+        - time
 ---
 
 This module adds time control to coreBOS. The idea is that you will be able to register in the system time slots spent on the majority of the entities in the application. So a sales person can register time spent on a lead, a technician can register time spent on a trouble ticket or administration can register time spent on an invoice.
 
 ===
 
-Time/Resource Control
-=====================
+## Time/Resource Control
 
-**Project Demo** : [Time/Resource
-Control](https://demo.coreboscrm.com/)  
-**Project Forge**:[Time/Resource
-Control](https://github.com/tsolucio/Timecontrol) module.  
+- **Project Demo** : [Time/Resource Control](https://demo.coreboscrm.com/)
+- **Project Repository**: [Time/Resource Control](https://github.com/tsolucio/Timecontrol) module.
+
 Some of the goals of this module are:
 
--   a unique timecontrol identifier field
--   start and end time with autocalculated total
--   capability of being related to any module except products and
-    services
--   have a quick timesheet create button on each module's toolbar
-    <s>(except product and services)</s> with preselection of the
-    current module
--   have a stopwatch create button on each module's toolbar <s>(except
-    product and services)</s> with preselection of the current module
--   multiple stopwatches with access to all the fields
--   a separate product/service relation for invoicing
--   invoiceable with special invoicing process
--   support both individual and group taxing
--   could be used to attach comments to entities, similar to the new
-    modComments module. <s>add the current view timecards related list
-    report</s>
--   eliminate the trouble ticket dependencies which complicate the code
--   make timeresource entries visible on calendar, so you can control
-    missing hours
--   vtlib compatible, or at least as compatible as the new vtlib lets me
+- a unique timecontrol identifier field
+- start and end time with autocalculated total
+- capability of being related to any module except products and services
+- have a quick timesheet create button on each module's toolbar with preselection of the current module
+- have a stopwatch create button on each module's toolbar with preselection of the current module
+- multiple stopwatches with access to all the fields
+- a separate product/service relation for invoicing
+- invoiceable with special invoicing process
+- support both individual and group taxing
+- could be used to attach comments to entities, similar to the new modComments module
+- eliminate the trouble ticket dependencies which complicate the code
+- make timeresource entries visible on calendar, so you can control missing hours
+- vtlib compatible, or at least as compatible as the new vtlib lets me
 
-**Please consider donating, every little bit helps to keep up the
-ongoing effort.**
+**Please consider donating, every little bit helps to keep up the ongoing effort.**
 
 I need to thank many people for their interest and support. You know who
 you are, and the others know who they are too :-)
@@ -70,8 +61,7 @@ It should be easy to use and reliable.
 
 Here's a short guide to start using it.
 
-How to use it
-=============
+## How to use it
 
 Creating a Timecontrol can be done by going to the Timecontrol module
 and using the create button. Also, when viewing entities from other
@@ -96,7 +86,7 @@ erase the end time, this way the stopwatch will start counting again
 from the start time to now. There is another option, in the main module
 you can find a variable:
 
-    var $now_on_resume=true;
+`var $now_on_resume=true;`
 
 If this variable is set to false, the dates of the new timecontrol will
 not be set to "now" on resume. This can be useful when you have many
@@ -116,37 +106,39 @@ invoiceable" checkbox, and even if it does come up you won't be able to
 select it for invoicing.
 
 The module is directly related to all entities by default, so you will
-be able to see the time spent on each entity in their more information
-tab.
+be able to see the time spent on each entity in their more information tab.
 
-Reporting is correctly supported.  
-**Press stopwatch in account detail view**  
-<img src="stopwatch.png" width="100%" alt="Stopwatch" />  
-**Create new time/resource record**  
-<img src="newtrc.png" width="100%" alt="New TRControl" />  
-  
-**Stopwatch counting. Time running**  
-<img src="counting.png" width="100%" alt="counting" />  
-**Stopwwatch stopped. Save record**  
-<img src="finished.png" width="100%" alt="Finished" />  
-  
-**Resume Stopwatch**  
-<img src="resume.png" width="100%" alt="counting" />  
+Reporting is correctly supported.
 
-Convert from Trouble Ticket
----------------------------
+**Press stopwatch in account detail view**
 
-Thanks to **Ted Janzen of [Janzen & Janzen ICT
-Services](http://www.j2ict.nl)** for this interesting enhancement.
+![Stopwatch](stopwatch.png?width=100%)
 
-We have a new action on the right panel of your tickets (and most other
-modules) that will open a new timecontrol record ready for creation.
+**Create new time/resource record**
 
-Explanation on forum
---------------------
+![New TRControl](newtrc.png?width=100%)
 
-[Here is a forum thread](tcexplanationforum.pdf)
-where I try to explain the functionality with an example.
+**Stopwatch counting. Time running**
+
+![counting](counting.png?width=100%)
+
+**Stopwwatch stopped. Save record**
+
+![Finished](finished.png?width=100%)
+
+**Resume Stopwatch**
+
+![counting](resume.png?width=100%)
+
+## Convert from Trouble Ticket
+
+Thanks to **Ted Janzen of [Janzen & Janzen ICT Services](http://www.j2ict.nl)** for this interesting enhancement.
+
+We have a new action on the right panel of your tickets (and most other modules) that will open a new timecontrol record ready for creation.
+
+## Explanation on forum
+
+[Here is a forum thread](tcexplanationforum.pdf) where I try to explain the functionality with an example.
 
 And here an extract of that thread:
 
@@ -155,19 +147,14 @@ TT registers the time and material used when he uses it with a
 description of what has been done. For example, we have a TT for a
 client who has called in because his computer doesn't start.
 
--   tech calls to do initial diagnosis: creates a TC indicating that he
-    spent 8 minutes to find out the computer can't find harddisk and
-    setup a visit to client
--   tech starts a new timecontrol with no end time, the stopwatch starts
-    and the tech goes to the client
--   tech stops TC on arrival so trip time is controlled
--   tech starts new TC with no end time, so again stopwatch starts
--   tech works on the computer and has to change the harddisk
--   when he finishes he edits the TC, indicates the work he did, sets
-    the end time and selects the service. elapsed time is automatically
-    calculated
--   he creates a new TC selecting harddisk product used
--   etc
+- tech calls to do initial diagnosis: creates a TC indicating that he spent 8 minutes to find out the computer can't find harddisk and setup a visit to client
+- tech starts a new timecontrol with no end time, the stopwatch starts and the tech goes to the client
+- tech stops TC on arrival so trip time is controlled
+- tech starts new TC with no end time, so again stopwatch starts
+- tech works on the computer and has to change the harddisk
+- when he finishes he edits the TC, indicates the work he did, sets the end time and selects the service. elapsed time is automatically calculated
+- he creates a new TC selecting harddisk product used
+- etc
 
 This example could be done for a lawyer, having meetings with his client
 and using certain materials or paperwork in his name and many other
@@ -179,9 +166,9 @@ directly into an invoice with the timecontrol invoicing extension.
 
 ### Another person asking a similar question, and my answer
 
-**Question:**  
-After looking at the demo I'm not quite sure how to use the module
-correctly.
+**Question:**
+
+After looking at the demo I'm not quite sure how to use the module correctly.
 
 Here's our use case. Someone brings in a laptop with a problem. We work
 on the laptop for an hour to determine what the problem is. We want to
@@ -195,7 +182,7 @@ and the hard drive, but no time. How would I accomplish that?
 
 Also I'm not seeing how to create the invoice in the demo.
 
-**Answer:**  
+**Answer:**
 
 + Laptop arrives: you create a Trouble Ticket (TT)
 + When you start your work you start a TimeControl (TC) record associated to the TT, no end time so counter starts It is important that you do NOT select any product or service for this TC.
@@ -212,8 +199,7 @@ Another option would be to create the TC that represent only time with a
 product or service but 0 units. This way you could put the time and
 comments on the invoice without charging it.
 
-Reporting: Totals
-=================
+## Reporting: Totals
 
 Thanks to [THORSMANN Co, Norway](http://www.thorstein.info), we have
 created a new module that permits to easily report on time spent by our
@@ -235,19 +221,17 @@ timecontrol records that represent the total.
 
 The new extension is installed in the demo.
 
-<img src="tctotalslv.png" width="100%" alt="List View" />  
-<img src="tctotalsdv.png" width="100%" alt="Detail View" />  
-<img src="tctotalsreport.png" width="100%" />  
+![List View](tctotalslv.png?width=100%)
+![Detail View](tctotalsdv.png?width=100%)
+![Report](tctotalsreport.png?width=100%)
 
-Future enhancements
--------------------
+### Future enhancements
 
 Going forward it would be interesting to permit the reporting system to
 filter on fields in the related timecontrol records. If anyone is
 interested in taking this up contact me.
 
-Invoicing
-=========
+## Invoicing
 
 The invoicing extension is installed separately from the time/resource
 control module. This extension is being sold at **60 euros**. You can
@@ -287,24 +271,20 @@ established, when a user creates a new timecontrol record this default
 product/service will be automatically selected. Contact me if you are
 interested.
 
-This is the invoicing page where Timecontrols can be searched and
-invoiced.  
-<img src="trcinvoicing.png" width="100%" alt="TRControl Invoicing" />  
-  
+This is the invoicing page where Timecontrols can be searched and invoiced.
 
-Timecontrol Parameters
-----------------------
+![TRControl Invoicing](trcinvoicing.png?width=100%)
+
+### Timecontrol Parameters
 
 This first block of fields will permit us to select the timecontrol
 records we have available for invoicing. We can select by date, assigned
 user, account/contact and invoiced or not. The "show invoiceable" check
 box will filter the timecontrol records that cannot be invoiced.
 
-Invoicing Parameters
---------------------
+### Invoicing Parameters
 
-The invoicing parameters block contains fields that will define how the
-invoice will be created.
+The invoicing parameters block contains fields that will define how the invoice will be created.
 
 -   **Invoice per**. Each timecontrol record will be converted to an
     invoice line. The units of the line will either be the units field
@@ -356,18 +336,13 @@ invoice will be created.
     Reference" checkbox marked and set this contact's address
     information as the new invoice address fields.
 
-&lt;note warning&gt;We haven't gotten around to implementing Currency of
-the new invoice&lt;/note&gt;
+<span></span>
 
-&lt;note important&gt;The invoicing options are saved in the database
-each time the search is executed. The idea is that you define the way
-your company invoices, save it and forget about it as it will always be
-the way you have configured it. That is why the invoice parameter block
-comes up closed by default. In the vast majority of cases you will not
-need to validate these values.&lt;/note&gt;
+ ! We haven't gotten around to implementing Currency of the new invoice
 
-Creating from Email
-===================
+ ! The invoicing options are saved in the database each time the search is executed. The idea is that you define the way your company invoices, save it and forget about it as it will always be the way you have configured it. That is why the invoice parameter block comes up closed by default. In the vast majority of cases you will not need to validate these values.
+
+## Creating from Email
 
 This is a very good idea we have been proposed by a client. It hasn't
 been created yet but if anybody is interested I leave the details here
@@ -382,113 +357,79 @@ and have a timecontrol record created.
 
 The process would be like this:
 
--   select an email of the conversation, this email will have a header
-    in the format **Re: ticket number and subject** the ticket number and
-    subject are the ones you have configured when you setup mail
-    converter
--   click on respond
-    -   change the email "to" address to the email of customer support
-    -   change the "Re:" in the subject to "TC:"
-    -   change the body with the following syntax:
-        -   start: yyyy-mm-dd h:m
-        -   end: yyyy-mm-dd h:m
-        -   time: h:m
-        -   units: n
-        -   Description: text
-    -   send the email
+- select an email of the conversation, this email will have a header in the format **Re: ticket number and subject** the ticket number and subject are the ones you have configured when you setup mail converter
+- click on respond
+  - change the email "to" address to the email of customer support
+  - change the "Re:" in the subject to "TC:"
+  - change the body with the following syntax:
+      - start: yyyy-mm-dd h:m
+      - end: yyyy-mm-dd h:m
+      - time: h:m
+      - units: n
+      - Description: text
+  - send the email
 
 The logic would be:
 
--   if start and/or end are missing, time must be present and the
-    program will use the time of reception of the email as the end time
-    and will subtract the given time to obtain the start. If either
-    start or end are given, the time will be added/subtracted from it to
-    obtain the other necessary value.
--   if time is not given, then start and end must be present to
-    calculate the total time
--   if units is not given, 1 will be used
--   if there is no description, none will be used
--   the created timecontrol record will:
-    -   use the email subject as text reference
-    -   be related to the trouble ticket
-    -   be related to the product that the ticket is related to
+- if start and/or end are missing, time must be present and the program will use the time of reception of the email as the end time and will subtract the given time to obtain the start. If either start or end are given, the time will be added/subtracted from it to obtain the other necessary value.
+- if time is not given, then start and end must be present to calculate the total time
+- if units is not given, 1 will be used
+- if there is no description, none will be used
+- the created timecontrol record will:
+  - use the email subject as text reference
+  - be related to the trouble ticket
+  - be related to the product that the ticket is related to
 
-Enhancements: Looking at other time control services (toggl)
-============================================================
+## Enhancements: Looking at other time control services (toggl)
 
--   Manual edit can already be done adding the records either directly
-    in full edit mode or through quick edit and with the new
-    enhancements of autocomplete capture it will be pretty close. At
-    most we may need some sort of grid view to make it easier to add
-    entries.
--   tags would be the category picklist or an additional text custom
-    field could be added
--   billable is the product/service capture and timecontrol invoicing.
--   one line create
--   offline functionality
--   mobile app
--   graphic reports
+- Manual edit can already be done adding the records either directly in full edit mode or through quick edit and with the new enhancements of autocomplete capture it will be pretty close. At most we may need some sort of grid view to make it easier to add entries.
+- tags would be the category picklist or an additional text custom field could be added
+- billable is the product/service capture and timecontrol invoicing.
+- one line create
+- offline functionality
+- mobile app
+- graphic reports
 
 **Todo**:
 
--   Grid view entries.
-    -   related to (autocomplete)
-    -   start (time)
-    -   stop (time)
-    -   date, default today (will be used for both start and stop,
-        always TCs on the same day)
-    -   category (tag)
-    -   product (autocomplete)
--   one line create
--   offline functionality
--   mobile app
--   graphic reports
+- Grid view entries.
+  - related to (autocomplete)
+  - start (time)
+  - stop (time)
+  - date, default today (will be used for both start and stop, always TCs on the same day)
+  - category (tag)
+  - product (autocomplete)
+- one line create
+- offline functionality
+- mobile app
+- graphic reports
 
-FAQ
-===
+## FAQ
 
-**Is it possible to add a part number option to tickets and have the
-parts used in the tickets to get reduced from the inventory? I may need
-to use 2 to 3 part nos. to fix one TT in Vtiger.**
+> Is it possible to add a part number option to tickets and have the parts used in the tickets to get reduced from the inventory? I may need to use 2 to 3 part nos. to fix one TT in Vtiger.
 
 This is what TimeControl is for. The official name of this extension is: Time and
 Material Control. Note that with a TC record you can also associate a
 product or service to the TT, so with TC you can register all the time
-and material used to solve a ticket. Then you can invoice both as
-needed.
-<br>
+and material used to solve a ticket. Then you can invoice both as needed.
+
 <hr>
 
-**We purchased the invoicing extension but, unfortunately, the
-text/description on the TC is not included in the invoice. It must be
-entered by hand for each invoice text!**
+> We purchased the invoicing extension but, unfortunately, the text/description on the TC is not included in the invoice. It must be entered by hand for each invoice text!
 
-Please read the section on [Invoicing
-Parameters](/en/extensions/extensions/timecontrol#invoicing_parameters)
-which details your options:
+Please read the section on **Invoicing Parameters** above which details your options:
 
-If I understand you correctly, you are looking to modify the
-"Timecontrol Grouping" (=none) and "Product Description" (=Timecontrol).
+If I understand you correctly, you are looking to modify the "Timecontrol Grouping" (=none) and "Product Description" (=Timecontrol).
+
 Play with those a little and let us know how it turns out.
 
-Pending
-=======
+## Pending
 
--   <s>support both individual and group taxing</s> Thank you [Duss Home
-    Support](http://dusshome.com/)
--   <s>make timeresource entries visible on calendar, so you can control
-    missing hours</s>
--   Currency of the new invoice
--   <s>Reference. All invoices are created with the text "Batch
-    Timecontrol", I would like to make this text available to the user
-    through this configuration screen.</s>
--   <s>Relate time/material records with sales orders exactly the same
-    as with invoices for those companies that base their business on
-    SO</s>
--   <s>Relate time/material records with purchase orders exactly the
-    same as with invoices, to be able to "buy" the time used by our
-    workers.</s>
--   add the current view timecards related list report: this probably
-    won't be done, we are currently evaluating extending PDFMaker to
-    support this feature.
--   <s>support project (operation?) invoicing</s>
+- <s>support both individual and group taxing</s> Thank you [Duss Home Support](http://dusshome.com/)
+- <s>make timeresource entries visible on calendar, so you can control missing hours</s>
+- Currency of the new invoice
+- <s>Reference. All invoices are created with the text "Batch Timecontrol", I would like to make this text available to the user through this configuration screen.</s>
+- <s>Relate time/material records with sales orders exactly the same as with invoices for those companies that base their business on SO</s>
+- <s>Relate time/material records with purchase orders exactly the same as with invoices, to be able to "buy" the time used by our workers.</s>
+- add the current view timecards related list report: this probably won't be done, we are currently evaluating extending PDFMaker to support this feature.
+- <s>support project (operation?) invoicing</s>

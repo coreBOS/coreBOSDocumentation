@@ -25,7 +25,8 @@ Module to register the different groupings of our clients by different criteria 
 
 ### What are they and what are they used for
 
-<!--![image]()-->
+![segmentation chart](segmentacion.jpg?class=float-right)
+
 List segmentation is exactly what it sounds like -- you divide up your
 contacts into a bunch of smaller lists, or segments, based on criteria
 you set.
