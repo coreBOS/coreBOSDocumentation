@@ -1,5 +1,8 @@
 ---
 title: 'Master Detail Mapping'
+metadata:
+    description: 'This map defines the structure of a master-detail relationship between two modules that will permit us to construct a special module editor.'
+    author: 'Joe Bordes'
 content:
     items:
         - '@self.children'
@@ -9,10 +12,14 @@ content:
         dir: desc
     pagination: true
     url_taxonomy_filters: true
+taxonomy:
+    category:
+        - adminmanuals
+        - businessmappings
+    tag:
+        - detailviewlayout
 ---
-
-Master Detail Mapping
-=====================
+---
 
 The purpose of this mapping is to define the structure of a
 master-detail relationship between two modules that will permit us to
@@ -244,11 +251,13 @@ get:
 
 Inventory type Master-Details need an interface like this:
 
-<img src="/en/adminmanual/businessmappings/masterdetaillistview.png" class="align-center" alt="Inventory type Master-Details" />
+![](masterdetaillistview.png?width=100%)
+
 
 Support/History type Master-Details need an interface like this:
 
-<img src="/en/adminmanual/businessmappings/gitlabmarkdown.png" class="align-center" alt="Support/History type Master-Details" />
+![](gitlabmarkdown.png?width=100%)
+
 
 Generic Master Detail
 =====================
@@ -273,11 +282,10 @@ the Master module (Projects in the example above)
 
 -   You must create a business action that loads the Master-Detail
     javascript code, something like this
-
-
 ```js
     include/js/masterdetailgrid.js
 ```
+     
 
 The link type is **HEADERSCRIPT** and the module it is on has to be the
 Master module (Projects in the example above)
@@ -289,7 +297,7 @@ Master module (Projects in the example above)
     select any valid icon from LDS
 
 [Read about the Making of the Generic
-Editor](/en/adminmanual/businessmappings/CreatingGenericEditor)
+Editor](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/creatinggenericeditor)
 
 Master Detail on Inventory Modules
 ==================================
@@ -347,3 +355,10 @@ units\_delivered\_received, a custom field and the product cost:
 See this video for a demonstration:
 
 <iframe width="578" height="361" src="https://www.youtube.com/embed/zfuEuGUhKm0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/iomap) | Chapter 11: IOMap.
+
+------------------------------------------------------------------------

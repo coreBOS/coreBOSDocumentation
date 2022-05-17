@@ -1,5 +1,8 @@
 ---
 title: 'Duplicate Records Business Mapping'
+metadata:
+    description: 'It permits you to define the related modules that will be duplicated when launching a Duplicate Records workflow task.'
+    author: 'Joe Bordes'
 content:
     items:
         - '@self.children'
@@ -9,10 +12,14 @@ content:
         dir: desc
     pagination: true
     url_taxonomy_filters: true
+taxonomy:
+    category:
+        - adminmanuals
+        - businessmappings
+    tag:
+        - duplicaterecords
 ---
-
-Duplicate Records Business Mapping
-==================================
+---
 
 The accepted format is
 ```xml
@@ -174,3 +181,10 @@ This is the code to add the field:
 
     ?>
 ```
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/globalsearch) | Chapter 18: Global Search Autocomplete.
+
+------------------------------------------------------------------------

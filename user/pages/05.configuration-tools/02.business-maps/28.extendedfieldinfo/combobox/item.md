@@ -21,7 +21,7 @@ taxonomy:
         - combobox
 ---
 
-===
+---
 
 This type of functionality applies to normal input fields where the user can type in any text they want but you want to suggest a preferred set of standard/accepted values.
 

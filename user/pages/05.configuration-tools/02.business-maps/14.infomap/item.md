@@ -1,5 +1,8 @@
 ---
 title: 'Information Map Business Mapping'
+metadata:
+    description: 'Information Map Business Mapping'
+    author: 'Joe Bordes'
 content:
     items:
         - '@self.children'
@@ -9,10 +12,14 @@ content:
         dir: desc
     pagination: true
     url_taxonomy_filters: true
+taxonomy:
+    category:
+        - adminmanuals
+        - businessmappings
+    tag:
+        - informap
 ---
-
-Information Map Business Mapping
-================================
+---
 
 The accepted format is
 ```xml
@@ -94,3 +101,11 @@ this:
     </map>
 ```
 Making it much easier to maintain.
+
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/field_dependency) | Chapter 13: Field Dependency.
+
+------------------------------------------------------------------------

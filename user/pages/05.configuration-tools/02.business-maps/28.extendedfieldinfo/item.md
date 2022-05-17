@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - fieldinfo
 ---
-
+---
 The purpose of this mapping is to define a set of additional features on fields. Instead of adding columns to the vtiger_field table and creating different UI settings options we add this mapping where you can configure the extra information for each field.
 
 ===
@@ -248,3 +248,11 @@ or like this for a multioptional autocomplete field:
   </fields>
 </map>
 ```
+
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/record_access_control) | Chapter 5: Record Access Control.
+
+------------------------------------------------------------------------

@@ -1,5 +1,8 @@
 ---
 title: 'Global Search Autocomplete Mapping'
+metadata:
+    description: 'This map defines the set of modules and fields you want to launch a reduced global search on.'
+    author: 'Joe Bordes'
 content:
     items:
         - '@self.children'
@@ -9,10 +12,14 @@ content:
         dir: desc
     pagination: true
     url_taxonomy_filters: true
+taxonomy:
+    category:
+        - adminmanuals
+        - businessmappings
+    tag:
+        - globalsearch
 ---
-
-Global Search Autocomplete Mapping
-==================================
+---
 
 This business map is really a configuration setting. Most business maps
 are generic, whereas you can use them on many modules or for various
@@ -68,3 +75,10 @@ This is the map I used to test it:
       </searchin>
     </map>
 ```
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/detailviewlayout) | Chapter 19: Detail View Layout.
+
+------------------------------------------------------------------------

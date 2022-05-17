@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - pivot
 ---
-
+---
 The purpose of this mapping is to define a pivot view report of the
 records of a module. This map is in the "View Business Map" category as
 it serves the purpose of showing the records of a module in a different

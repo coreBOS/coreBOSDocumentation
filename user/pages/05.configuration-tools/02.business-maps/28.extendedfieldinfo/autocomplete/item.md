@@ -21,7 +21,7 @@ taxonomy:
         - autocomplete
 ---
 
-===
+---
 
 An autocomplete field has three configurable options:
 

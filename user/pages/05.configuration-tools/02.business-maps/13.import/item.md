@@ -1,5 +1,8 @@
 ---
 title: 'Import Business Mapping'
+metadata:
+    description: 'This map permits you to mass import large files from the command line.'
+    author: 'Joe Bordes'
 content:
     items:
         - '@self.children'
@@ -9,10 +12,14 @@ content:
         dir: desc
     pagination: true
     url_taxonomy_filters: true
+taxonomy:
+    category:
+        - adminmanuals
+        - businessmappings
+    tag:
+        - import
 ---
-
-Import Business Mapping
-=======================
+---
 
 This type of map is a developer/implementor tool. It permits you to mass
 import large files from the command line. It supports two different
@@ -27,7 +34,7 @@ launch the whole process from the command line, making it easy to do
 unattended batch imports without having to go through the UI steps every
 time. All the other application import features are identical.
 
-<div class="notices yellow">
+<div class="notices red">
 The import CSV file MUST have a
 header and be in UTF8 format
 </div>
@@ -130,3 +137,10 @@ Since the business map for both
 supported methods is different, depending on the type of map found the
 correct process will be launched. 
 </div>
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/duplicaterecords) | Chapter 17: Duplicate Records.
+
+------------------------------------------------------------------------

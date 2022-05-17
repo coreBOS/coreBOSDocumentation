@@ -1,5 +1,8 @@
 ---
 title: 'Field Dependency Business Mapping'
+metadata:
+    description: 'This map permits you to define dependencies between fields in edit mode.'
+    author: 'Joe Bordes'
 content:
     items:
         - '@self.children'
@@ -9,10 +12,14 @@ content:
         dir: desc
     pagination: true
     url_taxonomy_filters: true
+taxonomy:
+    category:
+        - adminmanuals
+        - businessmappings
+    tag:
+        - fielddependency
 ---
-
-Field Dependency Business Mapping
-=================================
+---
 
 This type of map permits you to define dependencies between fields in
 edit mode. For example, it will permit you to make a field read-only
@@ -32,8 +39,8 @@ be evaluated using only information located on the form.
 
 The supported condition operators are the same ones we support in the
 custom view filter system (see [Conditional
-Popup](/en/devel/conditional_popup) and [Popup Open
-Hook](/en/devel/corebos_hooks/popup_open_hook#exampleadvanced_search):
+Popup](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/conditional_popup) and [Popup Open
+Hook](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/conditional_popup):
 
 -   e: igual | equal | “=”
 -   n: distinto | not equal | “&lt;&gt;”
@@ -304,7 +311,7 @@ Or this one can also be done like this:
 
 <div class="notices blue">
  If (employees &lt; 100 and
-bill\_country is Spain) or (employees &gt; 100 and bill\_country is
+bill_country is Spain) or (employees &gt; 100 and bill_country is
 Albania) Then hide ownership collapse address block 
 </div>
 
@@ -685,3 +692,10 @@ trick to consciously force this.
     </dependencies>
     </map>
 ```
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/validations) | Chapter 14: Validations.
+
+------------------------------------------------------------------------

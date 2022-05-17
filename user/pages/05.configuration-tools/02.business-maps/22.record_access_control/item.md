@@ -1,5 +1,8 @@
 ---
 title: 'Record Access Control'
+metadata:
+    description: 'Record Access Control.'
+    author: 'Joe Bordes'
 content:
     items:
         - '@self.children'
@@ -9,10 +12,14 @@ content:
         dir: desc
     pagination: true
     url_taxonomy_filters: true
+taxonomy:
+    category:
+        - adminmanuals
+        - businessmappings
+    tag:
+        - recordaccesscontrol
 ---
-
-Record Access Control
-=====================
+---
 
 <div class="notices blue">
 For more advanced customizations of
@@ -87,11 +94,11 @@ depending on the status of it's parent project. That would look like
 this. First a workflow and business mapping to block the projects that
 are closed:
 
-<img src="/en/corebos/businessmapping/racbm_01.png" class="align-center" width="800" />
+![](racbm_01.png?width=100%)
 
 Next a workflow and mapping to block the project tasks:
 
-<img src="/en/corebos/businessmapping/racbm_02.png" class="align-center" width="800" />
+![](racbm_02.png?width=100%)
 
 You could easily add another condition to the workflows so that they
 applied only for certain users (for example).
@@ -150,7 +157,7 @@ Block Sent Emails Delete and Edit Example
 Another example is to block editing and deleting of sent emails on the
 list view, which would be something like this:
 
-<img src="/en/corebos/businessmapping/racsentemails.png" class="align-center" width="800" />
+![](racsentemails.png?width=100%)
 
 with this mapping:
 ```xml
@@ -246,3 +253,10 @@ In general, the idea is:
      }
     }
 ```
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/list_columns) | Chapter 6: List Columns.
+
+------------------------------------------------------------------------
