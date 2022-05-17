@@ -19,8 +19,6 @@ taxonomy:
         - howto
 ---
 
-Workflow step by step explanation
-=================================
 
 The Workflow module provides a number of options to trigger actions
 based on events in the application or time based events.
@@ -160,3 +158,9 @@ This is same as Todo task other than that it creates an event instead of
 a task.
 
 
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/scheduled_workflows) | Chapter 3: Scheduled Time based Workflows.
+
+------------------------------------------------------------------------

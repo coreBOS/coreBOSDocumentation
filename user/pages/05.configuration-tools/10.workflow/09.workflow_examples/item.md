@@ -86,3 +86,11 @@ Para el caso de que se haya movido la fecha de ejecución no lo he pensado bien 
 
 
 ![](targetenddatehaschanged.png?width=100%)
+
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/workflow_weekendwarning) | Chapter 12: How to send emails/sms on specific week days.
+
+------------------------------------------------------------------------

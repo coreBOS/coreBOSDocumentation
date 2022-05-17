@@ -52,3 +52,10 @@ Since workflows are triggered when we save a record the different launch options
 triggered on a certain date/time. These are so important that they have
 [their own documentation page](http://localhost/coreBOSDocumentation/configuration-tools/workflow/scheduled_workflows)
 
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/workflow_stepbystep) | Chapter 2: Workflow step by step explanation.
+
+------------------------------------------------------------------------

@@ -161,5 +161,12 @@ order.
 
 Click Save and give it a try.
 
-&lt;WRAP center round box 80%&gt; [Thank you
-Besart!](https://github.com/besartmarku) &lt;/WRAP&gt;
+[Thank you Besart!](https://github.com/besartmarku)
+
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/workflow_tricksandtips) | Chapter 13:Workflow Tricks and Tips.
+
+------------------------------------------------------------------------

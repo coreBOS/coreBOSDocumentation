@@ -133,4 +133,9 @@ that is it, there is nothing to configure as these are atomic action functions, 
 </tbody>
 </table>
 
+<br>
+------------------------------------------------------------------------
 
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/email_workflows) | Chapter 9: Email Workflow Tasks.
+
+------------------------------------------------------------------------

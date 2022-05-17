@@ -155,3 +155,11 @@ The next image should achieve what you are asking:
 <div class="notices red">
 Note that this is NOT time based, it will not calculate automatically when “today” is over 60 days, you will have to edit the record EVERY day to see the changes. As of March 2015 you can use scheduled workflows for time based workflows.
 </div>
+
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/upsert_workflows) | Chapter 5: Upsert Workflow Task.
+
+------------------------------------------------------------------------
