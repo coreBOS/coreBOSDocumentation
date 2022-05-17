@@ -1,5 +1,5 @@
 ---
-title: 'Web service documentation: Table of Contents'
+title: 'Web service'
 metadata:
     description: 'Webservice general'
     author: 'Joe Bordes'
@@ -20,6 +20,8 @@ taxonomy:
         - webservice
 ---
 ---
+## Table of Contents
+
 -   [Introduction](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/intro)
 -   [Operations](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/ops)
     -   [Login to webservice](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/login)
@@ -35,10 +37,10 @@ taxonomy:
     -   [Portal user login](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/portallogin)
     -   [Extend Session and Logout](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/session)
     -   [coreBOS Web Service Developer Tool](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/coreboswsbrowser)
+    -   [coreBOS Webservice Webform](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/coreboswswebform)
     -   [Skip convert fields](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/skipconvertfields)
     -   [Format and reserved parameter](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/reservedparameter)
     -   [Frequently Asked Questions](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/faq)
 -   [Add web service end points](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/addws)
 -   [Client Libraries](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/libraries)
-
 

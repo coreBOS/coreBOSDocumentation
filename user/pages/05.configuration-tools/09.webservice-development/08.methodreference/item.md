@@ -1,12 +1,27 @@
 ---
 title: 'Web service Method Reference'
+metadata:
+    description: 'The API gives us a way of executing the basic operations of Create, Retrieve, Update, and Delete against any module installed in the associated coreBOS'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        - webservice
+    tag:
+        - reference 
 ---
+---
+## CRUD Operations
 
-Web service Method Reference
-============================
-
-CRUD Operations
----------------
 
 The API gives us a way of executing the basic operations of Create,
 Retrieve, Update, and Delete against any module installed in the
@@ -15,37 +30,37 @@ connected user as if he were inside coreBOS itself.
 
 ### Create
 
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>Creates a new record in the application.</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
-<td>create(elementType:string, element:Map):Object</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Creates a new record in the application.</th>
 </tr>
-<tr class="even">
-<td>Send as:</td>
+<tr>
+<td><strong>Profile:</strong></td>
+<td>sendRecoverPassword(username:String):Status</td>
+</tr>
+<tr>
+<td><strong>Send Type:</td>
 <td>POST</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; elementType: module name where we want to create the record<br />
 =&gt; element: map with all the field-value entries to save</td>
 </tr>
-<tr class="even">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>An object with all the information of the new record</td>
 </tr>
-<tr class="odd">
-<td>Examples:</td>
+<tr>
+<td><strong>Examples:</td>
 <td><a href="https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/020lib_createContact.php">Development Tool</a></td>
 </tr>
 </tbody>
 </table>
+<br>
+
 
 The Create operation also supports a virtual meta-field named
 **relations** which contains an array of web service IDs with which we
@@ -60,11 +75,11 @@ taxes among other features. In order to support this functionality
 through the web service API, these modules have a set of additional
 rules.
 
-<span class="underline">Product Items/Lines</span>
+<u>Product Items/Lines</u>
 
 These modules support a virtual field named **pdoInformation**, this
 field contains an array of line items with this format:
-
+```php
     'pdoInformation' => array(
      array(
         "productid"=>2618,
@@ -87,19 +102,19 @@ field contains an array of line items with this format:
         "discount_amount"=>0
       ),
     ),
-
+```
 -   This is mandatory for inventory modules
 -   This is also supported in update
 -   [you can see an example
     here](https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/440_libcreateSO.php)
 
-<span class="underline">Tax Mode</span>
+<u>Tax Mode</u>
 
 Tax mode, group or individual is also mandatory. It is set with [the
 'taxtype'
 field](https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/440_libcreateSO.php#L50)
 
-<span class="underline">Product Taxes</span>
+<u>Product Taxes</u>
 
 Taxes are always applied as per system settings. In other words, you can
 NOT set taxes in the web service call, the taxes will be automatically
@@ -108,7 +123,7 @@ all the available/active taxes defined in settings will be applied to
 the inventory record. If the taxtype is individual, the taxes configured
 in each product will be applied automatically.
 
-<span class="underline">Shipping charges and taxes</span>
+<u>Shipping charges and taxes</u>
 
 Shipping charge is [set using the field
 'shipping\_handling\_charge'](https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/440_libcreateSO.php#L44).
@@ -125,7 +140,7 @@ an array with all the fields and their values.
 Note that the way coreBOS works is that you get the values in the format
 of the database but you must return them in the format of the user.
 There is a way to [inform coreBOS to accept values in database
-format](/en/devel/corebosws/skipconvertfields) and there is a Global
+format](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/skipconvertfields) and there is a Global
 Variable (**Webservice\_Return\_FormattedValues**) to retrieve values in
 the format of the user connected to the API.
 
@@ -138,47 +153,46 @@ contain extended information to reduce the number of network calls.
 \* for all reference fields with a value, we will get a virtual field
 with the same name of the field followed by "ename". This field contains
 an array of 3 values:
+-   module: the module of the record saved in the field (each related field may contain more than one module)
+-   reference: the string representation of the record, so we don't have to make another call to the coreBOS application
+-   cbuuid of the record
+-   if the module has image fields the information of the image will be returned in a virtual field with the same name of the field    followed by "imageinfo".
+-    if the record is a user, the role name assigned to the user will also be returned
 
-      * module: the module of the record saved in the field (each related field may contain more than one module)
-      * reference: the string representation of the record, so we don't have to make another call to the coreBOS application
-      * cbuuid of the record
-    * if the module has image fields the information of the image will be returned in a virtual field with the same name of the field followed by "imageinfo".
-    * if the record is a user, the role name assigned to the user will also be returned
 
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>Get all the values the user has access to, of an existent record in the application.</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Get all the values the user has access to, of an existent record in the application.</th>
+</tr>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>retrieve(id:string):Object</td>
 </tr>
-<tr class="even">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>GET</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; id: web service ID or cbuuid of the record we want to recover</td>
 </tr>
-<tr class="even">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>An object with all the information of the record</td>
 </tr>
-<tr class="odd">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:</td>
 <td><code>http://corebos_url/webservice.php?operation=retrieve&amp;sessionName=[session id]&amp;id=[wsid]</code></td>
 </tr>
-<tr class="even">
-<td>Examples:</td>
+<tr>
+<td><strong>Examples:</td>
 <td><a href="https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/040lib_retrieve.php">Development Tool</a></td>
 </tr>
 </tbody>
 </table>
+<br>
 
 ### Update
 
@@ -188,36 +202,35 @@ so, in many cases, updating becomes a two-step operation; first retrieve
 all the records, assign the new values leaving the others untouched and
 update the whole record.
 
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>Updates ALL the fields of a given record.</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Updates ALL the fields of a given record.</th>
+</tr>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>update(element:Object):Object</td>
 </tr>
-<tr class="even">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; element: record object with fields to update. It is mandatory to set the ID field in the Object and send in all fields</td>
 </tr>
-<tr class="even">
-<td>Response:</td>
-<td>An object with all the information of the record (even <a href="/en/devel/corebosws/methodreference#retrieve">extended information</a>)</td>
+<tr>
+<td><strong>Response:</td>
+<td>An object with all the information of the record (even <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference#retrieve">extended information</a>)</td>
 </tr>
-<tr class="odd">
-<td>Examples:</td>
+<tr>
+<td><strong>Examples:</td>
 <td><a href="https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/060lib_update.php">Development Tool</a></td>
 </tr>
 </tbody>
 </table>
+<br>
 
 The Update operation also supports a virtual meta-field named
 **relations** which contains an array of web service IDs with which we
@@ -226,36 +239,35 @@ here](https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/410_
 
 ### Delete
 
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>Eliminate any record we have permission to delete.</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Eliminate any record we have permission to delete.</th>
+</tr>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>delete(id:string):string</td>
 </tr>
-<tr class="even">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; id: web service ID or cbuuid of the record we want to delete</td>
 </tr>
-<tr class="even">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>successful</td>
 </tr>
-<tr class="odd">
-<td>Examples:</td>
+<tr>
+<td><strong>Examples:</td>
 <td><a href="https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/070lib_delete.php">Development Tool</a></td>
 </tr>
 </tbody>
 </table>
+<br>
 
 ### Revise
 
@@ -268,36 +280,36 @@ for this behavior is that the user may not have permission for a few
 fields and the system may not know if these fields are not available in
 the system or the user does not have permission for these fields.
 
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>Updates fields of a given record.</th>
-</tr>
-</thead>
+
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Updates fields of a given record.</th>
+</tr>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>revise(element:Object):Object</td>
 </tr>
-<tr class="even">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; element: record object with fields to update. It is mandatory to set the ID field in the Object</td>
 </tr>
-<tr class="even">
-<td>Response:</td>
-<td>An object with all the information of the record (even <a href="/en/devel/corebosws/methodreference#retrieve">extended information</a>)</td>
+<tr>
+<td><strong>Response:</td>
+<td>An object with all the information of the record (even <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference#retrieve">extended information</a>)</td>
 </tr>
-<tr class="odd">
-<td>Examples:</td>
+<tr>
+<td><strong>Examples:</td>
 <td><a href="https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/450_libreviseSO.php">Development Tool</a></td>
 </tr>
 </tbody>
 </table>
+<br>
 
 ### CRUD Users
 
@@ -319,115 +331,117 @@ that we are going to delete.
 
 <https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/070lib_deleteUser.php>
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th>deleteUser</th>
-</tr>
-</thead>
+
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
-<td>Permits us to delete a user and transfer all his assigned records to another user.</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>deleteUser</th>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Permits us to delete a user and transfer all his assigned records to another user.</th>
+</tr>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>deleteUser(id:string, newOwnerId:string):string</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; id: user web service ID that will be deleted<br />
 =&gt; newOwnerId: user web service ID to transfer records to</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>successfull</td>
 </tr>
 </tbody>
 </table>
+<br>
+
 
 Users have two other additional endpoints that permit them to change
 their password and Access Key.
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th>changePassword</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
-<td>Permits a user to change his password or the password of another user if the connected user is an administrator.</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>changePassword</th>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Permits a user to change his password or the password of another user if the connected user is an administrator.</th>
+</tr>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>changePassword(id:string, oldPassword:string, newPassword:string, confirmPassword:string):string</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; id: user web service ID<br />
 =&gt; oldPassword<br />
 =&gt; newPassword<br />
 =&gt; confirmPassword</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>=&gt; permission error message<br />
 =&gt; success message with the new <strong>Access Key</strong></td>
 </tr>
-<tr class="even">
-<td>Comments:</td>
-<td>&lt;WRAP center round important 100%&gt;Note that the changePassword function will change also the Access Key of the user, so your next login will have to be with the new Access Key that is returned from the call. The new Access Key will only be visible in this response so be sure to save it.&lt;/WRAP&gt;</td>
+<tr>
+<td><strong>Comments:</td>
+<td><div class="notices red"> >Note that the changePassword function will change also the Access Key of the user, so your next login will have to be with the new Access Key that is returned from the call. The new Access Key will only be visible in this response so be sure to save it.</div></td>
 </tr>
 </tbody>
 </table>
+<br>
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th>changeAccessKey</th>
-</tr>
-</thead>
+
+
+
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
-<td>Permits a user to change his Access Key or the Access Key of another user if the connected user is an administrator.</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>changeAccessKey</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Permits a user to change his Access Key or the Access Key of another user if the connected user is an administrator.</th>
+</tr>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>changeAccessKey(id:string):string</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; id: user web service ID</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>=&gt; permission error message<br />
 =&gt; success message with the new <strong>Access Key</strong></td>
 </tr>
 </tbody>
 </table>
+<br>
 
 ### CRUD Documents
 
-[Read full information here](/en/devel/corebosws/docenhance_examples)
+[Read full information here](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/docenhance)
 
 ### Adding Comments
 
@@ -440,40 +454,40 @@ managing comments: Support Tickets (HelpDesK) and Frequently Asked
 Questions (Faq). For these two modules, we have a specific endpoint:
 **addTicketFaqComment**
 
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>Function used to add comments to Tickets and Faq.</th>
-</tr>
-</thead>
+
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Function used to add comments to Tickets and Faq.</th>
+</tr>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>addTicketFaqComment(id:string, values:Object):Object</td>
 </tr>
-<tr class="even">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; id: web service id of the trouble ticket or faq to which we must attach the comment<br />
 =&gt; values: array with the parameters of the comment. these parameters can be:<br />
 'from_portal' 0 or 1: 0 = 'user', 1 = 'customer'<br />
 'parent_id' webservice id of the contact creating the comment from the portal<br />
 'comments' string, comment to add</td>
 </tr>
-<tr class="even">
-<td>Response:</td>
-<td>An object with all the information of the record (even <a href="/en/devel/corebosws/methodreference#retrieve">extended information</a>)</td>
+<tr>
+<td><strong>Response:</td>
+<td>An object with all the information of the record (even <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference#retrieve">extended information</a>)</td>
 </tr>
-<tr class="odd">
-<td>Examples:</td>
+<tr>
+<td><strong>Examples:</strong></td>
 <td><a href="https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/328_addTicketFaqComment.php">Development Tool</a></td>
 </tr>
 </tbody>
 </table>
+<br>
 
 ### CRUD Mass Operations
 
@@ -482,40 +496,40 @@ for the main actions.
 
 #### MassCreate (MassUpsert)
 
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>Create a set of records.</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Create a set of records.</th>
+</tr>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>MassCreate(elements:array of Objects):Object</td>
 </tr>
-<tr class="even">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; elements: an array of Object to create (see below for the accepted structure)</td>
 </tr>
-<tr class="even">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>An object with two elements:<br />
 =&gt; success_creates: array of created Object<br />
 =&gt; failed_creates: array of Object that could not be created with their error message</td>
 </tr>
 </tbody>
 </table>
+<br>
 
 The Mass Create elements structure is an intelligent layout that permits
 us not only to create many records in one call but also to establish
 relationships among the different records.
 
 The generic structure looks like this
+```php
 
     [
         {
@@ -535,6 +549,7 @@ The generic structure looks like this
         }
     ...
     ]
+```   
 
 Each element of the array represents a record to be created. It contains
 an **elementType** so we know what module to create the record in, a
@@ -548,7 +563,7 @@ Contact record and then a Potential record related to the Contact that
 has just been created.
 
 An example structure to test with:
-
+```php
     [
         {
           "elementType" : "HelpDesk",
@@ -645,7 +660,7 @@ An example structure to test with:
           }
         },
     ]
-
+```
 and you can see some more examples [in the unit
 tests](https://github.com/tsolucio/coreBOSTests/blob/master/include/Webservices/MassCreateTest.php).
 
@@ -664,123 +679,123 @@ tests.](https://github.com/tsolucio/coreBOSTests/blob/master/include/Webservices
 
 #### MassRetrieve
 
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>Retrieve a set of records.</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Retrieve a set of records.</th>
+</tr>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>MassRetrieve(ids:string):array of Object</td>
 </tr>
-<tr class="even">
-<td>Send as:</td>
-<td>GET</td>
+<tr>
+<td><strong>Send as:</td>
+<td>POST</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; ids: a comma-separated string of web service ID of the records to retrieve</td>
 </tr>
-<tr class="even">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>An array of Object with all the information of the records that were possible to obtain</td>
 </tr>
 </tbody>
 </table>
 
+<br>
+
+
 #### MassUpdate
 
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>Update a set of records.</th>
-</tr>
-</thead>
+
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Update a set of records.</th>
+</tr>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>MassUpdate(elements:array of Objects):Object</td>
 </tr>
-<tr class="even">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; elements: an array of Object to update, each one must contain the web service ID of the record to update and the field-value list of fields to update</td>
 </tr>
-<tr class="even">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>An object with two elements:<br />
 =&gt; success_updates: array of updated IDs<br />
 =&gt; failed_updates: array of IDs that could not be updated with their error message</td>
 </tr>
 </tbody>
 </table>
+<br>
 
 #### MassDelete
 
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>Delete a set of records.</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
-<td>MassDelete(ids:String):Object</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Delete a set of records.</th>
 </tr>
-<tr class="even">
-<td>Send as:</td>
+<tr>
+<td><strong>Profile:</strong></td>
+<td>MassUpdate(elements:array of Objects):Object</td>
+</tr>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; ids: comma-separated list of web service IDs to delete</td>
 </tr>
-<tr class="even">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>An object with two elements:<br />
 =&gt; success_deletes: array of deleted IDs<br />
 =&gt; failed_deletes: array of IDs that could not be deleted with their error message</td>
 </tr>
 </tbody>
 </table>
+<br>
 
 ### Validations. Create, Update and Revise with Validations
 
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>Apply application configured validations on a set of fields.</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Apply application configured validations on a set of fields.</th>
+</tr>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>ValidateInformation(context:Object):Object</td>
 </tr>
-<tr class="even">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</strong></td>
 <td>POST</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</strong></td>
 <td>=&gt; context: an Object with the field-value pairs to validate. Either a "module" or a "record" entry must exist in the object. If "record" is given the validations will be evaluated with the fields of the record.</td>
 </tr>
-<tr class="even">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</strong></td>
 <td>true or false in the success field. If false is returned the result will contain an array with all the validations that have failed</td>
 </tr>
 </tbody>
 </table>
+<br>
+
 
 Besides the ValidateInformation endpoint, we also have create and update
 options that are identical to their base counterparts explained above
@@ -801,39 +816,39 @@ it with the given values, if no record can be found we will create a new
 one with the given values. So it is a Search and Update or Create in one
 call.
 
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>Search and update or create a record.</th>
-</tr>
-</thead>
+
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Search and update or create a record.</th>
+</tr>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>upsert(elementType:string, element:Object, searchOn:string , updatedfields:string ):Object</td>
 </tr>
-<tr class="even">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</strong></td>
 <td>POST</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</strong></td>
 <td>=&gt; elementType: module name where we search and operate<br />
 =&gt; element: record object with fields to update/create<br />
 =&gt; searchOn: comma-separated list of fields to search on, the values will be obtained from element<br />
 =&gt; updatedfields: comma-separated list of fields to update if the record is found, the values will be obtained from element</td>
 </tr>
-<tr class="even">
-<td>Response:</td>
-<td>An object with all the information of the record updated/created (even <a href="/en/devel/corebosws/methodreference#retrieve">extended information</a>)</td>
+<tr>
+<td><strong>Response:</strong></td>
+<td>An object with all the information of the record updated/created (even <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference#retrieve">extended information</a>)</td>
 </tr>
-<tr class="odd">
-<td>Examples:</td>
+<tr>
+<td><strong>Examples:</strong></td>
 <td><a href="https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/065_libUpsert.php">Development Tool</a></td>
 </tr>
 </tbody>
 </table>
+<br>
 
 ### Relations
 
@@ -852,121 +867,128 @@ Finally, we have two endpoints that can establish or delete many to many
 relations with a large set of records: **SetRelation** and
 **UnsetRelation**
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th><strong>SetRelation</strong></th>
-</tr>
-</thead>
+
+
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
-<td>Sets relations between one record and a set of other records.</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>SetRelation</th>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Sets relations between one record and a set of other records.</th>
+</tr>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>SetRelation(relate_this_id:string, with_these_ids:Map):Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</strong></td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</strong></td>
 <td>=&gt; relate_this_id: web service ID of the main record to relate<br />
 =&gt; with_these_ids: array of web service IDs to relate to the main record</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
-<td></td>
+<tr>
+<td><strong>Response:</strong></td>
+<td>An object with all the information of the record updated/created (even <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference#retrieve">extended information</a>)</td>
 </tr>
-<tr class="even">
-<td>Examples:</td>
+<tr>
+<td><strong>Examples:</strong></td>
 <td><a href="https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/424lib_setrelated.php">Development Tool</a></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th><strong>UnsetRelation</strong></th>
-</tr>
-</thead>
+
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>UnsetRelation</th>
+</tr>
+<tr>
+<td><strong>Purpose:</strong></td>
 <td>Deletes relations between one record and a set of other records.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>UnsetRelation(unrelate_this_id:string, with_these_ids:Map):Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</strong></td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</strong></td>
 <td>=&gt; unrelate_this_id: web service ID of the main record to unrelate<br />
 =&gt; with_these_ids: array of web service IDs to unrelate from the main record</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</strong></td>
 <td></td>
 </tr>
-<tr class="even">
-<td>Examples:</td>
+<tr>
+<td><strong>Examples:</strong></td>
 <td><a href="https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/424lib_setrelated.php">Development Tool</a></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
 Metadata information
 --------------------
 
 ### List Types
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th>listtypes</th>
-</tr>
-</thead>
+
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>listtypes</th>
+</tr>
+<tr>
+<td><strong>Purpose:</strong></td>
 <td>Returns a list of module names the currently connected user has access to.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>listtypes(fieldTypeList:string):Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</strong></td>
 <td>GET</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</strong></td>
 <td>=&gt; fieldTypeList: comma-separated list of field types the modules must have. Is optional.</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</strong></td>
 <td>list of modules the user has access to which contain at least one field of the types given. If no types are given all accessible modules are returned</td>
 </tr>
-<tr class="even">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:</strong></td>
 <td><code>http://corebos_url/webservice.php?operation=listtypes&amp;sessionName=[session id]&amp;fieldTypeList=phone,email</code></td>
 </tr>
-<tr class="odd">
-<td>Examples:</td>
+<tr>
+<td><strong>Examples:</strong></td>
 <td><a href="https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/090lib_listtypes.php">Development Tool</a></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
+
+
+
 
 ### Describe
 
@@ -1020,7 +1042,7 @@ The object returned by this service contains:
     -   sequence – order of the fields in the application
     -   quickcreate – boolean value indicating if the field is present
         in quick create or not
-    -   [displaytype](/en/devel/field_structure#display_types_for_fields_in_modules)
+    -   [displaytype](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/field_structure)
     -   summary – letter indicating if the field is present in the page
         header information
         -   T: should appear in title
@@ -1033,357 +1055,361 @@ The object returned by this service contains:
         -   blocklabel: raw label of the block
         -   blockname: translated label of the block
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th>Describe</th>
-</tr>
-</thead>
+
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>Describe</th>
+</tr>
+<tr>
+<td><strong>Purpose:</strong></td>
 <td>Returns metadata of a list of module names.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>describe(elementType:string):Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</strong></td>
 <td>GET</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</strong></td>
 <td>=&gt; elementType: comma-separated list of modules.</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</strong></td>
 <td>see above</td>
 </tr>
-<tr class="even">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:</strong></td>
 <td><code>http://corebos_url/webservice.php?operation=describe&amp;sessionName=[session id]&amp;elementType=Contacts,Accounts</code></td>
 </tr>
-<tr class="odd">
-<td>Examples:</td>
+<tr>
+<td><strong>Examples:</strong></td>
 <td><a href="https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/080lib_describe.php">Development Tool</a></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
 ### Filters/Views
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th>getfilterfields</th>
-</tr>
-</thead>
+
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>getfilterfields</th>
+</tr>
+<tr>
+<td><strong>Purpose:</strong></td>
 <td>Retrieve the default list of fields to show in a list view along with the link field and pagesize</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>getfilterfields(module:String):Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</strong></td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</strong></td>
 <td>=&gt; module: module name to get the fields for</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</strong></td>
 <td>A map object with a list of the fields, the link fields and the default page size</td>
 </tr>
-<tr class="even">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:</strong></td>
 <td><code>http://corebos_url/webservice.php?operation=getfilterfields&amp;sessionName=[session id]&amp;module=[name]</code></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th>getViewsByModule</th>
-</tr>
-</thead>
+
+
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>getViewsByModule</td>
+</tr>
+<tr>
+<td><strong>Purpose:</strong></td>
 <td>Retrieve a list of available filters on a module with all the available information of each: fields, conditions, default, and also the link field and page size. This method is similar to getFiltersByModule being the difference one property (HTML output) and that this method applies permission based on the coreBOS Custom View Management module.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>getViewsByModule(module:String):Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</strong></td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</strong></td>
 <td>=&gt; module: module name to get the filters for</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</strong></td>
 <td>A map object with a list of the filters, the link fields, and the default page size</td>
 </tr>
-<tr class="even">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:<strong></td>
 <td><code>http://corebos_url/webservice.php?operation=getViewsByModule&amp;sessionName=[session id]&amp;module=[name]</code></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th>getFiltersByModule</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>getFiltersByModule</td>
+</tr>
+<tr>
+<td><strong>Purpose:</strong></td>
 <td>Retrieve a list of available filters on a module with all the available information of each: fields, conditions, default, and also the link field and page size. This method is similar to getViewsByModule being the difference one property (HTML output) and that this method applies permission based on the Custom View Management (filters, public, and approve).</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>getFiltersByModule(module:String):Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</strong></td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:<strong></td>
 <td>=&gt; module: module name to get the filters for</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</strong></td>
 <td>A map object with a list of the filters in HTML and array format and the link fields</td>
 </tr>
-<tr class="even">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:</strong></td>
 <td><code>http://corebos_url/webservice.php?operation=getFiltersByModule&amp;sessionName=[session id]&amp;module=[name]</code></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-### User Information
+### **User Information**
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th>getPortalUserInfo</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
+<tr>
+<td><strong>Method:</strong></td>
+<td>getPortalUserInfo</td>
+</tr>
 <tr class="odd">
-<td>Purpose:</td>
+<td><strong>Purpose:</strong></td>
 <td>Retrieve a list of available fields for the connected user</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>getPortalUserInfo():Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</strong></td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</strong></td>
 <td></td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</strong></td>
 <td>'date_format','first_name','last_name','email1','id','is_admin','roleid','rolename','language','currency_grouping_pattern','currency_decimal_separator','currency_grouping_separator','currency_symbol_placement'</td>
 </tr>
-<tr class="even">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:</strong></td>
 <td><code>http://corebos_url/webservice.php?operation=getPortalUserInfo&amp;sessionName=[session id]</code></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th>getPortalUserDateFormat</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>getPortalUserDateFormat</td>
+</tr>
+<tr>
+<td><strong>Purpose:</strong></td>
 <td>Retrieve the date format of the connected user</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>getPortalUserDateFormat():Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</strong></td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</strong></td>
 <td></td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</strong></td>
 <td>date_format, if none is set ISO (yyyy-mm-dd) will be returned</td>
 </tr>
-<tr class="even">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:</strong></td>
 <td><code>http://corebos_url/webservice.php?operation=getPortalUserDateFormat&amp;sessionName=[session id]</code></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th>getAllUsers</th>
-</tr>
-</thead>
+
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>getAllUsers</td>
+</tr>
+<tr>
+<td><strong>Purpose:</td>
 <td>Retrieve a list of all existing users name</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</td>
 <td>getAllUsers():Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td></td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>list of user names indexed by ID</td>
 </tr>
-<tr class="even">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:</td>
 <td><code>http://corebos_url/webservice.php?operation=getAllUsers&amp;sessionName=[session id]</code></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th>getAssignedUserList</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>getAssignedUserList</td>
+</tr>
+<tr>
+<td><strong>Purpose:</td>
 <td>Retrieve a list of all users with access to a module</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</td>
 <td>getAssignedUserList(module):Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>GET</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr >
+<td><strong>Parameters:</td>
 <td>=&gt; module: module name to get the users for</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>list of user IDs and names</td>
 </tr>
-<tr class="even">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:</td>
 <td><code>http://corebos_url/webservice.php?operation=getAssignedUserList&amp;sessionName=[session id]&amp;module=[name]</code></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th>getUsersInSameGroup</th>
-</tr>
-</thead>
+
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>getUsersInSameGroup</td>
+</tr>
+<tr>
+<td><strong>Purpose:</td>
 <td>return all the users in the groups that the given user is part of.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</td>
 <td>getUsersInSameGroup(id:String):Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; id: userid to get the group users for. Note: application ID not web service ID</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>array user names of all the users in the groups that this user is part of indexed by their ID</td>
 </tr>
-<tr class="even">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:</td>
 <td><code>http://corebos_url/webservice.php?operation=getUsersInSameGroup&amp;sessionName=[session id]&amp;id=[userid]</code></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
 ### Other Information
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th><strong>getRelatedModulesManytoOne</strong></th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>getRelatedModulesManytoOne</td>
+</tr>
+<tr>
+<td><strong>Purpose:</td>
 <td>Returns an array of metadata information about the modules related to the given module in N:1 mode.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</td>
 <td>getRelatedModulesManytoOne(module:string):array of Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>GET</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; module: main module for which we want to know the list of related modules.</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>An array of module information which contains:<br />
 =&gt; name: related module name<br />
 =&gt; label: translated module label<br />
@@ -1391,33 +1417,32 @@ The object returned by this service contains:
 </tr>
 </tbody>
 </table>
-
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th><strong>GetRelatedModulesOneToMany</strong></th>
-</tr>
-</thead>
+<br>
+<br>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>GetRelatedModulesOneToMany</td>
+</tr>
+<tr>
+<td><strong>Purpose:</td>
 <td>Returns an array of metadata information about the modules related to the given module in 1:N mode.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</td>
 <td>GetRelatedModulesOneToMany(module:string):array of Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>GET</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; module: main module for which we want to know the list of related modules.</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>An array of module information which contains:<br />
 =&gt; name: related module name<br />
 =&gt; label: translated module label<br />
@@ -1425,33 +1450,33 @@ The object returned by this service contains:
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th><strong>getRelatedModulesInfomation</strong></th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>getRelatedModulesInfomation</td>
+</tr>
+<tr>
+<td><strong>Purpose:</td>
 <td>Returns an array of metadata information about the modules related to the given module.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</td>
 <td>getRelatedModulesInfomation(module:string):array of Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; module: main module for which we want to know the list of related modules.</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>An array of module information which contains:<br />
 =&gt; related_tabid: internal ID of the module<br />
 =&gt; related_module: module name<br />
@@ -1463,77 +1488,77 @@ The object returned by this service contains:
 =&gt; relationtype: 1:N or N:N<br />
 =&gt; filterFields: array of fields that should be listed when showing the related records</td>
 </tr>
-<tr class="even">
-<td><a href="Notes:%7CThe">Notes:|The</a> information returned with this function is present in the Describe response</td>
-<td></td>
+<tr>
+<td><strong>Notes:</td>
+<td>The information returned with this function is present in the Describe response</td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th><strong>getReferenceValue</strong></th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>getReferenceValue</td>
+</tr>
+<tr>
+<td><strong>Purpose:</td>
 <td>convert web service IDs into their entity names.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</td>
 <td>getReferenceValue(id:string):string</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>GET</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; id: PHP serialized array of web service IDs to convert.</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>A web service ID indexed map with these three entries:<br />
 =&gt; module: the module of the record in the field<br />
 =&gt; reference: entity name reference<br />
 =&gt; cbuuid: of the record</td>
 </tr>
-<tr class="even">
-<td><a href="Notes:%7CThe">Notes:|The</a> information returned with this function is equivalent to the "ename" virtual fields returned by Retrieve</td>
-<td></td>
+<tr>
+<td><strong>Notes:</td>
+<td>The information returned with this function is equivalent to the "ename" virtual fields returned by Retrieve</td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th><strong>getModulePermissionQuery</strong></th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>getModulePermissionQuery</td>
+</tr>
+<tr>
+<td><strong>Purpose:</td>
 <td>returns SQL query restrictions that must be applied to enforce application permissions. This is used to generate external SQL reports with tools like SuperSet or Metabase while applying the same rules configured inside the application.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</td>
 <td>getModulePermissionQuery(module:string):Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>GET</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; module: name of the module for which we want to retrieve the restrictions.</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>A map with these three entries:<br />
 =&gt; permissonTable: if a temporary table is required this will contain it's name<br />
 =&gt; permissionQuery: full permission query<br />
@@ -1541,290 +1566,289 @@ The object returned by this service contains:
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th><strong>getPicklistValues</strong></th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td><strong>getPicklistValues</strong></td>
+</tr>
+<tr>
+<td><strong>Purpose:</td>
 <td>get picklist fields for the given module and all their possible values.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</td>
 <td>getPicklistValues(module:string):Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; module: name of the module for which we want to retrieve the picklist values.</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>A map of picklist fields and all their values</td>
 </tr>
 </tbody>
 </table>
-
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th><strong>getEntityNum</strong></th>
-</tr>
-</thead>
+<br>
+<br>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td><strong>getEntityNum</strong></td>
+</tr>
+<tr>
+<td><strong>Purpose:</td>
 <td>get the auto numeric field prefixes of all modules with a uitype 4 field.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</td>
 <td>getEntityNum():Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td></td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>A map of auto numeric prefixes with module names as key</td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th><strong>findByPortalUserName</strong></th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td><strong>findByPortalUserName</strong></td>
+</tr>
+<tr>
+<td><strong>Purpose:</td>
 <td>Returns if a portal user with the given name exists or not.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</td>
 <td>findByPortalUserName(username:string):Object</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; username: string.</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>boolean: if a portal user with that name exists or not</td>
 </tr>
-<tr class="even">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:</td>
 <td><code>http://corebos_url/webservice.php?operation=findByPortalUserName&amp;sessionName=[session id]&amp;username=joebordes</code></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th><strong>getMaxLoadSize</strong></th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td><strong>getMaxLoadSize</strong></td>
+</tr>
+<tr>
+<td><strong>Purpose:</td>
 <td>Returns maximum upload size as per PHP settings, so we can adapt our external application to the configured restrictions in the server.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</td>
 <td>getMaxLoadSize():String</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td></td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>return maximum upload size as per PHP settings</td>
 </tr>
-<tr class="even">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:</td>
 <td><code>http://corebos_url/webservice.php?operation=getMaxLoadSize&amp;sessionName=[session id]</code></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
 There are two deprecated endpoints that you can use to get specific
 information that is already available using **Describe**. These methods
 will not be eliminated, so they can be used if you need them.
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
+<table class="table table-striped">
+<tbody>
+<tr>
+<td><strong>Method:</strong></td>
 <th><strong>getUItype</strong></th>
 </tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Purpose:</td>
 <td>Returns a list of all the fields in the module with their uitype.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</td>
 <td>getUItype(module:string):List</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; module: module name.</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>list of fields and their type</td>
 </tr>
-<tr class="even">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:</td>
 <td><code>http://corebos_url/webservice.php?operation=getUItype&amp;sessionName=[session id]&amp;module=Contacts</code></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th><strong>vtyiicpng_getWSEntityId</strong></th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td><strong>vtyiicpng_getWSEntityId</strong></td>
+</tr>
+<tr>
+<td><strong>Purpose:</td>
 <td>Returns the given modules' web service entity ID.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</td>
 <td>vtyiicpng_getWSEntityId(entityName:string):String</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; entityName: module name.</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>string with the modules' web service ID</td>
 </tr>
-<tr class="even">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:</td>
 <td><code>http://corebos_url/webservice.php?operation=vtyiicpng_getWSEntityId&amp;sessionName=[session id]&amp;entityName=Contacts</code></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-Other Operations
-----------------
+<h2>Other Operations</h2>
+<h3>Search Global Variable</h3>
+<a href="http://localhost/coreBOSDocumentation/configuration-tools/global-variables">SearchGlobalVar</a>
+<h3>Translations</h3>
 
-### Search Global Variable
-
-[SearchGlobalVar](/en/adminmanual/globalvariables#web_service)
-
-### Translations
-
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>This method permits us to use the translations in the application in our frontend application.</th>
+<table class="table table-striped">
+<tbody>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>This method permits us to use the translations in the application in our frontend application.</td>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</td>
 <td>gettranslation(totranslate:Map, language:string, module:string):Map</td>
 </tr>
-<tr class="even">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; totranslate: Object with the keys to translate, the value will be ignored if a translation exists or returned if no translation exists<br />
 =&gt; language: a valid application language identifier (e.g. es_es)<br />
 =&gt; module: module to start the translations from</td>
 </tr>
-<tr class="even">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>A map object with all the keys translated where possible</td>
 </tr>
-<tr class="odd">
-<td>Examples:</td>
+<tr>
+<td><strong>Examples:</td>
 <td><a href="https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/324_getTranslate.php">Developer Tool</a></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
-### Javascript Logging
+<h3> Javascript Logging </h3>
 
-The **jsLog** endpoint permits us to send any message from javascript to
+The <strong>jsLog</strong> endpoint permits us to send any message from javascript to
 our coreBOS backend. If we activate the [javascript logging
 section](https://github.com/tsolucio/corebos/blob/master/log4php.properties#L58)
 we will be able to send messages from javascript to our logs directory
 for tracing.
 
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>Updates fields of a given record.</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
-<td>jsLog(level:string, <a href="message:string">message:string</a>)</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Updates fields of a given record.</td>
 </tr>
-<tr class="even">
-<td>Send as:</td>
+<tr>
+<td><strong>Profile:</td>
+<td>jsLog(level:string, message:string)</td>
+</tr>
+<tr>
+<td><strong>Send as:</td>
 <td>POST</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; level: log4php logging level<br />
 =&gt; message: the string to write in the log if the given level is matched</td>
 </tr>
-<tr class="even">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td></td>
 </tr>
 </tbody>
 </table>
+<br>
+<br>
 
 ### Sync
 
@@ -1832,30 +1856,28 @@ The sync service returns the complete set of changes that occurred to
 all records **assigned to the connected user** from a given date and
 time.
 
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>Returns a SyncResult object which contains all the changes that occurred in the application since the parameter modifiedTime to records <strong>assigned to the connected user</strong>. Optionally, if the connected user is an administrator he can ask for all changes in the application disregarding who the records are assigned to. The OnDemand configuration setting variable <strong>$cbodCSAppSyncUser</strong> will permit you to define additional non-admin users that will be able to download changes in all modules.</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Returns a SyncResult object which contains all the changes that occurred in the application since the parameter modifiedTime to records <strong>assigned to the connected user</strong>. Optionally, if the connected user is an administrator he can ask for all changes in the application disregarding who the records are assigned to. The OnDemand configuration setting variable <strong>$cbodCSAppSyncUser</strong> will permit you to define additional non-admin users that will be able to download changes in all modules.</td>
+</tr>
+<tr>
+<td><strong>Profile:</td>
 <td>sync(modifiedTime: Timestamp, elementType: String, syncType: String):SyncResult</td>
 </tr>
-<tr class="even">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</td>
 <td>GET</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>=&gt; modifiedTime: timestamp of last synchronization<br />
 =&gt; elementType: optional parameter, name of the module(s) we want to get the changes for, if not set all records affected in all modules will be returned. Can be a comma-separated list of module names<br />
 =&gt; syncType: a string which can be empty or contain the value 'application'. If it is 'application' and the connected user is an administrator, all changes to the application will be returned.</td>
 </tr>
-<tr class="even">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</td>
 <td>SyncResult object with changes:<br />
 <code>SyncResult {
 updated:[Object] //List of created or modified objects.
@@ -1863,22 +1885,21 @@ deleted:[Id] //List of webserviceid of deleted objects
 lastModifiedTime:Timestamp // date/time of last change, this can be used in the next call to the sync service to get next set of changes
 }</code></td>
 </tr>
-<tr class="odd">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:</td>
 <td><code>http://corebos_url/webservice.php?operation=sync&amp;sessionName=[session
 id]&amp;modifiedTime=[timestamp]&amp;elementType=[elementType]</code></td>
 </tr>
-<tr class="even">
-<td>Examples:</td>
+<tr>
+<td><strong>Examples:</td>
 <td><a href="https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/050_sync.php">Development Tool</a></td>
 </tr>
 </tbody>
 </table>
 
+<br>
 ------------------------------------------------------------------------
 
-&lt;WRAP right&gt; [Next: Working with
-Documents](/en/devel/corebosws/docenhance_examples) | [Table of
-Contents](/en/devel/corebosws/tableofcontents) &lt;/WRAP&gt;
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/docenhance)| Chapter 6:Working with Documents and Images.
 
 ------------------------------------------------------------------------
