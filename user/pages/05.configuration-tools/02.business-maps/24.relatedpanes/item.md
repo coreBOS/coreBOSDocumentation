@@ -1,17 +1,25 @@
 ---
 title: 'Related Panes Mapping'
+metadata:
+    description: 'This map defines additional panes or tabs on a modules detail view.'
+    author: 'Joe Bordes'
 content:
-    items: '@self.children'
-    limit: '5'
+    items:
+        - '@self.children'
+    limit: 5
     order:
         by: date
         dir: desc
-    pagination: '1'
-    url_taxonomy_filters: '1'
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - adminmanuals
+        - businessmappings
+    tag:
+        - relatedpanes
 ---
-
-Related Panes Mapping
-=====================
+---
 
 The purpose of this mapping is to define additional panes or tabs on a
 modules' detail view. The additional panes work exactly as the "More
@@ -30,7 +38,7 @@ A pane can contain any combination of 4 types of blocks:
 -   **RelatedList**: a related list of records with actions, this is the
     current content of the default "More Information" tab
 -   **Widget**: this is a block that must be constructed following the
-    [DetailViewWidget specification](/en/devel/add_special_block). You
+    [DetailViewWidget specification](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/add_special_block). You
     have full control of the space designate to this block
 -   **CodeWithoutHeader**: this will open a "div" and directly include
     your code inside
@@ -187,7 +195,14 @@ lists.
 ```
 This business map adds two tabs. The first one contains two special code
 blocks which you can see in [this documentation
-page](/en/devel/add_editdetail_block). The second tab contains two
+page](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/add_editdetail_block). The second tab contains two
 related lists and the typical Comments block.
 
 Note that there is no "More Information" tab in this example.
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/import) | Chapter 16: Import.
+
+------------------------------------------------------------------------

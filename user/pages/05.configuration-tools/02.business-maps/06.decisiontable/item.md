@@ -1,5 +1,8 @@
 ---
 title: 'Decision Table Mapping'
+metadata:
+    description: 'This map defines a set of rules that must be evaluated to make a decision.'
+    author: 'Joe Bordes'
 content:
     items:
         - '@self.children'
@@ -9,10 +12,15 @@ content:
         dir: desc
     pagination: true
     url_taxonomy_filters: true
+taxonomy:
+    category:
+        - adminmanuals
+        - businessmappings
+    tag:
+        - decisiontable
 ---
 
-Decision Table Mapping
-======================
+---
 
 This map defines a set of rules that must be evaluated to make a
 decision.
@@ -40,9 +48,9 @@ be of three types:
 
 -   Expressions
 -   [Condition
-    Expression](/en/adminmanual/businessmappings/condition_expression)
+    Expression](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/condition-expression)
     or [Condition
-    Query](/en/adminmanual/businessmappings/condition_query) business
+    Query](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/condition-query) business
     map names/IDs
 -   Decision Tables
 
@@ -56,7 +64,7 @@ but written directly inside this business map.
 
 <div class="notices blue">
 Since an expression can return any type of value, in order to know if an expression has failed it must
-return the reserved string __DoesNotPass__
+return the reserved string <strong>__DoesNotPass__</strong>
 </div>
 
 Business Map Name/ID
@@ -70,7 +78,7 @@ Decision Map
 
 <div class="notices blue">
 Since an expression can return any type of value, in order to know if an expression has failed it must
-return the reserved string __DoesNotPass__
+return the reserved string <strong>__DoesNotPass__</strong>
 </div>
 
 Decision Tables
@@ -132,7 +140,7 @@ Full Map Structure
 
 <div class="notices blue">
 To make this type of map easier to construct when we have a large number of input variables, the input
-variables accept the special value __IGNORE__. When an input variable is set to this value the whole search on that column will be ignored. This permits us to establish rules that are more generic
+variables accept the special value <strong>__IGNORE__</strong>. When an input variable is set to this value the whole search on that column will be ignored. This permits us to establish rules that are more generic
 reducing the repetition of very similar rules. 
 </div>
 
@@ -165,7 +173,7 @@ Hit Policy
         satisfied rules.
 
 [Read the DMN Hit Policy
-reference](https://docs.camunda.org/manual/latest/reference/dmn11/decision-table/hit-policy/)
+reference](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebos_rules)
 
 Output Options
 --------------
@@ -193,7 +201,7 @@ Web service execution
 ---------------------
 
 You can evaluate Decision Maps via the web service endpoint: **cbRule**
-
+```php
     $context = array(
         'guestcount' => '4',
         'season' => 'Winter',
@@ -222,14 +230,14 @@ You can evaluate Decision Maps via the web service endpoint: **cbRule**
     } else {
         echo $jsonResponse['result'];
     }
-
+```
 Examples
 ========
 
 Select Dish with Expressions
 ----------------------------
+![](dish-feel.png?width=100%)
 
-<img src="/en/adminmanual/businessmappings/dish-feel.png" class="align-center" />
 ```xml
     <decision>
     <hitPolicy>U</hitPolicy>
@@ -270,7 +278,7 @@ Select Dish with Expressions
 Select Dish with Module
 -----------------------
 
-<img src="/en/adminmanual/businessmappings/dish-feel.png" class="align-center" />
+![](tag_task.png?width=100%)
 
 Let's suppose we have a module called DecisionConditions with these
 fields:
@@ -283,7 +291,7 @@ fields:
 
 and these records
 
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>sequence</th>
@@ -352,7 +360,7 @@ and these records
 </tr>
 </tbody>
 </table>
-
+<br>
 ```xml
     <decision>
     <hitPolicy>U</hitPolicy>
@@ -405,8 +413,7 @@ with these fields:
 -   desireddish
 
 these records
-
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>sequence</th>
@@ -525,7 +532,7 @@ We can also use this special reserved word in the rules table itself to
 create rules which cover many cases. For example, we could have a table
 of rules like this:
 
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>input1</th>
@@ -557,7 +564,7 @@ matter what value is passed in as input1. Note that this can easily
 cause that more than one rule to pass. If we add a rule to the table
 above, like this:
 
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>input1</th>
@@ -637,7 +644,7 @@ of how many guests there are I want the desired dish to be Beef*.
 
 That would be a record like this in the decision table module.
 
-<table>
+<table class="table table-striped">
 <thead>
 <tr class="header">
 <th>sequence</th>
@@ -872,3 +879,10 @@ enough for you to get an idea of how this map works.
     </rules>
     </decision>
 ```
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/webservicecall) | Chapter 21: REST/SOAP call and retrieval.
+
+------------------------------------------------------------------------

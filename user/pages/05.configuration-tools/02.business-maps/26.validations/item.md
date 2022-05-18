@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - validations
 ---
-
+---
 ## Validation Business Mapping
 
 This type of map will permit you to add different types of validations
@@ -537,3 +537,10 @@ function validate_testacccemail($field) {
   </fields>
 </map>
 ```
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/relatedpanes) | Chapter 15: Related Panes.
+
+------------------------------------------------------------------------

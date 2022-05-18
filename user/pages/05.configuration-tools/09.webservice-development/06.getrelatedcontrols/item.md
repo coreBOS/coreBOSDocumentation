@@ -1,11 +1,29 @@
 ---
 title: 'Web service get Related Records method'
+metadata:
+    description: 'This workflow task permits you to add or delete tags on the object being saved.'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        - webservice
+    tag:
+        - relatedrecords
+        
 ---
 
-Web service get Related Records method
-======================================
+---
+[plugin:youtube](https://youtu.be/5B0A6IPMnJM)
 
-![](youtube>5B0A6IPMnJM)  
 The **getRelatedRecords()** web service interface function permits us to
 retrieve the set of related records that belong to any given record. In
 other words, given an entity ID that represents one record in the
@@ -209,32 +227,30 @@ tasks related to an account going through the Projects related to the
 account. For this sort of question, we construct upon the
 getRelatedRecords method to create getRelatedRecordsThroughModule.
 
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>Returns a list of Object records related to the given record passing through another related module.</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Returns a list of Object records related to the given record passing through another related module.</th>
+</tr>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>getRelatedRecordsThroughModule(id:string, module:string, relatedModule:string, bridgeModule:string, queryParameters:Map):Map</td>
 </tr>
-<tr class="even">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</strong></td>
 <td>POST</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</strong></td>
 <td>=&gt; id: web service ID of the main record<br />
 =&gt; module: module of the record in ID<br />
 =&gt; relatedModule:string: second level related module name we want to get the records from<br />
 =&gt; direct related module name that connects the ID with the related module<br />
 =&gt; queryParameters: additional parameters supported by the getRelatedRecords method</td>
 </tr>
-<tr class="even">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</strong></td>
 <td>list of related module records related to the ID record</td>
 </tr>
 </tbody>
@@ -261,10 +277,13 @@ In general, this approaches permits the function to support any
 relationship established using the related list vtlib, which makes it
 very powerful and flexible.
 
+
+<br>
 ------------------------------------------------------------------------
 
-&lt;WRAP right&gt; [Next: Convert Lead
-Webservice](/en/devel/corebosws/convertleadwebservice) | [Table of
-Contents](/en/devel/corebosws/tableofcontents) &lt;/WRAP&gt;
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/convertleadwebservice)| Chapter 12: Convert Lead Webservice.
 
 ------------------------------------------------------------------------
+
+
+

@@ -1,9 +1,26 @@
 ---
 title: 'Web service libraries'
+metadata:
+    description: 'Abstraction library that hides the details of connection and low-level conversation going on and permits us to create applications faster.'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        - webservice
+    tag:
+        - library
 ---
 
-Web service libraries
----------------------
+---
 
 In order to make programming with the web service API easier, we have
 created an abstraction library that hides the details of connection and
@@ -35,41 +52,40 @@ of each library there will be more or less.
 One very important function is **doInvoke** which permits us to execute
 any web service method.
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th>doInvoke</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
-<td>Execute any web service method.</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>doInvoke</th>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Execute any web service method.</th>
+</tr>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>doInvoke(method:string, parameters:array, type:string):array</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Send Type:</strong></td>
+<td>GET</td>
+</tr>
+<tr>
+<td><strong>Parameters:</strong></td>
 <td>=&gt; method: name of the method to execute<br />
 =&gt; parameters: array with the parameter needed by the method<br />
 =&gt; type: GET or POST</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Response:</td>
 <td>the response of the method called</td>
 </tr>
 </tbody>
 </table>
 
+
+
 [You can find the libraries
 here.](https://github.com/tsolucio/coreBOSwsLibrary)
 
-------------------------------------------------------------------------
 
-&lt;WRAP right&gt; [Table of
-Contents](/en/devel/corebosws/tableofcontents) &lt;/WRAP&gt;
-
-------------------------------------------------------------------------

@@ -1,5 +1,8 @@
 ---
 title: 'Making of the Generic Master-Detail Editor'
+metadata:
+    description: 'Access any saved menu structure using this business map.'
+    author: 'Joe Bordes'
 content:
     items:
         - '@self.children'
@@ -9,10 +12,15 @@ content:
         dir: desc
     pagination: true
     url_taxonomy_filters: true
+taxonomy:
+    category:
+        - businessmappings
+        - adminmanual
+    tag:
+        - editor
 ---
 
-Making of the Generic Master-Detail Editor
-==========================================
+---
 
 Some years ago we created a master-detail business map for coreBOS, but
 it was mainly for use in external applications. It could be used to
@@ -45,9 +53,8 @@ some more buttons and other elements. To such an extent that it looks
 really curious inside a div element.
 
 The parameters is **Module\_Popup\_Edit=1**
-```
-<img src="/en/adminmanual/businessmappings/detailviewinsidediv.png" class="align-center" alt="Detail View Inside DIV" />
-```
+![](detailviewinsidediv.png?width=100%)
+
 The instruction to load that div looks like this
 ```
     masterdetailwork.MDView('mdgridprojectprojecttask', 'ProjectTask', 44570);
@@ -86,7 +93,7 @@ Developer block
 Finally, we enhanced the business map with some other features and
 implemented the native master-detail functionality which you can learn
 about [reading the official
-documentation](/en/adminmanual/businessmappings/masterdetailmapping) and
+documentation](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/masterdetailmapping) and
 watching the video presentation
 
 <iframe width="542" height="261" src="https://www.youtube.com/embed/pb05jH-HeBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

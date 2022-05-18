@@ -1,5 +1,8 @@
 ---
 title: 'Field Set Mapping'
+metadata:
+    description: 'This map defines a heterogeneous set of fields that belong to some modules.'
+    author: 'Joe Bordes'
 content:
     items:
         - '@self.children'
@@ -9,10 +12,14 @@ content:
         dir: desc
     pagination: true
     url_taxonomy_filters: true
+taxonomy:
+    category:
+        - adminmanuals
+        - businessmappings
+    tag:
+        - fieldset
 ---
-
-Field Set Mapping
-=================
+---
 
 The purpose of this mapping is to define a heterogeneous set of fields
 that belong to some modules. Simply a bunch of fields. This could be
@@ -38,3 +45,11 @@ The accepted format is:
 You will be able to get the set of fields using the getFieldSet()
 method, and the fields on one module with the getFieldSetModule($module)
 method.
+
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/masterdetailmapping) | Chapter 10: Master Detail Mapping.
+
+------------------------------------------------------------------------

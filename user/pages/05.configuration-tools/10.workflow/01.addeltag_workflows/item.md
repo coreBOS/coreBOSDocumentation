@@ -20,7 +20,7 @@ taxonomy:
         - add
         - delete
         - workflow
-        -
+        
 ---
 
 
@@ -43,3 +43,11 @@ The workflow task in itself is simple; you select:
 
 
 ![](tag_task.png?width=100%)
+
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/relateproductservice_workflows) | Chapter 7: Related Product/Service Workflow Task.
+
+------------------------------------------------------------------------

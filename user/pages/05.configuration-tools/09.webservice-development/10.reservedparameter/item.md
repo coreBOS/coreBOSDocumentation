@@ -1,10 +1,25 @@
 ---
 title: 'Webservice format and reserved parameter'
+metadata:
+    description: 'Webservice format and reserved parameter'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        - webservice
+    tag:
+        - reserved parameter
 ---
-
-Webservice format and reserved parameter
-----------------------------------------
-
+---
 The web service API returns responses in JSON format. This format can be
 changed on a per-call basis. To accomplish this we would need to
 implement the code to support the desired format [like this code which
@@ -15,6 +30,15 @@ formats](https://github.com/tsolucio/corebos/blob/master/include/Webservices/Ope
 and then indicate the format using the special reserved parameter
 **format** in the GET/POST call.
 
-&lt;WRAP center round important 80%&gt; Note that this implies that NO
+<div class="notices red"> Note that this implies that NO
 web service end point may use a parameter named **format** as this
-parameter is used for this sole purpose. &lt;/WRAP&gt;
+parameter is used for this sole purpose. </div>
+
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/faq)| Chapter 19: Frequently Asked Questions.
+
+
+------------------------------------------------------------------------

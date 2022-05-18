@@ -38,3 +38,10 @@ As can be seen in the screen shots above, this workflow permits us to select whi
 -   **Relate with Contact**: if it should relate the element(s) selected above to the Contact
 
 This was implemented in issue  ~*issue:191*
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/invokecustomfunction_workflows) | Chapter 8:Invoke Custom Functions Workflow Tasks.
+
+------------------------------------------------------------------------

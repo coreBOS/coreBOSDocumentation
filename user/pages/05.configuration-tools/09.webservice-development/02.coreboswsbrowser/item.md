@@ -1,13 +1,30 @@
 ---
 title: 'coreBOS Web Service Developer Tool'
+metadata:
+    description: 'Installation and usage'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        - webservice
+    tag:
+        - tool
+        
 ---
+---
+### Announcement video
 
-coreBOS Web Service Developer Tool
-==================================
 
-Announcement video
-
-![](youtube>PWY9tRcES9o)
+[plugin:youtube](https://www.youtube.com/watch?v=PWY9tRcES9o)
 
 Installation
 ------------
@@ -60,3 +77,12 @@ functions you have access to in your scripts:
 
 Just copy the script into the **testcode** directory and it will be
 detected automatically.
+
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/coreboswswebform)| Chapter 16: coreBOS Webservice Webform.
+
+
+------------------------------------------------------------------------

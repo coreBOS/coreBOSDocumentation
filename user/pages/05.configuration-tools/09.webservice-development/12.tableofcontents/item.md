@@ -1,35 +1,44 @@
 ---
 title: 'Web service documentation: Table of Contents'
+metadata:
+    description: 'Webservice general'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        - webservice
+    tag:
+        - webservice
 ---
+---
+-   [Introduction](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/intro)
+-   [Operations](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/ops)
+    -   [Login to webservice](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/login)
+    -   [Query language](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/querylanguage)
+    -   [Method Reference](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference)
+    -   [Working with Documents and Images](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/docenhance)
+    -   [GenDoc and PDF output](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/getpdfdata)
+    -   [Workflows, Rules, Questions and Actions](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/wfrlqsat)
+    -   [Global Search](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/globalsearch)
+    -   [Autocomplete](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/autocomplete)
+    -   [get Related Records method](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/getrelatedcontrols)
+    -   [Convert Lead Webservice](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/convertleadwebservice)
+    -   [Portal user login](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/portallogin)
+    -   [Extend Session and Logout](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/session)
+    -   [coreBOS Web Service Developer Tool](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/coreboswsbrowser)
+    -   [Skip convert fields](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/skipconvertfields)
+    -   [Format and reserved parameter](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/reservedparameter)
+    -   [Frequently Asked Questions](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/faq)
+-   [Add web service end points](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/addws)
+-   [Client Libraries](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/libraries)
 
-Web service documentation: Table of Contents
---------------------------------------------
 
--   [Introduction](/en/devel/corebosws/manual/intro)
--   [Operations](/en/devel/corebosws/manual/ops)
-    -   [Login to webservice](/en/devel/corebosws/login)
-    -   [Query language](/en/devel/corebosws/querylanguage)
-    -   [Method Reference](/en/devel/corebosws/methodreference)
-    -   [Working with Documents and
-        Images](/en/devel/corebosws/docenhance_examples)
-    -   [GenDoc and PDF output](/en/devel/corebosws/getpdfdata)
-    -   [Workflows, Rules, Questions and
-        Actions](/en/devel/corebosws/manual/wfrlqsat)
-    -   [Global Search](/en/devel/corebosws/manual/globalsearch)
-    -   [Autocomplete](/en/devel/corebosws/manual/autocomplete)
-    -   [get Related Records
-        method](/en/devel/corebosws/getrelatedrecords)
-    -   [Convert Lead
-        Webservice](/en/devel/corebosws/convertleadwebservice)
-    -   [Portal user login](/en/devel/corebosws/manual/portallogin)
-    -   [Extend Session and Logout](/en/devel/corebosws/manual/session)
--   [Add web service end points](/en/devel/corebosws/manual/addws)
--   [Client Libraries](/en/devel/corebosws/manual/libraries)
-
-------------------------------------------------------------------------
-
-&lt;WRAP right&gt; [Next:
-Introduction](/en/devel/corebosws/manual/intro) | Table of Contents
-&lt;/WRAP&gt;
-
-------------------------------------------------------------------------

@@ -1,9 +1,26 @@
 ---
 title: 'How to specify the format of your fields when sending in through web service'
----
+metadata:
+    description: 'How to specify the format of your fields when sending in through web service'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        - webservice
+    tag:
+        - howto
 
-How to specify the format of your fields when sending in through web service
-============================================================================
+---
+---
 
 In the default behaviour, a web service call to either **revise** or
 **update** will demand you to make sure all fields are sent to coreBOS
@@ -49,7 +66,7 @@ and number fields in the format he specified in his user preferences.
 But, **since 26-07-2018**, he could also do something else. He could add
 a special flag (or multiple) to his data, that tells coreBOS what to
 expect. Say John is updating a Potential with this data:
-
+```php
     $input_array =  array (
             'amount' => '1234.56',
             'probability' => '5.00',
@@ -59,9 +76,11 @@ expect. Say John is updating a Potential with this data:
     $moduleName = 'Potentials';
 
     $update = $cbconn->doRevise($moduleName, $input_array);
+    ```
 
 Normally, this would go horribly wrong. But if he were to update the
 input array with some special fields, it wouldn’t:
+```php
 
     $input_array =  array (
             'amount' => '1234.56',
@@ -70,6 +89,7 @@ input array with some special fields, it wouldn’t:
             '__cbws_skipcurdbconvamount' => 1,
             '__cbws_skipcurdbconvprobability' => 1,
     );
+```   
 
 If he were to add the two fields with the name-prefix
 **\_\_cbws\_skipcurdbconv** followed by the fieldname that he wants to
@@ -105,12 +125,24 @@ sales order including the inventory lines) in database-format, you would
 have to set both **\_\_cbws\_skipcurdbconv\_pdo** and
 **\_\_cbws\_skipcurdbconvall** to your record.
 
-&lt;WRAP center round info 80%&gt; **A note:** Do not mistake inventory
+<div class="notices blue"> 
+<strong>A note:</strong> Do not mistake inventory
 lines with the InventoryDetails modules. InventoryDetails is a modern
 module that does treat all of its numbers as fields. Setting the
-**\_\_cbws\_skipcurdbconv\_pdo** flag there or on a sales order (for
+<strong>__cbws_skipcurdbconv_pdo</strong> flag there or on a sales order (for
 instance) that does not use the ‘old’ inventory lines mechanism would
-not do anything. &lt;/WRAP&gt;
+not do anything. </div>
+<br>
+<br>
+<div class="notices blue"> 
+Thanks [Guido
+Goluke](https://github.com/Luke1982)!! </div>
 
-&lt;WRAP center round box 60%&gt; Thanks [Guido
-Goluke](https://github.com/Luke1982)!! &lt;/WRAP&gt;
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/reservedparameter)| Chapter 18: Format and reserved parameter.
+
+
+------------------------------------------------------------------------

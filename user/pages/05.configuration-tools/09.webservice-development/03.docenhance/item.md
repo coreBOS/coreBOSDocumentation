@@ -1,42 +1,54 @@
 ---
 title: 'Webservice: Working with Documents and Images'
+metadata:
+    description: 'Installation and usage'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        - webservice
+    tag:
+        - tool
+---
 ---
 
-Webservice: Working with Documents and Images
-=============================================
+## Create, Update and Retrieve Documents
+The purpose of these enhancements are to permit uploading files when we create/update documents through the web service interface. This extension also adds functionality that permits establishing relationships with other entities to the document we are creating.
 
-Create, Update and Retrieve Documents
--------------------------------------
-
-The purpose of these enhancements are to permit uploading files when we
-create/update documents through the web service interface. This
-extension also adds functionality that permits establishing
-relationships with other entities to the document we are creating.
-
-Calls to REST methods of Create, Retrieve and Update maintain their
-profile and keep working as before. This extension adds to these calls a
-set of special fields that will be acknowledged by the enhancements.
+Calls to REST methods of Create, Retrieve and Update maintain their profile and keep working as before. This extension adds to these calls a set of special fields that will be acknowledged by the enhancements.
 
 The special fields are:
 
-<table>
-<thead>
-<tr class="header">
-<th>relations</th>
-<th>a comma separated list of webservice identifiers.</th>
-</tr>
-</thead>
+
+
+
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>filename</td>
-<td><code>array with these fields:
-  name: string, name of the file to upload,
-  size: file size
-  type: file type
-  content: base64_encode(file)</code></td>
+<tr>
+<td><strong>relations</strong></td>
+<td>a comma separated list of webservice identifiers.</td>
+</tr>
+<tr>
+<td><strong>filename</strong></td>
+<td>array with these fields:<br>
+  name: string, name of the file to upload,<br>
+  size: file size<br>
+  type: file type<br>
+  content: base64_encode(file)</td>
 </tr>
 </tbody>
 </table>
+  
+
 
 With the virtual field **relations** we can establish relationships
 between the document and any other record. For example, we can upload a
@@ -67,14 +79,14 @@ This functionality is especially useful for e-commerce sites.
 This virtual field is also added to the query language when it is
 possible.
 
-&lt;WRAP center round info 60%&gt;the **\_downloadurl** virtual field
-will only be present in documents with a file location type of
-Internal&lt;/WRAP&gt;
+<div class="notices blue">
+the <strong>_downloadurl</strong> virtual field will only be present in documents with a file location type of Internal
+</div>
 
 Next, you can find some examples.
 
 ### Create
-
+```php
     <?php
     include_once('cbwsclib/WSClient.php');
     require_once 'debugoutput.php';
@@ -125,15 +137,15 @@ Next, you can find some examples.
     $id = $response['id'];
     var_dump($response);
     ?>
-
-\*\* RESULT OF THE CALL \*\*
+```
+### *RESULT OF THE CALL 
 
 There is no visual difference from a normal call, the difference is in
 the input parameters to the call and the changes that occur in the
 application.
 
 ### Update
-
+```php
     <?php
     include_once('cbwsclib/WSClient.php');
     require_once 'debugoutput.php';
@@ -182,15 +194,15 @@ application.
     $id = $response['id'];
     var_dump($response);
     ?>
-
-\*\* RESULT OF THE CALL \*\*
+```
+### *RESULT OF THE CALL 
 
 There is no visual difference from a normal update call, the difference
 is in the input parameters to the call and the changes that occur in the
 application.
 
 ### Retrieve
-
+```php
     <?php
     require 'dologin.php';
 
@@ -216,9 +228,9 @@ application.
     $retrievedObject = $jsonResponse['result'];
     var_dump($retrievedObject);
     ?>
-
-\*\* RESULT OF THE CALL \*\*
-
+```
+### *RESULT OF THE CALL 
+```php
     Webservice response Retrieve
 
     array
@@ -243,7 +255,7 @@ application.
             array
               0 => string '9x66873' (length=7)   !!! related to record 66873 of the entity 9 !!!
           '_downloadurl' => string 'http://localhost/coreBOSwork/storage/2014/August/week2/134063_1.jpg' (length=64)
-
+```
 ### Retrieve Attachment
 
 This new REST method returns the base64 encoded file attached to the
@@ -257,16 +269,15 @@ The **profile** of the method is
 
     retrievedocattachment(id:Id,returnfile:boolean):Map
 
-<table>
-<thead>
-<tr class="header">
-<th>id</th>
-<th>a comma-separated list of document identifiers of which we want to get the attachments</th>
-</tr>
-</thead>
+
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>returnfile</td>
+<tr>
+<td><strong>id</strong></td>
+<td>a comma separated list of webservice identifiers.</td>
+</tr>
+<tr>
+<td><strong>returnfile</strong></td>
 <td>1 if we want the whole file, 0 if we just want the attachment information</td>
 </tr>
 </tbody>
@@ -275,20 +286,19 @@ The **profile** of the method is
 The **response** is an object with the fields of the attachment. For
 each given identifier we will get an array with this structure:
 
-<table>
-<thead>
-<tr class="header">
-<th>filename</th>
-<th><code>is an array with the fields:
-  name: string, name of the file to upload,
-  size: file size
-  type: file type
-  attachment: base64_encode(file)</code></th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
+<tr>
+<td><strong>filename</strong></td>
+<td>is an array with the fields:<br>
+  name: string, name of the file to upload,<br>
+  size: file size<br>
+  type: file type<br>
+  content: base64_encode(file)</td>
+</tr>
 </tbody>
 </table>
+
 
 If the parameter **returnfile** is 0, the field **content** will be
 empty (no file sent, reducing bandwidth usage and time)
@@ -296,8 +306,8 @@ empty (no file sent, reducing bandwidth usage and time)
 Find next an example code of a call to this method followed by the
 resulting output.
 
-\*\* Example Code of Call\*\*
-
+### *Example Code of Call
+```php
     <?php
     require 'dologin.php';
 
@@ -347,9 +357,9 @@ resulting output.
     echo base64_decode($jsonResponse['result']['0']['attachment']);
     exit;
     ?>
-
-\*\* RESULT OF THE CALL \*\*
-
+```
+### *RESULT OF THE CALL 
+```php
     Raw response (json) RetrieveDocAttachment
 
     array
@@ -381,8 +391,8 @@ resulting output.
               'filename' => string 'restconfig.sql' (length=14)
               'filesize' => int 922
               'attachment' => string 'LS0KLS0gUmV0cmVpdmUgRG9jdW1lbnQgYW5kIENoYW5nZSBEb2N1bWVudCBjbGFzcwotLQp1cGRhdGUgdnRpZ2VyX3dzX29wZXJhdGlvbl9zZXEgc2V0IGlkPWlkKzE7CklOU0VSVCBJTlRPIGB2dGlnZXJfd3Nfb3BlcmF0aW9uYCAoCmBvcGVyYXRpb25pZGAsCmBuYW1lYCAsCmBoYW5kbGVyX3BhdGhgICwKYGhhbmRsZXJfbWV0aG9kYCAsCmB0eXBlYCAsCmBwcmVsb2dpbmAKKQpWQUxVRVMgKAooc2VsZWN0IG1heChpZCkgZnJvbSB2dGlnZXJfd3Nfb3BlcmF0aW9uX3NlcSksJ3JldHJpZXZlZG9jYXR0YWNobWVudCcsICdpbmNsdWRlL1dlYnNlcnZpY2VzL1JldHJpZXZlRG9jQXR0YWNobWVudC5waHAnLCAndnR3c19yZXRyaWV2ZWRvY2F0dGFjaG1lbnQnLCAnUE9TVCcsICcw'... (length=1232)
-
-Create, Update and Retrieve Images
+```
+### Create, Update and Retrieve Images
 ----------------------------------
 
 Following a similar approach as the **filename** virtual field added for
@@ -396,7 +406,7 @@ Create, Update and Revise operations.
 Let's suppose that you have two image fields on a module named cf\_998
 and cf\_999. You can upload files to these two fields with an array like
 this:
-
+```php
     $recordInfo = array(
         ...other fields in the record...
         'cf_998' => 'barcode',
@@ -417,7 +427,7 @@ this:
         ),
         ...other fields in the record...
     );
-
+```
 A normal Retrieve call on a record with images will return the
 information of the file; the name, the location on disk (URL), and some
 other metadata in a virtual field with the same name of the field
@@ -429,44 +439,42 @@ of the image attachments associated with a record, which can then be
 used with the build/HelperScripts/getImageData.php script to obtain the
 image data itself.
 
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th><strong>getRecordImages</strong></th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>getRecordImages</td>
+</tr>
+<tr>
+<td><strong>Purpose:</strong></td>
 <td>Returns an array of file information for each image field of a module.</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>getRecordImages(id:string):Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</strong></td>
 <td>GET</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
-<td>=&gt; id: web service id of the record with image fields we want to get.</td>
+<tr>
+<td><strong>Parameters:</strong></td>
+<td>=&gt;00id: web service id of the record with image fields we want to get.</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</strong></td>
 <td>an array with: name, path, URL, type, internal ID, for each file in the record</td>
 </tr>
 </tbody>
 </table>
 
-Examples:
+**Examples:**
 
 -   [Create with
     Image](https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/438_createWithImage.php)
 -   [Update with
     Image](https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/438_updateWithImage.php)
--   [How to update an image field from code](/en/devel/updateimagefield)
+-   [How to update an image field from code](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/updateimagefield)
 
 ### Product Multi-Image field
 
@@ -480,43 +488,40 @@ the same image.
 
 You can use the **addProductImages** method to insert images in this
 field.
-
-<table>
-<thead>
-<tr class="header">
-<th>Method:</th>
-<th><strong>addProductImages</strong></th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Purpose:</td>
+<tr>
+<td><strong>Method:</strong></td>
+<td>addProductImages</td>
+</tr>
+<tr>
+<td><strong>Purpose:</strong></td>
 <td>Inserts a set of images into the Product multi-image field</td>
 </tr>
-<tr class="even">
-<td>Profile:</td>
+<tr>
+<td><strong>Profile:</strong></td>
 <td>addProductImages(id:string, files:Map):Map</td>
 </tr>
-<tr class="odd">
-<td>Send as:</td>
+<tr>
+<td><strong>Send as:</strong></td>
 <td>POST</td>
 </tr>
-<tr class="even">
-<td>Parameters:</td>
-<td>=&gt; id: web service ID of the product record to upload the images to<br />
+<tr>
+<td><strong>Parameters:</strong></td>
+<td> =&gt; id: web service ID of the product record to upload the images to<br />
 =&gt; files: an array of images to upload, each array entry must contain two fields: name and content (base64 encoded)</td>
 </tr>
-<tr class="odd">
-<td>Response:</td>
+<tr>
+<td><strong>Response:</strong></td>
 <td>an array with information of the executed operations</td>
 </tr>
 </tbody>
 </table>
 
+
+<br>
 ------------------------------------------------------------------------
 
-&lt;WRAP right&gt; [Next: GenDoc and PDF
-output](/en/devel/corebosws/getpdfdata) | [Table of
-Contents](/en/devel/corebosws/tableofcontents) &lt;/WRAP&gt;
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/getpdfdata)| Chapter 7: GenDoc and PDF output.
 
 ------------------------------------------------------------------------

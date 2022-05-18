@@ -235,3 +235,11 @@ In this example, we will configure a workflow to send an email to Assigned to us
 ![](thirdpicture_ex3.png?width=100%)
 
 9. Once you’re done, click Save.
+
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/update_workflows) | Chapter 4: Update Workflow Tasks.
+
+------------------------------------------------------------------------

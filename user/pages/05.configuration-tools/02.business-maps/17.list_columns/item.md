@@ -1,5 +1,8 @@
 ---
 title: 'List Columns'
+metadata:
+    description: 'The purpose of this mapping is to override the predefined columns that appear on the related and popup lists for a module.'
+    author: 'Joe Bordes'
 content:
     items:
         - '@self.children'
@@ -9,10 +12,14 @@ content:
         dir: desc
     pagination: true
     url_taxonomy_filters: true
+taxonomy:
+    category:
+        - adminmanuals
+        - businessmappings
+    tag:
+        - listcolumns
 ---
-
-List Columns
-============
+---
 
 The purpose of this mapping is to override the predefined columns that
 appear on the related and popup lists for a module. Each module has two
@@ -89,3 +96,10 @@ If you need to modify the columns
 that appear in the Global Search for the module, create a section where
 parentmodule is set to Utilities.
 </div>
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/record_set) | Chapter 7: Record Set Mapping.
+
+------------------------------------------------------------------------

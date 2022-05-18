@@ -1,39 +1,52 @@
 ---
 title: 'Web Service Query Language'
+metadata:
+    description: 'Basic Query Language'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        - webservice
+    tag:
+        - query
 ---
-
-Web Service Query Language
-==========================
-
+---
 Query
 -----
 
-<table>
-<thead>
-<tr class="header">
-<th>Purpose:</th>
-<th>Retrieve a set of records with an SQL like language that understands the entities in the system and their relations</th>
-</tr>
-</thead>
+<table class="table table-striped">
 <tbody>
-<tr class="odd">
-<td>Profile:</td>
+<tr>
+<td><strong>Purpose:</strong></td>
+<td>Retrieve a set of records with an SQL like language that understands the entities in the system and their relations</td>
+</tr>
+<tr>
+<td><strong>Profile:</td>
 <td>query(<a href="query:String">query:String</a>):Object</td>
 </tr>
-<tr class="even">
-<td>Send Type:</td>
+<tr>
+<td><strong>Send Type:</td>
 <td>GET</td>
 </tr>
-<tr class="odd">
-<td>Parameters:</td>
+<tr>
+<td><strong>Parameters:</td>
 <td>query: query language command terminated in semicolon</td>
 </tr>
-<tr class="even">
-<td>Returns:</td>
+<tr>
+<td><strong>Returns:</td>
 <td>array of rows with the results found. each row will contain the same amount of columns corresponding to the query command executed</td>
 </tr>
-<tr class="odd">
-<td>URL Format:</td>
+<tr>
+<td><strong>URL Format:</td>
 <td><code>http://corebos_url/webservice.php?operation=query&amp;query=[query command]</code></td>
 </tr>
 </tbody>
@@ -93,7 +106,7 @@ The accepted format definition is:
 -   m, n: integer values to specify the offset and limit respectively.
     If only one value is given it is applied as limit
 
-![](/en/devel/corebosws/coreboswebservicequery.png)
+![](coreboswebservicequery.png?width=100%)
 
 Try these VQL commands.
 
@@ -118,7 +131,7 @@ is rather limited as it doesn't support related entities nor parenthesis
 in the conditions.
 
 So we made a first enhancement based on **the
-[getRelatedRecords](/en/devel/corebosws/getrelatedrecords) work**. This
+[getRelatedRecords](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/getrelatedcontrols) work**. This
 second syntax was created before we started the coreBOS project and was
 added as a base feature when it was born. You can read about this second
 syntax below and see it in use in our [Customer Portal
@@ -134,22 +147,22 @@ for each query. This is a bit misleading sometimes.
 
 When a query is sent to the webservice query API it looks for the string
 "related.", if this string is found we apply the [Related Entity Query
-Syntax](/en/devel/corebosws/querylanguage#related_entity_query_syntax),
+Syntax](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/querylanguage#related-entity-query-syntax),
 if the string is not found we look for "not in", "not null", "." or "(".
 None of these strings are supported by the query syntax inherited from
 vtiger CRM so we apply the Extended QueryGenerator syntax. Finally, we
 apply the original VQL syntax.
 
-&lt;WRAP center round important 60%&gt; So, be careful when sending a
+<div class="notices red">
+So, be careful when sending a
 query as it can easily be sent to the syntax parser you don't expect.
-&lt;/WRAP&gt;
-
+</div>
 Let's go over that again.
 
 -   All queries use the list type module name in the FROM and WHERE
     sections
 -   [Related Entity Query
-    Syntax](/en/devel/corebosws/querylanguage#related_entity_query_syntax)
+    Syntax](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/querylanguage#related-entity-query-syntax)
     is based on the getRelatedRecords web service endpoint, so anything
     you can do with the query language can be done with this endpoint.
     The reverse is not true as the getRelatedRecords method has some
@@ -167,6 +180,7 @@ When a query is sent to the web service query API it looks for the
 string "related."
 
 If this string is found we apply the Related Entity Query Syntax.
+```xml
 
     select * from projecttask where related.project=30x144
     select * from projecttask where related.project=30x144 and projecttaskname='dsf'
@@ -180,7 +194,7 @@ If this string is found we apply the Related Entity Query Syntax.
     select * from products where related.contacts=4x22 and productcategory='Software' // only directly related products
     select * from Products where related.Contacts='4x22' LIMIT 5;
     select * from Products where related.Contacts='4x22' order by productname LIMIT 5;
-
+```
 #### 2.- Extended syntax - not related
 
 If the string 'related' is not found we look for "not in", "not null",
@@ -206,8 +220,7 @@ There are no "joins" in WebService Query Language, but coreBOS will do
 them for you. Remember that coreBOS WebService Query Language talks
 about entities, not tables.
 
-We do &lt;wrap lo&gt;select...from accounts&lt;/wrap&gt; not &lt;wrap
-lo&gt;select...from vtiger\_accounts&lt;/wrap&gt;
+We do *select...from accounts* not *select...from vtiger\_accounts*
 
 In this same line, you have to specify fields prefixed by their module
 name and WSQL will do whatever it has to do to get the field from the
@@ -277,7 +290,7 @@ For example, this query:
 
 looks like this:
 
-<img src="/en/devel/corebosws/wsvqlrelfieldreference01.png" class="align-center" />
+![](wsvqlrelfieldreference01.png?width=100%)
 
 but if we add parenthesis and launch the query we get no results
 returned.
@@ -294,7 +307,7 @@ The correct query looks like this:
     from ProjectTask
     where (projectid='Owen' and  modifiedtime>'2015-08-12 10:10:48' and modifiedtime<'2015-09-12 10:10:48')
 
-<img src="/en/devel/corebosws/wsvqlrelfieldreference02.png" class="align-center" />
+![](wsvqlrelfieldreference02.png?width=100%)
 
 Optionally, we can search directly on the project ID with the extended
 QueryGenerator syntax:
@@ -307,7 +320,7 @@ The **second** is that the original query parser will automatically add
 the "limit 100" to the query while the QueryGenerator will not do this.
 
 You can find a whole set of examples in the [coreBOS Web Service
-Developer Tool](/en/devel/corebosws/coreboswsbrowser) and the
+Developer Tool](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/coreboswsbrowser) and the
 [webservice query unit tests
 suite](https://github.com/tsolucio/coreBOSTests/blob/master/include/Webservices/VtigerModuleOperation_QueryTest.php).
 
@@ -336,20 +349,19 @@ Only four records starting from the first
 
 Only four records starting from the third
 
-&lt;WRAP center round info 75%&gt;If you are receiving timeouts you can
-increment the default timeout by modifying the code:
-[PHP](https://github.com/tsolucio/coreBOSwsLibrary/blob/master/php/Net/HTTP_Client.php#L22)  
-[PHP](https://github.com/tsolucio/coreBOSwsLibrary/blob/master/php/Net/HTTP_Client.php#L29)  
-[cURL](https://github.com/tsolucio/coreBOSwsLibrary/blob/master/php/Net/curl_http_client.php#L162)  
-[cURL](https://github.com/tsolucio/coreBOSwsLibrary/blob/master/php/Net/curl_http_client.php#L206)  
-&lt;/WRAP&gt;
+<div class="notices blue">If you are receiving timeouts you can
+increment the default timeout by modifying the code:<br>
+<a href="https://github.com/tsolucio/coreBOSwsLibrary/blob/master/php/Net/HTTP_Client.php#L29">1-PHP</a> <br>
+<a href="https://github.com/tsolucio/coreBOSwsLibrary/blob/master/php/Net/curl_http_client.php#L162">2-cURL</a> <br>
+<a href="https://github.com/tsolucio/coreBOSwsLibrary/blob/master/php/Net/curl_http_client.php#L206">3-cURL</a> <br>
+</div>
 
 Related Entity Query Syntax
 ---------------------------
 
-![](youtube>5B0A6IPMnJM)  
+[plugin:youtube](https://www.youtube.com/watch?v=5B0A6IPMnJM)
 Constructing on top of the
-[getRelatedRecords](/en/devel/corebosws/getrelatedrecords) function we
+[getRelatedRecords](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/getrelatedcontrols) function we
 have extended the REST query syntax to benefit from that functionality,
 making it easy to query related entities and filter them also.
 
@@ -395,9 +407,10 @@ There are a few restrictions we couldn't overcome:
     products.
 -   advanced filtering (limited by current query syntax)
 
-&lt;WRAP center round info 60%&gt; The Webservice extended query
+<div class="notices blue">
+ The Webservice extended query
 language functionality, based on Query GeneratorQuery overcomes some of
-these limitations. &lt;/WRAP&gt;
+these limitations.</div>
 
 Searching for empty relations
 -----------------------------
@@ -442,29 +455,25 @@ service API is rather easy. The main trick to keep in mind is that GET
 requests parameters go in the PARAMS tab and POST requests parameters go
 in the BODY tab.
 
-The [Login is a two-step process](/en/devel/corebosws/login) so we have
+The [Login is a two-step process](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/login) so we have
 to create two requests and manually calculate the access token MD5.
 
 Here you can see the Challenge setup:
-
-<img src="/en/devel/corebosws/postmanchallenge.png" class="align-center" alt="GetChallenge" />
-
-Here you can see the Challenge setup:
-
-<img src="/en/devel/corebosws/postmanlogin.png" class="align-center" alt="Login" />
+![](postmanchallenge.png?width=100%)
 
 Here you can see the Challenge setup:
+![](postmanlogin.png?width=100%)
 
-<img src="/en/devel/corebosws/postmanquery.png" class="align-center" alt="Query" />
+Here you can see the Challenge setup:
+![](postmanquery.png?width=100%)
 
 And here you can see a quick demo of how to do it:
 
-![](youtube>z4UZw0eQ7Kw)
+[plugin:youtube](https://www.youtube.com/watch?v=z4UZw0eQ7Kw)
 
+<br>
 ------------------------------------------------------------------------
 
-&lt;WRAP right&gt; [Next: Method
-Reference](/en/devel/corebosws/methodreference) | [Table of
-Contents](/en/devel/corebosws/tableofcontents) &lt;/WRAP&gt;
+[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference)| Chapter 5:Method Reference.
 
 ------------------------------------------------------------------------

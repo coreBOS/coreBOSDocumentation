@@ -1,5 +1,8 @@
 ---
 title: 'Kanban View Mapping'
+metadata:
+    description: 'This map defines a kanban lane view of the records of a module.'
+    author: 'Joe Bordes'
 content:
     items:
         - '@self.children'
@@ -9,10 +12,14 @@ content:
         dir: desc
     pagination: true
     url_taxonomy_filters: true
+taxonomy:
+    category:
+        - adminmanuals
+        - businessmappings
+    tag:
+        - kanban
 ---
-
-Kanban View Mapping
-===================
+---
 
 The purpose of this mapping is to define a kanban lane view of the
 records of a module. This map is in the "View Business Map" category as
