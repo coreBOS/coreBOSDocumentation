@@ -2,7 +2,7 @@
 title: 'Duplicating Sales Orders'
 metadata:
     description: 'Business Map to Duplicate Sales Orders'
-    author: 'Luke MajorLabel'
+    author: 'MajorLabel'
 content:
     items:
         - '@self.children'
@@ -113,3 +113,10 @@ taxonomy:
 </fields>
 </map>
 ```
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store/businessmap/contacts2accounts/id:37247bed69140cef25a6eeb241753653/store:configuration) | Chapter 2: Contacts2Accounts.
+
+------------------------------------------------------------------------

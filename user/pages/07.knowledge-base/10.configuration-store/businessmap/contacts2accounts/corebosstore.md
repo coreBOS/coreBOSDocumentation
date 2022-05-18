@@ -2,7 +2,7 @@
 title: 'Contacts to Accounts'
 metadata:
     description: 'Business Map to convert Contacts to Accounts'
-    author: 'Joe Bordes'
+    author: 'JPL TSolucio, S.L.'
 content:
     items:
         - '@self.children'
@@ -275,3 +275,61 @@ taxonomy:
 -->
 </map>
 ```
+
+This script will add the “converted from” field present in the mapping and the action link on Contacts.
+
+```php
+<?php
+// Turn on debugging level
+$Vtiger_Utils_Log = true;
+ 
+include_once('vtlib/Vtiger/Module.php');
+ 
+$module = Vtiger_Module::getInstance('Accounts');
+ 
+if($module) {
+    $blockInstance = VTiger_Block::getInstance('LBL_ACCOUNT_INFORMATION',$module);
+ 
+	if($blockInstance) {
+ 
+		$field = new Vtiger_Field();
+		$field->name = 'converted_from';
+		$field->label= 'Converted From';
+		$field->table = $module->basetable;
+		$field->column = 'converted_from';
+		$field->columntype = 'INT(11)';
+		$field->uitype = 10;
+		$field->displaytype = 1;
+		$field->typeofdata = 'I~O';
+		$field->presence = 0;
+		$blockInstance->addField($field);
+		$field->setRelatedModules(Array('Contacts'));
+ 
+		echo "<br><b>Added Field to ".$module->name." module.</b><br>";
+ 
+	} else {
+		echo "<b>Failed to find ".$module->name." block</b><br>";
+	}
+ 
+} else {
+	echo "<b>Failed to find ".$module->name." module.</b><br>";
+}
+ 
+$module = Vtiger_Module::getInstance('Contacts');
+ 
+if($module) {
+ 
+	$module->addLink('DETAILVIEWBASIC','Convert to Account','index.php?module=Accounts&action=EditView&cbfromid=$RECORD$');
+ 
+} else {
+	echo "<b>Failed to find ".$module->name." module.</b><br>";
+}
+?>
+```
+
+<br>
+------------------------------------------------------------------------
+
+[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store/businessmap/helpdesk2salesorder/id:b674416ea34e0a752c6cc88b18de0145/store:configuration) | Chapter 3: HelpDesk2SalesOrder.
+
+------------------------------------------------------------------------
