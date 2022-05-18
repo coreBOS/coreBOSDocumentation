@@ -20,18 +20,18 @@ by administrator from Settings page:
     *Click on Settings Icon next to SMS notifier.
     *Click on the link **Server Configuration**
 
-You can configure SMS Server information by clicking on **Server
-Configuration**.
+You can configure SMS Server information by clicking on **Server Configuration**.
 
-<img src="/en/smsnotifier/SMSServerConfiguration.png" class="align-center" />
+![](smsserverconfiguration.png?width=70%)
 
 Click on the *Add New* button and provide SMS provider information.
 
-<img src="/en/smsnotifier/AddNewAccount.png" class="align-center" />
+![](addnewaccount.png?width=50%)
 
-&lt;WRAP center round info 60%&gt; The login details will be provided by
+<div class="notices blue">
+The login details will be provided by
 your SMS provider. You will have to register and buy login credentials
-from them. &lt;/WRAP&gt;
+from them.</div>
 
 Working
 -------
@@ -42,20 +42,20 @@ To send SMS in bulk, go to the list view of Leads, Contacts, or
 Organizations, Select the desired number of records and click on the
 *Send SMS* button.
 
-<img src="/en/smsnotifier/SendSMS.png" class="align-center" />
+![](sendsms.png?width=70%)
 
 When you click the button it will show all the phone fields available
 for that module. You can select the field to which you want to send the
 SMS and click on the *Select* button.
 
-<img src="/en/smsnotifier/SelectPhoneField.png" class="align-center" />
+![](selectphonefield.png?width=50%)
 
 ### Compose SMS
 
 This will now open a compose window block to type in your message. Click
 on the *Send* button to send the message.
 
-<img src="/en/smsnotifier/composeSMS.png" class="align-center" />
+![](composesms.png?width=70%)
 
 ### SMS Log Details
 
@@ -64,7 +64,7 @@ Notifier* module. The detail view contains the message body and status
 of the message. The *Assigned To* field is the user who has sent the
 SMS.
 
-<img src="/en/smsnotifier/DetailviewSMS.png" class="align-center" />
+![](detailviewsms.png?width=70%)
 
 ### SMS Status
 
@@ -72,7 +72,7 @@ The status of the message can be **Delivered**, **Processing** or
 **Failed**. The status information can be seen, indicated with colors,
 in the detail view of the SMS record.
 
-<img src="/en/smsnotifier/smsstatus.jpeg" class="align-center" />
+![](smsstatus.png?width=100%)
 
 More Information
 ----------------
@@ -93,9 +93,9 @@ Create a Work Flow and save it with the desired conditions. Click on the
 *New Task* button and select SMS Task to automate the process of sending
 SMS.
 
-<img src="/en/smsnotifier/WorkflowSMStask.png" class="align-center" />
+![](workflowsmstask.png?width=70%)
 
-<img src="/en/smsnotifier/SMSSTaskWorkflow.png" class="align-center" />
+![](smsstaskworkflow.png?width=70%)
 
 ### Create SMS Task
 
@@ -104,7 +104,7 @@ Recipients field, select the number of users to whom the message should
 be sent. While composing the message, Select the field values from the
 dropdown to fill the values in the text area below.
 
-<img src="/en/smsnotifier/WorkflowMessage.png" class="align-center" />
+![](workflowmessage.png?width=70%)
 
 Test Provider
 -------------
@@ -121,14 +121,22 @@ If you have planning to use SMS service provider and don't find the
 connector to it, you will need to write one.
 
 SMSNotifier module defines ISMSProvider
-`modules/SMSNotifier/ext/ISMSProvider.php` interface which should be
+
+```php
+modules/SMSNotifier/ext/ISMSProvider.php
+``` 
+interface which should be
 implemented by your custom provider.
 
 A template sample provide is available at:
-`modules/SMSNotifier/ext/providers/MyProvider.php.sample`
+```php
+modules/SMSNotifier/ext/providers/MyProvider.php.sample
+```
 
 Also look at ClickATell and other provider implementations:
-`modules/SMSNotifier/ext/providers/ClickATell.php`
+```php
+modules/SMSNotifier/ext/providers/ClickATell.php
+```
 
 ### Currently supported Providers
 
