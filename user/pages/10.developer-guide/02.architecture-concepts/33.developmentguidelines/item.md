@@ -1,9 +1,25 @@
 ---
 title: 'Development Guidelines we try to adhere to'
+metadata:
+    description: 'On this page you will find a set of code rules and general development workflow we try to impose in the coreBOS project.'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        - contribute
+    tag:
+        - guidelines
 ---
 
-Development Guidelines we try to adhere to
-==========================================
 
 On this page you will find a set of code rules and general development
 workflow we try to impose in the coreBOS project. I strongly recommend
@@ -18,15 +34,15 @@ RECTIFIED](https://github.com/php-fig-rectified/fig-rectified-standards),
 some minor adjustments to the reality of our code base. So anything you
 read there is useful.
 
-&lt;WRAP center round info 60%&gt; I am open to suggestions and comments
+<div class="notices blue"> 
+I am open to suggestions and comments
 and I know this is a living document that may change as we go forward,
-so don't hesitate to contact me. &lt;/WRAP&gt;
+so don't hesitate to contact me. </div>
 
 Where developers dwell
 ----------------------
 
-The best place to contact the developer community is [on our gitter chat
-group](https://gitter.im/corebos/discuss).
+The best place to contact the developer community is [on our gitter chat group](https://gitter.im/corebos/discuss).
 
 The [blog](https://blog.corebos.org) is mostly developer oriented and
 there is a lot of information here on the documentation site.
@@ -39,16 +55,13 @@ How to Contribute
 -----------------
 
 The project lives on github and we recommend following the typical fork
-and pull request procedure. [Read here for the exact
-steps.](/en/devel/contribute)
+and pull request procedure. [Read here for the exact steps.](http://localhost/coreBOSDocumentation/prologue/documentation)
 
 Bug Reports
 -----------
 
-Use [the github issues
-section](https://github.com/tsolucio/corebos/issues) (prefered) or the
-Mantis bug tracker. [Read here for some additional
-ideas.](/en/devel/bugreport)
+Use [the github issues section](https://github.com/tsolucio/corebos/issues) (prefered) or the
+Mantis bug tracker. [Read here for some additional ideas.](/en/devel/bugreport)
 
 Code Formatting and Structure
 -----------------------------
@@ -88,9 +101,7 @@ right now.
 
 [PSR-2: Coding Style Guide](http://www.php-fig.org/psr/psr-2/)
 
--   Code MUST use 1 tab for indenting, not spaces. [Reasoning behind it
-    and a Spaces-vs-Tabs and Brace-Styles
-    evaluation](https://github.com/php-fig-rectified/fig-rectified-standards/blob/master/Reasoning.md)
+-   Code MUST use 1 tab for indenting, not spaces. [Reasoning behind it and a Spaces-vs-Tabs and Brace-Styles evaluation](https://github.com/php-fig-rectified/fig-rectified-standards/blob/master/Reasoning.md)
 -   There is a recommended hard limit on line length set to 180; the
     soft limit MUST be 170 characters; lines SHOULD be 80 characters or
     less.
@@ -160,20 +171,22 @@ commit](https://github.com/tsolucio/corebos/issues/911#issue-719191770):
     passwords.
 -   Check for debug messages you may have left behind. Before I launch a
     commit I usually execute these commands:
-    `git diff {files} | grep dump
+    ```
+    git diff {files} | grep dump
     git diff {files} | grep fatal
     git diff {files} | grep log
-    `
+    ```
 -   Check for php errors
-    `for f in {diff file list}; do php -l $f; done;`
+    ```
+    for f in {diff file list}; do php -l $f; done;
+    ```
 -   *git status* any new/untracked files to add?
 -   Any strings that should be translated?
 -   If you alter an existing function, did you check if all the existing
     references to that function will still behave the same way?
 -   If you created new code, did you try and use existing functionality
     as much as possible?
--   [code
-    formatting](/en/devel/developmentguidelines#code_formatting_and_validation_tools)
+-   [code formatting](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/developmentguidelines#code-formatting-and-validation-tools)
 -   Ideally you should run a lint process on both PHP and javascript.
     Please look below for the tools we use and how to execute them. I
     will add it to the Pull Request acceptance process at some point.
@@ -185,18 +198,44 @@ commit](https://github.com/tsolucio/corebos/issues/911#issue-719191770):
     modifications that are not related to the requirement I am
     implementing. You can use the "-p" directive to split unrelated
     changes creating concise and cohesive commit changes.
--   dedicate a moment to [think about the commit
-    message](/en/devel/developmentguidelines#commit_guidelines)
+-   dedicate a moment to [think about the commit message](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/developmentguidelines#commit-guidelines)
 -   Any documentation that should be added to the wiki?
 
-![commitguidelines&nofooter&nouser&nodate&noeditbtn](/page>en/devel/commitguidelines&nofooter&nouser&nodate&noeditbtn)
+### Commit Guidelines we try to adhere to
+[AngularJS Git Commit Message Conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/mobilebasic?pli=1)
+```
+<type>(<scope>) <subject>
+```
+another way of reading that is:
+```
+what(where) how
+```
 
+in this second form, the when and who are controlled by git itself, so sign your commits.
+
+Some additional clarifications:
+
+-   Any line of the commit message cannot be longer 100 characters! This allows the message to be easier to read on GitHub as well as in various git tools.
+-   Allowed **< type>**
+     -   **feat**: feature
+     -   **adapt**: this is a feature, but it only affects a particular install, not the whole coreBOS project
+     -   **fix**: bug fix
+     -   **security**
+     -   **i18n**: translation strings and enhancements
+     -   **docs**: documentation
+     -   **style**: formatting, missing semi colons, …
+     -   **refactor**: code refactor
+     -   **test**: when adding missing tests
+     -   **chore**: maintenance tasks
+-   Allowed **< scope>** could be anything specifying place of the commit change. For example a module name, webservice or functional feature
+-   **< subject>** line contains succinct description of the change. Use imperative, present tense: “change” not “changed” nor “changes”.
+     -   If the commit fixes or is related to a ticket put the title or a summary of it, the actual ticket number is rather useless as time has taught me that ticket systems come and go while code and commit messages persist.
 ### Special Committs
 
 #### Service Worker Commit
 
 These are the steps to update the service worker:
-
+```
     fold service-worker.js > sold
     include/sw-precache/regen_swprecache
     fold service-worker.js > snew
@@ -204,6 +243,7 @@ These are the steps to update the service worker:
     # make sure the update is about the files you know have changed
     # the typical error here is for the update to include some javascript or css code you have not committed yet
     rm sold snew
+```
 
 **Always** commit the service worker update in it's own commit. Do not
 mix it with any other changes. This way we can safely ignore all those
@@ -224,27 +264,27 @@ You can find rulesets for the above guidelines in the build/cbSR
 directory.
 
 For example, to validate a PHP file you can execute:
-
+```
     ./phpcs.phar --standard=build/cbSR file_to_validate
-
+```
 You could also execute this command on javascript files, but eslint is
 better:
-
+```
     eslint -c build/cbSR/eslintrc.js file_to_validate
-
-&lt;WRAP center round info 60%&gt; You can use phpcbf and the eslint
---fix to get changes applied automatically &lt;/WRAP&gt;
+```
+<div class="notices blue"> You can use phpcbf and the eslint
+--fix to get changes applied automatically </div>
 
 I actually bundle phpcs and phpmd in one file (checkfile) that I use to
 validate my php files:
-
+```
     echo ======
     echo $1
     echo ======
     phpcs.phar --standard=/var/www/coreBOSwork/build/cbSR $1
     phpmd.phar $1 text unusedcode
     php -l $1
-
+```
 Some important management recommendations
 -----------------------------------------
 
@@ -254,10 +294,8 @@ Some important management recommendations
         installs where it is in production
     -   Since that is a bit difficult what I do is update them when I
         need to install them somewhere
-    -   [Register your module in the extensions
-        section](/en/extensions/extensions) so it can be found in the
-        future. You can [use the helper
-        scripts](/en/devel/helperscripts#composer2readme_and_module2wiki).
+    -   [Register your module in the extensions section](/en/extensions/extensions) so it can be found in the
+        future. You can [use the helper scripts](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/helperscripts#composer2readme-and-module2wiki).
 -   There **MUST NOT** be any unversioned changes in production. This is
     MANDATORY
 -   For EVERY change or customization that you have to do in coreBOS,
@@ -269,9 +307,9 @@ Some important management recommendations
 References and further reading
 ------------------------------
 
--   [Debugging](/en/devel/debuging)
--   [Commit Guidelines we try to adhere to](/en/devel/commitguidelines)
--   [How to Contribute](/en/devel/contribute)
+-   [Debugging](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/debuging)
+-   [Commit Guidelines we try to adhere to](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/commitguidelines)
+-   [How to Contribute](http://localhost/coreBOSDocumentation/prologue/documentation)
 -   [Bug Reports](/en/devel/bugreport)
 -   [PHP Framework Interop Group](http://www.php-fig.org/)
 -   [PHP Framework Interoperability Group -

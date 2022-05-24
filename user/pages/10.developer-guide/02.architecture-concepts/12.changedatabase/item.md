@@ -1,9 +1,25 @@
 ---
 title: 'Steps to take when changing your database'
+metadata:
+    description: 'Steps to take when changing your database'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+    tag:
+        
 ---
 
-Steps to take when changing your database
-=========================================
+
 
 From time to time it happens that you want to change the database you
 are using in your installation. This is a developer situation as it is

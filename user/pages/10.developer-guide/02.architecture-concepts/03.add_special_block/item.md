@@ -71,7 +71,7 @@ by studying that code.&lt;/WRAP&gt;
 &lt;WRAP center round download 60%&gt;![Contact Purchase Order
 Statistics Widget](/devel/adddvw.zip)&lt;/WRAP&gt;
 
-Developer Blocks
+# Developer Blocks
 ================
 
 From the example above you see that it is rather complex to add a new

@@ -1,9 +1,27 @@
 ---
 title: 'Commit Guidelines we try to adhere to'
+metadata:
+    description: 'coreBOS Product/Price Enhancements'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        - contribute
+    tag:
+        - guidelines
+        - format
+---
 ---
 
-Commit Guidelines we try to adhere to
-=====================================
 
 [AngularJS Git Commit Message
 Conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/mobilebasic?pli=1)

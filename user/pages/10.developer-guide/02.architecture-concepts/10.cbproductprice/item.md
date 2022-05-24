@@ -1,15 +1,31 @@
 ---
 title: 'coreBOS Product/Price Enhancements'
+metadata:
+    description: 'coreBOS Product/Price Enhancements'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - google
+        - integration
+    tag:
+        - contacts
 ---
-
-coreBOS Product/Price Enhancements
-==================================
+---
 
 Entity Relation
 ---------------
 
--   <embed src="/en/devel/cbproductpriceer.pdf" class="align-center" />
--   <embed src="/en/devel/cbproductpriceer.odg" class="align-center" />
+-  [Entity Relation Diagram](https://discussions.corebos.org/documentation/lib/exe/fetch.php?media=en:devel:cbproductpriceer.pdf)
+-  [Entity Relation Diagram](cbproductpriceer.odg) 
 
 Services
 --------
@@ -61,8 +77,9 @@ Feature:
 -   **getPriceInformation**
     ($date='\*',$accid=0,$geobid=0,$apply='\*',$currencyid=1,$productcontext=0)
 
-&lt;WRAP center round info 60%&gt; read Sales Product definitions of the
-methods &lt;/WRAP&gt;
+<div class="notices blue">
+read Sales Product definitions of the
+methods</div>
 
 Product Association
 

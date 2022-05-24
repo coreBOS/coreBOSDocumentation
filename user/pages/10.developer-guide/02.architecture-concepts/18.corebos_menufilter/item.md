@@ -1,9 +1,25 @@
 ---
 title: 'How to filter records on a module based on menu parameter'
+metadata:
+    description: 'Filtering modules.'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - adminmanual
+    tag:
+        - filter
+        - howto
 ---
-
-How to filter records on a module based on menu parameter
-=========================================================
+---
 
 Sometimes we put in one module two or more similar concepts; products we
 sell and products we buy, accounts we work with and accounts that are
@@ -36,24 +52,21 @@ all the other accounts.
 
 The condition we are going to add to the query is:
 
-&lt;wrap hi&gt;bill\_country='Australia'&lt;/wrap&gt;
+***bill_country='Australia'***
 
 or
 
-&lt;wrap hi&gt;bill\_country!='Australia'&lt;/wrap&gt;
+***bill_country!='Australia'***
 
 We create two menu URL entries:
 
-<table>
-<thead>
-<tr class="header">
+<table class="table table-striped">
 <th>Accounts from Australia</th>
-<th>index.php?action=index&amp;module=Accounts&amp;filterAustralia=Australia</th>
+<td>index.php?action=index&amp;module=Accounts&amp;filterAustralia=Australia</td>
 </tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td>Accounts not from Australia</td>
+<th>Accounts not from Australia</th>
 <td>index.php?action=index&amp;module=Accounts&amp;filterAustralia=</td>
 </tr>
 </tbody>
@@ -62,13 +75,12 @@ We create two menu URL entries:
 Now we register the event handler and create a script to modify the
 query. The event is:
 
-&lt;wrap
-hi&gt;[corebos.filter.listview.querygenerator.before](/en/devel/corebos_hooks#corebosfilterlistviewquerygeneratorbefore)&lt;/wrap&gt;
+[corebos.filter.listview.querygenerator.before](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebos_hooks#corebos-filter-listview-querygenerator-before)
 
 and our handler script will be **modules/Accounts/FilterAustralia.php**
 
 The code to register the event is
-
+```php
     <?php
     // Turn on debugging level
     $Vtiger_Utils_Log = true;
@@ -87,9 +99,9 @@ The code to register the event is
 
     echo '</body></html>';
     ?>
-
+```
 And the handler looks like this
-
+```php
     class AccountFilterAustraliaHandler extends VTEventHandler {
         private $_moduleCache = array();
 
@@ -117,7 +129,7 @@ And the handler looks like this
             return $parameter;
         }
     }
-
+```
 Notice how we check for the variable coming in on the URL from the menu.
 If you try this at this point you will see that you actually get the
 filtered records when you first access the module from each menu
@@ -130,16 +142,16 @@ variables. Since session variables are per application and available to
 each PHP script always all we need to do is load the filter on to a
 session variable. We do this in **modules/Accounts/ListView.php** and it
 looks like this
-
+```php
     <?php
     if (isset($_REQUEST['filterAustralia'])) {
         coreBOS_Session::set('AccountsFilterAustralia', $_REQUEST['filterAustralia']);
     }
     include_once('modules/Vtiger/ListView.php');
     ?>
-
+```
 With this change our event handler now looks like this
-
+```php
     class AccountFilterAustraliaHandler extends VTEventHandler {
         private $_moduleCache = array();
 
@@ -167,7 +179,7 @@ With this change our event handler now looks like this
             return $parameter;
         }
     }
-
+```
 and we can navigate anywhere we want and even search inside the filtered
 record set with no problem. As soon as we go to the menu and access the
 other category the filter value changes and we see the other set of
@@ -199,7 +211,7 @@ the browser tab identifier and we are done.
 The final version of our modifications looks like this:
 
 **modules/Accounts/FilterAustralia.php**
-
+```php
     class AccountFilterAustraliaHandler extends VTEventHandler {
         private $_moduleCache = array();
 
@@ -227,18 +239,16 @@ The final version of our modifications looks like this:
             return $parameter;
         }
     }
-
+```
 **modules/Accounts/ListView.php**
-
+```php
     <?php
     if (isset($_REQUEST['filterAustralia'])) {
         coreBOS_Session::set('AccountsFilterAustralia'.$_COOKIE['corebos_browsertabID'], $_REQUEST['filterAustralia']);
     }
     include_once('modules/Vtiger/ListView.php');
     ?>
-
+```
 **Enjoy the power of a system that helps you help your users!!**
 
-&lt;WRAP center round info 60%&gt;
-<embed src="/en/devel/filteraustralia.zip" class="align-center" />
-&lt;/WRAP&gt;
+[Download the code.](filteraustralia.zip)
