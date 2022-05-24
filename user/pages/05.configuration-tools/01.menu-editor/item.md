@@ -1,4 +1,40 @@
 ---
 title: 'Menu Editor'
+metadata:
+    description: 'Menu Editor'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - adminmanual
+    tag:
+        - menu
+        - menueditor
 ---
+---
+
+The design of the menu editor is like this:
+
+-   The panel on the right is an action panel, anything you do there will take effect immediately and reflect on the left panel tree.
+-   The tree on the left is so you can see all the elements, even the non-visible ones and order them by drag and drop. Once you have ordered the entries as you need you must click the save button to make those changes permanent.
+-   If you want to add an element but not have it seen by anyone until you have it in place, create it with the “visible” property unchecked and then check it when you are finished placing it.
+
+There are a few hidden features for debugging and fixing:
+
+-   debug mode will show menu entry order. It can be activated by adding this to the URL: **&menudebug=1**
+-   reorder menu action:
+**action=Save&module=evvtMenu&evvtmenudo=fixOrder** will set the an incremental consecutive numbering to all menu entries
+-   Sometimes the left menu tree doesn't load. There is a message that says loading but nothing happens and there is a javascript error in the console. This is a known error that happens rarely but, from time to time, someone runs into this error which is due to some menu entry not having a parent menu. We have not been able to reproduce the error, we just know that, somehow, it is possible to create or move an entry and leave it orphaned, so we have created a utility function to set all orphaned entries to the top level so you can enter and organize as required. If you have this issue execute the next URL:
+
+```
+http://your_server/your_corebos/index.php?action=Save&module=evvtMenu&evvtmenudo=fixOrphaned
+```
 

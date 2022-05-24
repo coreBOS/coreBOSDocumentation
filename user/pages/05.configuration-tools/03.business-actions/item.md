@@ -1,4 +1,202 @@
 ---
 title: 'Business Actions'
+metadata:
+    description: 'Business Actions are things that can happen inside the application. They enhance the vtiger CRM link system and they can affect any part of the application.'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - adminmanual
+        - businessaction
+    tag:
+        - businessaction
 ---
+---
+Business Actions are things that can happen inside the application. They enhance the vtiger CRM link system and they can affect any part of the application.
 
+They are shown/applied depending on the field permission values set on each record which may include conditional business maps.
+
+By default, each action will be applied to all modules. We can make an action apply only on certain modules using the **Only On My Module** checkbox combined with the desired modules being selected in the **Modules** select box.
+
+The permission system will permit us to:
+
+-   mark an action as Active or not
+-   make the action available for all users
+-   if not marked as available for all users, first we will search if the action is assigned to the current user and then if the current user belongs to a role selected on the action
+-   finally, for all actions that apply we check if the action has a business rule. If it does we evaluate the rule which must return “true” for the action to be accepted. This permits us to show actions only when some conditions are met.
+
+They can be retrieved via the **getBusinessActions** web service method.
+
+## Business Action::Launch script
+
+[Developer Blocks](https://discussions.corebos.org/documentation/doku.php?id=en:devel:add_special_block) are a very powerful way of adding custom functionality into coreBOS. With them, we can easily create all sorts of scripts with any functionality we need, but sometimes we just want to launch a script or method and get a result message back on screen. To accomplish this we can create a business action that calls **runBAScript**. This function accepts a URI to call and expects one of three responses:
+
+-   **%%%MSG%%%** followed by a message that will be shown in the inline message box of the application.
+-   **%%%FUNCTION%%%funcname%%%PARAMS%%%onefunctionparameter** which will execute the named function if it exists
+-   anything else will be shown as an alert message box
+
+
+For example, if we create a script named **write2log.php** inside the Accounts module we could create this Business Action:
+
+```
+javascript:runBAScript('index.php?module=Accounts&action=AccountsAjax&file=write2log')
+```
+and write2log.php could be:
+
+```php
+<?php
+require_once 'vtlib/Vtiger/Module.php';
+require_once 'Smarty_setup.php';
+global $log;
+$log->fatal('write '.$_REQUEST['__module'].' - '.$_REQUEST['__crmid']);
+$smarty = new vtigerCRM_Smarty();
+$smarty->assign('ERROR_MESSAGE', 'write '.$_REQUEST['__module'].' - '.$_REQUEST['__crmid']);
+echo '%%%MSG%%%'.$smarty->fetch('applicationmessage.tpl');
+```
+
+As can be seen in the previous script the URI called will always receive two additional parameters:
+
+-   **__module** the current module
+-   **__crmid** the current crmid if it exists (detail view)
+
+The exact same idea is supported on the ListView using the **runBAScriptFromListView** function. This function will permit us to add a button on the list view that calls this function. The function will do the typical boilerplate of checking that at least one element is selected in the list and asking for confirmation to proceed if there are too many. It will then call the given URI and send the result to a callback function you must implement. This way you can concentrate on your functionality.
+
+Usually, on the list view, we are doing mass actions against a large set of selected records. For these cases, it isn't user friendly to launch a script that takes a long time to process and not give the user some feedback. Ideally, we will process each record selected and return some indication to the user.
+
+This is how the Mass edit feature works. It updates each record and returns the results in a progress information screen.
+
+coreBOS gives us a way to use that same functionality but sending our own messages as we process the list of selected records. To do this we have to create a business action that will execute the **runBAScriptFromListViewSSE** function.
+
+We use [Server-Side Events](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebos_sse) for these long-running processes. Server-Side Events require us to create two scripts, one in javascript which will receive the messages and show them on screen and another in PHP that will be processing the records and sending the progress messages.
+
+There are a lot of resources on Server-Side Events and also on how to include custom code in coreBOS, so I am just going to explain an example of how this would work.
+
+The javascript function is really simple as it just has to receive the message and update the screen. It has to consider the “CLOSE” event, but since most of the screen processing already exists it looks like this:
+
+```
+function run_customsse(e) {
+	var message = e.data;
+	if (e.data == 'CLOSE') {
+		__addLog('<br><b>' + alert_arr.ProcessFINISHED + '!</b>');
+		var pBar = document.getElementById('progressor');
+		pBar.value = pBar.max; //max out the progress bar
+	} else {
+		__addLog(message.message);
+		var pBar = document.getElementById('progressor');
+		pBar.value = message.progress;
+		var perc = document.getElementById('percentage');
+		perc.innerHTML   = message.progress + '% &nbsp;&nbsp;' + message.processed + '/' + message.total;
+		perc.style.width = (Math.floor(pBar.clientWidth * (message.progress/100)) + 15) + 'px';
+	}
+}
+```
+
+we get the message in e.data, use __addLog to post the message and update the progress bar (which should be made easier bu passing the information to __addLog to avoid the redundant boiler plate)
+
+The backend script is a bit more interesting, it will receive 1 parameter that gives us access to 4 more. The **SSE_SOURCE_KEY** parameter is a coreBOS Settings key where the runBAScriptFromListViewSSE has saved all the information the users selected on the ListView. So, when the user selects records in the screen and clicks on the button we have added, the runBAScriptFromListViewSSE function will gather 4 variables and save them in the coreBOS Settings key-value store. We do it this way because the amount of data may be too big to send via GET (which is the only method SSE accepts). The variables are:
+
+-   ids: list of all the selected IDs separated by a semicolon
+-   excludedRecords: list of IDs excluded from the set
+-   viewname: custom view ID, the selected Filter active on screen
+-   searchurl: any search conditions the user may have launched
+
+The script below will access all these variables and send them to the progress screen
+
+```php
+header('Content-Type: text/event-stream');
+header('Cache-Control: no-cache'); // recommended to prevent caching of event data.
+set_time_limit(0);
+ 
+global $app_strings, $currentModule;
+ 
+function send_message($id, $message, $progress, $processed, $total) {
+	$d = array('message' => $message , 'progress' => $progress, 'processed' => $processed, 'total' => $total);
+	echo "id: $id" . PHP_EOL;
+	echo 'data:'. json_encode($d) . PHP_EOL;
+	echo PHP_EOL;
+	ob_flush();
+	flush();
+}
+$recordcount = count($_REQUEST)+3+4;
+$recordprocessed = 0;
+$id = 1;
+$SSE_SOURCE_KEY = '';
+foreach ($_REQUEST as $key => $value) {
+	$progress = round($recordprocessed / $recordcount * 100, 0);
+	$msg = $key.' => '.$value;
+	send_message($id++, $msg, $progress, $recordprocessed, $recordcount);
+	$recordprocessed++;
+	if ($key=='params') {
+		$params = json_decode(vtlib_purify($value), true);
+		foreach ($params as $pkey => $pvalue) {
+			$msg = $pkey.' => '.$pvalue;
+			send_message($id++, $msg, $progress, $recordprocessed, $recordcount);
+			$recordprocessed++;
+			$progress = round($recordprocessed / $recordcount * 100, 0);
+			if ($pkey=='SSE_SOURCE_KEY') {
+				$SSE_SOURCE_KEY = $pvalue;
+				$listparams = coreBOS_Settings::getSetting($SSE_SOURCE_KEY, null);
+				$listparams = json_decode($listparams, true);
+				foreach ($listparams as $lkey => $lvalue) {
+					$msg = $lkey.' => '.$lvalue;
+					send_message($id++, $msg, $progress, $recordprocessed, $recordcount);
+					$recordprocessed++;
+					$progress = round($recordprocessed / $recordcount * 100, 0);
+				}
+			}
+		}
+	}
+}
+ 
+send_message('CLOSE', $app_strings['processcomplete'], 100, $recordcount, $recordcount);
+coreBOS_Settings::delSetting($SSE_SOURCE_KEY);
+```
+Finally, we add two business actions to load the code:
+
+## FOOTERSCRIPT  
+The javascript code
+
+```
+modules/Vtiger/customsse.js
+```
+
+## LISTVIEWBASIC 
+The button
+
+```
+javascript:runBAScriptFromListViewSSE('customsse', 'Assets', run_customsse)
+```
+See how it works here:
+
+[plugin:youtube](https://www.youtube.com/watch?v=ovCt_ljx0J4)
+
+
+## Business Action::Launch workflow
+
+In order to make it even easier to add functionality inside coreBOS with business actions, you can also launch a workflow from one. This opens the possibilities enormously as almost anything that can be done from a workflow can be done from a business action link.
+
+<div class="notices red">
+Note that this will only work correctly when we can pass in a unique CRMID (or list of CRMIDs), as the workflow system requires a record to be able to get its context of execution. </div>
+
+```
+javascript:runBAWorkflow(workflowid, crmid)
+```
+The crmid parameter can be:
+
+-   a unique CRMID
+-   a string with the word “RECORD” which will load the current record if available
+-   a string with a list of CRMIDs separated by semi-colon ';'
+
+ Note that if either the workflowid or the crmid are empty nothing will be done.
+
+## Business Action::Developers Blocks
+
+[See the Developers Blocks section](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/add_special_block#developer-blocks) for more examples.

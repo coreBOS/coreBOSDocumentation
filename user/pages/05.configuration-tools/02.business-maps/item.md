@@ -34,7 +34,7 @@ Note that in the end, many of these mappings or conditions are actually a washed
 
 We have a relation of different Business Mappings we use where you can find a whole set of different Business Mappings which can be used in your application directly or with easy modifications to adapt them to your needs.
 
-<a href="url">Have a look here</a> and please share your settings with us!
+<a href="http://localhost/coreBOSDocumentation/knowledge-base/configuration-store">Have a look here</a> and please share your settings with us!
 
 ## Fields of Business Mappings
 
