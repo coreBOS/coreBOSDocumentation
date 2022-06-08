@@ -1,9 +1,26 @@
 ---
 title: 'Add Encryption/Decryption methods to Confidential Information module'
+metadata:
+    description: 'Add Encryption/Decryption methods to Confidential Information module'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        
+    tag:
+        - encryption
+        - decryption
 ---
-
-Add Encryption/Decryption methods to Confidential Information module
-====================================================================
+---
 
 These are the steps that need to be taken in order to implement a new
 encryption/decryption method:
@@ -21,5 +38,4 @@ encryption/decryption method:
 -   Check and adjust the migrate to new password method: most probably
     you will not have to do anything here
 
-[You can find the PKI implementation commit
-here](https://github.com/tsolucio/Confidential-Information/commit/d927bc6442af4f074ccd2c886635d227f6013072)
+[You can find the PKI implementation commit here](https://github.com/tsolucio/Confidential-Information/commit/d927bc6442af4f074ccd2c886635d227f6013072)

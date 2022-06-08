@@ -20,6 +20,7 @@ taxonomy:
         - hooks
         - save 
 ---
+---
 
 There are four filters that are launched on each of the Create, Retrieve, Update and Delete actions.
 

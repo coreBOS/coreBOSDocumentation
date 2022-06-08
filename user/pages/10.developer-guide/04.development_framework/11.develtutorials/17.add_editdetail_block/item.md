@@ -1,9 +1,24 @@
 ---
 title: 'How to add a special block to a module using templates'
+metadata:
+    description: 'How we could add a new block in the detail view of a module where we could add some special functionality that we may need'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development 
+    tag:
+        - template
 ---
-
-How to add a special block to a module using templates
-======================================================
+---
 
 The goal of this tutorial is to show how we could add a new block in the
 edit or detail view of a module where we could add some special
@@ -30,20 +45,21 @@ View* and a status message in *Edit View*.
 
 To create the block we use this vtlib code:
 
-&lt;WRAP center round info 80%&gt; We could use the module manager "Add
-Block" feature with the same result. &lt;/WRAP&gt;
+<div class="notices blue"> We could use the module manager "Add
+Block" feature with the same result. </div>
 
-    $modname = 'Potentials';
-    $module = Vtiger_Module::getInstance($modname);
-    if ($module) {
-        $block = new Vtiger_Block();
-        $block->label = 'ProcessWorkflow';
-        $block->sequence = 2;
-        $module->addBlock($block);
-    } else {
-        echo "<b>Failed to find $modname module.</b><br>";
-    }
-
+```php
+$modname = 'Potentials';
+$module = Vtiger_Module::getInstance($modname);
+if ($module) {
+	$block = new Vtiger_Block();
+	$block->label = 'ProcessWorkflow';
+	$block->sequence = 2;
+	$module->addBlock($block);
+} else {
+	echo "<b>Failed to find $modname module.</b><br>";
+}
+```
 Now that we have the block we create the files:
 
     Smarty/templates/modules/Potentials/ProcessWorkflow_edit.tpl
@@ -51,20 +67,23 @@ Now that we have the block we create the files:
 
 In *ProcessWorkflow\_detail.tpl* I will put this code:
 
-    <tr>
-    <td>
-    <p align="center"><img src="themes/images/right.gif" width="100px"/></p>
-    <p align="center">Move to next step in process</p>
-    </td>
-    </tr>
-
+```php
+<tr>
+<td>
+<p align="center"><img src="themes/images/right.gif" width="100px"/></p>
+<p align="center">Move to next step in process</p>
+</td>
+</tr>
+```
 And in *ProcessWorkflow\_edit.tpl* I will put this code:
 
-    <tr>
-    <td colspan="4">
-    <p align="center">You are now in Step X of the Process and you can proceed to Step Y or Step Z</p>
-    </td>
-    </tr>
-
-&lt;WRAP center round info 80%&gt; [Thank you
-Kiko.](https://github.com/tsolucio/corebos/pull/76) &lt;/WRAP&gt;
+```php
+<tr>
+<td colspan="4">
+<p align="center">You are now in Step X of the Process and you can proceed to Step Y or Step Z</p>
+</td>
+</tr>
+```
+<div class="notices blue">
+<a href="https://github.com/tsolucio/corebos/pull/76">Thank you Kiko.</a>
+</div>

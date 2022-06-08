@@ -1,12 +1,30 @@
 ---
 title: 'Generic Javascript API Access to backend: Execute Function'
+metadata:
+    description: 'Generic Javascript API Access to backend: Execute Function'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        
+    tag:
+        - API
+        - function
+---
 ---
 
-Generic Javascript API Access to backend: Execute Function
-==========================================================
-
-&lt;WRAP center round box 60%&gt; **Execute Function**: How to call the
-application backend from javascript &lt;/WRAP&gt;
+<div class="notices blue">
+<strong>Execute Function</strong>: How to call the
+application backend from javascript </div>
 
 During front-end development, we normally run into situations where we
 need information from the backend or we need some functionality that is
@@ -29,40 +47,40 @@ There are mostly three ways to do this:
 We can call the ExecuteFunctions API through the Utilities module, like
 this:
 
-    var url = "module=Utilities&action=UtilitiesAjax&file=ExecuteFunctions";
-    var url = url + "&functiontocall=getModuleWebseriviceID&wsmodule=Accounts";
-    fetch('index.php?'+ url, {
-        credentials: 'same-origin'
-    }).then(function(response) {
-        return response.text();
-    }).then(function(data) {
-        console.log('Accounts webservice ID is: ' + data);
-    });
-
+```php
+var url = "module=Utilities&action=UtilitiesAjax&file=ExecuteFunctions";
+var url = url + "&functiontocall=getModuleWebseriviceID&wsmodule=Accounts";
+fetch('index.php?'+ url, {
+	credentials: 'same-origin'
+}).then(function(response) {
+	return response.text();
+}).then(function(data) {
+	console.log('Accounts webservice ID is: ' + data);
+});
+```
 Which in my chrome developer console, sending the request to the
 coreBOSTest database, looks like this:
 
-<img src="/en/devel/execfunx01.png" class="align-center" />
+![](execfunx01.png?width=100%)
 
 We also have a generic javascript funtions which avoids from having to
 type the whole AJAX call. Using this function the above example would
 be:
-
+```php
     ExecuteFunctions('getModuleWebseriviceID','wsmodule=Accounts').then(function(data) {
         console.log('Accounts webservice ID is: ' + data);
     });
-
+```
 **Which is MUCH NICER!**
 
 In the chrome developer console this looks like this:
 
-<img src="/en/devel/execfunc02.png" class="align-center" />
+ ![test](execfunc02.png?width=100%)
 
-&lt;WRAP center round info 90%&gt; We enhance the list of supported
-actions in ExecuteFunctions regularly so [have a look at the latest
-copy](https://github.com/tsolucio/corebos/blob/master/modules/Vtiger/ExecuteFunctions.php)
-to see all the things that can be done and don't hesitate to ask if you
-find something missing that you think should be there. &lt;/WRAP&gt;
+<div class="notices blue"> We enhance the list of supported
+actions in ExecuteFunctions regularly so  <a href="https://github.com/tsolucio/corebos/blob/master/modules/Vtiger/ExecuteFunctions.php">have a look at the latest
+copy</a> to see all the things that can be done and don't hesitate to ask if you
+find something missing that you think should be there. </div>
 
 This is the list of actions that can be found:
 
@@ -79,9 +97,7 @@ This is the list of actions that can be found:
     searches only in the reference field of the defined modules and
     returns only those fields
 -   **getFieldValuesFromRecord**: very useful function that permits
-    getting information from QueryGenerator. You can find [an example in
-    the Assets
-    module](https://github.com/tsolucio/corebos/blob/master/modules/Assets/Assets.js#L57)
+    getting information from QueryGenerator. You can find [an example in the Assets module](https://github.com/tsolucio/corebos/blob/master/modules/Assets/Assets.js#L57)
     which fills in the Account when an Invoice is selected
 -   **getEmailTemplateDetails**: function to load a merged email
     template

@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - license
 ---
-
+---
 ## coreBOS
 
 coreBOS is distributed under [VPL 1.1 license](../02.vpl11). This is a modified [MPL 1.1 license](http://www.mozilla.org/MPL/1.1/annotated/) which is a business-friendly, Apache or MIT like license.
@@ -46,7 +46,7 @@ Some of our other extensions and modules follow a more limited [Vizsage License]
 - [Faircode](https://faircode.io)
 - [GNU free documentation license](../../../09.security-guide/LicenseUsageAcknowledgements#gnu_free_documentation_license)
 
-![VPL 1.1 Definitions](../02.vpl11/vpl1.1_definitions.png?width=450px)
+![VPL 1.1 Definitions](vpl1.1_definitions.png?width=450px)
 
 [VPL 1.1 Definitions ODG](../02.vpl11/vpl1.1_definitions.odg)
 

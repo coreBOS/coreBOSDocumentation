@@ -1,14 +1,29 @@
 ---
 title: 'How to activate RTE on a textarea field in a module'
+metadata:
+    description: 'How to activate RTE on a textarea field in a module'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        
+    tag:
+        - rte
 ---
-
-How to activate RTE on a textarea field in a module
-===================================================
+---
 
 -   set the Global Variable **Application\_Use\_RTE** to 1 for the
     module, which is it's default value
--   create an [Extended Field Information
-    Mapping](/en/adminmanual/businessmappings/fieldinfo) declaring the
+-   create an [Extended Field Information Mapping](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/extendedfieldinfo) declaring the
     fields you want to have RTE activated
 -   enjoy!
 
@@ -16,15 +31,15 @@ How to activate RTE on a textarea field in a module
 
 ------------------------------------------------------------------------
 
-&lt;WRAP center round alert 100%&gt; THE PATCH BELOW IS NOT NECESSARY
+<div class="notices red">
+THE PATCH BELOW IS NOT NECESSARY
 ANYMORE!
 
-It has been made obsolete by the [Extended Field Information
-Mapping](/en/adminmanual/businessmappings/fieldinfo) where you can
+It has been made obsolete by the [Extended Field Information Mapping](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/extendedfieldinfo) where you can
 establish which textarea fields in which modules you want to edit with
 RTE.
 
-We leave the patch here as a historical reference. &lt;/WRAP&gt;
+We leave the patch here as a historical reference.</div>
 
 ------------------------------------------------------------------------
 
@@ -33,8 +48,7 @@ We leave the patch here as a historical reference. &lt;/WRAP&gt;
 How to activate RTE on a module
 ===============================
 
--   Activate RTE feature in [Config
-    Editor](/en/adminmanual/configeditor)
+-   Activate RTE feature in [Config Editor](/en/adminmanual/configeditor)
 -   modify template to add support for the module you want. If the
     module has more than one field with this feature you have to also
     add a block of code to launch CKEditor on the field
@@ -43,9 +57,9 @@ How to activate RTE on a module
 -   modify the detail view of the fields to process and show HTML
     symbols
 
-![This next patch does this for HelpDesk (Trouble
-Tickets)](/devel/patches/helpdeskrte.diff)
+![This next patch does this for HelpDesk (Trouble Tickets)](/devel/patches/helpdeskrte.diff)
 
+```php
     diff --git a/Smarty/templates/salesEditView.tpl b/Smarty/templates/salesEditView.tpl
     index 96ce7b2..febb003 100755
     --- a/Smarty/templates/salesEditView.tpl
@@ -113,3 +127,4 @@ Tickets)](/devel/patches/helpdeskrte.diff)
      
      ?>
     \ No newline at end of file
+```

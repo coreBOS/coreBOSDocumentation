@@ -20,6 +20,7 @@ taxonomy:
         - hooks
         - popup 
 ---
+---
 
 This hook permits us to directly manipulate the query to be executed in the Pop-up capture screen for our module.
 

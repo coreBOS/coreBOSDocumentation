@@ -20,16 +20,16 @@ taxonomy:
 ---
 ---
 
-[View/Filter Management](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/filtermanagement)
+- [View/Filter Management](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/filtermanagement)
 
-[Logo sizes](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/logos_sizes)
+- [Logo sizes](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/logos_sizes)
 
-[Mail Converter](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/mailconverter)
+- [Mail Converter](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/mailconverter)
 
-[Monitor the health of your coreBOS](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/monitorstatus)
+- [Monitor the health of your coreBOS](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/monitorstatus)
 
-[How to Configure Outgoing Server](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/outgoingserver)
+- [How to Configure Outgoing Server](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/outgoingserver)
 
-[Picklist Editor](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/picklisteditor)
+- [Picklist Editor](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/picklisteditor)
 
-[Record Versioning](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/recordversioning)
+- [Record Versioning](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/recordversioning)

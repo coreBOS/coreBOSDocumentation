@@ -20,6 +20,7 @@ taxonomy:
         - hooks
         - relatedlist 
 ---
+---
 
 The need for this hook appears when a new module or functionality needs to add a related list on a module that is already installed or is a pure base module like Accounts or Contacts. To achieve this the method that will return the contents of the related list must be INSIDE the module's main class. So, for example, if we want to add a related list on Accounts, we need the method to be a native method of the Accounts class which is contained in the modules/Accounts/Accounts.php file. In other words: we need to modify a base code file.
 

@@ -1,9 +1,25 @@
 ---
 title: 'How to add a special block to a module'
+metadata:
+    description: 'How we could add a new block in the detail view of a module where we could add some special functionality that we may need'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development 
+    tag:
+        - module
+        - block
 ---
-
-How to add a special block to a module
-======================================
+---
 
 The goal of this tutorial is to show how we could add a new block in the
 detail view of a module where we could add some special functionality
@@ -21,16 +37,20 @@ detail view.
 To change the database we use vtlib and add a DetailViewWidget Link
 using vtlib:
 
-    $module->addLink(
-      'DETAILVIEWWIDGET',
-      'DetailViewPOINFOBlockWidget',
-      "block://ContactPOInfoWidget:modules/Contacts/ContactPOInfoWidget.php"
-    );
+```php
+$module->addLink(
+  'DETAILVIEWWIDGET',
+  'DetailViewPOINFOBlockWidget',
+  "block://ContactPOInfoWidget:modules/Contacts/ContactPOInfoWidget.php"
+);
+```
 
 As can be seen, we are adding a DETAILVIEWWIDGET with the label
 DetailViewPOINFOBlockWidget and with the link
 
-    block://ContactPOInfoWidget:modules/Contacts/ContactPOInfoWidget.php
+```php
+block://ContactPOInfoWidget:modules/Contacts/ContactPOInfoWidget.php
+```
 
 this last part is the really important one. It is saying that to
 generate the widget, the application must load a class named
@@ -43,8 +63,8 @@ coreBOS).
 This class must implement only one method: *getWidget()* which will
 return the name of another class which will implement our functionality.
 
-&lt;WRAP center round info 75%&gt; The full script can be accessed in
-the download link at the end. &lt;/WRAP&gt;
+<div class="notices blue"> The full script can be accessed in
+the download link at the end. </div>
 
 Now we have to implement the logic. This happens in a class that we must
 create and that can do anything we need it to. The class runs inside
@@ -61,23 +81,22 @@ Smarty template to generate a similar output to the existing blocks.
 Have a look at the code which can be downloaded below and here is a
 screenshot of how it looks on screen:
 
-<img src="/devel/contactpostatswidget.png" class="align-center" width="800" />
-&lt;WRAP center round info 80%&gt;We could also add an additional
+![](contactpostatswidget.png?width=100%)
+
+<div class="notices blue">We could also add an additional
 HeaderScript link to load some external javascript library we may need
 to implement our functionality or load the information we need via
 ajax/javascript which is how ModComments works. You can see an example
-by studying that code.&lt;/WRAP&gt;
+by studying that code.</div>
 
-&lt;WRAP center round download 60%&gt;![Contact Purchase Order
-Statistics Widget](/devel/adddvw.zip)&lt;/WRAP&gt;
+### [Contact Purchase Order Statistics Widget](adddvw.zip)
 
-# Developer Blocks
-================
+## Developer Blocks
+
 
 From the example above you see that it is rather complex to add a new
 block with some custom code inside. So we have extended the
-possibilities in two ways. [One is using
-templates](/en/devel/add_editdetail_block) and the other is using what
+possibilities in two ways. [One is using templates](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/add_editdetail_block) and the other is using what
 we call developer blocks.
 
 Developer blocks construct upon the idea above but make it easier to
@@ -86,8 +105,7 @@ create the content giving us more boilerplate code done for us.
 The initial idea is the same as above, you need a class that you
 reference in the DETAILVIEWWIDGET, this class returns another class that
 must implement a *process()* method. What we do is that this second
-class extends the [class
-DeveloperBlock](https://github.com/tsolucio/corebos/blob/master/modules/Vtiger/DeveloperWidget.php#L17)
+class extends the [class DeveloperBlock](https://github.com/tsolucio/corebos/blob/master/modules/Vtiger/DeveloperWidget.php#L17)
 which gives you a set of predefined functions to help you concentrate
 only on the actual logic of your requirement.
 
@@ -95,15 +113,12 @@ Additionally, we have modified the DEAILVIEWWIDGET code to permit you to
 send more parameters into your class which is done using the URL
 parameter syntax.
 
-&lt;WRAP center round info 60%&gt; [You can find a blog
-post](http://blog.corebos.org/blog/developerblock) with a step by step
-example and
-<embed src="/en/devel/asktoproceeddevblock.zip" class="align-center" />
-&lt;/WRAP&gt;
+<div class="notices blue">
+<a href="http://blog.corebos.org/blog/developerblock">You can find a blog
+post</a> with a step by step
+example and <a href ="asktoproceeddevblock.zip" attributes-list download > download the related code clicking here. </a> </div>
 
-The coreBOS Question analytical module has [an example of the usage of
-the Developer
-Block](https://github.com/tsolucio/corebos/blob/master/modules/cbQuestion/cbQuestionWidget.php)
+The coreBOS Question analytical module has [an example of the usage of the Developer Block](https://github.com/tsolucio/corebos/blob/master/modules/cbQuestion/cbQuestionWidget.php)
 which makes it easy to get the execution of the question into a block.
 Try these steps to see the result:
 
@@ -111,11 +126,9 @@ Try these steps to see the result:
 
 Like this:
 
-<img src="/en/adminmanual/bquestion01.png" class="align-center" alt="Business Question" />
+![](bquestion01.png?width=100%)
 
-<table>
-<tbody>
-<tr class="odd">
+<table class="table table-striped">
 <td>Columns:</td>
 <td><code>[{"fieldname":"countres","operation":"is","value":"count(ticket_title)","valuetype":"expression","joincondition":"and","groupid":"0"},{"fieldname":"ticketstatus","operation":"is","value":"ticketstatus","valuetype":"fieldname","joincondition":"and","groupid":"0"}]</code></td>
 </tr>
@@ -129,14 +142,13 @@ Like this:
 </tr>
 </tbody>
 </table>
+<br>
 
 ### Create a Business Action
 
-This one will appear in the body of the detail view.
+**This one will appear in the body of the detail view.**
 
-<table>
-<tbody>
-<tr class="odd">
+<table class="table table-striped">
 <td>Type:</td>
 <td>DETAILVIEWWIDGET</td>
 </tr>
@@ -150,14 +162,13 @@ This one will appear in the body of the detail view.
 </tr>
 </tbody>
 </table>
+<br>
 
 ### Create another Business Action
 
-This one will appear in the right panel.
+**This one will appear in the right panel.**
 
-<table>
-<tbody>
-<tr class="odd">
+<table class="table table-striped">
 <td>Type:</td>
 <td>DETAILVIEWWIDGET</td>
 </tr>
@@ -172,17 +183,17 @@ This one will appear in the right panel.
 </tbody>
 </table>
 
-&lt;WRAP center round important 60%&gt; NOTE that the QID value is
+<div class="notices red">
+NOTE that the QID value is
 actually the CRMID of the Business Question you created in the first
-step, so you MUST change the **43177** above to the one assigned to your
-record &lt;/WRAP&gt;
+step, so you MUST change the <strong>43177</strong> above to the one assigned to your record </div>
 
 ### Appearence
 
 Now go to any account with tickets and you should see something like
 this:
 
-<img src="/en/adminmanual/bquestion02.png" class="align-center" />
+![](bquestion02.png?width=100%)
 
 ### Another example: Show Message
 
@@ -190,16 +201,15 @@ The application has another native developer block that permits you to
 show a message. Watch the next video to see how that works and learn a
 little more about how this development resource works.
 
-![](youtube>aAs2FVJ0veE)
+[plugin:youtube](https://youtu.be/aAs2FVJ0veE)
 
 ### Another example: Mass Upload Documents
 
 The application has another native developer block that permits you to
 mass upload documents. Watch the next video to see how that works and
-[look at the commit to see the
-code](https://github.com/tsolucio/corebos/commit/889884362b82ff24a8c1b5499f22e7705e55d519).
+[look at the commit to see the code](https://github.com/tsolucio/corebos/commit/889884362b82ff24a8c1b5499f22e7705e55d519).
 
-![](youtube>lW3RrQQQb-4)
+[plugin:youtube](https://youtu.be/lW3RrQQQb-4)
 
 ### Show IFRAME
 
@@ -221,45 +231,45 @@ where you are passing to the Develop Block these parameters:
 ### Developer Block Template
 
 This is the starting point of any developer block (the boilerplate).
+```php
+<?php
+/*************************************************************************************************
+** PUT YOUR LICENSE HERE **
+ *************************************************************************************************/
+require_once 'modules/Vtiger/DeveloperWidget.php';
+global $currentModule;
+ 
+class YOURWIDGETNAMEHERE {
+	// Get class name of the object that will implement the widget functionality
+	public static function getWidget($name) {
+		return (new YOURWIDGETNAMEHERE_DetailViewBlock());
+	}
+}
+ 
+class YOURWIDGETNAMEHERE_DetailViewBlock extends DeveloperBlock {
+	// Implement widget functionality
+	private $widgetName = 'YOURWIDGETNAMEHERE';
+ 
+	// This one is called to get the contents to show on screen
+	public function process($context = false) {
+		global $adb;
+		$this->context = $context;
+		$smarty = $this->getViewer();
+		*************
+		ALL YOU LOGIC GOES HERE
+		*************
+		return THE_HTML_YOU_WANT_TO_SHOW_INSIDE_THE_BLOCK;
+	}
+}
+ 
+if (isset($_REQUEST['action']) && $_REQUEST['action']==$currentModule.'Ajax') {
+	$smq = new YOURWIDGETNAMEHERE_DetailViewBlock();
+	echo $smq->process($_REQUEST);
+}
+```
 
-    <?php
-    /*************************************************************************************************
-    ** PUT YOUR LICENSE HERE **
-     *************************************************************************************************/
-    require_once 'modules/Vtiger/DeveloperWidget.php';
-    global $currentModule;
+## How to add a special block to a module using templates
 
-    class YOURWIDGETNAMEHERE {
-        // Get class name of the object that will implement the widget functionality
-        public static function getWidget($name) {
-            return (new YOURWIDGETNAMEHERE_DetailViewBlock());
-        }
-    }
 
-    class YOURWIDGETNAMEHERE_DetailViewBlock extends DeveloperBlock {
-        // Implement widget functionality
-        private $widgetName = 'YOURWIDGETNAMEHERE';
-
-        // This one is called to get the contents to show on screen
-        public function process($context = false) {
-            global $adb;
-            $this->context = $context;
-            $smarty = $this->getViewer();
-            *************
-            ALL YOU LOGIC GOES HERE
-            *************
-            return THE_HTML_YOU_WANT_TO_SHOW_INSIDE_THE_BLOCK;
-        }
-    }
-
-    if (isset($_REQUEST['action']) && $_REQUEST['action']==$currentModule.'Ajax') {
-        $smq = new YOURWIDGETNAMEHERE_DetailViewBlock();
-        echo $smq->process($_REQUEST);
-    }
-
-How to add a special block to a module using templates
-======================================================
-
-&lt;WRAP center round info 70%&gt; You can find a much easier way to add
-this type of block which also supports Edit View in [this
-tutorial](/en/devel/add_editdetail_block). &lt;/WRAP&gt;
+<div class="notices blue"> You can find a much easier way to add
+this type of block which also supports Edit View in <a href="http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/add_editdetail_block"> this tutorial</a>. </div>

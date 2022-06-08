@@ -1,9 +1,24 @@
 ---
 title: 'How to add action links to a module'
+metadata:
+    description: 'How to add action links to a module'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development 
+    tag:
+        - links
 ---
-
-How to add action links to a module
-===================================
+---
 
 Action links
 ------------
@@ -50,9 +65,7 @@ The above code is extracted from the coreBOSUpdater manifest.xml file.
 It adds a DETAILVIEWWIDGET and a LISTVIEWBASIC action. As can be seen
 the action has these parameters:
 
-<table>
-<thead>
-<tr class="header">
+<table class="table table-striped">
 <th>linktype</th>
 <th>Type of Link like DETAILVIEW etc..</th>
 </tr>
@@ -107,9 +120,7 @@ or
 The first example adds a button to the list view of the contacts module
 while the second adds a link to the right action panel of accounts.
 
-You can get a copy of the full script in the [build/HelperScripts
-directory of
-coreBOS](https://github.com/tsolucio/corebos/tree/master/build/HelperScripts).
+You can get a copy of the full script in the [build/HelperScripts directory of coreBOS](https://github.com/tsolucio/corebos/tree/master/build/HelperScripts).
 
 Action links on List View
 -------------------------
@@ -139,14 +150,14 @@ in the form;
 
     module={MODULE}&action={MODULE}Ajax&file={ACTION}...
 
-&lt;WRAP center round info 80%&gt;As of coreBOS January 2015 any
+<div class="notices blue">
+As of coreBOS January 2015 any
 javascript code sent with the widget content will be executed
 automatically making it easy to load some additional libraries and/or
 execute some process.
 
-You can study the [Timecontrol](https://github.com/tsolucio/Timecontrol)
-module stop watch widget and also the [Mass Image Upload widget on
-Products](https://github.com/tsolucio/corebos/commit/cbfb301b12688d260fc3c5d7144cdea163da5868)&lt;/WRAP&gt;
+You can study the <a href="https://github.com/tsolucio/Timecontrol"><i>Timecontrol</i></a>
+module stop watch widget and also the  <a href="https://github.com/tsolucio/corebos/commit/cbfb301b12688d260fc3c5d7144cdea163da5868"><i>Mass Image Upload widget on Products</i></a> </div>
 
 Other Action links
 ------------------
@@ -159,9 +170,7 @@ the next section for more information.
 Summary of Action link types
 ----------------------------
 
-<table>
-<thead>
-<tr class="header">
+<table class="table table-striped">
 <th>Linktype</th>
 <th>Description</th>
 </tr>
@@ -185,7 +194,7 @@ Summary of Action link types
 </tr>
 <tr class="odd">
 <td>DETAILVIEWWIDGET</td>
-<td>Small widget block section at the bottom of the right action panel on detail view. Look at the Timecontrol stopwatch for an example. It can also be a <a href="/en/devel/add_special_block">full fledged block inserted into the existing field blocks</a></td>
+<td>Small widget block section at the bottom of the right action panel on detail view. Look at the Timecontrol stopwatch for an example. It can also be a <a href="http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/add_special_block">full fledged block inserted into the existing field blocks</a></td>
 </tr>
 <tr class="even">
 <td>HEADERSCRIPT</td>
@@ -205,5 +214,4 @@ Summary of Action link types
 Business Actions
 ----------------
 
-[Read about the Business Actions module for an easy way to add links
-without coding](/en/adminmanual/businessactions)
+[Read about the Business Actions module for an easy way to add links without coding](http://localhost/coreBOSDocumentation/configuration-tools/business-actions)

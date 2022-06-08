@@ -1,9 +1,8 @@
 ---
 title: 'coreBOS Custom Permission Hooks'
 ---
+---
 
-coreBOS Custom Permission Hooks
-===============================
 
 What is it for?
 ---------------

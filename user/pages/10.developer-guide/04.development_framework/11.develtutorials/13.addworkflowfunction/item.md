@@ -1,9 +1,25 @@
 ---
 title: 'How to add a workflow custom function'
+metadata:
+    description: 'How to add a workflow custom function'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        - workflow  
+    tag:
+        - workflow
 ---
-
-How to add a workflow custom function
-=====================================
+---
 
 There are two types of workflow tasks that can be added to the system:
 **custom workflow functions** and full-blown **workflow tasks**. The
@@ -20,8 +36,7 @@ know which elements to relate the custom function needs a configuration
 screen and must be converted into a **workflow task with configuration
 screen**.
 
-Here we explain how to create the first type of workflows, [for the
-second type go here](/en/devel/addworkflowtask).
+Here we explain how to create the first type of workflows, [for the second type go here](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/addworkflowtask).
 
 A **workflow method or custom function** needs a name to show in the
 configuration section, a class that will extend VTTask and does the
@@ -53,7 +68,9 @@ installed or not.
             insert a new record for each module.
     -   coreBOS has a helper method that can insert this record for you:
         *VTEntityMethodManager::addEntityMethod()*, an example call
-        would be like this:`<?php
+        would be like this:
+        ```php 
+        <?php
         // Turn on debugging level
         $Vtiger_Utils_Log = true;
 
@@ -65,8 +82,9 @@ installed or not.
         $emm = new VTEntityMethodManager($adb);
         $emm->addEntityMethod("Accounts", "Update Contact Assigned To", "include/wfMethods/updateContactAssignedTo.php", "updateContactAssignedTo");
         echo 'add Workflow Custom Function complete!';
-        ?>` or [like this using coreBOS
-        Updater](https://github.com/tsolucio/corebos/blob/master/build/changeSets/workflow_contactassignedto.php)
+        ?>
+        ```
+        or [like this using coreBOS Updater](https://github.com/tsolucio/corebos/blob/master/build/changeSets/workflow_contactassignedto.php)
 
 <!-- -->
 
@@ -90,6 +108,4 @@ installed or not.
     -   We also have access to all of the coreBOS programming
         infrastructure
 
-[You can see a full example of how we add a new workflow method to
-assign contacts to the same account
-user](https://github.com/tsolucio/corebos/commit/9a200854ba38cef0f8c3b7284d37b0edf13d5f12)
+[You can see a full example of how we add a new workflow method to assign contacts to the same account user](https://github.com/tsolucio/corebos/commit/9a200854ba38cef0f8c3b7284d37b0edf13d5f12)

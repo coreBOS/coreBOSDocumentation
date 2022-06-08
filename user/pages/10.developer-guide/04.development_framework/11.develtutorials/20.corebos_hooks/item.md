@@ -1,9 +1,27 @@
 ---
 title: 'coreBOS Events, Links and Hooks'
+metadata:
+    description: 'coreBOS permits the implementor/developer to add functionality to the existing application in three different ways: Events, Links and Hooks'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        
+    tag:
+        - events
+        - links
+        - hooks
 ---
-
-coreBOS Events, Links and Hooks
-===============================
+---
 
 Explanation
 -----------
@@ -35,9 +53,7 @@ the end they are simply different ways of changing the default behavior
 of the application and you need to choose which one you need depending
 on the goal of your change.
 
-If you read the [official definition of a
-hook](http://en.wikipedia.org/wiki/Hooking) or a
-[webhook](http://en.wikipedia.org/wiki/Webhook), you can see that there
+If you read the [official definition of a hook](http://en.wikipedia.org/wiki/Hooking) or a [webhook](http://en.wikipedia.org/wiki/Webhook), you can see that there
 is really no distinction, they are all ways to change the behavior of
 the application. coreBOS makes a distinction based on the way you insert
 the hook into the application, in other words, depending on the steps
@@ -63,20 +79,20 @@ to the base code files.
 
 To add a new event handler, you will need to define a class that extends
 the **VTEventHandler** abstract class. For example:
-
+```php
     class SimpleHandler extends VTEventHandler{
      public function handleEvent($name, $data){
       global $log;
       $log->fatal("This handler has been called for the $name event and prints this message to the log file.");
      }
     }
-
+```
 Then you have to register the handler in the system with this code:
-
+```php
     require 'include/events/include.inc';
     $em = new VTEventsManager($adb);
     $em->registerHandler($eventName, $filePath, $className);
-
+```
 this can be done in an individual one-shot script or added to the
 **vtlib\_handler()** method to be executed when installing a new module
 or extension.
@@ -103,8 +119,8 @@ different examples you can see that almost all of them start with a
 
 "*if ($moduleName=='whatever')*"
 
-&lt;WRAP center round info 60%&gt; This is the "de facto" standard
-&lt;/WRAP&gt;
+<div class="notices blue"> This is the "de facto" standard
+</div>
 
 It also means that we have to be especially careful with the things that
 are done, our code has to be fast and efficient in order to not block
@@ -141,11 +157,10 @@ to execute your event after some other event has finished.
 
 ### Supported events
 
-&lt;WRAP center round info 60%&gt; Note that inside each event type the
+<div class="notices blue"> Note that inside each event type the
 set of active events will be executed in order of creation (sorted by
-their eventid) as [can be read
-here](https://discussions.corebos.org/showthread.php?tid=1351).
-&lt;/WRAP&gt;
+their eventid) as <a href="https://discussions.corebos.org/showthread.php?tid=1351">can be read here</a>.
+</div>
 
 #### vtiger.entity.beforesave.modifiable
 
@@ -155,7 +170,7 @@ when an entity is saved. It should not be used.
 #### vtiger.entity.beforesave
 
 This event is fired before an entity is saved. You will be passed a
-**[VTEntityData](/en/devel/VTEntityData)** object representing the saved
+**[VTEntityData](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/vtentitydata)** object representing the saved
 entity. It should be noted that new objects may not have an id (if it is
 being created). You can modify the contents of VTEntityObject.
 
@@ -174,7 +189,7 @@ object has been executed.
 
 This event is fired after an entity is saved, even the local
 save\_module() method of the object has been executed. This also
-provides a **[VTEntityData](/en/devel/VTEntityData)** object.
+provides a **[VTEntityData](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/vtentitydata)** object.
 
 #### vtiger.entity.aftersave.final
 
@@ -184,32 +199,32 @@ events have occurred. It should not be used.
 #### vtiger.entity.beforedelete
 
 This event is fired before an entity is deleted. You will be passed a
-**[VTEntityData](/en/devel/VTEntityData)** object representing the
+**[VTEntityData](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/vtentitydata)** object representing the
 entity that will be eliminated.
 
 #### vtiger.entity.afterdelete
 
 This event is fired after an entity is deleted. You will be passed a
-**[VTEntityData](/en/devel/VTEntityData)** object representing the
+**[VTEntityData](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/vtentitydata)** object representing the
 deleted object. Be careful as this object can no longer be referenced
 using the applications' methods.
 
 #### vtiger.entity.afterrestore
 
 This event is fired after an entity has been recovered from the Recycle
-Bin. You will be passed a **[VTEntityData](/en/devel/VTEntityData)**
+Bin. You will be passed a **[VTEntityData](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/vtentitydata)**
 object representing the entity that has been restored.
 
 #### vtiger.entity.beforegroupdelete
 
 This event is fired before deleting a group. You will be passed an array
 with this structure:
-
+```php
     array(
      'groupid' => $groupId; // Group Id to be deleted:: integer
      'transferToId' => $transferId; // Id of the group/user to which record ownership is to be transferred:: integer
     );
-
+```
 #### corebos.header.premenu
 
 Will be triggered in the header of coreBOS, right after the announcement
@@ -241,7 +256,7 @@ print out a time execution summary of the events.
 
 This event does not receive any parameters.
 
-<img src="/en/devel/corebos_hooks/corebosheaderfooterhooks.png" class="align-center" width="700" />
+![](corebosheaderfooterhooks.png?width=100%)
 
 #### corebos.popup.footer
 
@@ -287,9 +302,7 @@ Could be used to manipulate the HTML of each column inside List View
 
 Receives an array with three elements of the current row:
 
-<table>
-<thead>
-<tr class="header">
+<table class="table table-striped">
 <th>$parameter</th>
 <th>Description</th>
 </tr>
@@ -333,10 +346,10 @@ verification or functionality tasks.
 
 You must return the object given.
 
-&lt;WRAP center round info 75%&gt;The
-[coreBOSAddress](https://github.com/tsolucio/coreBOSAddress) module has
-an exceptional example of how this works by filling in the address
-fields when creating a new record from its related list.&lt;/WRAP&gt;
+<div class="notices blue">
+The <a href="https://github.com/tsolucio/coreBOSAddress"><i>coreBOSAddress</i></a>
+module has an exceptional example of how this works by filling in the address
+fields when creating a new record from its related list.</div>
 
 #### corebos.filter.link.show
 
@@ -390,10 +403,9 @@ Filter launched before starting the Save process. Will receive, the
 $\_REQUEST variable and the current object trying to be saved. It must
 return, besides these two input parameters, an error status, an error
 message, an error action and an array of variables to return to the edit
-screen the process was initiated from.
+screen the process was initiated from. 
 
-[You can read a little more about this filter
-here](/en/devel/corebos_hooks/precrud)
+[You can read a little more about this filterhere](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/precrud)
 
 #### corebos.filter.preEditCheck
 
@@ -401,8 +413,7 @@ Filter launched before starting the Edit process. Will receive, the
 $\_REQUEST variable, the Smarty object and the current object trying to
 be edited.
 
-[You can read a little more about this filter
-here](/en/devel/corebos_hooks/precrud)
+[You can read a little more about this filter here](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/precrud)
 
 #### corebos.filter.preViewCheck
 
@@ -410,8 +421,7 @@ Filter launched before starting the Detail View process. Will receive,
 the $\_REQUEST variable, the Smarty object and the current object trying
 to be viewed.
 
-[You can read a little more about this filter
-here](/en/devel/corebos_hooks/precrud)
+[You can read a little more about this filter here](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/precrud)
 
 #### corebos.filter.preDeleteCheck
 
@@ -451,8 +461,7 @@ return the announcement to show. permits creating dynamic announcements
 
 ### Custom Permission Hooks
 
-**corebos.permission.\[accessquery|ispermitted\]**: [Custom Permission
-Hooks](/en/devel/corebos_permission_hooks)
+**corebos.permission.\[accessquery|ispermitted\]**: [Custom Permission Hooks](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebos_permission_hooks)
 
 ### Events Examples
 
@@ -461,9 +470,7 @@ the **vtiger\_eventhandlers** table, so the best way to find examples of
 the different types of events above is to look in that table for real
 working code. For example, you can find there:
 
-<table>
-<thead>
-<tr class="header">
+<table class="table table-striped">
 <th>event_name</th>
 <th>handler_path</th>
 <th>handler_class</th>
@@ -475,19 +482,22 @@ working code. For example, you can find there:
 <td>vtiger.entity.aftersave</td>
 <td>modules/SalesOrder/RecurringInvoiceHandler.php</td>
 <td>RecurringInvoiceHandler</td>
-<td>Takes care of preparing information for the cron script that converts sales orders into invoices</td>
+<td>Takes care of preparing information for
+ the cron script that converts sales orders into invoices</td>
 </tr>
 <tr class="even">
 <td>vtiger.entity.beforesave</td>
 <td>data/VTEntityDelta.php</td>
 <td>VTEntityDelta</td>
-<td>This class handles the "Has Changed" condition in workflows. This part saves the information <strong>before</strong> it is saved in the database.</td>
+<td>This class handles the "Has Changed" condition in workflows.
+ This part saves the information <strong>before</strong> it is saved in the database.</td>
 </tr>
 <tr class="odd">
 <td>vtiger.entity.aftersave</td>
 <td>data/VTEntityDelta.php</td>
 <td>VTEntityDelta</td>
-<td>This class handles the "Has Changed" condition in workflows. This part saves the information <strong>after</strong> it is saved in the database.</td>
+<td>This class handles the "Has Changed" condition in workflows.
+ This part saves the information <strong>after</strong> it is saved in the database.</td>
 </tr>
 <tr class="even">
 <td>vtiger.entity.aftersave</td>
@@ -535,7 +545,8 @@ working code. For example, you can find there:
 <td>vtiger.entity.aftersave</td>
 <td>modules/Emails/evcbrcHandler.php</td>
 <td>evcbrcHandler</td>
-<td>Takes care of updating the read-only email fields on Potential, Projects and Tickets (among others)</td>
+<td>Takes care of updating the read-only email fields
+ on Potential, Projects and Tickets (among others)</td>
 </tr>
 <tr class="even">
 <td>vtiger.entity.aftersave</td>
@@ -577,13 +588,15 @@ working code. For example, you can find there:
 <td>corebos.filter.listview.querygenerator.before</td>
 <td>build/HelperScripts/coreBOSEventsExample.php</td>
 <td>coreBOSEventsExample</td>
-<td>Adds homephone field to query generator, can be seen on any Contacts list view</td>
+<td>Adds homephone field to query generator,
+ can be seen on any Contacts list view</td>
 </tr>
 <tr class="odd">
 <td>corebos.filter.listview.querygenerator.after</td>
 <td>build/HelperScripts/coreBOSEventsExample.php</td>
 <td>coreBOSEventsExample</td>
-<td>Removes homephone field from query generator, can be seen on any Contacts list view filter with the homephone field</td>
+<td>Removes homephone field from query generator, 
+can be seen on any Contacts list view filter with the homephone field</td>
 </tr>
 <tr class="even">
 <td>corebos.filter.listview.querygenerator.query</td>
@@ -595,7 +608,9 @@ working code. For example, you can find there:
 <td>corebos.filter.listview.render</td>
 <td>build/HelperScripts/coreBOSEventsExample.php</td>
 <td>coreBOSEventsExample</td>
-<td>This example adds a new column with a text input field for homephone when on the Contacts module and a new row link to go directly to the "More Information" section when on Accounts</td>
+<td>This example adds a new column with a text input field for homephone 
+when on the Contacts module and a new row link to go directly to the "More Information" 
+section when on Accounts</td>
 </tr>
 <tr class="even">
 <td>corebos.filter.listview.header</td>
@@ -607,7 +622,8 @@ working code. For example, you can find there:
 <td>corebos.filter.listview.filter.show</td>
 <td>build/HelperScripts/coreBOSEventsExample.php</td>
 <td>coreBOSEventsExample</td>
-<td>This example eliminates the filter named "Contacts Address" from the Contacts filter picklist</td>
+<td>This example eliminates the filter named "Contacts Address" 
+from the Contacts filter picklist</td>
 </tr>
 <tr class="even">
 <td>corebos.filter.editview.setObjectValues</td>
@@ -619,27 +635,31 @@ working code. For example, you can find there:
 <td>corebos.filter.link.show</td>
 <td>build/HelperScripts/coreBOSEventsExample.php</td>
 <td>coreBOSEventsExample</td>
-<td>This example eliminates all Detail View links. Once activated you will see that no module has ModComments and many of their action links have disappeared</td>
+<td>This example eliminates all Detail View links. 
+Once activated you will see that no module has ModComments and many 
+of their action links have disappeared</td>
 </tr>
 <tr class="even">
 <td>corebos.filter.ModComments.canAdd</td>
 <td>build/HelperScripts/coreBOSEventsExample.php</td>
 <td>coreBOSEventsExample</td>
-<td>This example eliminates the add comment feature for the crmid record with value 2</td>
+<td>This example eliminates the add comment feature
+ for the crmid record with value 2</td>
 </tr>
 <tr class="odd">
 <td>corebos.filter.ModComments.queryCriteria</td>
 <td>build/HelperScripts/coreBOSEventsExample.php</td>
 <td>coreBOSEventsExample</td>
-<td>This example hides all comments that belong to user with ID equal to 1</td>
+<td>This example hides all comments that belong to user
+ with ID equal to 1</td>
 </tr>
 </tbody>
 </table>
 
-&lt;WRAP center round info 80%&gt;For the coreBOSEventsExample.php
+<div class="notices blue"> For the coreBOSEventsExample.php
 examples you can find the script to register the events in the
 HelperScripts directory:
-build/HelperScripts/coreBOSEventsLoader.php&lt;/WRAP&gt;
+build/HelperScripts/coreBOSEventsLoader.</div>
 
 HOOKS: Types and usage
 ----------------------
@@ -647,10 +667,10 @@ HOOKS: Types and usage
 Each hook requires its' own specific magic and steps to get them working
 and cover different aspects of functionality enhancement.
 
--   [Popup open hook](/en/devel/corebos_hooks/popup_open_hook)
--   [Popup capture hook](/en/devel/corebos_hooks/popup_capture_hook)
--   [Popup query hook](/en/devel/corebos_hooks/popup_query_hook)
--   [Related List hook](/en/devel/corebos_hooks/related_list_hook)
+-   [Popup open hook](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/popup_open_hook)
+-   [Popup capture hook](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/popup_capture_hook)
+-   [Popup query hook](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/popup_query_hook)
+-   [Related List hook](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/related_list_hook)
 -   afterImportRecord
 
 LINKS: Types and usage
@@ -666,9 +686,7 @@ To register these actions into coreBOS we use the vtlib API interface
     $moduleInstance = Vtiger_Module::getInstance('ModuleName');
     $moduleInstance->addLink(<LinkType>, <LinkLabel>, <LinkURL>, <IconPath>);
 
-<table>
-<thead>
-<tr class="header">
+<table class="table table-striped">
 <th>LinkType</th>
 <th>Type of Link (see below)</th>
 </tr>
@@ -680,7 +698,8 @@ To register these actions into coreBOS we use the vtlib API interface
 </tr>
 <tr class="even">
 <td>LinkURL</td>
-<td>URL of the link. You can use variables like <strong>$MODULE$</strong> and <strong>$RECORD$</strong> which will be replaced with the values of the current module and crmid</td>
+<td>URL of the link. You can use variables like <strong>$MODULE$</strong>
+ and <strong>$RECORD$</strong> which will be replaced with the values of the current module and crmid</td>
 </tr>
 <tr class="odd">
 <td>IconPath</td>
@@ -688,13 +707,12 @@ To register these actions into coreBOS we use the vtlib API interface
 </tr>
 </tbody>
 </table>
+<br>
 
-You can find a real example in the [add Action Link Helper
-Script](/en/devel/helperscripts#addactionlinkphp)
+You can find a real example in the [add Action Link Helper Script](http://localhost/coreBOSDocumentation/developer-guide/development_framework/helperscripts#addactionlink-php)
 
-<table>
-<thead>
-<tr class="header">
+<br>
+<table class="table table-striped">
 <th>Type</th>
 <th>Usage</th>
 </tr>
@@ -710,7 +728,8 @@ Script](/en/devel/helperscripts#addactionlinkphp)
 </tr>
 <tr class="odd">
 <td>DETAILVIEWWIDGET</td>
-<td>A block of code contained in a box on the view of a record. It can either be a small box on the action panel or a <a href="/en/devel/add_special_block">full fledged block inserted into the existing field blocks</a></td>
+<td>A block of code contained in a box on the view of a record. It can either
+ be a small box on the action panel or a <a href="http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/add_special_block">full fledged block inserted into the existing field blocks</a></td>
 </tr>
 <tr class="even">
 <td>LISTVIEWBASIC</td>
@@ -722,7 +741,8 @@ Script](/en/devel/helperscripts#addactionlinkphp)
 </tr>
 <tr class="even">
 <td>HEADERLINK</td>
-<td>Hover menu on the top of the browser screen that contains the link. It appears next to the Preferences icon and is a global action link</td>
+<td>Hover menu on the top of the browser screen that contains the link. 
+It appears next to the Preferences icon and is a global action link</td>
 </tr>
 <tr class="odd">
 <td>HEADERSCRIPT</td>
@@ -742,16 +762,19 @@ Script](/en/devel/helperscripts#addactionlinkphp)
 </tr>
 <tr class="odd">
 <td>PRESAVE</td>
-<td>Permits us to launch code when the user clicks on the SAVE button BEFORE the operation is done. We will be able to execute code in the PHP application and force the execution of a javascript function. The javascript function takes full control of the save process which means that it must submit the form if it decides to. In order to do that it will receive the parameters: edit_type, formName, action, callback, any parameters sent by the php code</td>
+<td>Permits us to launch code when the user clicks on the SAVE button 
+BEFORE the operation is done. We will be able to execute code in the PHP 
+application and force the execution of a javascript function. The javascript 
+function takes full control of the save process which means that it must 
+submit the form if it decides to. In order to do that it will receive the 
+parameters: edit_type, formName, action, callback, any parameters sent by the php code</td>
 </tr>
 </tbody>
 </table>
-
-&lt;WRAP center round info 90%&gt;Get more details in the [How to add
-action links to a module](/en/devel/add_actions) development
-tutorial.&lt;/WRAP&gt;
+<br>
+<div class="notices red">Get more details in the  <a href="url">http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/add_actions</a> development tutorial.</div>
 
 coreBOS JavaScript Hooks
 ------------------------
 
-[Read all about them here](/en/devel/corebosjshooks)
+[Read all about them here](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebosjshooks)

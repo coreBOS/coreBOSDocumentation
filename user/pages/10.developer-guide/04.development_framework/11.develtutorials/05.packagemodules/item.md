@@ -1,12 +1,29 @@
 ---
 title: 'How to prepare modules for distribution'
+metadata:
+    description: 'How to prepare modules for distribution'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        
+    tag:
+        - distribution
+---
 ---
 
-How to prepare modules for distribution
-=======================================
-
-&lt;WRAP center round alert 60%&gt; **THIS DOCUMENTATION IS WRONG**. It
-is obsolete. We're working on it &lt;/WRAP&gt;
+<div class="notices red">
+<strong>THIS DOCUMENTATION IS WRONG</strong>. It
+is obsolete. We're working on it </div>
 
 coreBOS (5.5 forward) is prepared to make installing and distributing
 your modules easy.
@@ -25,8 +42,7 @@ started.
 Create new module or extension
 ------------------------------
 
-[You can find full details on how to create a coreBOS module or
-extension here.](/en/devel/createvtlibmodule)
+[You can find full details on how to create a coreBOS module or extension here.](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/createvtlibmodule)
 
 Create module package
 ---------------------
@@ -53,121 +69,122 @@ You must have these files in place:
 -   Smarty/templates/modules/{ModuleName} (**optional** only if needed)
 
 The complete composer.json format supported is:
-
-    {
-        "name": "Package",
-        "type": "object",
-        "properties": {
-            "name": {
+```php
+{
+    "name": "Package",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Package name, including 'vendor-name/' prefix."
+        },
+        "description": {
+            "type": "string",
+            "description": "Short package description."
+        },
+        "keywords": {
+            "type": "array",
+            "items": {
                 "type": "string",
-                "description": "Package name, including 'vendor-name/' prefix."
-            },
-            "description": {
-                "type": "string",
-                "description": "Short package description."
-            },
-            "keywords": {
-                "type": "array",
-                "items": {
-                    "type": "string",
-                    "description": "A tag/keyword that this package relates to."
-                }
-            },
-            "homepage": {
-                "type": "string",
-                "description": "Homepage URL for the project.",
-                "format": "uri"
-            },
-            "version": {
-                "type": "string",
-                "description": "Package version, see https://getcomposer.org/doc/04-schema.md#version for more info on valid schemes."
-            },
-            "time": {
-                "type": "string",
-                "description": "Package release date, in 'YYYY-MM-DD', 'YYYY-MM-DD HH:MM:SS' or 'YYYY-MM-DDTHH:MM:SSZ' format."
-            },
-            "license": {
-                "type": ["string", "array"],
-                "description": "License name. Or an array of license names."
-            },
-            "extra": {
-                "price": [number],
-                "buyemail": [email],
-                "buyurl": [uri],
-                "distribution": ["Sale","Free","Subscription","Donationware"]
-            },
-            "authors": {
-                "type": "array",
-                "description": "List of authors that contributed to the package. This is typically the main maintainers, not the full list.",
-                "items": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "required": [ "name"],
-                    "properties": {
-                        "name": {
-                            "type": "string",
-                            "description": "Full name of the author."
-                        },
-                        "email": {
-                            "type": "string",
-                            "description": "Email address of the author.",
-                            "format": "email"
-                        },
-                        "homepage": {
-                            "type": "string",
-                            "description": "Homepage URL for the author.",
-                            "format": "uri"
-                        },
-                        "role": {
-                            "type": "string",
-                            "description": "Author's role in the project."
-                        }
-                    }
-                }
-            },
-            "support": {
+                "description": "A tag/keyword that this package relates to."
+            }
+        },
+        "homepage": {
+            "type": "string",
+            "description": "Homepage URL for the project.",
+            "format": "uri"
+        },
+        "version": {
+            "type": "string",
+            "description": "Package version, see https://getcomposer.org/doc/04-schema.md#version for more info on valid schemes."
+        },
+        "time": {
+            "type": "string",
+            "description": "Package release date, in 'YYYY-MM-DD', 'YYYY-MM-DD HH:MM:SS' or 'YYYY-MM-DDTHH:MM:SSZ' format."
+        },
+        "license": {
+            "type": ["string", "array"],
+            "description": "License name. Or an array of license names."
+        },
+        "extra": {
+            "price": [number],
+            "buyemail": [email],
+            "buyurl": [uri],
+            "distribution": ["Sale","Free","Subscription","Donationware"]
+        },
+        "authors": {
+            "type": "array",
+            "description": "List of authors that contributed to the package. This is typically the main maintainers, not the full list.",
+            "items": {
                 "type": "object",
+                "additionalProperties": false,
+                "required": [ "name"],
                 "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Full name of the author."
+                    },
                     "email": {
                         "type": "string",
-                        "description": "Email address for support.",
+                        "description": "Email address of the author.",
                         "format": "email"
                     },
-                    "issues": {
+                    "homepage": {
                         "type": "string",
-                        "description": "URL to the issue tracker.",
+                        "description": "Homepage URL for the author.",
                         "format": "uri"
                     },
-                    "forum": {
+                    "role": {
                         "type": "string",
-                        "description": "URL to the forum.",
-                        "format": "uri"
-                    },
-                    "wiki": {
-                        "type": "string",
-                        "description": "URL to the wiki.",
-                        "format": "uri"
-                    },
-                    "irc": {
-                        "type": "string",
-                        "description": "IRC channel for support, as irc://server/channel.",
-                        "format": "uri"
-                    },
-                    "source": {
-                        "type": "string",
-                        "description": "URL to browse or download the sources.",
-                        "format": "uri"
-                    },
-                    "docs": {
-                        "type": "string",
-                        "description": "URL to the documentation.",
-                        "format": "uri"
+                        "description": "Author's role in the project."
                     }
+                }
+            }
+        },
+        "support": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "description": "Email address for support.",
+                    "format": "email"
+                },
+                "issues": {
+                    "type": "string",
+                    "description": "URL to the issue tracker.",
+                    "format": "uri"
+                },
+                "forum": {
+                    "type": "string",
+                    "description": "URL to the forum.",
+                    "format": "uri"
+                },
+                "wiki": {
+                    "type": "string",
+                    "description": "URL to the wiki.",
+                    "format": "uri"
+                },
+                "irc": {
+                    "type": "string",
+                    "description": "IRC channel for support, as irc://server/channel.",
+                    "format": "uri"
+                },
+                "source": {
+                    "type": "string",
+                    "description": "URL to browse or download the sources.",
+                    "format": "uri"
+                },
+                "docs": {
+                    "type": "string",
+                    "description": "URL to the documentation.",
+                    "format": "uri"
                 }
             }
         }
     }
+}
 
+```
 where only the first ***name*** and ***type*** are mandatory.
 
 ### 2.- Package the module
@@ -185,9 +202,10 @@ entering the build dirtectory and executing the pack script:
 
 -   ./pack.sh {ModuleName}
 
-&lt;WRAP center round info 70%&gt; For this to work you must add links
+<div class="notices blue">
+ For this to work you must add links
 to the main directories of your module inside the module's directory in
-build. &lt;/WRAP&gt;
+build.</div>
 
 #### Linux pack language extension
 
@@ -198,64 +216,67 @@ build. &lt;/WRAP&gt;
 You can add the next script to the root of your coreBOS install and
 execute it from the command line or the browser to get the package.
 
-&lt;WRAP center round info 70%&gt; The scripts below are the minimum
+<div class="notices blue">
+The scripts below are the minimum
 code necessary to show the functionality, you should use the complete
-scripts in the build directory. &lt;/WRAP&gt;
+scripts in the build directory. </div>
 
 These scripts are already prepared in the build directory, you simply
 have to copy to the root the one you want to use.
 
-&lt;WRAP center round alert 70%&gt; Do **NOT** leave these scripts in
+<div class="notices red">
+ Do **NOT** leave these scripts in
 the root of production systems as anyone can download any module with
-them! &lt;/WRAP&gt;
+them! </div>
 
 #### Package getting meta data from database
 
-&lt;WRAP center round info 60%&gt; This is exactly the same as going to
-the **Module Manager** and pressing the export button. &lt;/WRAP&gt;
-
+<div class="notices blue">
+ This is exactly the same as going to
+the **Module Manager** and pressing the export button. </div>
 File in build/export\_package\_database.php
 
-    <?php
-    // Turn on debugging level
-    $Vtiger_Utils_Log = false;
-    include_once('vtlib/Vtiger/Module.php');
-    $modulename = vtlib_purify($_REQUEST['modulename']);
-    $module = Vtiger_Module::getInstance($modulename);
-    $pkg = new Vtiger_Package();
-    $pkg->export($module,'',$modulename.'.zip',true);
-
-    ?>
-
+```php
+<?php
+// Turn on debugging level
+$Vtiger_Utils_Log = false;
+include_once('vtlib/Vtiger/Module.php');
+$modulename = vtlib_purify($_REQUEST['modulename']);
+$module = Vtiger_Module::getInstance($modulename);
+$pkg = new Vtiger_Package();
+$pkg->export($module,'',$modulename.'.zip',true);
+?>
+```
 #### Package getting meta data from manifest.xml file
 
 File in build/export\_package\_filesystem.php
+```php
+<?php
+// Turn on debugging level
+$Vtiger_Utils_Log = false;
+include_once('vtlib/Vtiger/Module.php');
 
-    <?php
-    // Turn on debugging level
-    $Vtiger_Utils_Log = false;
-    include_once('vtlib/Vtiger/Module.php');
+$modulename = vtlib_purify($_REQUEST['modulename']);
+Vtiger_Package::packageFromFilesystem($modulename,false,true);
 
-    $modulename = vtlib_purify($_REQUEST['modulename']);
-    Vtiger_Package::packageFromFilesystem($modulename,false,true);
-
-    ?>
+?>
+```
 
 #### Language Package getting meta data from manifest.xml file
 
 File in build/export\_language\_filesystem.php
+```php
+<?php
+// Turn on debugging level
+$Vtiger_Utils_Log = false;
+include_once('vtlib/Vtiger/Module.php');
 
-    <?php
-    // Turn on debugging level
-    $Vtiger_Utils_Log = false;
-    include_once('vtlib/Vtiger/Module.php');
+$languagecode = vtlib_purify($_REQUEST['languagecode']);
+$languagename = vtlib_purify($_REQUEST['languagename']);
+Vtiger_Package::languageFromFilesystem($languagecode,$languagename,true);
 
-    $languagecode = vtlib_purify($_REQUEST['languagecode']);
-    $languagename = vtlib_purify($_REQUEST['languagename']);
-    Vtiger_Package::languageFromFilesystem($languagecode,$languagename,true);
-
-    ?>
-
+?>
+```
 ### 3.- Send package for distribution
 
     *To have your new module installed by default when installing coreBOS, copy the package file to the **packages/mandatory** directory.

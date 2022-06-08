@@ -250,6 +250,6 @@ Translating the Documentation (Wiki)
     satisfied with the result
 
 <div class="notices blue"> don't forget to add your name and
-details in the [contributions page](/en/devel/contributors)
+details in the [contributions page](http://localhost/coreBOSDocumentation/others/contributors)
 </div>
 -   send us a pull request
