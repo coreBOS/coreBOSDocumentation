@@ -43,8 +43,8 @@ Additionally we can also configure the forecasting to **accumulate based on prod
 
 All these different accumulating options are controlled by different combinations of checkboxes as detailed next:
 
-- **Only Related**: this check box indicates that this forecast will accumulate **only** on those potentials that have the same related product/service as the value in the field “Related to”. **NOTE:** if this is selected together with the “Use Category” option, some inconsistencies may occur.
-- **Use Category**: this check box indicates that this forecast will accumulate on those potentials that are related to a product/service in the same category as the one selected in the Category picklist. **NOTE:** if this is selected together with the “Only Related” option, some inconsistencies may occur.
+- **Only Related**: this check box indicates that this forecast will accumulate **only** on those potentials that have the same related product/service as the value in the field "Related to". **NOTE:** if this is selected together with the "Use Category" option, some inconsistencies may occur.
+- **Use Category**: this check box indicates that this forecast will accumulate on those potentials that are related to a product/service in the same category as the one selected in the Category picklist. **NOTE:** if this is selected together with the "Only Related" option, some inconsistencies may occur.
 - **Only assigned to**: this indicates that this forecast will accumulate only those potentials that fulfill the previous options AND belong to the same user associated to this forecast. This permits us to control individual goals of our sales men.
 
 We have modified the reporting system to establish the relations on the forecast module permitting limited reporting capabilities within the vtiger CRM application.

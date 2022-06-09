@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - webform
 ---
----
+
 ## Webservice Webforms
 
 [coreBOS Webservice Webform](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/coreboswswebform)
@@ -32,7 +32,7 @@ postby jtrombley80 » Thu Nov 01, 2012 10:37 pm THANK YOU
 
 Ran into a situation recently where I needed a Webform sitting out on the internet to hit a server in a DMZ and then be relayed from that server to a coreBOS server behind a firewall. The DMZ server was the only one allowed to talk to the coreBOS instance and it wasn't the server hosting the webform. Here's what I did in case anyone has a similar need.
 
-Set the form post on the internet webform to go to “themiddlemanserver/relay.php”
+Set the form post on the internet webform to go to "themiddlemanserver/relay.php"
 
 Enabled cURL in PHP on the DMZ server. Contents of relay.php is:
 

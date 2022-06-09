@@ -18,8 +18,7 @@ taxonomy:
         - event
     tag:
         - hooks
-        - popup 
----
+        - popup
 ---
 
 ## Popup open hook
@@ -77,7 +76,7 @@ This method **MUST** return a value, always. In case of not wanting to execute a
 
 ### Example: basic search
 
-This example will modify the product capture field on Assets, so it lists only those products that contain the text “Pack”.
+This example will modify the product capture field on Assets, so it lists only those products that contain the text "Pack".
 
 1. **define the new javascript function that will be called**
 
@@ -122,7 +121,7 @@ index cf4764d..70a7d83 100755
  		//Inserting into product_taxrel table
 ```
 ### Example: advanced search
-This example will modify the product capture field on Assets, so it lists only those products that contain the text “Pack” or are in the “Hardware” category.
+This example will modify the product capture field on Assets, so it lists only those products that contain the text "Pack" or are in the "Hardware" category.
 
  1. **define the new javascript function that will be called**
  

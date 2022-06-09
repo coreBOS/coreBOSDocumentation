@@ -21,7 +21,6 @@ taxonomy:
         - install
         - guidelines
 ---
----
 
 ## How to set up a coreBOS development environment: git workflow
 

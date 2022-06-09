@@ -19,8 +19,10 @@ taxonomy:
     tag:
         - businessmaps
 ---
----
+
 The Business Mappings and Conditions module permits **implementors** to define high-level configuration options for the execution of the application.
+
+===
 
 Using different types of structured XML, JSON or direct SQL, this module will define conditions, field mappings, and other advanced logic to modify the functionality of the application without the need to get into programming details.
 
@@ -47,27 +49,27 @@ We have a relation of different Business Mappings we use where you can find a wh
 
 There are currently these different types of mappings:
 
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/condition-query">- Condition Query</a> <br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/condition-expression">- Condition Expression</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/mapping">- (Field) Mapping</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/extendedfieldinfo">- Extended Field Information Mapping</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/record_access_control">- Record Access Control</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/list_columns">- List Columns</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/record_set">- Record Set Mapping</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/module_set">- Module Set Mapping</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/field_set">- Field Set Mapping</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/masterdetailmapping">- Master Detail Mapping</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/iomap">- IOMap</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/infomap">- Information Map</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/field_dependency">- Field Dependency</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/validations">- Validations</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/relatedpanes">- Related Panes</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/import">- Import</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/duplicaterecords">- Duplicate Records</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/globalsearch">- Global Search Autocomplete</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/detailviewlayout">- Detail View Layout</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/decisiontable">- Decision Table</a><br>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/webservicecall">- REST/SOAP call and retrieval</a><br>
+- [Condition Query](condition-query)
+- [Condition Expression](condition-expression)
+- [(Field) Mapping](mapping)
+- [Extended Field Information Mapping](extendedfieldinfo)
+- [Record Access Control](record_access_control)
+- [List Columns](list_columns)
+- [Record Set Mapping](record_set)
+- [Module Set Mapping](module_set)
+- [Field Set Mapping](field_set)
+- [Master Detail Mapping](masterdetailmapping)
+- [IOMap](iomap)
+- [Information Map](infomap)
+- [Field Dependency](field_dependency)
+- [Validations](validations)
+- [Related Panes](relatedpanes)
+- [Import](import)
+- [Duplicate Records](duplicaterecords)
+- [Global Search Autocomplete](globalsearch)
+- [Detail View Layout](detailviewlayout)
+- [Decision Table](decisiontable)
+- [REST/SOAP call and retrieval](webservicecall)
 
 Depending on the type of business mapping the contents of the record changes as explained next.
 <div class="notices red">
@@ -137,7 +139,7 @@ $focus->search_fields = $cbMap->ListColumns()->getSearchFields();
 
 ### How to add a Business Mapping Type Generator
 
-Each Business Map record has an action link named “Generate Map”. This link opens a window with a specific editor for each type of map which will help us construct the map in a more or less graphical way.
+Each Business Map record has an action link named "Generate Map". This link opens a window with a specific editor for each type of map which will help us construct the map in a more or less graphical way.
 
 coreBOS gives the programmer of the map the necessary infrastructure to simply implement the editor and not have to worry about the details.
 
@@ -168,6 +170,6 @@ You can find an example in the Module Set Mapping
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/condition-query) | Chapter 1: Condition Query.
+[Next](condition-query) | Chapter 1: Condition Query.
 
 ------------------------------------------------------------------------

@@ -20,10 +20,8 @@ taxonomy:
         - rule
         - decision
 ---
----
 
-coreBOS Rules are a step towards
-[BPM](https://en.wikipedia.org/wiki/Business_process_management)
+coreBOS Rules are a step towards [BPM](https://en.wikipedia.org/wiki/Business_process_management)
 automation using the workflow infrastructure.
 
 A **rule** is a [Condition Query](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/condition-query), a [Condition Expression](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/condition-expression) or

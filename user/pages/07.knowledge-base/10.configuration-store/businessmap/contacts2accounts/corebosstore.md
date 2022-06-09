@@ -276,7 +276,7 @@ taxonomy:
 </map>
 ```
 
-This script will add the “converted from” field present in the mapping and the action link on Contacts.
+This script will add the "converted from" field present in the mapping and the action link on Contacts.
 
 ```php
 <?php

@@ -15,12 +15,10 @@ content:
 taxonomy:
     category:
         - development
-        
     tag:
         - events
         - links
         - hooks
----
 ---
 
 Explanation

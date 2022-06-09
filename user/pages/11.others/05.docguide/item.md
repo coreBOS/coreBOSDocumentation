@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - corebos
 ---
----
 
 The wiki is divided into some top level categories like [User Manual](http://localhost/coreBOSDocumentation/user-manual) and [Administrator Manual](adminmanual). Each of
 these is divided into four additional categories:

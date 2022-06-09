@@ -632,7 +632,7 @@ is present it will send its value to the workflow expression system, get
 back the result and use that result to search the Decision Table Module.
 If you think about it the preprocess directive carries the work of the
 Execute Expression workflow task. You don’t need to explicitly use the
-workflow system because the preprocess directive will “call” it for you.
+workflow system because the preprocess directive will "call" it for you.
 
 **Example:**
 

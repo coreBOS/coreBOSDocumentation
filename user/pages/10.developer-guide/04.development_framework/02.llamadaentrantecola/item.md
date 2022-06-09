@@ -19,19 +19,18 @@ taxonomy:
     tag:
         - integration
 ---
----
 
 Artículo publicado [en este blog](http://robert-sp-86.blogspot.com/2012/03/vtiger-popup-llamada-entrante-cola.html) y replciado aquí para que no se pierda.
 
 Se supone configurado el módulo PBX Manager del Vtiger CRM correctamente.
 
-Vtiger CRM, permite que un usuario registrado en él, reciba notificaciones de llamadas entrantes a su extensión. Esta extensión, necesariamente deberá ser especificada en el módulo de Configuración del CRM. Para llegar hasta allí, una vez autenticado, haga click en el link “ Configuración ” y luego click en el link “Usuarios”. Seguidamente aparecerán todos los usuarios registrados en el Vtiger. Al hacer click en el nombre de algún usuario, aparecerá un formulario con su información disponible para ser modificada si usted cuenta con los privilegios.
+Vtiger CRM, permite que un usuario registrado en él, reciba notificaciones de llamadas entrantes a su extensión. Esta extensión, necesariamente deberá ser especificada en el módulo de Configuración del CRM. Para llegar hasta allí, una vez autenticado, haga click en el link " Configuración " y luego click en el link "Usuarios". Seguidamente aparecerán todos los usuarios registrados en el Vtiger. Al hacer click en el nombre de algún usuario, aparecerá un formulario con su información disponible para ser modificada si usted cuenta con los privilegios.
 
-Existe un campo de texto que es para colocar el número de extensión de Elastix. Esta extensión deberá estar previamente registrada en dicho servidor de comunicaciones unificadas. Si usted es usuario del CRM, puede hacer click en link “Mis preferencias” (zona superior derecha de la página) y llenar su propio perfil. Para poder recibir notificaciones de llamadas, deberá introducir un número de extensión, ya registrado en el servidor Elastix, que usted previamante habrá asociado con el CRM, en el campo correspondiente.
+Existe un campo de texto que es para colocar el número de extensión de Elastix. Esta extensión deberá estar previamente registrada en dicho servidor de comunicaciones unificadas. Si usted es usuario del CRM, puede hacer click en link "Mis preferencias" (zona superior derecha de la página) y llenar su propio perfil. Para poder recibir notificaciones de llamadas, deberá introducir un número de extensión, ya registrado en el servidor Elastix, que usted previamante habrá asociado con el CRM, en el campo correspondiente.
 
-Si usted está autenticado en el Vtiger, y su extensión recibe una llamada, se mostrará un “popup” como notificación de que la está recibiendo. Pero existe una limitante. Si su extensión recibe una llamada procedente de una cola… no le llegará a usted la notificación.
+Si usted está autenticado en el Vtiger, y su extensión recibe una llamada, se mostrará un "popup" como notificación de que la está recibiendo. Pero existe una limitante. Si su extensión recibe una llamada procedente de una cola… no le llegará a usted la notificación.
 
-El fichero cron/modules/PBXManager/AsteriskClient.php tiene como función escuchar los eventos que se llevan acabo en el servidor que contiene a Asterisk. En este fichero, existe la función “asterisk_handleResponse1”. Esta función filtra los eventos que hacen “Ring” a través de esta condición:
+El fichero cron/modules/PBXManager/AsteriskClient.php tiene como función escuchar los eventos que se llevan acabo en el servidor que contiene a Asterisk. En este fichero, existe la función "asterisk_handleResponse1". Esta función filtra los eventos que hacen "Ring" a través de esta condición:
 
 ```php
 if (
@@ -40,7 +39,7 @@ if (
 )
 ```
 
-Y la función “asterisk_handleResponse2” filtra los eventos de la siguiente forma:
+Y la función "asterisk_handleResponse2" filtra los eventos de la siguiente forma:
 
 ```php
 if (
@@ -53,7 +52,7 @@ Los eventos que no se capturen en asterisk_handleResponse1, pasarán a ser filtr
 
 El flujo de una llamada entrante hasta que se muestra el popup es el siguiente: (se supone corriendo el fichero AsteriskClient.php)
 
-1-) Llamada entrante dispara los eventos Newstate y/o Newchannel que contienen los headers: ChannelStateDesc (en la version 1.6) o State (en la version 1.4) cuyos valores pueden ser “Ring” o “Ringing”. Y son capturados en asterisk_handleResponse1. Ejemplos de eventos:
+1-) Llamada entrante dispara los eventos Newstate y/o Newchannel que contienen los headers: ChannelStateDesc (en la version 1.6) o State (en la version 1.4) cuyos valores pueden ser "Ring" o "Ringing". Y son capturados en asterisk_handleResponse1. Ejemplos de eventos:
 
 ```
 Event: Newstate
@@ -92,9 +91,9 @@ El código, no me dediqué a optimizarlo, en cuanto hallé la solución, pues en
 
 Por qué no funciona el popup cuando la llamada proviene de una cola?
 
-1) En la función handleResponse1 cuando una llamada hace Ring, o está haciendo Ringing se filtra por el evento “Newstate” o “Newchannel”. Eso está bien, pero sucede, que las cabeceras CallerIDName (from_name) y CallerIDNum (from_number) están vacías cuando provienen de una cola. Y eso es un inconveniente porque se guarda el evento en la tabla asteriskincomingevents con estos datos en null y cuando se le consulta no hay forma de saber quien llama y entonces la notificación no se puede llevar cabo.
+1) En la función handleResponse1 cuando una llamada hace Ring, o está haciendo Ringing se filtra por el evento "Newstate" o "Newchannel". Eso está bien, pero sucede, que las cabeceras CallerIDName (from_name) y CallerIDNum (from_number) están vacías cuando provienen de una cola. Y eso es un inconveniente porque se guarda el evento en la tabla asteriskincomingevents con estos datos en null y cuando se le consulta no hay forma de saber quien llama y entonces la notificación no se puede llevar cabo.
 
-2) En la función handleResponse2 cuando una llamada viene de una cola, el evento que se dispara es “Dial”. Esta función no tenía filtro para este evento en la la primera condicional “if” de la función. Y es precisamente este evento el que contiene la información del llamante y el receptor de la llamada. Una vez conocido esto, es cuando se pueden actualizar los datos del evento en la tablaasteriskincomingevents teniendo en cuenta que ya se había insertado el evento, con estos datos vacíos, desde la función handleResponse1 . Una vez encontrado el Uniqueid o UniqueID del registrado en la función anterior, se actualizan los atributos from_name, from_number y to_number de la tabla asteriskincomingevents. Y con estos datos actualizados ya es posible isertar en la tabla asteriskincomingcalls, desde la cual, el script TraceIncomingCall.php puede saber las llamadas entrantes para poder construir el popup con los datos.
+2) En la función handleResponse2 cuando una llamada viene de una cola, el evento que se dispara es "Dial". Esta función no tenía filtro para este evento en la la primera condicional "if" de la función. Y es precisamente este evento el que contiene la información del llamante y el receptor de la llamada. Una vez conocido esto, es cuando se pueden actualizar los datos del evento en la tablaasteriskincomingevents teniendo en cuenta que ya se había insertado el evento, con estos datos vacíos, desde la función handleResponse1 . Una vez encontrado el Uniqueid o UniqueID del registrado en la función anterior, se actualizan los atributos from_name, from_number y to_number de la tabla asteriskincomingevents. Y con estos datos actualizados ya es posible isertar en la tabla asteriskincomingcalls, desde la cual, el script TraceIncomingCall.php puede saber las llamadas entrantes para poder construir el popup con los datos.
 
 Las funciones asterisk_handleResponse1 y asterisk_handleResponse2 están descritas debajo, con las modificaciones que permiten que funcione el popup.
 

@@ -18,8 +18,6 @@ taxonomy:
     tag:
         - changeset
 ---
----
-
 
 This change will convert state fields on Accounts, Contacts, Vendors,
 Leads and Inventory modules into shared picklists.<br>

@@ -53,7 +53,7 @@ If we want to obtain the records that do not meet a condition, we will use:
 {foreach <MODULE>.<FIELD> != <VALUE>}
 ```
 
-That will get all records with the field “Destruction Method” NOT empty.
+That will get all records with the field "Destruction Method" NOT empty.
 
 ### Nested foreach
 

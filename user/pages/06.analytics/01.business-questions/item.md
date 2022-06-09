@@ -19,17 +19,16 @@ taxonomy:
     tag:
         - analytics
 ---
----
 
 ## SQL Query. Filter Conditions
 
-When “SQL Query” is marked:
+When "SQL Query" is marked:
 
--   the Columns are meant to be a comma-separated list of columns
--   the Conditions field is meant to be a correct list of joins and a where conditions
--   the sort and group by also must be a correct column specification
+- the Columns are meant to be a comma-separated list of columns
+- the Conditions field is meant to be a correct list of joins and a where conditions
+- the sort and group by also must be a correct column specification
 
-When “Conditions in Filter Format” is marked, the Conditions are supposed to be a JSON array specification of fields and conditions grouped as per the syntax followed in the filter system. For example:
+When "Conditions in Filter Format" is marked, the Conditions are supposed to be a JSON array specification of fields and conditions grouped as per the syntax followed in the filter system. For example:
 
 ```
 [[{"field":"subject","op":"c","value":"an","glue":"or"},{"field":"pl_gross_total","op":"g","value":"20","glue":""}]]
@@ -75,14 +74,14 @@ There should be inserted some useful actions in the DetailView of each Business 
 
 When using the workflow approach, we could run into a situation where we create an inconsistent view. The way the workflow updates the view is on each save of the main module. The code finds the row in the view that has changed and updates it. Now let's suppose that the view is retrieving information from a related table. For example, our view is on project tasks and it contains information from the related project. If any of that information on the Project changes, our view will not update the corresponding rows.
 
-If we want a historical view, the behavior described may be desired, but if we want to update the rows, we have to activate the “Update View when Related Changes” checkbox and define the related module we want to control in the “Related Module List” picklist.
+If we want a historical view, the behavior described may be desired, but if we want to update the rows, we have to activate the "Update View when Related Changes" checkbox and define the related module we want to control in the "Related Module List" picklist.
 
 The code will activate a scheduled task that will retrieve the related information that has changed since the last execution and update all affected rows. Note that this must be done in the background as the number of affected rows can be potentially very high.
 
 Finally, if we are using a custom SQL written manually and that query has an alias on the main module table and/or on the crmentity table, we must indicate the name of those aliases in the corresponding fields in order for the application to know where to modify the query for individual row updates.
 
 ## File Exports
-Business questions support a “File” type which will generate a CSV dump of the question. This file will be saved in the cache directory and the path to the file returned.
+Business questions support a "File" type which will generate a CSV dump of the question. This file will be saved in the cache directory and the path to the file returned.
 
 The File type has an extended properties syntax that permits us to define the details of the generated CSV file. The complete properties object looks like this:
 
@@ -113,7 +112,7 @@ So we can define all the details of the CSV file formatting.
 The column labels are positional. That means that if you want to put a label on the fifth column you must set also the first four.
 
 ## Mermaid Graphs
-A mermaid graph is defined by putting the body of the markdown inside the “Columns” field and the Mermaid graph type in the “Properties” field. Like this:
+A mermaid graph is defined by putting the body of the markdown inside the "Columns" field and the Mermaid graph type in the "Properties" field. Like this:
 
 ![](cbmermaid01.png?width=100%)
 
@@ -125,7 +124,7 @@ We can also use a more advanced property definition to establish node and link s
 
 The idea is that we can have a process established in a module. This process is related to a field in the module that passes through some states. For example, the sales stage picklist in Potentials. As the opportunity is worked on, the different sales stage states are selected. At any given point in the life of the opportunity, we can load a mermaid graph that will ask ModTracker which have been the changes that the record (the sales stage field) has gone through, and for each one, we will be able to apply a style.
 
-With this functionality you will see a different style on each record you open in detail view, reflecting the transitions in the life of each particular record. If you show the mermaid graph above, where the styling is fixed in the “columns” field, you would always see the same graph on all records which is not what you need to show the user.
+With this functionality you will see a different style on each record you open in detail view, reflecting the transitions in the life of each particular record. If you show the mermaid graph above, where the styling is fixed in the "columns" field, you would always see the same graph on all records which is not what you need to show the user.
 
 The extended syntax looks like this:
 
@@ -165,7 +164,7 @@ The extended syntax looks like this:
 
 The only nodes and links that will be styled are those that the record has gone through, all the others will use the default mermaid styling.
 
-If a node has a condition, the business map will be executed, if it passes the “*styleaccepted” will be applied, and if not the “*stylerejected”. If either of them are empty, or there is no condition the styling rules defined in the “defaults” section will be applied.
+If a node has a condition, the business map will be executed, if it passes the "*styleaccepted" will be applied, and if not the "*stylerejected". If either of them are empty, or there is no condition the styling rules defined in the "defaults" section will be applied.
 
 The node and link MUST appear in the definition section or they will not be styled.
 
@@ -360,7 +359,7 @@ block://DependencyGraphBlock:modules/cbQuestion/DependencyGraphBlock.php:targeti
 
 ```
 
-where “44181” is the crmid of the Business Question
+where "44181" is the crmid of the Business Question
 
 and you must load the Mermaid library to convert the markdown to a graph with another Business Action like this
 

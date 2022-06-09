@@ -29,7 +29,7 @@ Both are installed as any other module using the Module Manager.
 Once installed you will find both extensions accessible from the Tools menu but the normal usage will be through the detail view widget that will appear on all those modules that you activate the extension for. Click on the Settings icon for the document generator and enter the Activate Modules section to activate the extension on those modules you want.
 
 ## Upload Templates
-Templates are uploaded as documents in the Documents module. The only difference is that you must mark the “Template” checkbox and you must select the main module the template was created for in the “Module” picklist.
+Templates are uploaded as documents in the Documents module. The only difference is that you must mark the "Template" checkbox and you must select the main module the template was created for in the "Module" picklist.
 
 I recommend creating a folder to hold all your templates or various folders with names that make it easy to group the templates and distinguish them from other documents.
 
@@ -87,7 +87,7 @@ docker run -d -p 8099:3000 --env-file=docker.env --name unoconv sfoxdev/unoconv
 ```
 which leaves the service listening on port 8099. The docker.env file is an empty file (probably not even needed)
 
-Obviously, you can also open the OpenOffice document and click on the “PDF” button to convert the ODT to PDF.
+Obviously, you can also open the OpenOffice document and click on the "PDF" button to convert the ODT to PDF.
 
 Let's add some indications about each type.
 

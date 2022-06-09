@@ -20,7 +20,6 @@ taxonomy:
         - howto
         - capture
 ---
----
 
 <div class="notices red">
 This article is obsolete! As of

@@ -15,10 +15,8 @@ content:
 taxonomy:
     category:
         - development
-        
     tag:
         - rte
----
 ---
 
 -   set the Global Variable **Application\_Use\_RTE** to 1 for the

@@ -18,19 +18,18 @@ taxonomy:
     tag:
         - filter
 ---
----
 
 The View Management module permits us to fine tune the sharing rules of filters on each module and a view itself.
 
-The record has **two “modes”**, one for the settings of a filter and another for the default permissions of the module. This dual mode is defined by the value of the “Default Setting” checkbox.
+The record has **two "modes"**, one for the settings of a filter and another for the default permissions of the module. This dual mode is defined by the value of the "Default Setting" checkbox.
 
-To set the permission for a view, we uncheck the “Default Setting” checkbox which puts the record in View permission mode. Then we can select the User, Group or Role for which we want to set the permissions. Finally, we set the CRUD-A permissions and the Default status. We can make this the mandatory setting for the selected User/Group/Role.
+To set the permission for a view, we uncheck the "Default Setting" checkbox which puts the record in View permission mode. Then we can select the User, Group or Role for which we want to set the permissions. Finally, we set the CRUD-A permissions and the Default status. We can make this the mandatory setting for the selected User/Group/Role.
 
-If the “Default Setting” is checked then you must select the module for which you want to set the permissions and mark the permission set you want. This will define the default permissions on all views for the selected modules if no other record with specific settings is found.
+If the "Default Setting" is checked then you must select the module for which you want to set the permissions and mark the permission set you want. This will define the default permissions on all views for the selected modules if no other record with specific settings is found.
 
 So, for any view we can select that view in the initial picklist and then select the user and set the Retrieve, Update, Delete and Approve permissions that user will have over the filter.
 
-With the “Default Setting” set to true, we can define the **C**reate, **R**etrieve, **U**pdate, **D**elete and **A**pprove permissions that all users will have over in the module.
+With the "Default Setting" set to true, we can define the **C**reate, **R**etrieve, **U**pdate, **D**elete and **A**pprove permissions that all users will have over in the module.
 
 ## Sync with List View Filters
 
@@ -49,7 +48,7 @@ When a new filter is created on a module, the application will automatically cre
 -   Module List = Empty
 -   Set Public = T
 
-This will permit you to create a workflow that detects the “Set Public” checkbox and send an email to any user who needs to **Approve** the filter for other users.
+This will permit you to create a workflow that detects the "Set Public" checkbox and send an email to any user who needs to **Approve** the filter for other users.
 
 When a filter is updated, the shared fields are updated.
 

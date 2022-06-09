@@ -18,8 +18,7 @@ taxonomy:
         - event
     tag:
         - hooks
-        - popup 
----
+        - popup
 ---
 
 This hook permits us to directly manipulate the query to be executed in the Pop-up capture screen for our module.
@@ -29,7 +28,7 @@ Although the Pop-up capture screen has some very advanced searching capabilities
 
 The rest of the article will be based on a real example of an open source module that coreBOS has which uses this hook to implement the pop-up restrictions it requires without modifying any of the base code in the application. The module is [coreBOS Address,](https://github.com/tsolucio/coreBOSAddress) which represents a many to many relation between physical addresses and accounts/contacts. Any given address record can be related to many accounts and contacts while any given account or contact can have many addresses. You can [find the module on github.](https://github.com/tsolucio/coreBOSAddress) 
 
-This module adds some “helper” fields on the inventory modules so you can easily select any address related to the account/contact of the record. For example, when creating an invoice, you select an account and the billing and shipping address fields get automatically filled in. Now imagine that the invoice we are creating requires us to have a different billing or shipping address. Obviously, we want to select this address from among the different addresses that we have already created in the [coreBOS Address module.](https://github.com/tsolucio/coreBOSAddress) To make this possible, that module adds an address select field for us to click on and open a pop-up window with all the addresses, so we can select the one we need and have it update the invoice address fields for us.
+This module adds some "helper" fields on the inventory modules so you can easily select any address related to the account/contact of the record. For example, when creating an invoice, you select an account and the billing and shipping address fields get automatically filled in. Now imagine that the invoice we are creating requires us to have a different billing or shipping address. Obviously, we want to select this address from among the different addresses that we have already created in the [coreBOS Address module.](https://github.com/tsolucio/coreBOSAddress) To make this possible, that module adds an address select field for us to click on and open a pop-up window with all the addresses, so we can select the one we need and have it update the invoice address fields for us.
 
 The issue is that to make this even more useful than it already is, we want the pop-up window with the addresses to show us ONLY those addresses that are related to the account and/or contact selected on the invoice. After all, those are the ones with higher probability of being the one we want.
 
@@ -153,7 +152,7 @@ Second it adds the <strong>getQueryByModuleField()</strong> method [which looks 
 where we can see that first it looks for the two variables that are intended for this code. If they do not exist then the module is being called from somewhere else that does not require the advanced custom query so it returns the query that the pop-up had already obtained (it could have also returned an empty string or FALSE to obtain the same result). If they do exist then it constructs a personalized SQL query that joins upon the vtiger_crmentityrel table where the many to many relation between account/contact and address is being held and adds the conditions to restrict the set of addresses to those related to the given account or contact. Giving this new SQL back to the pop-up capture code is all that we need to do to have the pop-up filled in with the records we want.
 
 <div class="notices red">
-It is important to process the “where” part of the SQL obtained by the pop-up capture code because it will contain search queries that the user may be launching and that should affect the set of records returned.
+It is important to process the "where" part of the SQL obtained by the pop-up capture code because it will contain search queries that the user may be launching and that should affect the set of records returned.
 </div>
 
 In the example above there is some additional code condition to detect the request from the user to show all records. In that case we must return the query obtained by the pop-up capture code and not apply the restrictions.

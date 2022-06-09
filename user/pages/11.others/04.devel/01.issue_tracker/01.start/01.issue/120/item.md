@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - issue
 ---
----
 
 Issue Reference in Tracker: ~issue:120~
 
@@ -31,7 +30,7 @@ The first profiles confirmed our intuition as can be seen in the next images:
 
 ![](coreboscp_profile002.png?width=100%)
 
-The most time consuming process is the call to coreBOS REST API using php_curl functions. After that, the next 5 consuming functions are all inside coreBOS, basically retrieving information. This is totally consistent and expected, after all, coreBOS is doing all the work, coreBOSCP is “just” a front end.
+The most time consuming process is the call to coreBOS REST API using php_curl functions. After that, the next 5 consuming functions are all inside coreBOS, basically retrieving information. This is totally consistent and expected, after all, coreBOS is doing all the work, coreBOSCP is "just" a front end.
 
 So my first step is to try to optimize the cURL call directly. I setup xdebug trace on send_post_data and get this:
 ```

@@ -20,7 +20,7 @@ taxonomy:
         - condition
         - expression
 ---
----
+
 This mapping permits us to evaluate an expression in the context of the application and get the result to decide subsequent actions. It accepts two formats, one is a direct expression from the workflow expression engine and the other is a function expression that can be called from inside the system. The function parameters will be changed to the current record values if they exist.
 
 ===

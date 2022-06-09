@@ -18,8 +18,6 @@ taxonomy:
         - webservice
     tag:
         - howto
-
----
 ---
 
 In the default behaviour, a web service call to either **revise** or

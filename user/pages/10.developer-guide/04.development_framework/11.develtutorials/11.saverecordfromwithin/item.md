@@ -14,11 +14,11 @@ content:
     url_taxonomy_filters: true
 taxonomy:
     category:
-        - development 
+        - development
     tag:
         - howto
 ---
----
+
 <div class="notices blue">
 Please <a href="https://blog.corebos.org/blog/feedingdatatosave"> read this very well explained article </a> from Luke.
 </div>

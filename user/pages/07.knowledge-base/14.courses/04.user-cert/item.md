@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - certification
 ---
----
 
 ## Introducción a CRM
 

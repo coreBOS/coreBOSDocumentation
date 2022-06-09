@@ -18,8 +18,7 @@ taxonomy:
         - event
     tag:
         - hooks
-        - save 
----
+        - save
 ---
 
 There are four filters that are launched on each of the Create, Retrieve, Update and Delete actions.

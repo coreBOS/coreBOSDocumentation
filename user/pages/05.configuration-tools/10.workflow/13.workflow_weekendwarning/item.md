@@ -29,7 +29,7 @@ Our task here is to send an email to a group of users every time a
 Payment is created on specific days, in our case, **only** weekend days.
 
 The first thing we are going to need is a new custom field (we are going
-to call it “Day of the week”, you can name it whatever you want).
+to call it "Day of the week", you can name it whatever you want).
 
 This field will be of the **type "number"** and it will hold a number
 from 1-7, representing each day of the week (1-Monday, 2-Tuesday...

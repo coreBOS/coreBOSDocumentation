@@ -40,17 +40,17 @@ The <strong>first workflow</strong> looks like this:
 
 ![](ticketwfinformandclose01.png?width=100%)
 
-where we can see that it will be launched against the **Trouble Tickets** module **every time the record is saved**. The workflow will look for the ticket entering the “Wait for Response” status and launch the tasks only when that happens.
+where we can see that it will be launched against the **Trouble Tickets** module **every time the record is saved**. The workflow will look for the ticket entering the "Wait for Response" status and launch the tasks only when that happens.
 
 It has two email tasks associated which look like this:
 
 ![](ticketwfinformandclose02.png?width=100%)
 
-The important parts here are the 3 day delay in sending and the additional condition. When an email task is evaluated, in this case when the ticket enters “Wait for Response” status, it is automatically put in a queue for it to be sent. Once in the queue it will ALWAYS be sent. In this case we tell the system to send it 3 days from “now” so we get our 3 day offset BUT when the day comes we may not want to send it anymore because the ticket has had some changes. In this case we have to add additional conditions on the email itself to detect this case and abort the email if it shouldn't be sent. The condition I use is the “more than hours before” on the modified time and also that the status is still “Wait for Response”. It is possible that just with the last condition we could have enough.
+The important parts here are the 3 day delay in sending and the additional condition. When an email task is evaluated, in this case when the ticket enters "Wait for Response" status, it is automatically put in a queue for it to be sent. Once in the queue it will ALWAYS be sent. In this case we tell the system to send it 3 days from "now" so we get our 3 day offset BUT when the day comes we may not want to send it anymore because the ticket has had some changes. In this case we have to add additional conditions on the email itself to detect this case and abort the email if it shouldn't be sent. The condition I use is the "more than hours before" on the modified time and also that the status is still "Wait for Response". It is possible that just with the last condition we could have enough.
 
 The 4 day offset email is identical but with the 4 day numbers.
 
-The <a href="http://localhost/coreBOSDocumentation/configuration-tools/workflow/scheduled_workflows">scheduled workflow explanation has a nice image explaining</a> the “more than” condition.
+The <a href="http://localhost/coreBOSDocumentation/configuration-tools/workflow/scheduled_workflows">scheduled workflow explanation has a nice image explaining</a> the "more than" condition.
 
 The **second workflow** is a scheduled workflow that launches once a day looking for inactive tickets and closing them after sending and email. That will be two task, and **update field** task to change the status and an **email task** to send the email. This looks like this:
 
@@ -75,7 +75,7 @@ el inconveniente es que este correo se mandará siempre, o sea, si cancelas el p
 
 **En coreBOSCRM**
 
-haces lo mismo que en coreBOS pero añades condiciones al flujo y marcas una nueva opción que hemos añadido que se encuentra en las condiciones del flujo que se llama *“Evaluar condiciones en el momento de la ejecución”*
+haces lo mismo que en coreBOS pero añades condiciones al flujo y marcas una nueva opción que hemos añadido que se encuentra en las condiciones del flujo que se llama *"Evaluar condiciones en el momento de la ejecución"*
 
 
 ![](noenviarsiterminado.png?width=100%)

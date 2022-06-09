@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - faq
 ---
----
 
 [Can I install vtDZiner](http://localhost/coreBOSDocumentation/extensions-integrations/corebosmodules/faq/id:9ec9822d1f22ee6a0400538509372f1c/store:corebosmodule#can-i-install-vtdziner) <br>
 [How can I add new fonts to pdfmaker? I need to use Helvetica Neue Light](http://localhost/coreBOSDocumentation/extensions-integrations/corebosmodules/faq/id:9ec9822d1f22ee6a0400538509372f1c/store:corebosmodule#how-can-i-add-new-fonts-to-pdfmaker-i-need-to-use-helvetica-neue-light)<br>

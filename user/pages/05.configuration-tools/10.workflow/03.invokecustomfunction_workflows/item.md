@@ -29,7 +29,7 @@ The steps are:
 
 -   create a new workflow and select the main module
 -   give it a name and set the conditions
--   create a new task and select the “Invoke Custom Function” task
+-   create a new task and select the "Invoke Custom Function" task
 -   On the configuration screen we will find a drop down select box with the available functions for that module
 -   Simply select the function and save
 

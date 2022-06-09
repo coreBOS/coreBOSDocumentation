@@ -19,7 +19,6 @@ taxonomy:
         - picklist
         - picklisteditor
 ---
----
 
 As the name itself says, picklist is a dropdown field with a list of options available, within which, only one option can be selected. For instance, *Lead status* in the *Leads* module.
 

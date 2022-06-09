@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - calendar
 ---
----
 
 ## Google Synchronization
 
@@ -35,12 +34,12 @@ using the Calendar. Firstly you have to [set up your Googleaccount/credentials](
 
 -   An additional step is to define export and import i.e.
     synchronization:
-    -   Export “activity_name” to calendar – checked means that all new
+    -   Export "activity_name" to calendar – checked means that all new
         created events in the Calendar will be also exported and visible
         in the Google calendar. In addition any change of these events
         will be synchronized towards Google calendar. These events are
         marked with an icon.
-    -   Import from calendar to “activity_name” - checked means that
+    -   Import from calendar to "activity_name" - checked means that
         all new created events in Google calendar will be also visible
         in the Calendar. In addition any change of these events in
         Google calendar will be synchronized towards the Calendar. These
@@ -49,7 +48,7 @@ using the Calendar. Firstly you have to [set up your Googleaccount/credentials](
 -   Click on the [Save ] button to save the synchronization settings.
 
 The Calendar allows you to add Google events into coreBOS (see blue link
-“Add into coreBOS” in the below picture). Please click on this link to
+"Add into coreBOS" in the below picture). Please click on this link to
 add this event to coreBOS.
 
 ![](4_5_synchronized_google.png?width=60%)
@@ -76,17 +75,17 @@ for some indications. </div>
 ## Setup calendar event synchronization
 
 In the image below you can see a simple example of synchronization with
-Google via separate activity “*Google events*”. These are the steps:
+Google via separate activity "*Google events*". These are the steps:
 
 -   Using CRM Settings &gt; Picklist Editor create a new Activity Type
-    for “Events” called “*Google events*” (you can name it as you wish).
+    for "Events" called "*Google events*" (you can name it as you wish).
 -   In your Google calendar create a new separate calendar – in the
     example the name used was *ITS4You meetings* (again, you can name it
     according to your needs).
 -   Set up synchronization with Google calendar by clicking on the small
     "down" arrow that appears when you hover over the newly created
     event.
--   You will see that “*Google events*” are visible in both Calendars
+-   You will see that "*Google events*" are visible in both Calendars
     with a separate activity type and color.
 
 ![](6_1_synch_with_google.png?width=100%)

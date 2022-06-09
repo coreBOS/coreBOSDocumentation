@@ -15,16 +15,13 @@ content:
 taxonomy:
     category:
         - development
-        
     tag:
         - API
         - function
 ---
----
 
 <div class="notices blue">
-<strong>Execute Function</strong>: How to call the
-application backend from javascript </div>
+<strong>Execute Function</strong>: How to call the application backend from javascript </div>
 
 During front-end development, we normally run into situations where we
 need information from the backend or we need some functionality that is

@@ -19,10 +19,11 @@ taxonomy:
     tag:
         - iomap
 ---
----
-
 
 The accepted format is
+
+===
+
 ```xml
     <map> 
      <input> 

@@ -20,7 +20,7 @@ taxonomy:
         - application
         - menu
 ---
----
+
 The purpose of this mapping is to return the JSON layout of the given menu which is defined inside coreBOS. This is normally used to export a menu layout to external applications. This way we can use coreBOS menu editor to define the menus we want and use Global Variables to apply an escalation to return different menus to different users.
 
 ===

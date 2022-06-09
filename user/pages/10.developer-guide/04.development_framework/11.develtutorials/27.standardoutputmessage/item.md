@@ -19,7 +19,6 @@ taxonomy:
     tag:
         -howto
 ---
----
 
 coreBOS gives the developer a standard way of sending messages to the
 user in detail and edit view. The styling is based on Lighting Design.

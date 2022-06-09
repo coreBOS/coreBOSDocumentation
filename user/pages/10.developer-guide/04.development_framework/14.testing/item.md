@@ -14,11 +14,10 @@ content:
     url_taxonomy_filters: true
 taxonomy:
     category:
-        - development 
+        - development
         - unittest
     tag:
         - testing
----
 ---
 
 ### [coreBOS Tests Project](https://github.com/tsolucio/coreBOSTests)

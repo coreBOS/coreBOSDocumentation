@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - guide
 ---
----
 
 Installation
 ------------

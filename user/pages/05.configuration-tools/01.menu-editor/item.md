@@ -19,13 +19,12 @@ taxonomy:
         - menu
         - menueditor
 ---
----
 
 The design of the menu editor is like this:
 
 -   The panel on the right is an action panel, anything you do there will take effect immediately and reflect on the left panel tree.
 -   The tree on the left is so you can see all the elements, even the non-visible ones and order them by drag and drop. Once you have ordered the entries as you need you must click the save button to make those changes permanent.
--   If you want to add an element but not have it seen by anyone until you have it in place, create it with the “visible” property unchecked and then check it when you are finished placing it.
+-   If you want to add an element but not have it seen by anyone until you have it in place, create it with the "visible" property unchecked and then check it when you are finished placing it.
 
 There are a few hidden features for debugging and fixing:
 

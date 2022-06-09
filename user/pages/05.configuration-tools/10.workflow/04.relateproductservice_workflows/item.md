@@ -20,7 +20,7 @@ taxonomy:
         - related product 
 ---
 
-The *Relate Products and/or Services to Accounts/Vendor and/or Contacts* workflow will implement a frequently demanded functionality which consists of automatically relating the products and services sold on an invoice or bought on a purchase order to the account or vendor selected on the record. This makes a lot of sense in many businesses where we want to be able to see a list of products that our client has bought directly on their “Products” related list.
+The *Relate Products and/or Services to Accounts/Vendor and/or Contacts* workflow will implement a frequently demanded functionality which consists of automatically relating the products and services sold on an invoice or bought on a purchase order to the account or vendor selected on the record. This makes a lot of sense in many businesses where we want to be able to see a list of products that our client has bought directly on their "Products" related list.
 
 This workflow is associated to Quotes, Sales Orders, Invoices and Purchase Orders and permits the automatic relation of the products and services on each of these modules with the Account, Vendor and/or Contact selected on the record.
 

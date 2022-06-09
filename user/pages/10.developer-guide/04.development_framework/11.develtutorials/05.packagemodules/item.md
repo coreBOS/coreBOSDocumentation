@@ -15,10 +15,8 @@ content:
 taxonomy:
     category:
         - development
-        
     tag:
         - distribution
----
 ---
 
 <div class="notices red">

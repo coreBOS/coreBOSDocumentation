@@ -18,10 +18,12 @@ taxonomy:
     tag:
         - license
 ---
----
+
 ## coreBOS
 
 coreBOS is distributed under [VPL 1.1 license](../02.vpl11). This is a modified [MPL 1.1 license](http://www.mozilla.org/MPL/1.1/annotated/) which is a business-friendly, Apache or MIT like license.
+
+===
 
 Some of our other extensions and modules follow a more limited [Vizsage License](../03.vizsage).
 

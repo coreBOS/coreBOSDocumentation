@@ -19,7 +19,6 @@ taxonomy:
         - reference
         - comments
 ---
----
 
 [plugin:youtube](https://youtu.be/41fQCIenRUU)
 
@@ -34,7 +33,7 @@ The CSV contact file shown next will result in a new contact related to the **ED
 "","Susan","Wilson","(694) 186-6696","EDFG Group Limited","(838) 935-6869"
 ```
 
-When the import process reaches the **Organization Name** field, it sees that it is a reference field and automatically searches the Account module for an account with “account name” equal to the value in the import CSV. If found it will relate the two records correctly, if not, a new account will be created and then the relation will be established.
+When the import process reaches the **Organization Name** field, it sees that it is a reference field and automatically searches the Account module for an account with "account name" equal to the value in the import CSV. If found it will relate the two records correctly, if not, a new account will be created and then the relation will be established.
 
 These types of reference fields support an extended syntax whereas you can indicate the module that the value belongs to. This can be seen in the next CSV file:
 
@@ -55,13 +54,13 @@ The next CSV would be an example of importing opportunity records:
 "samplevtiger - 1000 units","Contacts::::Susan Wilson","75000.00","--None--","2016-01-03"
 ```
 
-The field upon which the relation is searched is ALWAYS the identifier field of the module. Every module has a special field called the **entity identifier field**, this special field is the one you can click on inside the application to get to the **detail view** of the record. For example, for Accounts that is the “account name”, for potentials the “opportunity name” and for tickets the title or subject of the ticket.
+The field upon which the relation is searched is ALWAYS the identifier field of the module. Every module has a special field called the **entity identifier field**, this special field is the one you can click on inside the application to get to the **detail view** of the record. For example, for Accounts that is the "account name", for potentials the "opportunity name" and for tickets the title or subject of the ticket.
 
 Sometimes we don't have that special field in our import data or, if we do, we can't be sure that the values match exactly. This especially happens when importing to Accounts and Contacts. For these cases, it would be ideal to be able to have the import process search on some other field that we have at hand or that we know is supposed to be unique between the application and the import data.
 
 The ideal/typical scenario is where you have done the **first import right (!)** and added a custom field to the module that indicates the ID of that record in your other system. This is fundamental where you have two system coexisting in the company and you have to do regular imports of information.
 
-**As of coreBOS 5.5** we have extended the extended syntax 8-) so you can indicate the field you want to search upon to find the referenced module. You can now add the field name upon which you want to search AFTER the extended syntax with the same separator “::::”. So the next CSV would import potentials searching the first record on the Accounts' siccode field and the second on the Contacts' cf_640 field.
+**As of coreBOS 5.5** we have extended the extended syntax 8-) so you can indicate the field you want to search upon to find the referenced module. You can now add the field name upon which you want to search AFTER the extended syntax with the same separator "::::". So the next CSV would import potentials searching the first record on the Accounts' siccode field and the second on the Contacts' cf_640 field.
 
 ```
 "Opportunity Name","Related To","Amount","Type","Expected Close Date"
@@ -83,7 +82,7 @@ Additionally, you can set the **Export_RelatedField_NameForSearch** global varia
 
 Another example. Let's suppose that we want to migrate information from one coreBOS system to another. In the origin application, you have a custom field on your accounts module labeled VATID. This field contains a unique identifier for each Account. The internal name of this field is cf_999. In the second application, this field has been assigned the internal field name cf_888
 
-If we set the **Export_RelatedField_GetValueFrom** global variable to “cf_999” and the **Export_RelatedField_GetValueFrom** global variable to “cf_888” and export potentials from the first system, the “Related to” reference field will read the values of accounts from the “cf_999” field and export a string that looks like this:
+If we set the **Export_RelatedField_GetValueFrom** global variable to "cf_999" and the **Export_RelatedField_GetValueFrom** global variable to "cf_888" and export potentials from the first system, the "Related to" reference field will read the values of accounts from the "cf_999" field and export a string that looks like this:
 
 ```
 Accounts::::B99999999::::cf_888

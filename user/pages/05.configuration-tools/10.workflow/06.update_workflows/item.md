@@ -132,7 +132,7 @@ There are two issues here that are based on the same principle: we are very limi
 inside an expression. So
 
 <div class="notices red">
-This is comment is not true anymore in coreBOS. We can now embed expressions inside expressions with no limitation. Althought the solution proposed here using intermediate fields is valid, you should be able to launch the original “if” expression now. </div>
+This is comment is not true anymore in coreBOS. We can now embed expressions inside expressions with no limitation. Althought the solution proposed here using intermediate fields is valid, you should be able to launch the original "if" expression now. </div>
 
     if time_diffdays(cf_855,get_date('today')) > 60 then...
 
@@ -153,7 +153,7 @@ The next image should achieve what you are asking:
 
 
 <div class="notices red">
-Note that this is NOT time based, it will not calculate automatically when “today” is over 60 days, you will have to edit the record EVERY day to see the changes. As of March 2015 you can use scheduled workflows for time based workflows.
+Note that this is NOT time based, it will not calculate automatically when "today" is over 60 days, you will have to edit the record EVERY day to see the changes. As of March 2015 you can use scheduled workflows for time based workflows.
 </div>
 
 

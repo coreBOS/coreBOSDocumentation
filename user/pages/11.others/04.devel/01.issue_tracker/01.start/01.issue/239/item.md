@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - issue
 ---
----
 
 Issue Reference in Tracker: ~issue:239~
 
@@ -77,15 +76,15 @@ Events are launched for ALL modules and executed ALWAYS.
 
 That means that we must encapsulate or protect our event code inside a condition that makes sure we are in the correct module. Looking at the different examples you can see that almost all of them start with a
 
-*“if ($moduleName=='whatever')”*
+*"if ($moduleName=='whatever')"*
 <div class="notices blue">
-This is the “de facto” standard </div>
+This is the "de facto" standard </div>
 
 It also means that we have to be especially careful with the things that are done, our code has to be fast and efficient in order to not block the user experience, and also resistant to errors.
 
 Although this may seem an incorrect approach, experience shows that it is extremely powerful for many situations.
 
-That said, the “save” events (and some others) support conditions directly in their definition and also dependency launching. These events have a “condition” column and a “dependent on” column.
+That said, the "save" events (and some others) support conditions directly in their definition and also dependency launching. These events have a "condition" column and a "dependent on" column.
 
 The **condition column** can accept expressions following this syntax:
 
@@ -322,10 +321,10 @@ When you register an event in the application the details are saved in the **vti
 		<td class="col0"> vtiger.entity.aftersave </td><td class="col1"> modules/SalesOrder/RecurringInvoiceHandler.php </td><td class="col2"> RecurringInvoiceHandler </td><td class="col3">Takes care of preparing information for the cron script that converts sales orders into invoices</td>
 	</tr>
 	<tr class="row2">
-		<td class="col0"> vtiger.entity.beforesave </td><td class="col1"> data/VTEntityDelta.php </td><td class="col2"> VTEntityDelta </td><td class="col3">This class handles the “Has Changed” condition in workflows. This part saves the information <strong>before</strong> it is saved in the database.</td>
+		<td class="col0"> vtiger.entity.beforesave </td><td class="col1"> data/VTEntityDelta.php </td><td class="col2"> VTEntityDelta </td><td class="col3">This class handles the "Has Changed" condition in workflows. This part saves the information <strong>before</strong> it is saved in the database.</td>
 	</tr>
 	<tr class="row3">
-		<td class="col0"> vtiger.entity.aftersave </td><td class="col1"> data/VTEntityDelta.php </td><td class="col2"> VTEntityDelta </td><td class="col3">This class handles the “Has Changed” condition in workflows. This part saves the information <strong>after</strong> it is saved in the database.</td>
+		<td class="col0"> vtiger.entity.aftersave </td><td class="col1"> data/VTEntityDelta.php </td><td class="col2"> VTEntityDelta </td><td class="col3">This class handles the "Has Changed" condition in workflows. This part saves the information <strong>after</strong> it is saved in the database.</td>
 	</tr>
 	<tr class="row4">
 		<td class="col0"> vtiger.entity.aftersave </td><td class="col1"> modules/com_vtiger_workflow/VTEventHandler.inc </td><td class="col2"> VTWorkflowEventHandler </td><td class="col3">Takes care of launching workflows</td>
@@ -379,13 +378,13 @@ When you register an event in the application the details are saved in the **vti
 		<td class="col0"> corebos.filter.listview.querygenerator.query </td><td class="col1"> build/HelperScripts/coreBOSEventsExample.php </td><td class="col2"> coreBOSEventsExample </td><td class="col3">This example simply outputs the SQL to the browser</td>
 	</tr>
 	<tr class="row21">
-		<td class="col0"> corebos.filter.listview.render </td><td class="col1"> build/HelperScripts/coreBOSEventsExample.php </td><td class="col2"> coreBOSEventsExample </td><td class="col3">This example adds a new column with a text input field for homephone when on the Contacts module and a new row link to go directly to the “More Information” section when on Accounts</td>
+		<td class="col0"> corebos.filter.listview.render </td><td class="col1"> build/HelperScripts/coreBOSEventsExample.php </td><td class="col2"> coreBOSEventsExample </td><td class="col3">This example adds a new column with a text input field for homephone when on the Contacts module and a new row link to go directly to the "More Information" section when on Accounts</td>
 	</tr>
 	<tr class="row22">
-		<td class="col0"> corebos.filter.listview.header </td><td class="col1"> build/HelperScripts/coreBOSEventsExample.php </td><td class="col2"> coreBOSEventsExample </td><td class="col3">This adds the column header for the new text homephone field in the “render” example</td>
+		<td class="col0"> corebos.filter.listview.header </td><td class="col1"> build/HelperScripts/coreBOSEventsExample.php </td><td class="col2"> coreBOSEventsExample </td><td class="col3">This adds the column header for the new text homephone field in the "render" example</td>
 	</tr>
 	<tr class="row23">
-		<td class="col0"> corebos.filter.listview.filter.show </td><td class="col1"> build/HelperScripts/coreBOSEventsExample.php </td><td class="col2"> coreBOSEventsExample </td><td class="col3">This example eliminates the filter named “Contacts Address” from the Contacts filter picklist</td>
+		<td class="col0"> corebos.filter.listview.filter.show </td><td class="col1"> build/HelperScripts/coreBOSEventsExample.php </td><td class="col2"> coreBOSEventsExample </td><td class="col3">This example eliminates the filter named "Contacts Address" from the Contacts filter picklist</td>
 	</tr>
 	<tr class="row24">
 		<td class="col0"> corebos.filter.editview.setObjectValues </td><td class="col1"> build/HelperScripts/coreBOSEventsExample.php </td><td class="col2"> coreBOSEventsExample </td><td class="col3">This example fills in the <strong>Lead Source</strong> picklist and <strong>Assistant</strong> on Accounts when creating a new record</td>

@@ -15,16 +15,13 @@ content:
 taxonomy:
     category:
         - development
-        
     tag:
         - sms
 ---
----
 
-By using *SMS Notifier* extension you can communicate with your clients
-faster by sending personalized SMS Messages to customers. Consequently,
-you can increase your sales and strengthen the relationship with your
-customers.
+By using *SMS Notifier* extension you can communicate with your clients faster by sending personalized SMS Messages to customers. Consequently, you can increase your sales and strengthen the relationship with your customers.
+
+===
 
 SMS Server Configuration
 ------------------------

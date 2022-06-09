@@ -22,10 +22,10 @@ taxonomy:
 ## Non Supported Elements
 
 -   Form Elements (checkbox and similar). We will not implement these, too much work for what they are worth.
--   Headers: Some headers are (incorrectly?) saved as paragraphs in the .xml. These do not work. The OpenDocument manual says: “If you use non-numbered Heading style from the stylist, OpenOffice.org will insert a < text:p >, not a < text:h > element.” I have no idea how it knows it is a header.
+-   Headers: Some headers are (incorrectly?) saved as paragraphs in the .xml. These do not work. The OpenDocument manual says: "If you use non-numbered Heading style from the stylist, OpenOffice.org will insert a < text:p >, not a < text:h > element." I have no idea how it knows it is a header.
 -   Some Calculated Fields
 -   bullet points (maybe some others) inside table cells. This is an error and will be corrected at some point in the future
--   “foreach” on the same module will not work. This will be implemented/corrected at some point in the future.
+-   "foreach" on the same module will not work. This will be implemented/corrected at some point in the future.
 
 
 ## Documentation Generation::Discarded Elements

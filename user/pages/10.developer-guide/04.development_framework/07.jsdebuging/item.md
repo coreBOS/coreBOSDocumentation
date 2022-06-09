@@ -15,10 +15,8 @@ content:
 taxonomy:
     category:
         - development
-        
     tag:
         - debug.log
----
 ---
 
 Due to the popularity of javascript and it's importance inside web

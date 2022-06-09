@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - workflow
 ---
----
 
 the unit tests files you are looking for are in these two files
 
@@ -33,7 +32,7 @@ so, in the screencast, you shared it would be the condition you put inside the w
 
 VTJsonCondtion is the script in charge of evaluating the condition
 
-we have some tests but none related to “time”
+we have some tests but none related to "time"
 
 let's see one
 
@@ -69,11 +68,11 @@ the other script is for Scheduled trigger type
 
 this trigger is fundamentally different from the other trigger types
 
-when you set a workflow to an “on save” trigger (for example) the workflow will launch with ONE record, the one being “saved”
+when you set a workflow to an "on save" trigger (for example) the workflow will launch with ONE record, the one being "saved"
 
 but the schedule trigger works differently.
 
-it “wakes up” at the indicated time, so there is no record at that moment, there is no “save” event, it is time-based.
+it "wakes up" at the indicated time, so there is no record at that moment, there is no "save" event, it is time-based.
 
 so, what corebos does is convert the conditions into an SQL query, it launches the query and gets a set of records
 

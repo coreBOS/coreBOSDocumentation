@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - fields
 ---
----
 
 Example of how to use
 ---------------------

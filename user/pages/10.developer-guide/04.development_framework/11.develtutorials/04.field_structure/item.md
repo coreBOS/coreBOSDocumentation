@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - structure
 ---
----
 
 Display Types for Fields in Modules
 -----------------------------------

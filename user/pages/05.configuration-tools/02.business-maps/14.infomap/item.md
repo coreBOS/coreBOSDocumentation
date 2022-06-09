@@ -19,9 +19,11 @@ taxonomy:
     tag:
         - informap
 ---
----
 
 The accepted format is
+
+===
+
 ```xml
     <map>
         <information>

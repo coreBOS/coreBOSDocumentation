@@ -429,7 +429,7 @@ shall be deemed to constitute any admission of liability.
 13\. MULTIPLE-LICENSED CODE.
 
 Initial Developer may designate portions of the Covered Code as
-“Multiple-Licensed”. “Multiple-Licensed” means that the Initial
+"Multiple-Licensed". "Multiple-Licensed" means that the Initial
 Developer permits you to utilize portions of the Covered Code under Your
 choice of the MPL or the alternative licenses, if any, specified by the
 Initial Developer in the file described in Exhibit A.

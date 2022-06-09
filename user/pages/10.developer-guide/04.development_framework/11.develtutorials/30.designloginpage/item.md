@@ -16,11 +16,10 @@ taxonomy:
     category:
         - development
         - aplication
-        
     tag:
         - login
 ---
----
+
 The login page is one the most modified parts of the application code,
 producing conflicts when we want to modify it, so we decided to
 implement a way for each implementor/developer to define their own page

@@ -21,7 +21,6 @@ taxonomy:
         - rbac
         - user
 ---
----
 
 ## SQL Database Authentication
 
@@ -50,7 +49,7 @@ If the default **User_AuthenticationType** is set to LDAP or AD (Active Director
 
 ![](createuserquery.png?width=100%)
 
-Enter the LDAP username you would like to query and click on the “Query LDAP” button. This will retrieve the users information from LDAP and automatically fill up the user fields.
+Enter the LDAP username you would like to query and click on the "Query LDAP" button. This will retrieve the users information from LDAP and automatically fill up the user fields.
 
 ![](createuserfillin.png?width=100%)
 
@@ -195,7 +194,7 @@ Remember that Active Directory is only for authorizing, the user must exist in b
 If you use SSL or TLS, it is absolutely necessary that your openldap trusts the domain controllers and their certificates. Make sure that you have a corporate certificate authority and issue certificates for all of your domain controllers. (Sounds horrible but is quite easy if you just install a Active Directory integrated certificate authority as Windows Server role.) You will need to export the certificate and import it for openssl.
 
 ### Export CA Certificate
-Use Windows Certificate Mangement Console to export the CA certificate base-64 encoded. If you installed the ca web management feature, just visit:[http://your-dc/certsrv/certcarc.asp](http://your-dc/certsrv/certcarc.asp), choose base-64 format and click “Download CA certificate”.
+Use Windows Certificate Mangement Console to export the CA certificate base-64 encoded. If you installed the ca web management feature, just visit:[http://your-dc/certsrv/certcarc.asp](http://your-dc/certsrv/certcarc.asp), choose base-64 format and click "Download CA certificate".
 
 ### Import CA Certificate for OpenLDAP
 
@@ -219,7 +218,7 @@ SASL/EXTERNAL authentication started
 ldap_sasl_interactive_bind_s: Unknown authentication method (-6)
   additional info: SASL(-4): no mechanism available:
 ```
-TLS connection is established but we haven’t supplied authentication. OK so far. If you face any problems, add “-d7” to get some debugging output.
+TLS connection is established but we haven’t supplied authentication. OK so far. If you face any problems, add "-d7" to get some debugging output.
 
 ### PHP Testscript
 
@@ -266,7 +265,7 @@ The global variables are:
 -   **User_2FAAuthentication_SendMethod:** SMS, EMAIL, or MOBILE as the system to send the code to the user. If the value is set to SMS, the application will search first for phone_work and then phone_mobile. SMS **MUST** be active and configured, if not the EMAIL method will be used. The code will be sent to the user's main email. Read below to find out how MOBILE works.
 
 
-**MOBILE** expects you to have installed the [Google Authenticator App](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) on your mobile device. Then go to your users' profile and click on the “Two Factor Activation” button. This will take you to a screen where you can activate this functionality. Once activated you will see your secret code, both as a number and as a QRCode that can be scanned into the App.
+**MOBILE** expects you to have installed the [Google Authenticator App](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) on your mobile device. Then go to your users' profile and click on the "Two Factor Activation" button. This will take you to a screen where you can activate this functionality. Once activated you will see your secret code, both as a number and as a QRCode that can be scanned into the App.
 
 ![](2faactivation.png?width=100%)
 

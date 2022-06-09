@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - howto
 ---
----
 
 Query Generator is a class that will easily generate complex SQL queries
 for us. It will permit us to define some high-level fields and

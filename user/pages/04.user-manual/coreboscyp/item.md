@@ -21,7 +21,6 @@ taxonomy:
         - payment
         
 ---
----
 
 The goal of this extension is to be able to register any incoming or
 outgoing payment made by our company and associate that payment with
@@ -277,7 +276,7 @@ That is what you can see on the demo and what the payment module is for.
 
 Now from this starting point we can adapt the module to your companies needs.
 
-If you want to automatically create a due payment every time an invoice is created we have to add this. If you want to be able to go to the “more information” tab on any account and see a relation of all his payments, we have to add this in, etc….
+If you want to automatically create a due payment every time an invoice is created we have to add this. If you want to be able to go to the "more information" tab on any account and see a relation of all his payments, we have to add this in, etc….
 
 So our payment module gives you a starting point from which to register all payments, from there we can help you make things easier by customizing some processes.</div>
 
@@ -285,7 +284,7 @@ So our payment module gives you a starting point from which to register all paym
 
 This is similar to the question above. This module gives you a starting point from which you can adapt to your company, the exact same philosophy we follow with the whole coreBOS application.
 
-In this case I would not recommend creating two invoice for the same concept. What we usually do to follow partial payments is add some process to the invoice. Each time a payment is registered against an invoice we update a new custom field called “Amount Due”, once you have this field you can report and easily obtain invoices with some pending amount. We then add some more process and change the status of the invoice to Paid once the amount due falls to zero. So our “most used” implementation creates invoices as you usually do in coreBOS and then the payments module registers the payments made to control the pending invoices and their state.
+In this case I would not recommend creating two invoice for the same concept. What we usually do to follow partial payments is add some process to the invoice. Each time a payment is registered against an invoice we update a new custom field called "Amount Due", once you have this field you can report and easily obtain invoices with some pending amount. We then add some more process and change the status of the invoice to Paid once the amount due falls to zero. So our "most used" implementation creates invoices as you usually do in coreBOS and then the payments module registers the payments made to control the pending invoices and their state.
 
 Although this is what I would recommend and seems to be the easiest way to use the module we can adapt it to your specific business process needs in any way you may see fit.
 
@@ -341,4 +340,4 @@ No, this must be programmed either in the PDF of coreBOS or using PDFMaker funct
 
 <div class="notices blue"> <h2>Account/Contact and related to fields lists everything in the database. Would it be possible to restrict it based on the other field (account/contact restricted based on the related to and vice versa)?</h2>
 
-This is hard to do in coreBOS, what we have done is implement a “usual” use case. Try going to the related list of an invoice and adding a payment, you will see that most of the fields are filled in for you. This happens with sales order also (at least). The idea is that you create an invoice and once you are on that invoice you go to it's related list and create the payments from there. </div>
+This is hard to do in coreBOS, what we have done is implement a "usual" use case. Try going to the related list of an invoice and adding a payment, you will see that most of the fields are filled in for you. This happens with sales order also (at least). The idea is that you create an invoice and once you are on that invoice you go to it's related list and create the payments from there. </div>

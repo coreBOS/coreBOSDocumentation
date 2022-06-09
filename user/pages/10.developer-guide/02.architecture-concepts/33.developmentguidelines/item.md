@@ -90,7 +90,7 @@ right now.
     settings, etc.) but SHOULD NOT do both. This is a good
     recommendation but it is not present at all in our code base, so if
     you follow it fine, if not it's ok.
--   <s>Namespaces and classes MUST follow an “autoloading” PSR: \[PSR-0,
+-   <s>Namespaces and classes MUST follow an "autoloading" PSR: \[PSR-0,
     PSR-4\].</s>
 -   Class names MUST be declared in *StudlyCaps*.
 -   Class constants MUST be declared in all upper case with underscore
@@ -228,7 +228,7 @@ Some additional clarifications:
      -   **test**: when adding missing tests
      -   **chore**: maintenance tasks
 -   Allowed **< scope>** could be anything specifying place of the commit change. For example a module name, webservice or functional feature
--   **< subject>** line contains succinct description of the change. Use imperative, present tense: “change” not “changed” nor “changes”.
+-   **< subject>** line contains succinct description of the change. Use imperative, present tense: "change" not "changed" nor "changes".
      -   If the commit fixes or is related to a ticket put the title or a summary of it, the actual ticket number is rather useless as time has taught me that ticket systems come and go while code and commit messages persist.
 ### Special Committs
 

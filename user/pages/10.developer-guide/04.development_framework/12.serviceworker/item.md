@@ -20,7 +20,6 @@ taxonomy:
         - cache
         - worker
 ---
----
 
 As of the moment of the creation of this page, we are using version
 5.0.0 of Google's Service Worker Workbox functionality in order to

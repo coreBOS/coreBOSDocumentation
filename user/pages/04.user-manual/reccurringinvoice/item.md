@@ -19,10 +19,10 @@ taxonomy:
         
         - invoice
 ---
----
 
-Recurring Invoice feature, permits you to use a Sales Order as a
-template to generate Invoices on a regular frequency.
+Recurring Invoice feature, permits you to use a Sales Order as a template to generate Invoices on a regular frequency.
+
+===
 
 ### Usage
 

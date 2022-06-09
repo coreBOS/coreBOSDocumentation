@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - emails
 ---
----
 
 ### vtigercron: scheduler
 
@@ -302,7 +301,7 @@ See the specific HelpDesk email notification section
 </tr>
 <tr>
 <td><strong>Purpose</strong></td>
-<td>Send an email on creation of calendar event that has the “Send Notification” check box marked</td>
+<td>Send an email on creation of calendar event that has the "Send Notification" check box marked</td>
 </tr>
 <tr>
 <td><strong>From address</strong></td>
@@ -329,7 +328,7 @@ See the specific HelpDesk email notification section
 </tr>
 <tr>
 <td><strong>Purpose</strong></td>
-<td>Send an email on creation of calendar todos that has the “Send Notification” check box marked</td>
+<td>Send an email on creation of calendar todos that has the "Send Notification" check box marked</td>
 </tr>
 <tr>
 <td><strong>From address</strong></td>

@@ -18,9 +18,9 @@ taxonomy:
         - event
     tag:
         - hooks,
-        - javascript 
+        - javascript
 ---
----
+
 You can override any javascript function with the **corebosjshook** class.
 
 This class is an instantiation of the [meld class from cujoJS](https://github.com/cujojs/meld) and you can use any of the many options this library has to insert your functionality where you need to. 
@@ -29,7 +29,7 @@ I would recommend reading the [meld reference guide,](https://github.com/cujojs/
 
 Let's see an example of how to use this class in coreBOS.
 
-I am going to pick the **massDelete** JavaScript function which is executed when you click on the “Delete” button on any list view and add a simple “Hello world” message.
+I am going to pick the **massDelete** JavaScript function which is executed when you click on the "Delete" button on any list view and add a simple "Hello world" message.
 
 ![](massdelete.png?width=100%)
 

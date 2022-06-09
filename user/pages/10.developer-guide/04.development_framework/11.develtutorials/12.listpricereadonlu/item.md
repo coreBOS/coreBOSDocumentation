@@ -15,12 +15,11 @@ content:
 taxonomy:
     category:
         - development
-        - inventory   
+        - inventory
     tag:
         - read only
         - list price
         - inventory
----
 ---
 
 <div class="notices red">

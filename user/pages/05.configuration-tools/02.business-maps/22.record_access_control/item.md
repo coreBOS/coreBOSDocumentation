@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - recordaccesscontrol
 ---
----
 
 <div class="notices blue">
 For more advanced customizations of

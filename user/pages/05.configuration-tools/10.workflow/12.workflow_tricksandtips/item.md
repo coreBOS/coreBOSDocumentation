@@ -37,11 +37,11 @@ workflow id field will return a web service ID but we need to separate
 the module id for the URL to work, from
 
 
-***&lt;a href=“index.php?module=cbReview&action=DetailView&record=33×99”>***
+***&lt;a href="index.php?module=cbReview&action=DetailView&record=33×99">***
 
 to
 
-***&lt;a href=“index.php?module = bReview&action=DetailView&record=99”> ***
+***&lt;a href="index.php?module = bReview&action=DetailView&record=99"> ***
 
 Three ideas come to mind:
 

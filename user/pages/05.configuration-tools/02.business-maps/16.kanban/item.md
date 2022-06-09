@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - kanban
 ---
----
 
 The purpose of this mapping is to define a kanban lane view of the
 records of a module. This map is in the "View Business Map" category as

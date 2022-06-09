@@ -18,11 +18,11 @@ taxonomy:
     tag:
         - filter
 ---
----
+
 Issue Reference in Tracker: ~issue:80~
 
 ## Detailed Explanation
 
-Adds a **“New”** button to the filter configuration page. You can now edit any filter, change the name and any other coniguration you require and click the **“New”** button to create a new filter, effectively implementing the Duplicate Feature with ease.
+Adds a **"New"** button to the filter configuration page. You can now edit any filter, change the name and any other coniguration you require and click the **"New"** button to create a new filter, effectively implementing the Duplicate Feature with ease.
 
 ![](duplicatefilter.png?width=100%)

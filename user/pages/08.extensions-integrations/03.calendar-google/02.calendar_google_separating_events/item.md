@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - backup
 ---
----
+
 <div class="notices blue">
 <h2>The problem I am facing is that personal events that I have on my
 Google calendar are showing up on my task list in coreBOS. How can I get
