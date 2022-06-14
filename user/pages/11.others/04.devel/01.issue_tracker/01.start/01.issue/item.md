@@ -132,7 +132,7 @@ taxonomy:
 </tr>
 <tr>
 <tr>
-<td><a href="url">issuetracker:corebos:issue:239</a></td>
+<td><a href="http://localhost/coreBOSDocumentation/others/devel/issue_tracker/start/issue/239">issuetracker:corebos:issue:239</a></td>
 <td>1</td>
 </tr>
 <tr>

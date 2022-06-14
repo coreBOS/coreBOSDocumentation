@@ -1,5 +1,5 @@
 ---
-title: 'Security Guide License'
+title: 'Security Guide License, Usage and Acknowledgements'
 metadata:
     description: 'Security Guide License, Usage and Acknowledgements'
     author: 'Joe Bordes'
@@ -22,7 +22,6 @@ taxonomy:
         - license
 ---
 
-# License, Usage and Acknowledgements
 
 ## Guide License
 

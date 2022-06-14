@@ -1,5 +1,5 @@
 ---
-title: 'Web service'
+title: 'Web Service API'
 metadata:
     description: 'Webservice general'
     author: 'Joe Bordes'
