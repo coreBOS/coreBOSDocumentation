@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - tracking
 ---
----
+
 coreBOS incorporates a very basic email access counter. When sending an
 email it automatically adds a 1x1 transparent image to the email. If the
 receiver of the email accepts this image, a call will be made to the

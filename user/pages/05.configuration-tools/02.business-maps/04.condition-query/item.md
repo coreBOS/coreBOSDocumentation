@@ -19,7 +19,7 @@ taxonomy:
         - condition
         - query
 ---
----
+
 This mapping permits us to evaluate an SQL command in the context of the application and get the result to decide subsequent actions. It accepts two formats, one is a direct SQL command with interrogation as place holder for parametres and the other is a QueryGenerator specification.
 
 ===

@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - detailviewlayout
 ---
----
 
 The purpose of this mapping is to define the structure of a
 master-detail relationship between two modules that will permit us to

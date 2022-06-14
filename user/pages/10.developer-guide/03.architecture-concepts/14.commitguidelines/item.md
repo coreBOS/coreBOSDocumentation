@@ -20,11 +20,8 @@ taxonomy:
         - guidelines
         - format
 ---
----
 
-
-[AngularJS Git Commit Message
-Conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/mobilebasic?pli=1)
+[AngularJS Git Commit Message Conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/mobilebasic?pli=1)
 
     <type>(<scope>) <subject>
 
@@ -56,8 +53,8 @@ Some additional clarifications:
     commit change. For example a module name, webservice or functional
     feature
 -   **&lt;subject&gt;** line contains succinct description of the
-    change. Use imperative, present tense: “change” not “changed” nor
-    “changes”.
+    change. Use imperative, present tense: "change" not "changed" nor
+    "changes".
     -   If the commit fixes or is related to a ticket put the title or a
         summary of it, the actual ticket number is rather useless as
         time has taught me that ticket systems come and go while code

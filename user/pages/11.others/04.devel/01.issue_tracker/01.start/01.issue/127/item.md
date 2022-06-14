@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - issue
 ---
----
 
 Issue Reference in Tracker: ~issue:127~
 
@@ -30,7 +29,7 @@ Issue Reference in Tracker: ~issue:127~
 
 Constructing on top of the [getRelatedRecords](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/getrelatedcontrols) function we have extended the REST query syntax to benefit from that functionality, making it easy to query related entities and filter them also.
 
-The new syntax enhances the where conditional statement to support module names preceded with the *“related”* string and followed by the id of the entity:
+The new syntax enhances the where conditional statement to support module names preceded with the *"related"* string and followed by the id of the entity:
 ```
 where related.modulename=id
 ```

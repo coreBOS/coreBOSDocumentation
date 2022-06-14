@@ -44,7 +44,7 @@ In coreBOSCRM, there is a financial block to control the status of partial payme
 </map>
 ```
 <div class="notices red">
-You will have to manually add the <strong>“cbfromid”</strong> parameter to the “Add Payment” action.
+You will have to manually add the <strong>"cbfromid"</strong> parameter to the "Add Payment" action.
 </div>
 
 

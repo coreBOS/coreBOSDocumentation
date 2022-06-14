@@ -30,7 +30,7 @@ The **coreBOSCRM GeoLocalization Map** extension will permit you to locate your 
 
 This is a list of some of the features of the extension:
 
-- Map is **automatically centered** at the current user's location based on browser information (not always available nor exact), if this information can't be find it will be centered on the user's address which can be found in his “Preferences” page. This makes disperse sets of sales people able to quickly search upon their location. Finally, if none of the previous information is available the map will be centered on the company's address information located in Settings. This point in the map will be marked with a special icon.
+- Map is **automatically centered** at the current user's location based on browser information (not always available nor exact), if this information can't be find it will be centered on the user's address which can be found in his "Preferences" page. This makes disperse sets of sales people able to quickly search upon their location. Finally, if none of the previous information is available the map will be centered on the company's address information located in Settings. This point in the map will be marked with a special icon.
 - A **tabbed view** of **different search options** will permit us to easily launch searches based on existing filters, for accounts, contacts, leads, trouble tickets and events.
 - **Supports radius search**, whereas you define a point in the map and the circle radius around which you want to see the included records.
 - Different icons mark the different filters applied, because filters can be accumulated
@@ -61,7 +61,7 @@ If more than one filter is selected each filter will have a different colored ma
 
 The ticket tab will permit us to search for account and contacts associated to trouble tickets. As with the filter tab we are presented with a set of filters that exist on the trouble ticket entity and we can select one or more to have the associated accounts and contacts marked on the map. Also, we find a user capture box where we can restrict the trouble tickets, not only to the conditions of the selected filter but also of the chosen user.
 
-With this setup, for example, we could easily create a filter with open tickets to visit “today” (which would be a custom field) and then search the accounts and contacts that any given user has to see in one day. This is the use case that produced this tab, whereas a company needs to know which technician is around a certain area when an emergency arises.
+With this setup, for example, we could easily create a filter with open tickets to visit "today" (which would be a custom field) and then search the accounts and contacts that any given user has to see in one day. This is the use case that produced this tab, whereas a company needs to know which technician is around a certain area when an emergency arises.
 ![Map2](evvtmap02.png?width=100%)
 In this scenario, the technician himself could enter the application. The map extension will automatically center on his position and he could select the new ticket on the map and ask for driving directions with just a few clicks:
 

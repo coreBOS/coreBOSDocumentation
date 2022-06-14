@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - businessaction
 ---
----
+
 Business Actions are things that can happen inside the application. They enhance the vtiger CRM link system and they can affect any part of the application.
 
 They are shown/applied depending on the field permission values set on each record which may include conditional business maps.
@@ -31,7 +31,7 @@ The permission system will permit us to:
 -   mark an action as Active or not
 -   make the action available for all users
 -   if not marked as available for all users, first we will search if the action is assigned to the current user and then if the current user belongs to a role selected on the action
--   finally, for all actions that apply we check if the action has a business rule. If it does we evaluate the rule which must return “true” for the action to be accepted. This permits us to show actions only when some conditions are met.
+-   finally, for all actions that apply we check if the action has a business rule. If it does we evaluate the rule which must return "true" for the action to be accepted. This permits us to show actions only when some conditions are met.
 
 They can be retrieved via the **getBusinessActions** web service method.
 
@@ -79,7 +79,7 @@ We use [Server-Side Events](http://localhost/coreBOSDocumentation/developer-guid
 
 There are a lot of resources on Server-Side Events and also on how to include custom code in coreBOS, so I am just going to explain an example of how this would work.
 
-The javascript function is really simple as it just has to receive the message and update the screen. It has to consider the “CLOSE” event, but since most of the screen processing already exists it looks like this:
+The javascript function is really simple as it just has to receive the message and update the screen. It has to consider the "CLOSE" event, but since most of the screen processing already exists it looks like this:
 
 ```
 function run_customsse(e) {
@@ -192,7 +192,7 @@ javascript:runBAWorkflow(workflowid, crmid)
 The crmid parameter can be:
 
 -   a unique CRMID
--   a string with the word “RECORD” which will load the current record if available
+-   a string with the word "RECORD" which will load the current record if available
 -   a string with a list of CRMIDs separated by semi-colon ';'
 
  Note that if either the workflowid or the crmid are empty nothing will be done.

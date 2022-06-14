@@ -20,7 +20,6 @@ taxonomy:
         - howto
         - email
 ---
----
 
 coreBOS has an abstraction layer for sending emails, instead of always
 sending with phpmailer, now we can define a class to send as we want.

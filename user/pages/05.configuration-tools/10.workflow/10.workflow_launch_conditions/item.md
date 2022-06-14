@@ -22,7 +22,7 @@ taxonomy:
 
 Launch conditions specify when the workflow must be executed.
 
-All workflows except scheduled are “save” event based, which means that they will be evaluated ONLY when a record is saved from within the application. That save event will usually be some user creating or editing a record, but it could also be triggered from a webservice call or by some specially crafted code.
+All workflows except scheduled are "save" event based, which means that they will be evaluated ONLY when a record is saved from within the application. That save event will usually be some user creating or editing a record, but it could also be triggered from a webservice call or by some specially crafted code.
 
 Since workflows are triggered when we save a record the different launch options that we have are related to this event:
 

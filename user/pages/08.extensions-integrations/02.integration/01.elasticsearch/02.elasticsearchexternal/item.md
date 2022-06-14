@@ -304,7 +304,7 @@ at in Albania.
 One way is to represent the changes of the normal index as lines of a
 related list inside the record that we want to explore.
 
-Evolutivo created a json “de-compiler” of another project called angular
+Evolutivo created a json "de-compiler" of another project called angular
 block inside the application itself. It produces a representation inside
 the detail view of the record. The Ajax technology used is an Angular.js
 grid.

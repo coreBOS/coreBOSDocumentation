@@ -83,7 +83,7 @@ The name of the coreBOSApp, it'll be automatically translated.
 
 **key**
 
-A key to uniquely identify the coreBOSApp. Please, use a fully qualified name for your coreBOSApps to avoid problems. This should be something like: “com.mycompany.myapp”. This is very important.
+A key to uniquely identify the coreBOSApp. Please, use a fully qualified name for your coreBOSApps to avoid problems. This should be something like: "com.mycompany.myapp". This is very important.
 
 **short_description**
 
@@ -95,7 +95,7 @@ A long description for your coreBOSApp, it'll be automatically translated.
 
 **class_name**
 
-The class name that implements your coreBOSApp. This is the name of the class contained in vtapp.php. The class name should follow the same principle as the key but instead of using dots you should capitalize the components and prepend “coreBOSApp_” to it, like “coreBOSApp_ComTsolucioDemoApp”.
+The class name that implements your coreBOSApp. This is the name of the class contained in vtapp.php. The class name should follow the same principle as the key but instead of using dots you should capitalize the components and prepend "coreBOSApp_" to it, like "coreBOSApp_ComTsolucioDemoApp".
 
 More on this later.
 
@@ -173,7 +173,7 @@ It's the recommended way to show content in the window. It should return only HT
 
 You can use any valid ids in the DOM elements returned since they will get automatically transformed to avoid clashing with other windows or coreBOSApps.
 
-You can use your own CSS class names but you should be careful for not clashing with other coreBOSApps. It's recommended to use class names named after your capitalized coreBOSApp key, like “ComMycompanyMycoreBOSApp-myclass”.
+You can use your own CSS class names but you should be careful for not clashing with other coreBOSApps. It's recommended to use class names named after your capitalized coreBOSApp key, like "ComMycompanyMycoreBOSApp-myclass".
 
 **getTitle()**
 
@@ -261,7 +261,7 @@ The coreBOSApp extension is developed using [jquery](https://jquery.com/) and [k
 
 Called when the canvas icon is clicked on. This hook is useful when we need our coreBOSApp to do something different than opening a window and show some contents. If false is returned, the default action will not be taken, so if we need to take some action and then continue with the normal process the function must return true.
 
-The object “this” is the window and “this.launcher” is the new window instance before it is shown, so conditions to limit the number of instances could also be taken here.
+The object "this" is the window and "this.launcher" is the new window instance before it is shown, so conditions to limit the number of instances could also be taken here.
 
 **onLoad()**
 
@@ -378,7 +378,7 @@ The parameters in the array must be in the same order they are defined in the se
 
 **this.safeId(id)**
 
-Returns the transformed id of the elements. coreBOSApps will transform all id's of HTML elements being sent by getContents() to avoid conflicting id's in the browser. This method will return the name given to your HTML elements. For example, if we define a div with id “chart”, we can use this→safeId('chart') to get the real id in the browser. Useful when creating DOM elements with jQuery.
+Returns the transformed id of the elements. coreBOSApps will transform all id's of HTML elements being sent by getContents() to avoid conflicting id's in the browser. This method will return the name given to your HTML elements. For example, if we define a div with id "chart", we can use this→safeId('chart') to get the real id in the browser. Useful when creating DOM elements with jQuery.
 
 **this.getServerMethodURL(action)**
 

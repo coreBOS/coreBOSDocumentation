@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - howto
 ---
----
 
 the TLDR; version is
 

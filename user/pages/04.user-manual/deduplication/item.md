@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - duplicate
 ---
----
 
 Duplicate record detection gives you the capability to detect and handle
 duplicate record. The merge feature helps you manage system storage

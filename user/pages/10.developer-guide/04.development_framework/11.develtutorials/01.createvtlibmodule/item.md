@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - module
 ---
----
 
 The most important part of creating a new module is defining the module
 completely. Once you have clearly defined all the fields and the

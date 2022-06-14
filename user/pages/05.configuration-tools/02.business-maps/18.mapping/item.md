@@ -20,7 +20,6 @@ taxonomy:
         - mapping
         - field
 ---
----
 
 This business rule serves the purpose of filling in fields of a new record when coming from another module's record or setting default values for the module you are creating. For example, when creating an Invoice from a SalesOrder or an Opportunity from a Contact.
 

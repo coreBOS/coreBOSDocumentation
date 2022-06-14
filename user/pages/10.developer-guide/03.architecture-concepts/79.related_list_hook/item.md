@@ -18,8 +18,7 @@ taxonomy:
         - event
     tag:
         - hooks
-        - relatedlist 
----
+        - relatedlist
 ---
 
 The need for this hook appears when a new module or functionality needs to add a related list on a module that is already installed or is a pure base module like Accounts or Contacts. To achieve this the method that will return the contents of the related list must be INSIDE the module's main class. So, for example, if we want to add a related list on Accounts, we need the method to be a native method of the Accounts class which is contained in the modules/Accounts/Accounts.php file. In other words: we need to modify a base code file.
@@ -47,7 +46,7 @@ function get_special_related_list($param1, $param2, ..., $object) {
 
 The rest is transparent, the application know what to do. It will look for the method *get_special_related_list()*, if it isn't found it will look for the file *modules/Payslip/get_special_related_list.php*, if it is found it will load it and look for the function *get_special_related_list()*, if found it will add it as a method to the CRMEntity class and proceed with the code as usual.
 
-There is only one small issue: due to the way PHP works adding a method dynamically at run time is really not supported. So we are forcing the code to some extent and in return we have to sacrifice that the new method will not be able to use the “$this” reference. This is why we add to the list of parameters the object reference, as can be seen in the above example.
+There is only one small issue: due to the way PHP works adding a method dynamically at run time is really not supported. So we are forcing the code to some extent and in return we have to sacrifice that the new method will not be able to use the "$this" reference. This is why we add to the list of parameters the object reference, as can be seen in the above example.
 
 You can find an [example function in the helpers directory.](https://github.com/tsolucio/corebos/blob/master/build/HelperScripts/CustomRelatedListFunction.php)
 

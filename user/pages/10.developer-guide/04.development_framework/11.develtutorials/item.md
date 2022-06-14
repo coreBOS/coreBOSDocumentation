@@ -15,10 +15,8 @@ content:
 taxonomy:
     category:
         - development
-        
     tag:
         - howto
----
 ---
 
 -   [Create a coreBOS module](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/createvtlibmodule)

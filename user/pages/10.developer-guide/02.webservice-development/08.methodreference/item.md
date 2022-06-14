@@ -19,9 +19,8 @@ taxonomy:
     tag:
         - reference 
 ---
----
-## CRUD Operations
 
+## CRUD Operations
 
 The API gives us a way of executing the basic operations of Create,
 Retrieve, Update, and Delete against any module installed in the

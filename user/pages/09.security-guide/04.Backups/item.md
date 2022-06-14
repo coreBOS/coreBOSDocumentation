@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - backup
 ---
----
 
 The application has an extension that can be used to configure regular backups and create ad hoc backups.
 
@@ -37,7 +36,7 @@ When we access the extension we will be able to activate the local backups and t
 ![](backupconfig.png?width=100%)
 
 <div class="notices blue">
-The “backup” default directory exists and is protected from access through the web.
+The "backup" default directory exists and is protected from access through the web.
 </div>
 
 Once configured the backups you can manually execute backups clicking on the **Backup Now** button and/or activate the **scheduled tasks** to make them regularly in Settings > Scheduled Tasks

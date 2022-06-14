@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - validations
 ---
----
 
 <div class="notices red"> This method has been superseded by
 the<a href="http://localhost/coreBOSDocumentation/configuration-tools/business-maps/validations"> Validations BussinessMap</a>. Although the system described here is still valid and working (for backward compatibility),

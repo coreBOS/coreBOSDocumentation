@@ -18,9 +18,8 @@ taxonomy:
     tag:
         - reporting
 ---
----
 
--   [Report Charts](/en/reporting/report_charts)
+- [Report Charts](/en/reporting/report_charts)
 
 <div class="notices blue">
 <h2>But how to make a dynamic filter for a date range?</h2>

@@ -15,10 +15,9 @@ content:
 taxonomy:
     category:
         - development
-        - workflow  
+        - workflow
     tag:
         - workflow
----
 ---
 
 There are two types of workflow tasks that can be added to the system:

@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - i18n
 ---
----
 
 Pros
 ----

@@ -19,11 +19,10 @@ taxonomy:
         - data
         - import
 ---
----
 
 Import of Inventory modules (Quotes, SO, PO and Invoices) is very similar to the normal import process, the only difference appears in the mapping of fields.
 
-If the module being imported is an inventory module the field mapping step of the import process will show not only the fields of the module but also a set of “virtual” fields that represent the product/service lines of the module.
+If the module being imported is an inventory module the field mapping step of the import process will show not only the fields of the module but also a set of "virtual" fields that represent the product/service lines of the module.
 
 These fields must be mapped to columns being imported from the CSV file. Basically they represent the fields that can be found in the product lines of the inventory modules as can be seen in the next table:
 
@@ -88,12 +87,12 @@ Services::::srv
 Services::::srv2
 ```
 
-the other two Sales Order have two products each. As can be seen the base fields like “Subject”, “Contact”, “Organization” or Billing and Shipping details are all repeated identically on all lines. When importing only the values of one row will be used, but they should be repeated on all lines.
+the other two Sales Order have two products each. As can be seen the base fields like "Subject", "Contact", "Organization" or Billing and Shipping details are all repeated identically on all lines. When importing only the values of one row will be used, but they should be repeated on all lines.
 
-The import process will group lines by the **“Subject”** column so this column MUST be unique for each record in the CSV file. This is **very important** because this is how the program identifies which product lines belong to each record. Let me repeat that again in a more colorful way:
+The import process will group lines by the **"Subject"** column so this column MUST be unique for each record in the CSV file. This is **very important** because this is how the program identifies which product lines belong to each record. Let me repeat that again in a more colorful way:
 
 <div class="notices red">
-The import process will group lines by the <strong> “Subject” </strong> column so this column MUST be unique for each record in the CSV file. This is <strong> very important </strong> because this is how the program identifies which product lines belong to each record.
+The import process will group lines by the <strong> "Subject" </strong> column so this column MUST be unique for each record in the CSV file. This is <strong> very important </strong> because this is how the program identifies which product lines belong to each record.
 </div>
 
 See next the contents of the CSV file described.

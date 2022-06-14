@@ -16,8 +16,7 @@ taxonomy:
     category:
         - adminmanual
     tag:
-        - 
----
+        - administration
 ---
 
 - [View/Filter Management](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/filtermanagement)

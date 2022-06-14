@@ -18,11 +18,10 @@ taxonomy:
     tag:
         - filters
 ---
----
 
-Filters are an effective search tool that can rapidly group records in a
-module. You can limit your search to selected columns and search
-criteria.
+Filters are an effective search tool that can rapidly group records in a module. You can limit your search to selected columns and search criteria.
+
+===
 
 Steps to create a custom Filter.
 

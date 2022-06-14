@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - globalsearch
 ---
----
 
 This business map is really a configuration setting. Most business maps
 are generic, whereas you can use them on many modules or for various

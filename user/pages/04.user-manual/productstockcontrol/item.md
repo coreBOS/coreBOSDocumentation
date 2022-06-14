@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - product
 ---
----
 
 Stock is controlled through **workflows**.
 

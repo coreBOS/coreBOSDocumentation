@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - certification
 ---
----
 
 To add your change to this documentation you must create a new wiki page inside the extensions directory with a specific format. Let's see the exact steps and formatting.
 
@@ -33,7 +32,7 @@ Access the url
 http://your_server/your_wiki_clone/doku.php?id=en:extensions:extensions:your_change_name
 
 ```
-where “your_change_name” is the name of your module or extension. Click on the “Create Page” link and add any content you want to the page. Usually this will be a description of the functionality and how to get it working or even how to purchase it.
+where "your_change_name" is the name of your module or extension. Click on the "Create Page" link and add any content you want to the page. Usually this will be a description of the functionality and how to get it working or even how to purchase it.
 
 ## 3.- Add a title to the page.
 

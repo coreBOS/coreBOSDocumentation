@@ -19,11 +19,10 @@ taxonomy:
     tag:
         - import
 ---
----
 
-This type of map is a developer/implementor tool. It permits you to mass
-import large files from the command line. It supports two different
-import methods.
+This type of map is a developer/implementor tool. It permits you to mass import large files from the command line. It supports two different import methods.
+
+===
 
 coreBOS based import process
 ----------------------------

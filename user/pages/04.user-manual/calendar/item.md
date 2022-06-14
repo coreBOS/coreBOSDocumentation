@@ -18,13 +18,13 @@ taxonomy:
     tag:
         - calendar
 ---
----
 
 How to add an activity or event
 -------------------------------
 
-There are several approaches on how to add a new activity, event or
-to-do:
+There are several approaches on how to add a new activity, event or to-do:
+
+===
 
 -   directly from Calendar View (recommended) - the order is the same
     for Day, Week or Month view and is described below – the advantage
@@ -42,8 +42,8 @@ particular time. In order to add new activity:
 -   Switch to Day, Week or Month view according to your needs.
 -   Click on the Calendar View to select start time of your activity.
 -   Select activity type (Call, Meeting, etc).
--   The new window “Add Event” (for Call, Meeting, etc.) or “Create To
-    Do” (for tasks) will appear on the screen.
+-   The new window "Add Event" (for Call, Meeting, etc.) or "Create To
+    Do" (for tasks) will appear on the screen.
 -   Fill in the form fields and save it using the \[Save\] button.
 
 ![](2_1_add_new_activity.png?width=100%)
@@ -61,7 +61,7 @@ present some of CalendarView functions:
     simply extend end time or easily to switch to Edit View or Detail
     View of the activities.
 -   Tasks/To Dos are shown in the Calendar View as well, at the top part
-    “all-day” section.
+    "all-day" section.
 -   Day, Week and Month calendar are provided. Just click on the buttons
     to change the view.
 -   Quick navigation buttons can be used to select a date.
@@ -83,17 +83,17 @@ with this Calendar is viewing your invites.</div>
 ![](3_1_calendarview_one_user.png?width=100%)
 
 
--   The panel “Assigned To” is used to show/hide activities for more
+-   The panel "Assigned To" is used to show/hide activities for more
     users on the calendar or just to see other user activities. In this
     case the colors are used to easily distinguish activities of the
     corresponding user.
 -   Using checkboxes you can easily select users of the group of
     interest. Another advantage is that the selected group is remembered
-    under “All selected” value and can be used again when you access the
+    under "All selected" value and can be used again when you access the
     system again.
--   Using checkboxes of the panel “Event status” you can show/hide
+-   Using checkboxes of the panel "Event status" you can show/hide
     events based on their status.
--   Using checkboxes of the panel “Task status” you can show/hide tasks
+-   Using checkboxes of the panel "Task status" you can show/hide tasks
     based on their status.
 
 ![](3_2_calendarview_more_users.png?width=100%)
@@ -130,7 +130,7 @@ your own color for a single activity/user.
 In order to select the color, initiate the Calendar View settings and
 follow these simple steps:
 
--   Go to “Colors in calendar” tab and click on the icon.
+-   Go to "Colors in calendar" tab and click on the icon.
 -   Select the color.
 -   Save the settings using the \[Save\] button.
 
@@ -145,7 +145,7 @@ calendar. In addition you can define displayed information separately
 for each activity type.
 
 The use of this tab is simple. In order to view the more information
-fields available, select them from “Available informations” and click on
+fields available, select them from "Available informations" and click on
 the \[Add &gt;&gt;\] button. You can see the default field which will be
 used on the top of the selected fields (marked purple in the following
 picture).
@@ -222,8 +222,8 @@ Documents assigned to activities
 
 The new Calendar also provides the possibility to assign documents to
 events or tasks. It means that meeting presentations or other discussed
-documents related to the calendar activity can be found in the “More
-Information” tab of the Detail View on the activity.
+documents related to the calendar activity can be found in the "More
+Information" tab of the Detail View on the activity.
 
 Google Integration
 ------------------

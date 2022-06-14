@@ -19,9 +19,8 @@ taxonomy:
     tag:
         - add
 ---
----
-## *GenDoc Template Merge*
 
+## *GenDoc Template Merge*
 
 <table class="table table-striped">
 <tbody>

@@ -17,8 +17,7 @@ taxonomy:
         - corebosmail
         - integration
     tag:
-        - roundcube 
----
+        - roundcube
 ---
 
 <div class="notices blue"> This project is fully documented and

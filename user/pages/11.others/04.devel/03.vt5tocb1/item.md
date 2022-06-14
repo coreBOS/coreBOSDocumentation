@@ -17,8 +17,6 @@ taxonomy:
         - documentation
     tag:
         - upgrade
-
----
 ---
 
 

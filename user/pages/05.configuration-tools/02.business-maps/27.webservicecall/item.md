@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - webservicecall
 ---
----
+
 ## REST/SOAP call and retrieval Mapping
 
 This workflow task type, named "**Run Web Service**" can be used to

@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - issue
 ---
----
+
 Issue Reference in Tracker: ~issue:225~
 
 ## Detailed Explanation
@@ -32,9 +32,9 @@ When searching on user fields like *Assigned To, Creator or Modified By* the sys
 ```
 assigned_to = user.first_name + ' ' + user.last_name
 ```
-A typical situation that arises often is the need to create a filter and show only the “current user”'s records. So you create a filter of activities to be done “today” and you don't want to have to create 50 “today” filters. one for each of your 50 users. Exactly the same way you don't have to create 365 filters for each day of the year for your “today” filter.
+A typical situation that arises often is the need to create a filter and show only the "current user"'s records. So you create a filter of activities to be done "today" and you don't want to have to create 50 "today" filters. one for each of your 50 users. Exactly the same way you don't have to create 365 filters for each day of the year for your "today" filter.
 
-To accomplish this we can use a special meta-variable when defining our filters for the user fields. This field is called “**current_user**” as can be seen in the next image.
+To accomplish this we can use a special meta-variable when defining our filters for the user fields. This field is called "**current_user**" as can be seen in the next image.
 
 ![](filter_current_user.png?width=100%)
 

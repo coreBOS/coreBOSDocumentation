@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - upgrade
 ---
----
 
 This release is about updating and stabilizing our code base along with enhancements in two directions:
 

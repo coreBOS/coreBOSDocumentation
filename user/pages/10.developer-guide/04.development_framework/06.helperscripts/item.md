@@ -16,10 +16,8 @@ taxonomy:
     category:
         - development
         - tool
-        
     tag:
         - helper
----
 ---
 
 In the **build/HelperScripts** directory you can find a series of small

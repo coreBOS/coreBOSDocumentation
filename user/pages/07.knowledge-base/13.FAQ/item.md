@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - faq
 ---
----
 
 -   ["report to" field in user profile have some influence in hierarchy and permission?](http://localhost/coreBOSDocumentation/knowledge-base/faq#report-to-field-in-user-profile-have-some-influence-in-hierarchy-and-permission)
 -   [How to increment maximum file upload. File upload field with message 'Maximum upload size is MB'](http://localhost/coreBOSDocumentation/knowledge-base/faq#how-to-increment-maximum-file-upload-file-upload-field-with-message-maximum-upload-size-is-mb)
@@ -52,7 +51,7 @@ taxonomy:
 
 <h3>Forums and Googles say to edit the php.ini file, increasing both upload_max_filesize and also post_max_size. I set them both to 25M & restarted server, but still no joy.
 
-So then changed config.inc.php for the upload_maxsize to 25000000 and it worked. NOTE: The configuration editor will show a value of 25, (to the right of “(Max 5MB)” but I tested it and it DOES work. Interestingly, it also shows the proper 25M value when the user uploads a file/document.
+So then changed config.inc.php for the upload_maxsize to 25000000 and it worked. NOTE: The configuration editor will show a value of 25, (to the right of "(Max 5MB)" but I tested it and it DOES work. Interestingly, it also shows the proper 25M value when the user uploads a file/document.
 <br>
 <br>
 <strong>reilogix</strong>
@@ -86,7 +85,7 @@ if (PHP_SAPI === "apache2handler" || (isset($_SESSION["auth...
 I found this <a href="https://discussions.vtiger.com//discussion/53017/vtiger-5-4-0-cron-jobs/p1">forum post in which this was mentioned that helped me</a>.<br>
 This was the solution I used from that forum post:<br><br>
 
-<strong>FIX POSTED</strong> for vtiger 5.4.0 cron error: <strong> “Access Denied” </strong> when file permissions set correctly <br> <br>
+<strong>FIX POSTED</strong> for vtiger 5.4.0 cron error: <strong> "Access Denied" </strong> when file permissions set correctly <br> <br>
 
 After some debugging, I found that the error occuring in [vtiger ]/vtigercron.php occurs in the first line of code after the includes:
 <br> <br>
@@ -96,7 +95,7 @@ ERROR LOCATION <br>
 ```
 if(PHP_SAPI === "cli" || (isset($_SESSION["authenticated_user_id"]) && isset($_SESSION["app_unique_key"]) && $_SESSION["app_unique_key"] == $application_unique_key)){
 ```
-<h3>This statement fails because PHP_SAPI <> “cli”, furthermore session variables $_SESSION[“app_unique_key”] and $_SESSION[“authenticated_user_id”] are blank.<br><br>
+<h3>This statement fails because PHP_SAPI <> "cli", furthermore session variables $_SESSION["app_unique_key"] and $_SESSION["authenticated_user_id"] are blank.<br><br>
 FIX INSTRUCTIONS <br><br>
 </h3>
 
@@ -104,8 +103,8 @@ FIX INSTRUCTIONS <br><br>
 ```
 echo(PHP_SAPI);
 ```
-2.  Check your adminstrative email for the cron job or check the log. You will notice that the value of PHP_SAPI is not “cli” but rather something like “cgi-fcgi” (or fast cgi).
-3.  In the statement above , if(PHP_SAPI === “cli” …. , replace “cli” with “cgi-fcgi” or whatever your value of PHP_SAPI is. And of course, you can now delete the echo statement.
+2.  Check your adminstrative email for the cron job or check the log. You will notice that the value of PHP_SAPI is not "cli" but rather something like "cgi-fcgi" (or fast cgi).
+3.  In the statement above , if(PHP_SAPI === "cli" …. , replace "cli" with "cgi-fcgi" or whatever your value of PHP_SAPI is. And of course, you can now delete the echo statement.
 
 ---
 <br>
@@ -151,8 +150,8 @@ You can also increase <strong>session.gc_maxlifetime</strong> in php.ini.</h3>
 
 If you need a way to determine if a given ticket came from the portal or not I would recommend you do this:<br><br>
 
--  create yourself a custom field checkbox called “Created by portal” (or something like that)<br>
--  modify the “Workflow for Ticket Created from Portal” workflow by adding an “Update Field” task and set your custom field to true<br>
+-  create yourself a custom field checkbox called "Created by portal" (or something like that)<br>
+-  modify the "Workflow for Ticket Created from Portal" workflow by adding an "Update Field" task and set your custom field to true<br>
 -  use your custom field for filtering and reports<br>
 -  forget that the from_portal field exists :-) <br><br>
 
@@ -239,7 +238,7 @@ UPDATE `vtiger_homestuff` SET `visible`=1 WHERE `stufftype`='Tag Cloud'
 <h2>Is there a way to make a shortcut (web based) that takes a user directly to a trouble ticket that is associated with a specific asset? In other words, simply clicking on a link it would add a new trouble ticket to the asset.</h2>
 </div>
 
-<h3>Yes. The trick here is to emulate the action of clicking on the “Add Ticket” button on the Tickets related list in Assets. This would look like this:</h3>
+<h3>Yes. The trick here is to emulate the action of clicking on the "Add Ticket" button on the Tickets related list in Assets. This would look like this:</h3>
 
 ```
 https://your_server/your_corebos/index.php?module=HelpDesk&return_module=Assets&return_action=CallRelatedList&return_id=YOUR_ASSET_CRMID&cbfromid=YOUR_ASSET_CRMID&action=EditView&createmode=link
@@ -257,9 +256,9 @@ http://localhost/coreBOSwork/index.php?module=HelpDesk&return_module=Assets&retu
 <h2>My user has blocked access to his account due to too many login attempts. How can I reset his access?</h2>
 </div>
 
-<h3>If you have access as an admin user, you can go to Settings > Users and edit the profile of the user who has blocked access. Search for the “Login Attempts” field and set it to 0. <br><br>
+<h3>If you have access as an admin user, you can go to Settings > Users and edit the profile of the user who has blocked access. Search for the "Login Attempts" field and set it to 0. <br><br>
 
-If you have blocked all the admin users you will have to go directly to the database, find the admin users' row in the vtiger_users table and set the “loginattempts” column to 0</h3>
+If you have blocked all the admin users you will have to go directly to the database, find the admin users' row in the vtiger_users table and set the "loginattempts" column to 0</h3>
 
 ---
 <br>
@@ -267,7 +266,7 @@ If you have blocked all the admin users you will have to go directly to the data
 <h2>How can we rollback a mass edit?</h2>
 </div>
 
-<h3>Some ideas come to mind, all rather “techy”: <br><br>
+<h3>Some ideas come to mind, all rather "techy": <br><br>
 
 -  Recover from a backup of the database. This is the easiest option with the only downside of losing information/work since the last backup, but you are doing frequent backups anyway, right? :-) <br>
 -  If the amount of work done doesn't permit you to recover from the database then you can recover the backup database into a copy, extract the table with the lost data, and copy it into the production database. Now create an update SQL command to update the incorrectly updated fields from the backup table. This option is a surgical backup recovery only of the fields you have updated instead of a full backup recovery. <a href="http://localhost/coreBOSDocumentation/knowledge-base/tutorials/recovermasseditchange">You can read the exact steps here.</a> <br>

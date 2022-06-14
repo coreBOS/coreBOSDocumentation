@@ -21,7 +21,6 @@ taxonomy:
         - masquerade
         - anonymize
 ---
----
 
 1.- Clone the base project
 

@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - installation
 ---
----
 
 - Welcome
      - Migration

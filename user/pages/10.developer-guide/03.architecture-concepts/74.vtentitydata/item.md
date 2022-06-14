@@ -15,11 +15,8 @@ content:
 taxonomy:
     category:
         - development
-        
     tag:
-        - VTE
         - entity
----
 ---
 
 The VTEntityData object provides access to an entity object (a record in

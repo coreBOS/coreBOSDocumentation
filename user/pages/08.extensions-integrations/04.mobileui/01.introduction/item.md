@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - mobile
 ---
----
 
 ## 1.- What is CoreBOS Mobile?
 

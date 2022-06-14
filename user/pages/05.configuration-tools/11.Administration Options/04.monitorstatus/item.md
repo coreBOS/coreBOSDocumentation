@@ -20,7 +20,6 @@ taxonomy:
         - health
         - monitorstatus
 ---
----
 
 If you would like to add your coreBOS install into your company's **IT Infrastructure Health Monitoring** system, the **ping** functionality is exactly what you are looking for.
 

@@ -20,8 +20,8 @@ taxonomy:
         - outgoing
         - outgoingserver
 ---
----
- coreBOS needs an email account to send out administrative emails regarding the operation of the application. Using this email account the program will send warning emails from workflows, notification of calendar events and end of import information (for example).
+
+coreBOS needs an email account to send out administrative emails regarding the operation of the application. Using this email account the program will send warning emails from workflows, notification of calendar events and end of import information (for example).
 
 Since the application requires this email account we decided to also use it to send normal work email messages from the users. For this to work and appear that each user sends emails from his own email we use a feature implemented into the mailing protocol (SMTP) called RELAY. Using this technique, the program connects to the server with the account that is configured and tells it that it will be sending an mail on behalf of another email account.
 
@@ -57,7 +57,7 @@ ssl://msexchange:587 </div></td>
 </tr>
 <tr>
 <td><strong>Email From</strong></td>
-<td>This field will force all emails leaving the system to seem to come from this email. Although the email will be sent from this account, the “Reply to” field will be the email of the user sending the email. Thus if the recipient clicks on respond the response will be sent to the user. I suppose this has some spam/company image justification</td>
+<td>This field will force all emails leaving the system to seem to come from this email. Although the email will be sent from this account, the "Reply to" field will be the email of the user sending the email. Thus if the recipient clicks on respond the response will be sent to the user. I suppose this has some spam/company image justification</td>
 </tr>
 <tr>
 <td><strong>Requires Authentication?</strong></td>
@@ -106,7 +106,7 @@ Find the following lines:
 function IsSMTP() {
 $this->Mailer = "smtp";
 ```
-Change “smtp” to “sendmail”
+Change "smtp" to "sendmail"
 
 ---
 
@@ -115,7 +115,7 @@ Change “smtp” to “sendmail”
 <h2>How do I configure a gmail account?</h2>
 </div>
 
-This forum thread says that you have to use **smtp.gmail.com** and select **TLS** as the authentication method. Also leave the “Email from” field empty as (I think) gmail does not support that feature.
+This forum thread says that you have to use **smtp.gmail.com** and select **TLS** as the authentication method. Also leave the "Email from" field empty as (I think) gmail does not support that feature.
 
 Also [this page explains activating the service on Google side](https://discussions.corebos.org/documentation/doku.php?id=en:adminmanual:outgoingservergmail).
 
@@ -126,7 +126,7 @@ Also [this page explains activating the service on Google side](https://discussi
 <h2>How can I check my spam score?</h2>
 </div>
 
-Send an email from the application to the email address indicated at [Mail Tester](https://www.mail-tester.com/) and after a few seconds click on the “Check Score” button. Review the recommendations and repeat.
+Send an email from the application to the email address indicated at [Mail Tester](https://www.mail-tester.com/) and after a few seconds click on the "Check Score" button. Review the recommendations and repeat.
 
 ---
 

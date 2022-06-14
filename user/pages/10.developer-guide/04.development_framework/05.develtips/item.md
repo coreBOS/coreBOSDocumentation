@@ -16,10 +16,8 @@ taxonomy:
     category:
         - development
         - contribute
-        
     tag:
         - guidelines
----
 ---
 
 - [How can I activate Single Pane for only one (my) module, independent of the system settings?](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-can-i-activate-single-pane-for-only-one-my-module-independent-of-the-system-settings)
@@ -190,7 +188,7 @@ See this page for tips on playing with PDF output:<a href="http://localhost/core
 <div class="notices blue">
 <h2>How to eliminate currency sign in report exports</h2> </div>
 
-This patch accomplishes this functionality. You don't have to collect the currency symbol, just save the value and format like with the php function “number_format” to get the value with the correct decimals.
+This patch accomplishes this functionality. You don't have to collect the currency symbol, just save the value and format like with the php function "number_format" to get the value with the correct decimals.
 ```
 Index: modules/Reports/ReportUtils.php
 ===================================================================
@@ -331,7 +329,7 @@ if($module) {
 
 You have to do this from database.
 
-- First you have to know the fieldname, in this case it is “rel_id”
+- First you have to know the fieldname, in this case it is "rel_id"
 - Go to vtiger_field table and search this field to get the fieldid, for example: 1994
 - After that you have to got to vtiger_fieldmodulerel, search this fieldid and you will see something like the next image, where you have to change the sequence to order the values:
 ![](sortmodulemultimodulecapture.png?width=100%)

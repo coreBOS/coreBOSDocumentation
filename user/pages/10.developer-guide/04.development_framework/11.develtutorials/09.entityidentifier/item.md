@@ -18,13 +18,12 @@ taxonomy:
     tag:
         - howto
 ---
----
-Sometimes, when the default entity identifier field is not significant
-for us and we want to change it for some other field that is more
-relevant.
 
-For example. In Opportunity module the default identifier is
-"Opportunity Name", but we want may want to use the "Opportunity No".
+Sometimes, when the default entity identifier field is not significant for us and we want to change it for some other field that is more relevant.
+
+For example. In Opportunity module the default identifier is "Opportunity Name", but we want may want to use the "Opportunity No".
+
+===
 
 For this, we have to create this script:
 

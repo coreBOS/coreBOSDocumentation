@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - fielddependency
 ---
----
 
 This type of map permits you to define dependencies between fields in
 edit mode. For example, it will permit you to make a field read-only
@@ -42,20 +41,20 @@ custom view filter system (see [Conditional
 Popup](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/conditional_popup) and [Popup Open
 Hook](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/conditional_popup):
 
--   e: igual | equal | “=”
--   n: distinto | not equal | “&lt;&gt;”
--   s: empieza con | begins with | “LIKE” (“$value%”)
--   Ns: | does not begin with | “LIKE” !(“$value%”)
--   ew: termina con | ends with | “LIKE” (“%$value”)
--   New: | does not end with | “LIKE” !(“$value%”)
--   c: contiene | like | “LIKE” (“%$value%”)
--   k: no contiene | not like | “NOT LIKE” (“%$value”)
--   l: menor que | less than | “&lt;”
--   b: menor que | less than | “&lt;”
--   g: mayor que | greater than | “&gt;”
--   a: mayor que | greater than | “&gt;”
--   m: menor o igual | less or equal | “&lt;=”
--   h: mayor o igual | greater or equal | “&gt;=”
+-   e: igual | equal | "="
+-   n: distinto | not equal | "&lt;&gt;"
+-   s: empieza con | begins with | "LIKE" ("$value%")
+-   Ns: | does not begin with | "LIKE" !("$value%")
+-   ew: termina con | ends with | "LIKE" ("%$value")
+-   New: | does not end with | "LIKE" !("$value%")
+-   c: contiene | like | "LIKE" ("%$value%")
+-   k: no contiene | not like | "NOT LIKE" ("%$value")
+-   l: menor que | less than | "&lt;"
+-   b: menor que | less than | "&lt;"
+-   g: mayor que | greater than | "&gt;"
+-   a: mayor que | greater than | "&gt;"
+-   m: menor o igual | less or equal | "&lt;="
+-   h: mayor o igual | greater or equal | "&gt;="
 
 Group conditions can be created concatenating with the typical AND/OR
 operators. We will be using a similar concept to the one used for
@@ -89,7 +88,7 @@ The actions supported are:
     -   change\_field, action\_field, new\_value, old\_value, any
         additional parameters in XML
 
-“Function” leaves the door open to all sorts of options, giving total
+"Function" leaves the door open to all sorts of options, giving total
 control to the programmer. We will provide a set of common functions to
 be used:
 
@@ -462,7 +461,7 @@ description of the selected account
 ```
 
 <div class="notices blue">
-IF (bill country starts with “A”) SET
+IF (bill country starts with "A") SET
 paymentcategory to infrastructure and make it readonly ELSE make
 paymentcategory editable 
 </div>

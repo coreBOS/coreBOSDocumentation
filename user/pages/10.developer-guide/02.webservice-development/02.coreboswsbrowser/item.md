@@ -18,11 +18,9 @@ taxonomy:
         - webservice
     tag:
         - tool
-        
 ---
----
-### Announcement video
 
+### Announcement video
 
 [plugin:youtube](https://www.youtube.com/watch?v=PWY9tRcES9o)
 

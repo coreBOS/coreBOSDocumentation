@@ -63,7 +63,7 @@ stick with conditions on fields that belong to the entity you are creating the w
 avoid fields and expressions/formulas in the conditions, use the given operators with static rawtext values
 </div>
 
-Finally **some operators have no meaning in scheduled workflows**, mostly the “has changed” type operators which require a specific action of saving to detect the change between the “before” and “after” values. With scheduled workflows there is no “before” value, we are directly selecting records from the database and they have had no change whatsoever.
+Finally **some operators have no meaning in scheduled workflows**, mostly the "has changed" type operators which require a specific action of saving to detect the change between the "before" and "after" values. With scheduled workflows there is no "before" value, we are directly selecting records from the database and they have had no change whatsoever.
 
 ## Scheduled Workflow Conditions
 
@@ -229,8 +229,8 @@ In this example, we will configure a workflow to send an email to Assigned to us
 
 ![](secondpictureex3.png?width=100%)
 
-7. After configuring the conditions, you need to send email alerts to “Assigned To” user to follow up with the Client. To compose an email notification, under the ‘Tasks’ Click New Task and then Click Send Mail.
-8. Provide Task Title — Just for your reference. In the To field, select “Assigned To’ user’s email address. Provide catchy subject and compose your email body.
+7. After configuring the conditions, you need to send email alerts to "Assigned To" user to follow up with the Client. To compose an email notification, under the ‘Tasks’ Click New Task and then Click Send Mail.
+8. Provide Task Title — Just for your reference. In the To field, select "Assigned To’ user’s email address. Provide catchy subject and compose your email body.
 
 ![](thirdpicture_ex3.png?width=100%)
 

@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - certification
 ---
----
 
 ## Administrator/Implementor Level coreBOS Certification Program
 
@@ -52,7 +51,7 @@ taxonomy:
 -   Best Practices
     -   Step by Step instructions to set up a coreBOS
     -   Teaching your users
-        -   see Como empezar y añadir “tus procesos”
+        -   see Como empezar y añadir "tus procesos"
 
 ### Analysis and Design of the new coreBOS system
 

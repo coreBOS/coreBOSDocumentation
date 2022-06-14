@@ -14,11 +14,10 @@ content:
     url_taxonomy_filters: true
 taxonomy:
     category:
-        - development 
+        - development
     tag:
         - module
         - block
----
 ---
 
 The goal of this tutorial is to show how we could add a new block in the

@@ -20,10 +20,8 @@ taxonomy:
         - login
         
 ---
----
 
 ## Access to the System
-
 
 You need a valid coreBOS user to access the webservice. All the
 operations you can do through the REST interface will be limited by the

@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - tool
 ---
----
 
 ## Create, Update and Retrieve Documents
 The purpose of these enhancements are to permit uploading files when we create/update documents through the web service interface. This extension also adds functionality that permits establishing relationships with other entities to the document we are creating.
@@ -27,9 +26,6 @@ The purpose of these enhancements are to permit uploading files when we create/u
 Calls to REST methods of Create, Retrieve and Update maintain their profile and keep working as before. This extension adds to these calls a set of special fields that will be acknowledged by the enhancements.
 
 The special fields are:
-
-
-
 
 <table class="table table-striped">
 <tbody>

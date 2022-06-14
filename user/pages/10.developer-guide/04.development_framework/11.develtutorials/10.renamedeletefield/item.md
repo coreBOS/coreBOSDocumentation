@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - renamedelete
 ---
----
 
 **Procedure**
 

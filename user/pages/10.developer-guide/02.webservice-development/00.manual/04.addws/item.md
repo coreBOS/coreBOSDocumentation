@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - add
 ---
----
+
 This chapter will teach you to create new services for those
 requirements where the existing services are just not enough.
 

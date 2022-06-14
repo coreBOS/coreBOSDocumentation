@@ -15,10 +15,8 @@ content:
 taxonomy:
     category:
         - development
-        
     tag:
         - database
----
 ---
 
 Emails
