@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - intro
 ---
-
 ---
 
 The web service interface in coreBOS is a simple, powerful, and secure

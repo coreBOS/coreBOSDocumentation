@@ -19,6 +19,7 @@ taxonomy:
     tag:
         - relatedpanes
 ---
+---
 
 The purpose of this mapping is to define additional panes or tabs on a
 modules' detail view. The additional panes work exactly as the "More

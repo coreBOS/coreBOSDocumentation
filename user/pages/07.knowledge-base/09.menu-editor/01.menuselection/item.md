@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - certification
 ---
-
+---
 
 coreBOS needs a better, more flexible menu system than what we inherited
 from vtiger CRM. So we set out to look for some options with some of

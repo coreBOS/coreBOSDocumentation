@@ -18,8 +18,7 @@ taxonomy:
     tag:
         
 ---
-
-
+---
 
 From time to time it happens that you want to change the database you
 are using in your installation. This is a developer situation as it is

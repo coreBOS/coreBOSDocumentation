@@ -20,7 +20,7 @@ taxonomy:
         - health
         - monitorstatus
 ---
-
+---
 If you would like to add your coreBOS install into your company's **IT Infrastructure Health Monitoring** system, the **ping** functionality is exactly what you are looking for.
 
 This feature is expressly designed to be called from a tool like [Nagios](https://www.nagios.org/) or [Pandora](https://pandorafms.com/en/) and will execute a set of 10 tests against your coreBOS install. Actually 11 if you consider accessing the script itself as a test.

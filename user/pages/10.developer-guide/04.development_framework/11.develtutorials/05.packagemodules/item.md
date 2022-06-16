@@ -18,6 +18,7 @@ taxonomy:
     tag:
         - distribution
 ---
+---
 
 <div class="notices red">
 <strong>THIS DOCUMENTATION IS WRONG</strong>. It

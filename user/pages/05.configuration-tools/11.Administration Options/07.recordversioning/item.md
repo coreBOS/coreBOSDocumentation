@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - recordversioning
 ---
-
+---
 There is a new feature in coreBOS that permits users to save different versions of one record. Each version is a new record by itself but it is not shown as such. You can't see it in the ListView nor search for it, because of all the versions of a record, only the Active Version is shown. *But how can this new feature be enabled?*
 
 It's easy. You have to go to the Integrations panel (CRM URL/index.php?action=integration&module=Utilities) and enable Record Versioning for one or more modules.

@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - autocomplete
 ---
-
+---
 Autocomplete functionality is so typical for a backend that coreBOS had
 to have this functionality natively. We have two methods that permit us
 to easily implement this functionality.

@@ -20,7 +20,7 @@ taxonomy:
         - hooks,
         - javascript
 ---
-
+---
 You can override any javascript function with the **corebosjshook** class.
 
 This class is an instantiation of the [meld class from cujoJS](https://github.com/cujojs/meld) and you can use any of the many options this library has to insert your functionality where you need to. 

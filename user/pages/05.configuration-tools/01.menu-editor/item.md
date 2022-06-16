@@ -19,7 +19,7 @@ taxonomy:
         - menu
         - menueditor
 ---
-
+---
 The design of the menu editor is like this:
 
 -   The panel on the right is an action panel, anything you do there will take effect immediately and reflect on the left panel tree.

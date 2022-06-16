@@ -18,5 +18,5 @@ taxonomy:
     tag:
         - mobile
 ---
-
+---
 ## [Mobile Introduction](http://localhost/coreBOSDocumentation/extensions-integrations/mobileui/introduction)

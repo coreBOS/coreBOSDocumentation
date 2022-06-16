@@ -18,5 +18,5 @@ taxonomy:
     tag:
         - issue
 ---
-
+---
 - [Issue Details](http://localhost/coreBOSDocumentation/others/devel/issue_tracker/start/issue)

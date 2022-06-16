@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 This asset-like module records all the external devices and support hardware being used by an account. Necessary for inventory knowledge and legal requirements.
 
 ===

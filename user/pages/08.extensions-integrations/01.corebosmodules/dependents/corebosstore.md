@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 Contact like module related to Contacts where you can save information about people that depend upon the main Contact.
 
 ===

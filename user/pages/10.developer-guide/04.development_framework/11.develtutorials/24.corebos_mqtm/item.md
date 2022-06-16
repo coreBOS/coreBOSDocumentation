@@ -20,7 +20,7 @@ taxonomy:
         - message
         - queue
 ---
-
+---
 Following the marvelous work of [Martin Fowler](https://martinfowler.com/) in his book about [Enterprise Integration Patterns](https://martinfowler.com/books/eip.html) we have
 added a native Message Queue and Task Manager to coreBOS.
 

@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - onesignal 
 ---
-
+---
 ### Configuration
 
 The [OneSignal](https://onesignal.com/) configuration [is really

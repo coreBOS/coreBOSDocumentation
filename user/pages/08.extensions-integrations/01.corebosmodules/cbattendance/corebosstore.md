@@ -18,6 +18,7 @@ taxonomy:
     tag:
         - module
 ---
+---
 
 Module to register the fact of a contact assisting an event or session (related with [cbSession](../../01.corebosmodules/cbsession/id:1a493a6456d9f38c3bb1aeecf3d9a1ab/store:corebosmodule) module).
 

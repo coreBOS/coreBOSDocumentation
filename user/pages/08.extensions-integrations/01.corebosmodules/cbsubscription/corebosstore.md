@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 This module will allow you to activate notifications about changes in records. Each user will be able to activate the notices on the records they want by clicking on a link that will be available in the right panel of the record in the detail view of the entity or by multiple selection in the list view.
 
 ===

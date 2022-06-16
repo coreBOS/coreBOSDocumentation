@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - logo
 ---
-
+---
 -   Official orange color: #ffb018
 -   Official blue color: #04579b
 -   Official blue background: #0B2559

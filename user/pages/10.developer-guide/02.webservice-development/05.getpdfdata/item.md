@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - add
 ---
-
+---
 ## *GenDoc Template Merge*
 
 <table class="table table-striped">

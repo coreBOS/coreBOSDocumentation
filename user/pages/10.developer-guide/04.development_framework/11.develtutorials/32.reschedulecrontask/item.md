@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - howto
 ---
-
+---
 All cron tasks are executed inside the same context and with full access
 to the whole set of tasks to be launched. This has a few implications:
 

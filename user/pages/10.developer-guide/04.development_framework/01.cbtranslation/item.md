@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - i18n
 ---
-
+---
 Pros
 ----
 - **add strings to other modules with no code changes**

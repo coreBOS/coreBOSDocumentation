@@ -21,7 +21,7 @@ taxonomy:
         - guide
         - role
 ---
-
+---
 ## Introduction
 
 coreBOS implements a state of the art role-based security management

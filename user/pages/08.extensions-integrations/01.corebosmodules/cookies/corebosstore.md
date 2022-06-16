@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 This asset-like module records all the cookies being used by an account on their website. Necessary for inventory knowledge and legal requirements.
 
 ===

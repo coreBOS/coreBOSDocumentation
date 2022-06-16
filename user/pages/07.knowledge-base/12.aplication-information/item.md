@@ -1,6 +1,7 @@
 ---
 title: 'Aplication Information'
 ---
+---
 
 - [Emails Sent by the application](http://localhost/coreBOSDocumentation/knowledge-base/aplication-information/emailssent)
 

@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 Module to relate project and contacts. It is similar to the [Stake Holder module](../../01.corebosmodules/cbstakeholder/id:76ca3874026d767b20a2406c4989c498/store:corebosmodule).
 
 ===

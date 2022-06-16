@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - typeform 
 ---
-
+---
 ### Typeform Configuration
 
 Configuring the application to read Typeform surveys consists of various

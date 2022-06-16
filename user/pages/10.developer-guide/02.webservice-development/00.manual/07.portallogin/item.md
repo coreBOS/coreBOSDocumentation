@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - login
 ---
-
+---
 A common use case for coreBOS is to permit our clients or employees to
 access information in the application and even manage certain parts of
 that information. This is what we call a **Customer Portal** application

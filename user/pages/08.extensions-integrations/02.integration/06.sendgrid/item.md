@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - sendgrid 
 ---
-
+---
 coreBOS can use [SendGrid](https://sendgrid.com/) to send emails.
 
 coreBOS has an abstraction layer for sending emails, [which you can read

@@ -20,7 +20,7 @@ taxonomy:
         - service contracts
         - invoice
 ---
-
+---
 On the product lines of an invoice we will find icon buttons that will
 permit us to establish a relation between assets and service contracts
 for each line.

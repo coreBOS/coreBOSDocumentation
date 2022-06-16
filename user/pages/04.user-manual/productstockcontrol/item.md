@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - product
 ---
-
+---
 Stock is controlled through **workflows**.
 
 -   There is a default <u>workflow associated with

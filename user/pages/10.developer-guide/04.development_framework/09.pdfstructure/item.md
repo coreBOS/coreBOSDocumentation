@@ -20,7 +20,7 @@ taxonomy:
         - howto
         - obsolete
 ---
-
+---
 PDF Structure
 -------------
 

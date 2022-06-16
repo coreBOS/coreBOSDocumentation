@@ -18,6 +18,7 @@ taxonomy:
     tag:
         - module
 ---
+---
 
 This extension permits you to establish different coloring and formatting rules for fields on a module depending on conditions based on the values of the fields in the record. You can also manipulate blocks by closing and hiding them depending on field conditions defined.
 

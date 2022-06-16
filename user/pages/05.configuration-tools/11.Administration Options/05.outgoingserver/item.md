@@ -20,7 +20,7 @@ taxonomy:
         - outgoing
         - outgoingserver
 ---
-
+---
 coreBOS needs an email account to send out administrative emails regarding the operation of the application. Using this email account the program will send warning emails from workflows, notification of calendar events and end of import information (for example).
 
 Since the application requires this email account we decided to also use it to send normal work email messages from the users. For this to work and appear that each user sends emails from his own email we use a feature implemented into the mailing protocol (SMTP) called RELAY. Using this technique, the program connects to the server with the account that is configured and tells it that it will be sending an mail on behalf of another email account.

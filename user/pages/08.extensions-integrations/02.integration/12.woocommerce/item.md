@@ -18,6 +18,7 @@ taxonomy:
     tag:
         - woocommerce 
 ---
+---
 
 This integration supports a two-way synchronization of products and
 customers between the two applications and a one-way synchronization of

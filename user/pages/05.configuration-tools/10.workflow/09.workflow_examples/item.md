@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - example
 ---
-
+---
 
 <div class="notices blue">
 <strong>I am looking at setting up a workflow to accomplish this:</strong>

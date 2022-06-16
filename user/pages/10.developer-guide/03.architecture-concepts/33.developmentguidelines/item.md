@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - guidelines
 ---
-
+---
 
 On this page you will find a set of code rules and general development
 workflow we try to impose in the coreBOS project. I strongly recommend

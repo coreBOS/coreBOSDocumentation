@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - issue
 ---
-
+---
 Issue Reference in Tracker: ~issue:210~
 
 ## Detailed Explanation

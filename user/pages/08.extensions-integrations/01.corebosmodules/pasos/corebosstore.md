@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 This module is part of the [Adequacy functionality](../../01.corebosmodules/adecuaciones/id:d51886e9ff11c8667ddda0973c2757e8/store:corebosmodule). It represents a pool of steps or actions that can be done in any given adequacy project. The [flow](../../01.corebosmodules/flujo/id:5a98bef1ee218c8c1b1bb13ddbcce1e8/store:corebosmodule) module will group these steps together into sequences to be used.
 
 ===

@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - whatsapp 
 ---
-
+---
 Twilio has created an API to integrate applications with Whatsapp. So
 you can send Whatsapp messages for marketing campaigns (for example)
 through another application. We have integrated this into CorebosCRM.

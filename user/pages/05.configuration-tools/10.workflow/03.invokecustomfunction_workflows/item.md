@@ -20,6 +20,7 @@ taxonomy:
         - customfunction
        
 ---
+---
 
 This type of workflows is like an open set of functionality that can implement many different actions. In reality it is a simple and defined way of enhancing the workflow system without going through the trouble of adding a new screen (not that that is very complicated but this is easier).
 

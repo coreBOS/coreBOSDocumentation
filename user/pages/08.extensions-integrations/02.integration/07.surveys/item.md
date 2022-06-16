@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - surveys 
 ---
-
+---
 The survey integration system in **coreBOSCRM** is based on the idea of
 joining forces. We don't pretend to have a complete survey management
 system inside the application and compete with existing tools dedicated

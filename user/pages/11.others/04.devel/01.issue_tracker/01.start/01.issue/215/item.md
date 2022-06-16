@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - issue
 ---
-
+---
 Vulnerability::Issue Reference in Tracker: ~issue:215~
 
 [vtiger CRM Trac Ticket](http://trac.vtiger.com/cgi-bin/trac.cgi/ticket/7714)

@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - howto
 ---
-
+---
 
 The Workflow module provides a number of options to trigger actions
 based on events in the application or time based events.

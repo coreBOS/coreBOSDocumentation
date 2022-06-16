@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 Picklist-like module to record different categories or types of working days and their cost.
 
 ===

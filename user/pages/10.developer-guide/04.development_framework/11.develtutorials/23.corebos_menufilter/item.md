@@ -19,7 +19,7 @@ taxonomy:
         - filter
         - howto
 ---
-
+---
 Sometimes we put in one module two or more similar concepts; products we
 sell and products we buy, accounts we work with and accounts that are
 partners, quotes for clients and template quotes,... and also different

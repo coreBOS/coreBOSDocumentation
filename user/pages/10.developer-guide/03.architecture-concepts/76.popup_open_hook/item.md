@@ -20,7 +20,7 @@ taxonomy:
         - hooks
         - popup
 ---
-
+---
 ## Popup open hook
 
 This hook permits us to customize the action that will be taken when a user clicks on the select icon of a uitype10/capture field.

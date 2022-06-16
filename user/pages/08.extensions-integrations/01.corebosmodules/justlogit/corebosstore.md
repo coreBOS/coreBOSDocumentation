@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 An Event/Calendar type module to register things that happen, incidents worth recording or simply time spent on some task.
 
 ===

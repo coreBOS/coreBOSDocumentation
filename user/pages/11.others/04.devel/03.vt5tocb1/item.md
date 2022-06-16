@@ -18,8 +18,7 @@ taxonomy:
     tag:
         - upgrade
 ---
-
-
+---
 
 
 eliminated stats tracking (never really liked that much)

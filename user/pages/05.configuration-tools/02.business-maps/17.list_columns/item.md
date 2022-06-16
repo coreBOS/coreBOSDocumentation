@@ -19,6 +19,7 @@ taxonomy:
     tag:
         - listcolumns
 ---
+---
 
 The purpose of this mapping is to override the predefined columns that
 appear on the related and popup lists for a module. Each module has two

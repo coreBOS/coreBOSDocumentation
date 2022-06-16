@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - guide
 ---
-
+---
 From the users point of view the coreBOSApps extension is very simple to
 use as it is really an infrastructure to make it easy for developers to
 offer simple solutions, encapsulated in windows. Each of these

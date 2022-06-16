@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 Module to control research or investigation requests, used, for example, to document quote analysis requests or the study of possible solutions to problems that appear in the business. This module is related with [Research Request Actions module](../../01.corebosmodules/researchrequestactions/id:bc9024396093031d695ffca92cb7606a/store:corebosmodule) where each exact step is recorded.
  
 ===

@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - debug.log
 ---
-
+---
 Due to the popularity of javascript and it's importance inside web
 applications (coreBOS), as of June 2018 coreBOS has added functionality
 to be able to log messages that happen in your javascript code to the

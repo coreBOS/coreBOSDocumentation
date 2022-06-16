@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - reporting
 ---
-
+---
 - [Report Charts](/en/reporting/report_charts)
 
 <div class="notices blue">

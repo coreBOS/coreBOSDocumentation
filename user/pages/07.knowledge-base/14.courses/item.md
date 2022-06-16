@@ -1,6 +1,7 @@
 ---
 title: 'Courses'
 ---
+---
 
 - [coreBOS Certification Program](http://localhost/coreBOSDocumentation/knowledge-base/courses/cbcert)
 

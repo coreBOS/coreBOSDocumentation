@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - logo
 ---
-
+---
 This feature permits Configuring an IMAP mailbox to scan for messages and convert them to appropriate entities in the application.
 
 Mail Converter adds the capability to scan your mailbox and take actions on messages that matches the established criteria.

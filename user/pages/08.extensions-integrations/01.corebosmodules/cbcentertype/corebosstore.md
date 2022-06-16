@@ -18,6 +18,7 @@ taxonomy:
     tag:
         - module
 ---
+---
 
 Picklist-like module to record work centers, offices or similar.
 

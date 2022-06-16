@@ -18,6 +18,7 @@ taxonomy:
     tag:
         - user manual
 ---
+---
 
 Tutorials|Use cases of the application.|en:usermanual:tutorial|
 

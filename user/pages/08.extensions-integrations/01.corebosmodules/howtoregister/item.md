@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - certification
 ---
-
+---
 To add your change to this documentation you must create a new wiki page inside the extensions directory with a specific format. Let's see the exact steps and formatting.
 
 ## 1.- Working on the documentation site

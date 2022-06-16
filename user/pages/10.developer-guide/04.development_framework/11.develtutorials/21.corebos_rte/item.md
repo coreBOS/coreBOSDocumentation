@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - rte
 ---
-
+---
 -   set the Global Variable **Application\_Use\_RTE** to 1 for the
     module, which is it's default value
 -   create an [Extended Field Information Mapping](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/extendedfieldinfo) declaring the

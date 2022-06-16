@@ -20,7 +20,7 @@ taxonomy:
         - login
         
 ---
-
+---
 ## Access to the System
 
 You need a valid coreBOS user to access the webservice. All the

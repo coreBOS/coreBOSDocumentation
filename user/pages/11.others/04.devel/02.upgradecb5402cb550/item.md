@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - upgrade
 ---
-
+---
 This release is about updating and stabilizing our code base along with enhancements in two directions:
 
 - open the application to third party projects through a much more powerful REST interface, so we can grow upon the core system creating incredible applications on top of it

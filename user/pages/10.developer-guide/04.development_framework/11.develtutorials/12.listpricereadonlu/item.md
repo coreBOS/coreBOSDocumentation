@@ -21,7 +21,7 @@ taxonomy:
         - list price
         - inventory
 ---
-
+---
 <div class="notices red">
  This can now be done using the
 </strong>Inventory\_ListPrice\_ReadOnly</strong> global variable </div>

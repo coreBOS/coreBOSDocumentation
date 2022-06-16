@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - upgrade
 ---
-
+---
 <div class="notices blue">
 Currently migrations from 6.0 to 6.5 are available.
 </div>

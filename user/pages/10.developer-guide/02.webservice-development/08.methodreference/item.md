@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - reference 
 ---
-
+---
 ## CRUD Operations
 
 The API gives us a way of executing the basic operations of Create,

@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 Work Experience module to register information about the employment history of your employees and contacts.
 This is part of the **Attorney's Back Office Human Resources** extensions.
 

@@ -19,6 +19,7 @@ taxonomy:
         - data
         - import
 ---
+---
 
 Import of Inventory modules (Quotes, SO, PO and Invoices) is very similar to the normal import process, the only difference appears in the mapping of fields.
 

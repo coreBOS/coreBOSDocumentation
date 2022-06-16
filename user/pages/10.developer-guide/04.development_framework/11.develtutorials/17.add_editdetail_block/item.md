@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - template
 ---
-
+---
 The goal of this tutorial is to show how we could add a new block in the
 edit or detail view of a module where we could add some special
 functionality that we may need.

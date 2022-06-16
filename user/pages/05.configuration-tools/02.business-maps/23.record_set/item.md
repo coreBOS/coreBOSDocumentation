@@ -19,6 +19,7 @@ taxonomy:
     tag:
         - recordset
 ---
+---
 
 The purpose of this mapping is to define a heterogeneous set of record
 IDs. Simply a bunch of CRMIDs of records from different modules. This

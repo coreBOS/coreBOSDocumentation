@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - integration
 ---
-
+---
 <u>coreBOS 5.5</u> 
 has brought a new tool to our *powerful business operating system* : **coreBOS Updater**.
 

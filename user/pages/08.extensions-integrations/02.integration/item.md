@@ -18,6 +18,7 @@ taxonomy:
     tag:
         - integration 
 ---
+---
 ## Table Content
 
 - [Elastic Search/Kibana Integration](http://localhost/coreBOSDocumentation/extensions-integrations/integration/elasticsearch)

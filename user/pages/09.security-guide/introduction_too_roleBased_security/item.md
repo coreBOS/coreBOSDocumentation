@@ -22,7 +22,7 @@ taxonomy:
         - role
         - rbac
 ---
-
+---
 ## Chapter 1. Introduction to Role-Based Security
 
 This chapter explains how to start working with coreBOS's security

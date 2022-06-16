@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - webdav 
 ---
-
+---
 <strong>[Wikipedia Definition](https://en.wikipedia.org/wiki/WebDAV) </strong>
 
 <strong>[Blog Post Presentation](https://blog.corebos.org/blog/webdav) </strong>

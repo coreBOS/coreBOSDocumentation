@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 Contact-like module to register information about eventual or third party workers that support your business.
 This is part of the **Attorney's Back Office Human Resources** extensions.
 

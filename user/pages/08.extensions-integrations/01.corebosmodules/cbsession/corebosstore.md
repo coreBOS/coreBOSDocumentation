@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 Module to register the fact of a session of some event that will take place (related with [cbAttendance](../../01.corebosmodules/cbattendance/id:c96a81e3711333dc402b58e7a289cb12/store:corebosmodule) module).
 
 ===

@@ -19,6 +19,7 @@ taxonomy:
     tag:
         - fielddependency
 ---
+---
 
 This type of map permits you to define dependencies between fields in
 edit mode. For example, it will permit you to make a field read-only

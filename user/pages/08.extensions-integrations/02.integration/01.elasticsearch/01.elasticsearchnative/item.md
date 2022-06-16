@@ -1,6 +1,7 @@
 ---
 title: 'Elastic Search/Kibana Integration'
 ---
+---
 coreBOS Native Integration
 ---
 This integration adds an event handler script to each module you enable

@@ -21,7 +21,7 @@ taxonomy:
         - guide
         - example
 ---
-
+---
 This chapter explains on examples how role based security and the other security settings can be used to manage the CRM system.
 
 ## User Administration Basics

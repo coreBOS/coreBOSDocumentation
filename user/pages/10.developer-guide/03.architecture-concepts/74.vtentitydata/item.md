@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - entity
 ---
-
+---
 The VTEntityData object provides access to an entity object (a record in
 the application). It implements (among others) the following methods
 

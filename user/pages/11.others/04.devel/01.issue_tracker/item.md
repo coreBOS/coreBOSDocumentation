@@ -18,6 +18,7 @@ taxonomy:
     tag:
         - issue
 ---
+---
 
 [Access coreBOS Issue Tracker](https://github.com/tsolucio/corebos/issues)
 

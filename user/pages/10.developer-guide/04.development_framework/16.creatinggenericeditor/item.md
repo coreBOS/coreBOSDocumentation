@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - editor
 ---
-
 ---
 
 Some years ago we created a master-detail business map for coreBOS, but

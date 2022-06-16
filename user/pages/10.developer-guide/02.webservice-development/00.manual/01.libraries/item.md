@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - library
 ---
-
 ---
 
 In order to make programming with the web service API easier, we have

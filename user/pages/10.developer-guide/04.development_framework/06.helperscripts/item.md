@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - helper
 ---
-
+---
 In the **build/HelperScripts** directory you can find a series of small
 scripts and tools that are useful to achieve some of those special tasks
 that help adapt the system to your specific needs. Some of these should

@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - vulnerabilities
 ---
-
+---
 <table class="table table-striped">
 <tbody>
 <tr>

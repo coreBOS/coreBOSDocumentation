@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - howto
 ---
-
+---
 In the default behaviour, a web service call to either **revise** or
 **update** will demand you to make sure all fields are sent to coreBOS
 in the format of your current user. This applies in particular to number

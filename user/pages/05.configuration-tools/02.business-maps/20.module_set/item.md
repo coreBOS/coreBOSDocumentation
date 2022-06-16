@@ -19,6 +19,7 @@ taxonomy:
     tag:
         - moduleset
 ---
+---
 
 The purpose of this mapping is to define a heterogeneous set of module
 names. Simply a bunch of modules. This could be used to define a set of

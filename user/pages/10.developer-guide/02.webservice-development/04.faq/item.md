@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - faq
 ---
-
+---
 ## Using the count(*) operator in VQL, How do I get the number from the returned result?
 
 <div class="notices blue">

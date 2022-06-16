@@ -19,7 +19,7 @@ taxonomy:
         - data
         - import
 ---
-
+---
 The import feature enables users to import data or records from various sources into coreBOS. Currently, CSV format and VCF (Vcard) format are allowed to import. (Exceptionally iCal import is supported for Calendar module).
 
 Export/Import feature is enabled on almost all modules. There are a few

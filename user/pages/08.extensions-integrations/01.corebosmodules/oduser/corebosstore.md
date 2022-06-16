@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 This extension modifies coreBOS to control the number of active users that are permitted to use the system. It was created to support On-Demand hosting services so you will be able to limit the users accessing the system and enforce per-user costs.
 
 ===

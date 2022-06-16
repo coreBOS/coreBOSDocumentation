@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - workflow
 ---
-
+---
 <div class="notices yellow">
 <a href="https://producingoss.com/en/share-management.html#translation-manager">Based on Produccing Open Source Software</a></div>
 

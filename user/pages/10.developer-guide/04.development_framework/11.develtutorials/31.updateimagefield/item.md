@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - workflow
 ---
-
+---
 Don't complicate it: use Web Service API
 
 ```php

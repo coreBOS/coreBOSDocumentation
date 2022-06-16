@@ -18,9 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
-
-===
+---
 
 ### How it works
 

@@ -20,6 +20,7 @@ taxonomy:
         - openoffice
         - libreoffice
 ---
+---
 
 This is the OpenOffice, LibreOffice + Rich Text Format merge feature for
 coreBOS

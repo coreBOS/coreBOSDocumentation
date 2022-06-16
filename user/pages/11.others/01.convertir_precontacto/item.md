@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - lead
 ---
-
+---
 
 <div class="notices blue">
 <h2>I define a profile where I deactivate the top options of see and use

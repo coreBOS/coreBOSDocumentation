@@ -20,7 +20,7 @@ taxonomy:
         - install
         - getting-started
 ---
-
+---
 How to install and update your coreBOS application.
 
 ===

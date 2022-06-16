@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - howto
 ---
-
+---
 The global steps are:
 
 1. dump the affected table from your backup to a file

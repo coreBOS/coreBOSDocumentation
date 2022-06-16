@@ -19,6 +19,7 @@ taxonomy:
     tag:
         - faq
 ---
+---
 
 -   ["report to" field in user profile have some influence in hierarchy and permission?](http://localhost/coreBOSDocumentation/knowledge-base/faq#report-to-field-in-user-profile-have-some-influence-in-hierarchy-and-permission)
 -   [How to increment maximum file upload. File upload field with message 'Maximum upload size is MB'](http://localhost/coreBOSDocumentation/knowledge-base/faq#how-to-increment-maximum-file-upload-file-upload-field-with-message-maximum-upload-size-is-mb)

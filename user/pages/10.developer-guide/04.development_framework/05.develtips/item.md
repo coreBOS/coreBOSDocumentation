@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - guidelines
 ---
-
+---
 - [How can I activate Single Pane for only one (my) module, independent of the system settings?](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-can-i-activate-single-pane-for-only-one-my-module-independent-of-the-system-settings)
 - [Custom date fields load by default "today". We need a custom date field to be empty by default, how can we accomplish this.](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#custom-date-fields-load-by-default-today-we-need-a-custom-date-field-to-be-empty-by-default-how-can-)
 - [How to create custom formula function for field expressions in workflows](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-to-create-custom-formula-function-for-field-expressions-in-workflows)

@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - field
 ---
-
+---
 ===
 
 <table class="table table-striped">

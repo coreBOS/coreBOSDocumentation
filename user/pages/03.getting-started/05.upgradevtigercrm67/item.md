@@ -20,7 +20,7 @@ taxonomy:
         - install
         - vtigercrm
 ---
-
+---
 ## Migrate from vtiger CRM 6.x and 7.x to coreBOS
 
 ===

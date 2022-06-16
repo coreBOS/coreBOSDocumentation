@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 Picklist-like module to record service categories or types
 
 ===

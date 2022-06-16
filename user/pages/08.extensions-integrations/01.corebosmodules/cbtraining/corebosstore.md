@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 Module to record the registration of contacts to and the service price of an event that will take place (related with cbAttendance module)
 
 ===

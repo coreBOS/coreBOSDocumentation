@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 Perspective of three modules to manage multiwarehouse stock and movements of material between warehouses.
 
 ===

@@ -20,7 +20,7 @@ taxonomy:
         - howto
         - capture
 ---
-
+---
 When the user clicks on the select icon of a capture field (uitype 10) a
 popup screen appears with the list of records of the module being
 selected. In certain situations, it is necessary to pre-filter the

@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 Job Details Information module.
 This is part of the **Attorney's Back Office Human Resource** enhancements.
 

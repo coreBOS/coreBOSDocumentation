@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - issue
 ---
-
+---
 <table class="table table-striped">
 <tbody>
 <tr>

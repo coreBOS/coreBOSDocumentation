@@ -19,6 +19,7 @@ taxonomy:
     tag:
         - informap
 ---
+---
 
 The accepted format is
 

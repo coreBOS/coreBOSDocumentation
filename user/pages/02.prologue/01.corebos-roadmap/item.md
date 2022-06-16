@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - goals
 ---
-
+---
 Approximately once a year the core coreBOS team gets together to decide what the big goals of the year are. We discuss the accomplishments and the lackings of our previous years' goals and map out what we are aiming for this next year.
 
 These goals are high-level objectives that we keep in mind and sight during the year. They drive many of the decisions that we will take as to which tasks should be accepted; those that take us closer to any of those goals will be promoted easier than those that don't and those tasks that are not aligned with those goals will be rejected.

@@ -19,6 +19,7 @@ taxonomy:
     tag:
         - certification
 ---
+---
 
 ## Administrator/Implementor Level coreBOS Certification Program
 

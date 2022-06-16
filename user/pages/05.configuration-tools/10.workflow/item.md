@@ -20,6 +20,8 @@ taxonomy:
         - workflows
         
 ---
+---
+
 
 Workflows are a very powerful part of the application. They permit us to automate our business logic to some extent making it possible to standardize process and have the application do some of the repetitive tasks our business requires.
 

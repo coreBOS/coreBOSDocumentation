@@ -21,7 +21,7 @@ taxonomy:
         - masquerade
         - anonymize
 ---
-
+---
 1.- Clone the base project
 
     git clone https://github.com/coreBOS/masqueradeAnonymizer.git

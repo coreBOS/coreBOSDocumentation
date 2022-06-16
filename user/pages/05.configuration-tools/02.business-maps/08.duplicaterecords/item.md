@@ -19,6 +19,7 @@ taxonomy:
     tag:
         - duplicaterecords
 ---
+---
 
 The accepted format is
 

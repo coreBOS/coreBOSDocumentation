@@ -19,6 +19,7 @@ taxonomy:
     tag:
         - businessaction
 ---
+---
 
 Business Actions are things that can happen inside the application. They enhance the vtiger CRM link system and they can affect any part of the application.
 

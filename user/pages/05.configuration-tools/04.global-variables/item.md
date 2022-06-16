@@ -18,6 +18,7 @@ taxonomy:
     tag:
         - globalvariable
 ---
+---
 
 The Global Variables module permits us to customize the functionality of the application in a very easy way. The basic idea is that when we are programming something and need to establish a value or a decision, we create a global variable with a default value and use the result. So now any user can set the global variable to another value and effectively modify the program logic without having to modify the code. A really powerful and easy extension.
 

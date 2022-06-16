@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - calendar
 ---
-
+---
 ## Google Synchronization
 
 You can view or synchronize your Google events with your coreBOS events

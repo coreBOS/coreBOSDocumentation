@@ -20,7 +20,7 @@ taxonomy:
         - rule
         - decision
 ---
-
+---
 coreBOS Rules are a step towards [BPM](https://en.wikipedia.org/wiki/Business_process_management)
 automation using the workflow infrastructure.
 

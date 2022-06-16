@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - mautic
 ---
-
+---
 The current state of the integration with Mautic is a bidirectional
 synchronization of contacts and companies.
 

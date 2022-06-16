@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - renamedelete
 ---
-
+---
 **Procedure**
 
 -   manually change all the places where the field is being used in the

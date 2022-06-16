@@ -20,7 +20,7 @@ taxonomy:
     tag:
         - guide
 ---
-
+---
 - [This Guide](..)
 - [Chapter 1: Introduction to Role-Based Security.](http://localhost/coreBOSDocumentation/security-guide/introduction_too_rolebased_security)
 - [Chapter 2: Examples](http://localhost/coreBOSDocumentation/security-guide/examples)

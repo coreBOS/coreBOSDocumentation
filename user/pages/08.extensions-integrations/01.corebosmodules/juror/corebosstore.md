@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 Contact like module to register information about jurors.
 This is part of the **Attorneys Back Office** application.
 

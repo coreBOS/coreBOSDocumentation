@@ -21,6 +21,7 @@ taxonomy:
         - payment
         
 ---
+---
 
 The goal of this extension is to be able to register any incoming or
 outgoing payment made by our company and associate that payment with

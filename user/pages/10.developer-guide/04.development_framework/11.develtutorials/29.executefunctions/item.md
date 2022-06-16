@@ -19,7 +19,7 @@ taxonomy:
         - API
         - function
 ---
-
+---
 <div class="notices blue">
 <strong>Execute Function</strong>: How to call the application backend from javascript </div>
 

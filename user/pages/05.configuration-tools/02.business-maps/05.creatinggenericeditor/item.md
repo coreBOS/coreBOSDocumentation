@@ -19,6 +19,7 @@ taxonomy:
     tag:
         - editor
 ---
+---
 
 Some years ago we created a master-detail business map for coreBOS, but
 it was mainly for use in external applications. It could be used to

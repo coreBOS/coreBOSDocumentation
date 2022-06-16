@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - addtask
 ---
-
+---
 There are two types of workflow tasks that can be added to the system:
 **custom workflow functions** and full blown **workflow tasks**. The
 difference is the configuration screen. A **custom function** is just a

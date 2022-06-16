@@ -18,6 +18,7 @@ taxonomy:
     tag:
         - module
 ---
+---
 
 An asset type module (really an asset clone) to register equipment and machines present in our clients installations that were not sold by us but that we are interested in controling/substituting.
 

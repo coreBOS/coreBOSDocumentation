@@ -19,7 +19,7 @@ taxonomy:
         - encryption
         - decryption
 ---
-
+---
 These are the steps that need to be taken in order to implement a new
 encryption/decryption method:
 

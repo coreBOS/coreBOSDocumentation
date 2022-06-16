@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - maps 
 ---
-
+---
 
 The <strong>coreBOSCRM GeoLocalization Map </strong> extension will permit you to
 locate your clients on a map, searching by different criteria, making

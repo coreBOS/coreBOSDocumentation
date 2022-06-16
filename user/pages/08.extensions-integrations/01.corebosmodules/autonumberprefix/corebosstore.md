@@ -18,6 +18,7 @@ taxonomy:
     tag:
         - module
 ---
+---
 
 ### Configuration
 

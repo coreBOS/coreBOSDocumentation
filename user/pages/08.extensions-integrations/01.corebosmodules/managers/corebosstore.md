@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 Contact-like module to register information about management employees.
 This is part of the **Attorney's Back Office Human Resources** extensions.
 

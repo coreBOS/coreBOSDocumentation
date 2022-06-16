@@ -20,7 +20,7 @@ taxonomy:
         - hooks
         - popup
 ---
-
+---
 This hook permits us to directly manipulate the query to be executed in the Pop-up capture screen for our module.
 
 Although the Pop-up capture screen has some very advanced searching capabilities that can be directly used through [pop-up open hook as can be read here.](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/popup_open_hook)

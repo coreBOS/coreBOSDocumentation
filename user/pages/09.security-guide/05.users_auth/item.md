@@ -21,7 +21,7 @@ taxonomy:
         - rbac
         - user
 ---
-
+---
 ## SQL Database Authentication
 
 coreBOS validates user access using a password hash saved in the database. The password can be changed by the user and also by users with administration rights. The password can be configured to automatically expire activating the scheduled task to do so and setting the number of days to expire the password with the global variable **Application_ExpirePasswordAfterDays**

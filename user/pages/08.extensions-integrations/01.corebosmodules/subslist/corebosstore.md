@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 Module to register the different groupings of our clients by different criteria in order to work with them in a segmented manner.
 
 ===

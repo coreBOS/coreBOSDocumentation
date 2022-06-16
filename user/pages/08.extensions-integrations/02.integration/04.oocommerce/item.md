@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - oocommerce 
 ---
-
+---
 We have added support to vtiger CRM webservice interface to support
 quotes/SO/PO/invoice. So this alone is a very interesting extension to
 vtiger CRM making integrations a lot easier.

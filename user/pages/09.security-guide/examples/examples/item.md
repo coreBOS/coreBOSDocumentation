@@ -21,7 +21,7 @@ taxonomy:
         - guide
         - example
 ---
-
+---
 This chapter discusses the security setup for example organizations and
 explains what individual users are allowed to do on the CRM system. By
 far these examples do not include all possibilities to configure the CRM

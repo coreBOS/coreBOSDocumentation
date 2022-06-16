@@ -20,7 +20,7 @@ taxonomy:
         - uitype
         - currency
 ---
-
+---
 coreBOS has support for multicurrency fields on any module.
 
 This is accomplished with the uitype 71 fields. This is a currency field

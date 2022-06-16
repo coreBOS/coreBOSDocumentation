@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 Module to manage many addresses related to Accounts and Contacts. You will be able to relate as many addresses as you need to each account/contact and then establish the default billing and shipping address on them and on each individual Quote, SalesOrder, PurchaseOrder and Invoice.
 
 ===

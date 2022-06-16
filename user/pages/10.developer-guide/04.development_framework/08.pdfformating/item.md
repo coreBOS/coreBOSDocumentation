@@ -20,7 +20,7 @@ taxonomy:
         - howto
         - obsolete
 ---
-
+---
 <div class="notices blue">
 <h2> How to eliminate the background status watermark?</h2></div>
 

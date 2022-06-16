@@ -19,6 +19,7 @@ taxonomy:
     tag:
         - detailviewlayout
 ---
+---
 
 The purpose of this mapping is to define **a block layout for a module**. It holds equivalent information to the layout editor in the application settings. The difference is that blocks can be defined to contain different options and that we can have many maps/configurations for the same module, whereas in settings you can have only one layout for all users of the application.
 

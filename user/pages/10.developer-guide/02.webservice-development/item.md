@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - webservice
 ---
-
+---
 ## Table of Contents
 
 -   [Introduction](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/intro)

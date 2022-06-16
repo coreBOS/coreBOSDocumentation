@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
-
+---
 ### How it works
 This is a normal vtlib module which can be installed through the module manager. It contains a set of fields and information about your employees. The assigned to field can be linked to the user accessing the application as a means to extend the information we have about each employee that has access to coreBOS, but it is not really linked in any special way.
 

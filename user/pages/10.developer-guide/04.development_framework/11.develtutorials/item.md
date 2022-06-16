@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - howto
 ---
-
+---
 -   [Create a coreBOS module](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/createvtlibmodule)
 -   [List of coreBOS UITypes](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/uitypes)
 -   [coreBOS Multi-Currency Fields](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/multicurrency)

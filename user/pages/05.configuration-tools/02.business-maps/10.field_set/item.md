@@ -19,6 +19,7 @@ taxonomy:
     tag:
         - fieldset
 ---
+---
 
 The purpose of this mapping is to define a heterogeneous set of fields
 that belong to some modules. Simply a bunch of fields. This could be
