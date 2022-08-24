@@ -98,6 +98,57 @@ parentmodule is set to Utilities.
 </div>
 
 <br>
+
+##Popup Query Hook
+
+This new feature helps us filter during the popup screen. Back then this functionality  was added hardcoding in base of the requirements and as we can imagine that is not very convenient. So, now the job can be done by adding a simple map in the **cbMap** module.
+
+The name of the map must be **{ModuleName}_ListColumns** and the map type clearly will be **List Columns**. We have to specify the **Target Module** where the map triggers.
+
+Below you can see an example of the map in the **Products** module:
+
+``` xml
+<map>
+    <originmodule>
+        <originname>Products</originname>
+    </originmodule>
+    
+<popup>
+            <linkfield>productcode</linkfield>
+            <columns>
+<field>
+                    <name>productcode</name>
+                </field>
+                <field>
+                    <name>productname</name>
+                </field>
+  <field>
+                    <name>unit_price</name>
+                </field>
+                
+            </columns>
+<conditions>
+<condition>
+<forfield>productid</forfield>
+<value>[{"fieldname":"unit_price","operation":"less than","value":"5","valuetype":"rawtext","joincondition":"and","groupid":"0","groupjoin":""}]</value>
+</condition>
+</conditions>
+        </popup>
+</map>
+
+```
+
+In the `originmodule` we have to specify as we mentioned above the target module, which in our case is **Products**. 
+Between the `linkfield` tags we specify a field name from **Products** we want to refer to and enter the module after we click it. To continue with the `field` tags we have to enter the desired set of fields that will appear in the popup screen. After we must include the `conditions`, where initialy we select the related field (uitype 10) between the `forfield` tags, which is in every module related to **Products**. So, for example if you enter the **InventoryDetails** module and try to link a specific product, in the popup screen are going to be shown only the records that satisfy the conditions set between the `value` tags. 
+> [{"fieldname":"unit_price","operation":"less than","value":"5","valuetype":"rawtext","joincondition":"and","groupid":"0","groupjoin":""}].
+
+Basically in this example we tell the system that we want only records which, for the *unit_price* field, the value is **less than** 5.
+In response we will get the products which unit price is smaller than 5.
+
+
+> **_Last tip:_**  If you need an easy way to write the condition you can check the **cbQuestion** module, enter the *Builder* mode and make specific conditions which are going to be reflected as a line of code coming to your help. Check the link:
+[Business Question builder mode](http://localhost/corebos/index.php?action=Builder&module=cbQuestion)
+
 ------------------------------------------------------------------------
 
 [Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/record_set) | Chapter 7: Record Set Mapping.
