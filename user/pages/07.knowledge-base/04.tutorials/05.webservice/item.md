@@ -345,7 +345,7 @@ var hash = CryptoJS.MD5(token+accesskey).toString();
 ### Workflows, Rules, Questions and Actions
 #### ExecuteWorkflow-Operation 
 
-[Workflows](http://corebos.tsolucio.com/documentation/doku.php?id=en:adminmanual:workflows) are a very powerful part of the application. They permit us to automate our business logic to some extent making it possible to standardize process and have the application do some of the repetitive tasks our business requires. When you want to trigger a workflow, only from outside of the coreBOS,ie. from the portal or anywhere else and you don't have access to activate it from the corebos system, then it should be set to System Mass Actions .
+[Workflows](../../../05.configuration-tools/10.workflow) are a very powerful part of the application. They permit us to automate our business logic to some extent making it possible to standardize process and have the application do some of the repetitive tasks our business requires. When you want to trigger a workflow, only from outside of the coreBOS,ie. from the portal or anywhere else and you don't have access to activate it from the corebos system, then it should be set to System Mass Actions .
 
 **GET URL Format :**
 ```
@@ -436,7 +436,7 @@ The email that has been sent have to be same with the context and no with th wor
 
 #### getBusinessActions-Operation
 
-[Business Actions](http://corebos.tsolucio.com/documentation/doku.php?id=en:adminmanual:businessactions) are things that can happen inside the application. They enhance the vtiger CRM link system and they can affect any part of the application
+[Business Actions](../../../05.configuration-tools/03.business-actions) are things that can happen inside the application. They enhance the vtiger CRM link system and they can affect any part of the application
 
 **GET URL Format :**
 
