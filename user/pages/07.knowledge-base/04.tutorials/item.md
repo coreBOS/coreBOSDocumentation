@@ -7,7 +7,7 @@ These documents teach users specific things that they can do with the applicatio
 [Shopify Integration](02.shopifyintegration)
 <br>
 
-[Apache Tika ](04.tika)
+[Apache Tika ](04.Tika)
 <br>
 
 [BPM Example](03.bpmexample)
