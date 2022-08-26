@@ -37,3 +37,4 @@ There are a few hidden features for debugging and fixing:
 http://your_server/your_corebos/index.php?action=Save&module=evvtMenu&evvtmenudo=fixOrphaned
 ```
 
+### - [Menu Selection](../01.menu-editor/01.menuselection)
