@@ -30,34 +30,31 @@ According to filext.com, there are about 15k to 51k content types, and this numb
 
 **Various applications use Apache Tika. Here we will discuss step by step the use of Tika in coreBOS.**
 
-Firstly you need to install and run Apache Tika :
+Firstly you need to install and run Apache Tika. The easiest way to do this is using docker.
 
 ```
-git clone https://github.com/apache/tika-docker
-cd tika-docker
-You can pull the latest image:
-docker pull apache/tika:latest
 docker run -d -p 9998:9998 apache/tika:latest
 ```
 
 Activate Read Documents Content - ApacheTika cron.
 
-![Crone](cron.png?classes=maxsize)
+![coreBOS-Tika Cron](cron.png?classes=maxsize)
 
-Create the GV (Apache_Tika_URL) where you set the URL where Tika is running
+Create the Global Variable (`Apache_Tika_URL`) where you set the URL where Tika is running (the IP of the docker container which you can obtain with `docker inspect`)
 
-![GV](globalvariable.PNG?classes=maxsize)
+![Apache_Tika_URL](globalvariable.PNG?classes=maxsize)
 
-After the first three steps, the Apache Tika is setup and ready to work.
+After the first three steps, the Apache Tika is setup and ready to work. The cron will go through all the document records and index the attached file. After that it will index all the new and modified files.
 
 ### Testing Apache Tika
 
-In the Documents module upload several documents that you will use for tests.
-You will see the "Search Documents" button, you can write the word or the phrase you want to find and you can search the files' contents now. 
+In the Documents module, upload several documents that you will use for tests. Wait for the cron to run or launch it manually.
+
+In the Documents module, you will see the "Search Documents" button, you can write the word or the phrase you want to find and you can search the files' contents.
 
 ![Searchdoc](searchdoc.png?classes=maxsize)
 
-You can use also Global Search for a full-text search into files.
+You can use also use the Global Search for a full-text search into files.
 
 ![Search](search.png?classes=maxsize)
 
