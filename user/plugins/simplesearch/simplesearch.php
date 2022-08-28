@@ -201,6 +201,9 @@ class SimplesearchPlugin extends Plugin
         //Add modular pages again
         $this->collection->merge($modularPageCollection);
 
+        //Allow for integration to SimpleSearch collection
+        $this->grav->fireEvent('onSimpleSearchCollection', new Event(['collection' => $this->collection]));
+
         //Check if user has permission to view page
         if ($this->grav['config']->get('plugins.login.enabled')) {
             $this->collection = $this->checkForPermissions($this->collection);
@@ -265,7 +268,6 @@ class SimplesearchPlugin extends Plugin
 
             $this->grav['page'] = $page;
         }
-        //$this->collection = $this->collection->batch(25)[0];
     }
 
     /**

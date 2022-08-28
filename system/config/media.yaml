@@ -108,22 +108,6 @@ types:
     type: file
     thumb: media/thumb-doc.png
     mime: application/msword
-  odt:
-    type: file
-    thumb: media/thumb-docx.png
-    mime: application/vnd.oasis.opendocument.text
-  odg:
-    type: file
-    thumb: media/thumb-docx.png
-    mime: application/vnd.oasis.opendocument.graphics
-  odp:
-    type: file
-    thumb: media/thumb-xls.png
-    mime: application/vnd.oasis.opendocument.presentation
-  ods:
-    type: file
-    thumb: media/thumb-xls.png
-    mime: application/vnd.oasis.opendocument.spreadsheet
   docx:
     type: file
     thumb: media/thumb-docx.png
