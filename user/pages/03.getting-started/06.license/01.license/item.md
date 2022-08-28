@@ -45,7 +45,12 @@ Some of our other extensions and modules follow a more limited [Vizsage License]
 - [MPL / GPL Incompatibility](http://www.tomhull.com/ocston/docs/mozgpl.html)
 - [OSI](http://opensource.org)
 - [Vizsage License](../03.vizsage)
-- [Faircode](https://faircode.io)
+- [Evolutivo License](../04.evolutivo)
+- [Business Source License](https://mariadb.com/bsl11/)
+- [Fair-code is not a software license](https://faircode.io)
+- [Fair Source License](https://fair.io/?a)
+- [Server Side Public License (SSPL)](https://www.mongodb.com/licensing/server-side-public-license)
+- [Open Source Eventually License](https://github.com/ftrotter/OSE)
 - [GNU free documentation license](../../../09.security-guide/LicenseUsageAcknowledgements#gnu_free_documentation_license)
 
 ![VPL 1.1 Definitions](vpl1.1_definitions.png?width=450px)
