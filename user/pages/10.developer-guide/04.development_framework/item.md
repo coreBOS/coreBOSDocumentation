@@ -1,7 +1,6 @@
 ---
 title: 'Development Framework'
 ---
----
 
 - [coreBOS Translation Module](http://localhost/coreBOSDocumentation/developer-guide/development_framework/cbtranslation)
 
@@ -40,3 +39,4 @@ title: 'Development Framework'
 - [Asterisk](http://localhost/coreBOSDocumentation/developer-guide/development_framework/asterisk)
 
 - [Calendar Development](http://localhost/coreBOSDocumentation/developer-guide/development_framework/calendar)
+- [Module Import Permission Call Stack](20.moduleimport)
