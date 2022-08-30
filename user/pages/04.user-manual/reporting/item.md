@@ -19,7 +19,7 @@ taxonomy:
         - reporting
 ---
 ---
-- [Report Charts](/en/reporting/report_charts)
+- [Report Charts](../../04.user-manual/report%20charts)
 
 <div class="notices blue">
 <h2>But how to make a dynamic filter for a date range?</h2>

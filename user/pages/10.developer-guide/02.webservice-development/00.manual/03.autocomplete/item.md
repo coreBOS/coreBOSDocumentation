@@ -215,6 +215,6 @@ autocomplete
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/getrelatedcontrols)| Chapter 11: get Related Records method.
+[Next](../../06.getrelatedcontrols)| Chapter 11: get Related Records method.
 
 ------------------------------------------------------------------------

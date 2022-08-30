@@ -143,12 +143,12 @@ function post_to_third_party( $entry, $form ) {
 }
 ```
 
-*Relaying a Webform* |[Read more](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/coreboswswebform/webforms)
+*Relaying a Webform* |[Read more](./webforms)
 
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/skipconvertfields)| Chapter 17: Skip convert fields.
+[Next](../11.skipconvertfields)| Chapter 17: Skip convert fields.
 
 
 ------------------------------------------------------------------------

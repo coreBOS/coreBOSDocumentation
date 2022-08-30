@@ -542,6 +542,6 @@ function validate_testacccemail($field) {
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/relatedpanes) | Chapter 15: Related Panes.
+[Next](../24.relatedpanes) | Chapter 15: Related Panes.
 
 ------------------------------------------------------------------------

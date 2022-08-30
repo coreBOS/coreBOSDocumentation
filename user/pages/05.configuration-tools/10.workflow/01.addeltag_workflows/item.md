@@ -48,6 +48,6 @@ The workflow task in itself is simple; you select:
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/relateproductservice_workflows) | Chapter 7: Related Product/Service Workflow Task.
+[Next](../04.relateproductservice_workflows) | Chapter 7: Related Product/Service Workflow Task.
 
 ------------------------------------------------------------------------

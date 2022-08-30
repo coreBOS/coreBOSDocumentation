@@ -45,6 +45,6 @@ Test with first letter is uppercase, and all words is a valid Brazilian name (wi
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store/businessmap/businessmapping_salesorder2purchaseorder/id:8da23107042004dfdca1977d0d2d22f7/store:configuration) | Chapter 5: SalesOrder2PurchaseOrder.
+[Next](../businessmapping_salesorder2purchaseorder) | Chapter 5: SalesOrder2PurchaseOrder.
 
 ------------------------------------------------------------------------

@@ -140,7 +140,7 @@ Goluke](https://github.com/Luke1982)!! </div>
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/reservedparameter)| Chapter 18: Format and reserved parameter.
+[Next](../10.reservedparameter)| Chapter 18: Format and reserved parameter.
 
 
 ------------------------------------------------------------------------

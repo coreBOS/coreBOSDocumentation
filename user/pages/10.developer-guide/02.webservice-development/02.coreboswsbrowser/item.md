@@ -80,7 +80,7 @@ detected automatically.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/coreboswswebform)| Chapter 16: coreBOS Webservice Webform.
+[Next](../../02.webservice-development/14.coreboswswebform )| Chapter 16: coreBOS Webservice Webform.
 
 
 ------------------------------------------------------------------------

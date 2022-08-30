@@ -160,6 +160,6 @@ Note that this is NOT time based, it will not calculate automatically when "toda
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/upsert_workflows) | Chapter 5: Upsert Workflow Task.
+[Next](../07.upsert_workflows) | Chapter 5: Upsert Workflow Task.
 
 ------------------------------------------------------------------------

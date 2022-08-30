@@ -26,8 +26,7 @@ IDs. Simply a bunch of CRMIDs of records from different modules. This
 could be used to define a set of records to launch a mass operation upon
 or a set of records that must be excluded from some global process.
 
-In concept, it is very similar to the [Condition Query
-Mapping](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/condition-query) where you can
+In concept, it is very similar to the [Condition Query Mapping](../04.condition-query) where you can
 retrieve a set of records from a query. The big difference is that this
 mapping easily mixes records from different modules and with no special
 condition that the query must fulfill, you just put the IDs, no fuss.
@@ -62,6 +61,6 @@ returned.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/module_set) | Chapter 8: Module Set Mapping.
+[Next](../20.module_set) | Chapter 8: Module Set Mapping.
 
 ------------------------------------------------------------------------

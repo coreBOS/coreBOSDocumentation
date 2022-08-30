@@ -22,10 +22,10 @@ taxonomy:
 ---
 ---
 - [This Guide](..)
-- [Chapter 1: Introduction to Role-Based Security.](http://localhost/coreBOSDocumentation/security-guide/introduction_too_rolebased_security)
-- [Chapter 2: Examples](http://localhost/coreBOSDocumentation/security-guide/examples)
-- [Chapter 3: Summarized Rules](http://localhost/coreBOSDocumentation/security-guide/summarized_rules)
-- [License](http://localhost/coreBOSDocumentation/security-guide/licenseusageacknowledgements)
+- [Chapter 1: Introduction to Role-Based Security.](../introduction_too_roleBased_security)
+- [Chapter 2: Examples](../examples)
+- [Chapter 3: Summarized Rules](../summarized_rules)
+- [License](../LicenseUsageAcknowledgements)
 
 This book describes the concept of role-based security and other
 security features as it has been implemented by coreBOS

@@ -121,7 +121,7 @@ Note that inside each event type the set of active events will be executed in or
 This event is an internal event that is launched before any other event when an entity is saved. It should not be used.
 
 **vtiger.entity.beforesave**
-This event is fired before an entity is saved. You will be passed a [VTEntityData](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/vtentitydata) object representing the saved entity. It should be noted that new objects may not have an id (if it is being created). You can modify the contents of VTEntityObject.
+This event is fired before an entity is saved. You will be passed a [VTEntityData](../../../../../../10.developer-guide/03.architecture-concepts/74.vtentitydata) object representing the saved entity. It should be noted that new objects may not have an id (if it is being created). You can modify the contents of VTEntityObject.
 
 **vtiger.entity.beforesave.final**
 This event is an internal event that is launched after all other BEFORESAVE events when an entity is saved. It should not be used.
@@ -130,19 +130,19 @@ This event is an internal event that is launched after all other BEFORESAVE even
 This event is fired after an entity is saved, but before workflows and standard aftersave events but the local save_module() method of the object has been executed.
 
 **vtiger.entity.aftersave**
-This event is fired after an entity is saved, even the local save_module() method of the object has been executed. This also provides a [VTEntityData](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/vtentitydata) object.
+This event is fired after an entity is saved, even the local save_module() method of the object has been executed. This also provides a [VTEntityData](../../../../../../10.developer-guide/03.architecture-concepts/74.vtentitydata) object.
 
 **vtiger.entity.aftersave.final**
 This event is an internal event that is launched after all other SAVE events have occurred. It should not be used.
 
 **vtiger.entity.beforedelete**
-This event is fired before an entity is deleted. You will be passed a [VTEntityData](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/vtentitydata) object representing the entity that will be eliminated.
+This event is fired before an entity is deleted. You will be passed a [VTEntityData](../../../../../../10.developer-guide/03.architecture-concepts/74.vtentitydata) object representing the entity that will be eliminated.
 
 **vtiger.entity.afterdelete**
 This event is fired after an entity is deleted. You will be passed a VTEntityData object representing the deleted object. Be careful as this object can no longer be referenced using the applications' methods.
 
 **vtiger.entity.afterrestore**
-This event is fired after an entity has been recovered from the Recycle Bin. You will be passed a [VTEntityData](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/vtentitydata) object representing the entity that has been restored.
+This event is fired after an entity has been recovered from the Recycle Bin. You will be passed a [VTEntityData](../../../../../../10.developer-guide/03.architecture-concepts/74.vtentitydata) object representing the entity that has been restored.
 
 **vtiger.entity.beforegroupdelete**
 This event is fired before deleting a group. You will be passed an array with this structure:
@@ -267,22 +267,22 @@ Action launched when two entities have just been UNrelated (AFTER). The action r
 **corebos.filter.preSaveCheck**
 Filter launched before starting the Save process. Will receive, the $_REQUEST variable and the current object trying to be saved. It must return, besides these two input parameters, an error status, an error message, an error action and an array of variables to return to the edit screen the process was initiated from.
 
-[You can read a little more about this filter here](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/precrud)
+[You can read a little more about this filter here](../../../../../../10.developer-guide/03.architecture-concepts/78.precrud)
 
 **corebos.filter.preEditCheck**
 Filter launched before starting the Edit process. Will receive, the $_REQUEST variable, the Smarty object and the current object trying to be edited.
 
-[You can read a little more about this filter here](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/precrud)
+[You can read a little more about this filter here](../../../../../../10.developer-guide/03.architecture-concepts/78.precrud)
 
 **corebos.filter.preViewCheck**
 Filter launched before starting the Detail View process. Will receive, the $_REQUEST variable, the Smarty object and the current object trying to be viewed.
 
-[You can read a little more about this filter here](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/precrud)
+[You can read a little more about this filter here](../../../../../../10.developer-guide/03.architecture-concepts/78.precrud)
 
 **corebos.filter.preDeleteCheck**
 Filter launched before deleting a record. Will receive, the current object trying to be deleted and must return a boolean indicating if the action may proceed or not and a message to show in case it cannot.
 
-[You can read a little more about this filter here](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/precrud)
+[You can read a little more about this filter here](../../../../../../10.developer-guide/03.architecture-concepts/78.precrud)
 
 **corebos.audit.[ authenticate|login|login.attempt|logout|action]**
 Actions called on the indicated events
@@ -306,7 +306,7 @@ This filter receives these parameters:
 return the announcement to show. permits creating dynamic announcements
 
 **Custom Permission Hooks**
-**corebos.permission.[ accessquery|ispermitted]:** [Custom Permission Hooks](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebos_permission_hooks)
+**corebos.permission.[ accessquery|ispermitted]:** [Custom Permission Hooks](../../../../../../10.developer-guide/03.architecture-concepts/80.corebos_permission_hooks)
 
 **Events Examples**
 When you register an event in the application the details are saved in the **vtiger_eventhandlers** table, so the best way to find examples of the different types of events above is to look in that table for real working code. For example, you can find there:
@@ -456,7 +456,7 @@ You can find a real example in the add Action Link Helper Script
 		<td class="col0">DETAILVIEW</td><td class="col1">Hover menu on the right action panel of a record that contains the link</td>
 	</tr>
 	<tr class="row3">
-		<td class="col0">DETAILVIEWWIDGET</td><td class="col1">A block of code contained in a box on the view of a record. It can either be a small box on the action panel or a <a href="http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/add_actions">full fledged block inserted into the existing field blocks</a></td>
+		<td class="col0">DETAILVIEWWIDGET</td><td class="col1">A block of code contained in a box on the view of a record. It can either be a small box on the action panel or a <a href="../../../../../developer-guide/development_framework/develtutorials/add_actions">full fledged block inserted into the existing field blocks</a></td>
 	</tr>
 	<tr class="row4">
 		<td class="col0">LISTVIEWBASIC</td><td class="col1">Button on the top of the list view of a module</td>
@@ -486,9 +486,12 @@ You can find a real example in the add Action Link Helper Script
 
 
 <div class="notices blue">
-Get more details in the <a href="http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/add_actions">How to add action links to a module</a> development tutorial.
+Get more details in the 
+
+[How to add action links to a module](../../../../../../10.developer-guide/04.development_framework/11.develtutorials/18.add_actions)development tutorial.
 </div>
 
 <h3>coreBOS JavaScript Hooks</h3>
 
-<a href="http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebosjshooks">Read all about them here</a>
+
+[Read all about them here](../../../../../../10.developer-guide/03.architecture-concepts/81.corebosjshooks)

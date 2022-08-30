@@ -19,4 +19,4 @@ taxonomy:
         - mobile
 ---
 ---
-## [Mobile Introduction](http://localhost/coreBOSDocumentation/extensions-integrations/mobileui/introduction)
+## [Mobile Introduction](./01.introduction)

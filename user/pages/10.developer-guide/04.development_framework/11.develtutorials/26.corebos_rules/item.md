@@ -24,8 +24,8 @@ taxonomy:
 coreBOS Rules are a step towards [BPM](https://en.wikipedia.org/wiki/Business_process_management)
 automation using the workflow infrastructure.
 
-A **rule** is a [Condition Query](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/condition-query), a [Condition Expression](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/condition-expression) or
-[Decision Table](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/decisiontable)
+A **rule** is a [Condition Query](../../../../05.configuration-tools/02.business-maps/04.condition-query), a [Condition Expression](../../../../05.configuration-tools/02.business-maps/03.condition-expression) or
+[Decision Table](../../../../05.configuration-tools/02.business-maps/06.decisiontable)
 Business Map that is launched in the context of a CRM record.
 
 In BPM, a rule is defined as a string expression, written in some
@@ -66,7 +66,7 @@ where:
 -   **$context** can be either:
     -   the CRMID of the record that will be the context of the rule
     -   an array with context variables that will be merged before the
-        evaluation ([read more below](http://localhost/coreBOSDocumentation/developer-guide/development%20framework/corebos_rules#array-context))
+        evaluation ([read more below](../26.corebos_rules/item.md#array-context))
 
 Now let's suppose we change the expression map above to:
 
@@ -110,7 +110,7 @@ are directly inherited by the rule system.
 There is one special case in the condition expression business map that
 is worth mentioning: **function execution**.
 
-The [Condition Expression](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/condition-expression)
+The [Condition Expression](../../../../05.configuration-tools/02.business-maps/03.condition-expression)
 Business Map permits the execution of any function that is loaded in the
 application. So we could also define our own functions to make some
 complex decision that cannot be made using the workflow expression or an
@@ -160,7 +160,7 @@ Decision Tables
 
 Continue reading these resources to understand how Decision Tables work.
 
--   [Decision Table Business Map](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/decisiontable)
+-   [Decision Table Business Map](../../../../05.configuration-tools/02.business-maps/06.decisiontable e)
 -   [Decision Table Blog Post](http://blog.corebos.org/blog/decisiontable)
 
 Credits

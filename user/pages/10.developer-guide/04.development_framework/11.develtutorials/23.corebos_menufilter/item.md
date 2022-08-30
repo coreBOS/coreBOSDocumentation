@@ -74,7 +74,7 @@ We create two menu URL entries:
 Now we register the event handler and create a script to modify the
 query. The event is:
 
-[corebos.filter.listview.querygenerator.before](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebos_hooks#corebos-filter-listview-querygenerator-before)
+[corebos.filter.listview.querygenerator.before](../../11.develtutorials/20.corebos_hooks/item.md#corebosfilterlistviewquerygeneratorbefore)
 
 and our handler script will be **modules/Accounts/FilterAustralia.php**
 

@@ -41,7 +41,7 @@ started.
 Create new module or extension
 ------------------------------
 
-[You can find full details on how to create a coreBOS module or extension here.](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/createvtlibmodule)
+[You can find full details on how to create a coreBOS module or extension here.](../01.createvtlibmodule)
 
 Create module package
 ---------------------

@@ -27,6 +27,6 @@ taxonomy:
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/globalsearch)| Chapter 9: Global Search.
+[Next](../../13.globalsearch)| Chapter 9: Global Search.
 
 ------------------------------------------------------------------------

@@ -76,7 +76,7 @@ This is how the Mass edit feature works. It updates each record and returns the 
 
 coreBOS gives us a way to use that same functionality but sending our own messages as we process the list of selected records. To do this we have to create a business action that will execute the **runBAScriptFromListViewSSE** function.
 
-We use [Server-Side Events](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebos_sse) for these long-running processes. Server-Side Events require us to create two scripts, one in javascript which will receive the messages and show them on screen and another in PHP that will be processing the records and sending the progress messages.
+We use [Server-Side Events](../../10.developer-guide/03.architecture-concepts/24.corebos_sse) for these long-running processes. Server-Side Events require us to create two scripts, one in javascript which will receive the messages and show them on screen and another in PHP that will be processing the records and sending the progress messages.
 
 There are a lot of resources on Server-Side Events and also on how to include custom code in coreBOS, so I am just going to explain an example of how this would work.
 
@@ -200,4 +200,4 @@ The crmid parameter can be:
 
 ## Business Action::Developers Blocks
 
-[See the Developers Blocks section](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/add_special_block#developer-blocks) for more examples.
+[See the Developers Blocks section](../../10.developer-guide/04.development_framework/11.develtutorials/16.add_special_block#developer-blocks) for more examples.

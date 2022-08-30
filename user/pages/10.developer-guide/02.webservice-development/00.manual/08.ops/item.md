@@ -57,18 +57,19 @@ Epoch](http://es.wikipedia.org/wiki/Timestamp)
 
 Let's dive into the operations.
 
--   <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/login">Login to webservice</a>
--   <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/querylanguage">Query language</a>
--   <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference">Method Reference</a>
--   <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/convertleadwebservice">Convert Lead Webservice</a>
--   <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/docenhance">Working with Documents</a>
--   <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/getpdfdata">Get inventory modules PDF output</a>
--   <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/getrelatedcontrols">get Related Records method</a>
+-  [Login to webservice](../../07.login)
+
+-   [Query language](../../09.querylanguage)
+-   [Method Reference](../../08.methodreference)
+-   [Convert Lead Webservice](../../01.convertleadwebservice)
+-   [Working with Documents](../../03.docenhance)
+-   [Get inventory modules PDF output](../../05.getpdfdata)
+-   [get Related Records method](../../06.getrelatedcontrols)
 
 
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/login)| Chapter 3: Login to webservice.
+[Next](../../../../10.developer-guide/02.webservice-development/07.login)| Chapter 3: Login to webservice.
 
 ------------------------------------------------------------------------

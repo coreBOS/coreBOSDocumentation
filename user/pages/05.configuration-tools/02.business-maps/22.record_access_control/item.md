@@ -257,6 +257,6 @@ In general, the idea is:
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/list_columns) | Chapter 6: List Columns.
+[Next](../17.list_columns) | Chapter 6: List Columns.
 
 ------------------------------------------------------------------------

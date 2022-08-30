@@ -38,9 +38,7 @@ additional time looking for related values via AJAX, the conditions will
 be evaluated using only information located on the form.
 
 The supported condition operators are the same ones we support in the
-custom view filter system (see [Conditional
-Popup](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/conditional_popup) and [Popup Open
-Hook](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/conditional_popup):
+custom view filter system (see [Conditional Popup](../../../10.developer-guide/04.development_framework/11.develtutorials/19.conditional_popup) and [Popup Open Hook](../../../10.developer-guide/04.development_framework/11.develtutorials/19.conditional_popup):
 
 -   e: igual | equal | "="
 -   n: distinto | not equal | "&lt;&gt;"
@@ -696,6 +694,6 @@ trick to consciously force this.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/validations) | Chapter 14: Validations.
+[Next](../26.validations) | Chapter 14: Validations.
 
 ------------------------------------------------------------------------

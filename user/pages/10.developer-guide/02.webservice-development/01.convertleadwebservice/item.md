@@ -153,5 +153,5 @@ Be careful as this will easily create duplicate account names and you won't be a
 <br>
 
 
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/login">Next</a> | Chapter 13: Portal user login.
+[Next](../07.login) | Chapter 13: Portal user login.
 

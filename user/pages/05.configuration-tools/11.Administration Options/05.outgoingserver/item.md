@@ -66,7 +66,7 @@ ssl://msexchange:587 </div></td>
 </tbody>
 </table>
 
-When you save the connection data, coreBOS will launch a test to connect and send an email. If the email is not successfully sent **NO** data will be saved. We will be returned to the configuration page with a message saying that the email could not be sent. At this point, there is a connection, authentication or lack of RELAY support error and you must go to the [debugging techniques](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/debuging#email).
+When you save the connection data, coreBOS will launch a test to connect and send an email. If the email is not successfully sent **NO** data will be saved. We will be returned to the configuration page with a message saying that the email could not be sent. At this point, there is a connection, authentication or lack of RELAY support error and you must go to the [debugging techniques](../../../10.developer-guide/04.development_framework/04.debuging/item.md#email).
 
 <div class="notices red">
 When we are returned to the settings page, the previous values are present. We cannot see the password field but is it most probably INCORRECT, the value you introduced is NOT filled in again. Please introduce the password on ALL tests that you launch.
@@ -134,7 +134,7 @@ Send an email from the application to the email address indicated at [Mail Teste
 
 ### Email
 
-[Have a read here about how coreBOS outgoing email server works and how to configure it.](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/outgoingserver)
+[Have a read here about how coreBOS outgoing email server works and how to configure it.](../05.outgoingserver)
 
 Activate the debug log at level **FATAL** and set the **Debug_Email_Sending** global variable to 1. This will send the whole conversation between coreBOS and the email server to the log file so you can diagnose the problem.
 

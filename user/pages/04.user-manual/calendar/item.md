@@ -66,13 +66,13 @@ present some of CalendarView functions:
     to change the view.
 -   Quick navigation buttons can be used to select a date.
 -   User Settings – deals with Time settings, Calendar sharing and
-    [Google authentication](http://localhost/coreBOSDocumentation/extensions-integrations/calendar-google/calendar_google_integration).
+    [Google authentication](../../08.extensions-integrations/03.calendar-google/01.calendar_google_integration).
 -   Module manager settings – profile privileges.
 -   Add new activity button (It opens a new window to create new
     activity for current day).
 -   Within Activity List panel you can easily show/hide different types
     of activities. In addition you can define colors, displayed
-    information and set up [Google synchronization](http://localhost/coreBOSDocumentation/extensions-integrations/calendar-google/calendar_google_integration). As you can see in
+    information and set up [Google synchronization](../../08.extensions-integrations/03.calendar-google/01.calendar_google_integration). As you can see in
     the next image, the activities are shown in colors in case you are
     viewing only activities assigned to one user.
 
@@ -154,7 +154,7 @@ picture).
 
 #### Google Synchronization
 
-[Google Synchronization](http://localhost/coreBOSDocumentation/extensions-integrations/calendar-google/calendar_google_integration)
+[Google Synchronization](../../08.extensions-integrations/03.calendar-google/01.calendar_google_integration)
 
 ### User settings
 
@@ -215,7 +215,7 @@ users.
 
 #### Google account settings
 
-[Google account settings](http://localhost/coreBOSDocumentation/extensions-integrations/calendar-google/calendar_google_integration#configuring-your-connection-with-google-calendar)
+[Google account settings](../../08.extensions-integrations/03.calendar-google/01.calendar_google_integration#configuring-your-connection-with-google-calendar)
 
 Documents assigned to activities
 --------------------------------
@@ -228,7 +228,7 @@ Information" tab of the Detail View on the activity.
 Google Integration
 ------------------
 
-[Calendar Google Integration](http://localhost/coreBOSDocumentation/extensions-integrations/calendar-google/calendar_google_integration)
+[Calendar Google Integration](../../08.extensions-integrations/03.calendar-google/01.calendar_google_integration)
 
 Frequently Asked Question
 -------------------------
@@ -268,4 +268,4 @@ received and event in agenda.</h2>
 Development
 -----------
 
-[Calendar Development](http://localhost/coreBOSDocumentation/developer-guide/development_framework/calendar)
+[Calendar Development](../../10.developer-guide/04.development_framework/19.calendar)

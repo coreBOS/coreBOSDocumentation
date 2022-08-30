@@ -55,7 +55,7 @@ How to Contribute
 -----------------
 
 The project lives on github and we recommend following the typical fork
-and pull request procedure. [Read here for the exact steps.](http://localhost/coreBOSDocumentation/prologue/documentation)
+and pull request procedure. [Read here for the exact steps.](../../../02.prologue/03.documentation)
 
 Bug Reports
 -----------
@@ -186,7 +186,7 @@ commit](https://github.com/tsolucio/corebos/issues/911#issue-719191770):
     references to that function will still behave the same way?
 -   If you created new code, did you try and use existing functionality
     as much as possible?
--   [code formatting](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/developmentguidelines#code-formatting-and-validation-tools)
+-   [code formatting](./item.md#code-formatting-and-validation-tools)
 -   Ideally you should run a lint process on both PHP and javascript.
     Please look below for the tools we use and how to execute them. I
     will add it to the Pull Request acceptance process at some point.
@@ -198,7 +198,7 @@ commit](https://github.com/tsolucio/corebos/issues/911#issue-719191770):
     modifications that are not related to the requirement I am
     implementing. You can use the "-p" directive to split unrelated
     changes creating concise and cohesive commit changes.
--   dedicate a moment to [think about the commit message](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/developmentguidelines#commit-guidelines)
+-   dedicate a moment to [think about the commit message](./item.md#commit-guidelines)
 -   Any documentation that should be added to the wiki?
 
 ### Commit Guidelines we try to adhere to
@@ -295,7 +295,7 @@ Some important management recommendations
     -   Since that is a bit difficult what I do is update them when I
         need to install them somewhere
     -   [Register your module in the extensions section](/en/extensions/extensions) so it can be found in the
-        future. You can [use the helper scripts](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/helperscripts#composer2readme-and-module2wiki).
+        future. You can [use the helper scripts](../../../10.developer-guide/04.development_framework/06.helperscripts/item.md#composer2readme-and-module2wiki).
 -   There **MUST NOT** be any unversioned changes in production. This is
     MANDATORY
 -   For EVERY change or customization that you have to do in coreBOS,
@@ -307,10 +307,9 @@ Some important management recommendations
 References and further reading
 ------------------------------
 
--   [Debugging](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/debuging)
--   [Commit Guidelines we try to adhere to](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/commitguidelines)
--   [How to Contribute](http://localhost/coreBOSDocumentation/prologue/documentation)
--   [Bug Reports](/en/devel/bugreport)
+-   [Debugging](../14.commitguidelines)
+-   [How to Contribute](../../../02.prologue/03.documentation)
+-   [Bug Reports](../../../11.others/04.devel/08.bugreport)
 -   [PHP Framework Interop Group](http://www.php-fig.org/)
 -   [PHP Framework Interoperability Group -
     RECTIFIED](https://github.com/php-fig-rectified/fig-rectified-standards)

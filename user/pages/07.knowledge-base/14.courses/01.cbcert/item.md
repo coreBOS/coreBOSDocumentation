@@ -55,7 +55,7 @@ User Level coreBOS Certification Program
 
 <!-- -->
 
--   [Details](http://localhost/coreBOSDocumentation/knowledge-base/courses/user-cert)
+-   [Details](../04.user-cert)
 
 Administrator/Implementor Level coreBOS Certification Program
 -------------------------------------------------------------
@@ -87,7 +87,7 @@ Administrator/Implementor Level coreBOS Certification Program
 
 <!-- -->
 
--   [Details](http://localhost/coreBOSDocumentation/knowledge-base/courses/admin-cert)
+-   [Details](../02.admin-cert)
 
 Developer Level coreBOS Certification Program
 ---------------------------------------------
@@ -119,4 +119,4 @@ Developer Level coreBOS Certification Program
 
 <!-- -->
 
--   [Details](http://localhost/coreBOSDocumentation/knowledge-base/courses/devel-cert)
+-   [Details](../03.devel-cert)

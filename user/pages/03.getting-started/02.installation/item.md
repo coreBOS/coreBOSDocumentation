@@ -221,7 +221,7 @@ Provide read-write access to the following files and folder (recursively):
 - now wait for all the installation work to be done
 - if all goes well you should receive a verification page welcoming you to the application
 - press the **Finish** button to reach the login page
-- **execute the database changes**, this is done using the **[coreBOS Updater](/en/devel/corebosupdater)**, which is a module that will take care of managing all the updates from now on. It will read the set of changes that need to be done and will permit you to apply them and undo some of them.
+- **execute the database changes**, this is done using the **[coreBOS Updater](../../10.developer-guide/04.development_framework/11.develtutorials/08.corebosupdater)**, which is a module that will take care of managing all the updates from now on. It will read the set of changes that need to be done and will permit you to apply them and undo some of them.
   - login to the application as the admin user and go to the "**coreBOS Updater**" module.
   - click on the **Get Updates** button
   - go back to the list view and click on the **Apply All** button

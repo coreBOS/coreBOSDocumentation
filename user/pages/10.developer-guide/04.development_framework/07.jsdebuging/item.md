@@ -87,5 +87,5 @@ called **active**
 ### Destination log file
 
 The messages sent to the backend will appear in the file
-**logs/javascript.log** and you must have the [log4php.properties settings file configured correctly](http://localhost/coreBOSDocumentation/developer-guide/development%20framework/debuging#php) as well as
+**logs/javascript.log** and you must have the [log4php.properties settings file configured correctly](../04.debuging) as well as
 the $LOG4PHP\_DEBUG = true; variable.

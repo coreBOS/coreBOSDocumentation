@@ -3,10 +3,10 @@ title: 'Courses'
 ---
 ---
 
-- [coreBOS Certification Program](http://localhost/coreBOSDocumentation/knowledge-base/courses/cbcert)
+- [coreBOS Certification Program](./01.cbcert)
 
-- [Administrator/Implementor Level coreBOS Certification Program](http://localhost/coreBOSDocumentation/knowledge-base/courses/admin-cert)
+- [Administrator/Implementor Level coreBOS Certification Program](./02.admin-cert)
 
-- [Developer Level coreBOS Certification Program](http://localhost/coreBOSDocumentation/knowledge-base/courses/devel-cert)
+- [Developer Level coreBOS Certification Program](./03.devel-cert)
 
-- [User Level coreBOS Certification Program](http://localhost/coreBOSDocumentation/knowledge-base/courses/user-cert)
+- [User Level coreBOS Certification Program](./04.user-cert)

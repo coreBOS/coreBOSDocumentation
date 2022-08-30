@@ -22,7 +22,7 @@ taxonomy:
 
 ## Webservice Webforms
 
-[coreBOS Webservice Webform](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/coreboswswebform)
+[coreBOS Webservice Webform](../../14.coreboswswebform)
 
 ### Relaying a Webform
 

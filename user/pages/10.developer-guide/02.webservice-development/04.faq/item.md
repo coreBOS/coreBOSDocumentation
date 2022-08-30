@@ -38,7 +38,7 @@ Array(
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/addws)| Chapter 20: Add web service end points.
+[Next](../00.manual/04.addws)| Chapter 20: Add web service end points.
 
 
 ------------------------------------------------------------------------

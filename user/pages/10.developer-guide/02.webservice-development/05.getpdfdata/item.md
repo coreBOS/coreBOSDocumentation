@@ -135,6 +135,6 @@ There are 4 Global Variables that permit defining what method and template to us
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/wfrlqsat)| Chapter 8: Workflows, Rules, Questions and Actions.
+[Next](../00.manual/05.wfrlqsat)| Chapter 8: Workflows, Rules, Questions and Actions.
 
 ------------------------------------------------------------------------

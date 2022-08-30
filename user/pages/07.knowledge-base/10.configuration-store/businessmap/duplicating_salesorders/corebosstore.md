@@ -117,6 +117,6 @@ taxonomy:
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store/businessmap/contacts2accounts/id:37247bed69140cef25a6eeb241753653/store:configuration) | Chapter 2: Contacts2Accounts.
+[Next](../contacts2accounts) | Chapter 2: Contacts2Accounts.
 
 ------------------------------------------------------------------------

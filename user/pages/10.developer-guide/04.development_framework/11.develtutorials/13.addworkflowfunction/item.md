@@ -35,7 +35,7 @@ know which elements to relate the custom function needs a configuration
 screen and must be converted into a **workflow task with configuration
 screen**.
 
-Here we explain how to create the first type of workflows, [for the second type go here](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/addworkflowtask).
+Here we explain how to create the first type of workflows, [for the second type go here](../14.addworkflowtask).
 
 A **workflow method or custom function** needs a name to show in the
 configuration section, a class that will extend VTTask and does the

@@ -95,6 +95,6 @@ Let's add some indications about each type.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store/gendoc/gramatica)| Chapter 2: Documentation Generation::Fields and Templates Grammar
+[Next](../04.gramatica)| Chapter 2: Documentation Generation::Fields and Templates Grammar
 
 ------------------------------------------------------------------------

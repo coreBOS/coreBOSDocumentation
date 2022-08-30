@@ -54,6 +54,6 @@ has no visual effect nor functionality inside the application.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/infomap) | Chapter 12: Information Map.
+[Next]( ../14.infomap) | Chapter 12: Information Map.
 
 ------------------------------------------------------------------------

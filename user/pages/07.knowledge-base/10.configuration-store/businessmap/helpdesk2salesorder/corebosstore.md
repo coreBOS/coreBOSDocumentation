@@ -148,6 +148,6 @@ If you create a direct (1:M) relation between HelpDesk and SalesOrder,<a href="h
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store/businessmap/businessmap_validation_capitalletters/id:a42be7fd4d2aa3f6d629cc53e041b397/store:configuration) | Chapter 4: Validation Brazilian name.
+[Next](../businessmap_validation_capitalletters) | Chapter 4: Validation Brazilian name.
 
 ------------------------------------------------------------------------

@@ -37,8 +37,9 @@ So, once setup, you will be able to plugin Kibana to your ES server and
 start analyzing and visualizing all your information.
 
 <div class="notices blue">
+
 Note that the initial setup will give
-you a lot of information, almost everything (<a href="http://localhost/coreBOSDocumentation/extensions-integrations/integration/elasticsearch/elasticsearchexternal#things-we-still-need-to-do">see below the pending list of things to do</a>)  
+you a lot of information, almost everything [see below the pending list of things to do](../02.elasticsearchexternal/item.md#things-we-still-need-to-do)  
 that is happening in your CRM will be available to you, but there may
 still be room for improvement. We can create specialized indexes in
 order to facilitate the study of certain groups of actions by
@@ -355,6 +356,6 @@ Things we still need to do
 
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/extensions-integrations/integration/maps) | Chapter 2: coreBOSCRM GeoLocalization Map extension
+[Next](../../02.maps) | Chapter 2: coreBOSCRM GeoLocalization Map extension
 
 ------------------------------------------------------------------------

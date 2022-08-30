@@ -194,7 +194,7 @@ This new service can be called from a client program like this:
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/libraries)| Chapter 21: Client Libraries.
+[Next](../01.libraries)| Chapter 21: Client Libraries.
 
 
 ------------------------------------------------------------------------

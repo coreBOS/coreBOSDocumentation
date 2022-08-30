@@ -51,7 +51,7 @@ getFromContext('current_upsert_row.quantity')
 
 If you define a context variable named linkmodeid and set its' value to the CRMID of a record in the application, the new record that is created will be related to that CRMID. This is to easily support many to many relations (Documents for example).
 
-If you load [an attachmentdefinition](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/docenhance) into the virtual "attachments" field, the task will upload the file into the field.
+If you load [an attachmentdefinition](../../../10.developer-guide/02.webservice-development/03.docenhance) into the virtual "attachments" field, the task will upload the file into the field.
 
 
 <table class="table table-striped">
@@ -70,6 +70,6 @@ If you load [an attachmentdefinition](http://localhost/coreBOSDocumentation/conf
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/addeltag_workflows) | Chapter 6: Add/Delete Tags Workflow Tasks.
+[Next](../01.addeltag_workflows) | Chapter 6: Add/Delete Tags Workflow Tasks.
 
 ------------------------------------------------------------------------

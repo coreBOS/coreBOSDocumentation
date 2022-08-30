@@ -26,9 +26,7 @@ Google Contacts Synchronization
 
 ### Google Contacts Synchronization
 
--   You must have the [Google OAuth project configured with Google
-    Contacts API
-    enabled](http://localhost/coreBOSDocumentation/knowledge-base/contacts#google-contacts-synchronization-1).
+-   You must have the Google OAuth project configured with Google Contacts API enabled.
 -   Go to the Contacts list view
 -   Click on the "Google Contacts" button
 -   If this is the first time you access click on the "Sign in with
@@ -49,8 +47,7 @@ Watch this video for more information.
 
 In order to enable the Google Contacts synchronization, it is necessary
 to create a project in the Google developer's console. If you already
-have one created for the [Google Calendar
-integration](http://localhost/coreBOSDocumentation/extensions-integrations/calendar-google/calendar_google_integration) you can use this same one
+have one created for the [Google Calendar integration](../../../08.extensions-integrations/03.calendar-google/01.calendar_google_integration) you can use this same one
 by simply enabling the Google Contacts API.
 
 Let's suppose that you do not have a project already and we need to

@@ -23,7 +23,7 @@ Issue Reference in Tracker: ~issue:238~
 
 ## Detailed Explanation
 
-We have added the rendering process of [Detail View Widget blocks](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/add_special_block) into the rendering process of normal blocks. This way we start with the normal blocks (so the first block will ALWAYS be a normal block) and mix in the [special Detail View Widget blocks](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/add_special_block) in order.
+We have added the rendering process of [Detail View Widget blocks](../../../../../../10.developer-guide/04.development_framework/11.develtutorials/16.add_special_block) into the rendering process of normal blocks. This way we start with the normal blocks (so the first block will ALWAYS be a normal block) and mix in the [special Detail View Widget blocks](../../../../../../10.developer-guide/04.development_framework/11.develtutorials/16.add_special_block) in order.
 
 ![](detailviewwidgetsortcontacts.png?width=100%)
 

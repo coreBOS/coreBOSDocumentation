@@ -2,41 +2,41 @@
 title: 'Development Framework'
 ---
 
-- [coreBOS Translation Module](http://localhost/coreBOSDocumentation/developer-guide/development_framework/cbtranslation)
+- [coreBOS Translation Module](./01.cbtranslation)
 
-- [Vtiger + popup + llamada entrante + cola](http://localhost/coreBOSDocumentation/developer-guide/development_framework/llamadaentrantecola)
+- [Vtiger + popup + llamada entrante + cola](./02.llamadaentrantecola)
 
-- [Database Structure](http://localhost/coreBOSDocumentation/developer-guide/development_framework/database)
+- [Database Structure](./03.database)
 
-- [Debugging](http://localhost/coreBOSDocumentation/developer-guide/development_framework/debuging)
+- [Debugging](./04.debuging)
 
-- [Developer Tips and Tricks](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips)
+- [Developer Tips and Tricks](./05.develtips)
 
-- [Helper Scripts](http://localhost/coreBOSDocumentation/developer-guide/development_framework/helperscripts)
+- [Helper Scripts](./06.helperscripts)
 
-- [Javascript Debugging](http://localhost/coreBOSDocumentation/developer-guide/development_framework/jsdebuging)
+- [Javascript Debugging](./07.jsdebuging)
 
-- [Developer Tips and Tricks on PDF Formatting](http://localhost/coreBOSDocumentation/developer-guide/development_framework/pdfformating)
+- [Developer Tips and Tricks on PDF Formatting](./08.pdfformating)
 
-- [PDF Structure](http://localhost/coreBOSDocumentation/developer-guide/development_framework/pdfstructure)
+- [PDF Structure](./09.pdfstructure)
 
-- [Replacing prototype/scriptaculous with jQuery in coreBOS](http://localhost/coreBOSDocumentation/developer-guide/development_framework/prototype2jquery)
+- [Replacing prototype/scriptaculous with jQuery in coreBOS](./10.prototype2jquery)
 
-- [Development Tutorials](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials)
+- [Development Tutorials](./11.develtutorials)
 
-- [coreBOS Service Worker](http://localhost/coreBOSDocumentation/developer-guide/development_framework/serviceworker)
+- [coreBOS Service Worker](./12.serviceworker)
 
-- [Logging Stress test](http://localhost/coreBOSDocumentation/developer-guide/development_framework/stresstestlog)
+- [Logging Stress test](./13.stresstestlog)
 
-- [coreBOS Testing Project](http://localhost/coreBOSDocumentation/developer-guide/development_framework/testing)
+- [coreBOS Testing Project](./14.testing)
 
-- [Translating](http://localhost/coreBOSDocumentation/developer-guide/development_framework/translating)
+- [Translating](./15.translating)
 
-- [Making of the Generic Master-Detail Editor](http://localhost/coreBOSDocumentation/developer-guide/development_framework/creatinggenericeditor)
+- [Making of the Generic Master-Detail Editor](./16.creatinggenericeditor)
 
-- [How to Anonymize your database: masquerade](http://localhost/coreBOSDocumentation/developer-guide/development_framework/anonymizedb)
+- [How to Anonymize your database: masquerade](./17.anonymizedb)
 
-- [Asterisk](http://localhost/coreBOSDocumentation/developer-guide/development_framework/asterisk)
+- [Asterisk](./18.asterisk)
 
-- [Calendar Development](http://localhost/coreBOSDocumentation/developer-guide/development_framework/calendar)
-- [Module Import Permission Call Stack](20.moduleimport)
+- [Calendar Development](./19.calendar)
+- [Module Import Permission Call Stack](./20.moduleimport)

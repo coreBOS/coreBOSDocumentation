@@ -23,6 +23,6 @@ taxonomy:
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/autocomplete)| Chapter 10: Autocomplete.
+[Next](../00.manual/03.autocomplete)| Chapter 10: Autocomplete.
 
 ------------------------------------------------------------------------

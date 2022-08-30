@@ -59,6 +59,6 @@ That will get all records with the field "Destruction Method" NOT empty.
 
 You can put foreach tags of related entities up to any level, this means that from an Account, you can reach one or several contacts, and from there reach their potentials and from there, loop over the related quotes.
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//gendoc/gendoctips/id:1bd28598d97da6e2054ed765bc34c2bf/store:configuration)| Chapter 5: GenDoc::Tips and Tricks
+[Next](../03.gendoctips)| Chapter 5: GenDoc::Tips and Tricks
 
 ------------------------------------------------------------------------

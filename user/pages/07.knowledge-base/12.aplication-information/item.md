@@ -3,10 +3,10 @@ title: 'Aplication Information'
 ---
 ---
 
-- [Emails Sent by the application](http://localhost/coreBOSDocumentation/knowledge-base/aplication-information/emailssent)
+- [Emails Sent by the application](./01.emailssent)
 
-- [Contacts](http://localhost/coreBOSDocumentation/knowledge-base/aplication-information/contacts)
+- [Contacts](./02.contacts)
 
-- [Use of OpenOffice with Data inside the Application](http://localhost/coreBOSDocumentation/knowledge-base/aplication-information/openoffice_integrations)
+- [Use of OpenOffice with Data inside the Application](./03.openoffice_integrations)
 
-- [Webservice Stress Tests](http://localhost/coreBOSDocumentation/knowledge-base/aplication-information/rest_stress_tests)
+- [Webservice Stress Tests](./04.rest_stress_tests)

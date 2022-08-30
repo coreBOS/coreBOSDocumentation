@@ -50,6 +50,6 @@ method.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/masterdetailmapping) | Chapter 10: Master Detail Mapping.
+[Next](../19.masterdetailmapping) | Chapter 10: Master Detail Mapping.
 
 ------------------------------------------------------------------------

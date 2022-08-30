@@ -91,8 +91,7 @@ Developer block
 
 Finally, we enhanced the business map with some other features and
 implemented the native master-detail functionality which you can learn
-about [reading the official
-documentation](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/masterdetailmapping) and
+about [reading the official documentation](../../../05.configuration-tools/02.business-maps/19.masterdetailmapping) and
 watching the video presentation
 
 <iframe width="542" height="261" src="https://www.youtube.com/embed/pb05jH-HeBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

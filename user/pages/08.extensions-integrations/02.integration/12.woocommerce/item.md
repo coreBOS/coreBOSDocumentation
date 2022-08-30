@@ -157,8 +157,7 @@ We have created a module named <strong>wcProductImage</strong> which is supporte
     Client](https://github.com/woocommerce/wc-api-php)
 -   [Woocommerce REST
     API](http://woocommerce.github.io/woocommerce-rest-api-docs/?php)
--   This integration uses the [coreBOS Message
-    Queue](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebos_mqtm)
+-   This integration uses the [coreBOS Message Queue](../../../10.developer-guide/04.development_framework/11.develtutorials/24.corebos_mqtm)
 
 ### Frequently Asked Questions
 

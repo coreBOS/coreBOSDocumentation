@@ -39,10 +39,10 @@ production database (just in case it wasn't obvious).
 config directory, you will have to add an anonymization step for the
 custom fields you have created. You can apply a specific transformation
 to each one and you can read the ones we have created for examples, also
-[read below for some guidelines](http://localhost/coreBOSDocumentation/developer-guide/development%20framework/anonymizedb#anonymization-rules)
+[read below for some guidelines](./item.md#anonymization-rules)
 
 5.- Create new anonymization files for each custom module you may have
-created for your coreBOS install. [Read below for some guidelines](http://localhost/coreBOSDocumentation/developer-guide/development%20framework/anonymizedb#anonymization-rules)
+created for your coreBOS install. [Read below for some guidelines](./item.md#anonymization-rules)
 
 6.- Run
 

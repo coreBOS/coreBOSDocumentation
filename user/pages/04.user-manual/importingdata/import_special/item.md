@@ -92,9 +92,9 @@ which is ready to import correctly into the second application.
 
 ## Export Options for Comments
 
-Comments are, to most effects, just another normal module. So you can go to the ModComments module and use all the import and export options there, but, the comments module has a special developer block that permits us to interact with the comments records directly on the module they apply to. This block must be activated defining a [Business Action](http://localhost/coreBOSDocumentation/configuration-tools/business-actions).
+Comments are, to most effects, just another normal module. So you can go to the ModComments module and use all the import and export options there, but, the comments module has a special developer block that permits us to interact with the comments records directly on the module they apply to. This block must be activated defining a [Business Action](../../../05.configuration-tools/03.business-actions).
 
-The comments module has another functionality that permits us to directly export the comments related to a record. You can define a [Business Action](http://localhost/coreBOSDocumentation/configuration-tools/business-actions) to add a link (or button) to export the comments like this:
+The comments module has another functionality that permits us to directly export the comments related to a record. You can define a [Business Action](../../../05.configuration-tools/03.business-actions) to add a link (or button) to export the comments like this:
 
 ```
 Link Type: DETAILVIEWBASIC
@@ -106,9 +106,9 @@ Obviously, you can adapt that to any module.
 
 ![](modcommentsexportaction.png?width=60%)
 
-There is also a [Global Variable](http://localhost/coreBOSDocumentation/configuration-tools/global-variables) named **ModComments_Export_Format** that permits us to obtain the export in a spreadsheet format instead of the default CSV.
+There is also a [Global Variable](../../../05.configuration-tools/04.global-variables) named **ModComments_Export_Format** that permits us to obtain the export in a spreadsheet format instead of the default CSV.
 
-Finally, the export returns the comment and creation date columns but you can create a [Field Set Business Map](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/field_set) named **Comments_Export_Columns** to specify the fields you want to export.
+Finally, the export returns the comment and creation date columns but you can create a [Field Set Business Map](../../../05.configuration-tools/02.business-maps/10.field_set) named **Comments_Export_Columns** to specify the fields you want to export.
 
 ```xml
 <map>

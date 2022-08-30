@@ -47,10 +47,8 @@ The accepted format for this map is basically a set of rules which can
 be of three types:
 
 -   Expressions
--   [Condition
-    Expression](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/condition-expression)
-    or [Condition
-    Query](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/condition-query) business
+-   [Condition Expression](../03.condition-expression)
+    or [Condition Query](../04.condition-query) business
     map names/IDs
 -   Decision Tables
 
@@ -172,8 +170,7 @@ Hit Policy
     -   The COUNT aggregator can be used to return the count of
         satisfied rules.
 
-[Read the DMN Hit Policy
-reference](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebos_rules)
+[Read the DMN Hit Policy reference](https://docs.camunda.org/manual/latest/reference/dmn/decision-table/hit-policy/)
 
 Output Options
 --------------
@@ -883,6 +880,6 @@ enough for you to get an idea of how this map works.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/webservicecall) | Chapter 21: REST/SOAP call and retrieval.
+[Next](../27.webservicecall) | Chapter 21: REST/SOAP call and retrieval.
 
 ------------------------------------------------------------------------

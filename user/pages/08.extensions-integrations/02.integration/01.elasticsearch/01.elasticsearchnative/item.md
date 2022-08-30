@@ -51,6 +51,6 @@ For the moment it works with ES >=5 because mapping types (like text instead of 
 
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/extensions-integrations/integration/elasticsearch/elasticsearchexternal) | Chapter 1.2: coreBOS External Integration.
+[Next](../02.elasticsearchexternal) | Chapter 1.2: coreBOS External Integration.
 
 ------------------------------------------------------------------------

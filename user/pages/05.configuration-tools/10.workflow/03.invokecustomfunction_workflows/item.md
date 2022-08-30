@@ -137,6 +137,6 @@ that is it, there is nothing to configure as these are atomic action functions, 
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/email_workflows) | Chapter 9: Email Workflow Tasks.
+[Next](../02.email_workflows) | Chapter 9: Email Workflow Tasks.
 
 ------------------------------------------------------------------------

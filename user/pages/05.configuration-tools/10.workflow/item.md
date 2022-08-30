@@ -35,22 +35,22 @@ It is necessary to execute four steps to configure and setup a workflow:
 
 In the next sections you will be able to find more information on these steps.
 
-[-  Workflow launch conditions](http://localhost/coreBOSDocumentation/configuration-tools/workflow/workflow_launch_conditions) <br>
-[-  Workflow step by step explanation](http://localhost/coreBOSDocumentation/configuration-tools/workflow/workflow_stepbystep) <br>
-[-  Scheduled Time based Workflows](http://localhost/coreBOSDocumentation/configuration-tools/workflow/scheduled_workflows) <br>
-[-  Workflow conditions](http://localhost/coreBOSDocumentation/configuration-tools/workflow/workflow_conditions) <br>
+[-  Workflow launch conditions](../10.workflow/10.workflow_launch_conditions) <br>
+[-  Workflow step by step explanation](./11.workflow_stepbystep) <br>
+[-  Scheduled Time based Workflows](./05.scheduled_workflows) <br>
+[-  Workflow conditions](./08.workflow_conditions) <br>
 
 ## Workflow Tasks
 
-[-  Update Workflow Tasks](http://localhost/coreBOSDocumentation/configuration-tools/workflow/update_workflows) <br>
-[-  Upsert Workflow Task](http://localhost/coreBOSDocumentation/configuration-tools/workflow/upsert_workflows) <br>
-[-  Add/Delete Tags Workflow Tasks](http://localhost/coreBOSDocumentation/configuration-tools/workflow/addeltag_workflows) <br>
-[-  Related Product/Service Workflow Task](http://localhost/coreBOSDocumentation/configuration-tools/workflow/relateproductservice_workflows) <br>
-[-  Invoke Custom Functions Workflow Tasks](http://localhost/coreBOSDocumentation/configuration-tools/workflow/invokecustomfunction_workflows) <br>
-[-  SMS Workflow Tasks](http://localhost/coreBOSDocumentation/others/smsnotifier#sms-task-with-work-flow) <br>
+[-  Update Workflow Tasks](./06.update_workflows) <br>
+[-  Upsert Workflow Task](./07.upsert_workflows) <br>
+[-  Add/Delete Tags Workflow Tasks](./01.addeltag_workflows) <br>
+[-  Related Product/Service Workflow Task](./04.relateproductservice_workflows) <br>
+[-  Invoke Custom Functions Workflow Tasks](./03.invokecustomfunction_workflows) <br>
+[-  SMS Workflow Tasks](../../04.user-manual/smsnotifier#sms-task-with-work-flow) <br>
 
 ## Workflow Examples
 
-[-  Workflow Examples](http://localhost/coreBOSDocumentation/configuration-tools/workflow/workflow_examples) <br>
-[-  How to send emails/sms on specific week days](http://localhost/coreBOSDocumentation/configuration-tools/workflow/workflow_weekendwarning) <br>
-[-  Workflow tricks and tips](http://localhost/coreBOSDocumentation/configuration-tools/workflow/workflow_tricksandtips) <br>
+[-  Workflow Examples](./09.workflow_examples) <br>
+[-  How to send emails/sms on specific week days](./13.workflow_weekendwarning) <br>
+[-  Workflow tricks and tips](./12.workflow_tricksandtips) <br>

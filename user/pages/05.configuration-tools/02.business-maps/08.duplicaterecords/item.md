@@ -188,6 +188,6 @@ This is the code to add the field:
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/globalsearch) | Chapter 18: Global Search Autocomplete.
+[Next](../12.globalsearch) | Chapter 18: Global Search Autocomplete.
 
 ------------------------------------------------------------------------

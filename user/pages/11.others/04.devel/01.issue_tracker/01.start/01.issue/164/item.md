@@ -23,5 +23,5 @@ Issue Reference in Tracker: ~issue:164~
 
 ## Detailed Explanation
 
-- [Webservice: Working with Documents](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/docenhance)
-- [Webservice Method Reference](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference)
+- [Webservice: Working with Documents](../../../../../../10.developer-guide/02.webservice-development/03.docenhance)
+- [Webservice Method Reference](../../../../../../10.developer-guide/02.webservice-development/08.methodreference)

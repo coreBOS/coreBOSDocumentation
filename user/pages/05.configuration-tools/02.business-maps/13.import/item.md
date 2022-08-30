@@ -141,6 +141,6 @@ correct process will be launched.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/duplicaterecords) | Chapter 17: Duplicate Records.
+[Next](../08.duplicaterecords) | Chapter 17: Duplicate Records.
 
 ------------------------------------------------------------------------

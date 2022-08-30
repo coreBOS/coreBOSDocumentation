@@ -330,6 +330,6 @@ if($module) {
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store/businessmap/helpdesk2salesorder/id:b674416ea34e0a752c6cc88b18de0145/store:configuration) | Chapter 3: HelpDesk2SalesOrder.
+[Next](../helpdesk2salesorder) | Chapter 3: HelpDesk2SalesOrder.
 
 ------------------------------------------------------------------------

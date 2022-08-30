@@ -109,7 +109,7 @@ there is a nice editor that will permit you to add the fields,
 conditions, and different groupings. Then simply capture the save event
 to see how coreBOS creates the JSON object and use that. </div>
 
-Now that we know what we have to do, [let's see some examples](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/popup_open_hook).
+Now that we know what we have to do, [let's see some examples](../../../03.architecture-concepts/76.popup_open_hook).
 
 Native relmod\_id Method
 ------------------------

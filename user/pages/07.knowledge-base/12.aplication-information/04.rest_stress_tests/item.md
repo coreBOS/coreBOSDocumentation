@@ -272,7 +272,7 @@ number of records retrieved goes up, which seems logical as the setup
 time is divided among all the records.
 
 The original question that motivated these tests was if a select using
-the [related record enhancements](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/querylanguage#related-entity-query-syntax)
+the [related record enhancements](../../../10.developer-guide/02.webservice-development/09.querylanguage)
 was faster or slower than a normal select. From the tests above it seems
 that a normal select is a little faster which also seems logical due to
 the extra effort to establish the relation and then the extra join in

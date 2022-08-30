@@ -313,6 +313,6 @@ them we locate them on the map.
 
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/extensions-integrations/integration/onesignal) | Chapter 3: OneSignal Integration
+[Next](../03.onesignal) | Chapter 3: OneSignal Integration
 
 ------------------------------------------------------------------------

@@ -212,6 +212,6 @@ echo "hello widget!";
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/decisiontable) | Chapter 20: Decision Table.
+[Next](../06.decisiontable) | Chapter 20: Decision Table.
 
 ------------------------------------------------------------------------

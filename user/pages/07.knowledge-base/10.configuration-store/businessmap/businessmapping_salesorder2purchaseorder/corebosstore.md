@@ -132,6 +132,6 @@ taxonomy:
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store/businessmap/invoice2cobropagoamountdue/id:b0177369e2a973e82ef384ceedc8a8ef/store:configuration) | Chapter 6: Invoice2CobroPago Amount Due.
+[Next](../invoice2cobropagoamountdue) | Chapter 6: Invoice2CobroPago Amount Due.
 
 ------------------------------------------------------------------------

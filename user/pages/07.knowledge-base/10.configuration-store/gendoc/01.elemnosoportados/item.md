@@ -34,6 +34,6 @@ taxonomy:
 ```
 We eliminate these during the conversion because they aren't significant where they are. These elements mark the end of a movable page, since we are adding and deleting text most of them are going to move anyway and OpenOffice will reestablish them when the document is opened and we will have to fix them manually, so it is better not to have them.
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//gendoc/gendocejemplos/id:5437d86d807c4e3578f4f96ac8331fe5/store:configuration)| Chapter 4: GenDoc::Examples
+[Next](../02.gendocejemplos)| Chapter 4: GenDoc::Examples
 
 ------------------------------------------------------------------------

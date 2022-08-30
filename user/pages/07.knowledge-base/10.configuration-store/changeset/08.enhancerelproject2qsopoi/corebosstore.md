@@ -26,6 +26,6 @@ modules and the corresponding related list on the Project module.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//gendoc/id:747b42fa1e7512db806ad58fa0896642/store:configuration)| Chapter 16: GenDoc: Advanced OpenOffice Merge.
+[Next](../../gendoc)| Chapter 16: GenDoc: Advanced OpenOffice Merge.
 
 ------------------------------------------------------------------------

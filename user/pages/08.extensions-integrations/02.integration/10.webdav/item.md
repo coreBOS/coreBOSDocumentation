@@ -41,6 +41,6 @@ taxonomy:
 
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/extensions-integrations/integration/whatsapp) | Chapter 11: Twilio WhatsApp
+[Next](../11.whatsapp) | Chapter 11: Twilio WhatsApp
 
 ------------------------------------------------------------------------

@@ -98,7 +98,7 @@ the other connection.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/coreboswsbrowser)| Chapter 15: coreBOS Web Service Developer Tool.
+[Next](../../02.coreboswsbrowser)| Chapter 15: coreBOS Web Service Developer Tool.
 
 ------------------------------------------------------------------------
 

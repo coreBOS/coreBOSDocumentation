@@ -40,4 +40,4 @@ The steps to migrate your vtiger CRM 6.x to coreBOS are:
 - copy all your documents from the vtiger CRM install: directly copy all the files in the **storage** directory from one to the other
 - copy logos and the like which are in the *test/logo* directory
 - enter coreBOS and activate modules in module manager if necessary
-- apply [coreBOS Updater changesets](/en/devel/corebosupdater)
+- apply [coreBOS Updater changesets](../../10.developer-guide/04.development_framework/11.develtutorials/08.corebosupdater)

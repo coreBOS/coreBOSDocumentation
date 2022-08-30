@@ -54,12 +54,11 @@ available modules.
 Select a module and click *Create*. You will be taken to an edit page
 for the workflow.
 
-Add a Description for the workflow. You can specify here [when the
-workflow should run](http://localhost/coreBOSDocumentation/configuration-tools/workflow/workflow_launch_conditions).
+Add a Description for the workflow. You can specify here [when the workflow should run](../10.workflow_launch_conditions).
 
 ![](step4mw.png?width=80%)
 
-You can [add more conditions](http://localhost/coreBOSDocumentation/configuration-tools/workflow/workflow_conditions) by clicking the
+You can [add more conditions](../08.workflow_conditions) by clicking the
 *New Condition* button.
 
 ![](step5mw.png?width=80%)
@@ -106,8 +105,7 @@ The following fields are common for all workflow tasks
 
 ### Invoke custom function
 
-This option provides a way for developers to [add module specific
-actions to workflows](http://localhost/coreBOSDocumentation/configuration-tools/workflow/invokecustomfunction_workflows). To define a
+This option provides a way for developers to [add module specific actions to workflows](../03.invokecustomfunction_workflows). To define a
 task, you need to define a method to be called. This method should be
 defined as a function in it's own file.
 
@@ -161,6 +159,6 @@ a task.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/scheduled_workflows) | Chapter 3: Scheduled Time based Workflows.
+[Next](../05.scheduled_workflows) | Chapter 3: Scheduled Time based Workflows.
 
 ------------------------------------------------------------------------

@@ -27,7 +27,7 @@ taxonomy:
 coreBOS Translation Module
 --------------------------
 
-[coreBOS Translation module](http://localhost/coreBOSDocumentation/developer-guide/development%20framework/cbtranslation)
+[coreBOS Translation module](../01.cbtranslation)
 
 Translating Application
 -----------------------
@@ -231,7 +231,7 @@ proceed to edit and test the translation either directly in the files
 with your favorite editor (remember to use UTF8) or through the
 translation manager in Settings.
 
-Finally, [package and distribute](http://localhost/coreBOSDocumentation/developer-guide/development%20framework/develtutorials/packagemodules)
+Finally, [package and distribute](../11.develtutorials/05.packagemodules)
 
 Translating the Documentation (Wiki)
 ------------------------------------
@@ -248,7 +248,4 @@ Translating the Documentation (Wiki)
 -   create and edit the documentation using dokuwiki until you are
     satisfied with the result
 
-<div class="notices blue"> don't forget to add your name and
-details in the [contributions page](http://localhost/coreBOSDocumentation/others/contributors)
-</div>
--   send us a pull request
+

@@ -287,6 +287,6 @@ This type of map can be processed using the **ProcessMap** end-point
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/extendedfieldinfo) | Chapter 4: Extended Field Information Mapping.
+[Next](../28.extendedfieldinfo) | Chapter 4: Extended Field Information Mapping.
 
 ------------------------------------------------------------------------

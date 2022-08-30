@@ -20,15 +20,16 @@ taxonomy:
 ---
 ---
 
-[Can I install vtDZiner](http://localhost/coreBOSDocumentation/extensions-integrations/corebosmodules/faq/id:9ec9822d1f22ee6a0400538509372f1c/store:corebosmodule#can-i-install-vtdziner) <br>
-[How can I add new fonts to pdfmaker? I need to use Helvetica Neue Light](http://localhost/coreBOSDocumentation/extensions-integrations/corebosmodules/faq/id:9ec9822d1f22ee6a0400538509372f1c/store:corebosmodule#how-can-i-add-new-fonts-to-pdfmaker-i-need-to-use-helvetica-neue-light)<br>
-[Can I install the theme from neevtech](http://localhost/coreBOSDocumentation/extensions-integrations/corebosmodules/faq/id:9ec9822d1f22ee6a0400538509372f1c/store:corebosmodule#can-i-install-the-theme-from-neevtech)<br>
+[Can I install vtDZiner](../faq/item.md#can-i-install-vtdziner) <br>
+[How can I add new fonts to pdfmaker? I need to use Helvetica Neue Light](../faq/item.md#how-can-i-add-new-fonts-to-pdfmaker-i-need-to-use-helvetica-neue-light)<br>
+[Can I install the theme from neevtech](../faq/item.md#can-i-install-the-theme-from-neevtech)<br>
 
 <div class="notices blue">
 <h3>Can I install vtDZiner</h3>
 </div>
 
-<h3><a href="http://localhost/coreBOSDocumentation/others/registered_modules_extensions_plugins/vtdziner">Yes</a></h3>
+
+ ### [Yes]() 
 
 ---
 

@@ -29,7 +29,7 @@ Other examples are the base *get_dependents_list()* and *get_related_list()* met
 
 We will be following the CRMEntity idea and permit adding the new method to this class. Although it would be ideal to add the new method only to the base class that needs it, that would require some additional code changes that are overly complicated and may break backward compatibility. So, in the end we will have a new method on the base CRMEntity class which all modules extend so any module will be able to use it.
 
-The way this works is rather transparent. We [register our related list method exactly as we do with any normal related list method.](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/relatedlists) In this case, the name of the function that defines the related list does not exist inside the function. For example, lets imagine we have this definition:
+The way this works is rather transparent. We [register our related list method exactly as we do with any normal related list method.](../../04.development_framework/11.develtutorials/07.relatedlists) In this case, the name of the function that defines the related list does not exist inside the function. For example, lets imagine we have this definition:
 
 ```php
 $accounts->setRelatedList(Vtiger_Module::getInstance('Payslip'), 'header',Array('ADD'),'get_special_related_list');
@@ -50,7 +50,7 @@ There is only one small issue: due to the way PHP works adding a method dynamica
 
 You can find an [example function in the helpers directory.](https://github.com/tsolucio/corebos/blob/master/build/HelperScripts/CustomRelatedListFunction.php)
 
-With this new functionality and the [special detailed view blocks enhancements,](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/add_special_block) we can really personalize an existing module. For example, we could completely override the Project's Gantt related list with our own functionality and add a block to show the same information directly on the project's detail view, simply installing an extension module with no base code changes to the project module's code.
+With this new functionality and the [special detailed view blocks enhancements,](../../04.development_framework/11.develtutorials/16.add_special_block) we can really personalize an existing module. For example, we could completely override the Project's Gantt related list with our own functionality and add a block to show the same information directly on the project's detail view, simply installing an extension module with no base code changes to the project module's code.
 
 <div class="notices blue">
 This enhancement is <a href="https://www.garfieldtech.com/blog/magical-php-call">based on this article.</a>

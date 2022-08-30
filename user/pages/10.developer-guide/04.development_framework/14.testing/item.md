@@ -22,4 +22,4 @@ taxonomy:
 ---
 ### [coreBOS Tests Project](https://github.com/tsolucio/coreBOSTests)
 
-###  - [Adding unit tests for new workflow operator](http://localhost/coreBOSDocumentation/developer-guide/development%20framework/testing/workflowoperator)
+###  - [Adding unit tests for new workflow operator](./01.workflowoperator)

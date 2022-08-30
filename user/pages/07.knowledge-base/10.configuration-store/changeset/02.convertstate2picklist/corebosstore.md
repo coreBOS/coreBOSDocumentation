@@ -48,6 +48,6 @@ that.</div>
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//changeset/enhancecalendarassignfollowup/id:a8adcf692fa926fbb99ec90a190b5b8f/store:configuration) | Chapter 10: Select User for Calendar Follow up.
+[Next](../03.enhancecalendarassignfollowup) | Chapter 10: Select User for Calendar Follow up.
 
 ------------------------------------------------------------------------

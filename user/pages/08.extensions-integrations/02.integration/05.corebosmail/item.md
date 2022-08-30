@@ -115,6 +115,6 @@ Attach documents that are in vtiger CRM
 
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/extensions-integrations/integration/sendgrid) | Chapter 6: Sendgrid-coreBOS Integration
+[Next](../06.sendgrid) | Chapter 6: Sendgrid-coreBOS Integration
 
 ------------------------------------------------------------------------

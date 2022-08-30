@@ -82,7 +82,7 @@ Example:
 
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/extensions-integrations/integration/corebosmail) | Chapter 5: Roundcube coreBOS CRM Integration
+[Next](../05.corebosmail) | Chapter 5: Roundcube coreBOS CRM Integration
 
 
 ------------------------------------------------------------------------

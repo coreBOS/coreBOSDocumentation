@@ -25,8 +25,8 @@ Issue Reference in Tracker: ~issue:115~
 
 ### Importing Data
 
-- [Basic functionality](http://localhost/coreBOSDocumentation/user-manual/importingdata/import_basic)
-- [Import of Inventory modules (Quotes, SO, PO and Invoices)](http://localhost/coreBOSDocumentation/user-manual/importingdata/import_inventory_module)
-- [Special references and comments](http://localhost/coreBOSDocumentation/user-manual/importingdata/import_special)
-- [Extended Export Options](http://localhost/coreBOSDocumentation/user-manual/importingdata/import_special#extended-export-options)
-- [Update individual fields when importing](http://localhost/coreBOSDocumentation/user-manual/importingdata/import_updatefields)
+- [Basic functionality](../../../../../../04.user-manual/importingdata/01.import_basic)
+- [Import of Inventory modules (Quotes, SO, PO and Invoices)](../../../../../../04.user-manual/importingdata/02.import_inventory_module)
+- [Special references and comments](../../../../../../04.user-manual/importingdata/import_special)
+- [Extended Export Options](../../../../../../04.user-manual/importingdata/import_special/item.md#extended-export-options)
+- [Update individual fields when importing](../../../../../../04.user-manual/importingdata/05.import_updatefields)

@@ -3,34 +3,34 @@ title: Architecture Concepts
 ---
 ---
 
-- [coreBOS Product/Price Enhancements](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/cbproductprice)
+- [coreBOS Product/Price Enhancements](./10.cbproductprice)
 
-- [Commit Guidelines we try to adhere to](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/commitguidelines)
+- [Commit Guidelines we try to adhere to](./14.commitguidelines)
 
-- [coreBOS Custom Permission Hooks](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebos_permission_hooks)
+- [coreBOS Custom Permission Hooks](./20.corebos_permission_hooks)
 
-- [Server Side Events](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebos_sse)
+- [Server Side Events](./24.corebos_sse)
 
-- [Webservice Development](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebosws)
+- [Webservice Development](./27.corebosws)
 
-- [Development Guidelines we try to adhere to](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/developmentguidelines)
+- [Development Guidelines we try to adhere to](./33.developmentguidelines)
 
-- [Errorneous Changesets](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/errorneouschangesets)
+- [Errorneous Changesets](./37.errorneouschangesets)
 
-- [Packaging and Release Numbers](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/packaging)
+- [Packaging and Release Numbers](./49.packaging)
 
-- [VTEntityData Objects](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/vtentitydata)
+- [VTEntityData Objects](./74.vtentitydata)
 
-- [Popup capture hooks](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/popup_capture_hook)
+- [Popup capture hooks](./75.popup_capture_hook)
 
-- [Popup open hook](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/popup_open_hook)
+- [Popup open hook](./76.popup_open_hook)
 
-- [Popup query hook](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/popup_query_hook)
+- [Popup query hook](./77.popup_query_hook)
 
-- [pre-CRUD filters](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/precrud)
+- [pre-CRUD filters](./78.precrud)
 
-- [Related List hook](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/related_list_hook)
+- [Related List hook](./79.related_list_hook)
 
-- [coreBOS Custom Permission Hooks](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebos_permission_hooks)
+- [coreBOS Custom Permission Hooks](./80.corebos_permission_hooks)
 
-- [coreBOS JavaScript Hooks](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebosjshooks)
+- [coreBOS JavaScript Hooks](./81.corebosjshooks)

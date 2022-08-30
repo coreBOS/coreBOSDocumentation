@@ -20,31 +20,31 @@ taxonomy:
         - guidelines
 ---
 ---
-- [How can I activate Single Pane for only one (my) module, independent of the system settings?](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-can-i-activate-single-pane-for-only-one-my-module-independent-of-the-system-settings)
-- [Custom date fields load by default "today". We need a custom date field to be empty by default, how can we accomplish this.](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#custom-date-fields-load-by-default-today-we-need-a-custom-date-field-to-be-empty-by-default-how-can-)
-- [How to create custom formula function for field expressions in workflows](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-to-create-custom-formula-function-for-field-expressions-in-workflows)
-- [How can I get the Edit button to open in a new window](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-can-i-get-the-edit-button-to-open-in-a-new-window)
-- [PDF Formatting](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#pdf-formatting)
-- [How to eliminate currency sign in report exports](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-to-eliminate-currency-sign-in-report-exports)
-- [Modify record default view order](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#modify-record-default-view-order)
-- [How can I deactivate the delete button on my custom fields in layout editor](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-can-i-deactivate-the-delete-button-on-my-custom-fields-in-layout-editor)
-- [How to recalculate privileges and regenerate user_privilege files from the command line.](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-to-recalculate-privileges-and-regenerate-user-privilege-files-from-the-command-line)
-- [When we go to create a quote, we choose the opportunity to relate, with a popup window to select among the created opportunities. Is there any way to **ONLY** see the open opportunities, so that by default all closed opportunities do not appear. (Cuando vamos a hacer un presupuesto como saben escogemos la oportunidad a relacionar, donde aparece una ventana para elegir la oportunidad creada. Hay alguna manera en que NO aparezca la oportunidad que se haya cerrado o clasificado en (Cerrado Ganado) ya que como saben, siguen apareciendo todas las oportunidades que tenga el vendedor).](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#when-we-go-to-create-a-quote-we-choose-the-opportunity-to-relate-with-a-popup-window-to-select-among)
-- [How can I get a blank currency field instead of 0?](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-can-i-get-a-blank-currency-field-instead-of-0)
-- [How can I add a module to an existing uitype10 field? or, How can I relate a module with another module that already has a uitype 10 field for relations?](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-can-i-add-a-module-to-an-existing-uitype10-field-or-how-can-i-relate-a-module-with-another-modul)
-- [How can I change the order of modules that appear in the picklist of a multi-module capture field. For example, the "Related To" field on the calendar.](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-can-i-change-the-order-of-modules-that-appear-in-the-picklist-of-a-multi-module-capture-field-fo)
-- [How can I get the SQL constructed for a Report?](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-can-i-get-the-sql-constructed-for-a-report)
-- [How can I get the SQL constructed for a List View?](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-can-i-get-the-sql-constructed-for-a-list-view)
-- [API control to turn-off Eventing triggers could be helpful when doing bulk operations like import/export.](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#api-control-to-turn-off-eventing-triggers-could-be-helpful-when-doing-bulk-operations-like-import-ex)
-- [How can I activate workflows when importing records?](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-can-i-activate-workflows-when-importing-records)
-- [How can I save() a record in a custom workflow function without launching the workflows and events again?](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-can-i-save-a-record-in-a-custom-workflow-function-without-launching-the-workflows-and-events-aga)
-- [A question regarding the functions to add in common utils, for example google drive file saving. For that I need to create a function in utils files and need to use those either in save.php file or in custom workflow functions. Is it a good idea?](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#a-question-regarding-the-functions-to-add-in-common-utils-for-example-google-drive-file-saving-for-t)
-- [I get an SQL error when launching the FAQ custom field support changeset. What can I do to fix it?](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#i-get-an-sql-error-when-launching-the-faq-custom-field-support-changeset-what-can-i-do-to-fix-it)
-- [Race condition in webservice 2-steps login process](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#race-condition-in-webservice-2-steps-login-process)
-- [Suppress header and footers in module action calls](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#suppress-header-and-footers-in-module-action-calls)
-- [I would like to be able to return to the newly created entity after creation, instead of returning to the previous one. For instance, when an invoice is created from an account, I would like to return to the newly created invoice instead of the account.](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#i-would-like-to-be-able-to-return-to-the-newly-created-entity-after-creation-instead-of-returning-to)
-- [Suppose I want to create a bunch of new modules with a set of data fields, but each module will also need some specific fields unique to it. I can think of two ways of doing this:](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#suppose-i-want-to-create-a-bunch-of-new-modules-with-a-set-of-data-fields-but-each-module-will-also-)
-- [How would I be able to mass print a set of invoices or sales orders?](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtips#how-would-i-be-able-to-mass-print-a-set-of-invoices-or-sales-orders)
+- [How can I activate Single Pane for only one (my) module, independent of the system settings?](../develtips#how-can-i-activate-single-pane-for-only-one-my-module-independent-of-the-system-settings)
+- [Custom date fields load by default "today". We need a custom date field to be empty by default, how can we accomplish this.](../develtips#custom-date-fields-load-by-default-today-we-need-a-custom-date-field-to-be-empty-by-default-how-can-)
+- [How to create custom formula function for field expressions in workflows](../develtips#how-to-create-custom-formula-function-for-field-expressions-in-workflows)
+- [How can I get the Edit button to open in a new window](../develtips#how-can-i-get-the-edit-button-to-open-in-a-new-window)
+- [PDF Formatting](../develtips#pdf-formatting)
+- [How to eliminate currency sign in report exports](../develtips#how-to-eliminate-currency-sign-in-report-exports)
+- [Modify record default view order](../develtips#modify-record-default-view-order)
+- [How can I deactivate the delete button on my custom fields in layout editor](../develtips#how-can-i-deactivate-the-delete-button-on-my-custom-fields-in-layout-editor)
+- [How to recalculate privileges and regenerate user_privilege files from the command line.](../develtips#how-to-recalculate-privileges-and-regenerate-user-privilege-files-from-the-command-line)
+- [When we go to create a quote, we choose the opportunity to relate, with a popup window to select among the created opportunities. Is there any way to **ONLY** see the open opportunities, so that by default all closed opportunities do not appear. (Cuando vamos a hacer un presupuesto como saben escogemos la oportunidad a relacionar, donde aparece una ventana para elegir la oportunidad creada. Hay alguna manera en que NO aparezca la oportunidad que se haya cerrado o clasificado en (Cerrado Ganado) ya que como saben, siguen apareciendo todas las oportunidades que tenga el vendedor).](../develtips#when-we-go-to-create-a-quote-we-choose-the-opportunity-to-relate-with-a-popup-window-to-select-among)
+- [How can I get a blank currency field instead of 0?](../develtips#how-can-i-get-a-blank-currency-field-instead-of-0)
+- [How can I add a module to an existing uitype10 field? or, How can I relate a module with another module that already has a uitype 10 field for relations?](../develtips#how-can-i-add-a-module-to-an-existing-uitype10-field-or-how-can-i-relate-a-module-with-another-modul)
+- [How can I change the order of modules that appear in the picklist of a multi-module capture field. For example, the "Related To" field on the calendar.](../develtips#how-can-i-change-the-order-of-modules-that-appear-in-the-picklist-of-a-multi-module-capture-field-fo)
+- [How can I get the SQL constructed for a Report?](../develtips#how-can-i-get-the-sql-constructed-for-a-report)
+- [How can I get the SQL constructed for a List View?](../develtips#how-can-i-get-the-sql-constructed-for-a-list-view)
+- [API control to turn-off Eventing triggers could be helpful when doing bulk operations like import/export.](../develtips#api-control-to-turn-off-eventing-triggers-could-be-helpful-when-doing-bulk-operations-like-import-ex)
+- [How can I activate workflows when importing records?](../develtips#how-can-i-activate-workflows-when-importing-records)
+- [How can I save() a record in a custom workflow function without launching the workflows and events again?](../develtips#how-can-i-save-a-record-in-a-custom-workflow-function-without-launching-the-workflows-and-events-aga)
+- [A question regarding the functions to add in common utils, for example google drive file saving. For that I need to create a function in utils files and need to use those either in save.php file or in custom workflow functions. Is it a good idea?](../develtips#a-question-regarding-the-functions-to-add-in-common-utils-for-example-google-drive-file-saving-for-t)
+- [I get an SQL error when launching the FAQ custom field support changeset. What can I do to fix it?](../develtips#i-get-an-sql-error-when-launching-the-faq-custom-field-support-changeset-what-can-i-do-to-fix-it)
+- [Race condition in webservice 2-steps login process](../develtips#race-condition-in-webservice-2-steps-login-process)
+- [Suppress header and footers in module action calls](../develtips#suppress-header-and-footers-in-module-action-calls)
+- [I would like to be able to return to the newly created entity after creation, instead of returning to the previous one. For instance, when an invoice is created from an account, I would like to return to the newly created invoice instead of the account.](../develtips#i-would-like-to-be-able-to-return-to-the-newly-created-entity-after-creation-instead-of-returning-to)
+- [Suppose I want to create a bunch of new modules with a set of data fields, but each module will also need some specific fields unique to it. I can think of two ways of doing this:](../develtips#suppose-i-want-to-create-a-bunch-of-new-modules-with-a-set-of-data-fields-but-each-module-will-also-)
+- [How would I be able to mass print a set of invoices or sales orders?](../develtips#how-would-i-be-able-to-mass-print-a-set-of-invoices-or-sales-orders)
 
 
 <div class="notices blue">
@@ -180,7 +180,7 @@ Note that you may have to make a similar change in some other parts of the code,
 <div class="notices blue">
 <h2>PDF Formatting</h2> </div>
 
-See this page for tips on playing with PDF output:<a href="http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/pdfformating"> PDF Formatting</a>
+See this page for tips on playing with PDF output: [PDF Formatting](../08.pdfformating)
 
 ---
 <br>

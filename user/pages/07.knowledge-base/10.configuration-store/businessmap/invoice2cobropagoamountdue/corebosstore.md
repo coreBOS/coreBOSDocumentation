@@ -51,6 +51,6 @@ You will have to manually add the <strong>"cbfromid"</strong> parameter to the "
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store/businessmap/vendoraddresspo/id:bf9cdf3cc288cef021d4787827427125/store:configuration) | Chapter 7: PurchaseOrder_FieldDependency.
+[Next](../vendoraddresspo) | Chapter 7: PurchaseOrder_FieldDependency.
 
 ------------------------------------------------------------------------

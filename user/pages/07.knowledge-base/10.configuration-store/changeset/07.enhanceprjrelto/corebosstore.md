@@ -37,6 +37,6 @@ separated. </div>
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//changeset/enhancerelproject2qsopoi/id:cb976f27a3e92d8fbab7a6d1418b4d36/store:configuration) | Chapter 15: Relate Projects with Quotes, Sales Orders, Purchase Orders and Invoices.
+[Next](../08.enhancerelproject2qsopoi) | Chapter 15: Relate Projects with Quotes, Sales Orders, Purchase Orders and Invoices.
 
 ------------------------------------------------------------------------

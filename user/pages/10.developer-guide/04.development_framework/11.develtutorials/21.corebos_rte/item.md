@@ -21,7 +21,7 @@ taxonomy:
 ---
 -   set the Global Variable **Application\_Use\_RTE** to 1 for the
     module, which is it's default value
--   create an [Extended Field Information Mapping](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/extendedfieldinfo) declaring the
+-   create an [Extended Field Information Mapping](../../../../05.configuration-tools/02.business-maps/28.extendedfieldinfo) declaring the
     fields you want to have RTE activated
 -   enjoy!
 
@@ -33,7 +33,7 @@ taxonomy:
 THE PATCH BELOW IS NOT NECESSARY
 ANYMORE!
 
-It has been made obsolete by the [Extended Field Information Mapping](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/extendedfieldinfo) where you can
+It has been made obsolete by the [Extended Field Information Mapping](../../../../05.configuration-tools/02.business-maps/28.extendedfieldinfo) where you can
 establish which textarea fields in which modules you want to edit with
 RTE.
 

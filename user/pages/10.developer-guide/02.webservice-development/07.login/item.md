@@ -180,13 +180,12 @@ accessKey: [token+password|md5(token+accesskey)]</td>
     Authentication Protocol and it is more secure than a
     username/password authentication. [Read here for more
     information](https://tools.ietf.org/html/rfc1994)
--   [Read here for methods on how to change the user password and/or
-    access key](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference#crud-users)
+-   [Read here for methods on how to change the user password and/or access key](../08.methodreference)
 
 
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/querylanguage)| Chapter 4:Query language.
+[Next](../09.querylanguage)| Chapter 4:Query language.
 
 ------------------------------------------------------------------------

@@ -83,6 +83,6 @@ notification with a test message.
 
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/extensions-integrations/integration/oocommerce) | Chapter 4: Integración vtigerCRM y wordpress e-commerce plugin
+[Next](../04.oocommerce) | Chapter 4: Integración vtigerCRM y wordpress e-commerce plugin
 
 ------------------------------------------------------------------------

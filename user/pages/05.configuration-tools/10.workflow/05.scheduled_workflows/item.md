@@ -240,6 +240,6 @@ In this example, we will configure a workflow to send an email to Assigned to us
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/update_workflows) | Chapter 4: Update Workflow Tasks.
+[Next](../06.update_workflows) | Chapter 4: Update Workflow Tasks.
 
 ------------------------------------------------------------------------

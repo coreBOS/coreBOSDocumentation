@@ -77,6 +77,6 @@ isPermitted('Accounts','CreateView','74');
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/mapping) | Chapter 3: (Field) Mapping.
+[Next](../18.mapping ) | Chapter 3: (Field) Mapping.
 
 ------------------------------------------------------------------------

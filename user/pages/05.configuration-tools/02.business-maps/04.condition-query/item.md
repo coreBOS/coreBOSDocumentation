@@ -70,6 +70,6 @@ Examples:
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/condition-expression) | Chapter 2: Condition Expression.
+[Next](../03.condition-expression) | Chapter 2: Condition Expression.
 
 ------------------------------------------------------------------------

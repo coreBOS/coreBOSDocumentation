@@ -21,7 +21,7 @@ taxonomy:
 ---
 A common request is to add a button on the list and detail view of the records for a module.
 
-In this tutorial I will show how to add a “Pay Now” button for the [coreBOS Payment Module](http://localhost/coreBOSDocumentation/user-manual/coreboscyp).
+In this tutorial I will show how to add a “Pay Now” button for the [coreBOS Payment Module](../../../../04.user-manual/coreboscyp).
 
 If you just want the code, [here is the patch](https://discussions.corebos.org/documentation/lib/exe/fetch.php?media=devel:patches:coreboscp_addpaynowbutontocyp.patch).
 

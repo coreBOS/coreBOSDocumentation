@@ -41,6 +41,6 @@ that.</div>
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//changeset/convertstate2picklist/id:e0e4593c729f937e8eaac0619f59d4bb/store:configuration) | Chapter 9: Convert State field to picklist.
+[Next](../02.convertstate2picklist) | Chapter 9: Convert State field to picklist.
 
 ------------------------------------------------------------------------

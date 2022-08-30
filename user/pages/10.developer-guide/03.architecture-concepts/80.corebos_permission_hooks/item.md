@@ -32,7 +32,7 @@ You will need to learn and understand how the current permission system works to
 
 ### Why not use Record Access Control?
 
-coreBOS has a powerful configuration option through Business Mappings. Using these we can configure many parts of the application to adapt them to the exact requirements of each implementation. One of these options is [Record Access Control.](http://localhost/coreBOSDocumentation/configuration-tools/business-maps) With this very powerful mapping, we can hide/show create, retrieve, edit and delete actions using advanced conditions based on the record upon which the action should take place.
+coreBOS has a powerful configuration option through Business Mappings. Using these we can configure many parts of the application to adapt them to the exact requirements of each implementation. One of these options is [Record Access Control.](../../../05.configuration-tools/02.business-maps) With this very powerful mapping, we can hide/show create, retrieve, edit and delete actions using advanced conditions based on the record upon which the action should take place.
 
 RAC (Record Access Control) is ideal for additional logic upon the existing permission system. For example, we can hide the Add button on Project Task whose Project is closed or block editing of the existing project tasks of a closed project. In this scenario, the user already has access to the Project and the Project Tasks, but the business wants the application to stop any attempt to create/edit a project task related to a closed project.
 

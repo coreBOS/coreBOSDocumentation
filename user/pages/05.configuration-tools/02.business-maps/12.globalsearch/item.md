@@ -79,6 +79,6 @@ This is the map I used to test it:
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/detailviewlayout) | Chapter 19: Detail View Layout.
+[Next](../07.detailviewlayout) | Chapter 19: Detail View Layout.
 
 ------------------------------------------------------------------------

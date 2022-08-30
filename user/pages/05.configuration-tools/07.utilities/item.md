@@ -3,16 +3,16 @@ title: Utilities
 ---
 ---
 
-- [Cache-layer-activation](http://localhost/coreBOSDocumentation/configuration-tools/utilities/cache-layer-activation)
+- [Cache-layer-activation]( ./cache-layer-activation)
 
-- [Elastic-search](http://localhost/coreBOSDocumentation/configuration-tools/utilities/elastic-search)
+- [Elastic-search](./elastic-search)
 
-- [Hubspot-activation](http://localhost/coreBOSDocumentation/configuration-tools/utilities/hubspot-activation)
+- [Hubspot-activation](./hubspot-activation)
 
-- [Saml-activation](http://localhost/coreBOSDocumentation/configuration-tools/utilities/saml-activation)
+- [Saml-activation](./saml-activation)
 
-- [Two-factor-auth](http://localhost/coreBOSDocumentation/configuration-tools/utilities/two-factor-auth)
+- [Two-factor-auth](./two-factor-auth)
 
-- [User-imap-smtp](http://localhost/coreBOSDocumentation/configuration-tools/utilities/user-imap-smtp)
+- [User-imap-smtp](./user-imap-smtp)
 
-- [Whatsapp-activation](http://localhost/coreBOSDocumentation/configuration-tools/utilities/whatsapp-activation)
+- [Whatsapp-activation](./whatsapp-activation)

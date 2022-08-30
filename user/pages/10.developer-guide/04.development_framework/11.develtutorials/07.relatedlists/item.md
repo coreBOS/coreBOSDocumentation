@@ -206,7 +206,7 @@ Adding a related list to an existing module without modifying it's code
 -----------------------------------------------------------------------
 
 Since November 2014 the application has a way of adding related lists to
-a module without having to modify its main class. [Read all about it on the hooks wiki page!](http://localhost/coreBOSDocumentation/developer-guide/development%20framework/develtutorials/corebos_hooks)
+a module without having to modify its main class. [Read all about it on the hooks wiki page!](../20.corebos_hooks)
 
 Frequently Asked Questions
 --------------------------

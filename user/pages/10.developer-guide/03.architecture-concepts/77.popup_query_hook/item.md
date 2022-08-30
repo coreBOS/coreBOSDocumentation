@@ -23,7 +23,7 @@ taxonomy:
 ---
 This hook permits us to directly manipulate the query to be executed in the Pop-up capture screen for our module.
 
-Although the Pop-up capture screen has some very advanced searching capabilities that can be directly used through [pop-up open hook as can be read here.](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/popup_open_hook)
+Although the Pop-up capture screen has some very advanced searching capabilities that can be directly used through [pop-up open hook as can be read here.](../76.popup_open_hook)
  That hook grows on coreBOS search system which is limited to fields directly on the module being searched, so we can restrict the list of records shown based on any combination of fields directly ON the module, but we can not limit it by fields on some other related module. That is where this hook comes into play.
 
 The rest of the article will be based on a real example of an open source module that coreBOS has which uses this hook to implement the pop-up restrictions it requires without modifying any of the base code in the application. The module is [coreBOS Address,](https://github.com/tsolucio/coreBOSAddress) which represents a many to many relation between physical addresses and accounts/contacts. Any given address record can be related to many accounts and contacts while any given account or contact can have many addresses. You can [find the module on github.](https://github.com/tsolucio/coreBOSAddress) 
@@ -32,7 +32,7 @@ This module adds some "helper" fields on the inventory modules so you can easily
 
 The issue is that to make this even more useful than it already is, we want the pop-up window with the addresses to show us ONLY those addresses that are related to the account and/or contact selected on the invoice. After all, those are the ones with higher probability of being the one we want.
 
-If the account/contact field were directly on the address record we could use the [pop-up open hook](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/popup_open_hook) to add a search condition on the field(s), but the relation between account/contact and address is many to many, the relation is not reflected directly on the records of the address module but in another intermediate database table, so we need something more. That is where the **pop-up query hook** comes into play.
+If the account/contact field were directly on the address record we could use the [pop-up open hook](../76.popup_open_hook) to add a search condition on the field(s), but the relation between account/contact and address is many to many, the relation is not reflected directly on the records of the address module but in another intermediate database table, so we need something more. That is where the **pop-up query hook** comes into play.
 
 To use this hook we add a method to our module called **getQueryByModuleField().** The pop-up capture screen code will detect this method and call it right before launching the query that it has constructed. If the method returns a query, the code will understand that the query coming from this method is better than the one it has obtained and will use it instead of it's own.
 
@@ -53,7 +53,7 @@ These four parameters should be all we need to decide what query we need to retu
 
 Let's have a look at how the [coreBOS Address module](https://github.com/tsolucio/coreBOSAddress) handles this to restrict the set of address records shown to those of the account and/or contact selected on the invoice.
 
-First it adds a [pop-up open hook](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/popup_open_hook) in order to capture the accountID and the contactID selected on the invoice and pass them to the pop-up capture code in the URL opening the window. This is similar to adding search conditions, the only difference being that in this case we pass in two variables that the pop-up capture code does not use, they are intended for our custom query method. [This looks like this:](https://github.com/tsolucio/coreBOSAddress/blob/master/modules/cbAddress/cbAddress.js#L25)
+First it adds a [pop-up open hook](../76.popup_open_hook) in order to capture the accountID and the contactID selected on the invoice and pass them to the pop-up capture code in the URL opening the window. This is similar to adding search conditions, the only difference being that in this case we pass in two variables that the pop-up capture code does not use, they are intended for our custom query method. [This looks like this:](https://github.com/tsolucio/coreBOSAddress/blob/master/modules/cbAddress/cbAddress.js#L25)
 
 ```php 
 function cbAddressOpenCapture(fromlink,fldname,MODULE,ID) {
@@ -85,8 +85,9 @@ function cbAddressOpenCapture(fromlink,fldname,MODULE,ID) {
 ```
 <div class="notices red">
 <strong>!! NOTE: VERY IMPORTANT !! </strong>
-In the above code there is an extremely important part that could be bypassed easily. It is the additional parameter <strong>cbcustompopupinfo.</strong> When we use this type of customization instead of the system 
-<a href="http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/popup_open_hook">pop-up open hook</a> we are artificially sending our own custom parameters to the application. In this case the acc_id, cont_id and relmod_id parameters. Since these parameters are totally unknown to the application they are not passed along to any subsequent request made by the popup screen. Normally there won't be any other requests as the set of records returned will fit on one popup screen and the user will simply select the right one, but if the popup screen has a few pages of records and the user goes to another page, launches a search or simply decides to sort them by some field, our custom parameters WILL NOT be sent and the query will fail because it expects these values. In order to inform the application that these values must be respected we have to add the <strong>cbcustompopupinfo</strong> parameter with a semi-colon separated list of the variable names we need to have sent around.
+In the above code there is an extremely important part that could be bypassed easily. It is the additional parameter <strong>cbcustompopupinfo.</strong> When we use this type of customization instead of the system  
+
+[pop-up open hook](../76.popup_open_hook) we are artificially sending our own custom parameters to the application. In this case the acc_id, cont_id and relmod_id parameters. Since these parameters are totally unknown to the application they are not passed along to any subsequent request made by the popup screen. Normally there won't be any other requests as the set of records returned will fit on one popup screen and the user will simply select the right one, but if the popup screen has a few pages of records and the user goes to another page, launches a search or simply decides to sort them by some field, our custom parameters WILL NOT be sent and the query will fail because it expects these values. In order to inform the application that these values must be respected we have to add the <strong>cbcustompopupinfo</strong> parameter with a semi-colon separated list of the variable names we need to have sent around.
 
 <a href=https://github.com/omarllorens>Thank you Omar.</a>
 </div>

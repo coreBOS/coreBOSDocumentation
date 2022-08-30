@@ -19,9 +19,9 @@ taxonomy:
         - elasticsearch 
 ---
 ---
-* <a href="http://localhost/coreBOSDocumentation/extensions-integrations/integration/elasticsearch/elasticsearchnative"> <strong> coreBOS Native Integration </strong> </a>
+**[coreBOS Native Integration](./01.elasticsearchnative)**
 
-* <a href="http://localhost/coreBOSDocumentation/extensions-integrations/integration/elasticsearch/elasticsearchexternal"> <strong> coreBOS External Integration </strong> </a>
+ **[coreBOS External Integration](./02.elasticsearchexternal)**
 
 
 

@@ -470,7 +470,7 @@ image data itself.
     Image](https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/438_createWithImage.php)
 -   [Update with
     Image](https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/438_updateWithImage.php)
--   [How to update an image field from code](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/updateimagefield)
+-   [How to update an image field from code](/developer-guide/architecture-concepts/updateimagefield)
 
 ### Product Multi-Image field
 
@@ -518,6 +518,6 @@ field.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/getpdfdata)| Chapter 7: GenDoc and PDF output.
+[Next](/configuration-tools/webservice-development/getpdfdata)| Chapter 7: GenDoc and PDF output.
 
 ------------------------------------------------------------------------

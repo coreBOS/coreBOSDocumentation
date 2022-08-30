@@ -20,9 +20,9 @@ taxonomy:
 ---
 ---
 
-- [Is it possible to make coreBOS work using "block hours" or "term contracts"?](http://localhost/coreBOSDocumentation/user-manual/helpdesk#is-it-possible-to-make-corebos-work-using-block-hours-or-term-contracts)
+- [Is it possible to make coreBOS work using "block hours" or "term contracts"?](../../04.user-manual/helpdesk#is-it-possible-to-make-corebos-work-using-block-hours-or-term-contracts)
 
-- [Is there a way that the block hours accepts decimal e.g like 1.7hours?](http://localhost/coreBOSDocumentation/user-manual/helpdesk#is-there-a-way-that-the-block-hours-accepts-decimal-e-g-like-1-7hours)
+- [Is there a way that the block hours accepts decimal e.g like 1.7hours?](../../04.user-manual/helpdesk#is-there-a-way-that-the-block-hours-accepts-decimal-e-g-like-1-7hours)
 
 <div class="notices blue">
 <h2>Is it possible to make coreBOS work using "block hours" or "term contracts"?</h2>

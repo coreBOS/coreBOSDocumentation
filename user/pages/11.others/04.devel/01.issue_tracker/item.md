@@ -25,7 +25,7 @@ taxonomy:
 ## coreBOS Family Projects
 
 - [coreBOS](https://github.com/tsolucio/corebos)
-- [coreBOS Documentation](http://localhost/coreBOSDocumentation/others/devel/issue_tracker/corebosdocs_start)
-- [coreBOS Mail](http://localhost/coreBOSDocumentation/others/devel/issue_tracker/corebosmail_start)
-- [coreBOS Customer Portal](http://localhost/coreBOSDocumentation/others/devel/issue_tracker/coreboscp_start)
-- [coreBOS Business Intelligence](http://localhost/coreBOSDocumentation/others/devel/issue_tracker/corebosbi_start)
+- [coreBOS Documentation](./02.corebosdocs_start)
+- [coreBOS Mail](./03.corebosmail_start)
+- [coreBOS Customer Portal](./04.coreboscp_start)
+- [coreBOS Business Intelligence](./05.corebosbi_start)

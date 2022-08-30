@@ -90,7 +90,7 @@ AJAX and Javascript
 
 -   Chrome and Firefox have webdevelopers tools and firebug.
 -   [Interesting explanation on how to see javascript errors](http://codex.wordpress.org/Using_Your_Browser_to_Diagnose_JavaScript_Errors#Step_3:_Diagnosis)
--   [Javascript Debugging](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/jsdebuging)
+-   [Javascript Debugging](../07.jsdebuging)
 
 Global Variables
 ----------------
@@ -140,7 +140,7 @@ Additionally, one of our former team members [used this patch](https://discussio
 Email
 -----
 
-[Have a read here about how coreBOS outgoing email server works and how to configure it](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/outgoingserver).
+[Have a read here about how coreBOS outgoing email server works and how to configure it](../../../05.configuration-tools/11.Administration%20Options/05.outgoingserver).
 
 Activate the debug log at level **FATAL** and set the
 **Debug\_Email\_Sending** global variable to 1. This will send the whole

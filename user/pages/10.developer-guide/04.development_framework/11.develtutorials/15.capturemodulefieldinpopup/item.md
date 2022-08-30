@@ -24,7 +24,10 @@ taxonomy:
 <div class="notices red">
 This article is obsolete! As of
 December 2014 we have a hook to make this easy without the need of
-modifying any base application code.<a href="http://localhost/coreBOSDocumentation/developer-guide/development%20framework/develtutorials/corebos_hooks">Read all about it on the Hooks wiki page!</a>.</div>
+modifying any base application code.
+
+[Read all about it on the Hooks wiki page!](../20.corebos_hooks) .
+</div>
 
 In vtiger CRM 5.x and coreBOS code prior to December 2014, this task is
 still cumbersome and requires code modifications.

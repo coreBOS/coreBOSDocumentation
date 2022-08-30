@@ -87,6 +87,6 @@ confirm them.
 
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/extensions-integrations/integration/woocommerce) | Chapter 12: WordPress Woocommerce Integration 
+[Next](../12.woocommerce) | Chapter 12: WordPress Woocommerce Integration 
 
 ------------------------------------------------------------------------

@@ -38,6 +38,6 @@ separated. </div>
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//changeset/enhancepotrelto/id:42cfebf951f8498092ac0e950ee67b1e/store:configuration) | Chapter 13: Separate RelatedTo field on Potentials.
+[Next](../06.enhancepotrelto) | Chapter 13: Separate RelatedTo field on Potentials.
 
 ------------------------------------------------------------------------

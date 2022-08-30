@@ -33,7 +33,7 @@ I am going to pick the **massDelete** JavaScript function which is executed when
 
 ![](massdelete.png?width=100%)
 
-First we need a place where we can load our own JavaScript code, this is done using the coreBOS PHP action links as explained in the [How to add action links to a module](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/add_actions) development tutorial and looks like this:
+First we need a place where we can load our own JavaScript code, this is done using the coreBOS PHP action links as explained in the [How to add action links to a module](../../04.development_framework/11.develtutorials/18.add_actions) development tutorial and looks like this:
 
 ```php 
 include_once('vtlib/Vtiger/Module.php');

@@ -73,7 +73,7 @@ gvmodule: module to be searched on
 
 You can see an [example of this call and try it out](https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/500_GetGlobalVariable.php) using the [coreBOS web service developers' tool](https://github.com/tsolucio/coreBOSwsDevelopment).
 
-This web service endpoint has a special use case to **retrieve business maps**. Since [business maps](http://localhost/coreBOSDocumentation/configuration-tools/business-maps) are such a powerful configuration feature and the exact map to use for each user/module depends on the global variable module escalation rules, this web service method will recognize the prefix "**BusinessMapping_**" in the first gvname parameter. If the name has this prefix it understands that you are searching for a Business Map and will return the ID of the map along with the map itself in JSON format.
+This web service endpoint has a special use case to **retrieve business maps**. Since [business maps](../02.business-maps) are such a powerful configuration feature and the exact map to use for each user/module depends on the global variable module escalation rules, this web service method will recognize the prefix "**BusinessMapping_**" in the first gvname parameter. If the name has this prefix it understands that you are searching for a Business Map and will return the ID of the map along with the map itself in JSON format.
 
 ```
 SearchGlobalVar('BusinessMapping_Accounts_FieldDependency', '', 'Accounts');

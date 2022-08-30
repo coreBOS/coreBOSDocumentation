@@ -168,7 +168,7 @@ when an entity is saved. It should not be used.
 #### vtiger.entity.beforesave
 
 This event is fired before an entity is saved. You will be passed a
-**[VTEntityData](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/vtentitydata)** object representing the saved
+**[VTEntityData](../../../03.architecture-concepts/74.vtentitydata)** object representing the saved
 entity. It should be noted that new objects may not have an id (if it is
 being created). You can modify the contents of VTEntityObject.
 
@@ -187,7 +187,7 @@ object has been executed.
 
 This event is fired after an entity is saved, even the local
 save\_module() method of the object has been executed. This also
-provides a **[VTEntityData](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/vtentitydata)** object.
+provides a **[VTEntityData](../../../03.architecture-concepts/74.vtentitydata)** object.
 
 #### vtiger.entity.aftersave.final
 
@@ -197,20 +197,20 @@ events have occurred. It should not be used.
 #### vtiger.entity.beforedelete
 
 This event is fired before an entity is deleted. You will be passed a
-**[VTEntityData](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/vtentitydata)** object representing the
+**[VTEntityData](../../../03.architecture-concepts/74.vtentitydata)** object representing the
 entity that will be eliminated.
 
 #### vtiger.entity.afterdelete
 
 This event is fired after an entity is deleted. You will be passed a
-**[VTEntityData](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/vtentitydata)** object representing the
+**[VTEntityData](../../../03.architecture-concepts/74.vtentitydata)** object representing the
 deleted object. Be careful as this object can no longer be referenced
 using the applications' methods.
 
 #### vtiger.entity.afterrestore
 
 This event is fired after an entity has been recovered from the Recycle
-Bin. You will be passed a **[VTEntityData](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/vtentitydata)**
+Bin. You will be passed a **[VTEntityData](../../../03.architecture-concepts/74.vtentitydata)**
 object representing the entity that has been restored.
 
 #### vtiger.entity.beforegroupdelete
@@ -403,7 +403,7 @@ return, besides these two input parameters, an error status, an error
 message, an error action and an array of variables to return to the edit
 screen the process was initiated from. 
 
-[You can read a little more about this filterhere](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/precrud)
+[You can read a little more about this filterhere](../../../03.architecture-concepts/78.precrud)
 
 #### corebos.filter.preEditCheck
 
@@ -411,7 +411,7 @@ Filter launched before starting the Edit process. Will receive, the
 $\_REQUEST variable, the Smarty object and the current object trying to
 be edited.
 
-[You can read a little more about this filter here](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/precrud)
+[You can read a little more about this filter here](../../../03.architecture-concepts/78.precrud)
 
 #### corebos.filter.preViewCheck
 
@@ -419,7 +419,7 @@ Filter launched before starting the Detail View process. Will receive,
 the $\_REQUEST variable, the Smarty object and the current object trying
 to be viewed.
 
-[You can read a little more about this filter here](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/precrud)
+[You can read a little more about this filter here](../../../03.architecture-concepts/78.precrud)
 
 #### corebos.filter.preDeleteCheck
 
@@ -459,7 +459,7 @@ return the announcement to show. permits creating dynamic announcements
 
 ### Custom Permission Hooks
 
-**corebos.permission.\[accessquery|ispermitted\]**: [Custom Permission Hooks](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebos_permission_hooks)
+**corebos.permission.\[accessquery|ispermitted\]**: [Custom Permission Hooks](../../../03.architecture-concepts/80.corebos_permission_hooks)
 
 ### Events Examples
 
@@ -665,10 +665,10 @@ HOOKS: Types and usage
 Each hook requires its' own specific magic and steps to get them working
 and cover different aspects of functionality enhancement.
 
--   [Popup open hook](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/popup_open_hook)
--   [Popup capture hook](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/popup_capture_hook)
--   [Popup query hook](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/popup_query_hook)
--   [Related List hook](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/related_list_hook)
+-   [Popup open hook](../../../03.architecture-concepts/75.popup_capture_hook)
+-   [Popup capture hook](../../../03.architecture-concepts/75.popup_capture_hook)
+-   [Popup query hook](../../../03.architecture-concepts/75.popup_capture_hook)
+-   [Related List hook](../../../03.architecture-concepts/75.popup_capture_hook)
 -   afterImportRecord
 
 LINKS: Types and usage
@@ -707,7 +707,7 @@ To register these actions into coreBOS we use the vtlib API interface
 </table>
 <br>
 
-You can find a real example in the [add Action Link Helper Script](http://localhost/coreBOSDocumentation/developer-guide/development_framework/helperscripts#addactionlink-php)
+You can find a real example in the [add Action Link Helper Script](../../06.helperscripts/item.md#addactionlinkphp)
 
 <br>
 <table class="table table-striped">
@@ -727,7 +727,7 @@ You can find a real example in the [add Action Link Helper Script](http://localh
 <tr class="odd">
 <td>DETAILVIEWWIDGET</td>
 <td>A block of code contained in a box on the view of a record. It can either
- be a small box on the action panel or a <a href="http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/add_special_block">full fledged block inserted into the existing field blocks</a></td>
+ be a small box on the action panel or a <a href="../../../developer-guide/development_framework/develtutorials/add_special_block">full fledged block inserted into the existing field blocks</a></td>
 </tr>
 <tr class="even">
 <td>LISTVIEWBASIC</td>
@@ -770,9 +770,13 @@ parameters: edit_type, formName, action, callback, any parameters sent by the ph
 </tbody>
 </table>
 <br>
-<div class="notices red">Get more details in the  <a href="url">http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/add_actions</a> development tutorial.</div>
+<div class="notices red">Get more details in the  
+
+ [development tutorial](../18.add_actions).
+
+</div>
 
 coreBOS JavaScript Hooks
 ------------------------
 
-[Read all about them here](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/corebosjshooks)
+[Read all about them here](../../../03.architecture-concepts/81.corebosjshooks)

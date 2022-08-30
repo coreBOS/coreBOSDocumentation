@@ -43,6 +43,6 @@ This was implemented in issue  ~*issue:191*
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/invokecustomfunction_workflows) | Chapter 8:Invoke Custom Functions Workflow Tasks.
+[Next](../03.invokecustomfunction_workflows) | Chapter 8:Invoke Custom Functions Workflow Tasks.
 
 ------------------------------------------------------------------------

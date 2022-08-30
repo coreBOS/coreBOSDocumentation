@@ -43,7 +43,7 @@ addEntityMethod.php
 -------------------
 
 This is an example script to show how to associated a workflow custom
-method to a module. You can [read more about it here.](http://localhost/coreBOSDocumentation/developer-guide/development%20framework/develtutorials/addworkflowfunction)
+method to a module. You can [read more about it here.](../11.develtutorials/13.addworkflowfunction)
 
 addModComments.php
 ------------------
@@ -83,7 +83,7 @@ all the current values in the field. It accepts two parameters:
 coreBOSEvents*
 ---------------
 
-Script to load and show the functionality of the [coreBOS Eventing system](http://localhost/coreBOSDocumentation/developer-guide/development%20framework/develtutorials/corebos_hooks)
+Script to load and show the functionality of the [coreBOS Eventing system](../11.develtutorials/20.corebos_hooks)
 
 deleteModule.php
 ----------------
@@ -119,7 +119,7 @@ installupdater.php
 ------------------
 
 This script is a copy of the installmodule.php script specifically
-tailored to installing the [coreBOS updater](http://localhost/coreBOSDocumentation/developer-guide/development%20framework/develtutorials/corebosupdater)
+tailored to installing the [coreBOS updater](../11.develtutorials/08.corebosupdater)
 module.
 
 stressTest.php
@@ -156,7 +156,7 @@ composer2readme and module2wiki
 These PHP scripts will connect to a standard coreBOS module or extension
 directory structure and output a DokuWiki syntax page with a summary of
 the module or extension which you can use as a starting point to
-document it in [our extensions section](http://localhost/coreBOSDocumentation/others/extensions).
+document it in [our extensions section](../../../11.others/07.extensions).
 
     php build/HelperScripts/composer2readme.php https://raw.githubusercontent.com/tsolucio/coreBOSEmployee/master
     php build/HelperScripts/module2wiki.php https://raw.githubusercontent.com/tsolucio/coreBOSEmployee/master

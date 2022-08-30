@@ -40,6 +40,6 @@ separated. </div>
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//changeset/enhanceprjrelto/id:eb8d875c5adb2f6e683aef2bfe077fa9/store:configuration) | Chapter 14: Separate RelatedTo field on Projects.
+[Next](../07.enhanceprjrelto) | Chapter 14: Separate RelatedTo field on Projects.
 
 ------------------------------------------------------------------------

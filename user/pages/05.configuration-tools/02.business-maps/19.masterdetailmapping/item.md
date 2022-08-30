@@ -296,8 +296,7 @@ Master module (Projects in the example above)
     guidelines and prefix the title with an icon if given here. You can
     select any valid icon from LDS
 
-[Read about the Making of the Generic
-Editor](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/creatinggenericeditor)
+[Read about the Making of the Generic Editor](../05.creatinggenericeditor)
 
 Master Detail on Inventory Modules
 ==================================
@@ -359,6 +358,6 @@ See this video for a demonstration:
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/iomap) | Chapter 11: IOMap.
+[Next](../15.iomap) | Chapter 11: IOMap.
 
 ------------------------------------------------------------------------

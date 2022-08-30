@@ -73,6 +73,6 @@ steps detailed next:
 
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/extensions-integrations/integration/webdav) | Chapter 10: Integration with Sabre/DAV WebDAV
+[Next](../10.webdav) | Chapter 10: Integration with Sabre/DAV WebDAV
 
 ------------------------------------------------------------------------

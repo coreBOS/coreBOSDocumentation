@@ -36,6 +36,6 @@ contact.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//changeset/enhancehdrelto/id:b3fde0d8459a905a09e297e59f32dfaa/store:configuration) | Chapter 12: Separate RelatedTo field on HelpDesk.
+[Next](../05.enhancehdrelto) | Chapter 12: Separate RelatedTo field on HelpDesk.
 
 ------------------------------------------------------------------------

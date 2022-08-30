@@ -33,7 +33,7 @@ to the whole set of tasks to be launched. This has a few implications:
     execution sequence of the tasks is defined by the administrator user
     in Settings &gt; Scheduled tasks and launch frequency varies as time
     goes by so your scripts may get out of sync. Idea: you could use
-    [the message queue](http://localhost/coreBOSDocumentation/developer-guide/development%20framework/develtutorials/corebos_mqtm) or [settings service](http://localhost/coreBOSDocumentation/developer-guide/development%20framework/develtutorials/corebos_setting) to sync them.
+    [the message queue](../24.corebos_mqtm) or [settings service](../25.corebos_setting) to sync them.
 -   you have access to the Vtiger\_Cron object for your cron, so you
     could manipulate it
 
@@ -73,7 +73,7 @@ to be able to save the "state" of each execution in persistent storage
 so we can retrieve the number of unsuccessful connections and also reset
 the task to it's normal time when we are done.
 
-We can use [coreBOS settings service](http://localhost/coreBOSDocumentation/developer-guide/development%20framework/develtutorials/corebos_setting) for
+We can use [coreBOS settings service](../25.corebos_setting) for
 this saving two variables.
 
 The next thing we need is to understand how we can change the next time

@@ -82,7 +82,8 @@ Supported Services
 
 We currently support these survey services:
 
-<a href="http://localhost/coreBOSDocumentation/extensions-integrations/integration/typeform">Typeform</a>
+
+[Typeform](../09.typeform)
 
 <div class="notices yellow">
 We are open to other integrations, specially Google Forms and Survey Monkey and would be happy to help you get those into the list of supported services so don't hesitate to contact us if you need more.
@@ -90,6 +91,6 @@ We are open to other integrations, specially Google Forms and Survey Monkey and 
 
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/extensions-integrations/integration/tiddlywiki) | Chapter 8: Integration with TiddlyWiki
+[Next](../08.tiddlywiki) | Chapter 8: Integration with TiddlyWiki
 
 ------------------------------------------------------------------------

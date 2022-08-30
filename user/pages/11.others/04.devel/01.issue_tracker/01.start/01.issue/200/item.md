@@ -183,7 +183,7 @@ $rdo = $package->importManifest('include/language/it_it.manifest.xml');
 
 Log into the application, select your language in Preferences and proceed to edit and test the translation either directly in the files with your favorite editor (remember to use UTF8) or through the translation manager in Settings.
 
-Finally, [package and distribute](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/packagemodules)
+Finally, [package and distribute](../../../.../../../../../10.developer-guide/04.development_framework/11.develtutorials/05.packagemodules)
 
 ### Translating the Documentation (Wiki)
 

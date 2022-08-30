@@ -109,6 +109,6 @@ Making it much easier to maintain.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/field_dependency) | Chapter 13: Field Dependency.
+[Next](../09.field_dependency) | Chapter 13: Field Dependency.
 
 ------------------------------------------------------------------------

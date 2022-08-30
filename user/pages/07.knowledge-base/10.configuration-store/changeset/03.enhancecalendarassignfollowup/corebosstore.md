@@ -55,6 +55,6 @@ you may need. That will look something like this:
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//changeset/enhancecyprelto/id:1d423964124bfb1284851734767a0e3a/store:configuration) | Chapter 11: Separate Account and Contact field on Payments.
+[Next](../04.enhancecyprelto) | Chapter 11: Separate Account and Contact field on Payments.
 
 ------------------------------------------------------------------------

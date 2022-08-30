@@ -116,7 +116,7 @@ able to manipulate and override whatever they want.
 This is where the **Portal User Login** comes to play. This
 functionality implements a two step login process identical to the
 normal coreBOS login process. We first make a call to
-[getchallenge](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/login) with the contact
+[getchallenge](../../07.login) with the contact
 email, then we calculate a hash of the password with the token and send
 that to finish the login.
 
@@ -293,7 +293,7 @@ We still do not have a valid substitute for this operation. We need to implement
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/session)| Chapter 14: Extend Session and Logout.
+[Next](../../00.manual/06.session)| Chapter 14: Extend Session and Logout.
 
 ------------------------------------------------------------------------
 

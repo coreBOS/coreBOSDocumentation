@@ -29,7 +29,8 @@ The need for this type of hook appears basically when we want to add some specia
 
 The typical example that the application already implements is to show only the contacts related to the selected account on an invoice.
 
-The code that needs to be added to restrict the selection of records is explained in the <a href="http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/conditional_popup"> How to open a capture popup with a preselected set of records</a> article, so here we will explain how to add the hook and see an example.
+The code that needs to be added to restrict the selection of records is explained in the 
+[How to open a capture popup with a preselected set of records](../../../10.developer-guide/04.development_framework/11.develtutorials/19.conditional_popup) article, so here we will explain how to add the hook and see an example.
 
 This hook consists in changing the javascript function that will be called when the user clicks on the select icon. To do this we need to:
 
@@ -58,8 +59,8 @@ We use the **addLink** method with type **HEADERSCRIPT** to register our javascr
 ```php 
 $module->addLink('HEADERSCRIPT','your_script.js',"path/to/your/script.js");
 ```
-<a href="http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/helperscripts">See the addLink helper script
-</a> 
+
+[See the addLink helper script](../../04.development_framework/06.helperscripts)
 
 ### Register the function for the capture field
 

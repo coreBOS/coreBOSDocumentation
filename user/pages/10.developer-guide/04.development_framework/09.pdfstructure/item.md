@@ -25,7 +25,10 @@ PDF Structure
 -------------
 
 <div class="notices blue"> This is <strong>OBSOLETE</strong> > Use
-<a href="http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//gendoc/id:747b42fa1e7512db806ad58fa0896642/store:configuration"> GenDoc</a></div>
+ 
+[GenDoc](../../../07.knowledge-base/10.configuration-store/changeset/08.enhancerelproject2qsopoi/corebosstore.md)
+
+</div>
 
 ![](pdf-breakdown.png?width=100%)
 ![](pdf-header.png?width=100%)

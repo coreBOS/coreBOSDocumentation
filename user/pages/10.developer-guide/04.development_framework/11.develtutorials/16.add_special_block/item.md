@@ -95,7 +95,7 @@ by studying that code.</div>
 
 From the example above you see that it is rather complex to add a new
 block with some custom code inside. So we have extended the
-possibilities in two ways. [One is using templates](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/add_editdetail_block) and the other is using what
+possibilities in two ways. [One is using templates](../17.add_editdetail_block) and the other is using what
 we call developer blocks.
 
 Developer blocks construct upon the idea above but make it easier to
@@ -271,4 +271,6 @@ if (isset($_REQUEST['action']) && $_REQUEST['action']==$currentModule.'Ajax') {
 
 
 <div class="notices blue"> You can find a much easier way to add
-this type of block which also supports Edit View in <a href="http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/add_editdetail_block"> this tutorial</a>. </div>
+this type of block which also supports Edit View in 
+
+[this tutorial](../17.add_editdetail_block). </div>

@@ -19,16 +19,16 @@ taxonomy:
         - administration
 ---
 ---
-- [View/Filter Management](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/filtermanagement)
+- [View/Filter Management](./01.filtermanagement)
 
-- [Logo sizes](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/logos_sizes)
+- [Logo sizes](./02.logos_sizes)
 
-- [Mail Converter](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/mailconverter)
+- [Mail Converter](./03.mailconverter)
 
-- [Monitor the health of your coreBOS](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/monitorstatus)
+- [Monitor the health of your coreBOS](./04.monitorstatus)
 
-- [How to Configure Outgoing Server](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/outgoingserver)
+- [How to Configure Outgoing Server](./05.outgoingserver)
 
-- [Picklist Editor](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/picklisteditor)
+- [Picklist Editor](./06.picklisteditor)
 
-- [Record Versioning](http://localhost/coreBOSDocumentation/configuration-tools/administration%20options/recordversioning)
+- [Record Versioning](./07.recordversioning)

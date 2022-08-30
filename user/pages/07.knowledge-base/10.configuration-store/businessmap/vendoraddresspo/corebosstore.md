@@ -46,6 +46,6 @@ taxonomy:
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//changeset/convertcountry2picklist/id:a3df75ecbda7aabad282685929078b45/store:configuration) | Chapter 8: Convert Country field to picklist.
+[Next](../../changeset/01.convertcountry2picklist) | Chapter 8: Convert Country field to picklist.
 
 ------------------------------------------------------------------------

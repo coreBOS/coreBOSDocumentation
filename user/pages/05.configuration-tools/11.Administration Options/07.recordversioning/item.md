@@ -69,7 +69,7 @@ That's even easier. Now you have the developers block in the DetailView of the m
 
 ![](screenshot_from_2019-06-19_12-25-07.png?width=70%)
 
-Record Versioning uses the [duplication business map](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/duplicaterecords) which permits us to fine-tune the related records that need to be versioned also.
+Record Versioning uses the [duplication business map](../../02.business-maps/08.duplicaterecords) which permits us to fine-tune the related records that need to be versioned also.
 
 Record versions will be respected also when using the Duplicate Records workflow task of the record can also be done by using a Duplication Map. You can find more information about this on the page below:
 

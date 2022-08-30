@@ -138,8 +138,7 @@ an array with all the fields and their values.
 
 Note that the way coreBOS works is that you get the values in the format
 of the database but you must return them in the format of the user.
-There is a way to [inform coreBOS to accept values in database
-format](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/skipconvertfields) and there is a Global
+There is a way to [inform coreBOS to accept values in database format](../11.skipconvertfields ) and there is a Global
 Variable (**Webservice\_Return\_FormattedValues**) to retrieve values in
 the format of the user connected to the API.
 
@@ -221,7 +220,7 @@ update the whole record.
 </tr>
 <tr>
 <td><strong>Response:</td>
-<td>An object with all the information of the record (even <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference#retrieve">extended information</a>)</td>
+<td>An object with all the information of the record (even <a href="../../developer-guide/webservice-development/methodreference#retrieve">extended information</a>)</td>
 </tr>
 <tr>
 <td><strong>Examples:</td>
@@ -300,7 +299,7 @@ the system or the user does not have permission for these fields.
 </tr>
 <tr>
 <td><strong>Response:</td>
-<td>An object with all the information of the record (even <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference#retrieve">extended information</a>)</td>
+<td>An object with all the information of the record (even <a href="../../developer-guide/webservice-development/methodreference#retrieve">extended information</a>)</td>
 </tr>
 <tr>
 <td><strong>Examples:</td>
@@ -440,7 +439,7 @@ their password and Access Key.
 
 ### CRUD Documents
 
-[Read full information here](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/docenhance)
+[Read full information here](../03.docenhance)
 
 ### Adding Comments
 
@@ -478,7 +477,7 @@ Questions (Faq). For these two modules, we have a specific endpoint:
 </tr>
 <tr>
 <td><strong>Response:</td>
-<td>An object with all the information of the record (even <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference#retrieve">extended information</a>)</td>
+<td>An object with all the information of the record (even <a href="../../developer-guide/webservice-development/methodreference#retrieve">extended information</a>)</td>
 </tr>
 <tr>
 <td><strong>Examples:</strong></td>
@@ -839,7 +838,7 @@ call.
 </tr>
 <tr>
 <td><strong>Response:</strong></td>
-<td>An object with all the information of the record updated/created (even <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference#retrieve">extended information</a>)</td>
+<td>An object with all the information of the record updated/created (even <a href="../../developer-guide/webservice-development/methodreference#retrieve">extended information</a>)</td>
 </tr>
 <tr>
 <td><strong>Examples:</strong></td>
@@ -893,7 +892,7 @@ relations with a large set of records: **SetRelation** and
 </tr>
 <tr>
 <td><strong>Response:</strong></td>
-<td>An object with all the information of the record updated/created (even <a href="http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference#retrieve">extended information</a>)</td>
+<td>An object with all the information of the record updated/created (even <a href="../../developer-guide/webservice-development/methodreference#retrieve">extended information</a>)</td>
 </tr>
 <tr>
 <td><strong>Examples:</strong></td>
@@ -1041,7 +1040,7 @@ The object returned by this service contains:
     -   sequence – order of the fields in the application
     -   quickcreate – boolean value indicating if the field is present
         in quick create or not
-    -   [displaytype](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/field_structure)
+    -   [displaytype]( ../../04.development_framework/11.develtutorials/04.field_structure)
     -   summary – letter indicating if the field is present in the page
         header information
         -   T: should appear in title
@@ -1775,7 +1774,9 @@ will not be eliminated, so they can be used if you need them.
 
 <h2>Other Operations</h2>
 <h3>Search Global Variable</h3>
-<a href="http://localhost/coreBOSDocumentation/configuration-tools/global-variables">SearchGlobalVar</a>
+
+[SearchGlobalVar](../../../05.configuration-tools/04.global-variables)
+
 <h3>Translations</h3>
 
 <table class="table table-striped">
@@ -1899,6 +1900,6 @@ id]&amp;modifiedTime=[timestamp]&amp;elementType=[elementType]</code></td>
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/docenhance)| Chapter 6:Working with Documents and Images.
+[Next](../03.docenhance)| Chapter 6:Working with Documents and Images.
 
 ------------------------------------------------------------------------

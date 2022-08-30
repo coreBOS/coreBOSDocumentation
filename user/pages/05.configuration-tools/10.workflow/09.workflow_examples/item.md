@@ -50,7 +50,7 @@ The important parts here are the 3 day delay in sending and the additional condi
 
 The 4 day offset email is identical but with the 4 day numbers.
 
-The <a href="http://localhost/coreBOSDocumentation/configuration-tools/workflow/scheduled_workflows">scheduled workflow explanation has a nice image explaining</a> the "more than" condition.
+The [scheduled workflow explanation has a nice image explaining](../05.scheduled_workflows) the "more than" condition.
 
 The **second workflow** is a scheduled workflow that launches once a day looking for inactive tickets and closing them after sending and email. That will be two task, and **update field** task to change the status and an **email task** to send the email. This looks like this:
 
@@ -91,6 +91,6 @@ Para el caso de que se haya movido la fecha de ejecución no lo he pensado bien 
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/workflow_weekendwarning) | Chapter 12: How to send emails/sms on specific week days.
+[Next](../13.workflow_weekendwarning) | Chapter 12: How to send emails/sms on specific week days.
 
 ------------------------------------------------------------------------

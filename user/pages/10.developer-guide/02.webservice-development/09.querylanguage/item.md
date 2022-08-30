@@ -131,7 +131,7 @@ is rather limited as it doesn't support related entities nor parenthesis
 in the conditions.
 
 So we made a first enhancement based on **the
-[getRelatedRecords](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/getrelatedcontrols) work**. This
+[getRelatedRecords](../06.getrelatedcontrols) work**. This
 second syntax was created before we started the coreBOS project and was
 added as a base feature when it was born. You can read about this second
 syntax below and see it in use in our [Customer Portal
@@ -146,8 +146,7 @@ kept all the syntaxes together and detect dynamically which one to use
 for each query. This is a bit misleading sometimes.
 
 When a query is sent to the webservice query API it looks for the string
-"related.", if this string is found we apply the [Related Entity Query
-Syntax](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/querylanguage#related-entity-query-syntax),
+"related.", if this string is found we apply the [Related Entity Query Syntax](../09.querylanguage/item.md#related-entity-query-syntax),
 if the string is not found we look for "not in", "not null", "." or "(".
 None of these strings are supported by the query syntax inherited from
 vtiger CRM so we apply the Extended QueryGenerator syntax. Finally, we
@@ -161,8 +160,7 @@ Let's go over that again.
 
 -   All queries use the list type module name in the FROM and WHERE
     sections
--   [Related Entity Query
-    Syntax](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/querylanguage#related-entity-query-syntax)
+-   [Related Entity Query Syntax](../09.querylanguage/item.md#related-entity-query-syntax)
     is based on the getRelatedRecords web service endpoint, so anything
     you can do with the query language can be done with this endpoint.
     The reverse is not true as the getRelatedRecords method has some
@@ -319,10 +317,8 @@ QueryGenerator syntax:
 The **second** is that the original query parser will automatically add
 the "limit 100" to the query while the QueryGenerator will not do this.
 
-You can find a whole set of examples in the [coreBOS Web Service
-Developer Tool](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/coreboswsbrowser) and the
-[webservice query unit tests
-suite](https://github.com/tsolucio/coreBOSTests/blob/master/include/Webservices/VtigerModuleOperation_QueryTest.php).
+You can find a whole set of examples in the [coreBOS Web Service Developer Tool](../02.coreboswsbrowser) and the
+[webservice query unit tests suite](https://github.com/tsolucio/coreBOSTests/blob/master/include/Webservices/VtigerModuleOperation_QueryTest.php).
 
 Query return limit
 ------------------
@@ -361,7 +357,7 @@ Related Entity Query Syntax
 
 [plugin:youtube](https://www.youtube.com/watch?v=5B0A6IPMnJM)
 Constructing on top of the
-[getRelatedRecords](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/getrelatedcontrols) function we
+[getRelatedRecords](../06.getrelatedcontrols) function we
 have extended the REST query syntax to benefit from that functionality,
 making it easy to query related entities and filter them also.
 
@@ -455,7 +451,7 @@ service API is rather easy. The main trick to keep in mind is that GET
 requests parameters go in the PARAMS tab and POST requests parameters go
 in the BODY tab.
 
-The [Login is a two-step process](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/login) so we have
+The [Login is a two-step process](../07.login) so we have
 to create two requests and manually calculate the access token MD5.
 
 Here you can see the Challenge setup:
@@ -474,6 +470,6 @@ And here you can see a quick demo of how to do it:
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference)| Chapter 5:Method Reference.
+[Next](../08.methodreference)| Chapter 5:Method Reference.
 
 ------------------------------------------------------------------------

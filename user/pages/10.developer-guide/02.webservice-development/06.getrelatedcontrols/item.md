@@ -281,7 +281,7 @@ very powerful and flexible.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/convertleadwebservice)| Chapter 12: Convert Lead Webservice.
+[Next](../01.convertleadwebservice)| Chapter 12: Convert Lead Webservice.
 
 ------------------------------------------------------------------------
 

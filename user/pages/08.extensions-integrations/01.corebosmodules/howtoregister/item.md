@@ -77,7 +77,7 @@ This information will be recorded on the registration page so it can be searched
 
 **json2data.php**
 
-If you have created a module or extension following the new perspective install format and it has a [composer.json file with the supported fields](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/packagemodules#1-file-structure) you can use [the coreBOS documentation HelperScript json2data.php](https://github.com/tsolucio/corebos/blob/master/build/HelperScripts/json2data.php) to transform the composer.json file directly into the dokuwiki dataentry format above.
+If you have created a module or extension following the new perspective install format and it has a [composer.json file with the supported fields](../../../10.developer-guide/04.development_framework/11.develtutorials/05.packagemodules/item.md#1--file-structure) you can use [the coreBOS documentation HelperScript json2data.php]( https://github.com/tsolucio/corebos/blob/master/build/HelperScripts/json2data.php) to transform the composer.json file directly into the dokuwiki dataentry format above.
 
 **module2wiki.php**
 

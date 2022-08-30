@@ -133,7 +133,7 @@ mandatory, but all recommended:
 <tr class="odd">
 <td><strong>perspective</td>
 <td>optional</td>
-<td>True if the changeset is a <a href="http://localhost/coreBOSDocumentation/developer-guide/development%20framework/corebosupdater#corebos_updatercorebos_perspectives">perspective (see below)</a></td>
+<td>True if the changeset is a <a href="../../../developer-guide/development_framework/develtutorials/corebosupdater#corebos_updatercorebos_perspectives">perspective (see below)</a></td>
 </tr>
 <tr class="even">
 <td><strong>continuous</td>
@@ -461,7 +461,7 @@ convert a stock coreBOS system into a verticalization prepared for a
 clearly defined market segment.
 
 The other big step upon which the perspective concept stands is the
-[code structure and packaging system](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/packagemodules). Since
+[code structure and packaging system](../05.packagemodules). Since
 we have laid out the code in such a way that we do not need to update
 packages and all the code is simply there, in place, ready to be
 modified we can easily define a perspective as:
@@ -489,7 +489,7 @@ changesets as required. These changeset records will be marked as
 them.
 
 The other type of changesets are the ones you can create as any other
-record in the application. These "manual" changesets support a very
+record in the application. These "manual" changesets supprt a very
 restricted set of actions but can turn out to be very useful to
 customize a coreBOS install for your users in certain cases.
 

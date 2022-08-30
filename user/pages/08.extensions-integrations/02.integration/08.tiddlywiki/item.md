@@ -44,8 +44,7 @@ whole file every time you click on the Save button.
 All that is left to do is make sure that you make backups of that
 directory.
 
-Another option is to use the [coreBOS native WebDAV
-integration](http://localhost/coreBOSDocumentation/extensions-integrations/integration/webdav). This functionality will enable
+Another option is to use the [coreBOS native WebDAV integration](../10.webdav). This functionality will enable
 WebDAV access to the Document module. So you will be able to upload your
 TiddlyWiki file to a Document record in coreBOS and then access this
 document through the WebDAV browser UI. Once you click on the TiddlyWiki
@@ -68,12 +67,11 @@ We have created a plugin for TiddlyWiki that you can install like all
 the other plugins.
 
 This plugin will permit you to log in to your coreBOS. Once you are
-logged in, the plugin will access your existing wiki entries from the
-[Conversation module](http://localhost/coreBOSDocumentation/others/registered_modules_extensions_plugins/conversations) and load
+logged in, the plugin will access your existing wiki entries from the  [Conversation module](../../../08.extensions-integrations/01.corebosmodules/conversations) 
+and load
 them into the TiddlyWiki instance as if they had been saved in the file.
 From that point on, the wiki entries you create or modify will be saved
-back in the [Conversation
-module](http://localhost/coreBOSDocumentation/others/registered_modules_extensions_plugins/conversations).
+back in the [Conversation module](../../../08.extensions-integrations/01.corebosmodules/conversation).
 
 ### Comparision and Comments
 
@@ -87,6 +85,6 @@ also.
 
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/extensions-integrations/integration/typeform) | Chapter 9: Typeform Configuration
+[Next](../09.typeform) | Chapter 9: Typeform Configuration
 
 ------------------------------------------------------------------------

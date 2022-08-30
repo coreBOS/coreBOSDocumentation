@@ -23,7 +23,7 @@ taxonomy:
 ## Google Synchronization
 
 You can view or synchronize your Google events with your coreBOS events
-using the Calendar. Firstly you have to [set up your Googleaccount/credentials](http://localhost/coreBOSDocumentation/extensions-integrations/calendar-google/calendar_google_integration#configuring-your-connection-with-google-calendar).
+using the Calendar. Firstly you have to [set up your Googleaccount/credentials](item.md#configuring-your-connection-with-google-calendar).
 
 -   In case you have more calendars within your Google account, please
     select the calendar which you would like to use. Please note that
@@ -69,8 +69,7 @@ one. I see in calendar settings that "Google is connected" for my user
 name. Is this why my task list is picking up everything from my Google
 calendar?</h2>
 
-Have a <a href="http://localhost/coreBOSDocumentation/others/calendar_google_separating_events">read at this page </a>
-for some indications. </div>
+Have a  [read at this page](../02.calendar_google_separating_events) for some indications. 
 
 ## Setup calendar event synchronization
 

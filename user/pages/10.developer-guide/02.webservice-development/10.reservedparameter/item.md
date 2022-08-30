@@ -30,7 +30,7 @@ parameter is used for this sole purpose. </div>
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/faq)| Chapter 19: Frequently Asked Questions.
+[Next](../04.faq)| Chapter 19: Frequently Asked Questions.
 
 
 ------------------------------------------------------------------------

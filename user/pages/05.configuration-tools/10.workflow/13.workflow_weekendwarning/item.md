@@ -79,8 +79,7 @@ saved/modified.
 
 
 We have to create a new workflow which will send the emails when the
-conditions we want are completed. If you are new to workflows, [please
-check this link](http://localhost/coreBOSDocumentation/configuration-tools/workflow/workflow_stepbystep).
+conditions we want are completed. If you are new to workflows, [please check this link](../11.workflow_stepbystep).
 
 Our workflow will consist of **2 tasks**.
 
@@ -167,6 +166,6 @@ Click Save and give it a try.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/workflow/workflow_tricksandtips) | Chapter 13:Workflow Tricks and Tips.
+[Next](../12.workflow_tricksandtips) | Chapter 13:Workflow Tricks and Tips.
 
 ------------------------------------------------------------------------

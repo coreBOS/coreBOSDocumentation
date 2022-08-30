@@ -43,6 +43,6 @@ method.
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/field_set) | Chapter 9: Field Set Mapping.
+[Next](../10.field_set) | Chapter 9: Field Set Mapping.
 
 ------------------------------------------------------------------------

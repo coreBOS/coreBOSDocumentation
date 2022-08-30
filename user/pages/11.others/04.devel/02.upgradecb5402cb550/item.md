@@ -51,7 +51,7 @@ unzip -o corebos54_to_corebos55.zip
 <div class="notices blue">
 <strong>PLEASE</strong>, make sure your code base is totally clean, this step will overwrite your files and any change they may contain. Although you may not have done any changes to the files you know of, some extensions in the market do this and require those changes. If you have any code change at all, or some extension already installed that modify base files, use the patch upgrade procedure detailed below. If you are in doubt, <a href="http://discussions.corebos.org/">ask in the forum.</a></div>
 
-6.  **execute the database changes**, this is done using the [coreBOS Updater](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/corebosupdater), which is a module that will take care of managing all the updates from now on. It will read the set of changes that need to be done and will permit you to apply them and undo some of them. In this first release of the module we must install it.<br>
+6.  **execute the database changes**, this is done using the [coreBOS Updater](../../../10.developer-guide/04.development_framework/11.develtutorials/08.corebosupdater), which is a module that will take care of managing all the updates from now on. It will read the set of changes that need to be done and will permit you to apply them and undo some of them. In this first release of the module we must install it.<br>
 a. Go to your browser<br>
 b. login to your coreBOS 5.4 <br>
 c. edit the URL box and eliminate all the text starting from index.php <br>
@@ -102,7 +102,7 @@ git apply --reject corebos54_to_corebos55.patch
 The <i>git apply</i> command will give some errors and warnings. This is normal because in this release we are changing the distribution method of modules and extensions, now we have them all laid out in the code instead of packed in .zip files. This requires us to put all the files in place and we do this for all files, many of which you already have in place and those do not get overwritten, thus the error/warnings. What you do have to pay attention to is any message of <strong>REJECT</strong>, those are indicating a problem you need to attend.
 </div>
 
-6. **execute the database changes**, this is done using the [coreBOS Updater](http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/corebosupdater), which is a module that will take care of managing all the updates from now on. It will read the set of changes that need to be done and will permit you to apply them and undo some of them. In this first release of the module we must install it.<br>
+6. **execute the database changes**, this is done using the [coreBOS Updater](../../../10.developer-guide/04.development_framework/11.develtutorials/08.corebosupdater), which is a module that will take care of managing all the updates from now on. It will read the set of changes that need to be done and will permit you to apply them and undo some of them. In this first release of the module we must install it.<br>
 a. Go to your browser<br>
 b. login to your coreBOS 5.4<br>
 c. edit the URL box and eliminate all the text starting from index.php<br>

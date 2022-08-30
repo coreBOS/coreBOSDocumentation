@@ -63,7 +63,7 @@ negative case of {ifexists…}
     -   negative case of **{foreach…}**
 -   **{foreach entity [field1 op value1 && field2 op value2 || field3 op value3]}…{/foreach}**
     -   advanced conditions on fields with fields and operations (=,>,<,>=,<=,!=) and limited logical connectors || (or) and && (and)
--  **iteration**: inside the {foreach} blocks you can reference a special variable called {iteration} whose value will be that of the current loop iteration. This can be useful to enumerate the elements or to print conditional text based on the iteration. See [Examples](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//gendoc/gendocejemplos/id:5437d86d807c4e3578f4f96ac8331fe5/store:configuration).
+-  **iteration**: inside the {foreach} blocks you can reference a special variable called {iteration} whose value will be that of the current loop iteration. This can be useful to enumerate the elements or to print conditional text based on the iteration. See [Examples](../02.gendocejemplos).
 -   **{include Document_Num}**
     -   With this instruction, we can include any document saved in the coreBOS document module inside the main document. For example, if we have a document with reference number DOC699, we can put at the beginning of a new paragraph {include DOC699} in the position where we wish to insert the document. During the merging process, all the contents in DOC699 will be inserted in the position where the {include} directive is and the directive will be eliminated.
     -   You can use any other directive within the included document, following the same rules as any other document
@@ -183,6 +183,6 @@ and this would be the correct day of the week: {date:l}
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store/gendoc/elemnosoportados)| Chapter 3: Documentation Generation::Non Supported Elements
+[Next](../01.elemnosoportados)| Chapter 3: Documentation Generation::Non Supported Elements
 
 ------------------------------------------------------------------------

@@ -253,6 +253,6 @@ or like this for a multioptional autocomplete field:
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/business-maps/record_access_control) | Chapter 5: Record Access Control.
+[Next](../22.record_access_control) | Chapter 5: Record Access Control.
 
 ------------------------------------------------------------------------

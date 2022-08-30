@@ -27,7 +27,7 @@ Issue Reference in Tracker: ~issue:127~
 [plugin:youtube](https://youtu.be/5B0A6IPMnJM)
 
 
-Constructing on top of the [getRelatedRecords](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/getrelatedcontrols) function we have extended the REST query syntax to benefit from that functionality, making it easy to query related entities and filter them also.
+Constructing on top of the [getRelatedRecords](../../../../../../10.developer-guide/02.webservice-development/06.getrelatedcontrols) function we have extended the REST query syntax to benefit from that functionality, making it easy to query related entities and filter them also.
 
 The new syntax enhances the where conditional statement to support module names preceded with the *"related"* string and followed by the id of the entity:
 ```

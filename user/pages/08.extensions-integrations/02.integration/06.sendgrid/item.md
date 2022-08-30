@@ -21,8 +21,7 @@ taxonomy:
 ---
 coreBOS can use [SendGrid](https://sendgrid.com/) to send emails.
 
-coreBOS has an abstraction layer for sending emails, [which you can read
-about here](http://localhost/coreBOSDocumentation/developer-guide/architecture-concepts/sendemailservice). Using this layer we have
+coreBOS has an abstraction layer for sending emails, [which you can read about here](../../../10.developer-guide/04.development_framework/11.develtutorials/33.sendemailservice). Using this layer we have
 implemented a driver to send all emails in the system through **SendGrid**.
 
 In my opinion, the biggest advantage is the direct feedback SendGrid
@@ -223,6 +222,6 @@ to see the Sender Identity requirements
 
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/extensions-integrations/integration/surveys) | Chapter 7: Surveys
+[Next](../07.surveys) | Chapter 7: Surveys
 
 ------------------------------------------------------------------------

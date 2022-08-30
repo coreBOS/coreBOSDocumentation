@@ -193,7 +193,7 @@ Summary of Action link types
 </tr>
 <tr class="odd">
 <td>DETAILVIEWWIDGET</td>
-<td>Small widget block section at the bottom of the right action panel on detail view. Look at the Timecontrol stopwatch for an example. It can also be a <a href="http://localhost/coreBOSDocumentation/developer-guide/development_framework/develtutorials/add_special_block">full fledged block inserted into the existing field blocks</a></td>
+<td>Small widget block section at the bottom of the right action panel on detail view. Look at the Timecontrol stopwatch for an example. It can also be a <a href="../../../developer-guide/development_framework/develtutorials/add_special_block">full fledged block inserted into the existing field blocks</a></td>
 </tr>
 <tr class="even">
 <td>HEADERSCRIPT</td>
@@ -213,4 +213,4 @@ Summary of Action link types
 Business Actions
 ----------------
 
-[Read about the Business Actions module for an easy way to add links without coding](http://localhost/coreBOSDocumentation/configuration-tools/business-actions)
+[Read about the Business Actions module for an easy way to add links without coding](../../../../05.configuration-tools/03.business-actions)

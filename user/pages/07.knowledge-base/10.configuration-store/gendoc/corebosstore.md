@@ -34,22 +34,22 @@ Documentation.
 compare it with [this validation merge.](gendocdocumentation.pdf)
 
 
--   [How To Use](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//gendoc/howto/id:62a2382e72015e66c971f7c5aff878ed/store:configuration)
--   [Template Grammar](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store/gendoc/gramatica)
--   [Non Supported Elements](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store/gendoc/elemnosoportados)
--   [Examples](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//gendoc/gendocejemplos/id:5437d86d807c4e3578f4f96ac8331fe5/store:configuration)
--   [Tips and Tricks](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//gendoc/gendoctips/id:1bd28598d97da6e2054ed765bc34c2bf/store:configuration)
+-   [How To Use](./05.howto)
+-   [Template Grammar](./04.gramatica)
+-   [Non Supported Elements](./01.elemnosoportados)
+-   [Examples](./02.gendocejemplos)
+-   [Tips and Tricks](./03.gendoctips)
 
 Template Store.
 ===============
 
-[Browse the template store](http://localhost/coreBOSDocumentation/knowledge-base/gendoc-templates) for examples and
+[Browse the template store](../../05.gendoc-templates) for examples and
 useful templates that will give you a head start.
 
 
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/knowledge-base/configuration-store//gendoc/howto/id:62a2382e72015e66c971f7c5aff878ed/store:configuration)| Chapter 1: Documentation Generation::How to Use
+[Next](/knowledge-base/configuration-store//gendoc/howto/id:62a2382e72015e66c971f7c5aff878ed/store:configuration)| Chapter 1: Documentation Generation::How to Use
 
 ------------------------------------------------------------------------

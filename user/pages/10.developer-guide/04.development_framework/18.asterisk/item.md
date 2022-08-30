@@ -57,7 +57,7 @@ Now you should see the asterisk popup notification in the application.
 Other Things
 ------------
 
-[Vtiger + popup + llamada entrante + cola](http://localhost/coreBOSDocumentation/developer-guide/development%20framework/llamadaentrantecola)
+[Vtiger + popup + llamada entrante + cola](../02.llamadaentrantecola)
 
 FAQ
 ---

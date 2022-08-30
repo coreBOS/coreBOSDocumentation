@@ -146,8 +146,7 @@ working with. For those of us who know coreBOS internals, this is NOT
 the module's tabid. You would think that would have been the correct
 number to use, but for some reason, web service generates an independent
 unique identifier for each module, and that is the number that must be
-used here. You can get this number from the [Describe REST
-service](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/methodreference#describe).
+used here. You can get this number from the [Describe REST service](../../08.methodreference).
 
 The second number is the exact record identifier. This number identifies
 uniquely the record we want to access, for example, this number
@@ -159,6 +158,6 @@ any other. Internally this is the crmid of the record
 <br>
 ------------------------------------------------------------------------
 
-[Next](http://localhost/coreBOSDocumentation/configuration-tools/webservice-development/manual/ops) | Chapter 2: Operations.
+[Next](../08.ops) | Chapter 2: Operations.
 
 ------------------------------------------------------------------------
