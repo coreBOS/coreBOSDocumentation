@@ -3,8 +3,7 @@ title: 'coreBOS Custom Permission Hooks'
 ---
 ---
 
-
-What is it for?
+## What is it for?
 ---------------
 
 The coreBOS custom permission hooks serve the purpose of modifying the
@@ -13,18 +12,17 @@ will be able to completely override the existing permission decision or
 construct upon them to enhance the decision of showing or editing a set
 of records without having to modify the base code to do it.
 
-&lt;WRAP center round alert 70%&gt; You will need to learn and
-understand how the current permission system works to be able to modify
-it! &lt;/WRAP&gt;
+<div class="alert-danger">You will need to learn and understand how the current permission system works to be able to modify
+it!</div>
 
-Why not use Record Access Control?
-----------------------------------
+<br>
+
+## Why not use Record Access Control?
 
 coreBOS has a powerful configuration option through Business Mappings.
 Using these we can configure many parts of the application to adapt them
 to the exact requirements of each implementation. One of these options
-is [Record Access
-Control](/en/adminmanual/businessmappings#record_access_control). With
+is [Record Access Control](../../../05.configuration-tools/02.business-maps/22.record_access_control/item.md). With
 this very powerful mapping, we can hide/show create, retrieve, edit and
 delete actions using advanced conditions based on the record upon which
 the action should take place.

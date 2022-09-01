@@ -18,10 +18,9 @@ taxonomy:
     tag:
         - issue
 ---
----
-Issue Reference in Tracker: ~issue:120~
 
 ### Detailed Explanation
+
 ## Speed optimizations. Profiling.
 
 From the very beginning of the coreBOSCP project speed was an enormous problem, to the point where even the normal code-test-debug process was impractical. So our first optimization was to enable yii cache and use it to avoid calls to the REST interface. This was a pure gut feeling that turned out to make a big difference and make the development process acceptable. Once we had the basic functionality in place it was time to go further into profiling and speed optimizations to see if we could get it working faster: in came xdebug profiling
@@ -33,6 +32,7 @@ The first profiles confirmed our intuition as can be seen in the next images:
 The most time consuming process is the call to coreBOS REST API using php_curl functions. After that, the next 5 consuming functions are all inside coreBOS, basically retrieving information. This is totally consistent and expected, after all, coreBOS is doing all the work, coreBOSCP is "just" a front end.
 
 So my first step is to try to optimize the cURL call directly. I setup xdebug trace on send_post_data and get this:
+
 ```
 TRACE START [2012-06-30 09:52:35]
    14.0689   12540840     -> curl_setopt() protected/components/vtwsclib/third-party/curl_http_client.php:154
@@ -197,9 +197,10 @@ That did give me some more information and a few more hours of learning and test
 
 This called my attention to a few things. First the big difference between the majority of the calls and the gettranslation method. I looked at the gettranslation call and saw that this method simply does a few lookups in some files and arrays. No database access nor complex conditions, nor including of many files. So it isn't a question optimizing on the portal side but on the coreBOS side.
 
-The other thing that caught my attention was how many login request were being made. After studying the code a bit I realized that Yii creates an object for each entity it retrieves from coreBOS and the way we have created the connection, each of these objects has their own connection. So this is something we will have to change to make it go a bit faster, but it will not make a significant change as we are already doing this indirectly. In our first optimization we activated Yii file level cache and cache the connection, so, although each object has their own connection object, in the end all these objects are all using the same connection. **Note: I am profiling with the cache deactivated**. This is the bug report for this change: ~issue:48~
+The other thing that caught my attention was how many login request were being made. After studying the code a bit I realized that Yii creates an object for each entity it retrieves from coreBOS and the way we have created the connection, each of these objects has their own connection. So this is something we will have to change to make it go a bit faster, but it will not make a significant change as we are already doing this indirectly. In our first optimization we activated Yii file level cache and cache the connection, so, although each object has their own connection object, in the end all these objects are all using the same connection. **Note: I am profiling with the cache deactivated**.
 
 My next step was to have a look at the to_html() function inside coreBOS as it was next on the profile list. As can be seen by the profile, 69232 calls to is_string() which consume 0.11 seconds are made. There is little to be done here.
+
 ![](coreboscp_profile004.png?width=100%)
 
 The next consumer is strtolower on $default_charset. This can be squeezed a bit. Simply by standarizing the $default_charset variable contents we can completely avoid this function. This is the necessary change:

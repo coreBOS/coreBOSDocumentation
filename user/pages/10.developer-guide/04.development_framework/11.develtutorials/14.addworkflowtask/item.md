@@ -114,4 +114,3 @@ a certain module being installed or not.
         name for it to be saved automatically
 
 [You can see a full example of how we add a new workflow task to add and delete Tags](https://github.com/tsolucio/corebos/commit/ee0ef68abec95ffbd45dc382096cb7372645f0e2)
-~issue:205~

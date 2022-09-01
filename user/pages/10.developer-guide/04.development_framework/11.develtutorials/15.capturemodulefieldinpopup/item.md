@@ -20,28 +20,24 @@ taxonomy:
         - howto
         - capture
 ---
----
-<div class="notices red">
-This article is obsolete! As of
-December 2014 we have a hook to make this easy without the need of
-modifying any base application code.
 
-[Read all about it on the Hooks wiki page!](../20.corebos_hooks) .
-</div>
+<div class="notices red">This article is obsolete! As of December 2014 we have a hook to make this easy without the need of modifying any base application code.</div>
 
-In vtiger CRM 5.x and coreBOS code prior to December 2014, this task is
-still cumbersome and requires code modifications.
+[Read all about it on the Hooks wiki page!](../20.corebos_hooks).
+
+
+In vtiger CRM 5.x and coreBOS code prior to December 2014, this task is still cumbersome and requires code modifications.
 
 This page describes the process by documenting the answer given by
-srhtech in the vtiger CRM forum thread [Quote information mapping when adding orginzation](https://discussions.vtiger.com//discussion/172541/quote-information-mapping-when-adding-orginzation).
+srhtech in the vtiger CRM forum thread [Quote information mapping when adding organization](https://discussions.vtiger.com//discussion/172541/quote-information-mapping-when-adding-orginzation).
 
 You have to edit *include/utils/ListViewUtils.php* which is in charge of
 creating the list so the links have more information, then you have to
 modify the javascript to use those new fields and fill in the fields.
 That is in the modules' javascript file.
 
-I went to the *include/utils/ListViewUtils.php* file and edited the
-following between 1957 and 2017
+I went to the *include/utils/ListViewUtils.php* file and edited the following between 1957 and 2017
+
 ```php
 elseif ($popuptype == "specific_account_address") {
 require_once('modules/Accounts/Accounts.php');
@@ -115,8 +111,8 @@ to include the custom field, and then add
 
 to send the data to the javascript function.
 
-Then I edited the *modules/Accounts/Accounts.js* and added the following
-at line 103
+Then I edited the *modules/Accounts/Accounts.js* and added the following at line 103
+
 ```
 if(typeof(window.opener.document.EditView.cf_821) != 'undefined')
 window.opener.document.EditView.cf_821.value = cf_709;

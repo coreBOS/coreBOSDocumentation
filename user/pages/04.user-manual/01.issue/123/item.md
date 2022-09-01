@@ -18,8 +18,6 @@ taxonomy:
     tag:
         - issue
 ---
----
-Issue Reference in Tracker: ~issue:123~
 
 ### Detailed Explanation
 

@@ -20,32 +20,23 @@ taxonomy:
 
 ---
 
-This extension permits creating advanced templates using
-[OpenOffice](https://www.openoffice.org/) or [Libre
-Office](https://www.libreoffice.org) which can easily be merged with
-fields in the coreBOS application and then converted to PDF or used as
-working documents in the word processor.  
-
-  
+This extension permits creating advanced templates using [OpenOffice](https://www.openoffice.org/) or [Libre Office](https://www.libreoffice.org) which can easily be merged with fields in the coreBOS application and then converted to PDF or used as working documents in the word processor.
 
 Documentation.
 ==============
-[Have a look at the Documentation Template ](gendocdocumentation.odt) and
-compare it with [this validation merge.](gendocdocumentation.pdf)
 
+[Have a look at the Documentation Template ](gendocdocumentation.odt) and compare it with [this validation merge.](gendocdocumentation.pdf)
 
--   [How To Use](./05.howto)
--   [Template Grammar](./04.gramatica)
--   [Non Supported Elements](./01.elemnosoportados)
--   [Examples](./02.gendocejemplos)
--   [Tips and Tricks](./03.gendoctips)
+- [How To Use](./05.howto)
+- [Template Grammar](./04.gramatica)
+- [Non Supported Elements](./01.elemnosoportados)
+- [Examples](./02.gendocejemplos)
+- [Tips and Tricks](./03.gendoctips)
 
 Template Store.
 ===============
 
-[Browse the template store](../../05.gendoc-templates) for examples and
-useful templates that will give you a head start.
-
+[Browse the template store](../../05.gendoc-templates) for examples and useful templates that will give you a head start.
 
 <br>
 ------------------------------------------------------------------------

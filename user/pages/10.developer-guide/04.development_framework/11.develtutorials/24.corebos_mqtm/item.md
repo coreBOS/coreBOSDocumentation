@@ -20,9 +20,8 @@ taxonomy:
         - message
         - queue
 ---
----
-Following the marvelous work of [Martin Fowler](https://martinfowler.com/) in his book about [Enterprise Integration Patterns](https://martinfowler.com/books/eip.html) we have
-added a native Message Queue and Task Manager to coreBOS.
+
+Following the marvelous work of [Martin Fowler](https://martinfowler.com/) in his book about [Enterprise Integration Patterns](https://martinfowler.com/books/eip.html) we have added a native Message Queue and Task Manager to coreBOS.
 
 ===
 
@@ -35,8 +34,7 @@ Let's see how this works.
 
 ## Message Queue
 
-coreBOS [has an abstract class](https://github.com/tsolucio/corebos/blob/master/include/cbmqtm/cbmqtm_manager.php) which defines the interface to work with the message queue. The methods
-are:
+coreBOS [has an abstract class](https://github.com/tsolucio/corebos/blob/master/include/cbmqtm/cbmqtm_manager.php) which defines the interface to work with the message queue. The methods are:
 
 - sendMessage
 - getMessage
@@ -47,7 +45,7 @@ are:
 
 So we need to implement a real class that instantiates these methods in order for the Message Queue to work.
 
-We also have a message queue loader process. This process will look up two variables in the [coreBOS settings](../23.corebos_setting/item.md) store:
+We also have a message queue loader process. This process will look up two variables in the [coreBOS settings](../25.corebos_setting/item.md) store:
 
 - file
 - class
@@ -62,10 +60,7 @@ With this setup we can program using the **corebos_mq object**, sending and rece
 - [NATS.io – Cloud Native, Open Source, High-performance Messaging](https://nats.io/)
 - or simply to a database table.
 
-By default, **coreBOS has a native Message Queue** implemented in the
-database. We did it this way because it would just work on all existing
-installs, but, as I describe above, you could implement more advanced
-and robust solutions easily.
+By default, **coreBOS has a native Message Queue** implemented in the database. We did it this way because it would just work on all existing installs, but, as I describe above, you could implement more advanced and robust solutions easily.
 
 Let's explain how coreBOS implements the Message Queue in the database.
 

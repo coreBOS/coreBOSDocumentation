@@ -21,7 +21,7 @@ taxonomy:
         - log
 ---
 ---
-While working on issue ~~issue:118~~ I ran into [this email](http://permalink.gmane.org/gmane.comp.web.vtigercrm.devel/5131)
+While working on coreBOS I ran into [this email](http://permalink.gmane.org/gmane.comp.web.vtigercrm.devel/5131)
 (which was ignored on the developers list) from Adam Heinz:
 
 I reproduce it here as a reference:

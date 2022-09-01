@@ -18,10 +18,9 @@ taxonomy:
     tag:
         - issue
 ---
----
-Issue Reference in Tracker: ~issue:127~
 
 ## Detailed Explanation
+
 ### Related Entity Query Syntax
 
 [plugin:youtube](https://youtu.be/5B0A6IPMnJM)

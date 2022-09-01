@@ -18,26 +18,20 @@ taxonomy:
     tag:
         - rte
 ---
----
--   set the Global Variable **Application\_Use\_RTE** to 1 for the
-    module, which is it's default value
--   create an [Extended Field Information Mapping](../../../../05.configuration-tools/02.business-maps/28.extendedfieldinfo) declaring the
-    fields you want to have RTE activated
--   enjoy!
+
+- set the Global Variable **Application\_Use\_RTE** to 1 for the  module, which is it's default value
+- create an [Extended Field Information Mapping](../../../../05.configuration-tools/02.business-maps/28.extendedfieldinfo) declaring the fields you want to have RTE activated
+- enjoy!
 
 ------------------------------------------------------------------------
 
 ------------------------------------------------------------------------
 
-<div class="notices red">
-THE PATCH BELOW IS NOT NECESSARY
-ANYMORE!
+<div class="notices red">THE PATCH BELOW IS NOT NECESSARY ANYMORE!</div>
 
-It has been made obsolete by the [Extended Field Information Mapping](../../../../05.configuration-tools/02.business-maps/28.extendedfieldinfo) where you can
-establish which textarea fields in which modules you want to edit with
-RTE.
+It has been made obsolete by the [Extended Field Information Mapping](../../../../05.configuration-tools/02.business-maps/28.extendedfieldinfo) where you can establish which textarea fields in which modules you want to edit with RTE.
 
-We leave the patch here as a historical reference.</div>
+We leave the patch here as a historical reference.
 
 ------------------------------------------------------------------------
 
@@ -46,7 +40,7 @@ We leave the patch here as a historical reference.</div>
 How to activate RTE on a module
 ===============================
 
--   Activate RTE feature in [Config Editor](/en/adminmanual/configeditor)
+-   Activate RTE feature in Config Editor
 -   modify template to add support for the module you want. If the
     module has more than one field with this feature you have to also
     add a block of code to launch CKEditor on the field
@@ -55,7 +49,7 @@ How to activate RTE on a module
 -   modify the detail view of the fields to process and show HTML
     symbols
 
-![This next patch does this for HelpDesk (Trouble Tickets)](/devel/patches/helpdeskrte.diff)
+This next patch does this for HelpDesk (Trouble Tickets)
 
 ```php
     diff --git a/Smarty/templates/salesEditView.tpl b/Smarty/templates/salesEditView.tpl

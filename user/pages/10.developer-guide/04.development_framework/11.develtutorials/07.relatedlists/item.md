@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - howto
 ---
----
+
 the TLDR; version is
 
 -   Relate with Documents &gt; get\_attachments
@@ -28,6 +28,8 @@ the TLDR; version is
 -   Is custom relation &gt; whatever function you have implemented
 -   1:m &gt; get\_dependents\_list
 -   m:m &gt; get\_related\_list
+
+===
 
 How to associate Standard Modules such as Accounts, Potentials & Vendors to a New module (Payslip) with m:m relation
 --------------------------------------------------------------------------------------------------------------------
@@ -189,18 +191,13 @@ Similar to the above solution in this case you must use the already
 existing coreBOS functions to achieve an event history.
 
 Create a new related block:
+
 ```php
     setRelatedList('Calendar', 'Activity History', 'add', 'get_history')
 ```
 Now copy the get\_history function from Accounts.php (for example) and
 adapt accordingly (normally just change Accounts for your module)
 
-Step by Step example in forum
------------------------------
-
-[Ejemplo Contactos-Comentarios](http://crmevolutivo.com/forum/viewtopic.php?f=4&t=2134)
-
-Thanks Agamenon
 
 Adding a related list to an existing module without modifying it's code
 -----------------------------------------------------------------------

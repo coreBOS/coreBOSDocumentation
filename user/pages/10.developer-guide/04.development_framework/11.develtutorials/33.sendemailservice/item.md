@@ -20,32 +20,22 @@ taxonomy:
         - howto
         - email
 ---
----
-coreBOS has an abstraction layer for sending emails, instead of always
-sending with phpmailer, now we can define a class to send as we want.
-This allows us to integrate with other email delivery systems such as
-sendgrid or mailchimp without having to modify the code of the
-application.
 
-In [this blog post](http://blog.corebos.org/blog/emailapisendgrid) you
-can get a general idea of the implications and next we will see how to
-implement a class of sending emails by studying the sendgrid integration
-code
+coreBOS has an abstraction layer for sending emails, instead of always sending with phpmailer, now we can define a class to send as we want. This allows us to integrate with other email delivery systems such as sendgrid or mailchimp without having to modify the code of the application.
+
+In [this blog post](http://blog.corebos.org/blog/emailapisendgrid) you can get a general idea of the implications and next we will see how to implement a class of sending emails by studying the sendgrid integration code
 
 The steps to implement an email sending system are
 
--   implement a class with at least 3 static methods
--   implement an event handler that returns the path and the name of the
-    class
--   register the handler
+- implement a class with at least 3 static methods
+- implement an event handler that returns the path and the name of the class
+- register the handler
 
 the class must implement these three methods
 
--   public static function useEmailHook()
--   public static function emailServerCheck()
--   public static function sendEMail(
-    $to\_email,$from\_name,$from\_email,$subject,$contents,$cc,$bcc,$attachment,
-    $emailid,$logo,$replyto,$qrScan)
+- public static function useEmailHook()
+- public static function emailServerCheck()
+- public static function sendEMail($to_email, $from_name, $from_email, $subject, $contents, $cc, $bcc, $attachment, $emailid, $logo, $replyto, $qrScan)
 
 the **useEmailHook** method returns a true or false value depending on
 whether the service is active or not. This allows us to implement a
@@ -58,8 +48,7 @@ use the default email delivery system
 
 The method **sendEMail** is the one that actually does the work of
 sending the email. It receives all the information it needs to do that.
-You can [read a little about the parameters in this blog post](http://blog.corebos.org/blog/SendEmail). This method must return 1
-on ok, any other value is error
+You can [read a little about the parameters in this blog post](http://blog.corebos.org/blog/sendemail). This method must return 1 on ok, any other value is error
 
 Let's talk a little bit about these methods in our sendgrid
 implementation. These are the methods

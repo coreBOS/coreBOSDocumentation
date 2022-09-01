@@ -111,7 +111,7 @@ to see how coreBOS creates the JSON object and use that. </div>
 
 Now that we know what we have to do, [let's see some examples](../../../03.architecture-concepts/76.popup_open_hook).
 
-Native relmod\_id Method
+Native relmod_id Method
 ------------------------
 
 Before we had the search and open popup hook the application used a
@@ -126,15 +126,12 @@ can adapt your query based on the two variables for your modules also.
 
 The two variables are
 
--   **relmod\_id** is the record id we must restrict the records to
--   **parent\_module** is the module of the relmod\_id record
+- **relmod_id** is the record id we must restrict the records to
+- **parent_module** is the module of the relmod_id record
 
 So you could open a popup passing in these variables and then detect
 them in your getQueryByModuleField method to adapt the popup query
 accordingly.
 
-<div class="notices blue"> vtlib\_open\_popup\_window permits
-you to attach more parameters to the open window URL by adding them in
-the last ID parameter. You can see an example of all of this being used
-<a href="https://github.com/tsolucio/corebos/commit/967d27401be62cf7892436fe1a4ca7a84b35884a"> <strong>in this commit</strong></a>.
+<div class="notices blue"> vtlib_open_popup_window permits you to attach more parameters to the open window URL by adding them in the last ID parameter. You can see an example of all of this being used <a href="https://github.com/tsolucio/corebos/commit/967d27401be62cf7892436fe1a4ca7a84b35884a"> <strong>in this commit</strong></a>.
 </div>

@@ -21,8 +21,6 @@ taxonomy:
         - autocomplete
 ---
 
----
-
 An autocomplete field has three configurable options:
 
 - **where and how to search**: we must be able to define the module/table where we will look for values and if we want to use startswith or contains. This must include the possibility to use SQL inside cbMap that can overwrite the query to search on specific situations. Ex: search and show all the fields of one module, or show the options of one picklist. Also, it is normal to be able to configure the number of characters that launch the search

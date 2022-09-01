@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - testing
 ---
----
+
 ### [coreBOS Tests Project](https://github.com/tsolucio/coreBOSTests)
 
-###  - [Adding unit tests for new workflow operator](./01.workflowoperator)
+- [Adding unit tests for new workflow operator](01.workflowoperator)

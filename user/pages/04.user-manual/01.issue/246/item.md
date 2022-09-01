@@ -18,8 +18,6 @@ taxonomy:
     tag:
         - issue
 ---
----
-Issue Reference in Tracker: ~issue:246~
 
 ## Speed Optimization
 ### Before/After optimization: HelpDesk List view

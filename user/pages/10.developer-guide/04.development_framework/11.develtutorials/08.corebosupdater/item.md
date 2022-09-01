@@ -1,7 +1,7 @@
 ---
 title: 'coreBOS Updater :: How to keep your coreBOS application up to date'
 metadata:
-    description: 'Vtiger + popup + llamada entrante + cola'
+    description: 'Learn how to keep your coreBOS application constantly and easily up to date with the updater concept.'
     author: 'Joe Bordes'
 content:
     items:
@@ -15,13 +15,14 @@ content:
 taxonomy:
     category:
         - development
-        - asterisk
+        - updater
     tag:
-        - integration
+        - migration
+        - update
+        - version
 ---
----
-<u>coreBOS 5.5</u> 
-has brought a new tool to our *powerful business operating system* : **coreBOS Updater**.
+
+<u>coreBOS 5.5</u> has brought a new tool to our *powerful business operating system* : **coreBOS Updater**.
 
 Since we have a **very stable and tested code base**, and thanks to the
 powerful code administration and distribution system that
@@ -36,8 +37,8 @@ leaving us to fix the minor details.
 So with the approach above and the fact that the majority of changes we
 make are also **tested and stable**, you really don't have to wait for
 us to release an official download to get the new features, you just
-update your code and <u>apply the database
-changes</u> the new code may require.
+update your code and _apply the database changes_ the new code may require.
+
 <div class="notices red">
 Wait!! Apply database changes??? How do you do that? git doesn't do that, how do I know what changes I need to apply?
 </div>
@@ -133,7 +134,7 @@ mandatory, but all recommended:
 <tr class="odd">
 <td><strong>perspective</td>
 <td>optional</td>
-<td>True if the changeset is a <a href="../../../developer-guide/development_framework/develtutorials/corebosupdater#corebos_updatercorebos_perspectives">perspective (see below)</a></td>
+<td>True if the changeset is a <a href="../../../developer-guide/development_framework/develtutorials/corebosupdater#corebos-updater-corebos-perspectives">perspective (see below)</a></td>
 </tr>
 <tr class="even">
 <td><strong>continuous</td>
@@ -145,6 +146,7 @@ mandatory, but all recommended:
 <br>
 
 An example:
+
 ```xml
 <changeSet>
     <author>joebordes</author>
@@ -156,6 +158,7 @@ An example:
     <continuous>false</continuous>
 </changeSet>
 ```
+
 The file *modules/cbupdater/cbupdater.xsd* defines the official schema
 accepted for the XML changeset file and it is used by coreBOS Updater to
 validate the XML format.
@@ -450,8 +453,7 @@ such a way that it will require first for all the new modules to be
 installed and then, the last one will be this extension which will apply
 the final changes to get all the functionality into place.
 
-coreBOS Updater :: coreBOS Perspectives
-=======================================
+## coreBOS Updater :: coreBOS Perspectives
 
 **coreBOS Updater** is one fundamental step towards an important concept
 that we have on our roadmap: <span style="color:red;">Perspectives</span>.

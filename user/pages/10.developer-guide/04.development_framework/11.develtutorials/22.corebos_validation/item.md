@@ -19,34 +19,26 @@ taxonomy:
     tag:
         - validations
 ---
----
-<div class="notices red"> This method has been superseded by
-the
 
-[Validations BussinessMap](../../../../05.configuration-tools/02.business-maps/26.validations). Although the system described here is still valid and working (for backward compatibility),
-it is recommended to use the more flexible and powerful validation
-business mapping. <strong>Implemented as of 2017-05-30.</strong></div>
+<div class="notices red">This method has been superseded by the Validations BussinessMap</div>
+
+[Validations Bussiness Map](../../../../05.configuration-tools/02.business-maps/26.validations). Although the system described here is still valid and working (for backward compatibility), it is recommended to use the more flexible and powerful validation business mapping. <strong>Implemented as of 2017-05-30.</strong>
 
 Each field in a module has two native types of validation:
 
--   data type validation: when you define a field on a module you
-    indicate the type that it is; integer, string, currency, date, ...
-    So when you are editing a record with that field on screen coreBOS
-    will automatically ensure that the value introduced is of the
-    correct type.
--   mandatory validation: you can indicate which fields must contain a
-    value, in other words, they cannot be left empty
+- data type validation: when you define a field on a module you indicate the type that it is; integer, string, currency, date, ...  So when you are editing a record with that field on screen coreBOS will automatically ensure that the value introduced is of the correct type.
+- mandatory validation: you can indicate which fields must contain a value, in other words, they cannot be left empty
 
 Besides these two types which are supported by all fields, and some
 additional undocumented tricks that can be done using an extended syntax
 in the typeofdata field, there are only a handful of hardcoded
 validations in the system:
 
--   no accountname duplicates
--   mandatory email on contact if portal user checked
--   contact birthday
--   sales order recurring settings
--   start and end dates on calendar
+- no accountname duplicates
+- mandatory email on contact if portal user checked
+- contact birthday
+- sales order recurring settings
+- start and end dates on calendar
 
 If you want to add your own validations, for the moment you will have to
 add some code.

@@ -67,7 +67,7 @@ http://your_server/your_crm/index.php
 g. open the menu and go to **coreBOS Updater**<br>
 h. click on the **Get Updates** button<br>
 i. go back to the list view and click on the **Apply All** button<br>
-7. **manually change your config.inc.php**, ~issue:120~ for speed optimization we have require adding a line to your config.inc.php, **THIS IS VERY IMPORTANT** or some parts of the application may not work correctly.
+7. **manually change your config.inc.php**, for speed optimization we have require adding a line to your config.inc.php, **THIS IS VERY IMPORTANT** or some parts of the application may not work correctly.
 a. edit config.inc.php and look for the lines <br>
 ```
 // default charset default value = 'UTF-8' or 'ISO-8859-1'
@@ -121,7 +121,7 @@ g. open the menu and go to **coreBOS Updater**<br>
 h. click on the **Get Updates** button<br>
 i. go back to the list view and click on the **Apply All** button<br>
 
-7. manually change your config.inc.php, ~issue:120~ for speed optimization we have require adding a line to your config.inc.php, THIS IS VERY IMPORTANT or some parts of the application may not work correctly.<br>
+7. manually change your config.inc.php, for speed optimization we have require adding a line to your config.inc.php, THIS IS VERY IMPORTANT or some parts of the application may not work correctly.<br>
 a. edit config.inc.php and look for the lines <br>
 ```
 // default charset default value = 'UTF-8' or 'ISO-8859-1'
@@ -165,7 +165,7 @@ So the steps here are identical to the three situations described before just th
 - click on Apply All
 
 <div class="notices red">
-Remember to apply the database changes using <strong>coreBOS Updater</strong> and to manually change your config.inc.php ~~issue:120~~, for speed optimization we require adding a line to your config.inc.php, <strong>THIS IS VERY IMPORTANT</strong> or some parts of the application may not work correctly.<br></div>
+Remember to apply the database changes using <strong>coreBOS Updater</strong> and to manually change your config.inc.php, for speed optimization we require adding a line to your config.inc.php, <strong>THIS IS VERY IMPORTANT</strong> or some parts of the application may not work correctly.<br></div>
 
 1. edit config.inc.php and look for the lines 
 ```

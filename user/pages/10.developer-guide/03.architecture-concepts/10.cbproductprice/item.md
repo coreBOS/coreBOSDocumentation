@@ -19,11 +19,11 @@ taxonomy:
     tag:
         - contacts
 ---
----
+
 Entity Relation
 ---------------
 
--  [Entity Relation Diagram](https://discussions.corebos.org/documentation/lib/exe/fetch.php?media=en:devel:cbproductpriceer.pdf)
+-  [Entity Relation Diagram](cbproductpriceer.pdf)
 -  [Entity Relation Diagram](cbproductpriceer.odg) 
 
 Services

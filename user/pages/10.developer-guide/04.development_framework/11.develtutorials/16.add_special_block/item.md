@@ -19,7 +19,7 @@ taxonomy:
         - module
         - block
 ---
----
+
 The goal of this tutorial is to show how we could add a new block in the
 detail view of a module where we could add some special functionality
 that we may need.
@@ -269,8 +269,4 @@ if (isset($_REQUEST['action']) && $_REQUEST['action']==$currentModule.'Ajax') {
 
 ## How to add a special block to a module using templates
 
-
-<div class="notices blue"> You can find a much easier way to add
-this type of block which also supports Edit View in 
-
-[this tutorial](../17.add_editdetail_block). </div>
+You can find a much easier way to add this type of block which also supports Edit View in [this tutorial](../17.add_editdetail_block).

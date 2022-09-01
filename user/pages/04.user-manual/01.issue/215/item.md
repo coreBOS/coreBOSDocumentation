@@ -18,8 +18,6 @@ taxonomy:
     tag:
         - issue
 ---
----
-Vulnerability::Issue Reference in Tracker: ~issue:215~
 
 [vtiger CRM Trac Ticket](http://trac.vtiger.com/cgi-bin/trac.cgi/ticket/7714)
 
@@ -27,7 +25,7 @@ Vulnerability::Issue Reference in Tracker: ~issue:215~
 
 A specifically crafted URL from a user logged in to the application permits the user to promote himself to admin role and also change the value of **ANY**field on other users profile.
 
-The URL is basically calling the inline Detail View Ajax edit functionality as explained on ticket ~issue:215~
+The URL is basically calling the inline Detail View Ajax edit functionality
 
 The patch committed solves both problems by limiting the editing to current user and admin users and also limiting the edition of the is_admin field only to users with administrative privileges.
 

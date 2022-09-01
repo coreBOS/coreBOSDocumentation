@@ -38,7 +38,7 @@ They can be retrieved via the **getBusinessActions** web service method.
 
 ## Business Action::Launch script
 
-[Developer Blocks](https://discussions.corebos.org/documentation/doku.php?id=en:devel:add_special_block) are a very powerful way of adding custom functionality into coreBOS. With them, we can easily create all sorts of scripts with any functionality we need, but sometimes we just want to launch a script or method and get a result message back on screen. To accomplish this we can create a business action that calls **runBAScript**. This function accepts a URI to call and expects one of three responses:
+[Developer Blocks](../../10.developer-guide/04.development_framework/11.develtutorials/16.add_special_block#developer-blocks) are a very powerful way of adding custom functionality into coreBOS. With them, we can easily create all sorts of scripts with any functionality we need, but sometimes we just want to launch a script or method and get a result message back on screen. To accomplish this we can create a business action that calls **runBAScript**. This function accepts a URI to call and expects one of three responses:
 
 -   **%%%MSG%%%** followed by a message that will be shown in the inline message box of the application.
 -   **%%%FUNCTION%%%funcname%%%PARAMS%%%onefunctionparameter** which will execute the named function if it exists

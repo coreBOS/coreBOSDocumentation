@@ -232,20 +232,3 @@ with your favorite editor (remember to use UTF8) or through the
 translation manager in Settings.
 
 Finally, [package and distribute](../11.develtutorials/05.packagemodules)
-
-Translating the Documentation (Wiki)
-------------------------------------
-
--   install a clean copy of
-    [dokuWiki](https://www.dokuwiki.org/dokuwiki)
--   fork [the documentation project](https://github.com/tsolucio/corebosdocs)
--   clone your fork documentation project into a clean directory
--   copy all the files into the **data** directory of the dokuWiki
-    project
--   from now on your git project is based **inside** the dokuwiki
-    **data** directory, so execute all git commands in there
--   create a branch for your documentation effort
--   create and edit the documentation using dokuwiki until you are
-    satisfied with the result
-
-

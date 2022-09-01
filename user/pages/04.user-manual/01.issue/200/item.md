@@ -18,10 +18,9 @@ taxonomy:
     tag:
         - issue
 ---
----
-Issue Reference in Tracker: ~issue:200~
 
 ## Detailed Explanation
+
 ### Translating
 
 [Based on Produccing Open Source Software](https://producingoss.com/en/share-management.html#translation-manager)
@@ -184,18 +183,3 @@ $rdo = $package->importManifest('include/language/it_it.manifest.xml');
 Log into the application, select your language in Preferences and proceed to edit and test the translation either directly in the files with your favorite editor (remember to use UTF8) or through the translation manager in Settings.
 
 Finally, [package and distribute](../../../.../../../../../10.developer-guide/04.development_framework/11.develtutorials/05.packagemodules)
-
-### Translating the Documentation (Wiki)
-
-- install a clean copy of [dokuWiki](https://www.dokuwiki.org/dokuwiki)
-- fork [the documentation project](https://github.com/tsolucio/corebosdocs)
-- clone your fork documentation project into a clean directory
-- copy all the files into the data directory of the dokuWiki project
-- from now on your git project is based inside the dokuwiki data directory, so execute all git commands in there
-- create a branch for your documentation effort
-- create and edit the documentation using dokuwiki until you are satisfied with the result
-
-<div class="notices blue">
-don't forget to add your name and details in the <a href="url">contributions page</a> </div>
-
-- send us a pull request

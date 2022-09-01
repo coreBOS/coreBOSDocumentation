@@ -18,11 +18,11 @@ taxonomy:
     tag:
         - issue
 ---
----
-Issue Reference in Tracker: ~issue:124~
 
 ## Detailed Explanation
+
 ### GenDoc and PDF output
+
 #### GenDoc Template Merge
 
 <table class="table table-striped">

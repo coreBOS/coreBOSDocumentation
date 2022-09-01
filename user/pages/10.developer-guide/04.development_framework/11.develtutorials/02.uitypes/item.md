@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - field
 ---
----
+
 ===
 
 <table class="table table-striped">
@@ -192,7 +192,7 @@ taxonomy:
 </tr>
 <tr>
 <td>1025</td>
-<td><a href="../../configuration-tools/business-maps/extendedfieldinfo/autocomplete">MultiSelect autocomplete</a></td>
+<td><a href="../../../configuration-tools/business-maps/extendedfieldinfo/autocomplete">MultiSelect autocomplete</a></td>
 </tr>
 <tr>
 <td colspan="2"><strong>User Fields</strong></td>
