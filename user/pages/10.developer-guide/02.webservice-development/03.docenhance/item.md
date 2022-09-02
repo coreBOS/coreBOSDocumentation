@@ -19,8 +19,9 @@ taxonomy:
     tag:
         - tool
 ---
----
+
 ## Create, Update and Retrieve Documents
+
 The purpose of these enhancements are to permit uploading files when we create/update documents through the web service interface. This extension also adds functionality that permits establishing relationships with other entities to the document we are creating.
 
 Calls to REST methods of Create, Retrieve and Update maintain their profile and keep working as before. This extension adds to these calls a set of special fields that will be acknowledged by the enhancements.
@@ -43,8 +44,6 @@ The special fields are:
 </tr>
 </tbody>
 </table>
-  
-
 
 With the virtual field **relations** we can establish relationships
 between the document and any other record. For example, we can upload a
@@ -61,10 +60,10 @@ To permit uploading documents we have added another virtual field called
 **filename**. It is an array with the four values we need to upload an
 attachment:
 
--   name: name of the attachment in the application
--   size: size of the file being sent
--   type: type of the file being sent
--   content: base64 encoded string with the full contents of the file
+- name: name of the attachment in the application
+- size: size of the file being sent
+- type: type of the file being sent
+- content: base64 encoded string with the full contents of the file
 
 As of **coreBOS 5.6** you will also receive another virtual field when
 retrieving a document record. This field is called **\_downloadurl** and
@@ -296,11 +295,9 @@ each given identifier we will get an array with this structure:
 </table>
 
 
-If the parameter **returnfile** is 0, the field **content** will be
-empty (no file sent, reducing bandwidth usage and time)
+If the parameter **returnfile** is 0, the field **content** will be empty (no file sent, reducing bandwidth usage and time)
 
-Find next an example code of a call to this method followed by the
-resulting output.
+Find next an example code of a call to this method followed by the resulting output.
 
 ### *Example Code of Call
 ```php
@@ -354,7 +351,9 @@ resulting output.
     exit;
     ?>
 ```
+
 ### *RESULT OF THE CALL 
+
 ```php
     Raw response (json) RetrieveDocAttachment
 
@@ -388,8 +387,8 @@ resulting output.
               'filesize' => int 922
               'attachment' => string 'LS0KLS0gUmV0cmVpdmUgRG9jdW1lbnQgYW5kIENoYW5nZSBEb2N1bWVudCBjbGFzcwotLQp1cGRhdGUgdnRpZ2VyX3dzX29wZXJhdGlvbl9zZXEgc2V0IGlkPWlkKzE7CklOU0VSVCBJTlRPIGB2dGlnZXJfd3Nfb3BlcmF0aW9uYCAoCmBvcGVyYXRpb25pZGAsCmBuYW1lYCAsCmBoYW5kbGVyX3BhdGhgICwKYGhhbmRsZXJfbWV0aG9kYCAsCmB0eXBlYCAsCmBwcmVsb2dpbmAKKQpWQUxVRVMgKAooc2VsZWN0IG1heChpZCkgZnJvbSB2dGlnZXJfd3Nfb3BlcmF0aW9uX3NlcSksJ3JldHJpZXZlZG9jYXR0YWNobWVudCcsICdpbmNsdWRlL1dlYnNlcnZpY2VzL1JldHJpZXZlRG9jQXR0YWNobWVudC5waHAnLCAndnR3c19yZXRyaWV2ZWRvY2F0dGFjaG1lbnQnLCAnUE9TVCcsICcw'... (length=1232)
 ```
+
 ### Create, Update and Retrieve Images
-----------------------------------
 
 Following a similar approach as the **filename** virtual field added for
 uploading document files, we have added also a generic virtual field to
@@ -399,9 +398,10 @@ all the other modules in the application named **attachments**.
 contained in a module where you want to upload a file and can be used in
 Create, Update and Revise operations.
 
-Let's suppose that you have two image fields on a module named cf\_998
-and cf\_999. You can upload files to these two fields with an array like
+Let's suppose that you have two image fields on a module named cf_998
+and cf_999. You can upload files to these two fields with an array like
 this:
+
 ```php
     $recordInfo = array(
         ...other fields in the record...
@@ -466,11 +466,9 @@ image data itself.
 
 **Examples:**
 
--   [Create with
-    Image](https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/438_createWithImage.php)
--   [Update with
-    Image](https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/438_updateWithImage.php)
--   [How to update an image field from code](/developer-guide/architecture-concepts/updateimagefield)
+- [Create with Image](https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/438_createWithImage.php)
+- [Update with Image](https://github.com/tsolucio/coreBOSwsDevelopment/blob/master/testcode/438_updateWithImage.php)
+- [How to update an image field from code](../../../10.developer-guide/04.development_framework/11.develtutorials/31.updateimagefield/)
 
 ### Product Multi-Image field
 
@@ -482,8 +480,8 @@ When calling Retrieve on a product the first image found in the
 multi-image field will be returned. It is NOT guaranteed to always get
 the same image.
 
-You can use the **addProductImages** method to insert images in this
-field.
+You can use the **addProductImages** method to insert images in this field.
+
 <table class="table table-striped">
 <tbody>
 <tr>
@@ -518,6 +516,6 @@ field.
 <br>
 ------------------------------------------------------------------------
 
-[Next](/configuration-tools/webservice-development/getpdfdata)| Chapter 7: GenDoc and PDF output.
+[Next](../../../05.configuration-tools/05.gendoc)| Chapter 7: GenDoc and PDF output.
 
 ------------------------------------------------------------------------
