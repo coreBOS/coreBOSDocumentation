@@ -20,7 +20,7 @@ taxonomy:
         - outgoing
         - outgoingserver
 ---
----
+
 coreBOS needs an email account to send out administrative emails regarding the operation of the application. Using this email account the program will send warning emails from workflows, notification of calendar events and end of import information (for example).
 
 Since the application requires this email account we decided to also use it to send normal work email messages from the users. For this to work and appear that each user sends emails from his own email we use a feature implemented into the mailing protocol (SMTP) called RELAY. Using this technique, the program connects to the server with the account that is configured and tells it that it will be sending an mail on behalf of another email account.
@@ -32,6 +32,7 @@ The outgoing server settings can be set in the Settings section of the applicati
 ```
 Settings > Outgoing Server
 ```
+
 ![](outgoingserver.png?width=100%)
 
 <table class="table table-striped">
@@ -90,39 +91,39 @@ If you reach this point, I recommend you register for an account at [sendgrid](h
 
 ## Some pages related to problems configuring outgoing server
 
--   [http://community.office365.com/es-es/f/203/t/199699.aspx](http://community.office365.com/es-es/f/203/t/199699.aspx)
--   [https://discussions.vtiger.com/index.php?p=/discussion/55230/smtp-mail-settings-for-office-365-exchange/p1](https://discussions.vtiger.com/index.php?p=/discussion/55230/smtp-mail-settings-for-office-365-exchange/p1)
--   [http://technet.microsoft.com/en-us/library/dn554323.aspx](http://technet.microsoft.com/en-us/library/dn554323.aspx)
+- [http://community.office365.com/es-es/f/203/t/199699.aspx](http://community.office365.com/es-es/f/203/t/199699.aspx)
+- [https://discussions.vtiger.com/index.php?p=/discussion/55230/smtp-mail-settings-for-office-365-exchange/p1](https://discussions.vtiger.com/index.php?p=/discussion/55230/smtp-mail-settings-for-office-365-exchange/p1)
+- [http://technet.microsoft.com/en-us/library/dn554323.aspx](http://technet.microsoft.com/en-us/library/dn554323.aspx)
 
 ## FAQ
 
 <div class="notices blue">
 <h2>Method for installing coreBOS on a 1and1 Linux Shared Hosting Package</h2> </div>
 
-[This very old PDF file](https://discussions.corebos.org/documentation/lib/exe/fetch.php?media=en:corebos:vtigercrm_1and1_installation.pdf) shared on the forum explains some issues. The important part is this one:
+[This very old PDF file](vtigercrm_1and1_installation.pdf) shared on the forum explains some issues. The important part is this one:
 Open the file vtigercrm/modules/Emails/class.phpmailer.php in your favorite text editor.
 Find the following lines:
+
 ```
 function IsSMTP() {
 $this->Mailer = "smtp";
 ```
+
 Change "smtp" to "sendmail"
 
 ---
 
 <div class="notices blue">
-
 <h2>How do I configure a gmail account?</h2>
 </div>
 
 This forum thread says that you have to use **smtp.gmail.com** and select **TLS** as the authentication method. Also leave the "Email from" field empty as (I think) gmail does not support that feature.
 
-Also [this page explains activating the service on Google side](https://discussions.corebos.org/documentation/doku.php?id=en:adminmanual:outgoingservergmail).
+Also [this page explains activating the service on Google side](../05.outgoingservergmail).
 
 ---
 
 <div class="notices blue">
-
 <h2>How can I check my spam score?</h2>
 </div>
 
@@ -132,10 +133,6 @@ Send an email from the application to the email address indicated at [Mail Teste
 
 ## Debugging errors
 
-### Email
-
-[Have a read here about how coreBOS outgoing email server works and how to configure it.](../05.outgoingserver)
-
 Activate the debug log at level **FATAL** and set the **Debug_Email_Sending** global variable to 1. This will send the whole conversation between coreBOS and the email server to the log file so you can diagnose the problem.
 
 <div class="notices blue">
@@ -144,7 +141,7 @@ In previous versions, we used to need the changes below which I leave here as a 
 
 To debug the outgoing email server the best is to activate PHPMailer debugging with the changes below and look in the debug log file (logs/vtigercrm.log)
 
-```
+```diff
 diff --git a/modules/Emails/class.phpmailer.php b/modules/Emails/class.phpmailer.php
 index 8427255..61bd55c 100644
 --- a/modules/Emails/class.phpmailer.php
@@ -176,5 +173,5 @@ index a8cac72..7674172 100755
 +));
 +$mail->Debugoutput = function($str, $level) { global $log;$log->fatal($str);};
         return;
- }
- ```
+}
+```

@@ -68,6 +68,7 @@ this to stop? I do not keep 2 calendars and I prefer to work with only
 one. I see in calendar settings that "Google is connected" for my user
 name. Is this why my task list is picking up everything from my Google
 calendar?</h2>
+</div>
 
 Have a  [read at this page](../02.calendar_google_separating_events) for some indications. 
 
@@ -98,9 +99,7 @@ deactivated it.
 Configuring your connection with Google Calendar
 ------------------------------------------------
 
-<div class="notices red">
-<strong>Starting at coreBOS release
-December 2014</strong> </div>
+<div class="notices red"><strong>Starting at coreBOS release December 2014</strong> </div>
 
 We have updated Google Integration from API v.1 *(already deprecated by
 Google)* to the newest API v.3.
@@ -193,7 +192,7 @@ window.
 
 11.- After to save the previous data, you have click again in
 **Settings**
-![](settings.png?width=50%)
+![](settings.png?width=16%)
 and you can see that you can clic in a new link called **Authorize and Connect**
 , for permit coreBOS to manage your calendars. Now this Authorization is
 for the actual google user that you have connect in your browser. If you
@@ -219,7 +218,6 @@ type and in the first time they will see the famous **Authorize and Connect** li
 ![](omar_authorize_connect_1.png?width=70%%)
 
 
-
 ##### Click on the link , permit coreBOS to manage the calendars and finally you will can to select your calendars to your event types.
 
 ![](omar_authorize_connect_2.png?width=70%)
@@ -237,14 +235,11 @@ That's it. Enjoy!
 
 ## Considerations
 
+-   Google calendar update cron updates only **NOT HELD** events:
 
--   Google calendar update cron updates only **NOT HELD**
-    events:
-    ```
-     (vtiger_activity.status != 'Held' OR vtiger_activity.status IS NULL)
+```
+  (vtiger_activity.status != 'Held' OR vtiger_activity.status IS NULL)
+```
 
-    ```
--   Deleting the event from google calendar doesn't delete it from the
-    calendar in Corebos just from the table of google cal events
--   Deleting a google calendar event from Corebos is done one by one
-    (just for the deleted records) using the beforedelete handler.
+- Deleting the event from google calendar doesn't delete it from the calendar in Corebos just from the table of google cal events
+- Deleting a google calendar event from Corebos is done one by one (just for the deleted records) using the beforedelete handler.

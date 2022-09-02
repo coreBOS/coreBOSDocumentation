@@ -1,7 +1,7 @@
 ---
 title: 'Integration with TiddlyWiki'
 metadata:
-    description: 't allows anyone to create personal self contained hypertext documents that can be posted to a web server'
+    description: 'Allows anyone to create personal self contained hypertext documents that can be posted to a web server'
     author: 'Joe Bordes'
 content:
     items:
@@ -18,11 +18,10 @@ taxonomy:
     tag:
         - tiddlywiki
 ---
----
+
 <strong> [TiddlyWiki](https://tiddlywiki.com/) </strong>
 
-We have two ways of using TiddlyWiki with coreBOS: with WebDAV and with
-a native plugin.
+We have two ways of using TiddlyWiki with coreBOS: with WebDAV and with a native plugin.
 
 The goal of the integration is to use coreBOS as a backend to save the
 tiddlers. In other words, since TiddlyWiki does not save the wiki
@@ -58,20 +57,14 @@ execution of malicious code.
 
 Since TiddlyWiki is an HTML file we have to make a change to permit
 saving this type of file. Edit your config.inc.php file and look for the
-$upload\_badext variable. You must eliminate the "HTML" entry from that
+$upload_badext variable. You must eliminate the "HTML" entry from that
 array.
 
 ### Using TiddlyWiki Plugin
 
-We have created a plugin for TiddlyWiki that you can install like all
-the other plugins.
+We have created a plugin for TiddlyWiki that you can install like all the other plugins.
 
-This plugin will permit you to log in to your coreBOS. Once you are
-logged in, the plugin will access your existing wiki entries from the  [Conversation module](../../../08.extensions-integrations/01.corebosmodules/conversations) 
-and load
-them into the TiddlyWiki instance as if they had been saved in the file.
-From that point on, the wiki entries you create or modify will be saved
-back in the [Conversation module](../../../08.extensions-integrations/01.corebosmodules/conversation).
+This plugin will permit you to log in to your coreBOS. Once you are logged in, the plugin will access your existing wiki entries from the Conversation module and load them into the TiddlyWiki instance as if they had been saved in the file. From that point on, the wiki entries you create or modify will be saved back in the Conversation module.
 
 ### Comparision and Comments
 

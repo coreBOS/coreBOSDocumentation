@@ -1,7 +1,8 @@
 ---
 title: 'vtMarketing Dashboard'
 ---
----
+
+<div class="alert-danger">OBSOLETE</div>
 
 [http://evolutivoteam.blogspot.com.es/2013/01/marketing-dashboard.html](http://evolutivoteam.blogspot.com.es/2013/01/marketing-dashboard.html)
 

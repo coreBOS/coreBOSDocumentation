@@ -18,5 +18,5 @@ taxonomy:
     tag:
         - mobile
 ---
----
-## [Mobile Introduction](./01.introduction)
+
+## [Mobile Introduction](01.introduction)

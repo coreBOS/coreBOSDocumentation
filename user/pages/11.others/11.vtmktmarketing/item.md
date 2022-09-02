@@ -1,7 +1,8 @@
 ---
 title: 'vtiger CRM Marketing Distribution'
 ---
----
+
+<div class="alert-danger">OBSOLETE</div>
 
 Converting vtiger CRM into a CRM
 --------------------------------

@@ -17,12 +17,11 @@ taxonomy:
         - module
     tag:
         - mailchimp
+---
 
----
----
-MailChimp Module allows a full synchronization with MailChimp Email
-Marketing software. MailChimp module uses the MailChimp API to
-synchronize contacts, organizations or leads.
+<div class="alert-danger">OBSOLETE</div>
+
+MailChimp Module allows a full synchronization with MailChimp Email Marketing software. MailChimp module uses the MailChimp API to synchronize contacts, organizations or leads.
 
 Features & Benefits
 -------------------

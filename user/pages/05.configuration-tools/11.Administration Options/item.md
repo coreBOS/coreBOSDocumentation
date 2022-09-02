@@ -18,17 +18,11 @@ taxonomy:
     tag:
         - administration
 ---
----
-- [View/Filter Management](./01.filtermanagement)
 
-- [Logo sizes](./02.logos_sizes)
-
-- [Mail Converter](./03.mailconverter)
-
-- [Monitor the health of your coreBOS](./04.monitorstatus)
-
-- [How to Configure Outgoing Server](./05.outgoingserver)
-
-- [Picklist Editor](./06.picklisteditor)
-
-- [Record Versioning](./07.recordversioning)
+- [View/Filter Management](01.filtermanagement)
+- [Logo sizes](02.logos_sizes)
+- [Mail Converter](03.mailconverter)
+- [Monitor the health of your coreBOS](04.monitorstatus)
+- [How to Configure Outgoing Server](05.outgoingserver)
+- [Picklist Editor](06.picklisteditor)
+- [Record Versioning](07.recordversioning)

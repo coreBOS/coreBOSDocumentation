@@ -18,10 +18,6 @@ taxonomy:
     tag:
         - elasticsearch 
 ---
----
-**[coreBOS Native Integration](./01.elasticsearchnative)**
 
- **[coreBOS External Integration](./02.elasticsearchexternal)**
-
-
-
+- [coreBOS Native Integration](01.elasticsearchnative)
+- [coreBOS External Integration](02.elasticsearchexternal)
