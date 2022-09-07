@@ -53,4 +53,4 @@ changes. That said, be careful as we you will have to patch the changes
 to stable milestones yourself, we will only create migrations paths from
 one milestone version to the next.
 
-[The official list of milestones is here](/en/devel/downloads)
+[The official list of milestones is here](../../../11.others/04.devel)

@@ -29,7 +29,7 @@ Example of how to use
 
 -   ![](upsert_export.png?width=100%)
 
--   This gives me a <a href="contacts_raw.csv" download="file with a lot of columns and rows"> of contact information
+-   This gives me a ![file with a lot of columns and row](contacts_raw.csv) of contact information
 -   I eliminate most of them for the sake of the example. I am supposing
     that I need to update ONLY the department field of the contact
     without modifying the others. I am going to eliminate most columns

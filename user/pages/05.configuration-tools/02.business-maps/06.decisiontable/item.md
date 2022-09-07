@@ -56,8 +56,7 @@ Expressions
 -----------
 
 Expressions contain any workflow expression that can be evaluated in the
-context of the Decision Map. These are exactly like [Condition
-Expression](/en/adminmanual/businessmappings/condition_expression) maps
+context of the Decision Map. These are exactly like [Condition Expression](../03.condition-expression) maps
 but written directly inside this business map.
 
 <div class="notices blue">
@@ -68,9 +67,8 @@ return the reserved string <strong>__DoesNotPass__</strong>
 Business Map Name/ID
 --------------------
 
-This type is simply the name or CRMID of any existing [Condition
-Expression](/en/adminmanual/businessmappings/condition_expression) or
-[Condition Query](/en/adminmanual/businessmappings/condition_query)
+This type is simply the name or CRMID of any existing [Condition Expression](../03.condition-expression) or
+[Condition Query](../04.condition-query)
 business map, they will be loaded and evaluated in the context of the
 Decision Map
 
@@ -187,8 +185,7 @@ Output Options
 Execution
 =========
 
-To execute a decision map and get the result we use the [coreBOS Rules
-service](/en/devel/corebos_rules). coreBOS Rule will see that the given
+To execute a decision map and get the result we use the [coreBOS Rules service](../../../10.developer-guide/04.development_framework/11.develtutorials/26.corebos_rules). coreBOS Rule will see that the given
 map is actually a decision table and will evaluate the map with the
 given context.
 

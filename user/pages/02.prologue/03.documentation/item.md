@@ -59,7 +59,7 @@ You can learn all about grav cms markdown at their site and then follow the typi
 
 This site use Flex objects to create **stores** for some special sections. These are currently
 
-* GenDoc templates
+* GenDoc Templates
 * Business Maps
 * Extensions and Modules
 

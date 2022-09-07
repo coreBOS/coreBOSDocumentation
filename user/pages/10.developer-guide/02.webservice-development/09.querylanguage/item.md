@@ -134,8 +134,7 @@ So we made a first enhancement based on **the
 [getRelatedRecords](../06.getrelatedcontrols) work**. This
 second syntax was created before we started the coreBOS project and was
 added as a base feature when it was born. You can read about this second
-syntax below and see it in use in our [Customer Portal
-Extension](/en/extensions/coreboscp).
+syntax below and see it in use in our [Customer Portal Extension]( /en/extensions/coreboscp).
 
 Finally, we enhanced the syntax a third time based on the work done in
 **the QueryGenerator class** which gives us a rich and flexible syntax

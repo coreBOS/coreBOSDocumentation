@@ -32,7 +32,7 @@ There are 6 types of blocks:
 - **ApplicationFields**: this tells us to use the same layout that exists in the application for this block. This type uses the "blockid" directive to know which block to render
 - **FieldList**: a list of rows and fields with the distribution we want. This type uses the "layout" directive
 - **RelatedList**: a related list of records with actions
-- **Widget**: this is a block that must be constructed following the [DetailViewWidget specification](/en/devel/add_special_block). You have full control of the space designated to this block
+- **Widget**: this is a block that must be constructed following the [DetailViewWidget specification](../../../10.developer-guide/04.development_framework/11.develtutorials/16.add_special_block). You have full control of the space designated to this block
 - **CodeWithoutHeader**: this will open a "div" and directly include your code inside
 - **CodeWithHeader**: this will add a header following the look and feel of the default related-list blocks and then open a "div" and directly include your code inside
 
@@ -72,7 +72,7 @@ If *type* is **FieldList** we just need the **layout** directive to get the list
 
 If *type* is **RelatedList** we just need the name or ID of the related list to show. This value is given in the directive **loadfrom**, so all the other directives are ignored.
 
-If *type* is **Widget** then we have two ways of defining the widget to show. One is setting the directive *loadfrom* to the [DetailViewWidget specification](/en/devel/add_special_block) you need, usually starts with "block:". It would be what you would put in a [Business Action](../../03.business-actions/). The other option is to set *loadfrom* to the path of the file that contains the widget and use the directive *handler_class* to define the name of the widget. In this case, the two directives will be used to construct the Detail View Widget reference object, with no additional parameters. It would be constructed like this:
+If *type* is **Widget** then we have two ways of defining the widget to show. One is setting the directive *loadfrom* to the [DetailViewWidget specification](../../../10.developer-guide/04.development_framework/11.develtutorials/16.add_special_block) you need, usually starts with "block:". It would be what you would put in a [Business Action](../../03.business-actions/). The other option is to set *loadfrom* to the path of the file that contains the widget and use the directive *handler_class* to define the name of the widget. In this case, the two directives will be used to construct the Detail View Widget reference object, with no additional parameters. It would be constructed like this:
 
 ```
 block://handler_class:loadfrom

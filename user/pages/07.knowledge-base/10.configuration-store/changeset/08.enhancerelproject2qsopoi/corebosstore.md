@@ -26,6 +26,6 @@ modules and the corresponding related list on the Project module.
 <br>
 ------------------------------------------------------------------------
 
-[Next](../../gendoc)| Chapter 16: GenDoc: Advanced OpenOffice Merge.
+[Next](../../../../05.configuration-tools/05.gendoc-templates/gendoc)| Chapter 16: GenDoc: Advanced OpenOffice Merge.
 
 ------------------------------------------------------------------------

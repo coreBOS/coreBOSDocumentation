@@ -108,8 +108,7 @@ Ticket Tab
 ----------
 
 The ticket tab will permit us to search for account and contacts
-associated to trouble tickets. As with the [filter
-tab](/en/mapenhancements#filter_tab) we are presented with a set of
+associated to trouble tickets. As with the [filter tab](../../01.corebosmodules/cbgeomap/corebosstore.md#filter-tab) we are presented with a set of
 filters that exist on the trouble ticket entity and we can select one or
 more to have the associated accounts and contacts marked on the map.
 Also, we find a user capture box where we can restrict the trouble
@@ -201,8 +200,7 @@ javascript library permits us to easily page through the results seeing
 their name and entity type. It will permit us to group the records by
 entity type and quickly located any record on the map by clicking on the
 target icon, or access the full record by clicking on the name of the
-located record. There is a screen shot with grouping in the [Radius
-Tab](/en/integrations/maps#radius_tab) section
+located record. There is a screen shot with grouping in the [Radius Tab](../../01.corebosmodules/cbgeomap/corebosstore.md#radius-tab) section
 
 Finally, clicking on the name of the entity will take us to it's detail
 view inside vtiger CRM.

@@ -1,5 +1,5 @@
 ---
-title: 'Gendoc Templates'
+title: 'GenDoc Templates'
 flex:
     directory: gendoc
 ---
