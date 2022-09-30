@@ -1,7 +1,7 @@
 ---
 title: 'How to recover a mass edit change'
 metadata:
-    description: 'Menu Editor'
+    description: 'How to recover a mass edit change'
     author: 'Joe Bordes'
 content:
     items:
@@ -19,7 +19,6 @@ taxonomy:
         - howto
 ---
 
----
 The global steps are:
 
 1. dump the affected table from your backup to a file
@@ -70,7 +69,9 @@ update vtiger_crmentity inner join backup_crmentity on vtiger_crmentity.crmid=ba
 If you are doing a Mass Edit recovery this query needs to be adapted to each case and consider all the fields you want to recover.
 
 ## delete the backup table
+
 We drop the backup table as it is not needed anymore.
+
 ```
 drop table backup_crmentity
 ```

@@ -20,9 +20,12 @@ taxonomy:
         - shopify
 ---
 
+Learn how to configure coreBOS and Shopify to work together.
+
+===
+
 ![Shopify](shopify.jpg?classes=minsize) 
 <br>
-===
 
 ## WEB-SERVICE MAPPING DOCUMENTATION
 

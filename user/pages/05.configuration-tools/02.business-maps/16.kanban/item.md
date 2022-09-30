@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - kanban
 ---
----
 
 The purpose of this mapping is to define a kanban lane view of the
 records of a module. This map is in the "View Business Map" category as
@@ -144,6 +143,12 @@ Here is a custom template you can try:
 ```
 
 <div class="notices blue">
-Only module and lanefield are
-mandatory.
+Only module and lanefield are mandatory.
 </div>
+
+<br>
+------------------------------------------------------------------------
+
+[Next](../21.pivot) | Chapter 24: Pivot View.
+
+------------------------------------------------------------------------

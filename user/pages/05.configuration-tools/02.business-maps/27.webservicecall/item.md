@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - webservicecall
 ---
----
 
 ## REST/SOAP call and retrieval Mapping
 
@@ -316,3 +315,10 @@ This first map executes an authentication call and loads the authorization token
 
 - [Run Web Service Workflow Task](https://blog.corebos.org/blog/runwswftask)
 - [Run Web Service Workflow Task Change](https://blog.corebos.org/blog/runwswftaskchange)
+
+<br>
+------------------------------------------------------------------------
+
+[Next](../02.application-menu ) | Chapter 22: Application Menu.
+
+------------------------------------------------------------------------

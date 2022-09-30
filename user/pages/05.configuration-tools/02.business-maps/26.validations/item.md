@@ -19,12 +19,10 @@ taxonomy:
     tag:
         - validations
 ---
----
 
 ## Validation Business Mapping
 
-This type of map will permit you to add different types of validations
-on the fields of a module.
+This type of map will permit you to add different types of validations on the fields of a module.
 
 ===
 

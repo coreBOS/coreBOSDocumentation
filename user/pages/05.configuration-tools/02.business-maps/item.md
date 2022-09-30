@@ -1,7 +1,7 @@
 ---
 title: 'Business Mappings and Conditions'
 metadata:
-    description: 'Business Mapd general'
+    description: 'Business Maps general'
     author: 'Joe Bordes'
 content:
     items:
@@ -18,7 +18,6 @@ taxonomy:
         - adminmanual
     tag:
         - businessmaps
----
 ---
 
 The Business Mappings and Conditions module permits **implementors** to define high-level configuration options for the execution of the application.
@@ -72,8 +71,13 @@ There are currently these different types of mappings:
 - [Detail View Layout](detailviewlayout)
 - [Decision Table](decisiontable)
 - [REST/SOAP call and retrieval](webservicecall)
+- [Application menu](02.application-menu)
+- [Kanban View](16.kanban)
+- [Pivot View](21.pivot)
+- [Mass Upsert Grid](29.massupsertgrid)
 
 Depending on the type of business mapping the contents of the record changes as explained next.
+
 <div class="notices red">
 The two most typical business map errors are:<br>
 
@@ -81,7 +85,9 @@ The two most typical business map errors are:<br>
 -  invalid XML: https://www.xmlvalidation.com </div>
 
 ## How it works
+
 ### How an implementor can use a Business Mapping
+
 Once a programmer has established the code changes to use a Business Mapping, the implementor has to create, one or more, records in the module with that type of Business Mapping.
 
 Usually, the programmer will have created some examples and documentation on the exact formatting and options supported by the business mapping type.
@@ -95,6 +101,7 @@ Optionally, the implementor can create more than one mapping of this type with d
 The idea is to get the mapping to apply and then pass in the parameters so the mapping can be processed.
 
 The correct way to do this is using the global variable module so that the mappings are dependent on the users and pass in the default mapping which you should have created.
+
 ```php
  $cbMapid = GlobalVariable::getVariable('BusinessMapping_SalesOrder2Invoice', cbMap::getMapIdByName('SalesOrder2Invoice'));
   if ($cbMapid) {
@@ -116,19 +123,20 @@ You should consider implementing the 'else' part in case no mapping is found.
 
 Adding a new process is rather simple:
 
--   Add your mapping type to the changeset file so it gets added in the business mapping picklist
-    -   build/changeSets/cbMapAddMapTypes.php
-    -   <a href="https://github.com/tsolucio/corebos/blob/master/build/changeSets/cbMapAddMapTypes.php#L25">see the code</a>
--   Add the translation of the mapping type to the modules/cbMap/language files
--   Copy the file modules/cbMap/processmap/processMap.php to a file named as your mapping inside this same directory
--   Now modify this file to process your mapping. Basically you will need a convert method that will convert the XML into a PHP array and then add methods that read the array and return answers, values or parts of that array
--   Once you have done that you will be able to launch your mapping by loading the CRMID and calling the mapping name.
+- Add your mapping type to the changeset file so it gets added in the business mapping picklist
+  - build/changeSets/cbMapAddMapTypes.php
+  - <a href="https://github.com/tsolucio/corebos/blob/master/build/changeSets/cbMapAddMapTypes.php#L25">see the code</a>
+- Add the translation of the mapping type to the modules/cbMap/language files
+- Copy the file modules/cbMap/processmap/processMap.php to a file named as your mapping inside this same directory
+- Now modify this file to process your mapping. Basically you will need a convert method that will convert the XML into a PHP array and then add methods that read the array and return answers, values or parts of that array
+- Once you have done that you will be able to launch your mapping by loading the CRMID and calling the mapping name.
 
 Let's look at a real example: <a href="https://github.com/tsolucio/corebos/commit/5a6df91cfc9467ffb1c7dbd5b0aa171f202c050f">List Columns Mappings</a>
 
 As you can see in the commit, we add the ListColumns type to the picklist and translation files. Then we add a new script that, first documents the required XML structure, then converts the XML to an array for easier processing and then defines a set of helper methods to extract information from the mapping.
 
 Finally you can see <a href="https://github.com/tsolucio/corebos/blob/master/include/utils/ListViewUtils.php#L988">how this is used here</a>. Once we have a Mapping ID, we load it:
+
 ```php
 $cbMap = cbMap::getMapByID($cbMapid);
 ```
@@ -147,24 +155,24 @@ coreBOS gives the programmer of the map the necessary infrastructure to simply i
 
 If you want to create an editor for your map you must:
 
--   create a class named
+- create a class named
 ```php
 gen<MapName>
 ```
 
 inside the directory modules/cbMap/generatemap
 
--   the class extends generatecbMap:
+- the class extends generatecbMap:
 ```php
 class genModuleSetMapping extends generatecbMap {
 ```
 
--   the class must contain two methods:
-    -   **generateMap()** this method will be called once the editor window is opened and will be in charge of sending to the screen all the editor contents.
-        -   The method should include the file **modules/cbMap/generatemap/GenMapHeader.php** before any output. This script will output the  normal coreBOS includes like LDS (among others).
-        -   The method should include the file **$smarty→display('modules/cbMap/GenMapFooter.tpl')**; at the end which will close the HTML and BODY opened in the header
-        -   The contents generated by the method must contain a javascript function that captures all the required information and sends it to the **saveMapAction(params);** function. params is the typical parameter/value query string used in the browser (separated by &) and will be sent to coreBOS as the POST body of the save event
-    -   **convertToMap()** which will have to read from the $_REQUEST the values it needs and return the constructed map that will be saved by coreBOS
+- the class must contain two methods:
+  - **generateMap()** this method will be called once the editor window is opened and will be in charge of sending to the screen all the editor contents.
+      - The method should include the file **modules/cbMap/generatemap/GenMapHeader.php** before any output. This script will output the  normal coreBOS includes like LDS (among others).
+      - The method should include the file **$smarty→display('modules/cbMap/GenMapFooter.tpl')**; at the end which will close the HTML and BODY opened in the header
+      - The contents generated by the method must contain a javascript function that captures all the required information and sends it to the **saveMapAction(params);** function. params is the typical parameter/value query string used in the browser (separated by &) and will be sent to coreBOS as the POST body of the save event
+    - **convertToMap()** which will have to read from the $_REQUEST the values it needs and return the constructed map that will be saved by coreBOS
 
 
 You can find an example in the Module Set Mapping

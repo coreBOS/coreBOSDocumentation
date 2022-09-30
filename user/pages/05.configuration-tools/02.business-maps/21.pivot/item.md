@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - pivot
 ---
----
 
 The purpose of this mapping is to define a pivot view report of the
 records of a module. This map is in the "View Business Map" category as
@@ -89,3 +88,10 @@ This is a test map you can use to see it in action.
 Which looks like this
 
 ![](preview-screenshot_at_2021-10-08_17-27-20.png?width=100%)
+
+<br>
+------------------------------------------------------------------------
+
+[Next](../29.massupsertgrid) | Chapter 25: Mass Upsert Grid
+
+------------------------------------------------------------------------
