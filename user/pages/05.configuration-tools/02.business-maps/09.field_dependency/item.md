@@ -120,6 +120,10 @@ be used:
     parameter
 -   fieldDep\_AssignUserSelect: set the assigned user to the given user
     ID parameter for uitype 101 fields
+
+    ### New!
+     fieldDep\_GetFieldSearch: searches for a field as reference in order to map other fields
+
 -   **NOT IMPLEMENTED YET**
 -   fieldDep\_ChangeLabel: will permit changing the label of a field
 -   fieldDep\_Format: return sprintf formatting of new\_value (use
@@ -690,8 +694,56 @@ trick to consciously force this.
     </dependencies>
     </map>
 ```
+> ####Another example using the new functionality fieldDep_GetFieldSearch. Here we want to map some fields in AssetDetails which values will be copied from Assets using a reference field to make the search:####
 
+```xml
+<map>
+  <originmodule>
+    <originname>AssetDetails</originname> {the target module}
+  </originmodule>
+<dependencies>
+<dependency>
+    <field>related_assets</field>  {reference field, so filling this field we will trigger the search for the other ones}
+    <actions>
+        <function>
+            <name>fieldDep_GetFieldSearch</name>
+            <parameters>
+              <parameter>Assets</parameter>  {the module where we take the desired fields}
+              <parameter>related_assets_sc,account</parameter> {fields we want to take the value from, in this case Assets}   
+              <parameter>id</parameter> 
+              <parameter>new value</parameter>   {default parameter; to set new values to the fields}
+              <parameter>e</parameter> {operator; in this case means: equal}
+              <parameter>related_ad_servicecontact,account_name</parameter> {fields where we will copy the values,in this case AssetDetils; the fields must be separated by coma in respective order with the above fields from Assets}
+</parameters>
+
+            </function>
+    </actions>
+</dependency>
+
+<dependency>
+    <field>related_productcomponent</field>
+    <actions>
+        <function>
+            <name>fieldDep_GetFieldSearch</name>
+  <parameters>
+              <parameter>ProductComponent</parameter> 
+              <parameter>maintenance_buyingprice,maintenance_sellingprice</parameter>      
+              <parameter>id</parameter>
+              <parameter>new value</parameter>   
+              <parameter>e</parameter>
+              <parameter>vendor_maintenance_purchasevalue,customer_maintenance_salesvalue</parameter>
+</parameters>
+
+            </function>
+    </actions>
+</dependency>
+</dependencies>
+</map>
 <br>
+```
+---
+You can add as many dependencies to copy-paste field values from different modules. As you see above we have used two `<dependency>` tags in order to take values from **Assets** when we fill the `related_assets` and to take from **ProductComponent** filling the `related_productcomponent` between `<field>` tags.
+
 ------------------------------------------------------------------------
 
 [Next](../26.validations) | Chapter 14: Validations.
