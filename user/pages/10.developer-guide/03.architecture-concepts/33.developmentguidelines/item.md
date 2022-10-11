@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - guidelines
 ---
----
 
 On this page you will find a set of code rules and general development
 workflow we try to impose in the coreBOS project. I strongly recommend
@@ -35,21 +34,16 @@ some minor adjustments to the reality of our code base. So anything you
 read there is useful.
 
 <div class="notices blue"> 
-I am open to suggestions and comments
-and I know this is a living document that may change as we go forward,
-so don't hesitate to contact me. </div>
+I am open to suggestions and comments and I know this is a living document that may change as we go forward, so don't hesitate to contact me. </div>
 
 Where developers dwell
 ----------------------
 
 The best place to contact the developer community is [on our gitter chat group](https://gitter.im/corebos/discuss).
 
-The [blog](https://blog.corebos.org) is mostly developer oriented and
-there is a lot of information here on the documentation site.
+The [blog](https://blog.corebos.org) is mostly developer oriented and there is a lot of information here on the documentation site.
 
-You can [ask in the forum](http://discussions.corebos.org/) also, but
-don't hesitate to get in touch, we are a really **friendly and helpful
-community**.
+You can [ask in the forum](http://discussions.corebos.org/) also, but don't hesitate to get in touch, we are a really **friendly and helpful community**.
 
 How to Contribute
 -----------------
@@ -148,8 +142,8 @@ Security is a very complex **and important** issue which requires a lot
 of dedication and time. In other words, **dedicate time to studying and
 understanding security issues**.
 
--   use vtlib_purify on all incoming and outgoing information
--   user Vtiger_Request to construct URLs
+- use vtlib_purify on all incoming and outgoing information
+- user Vtiger_Request to construct URLs
 
 [Read the Nextcloud recommendations](https://docs.nextcloud.com/server/14/developer_manual/general/codingguidelines.html)
 
@@ -160,9 +154,8 @@ Commit Guidelines
 
 This is a [list of things that you MUST do before executing a commit](https://github.com/tsolucio/corebos/issues/911#issue-719191770):
 
--   *git diff* check all the files that have been modified, read the
-    diff, and mentally review the change. eliminate debug messages and passwords.
--   Check for debug messages you may have left behind. Before I launch a commit I usually execute these commands:
+- *git diff* check all the files that have been modified, read the diff, and mentally review the change. eliminate debug messages and passwords.
+- Check for debug messages you may have left behind. Before I launch a commit I usually execute these commands:
 
 ```
 git diff {files} | grep dump
@@ -170,32 +163,23 @@ git diff {files} | grep fatal
 git diff {files} | grep log
 ```
 
--   Check for php errors
+- Check for php errors
 
 ```
 for f in {diff file list}; do php -l $f; done;
 ```
 
--   *git status* any new/untracked files to add?
--   Any strings that should be translated?
--   If you alter an existing function, did you check if all the existing
-    references to that function will still behave the same way?
--   If you created new code, did you try and use existing functionality
-    as much as possible?
--   [code formatting](item.md#code-formatting-and-validation-tools)
--   Ideally you should run a lint process on both PHP and javascript.
-    Please look below for the tools we use and how to execute them. I
-    will add it to the Pull Request acceptance process at some point.
--   see the checkfile executable below
--   Did you execute the unit tests and/or e2e tests?
--   **git add -p** to separate commits into semantically meaningful
-    chunks. Check if you must separate the code changes in various
-    commits. When I program I usually make some cosmetic changes or
-    modifications that are not related to the requirement I am
-    implementing. You can use the "-p" directive to split unrelated
-    changes creating concise and cohesive commit changes.
--   dedicate a moment to [think about the commit message](item.md#commit-guidelines)
--   Any documentation that should be added to the wiki?
+- *git status* any new/untracked files to add?
+- Any strings that should be translated?
+- If you alter an existing function, did you check if all the existing references to that function will still behave the same way?
+- If you created new code, did you try and use existing functionality as much as possible?
+- [code formatting](item.md#code-formatting-and-validation-tools)
+- Ideally you should run a lint process on both PHP and javascript. Please look below for the tools we use and how to execute them. I will add it to the Pull Request acceptance process at some point.
+- see the checkfile executable below
+- Did you execute the unit tests and/or e2e tests?
+- **git add -p** to separate commits into semantically meaningful chunks. Check if you must separate the code changes in various commits. When I program I usually make some cosmetic changes or modifications that are not related to the requirement I am implementing. You can use the "-p" directive to split unrelated changes creating concise and cohesive commit changes.
+- dedicate a moment to [think about the commit message](item.md#commit-guidelines)
+- Any documentation that should be added to the wiki?
 
 ### Commit Guidelines we try to adhere to
 
@@ -254,12 +238,12 @@ commits when searching, or easily locate changes when needed.
 Code Formatting and Validation tools
 ------------------------------------
 
-We recommend and use two tools to help validating the formatting issues
-in PHP and Javascript files.
+We recommend and use these tools to help validating the formatting issues in PHP and Javascript files.
 
--   [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer) for PHP
--   [ESLint](https://eslint.org) for Javascript
--   [PHP Mess Detector](https://phpmd.org/)
+- [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer) for PHP
+- [ESLint](https://eslint.org) for Javascript
+- [PHP Mess Detector](https://phpmd.org/)
+- [PHP Doctor](https://github.com/voku/PHPDoctor) We must start seriously using this and applying type definitions to our code as we move towards PHP 8 and above
 
 You can find rulesets for the above guidelines in the build/cbSR directory.
 
@@ -291,20 +275,13 @@ php -l $1
 Some important management recommendations
 -----------------------------------------
 
--   Custom modules:
-    -   Each module must have it's own repository
-    -   You must try to keep the modules' repository in sync with the
-        installs where it is in production
-    -   Since that is a bit difficult what I do is update them when I
-        need to install them somewhere
-    -   [Register your module in the extensions section](../../../08.extensions-integrations/01.corebosmodules/) so it can be found in the
-        future. You can [use the helper scripts](../../../10.developer-guide/04.development_framework/06.helperscripts/item.md#composer2readme-and-module2wiki).
--   There **MUST NOT** be any unversioned changes in production. This is MANDATORY
--   For EVERY change or customization that you have to do in coreBOS,
-    challenge yourself to find a way to make that change without
-    modifying one line of base code that you can find in the github
-    repository. You will be surprised how much can be done, you will
-    learn a lot and have much more fun :-)
+- Custom modules:
+  - Each module must have it's own repository
+  - You must try to keep the modules' repository in sync with the installs where it is in production
+  - Since that is a bit difficult what I do is update them when I need to install them somewhere
+  - [Register your module in the extensions section](../../../08.extensions-integrations/01.corebosmodules/) so it can be found in the future. You can [use the helper scripts](../../../10.developer-guide/04.development_framework/06.helperscripts/item.md#composer2readme-and-module2wiki).
+- There **MUST NOT** be any unversioned changes in production. This is MANDATORY
+- For EVERY change or customization that you have to do in coreBOS, challenge yourself to find a way to make that change without modifying one line of base code that you can find in the github repository. You will be surprised how much can be done, you will learn a lot and have much more fun :-)
 
 References and further reading
 ------------------------------

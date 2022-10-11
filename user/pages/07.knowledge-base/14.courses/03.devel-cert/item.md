@@ -31,7 +31,7 @@ taxonomy:
      -   phpmyadmin, IDE, git
      -   firefox/chrome
      -   meldmerge
-     -   phpmd, phpcs, phpcbf
+     -   phpmd, phpcs, phpcbf, phpdoctor
      -   phpunit
      -   coreBOS Programming and committing guidelines
 -   I+C Devel Environment course
