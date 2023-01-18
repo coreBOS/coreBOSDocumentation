@@ -75,6 +75,7 @@ There are currently these different types of mappings:
 - [Kanban View](16.kanban)
 - [Pivot View](21.pivot)
 - [Mass Upsert Grid](29.massupsertgrid)
+- [Popupfilter](30.popupfilter)
 
 Depending on the type of business mapping the contents of the record changes as explained next.
 
