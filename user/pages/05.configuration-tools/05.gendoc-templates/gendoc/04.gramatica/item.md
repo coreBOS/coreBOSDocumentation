@@ -41,12 +41,16 @@ We have a special helper extension that can be found under the Tools menu called
     -   if the entity or field does not exist the whole block will be ignored.
     -   inside the block fields of the first entity found may be used
     -   examples: {ifexists asset.type in (Fichero,Contacto,Aplicación)}, {ifexists Contact.tipo en (Responsable Seguridad,Responsable Ficheros)}
--   **{ifnotexists entity}…{/ifnotexists}**
-    -   negative case of **{ifexists…}**
-{ifnotexists entity.field=value}…{/ifnotexists}
-negative case of {ifexists…}
--   **{ifnotexists entity.field in (value1,value2,value2)}…{/ifnotexists}**
-    -   negative case of **{ifnotexists…}**
+- **{ifnotexists entity}…{/ifnotexists}**
+  - negative case of {ifexists…}
+- **{ifnotexists entity.field=value}…{/ifnotexists}**
+  - negative case of {ifexists…}
+- **{ifnotexists entity.field in (value1,value2,value2)}…{/ifnotexists}**
+  - negative case of {ifnotexists…}
+- **{conditional entity.field==value}…{/conditional}**
+  - all text contained inside the {conditional} and {/conditional} will be added to the final document if the condition evaluates to true. For fields with multiple values (multiple select picklist), the string |##| must be used to separate the values and ALL values in the field must be the same as the value for the entity to qualify as equal.
+  - other operators are supported: > < >= <= == !=
+  - examples: {conditional asset.type==Fichero}, {conditional contact.type==Responsable Seguridad}, {conditional campaign!=GAdwords Noviembre08}
 -   **{foreach entity}…{/foreach}**
     -   for each related entity of the main merge entity we will merge the whole text contained between the two commands and add the result to the final document
     -   if no related entity is found the whole block will be ignored
