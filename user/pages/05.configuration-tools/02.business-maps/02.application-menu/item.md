@@ -21,11 +21,11 @@ taxonomy:
         - menu
 ---
 
-The purpose of this mapping is to return the JSON layout of the given menu which is defined inside coreBOS. This is normally used to export a menu layout to external applications. This way we can use coreBOS menu editor to define the menus we want and use Global Variables to apply an escalation to return different menus to different users.
+The purpose of the coreBOS Menu Layout Mapping is to retrieve and export the JSON layout of a specified menu from the coreBOS application. This feature allows you to define menus within coreBOS using the menu editor and then export them for use in external applications. By leveraging global variables, you can dynamically apply different menus to different users based on predefined conditions.
 
 ===
 
-The accepted format is:
+The accepted format for the mapping is as follows:
 
 ```xml
 <map>
@@ -33,15 +33,15 @@ The accepted format is:
 </map>
 ```
 
-You can use the special menuname `get_name_from_menuname_parameter` to send in the name of the menu you want to retrieve as a parameter to the map. In this case the map is:
+To retrieve the menu dynamically by passing the menu name as a parameter, you can use the special menuname value `get_name_from_menuname_parameter` in the mapping:
 
 ```xml
 <map>
-  <menuname>get_name_from_menuname_parameter</menuname> 
+    <menuname>get_name_from_menuname_parameter</menuname> 
 </map>
 ```
 
-Let's suppose that you named this business map `GenericMenuAccess`, in that case the PHP code to retrieve a saved map named `SomeSavedMenuName` would be
+For example, if you have named your business map as `GenericMenuAccess`, you can use the following PHP code to retrieve a saved menu named `SomeSavedMenuName`:
 
 ```php
 $mapid = 'convert GenericMenuAccess to a crmid';
@@ -51,7 +51,7 @@ $map->retrieve_entity_info($mapid, 'cbMap');
 $mapinfo = $map->ApplicationMenu(['menuname' => 'SomeSavedMenuName']);
 ```
 
-and from web service, the coreBOS web service development tool code would be
+If you prefer to use the coreBOS web service development tool, you can use the following code:
 
 ```php
 $params = array(
@@ -64,6 +64,8 @@ $response = $httpc->doPost($params, false);
 $dmsg.= debugmsg('Webservice response', $response);
 var_dump($response);
 ```
+
+These examples demonstrate how to retrieve and utilize the coreBOS menu layout mapping to export menus for external applications or integrate them into your custom development projects.
 
 <br>
 ------------------------------------------------------------------------

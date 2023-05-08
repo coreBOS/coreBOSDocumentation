@@ -21,15 +21,15 @@ taxonomy:
         - autocomplete
 ---
 
-An autocomplete field has three configurable options:
+To configure an autocomplete field, there are three options that can be customized:
 
-- **where and how to search**: we must be able to define the module/table where we will look for values and if we want to use startswith or contains. This must include the possibility to use SQL inside cbMap that can overwrite the query to search on specific situations. Ex: search and show all the fields of one module, or show the options of one picklist. Also, it is normal to be able to configure the number of characters that launch the search
-- **what information we should return**: there will be one main entity identifier and possibly some additional fields to support the decision of what record to select
-- **what fields to fill in and with what information**. automatically copy related fields of the source module into the destinations fields of the current module (ex: address fields of Accounts into address fields of Contacts)
+- **Search Settings**: You can define the module or table where the system should search for values, specify whether to use "startswith" or "contains" for the search, and even utilize SQL queries within the cbMap to override the default search behavior in specific situations. Additionally, it is common to configure the minimum number of characters required to trigger the search.
+- **Returned Information**: You can specify the main entity identifier that should be returned when a record is selected from the autocomplete suggestions. Additionally, you can include additional fields that support the decision-making process for selecting a record.
+- **Field Population**: You have the ability to automatically populate fields in the current module with related fields from the source module. For example, copying address fields from Accounts to Contacts.
 
-Using the Extended Field Information mapping we can define all of these options.
+All these options can be defined using the Extended Field Information mapping.
 
-This next map will activate the functionality on the Potentials Name and RelatedTo field:
+Here is an example of a configuration map that activates the functionality for the "Potentials Name" and "RelatedTo" fields:
 
 **Potentials_FieldInfo**
 
@@ -137,25 +137,25 @@ This next map will activate the functionality on the Potentials Name and Related
 </map>
 ```
 
-There are only three types of fields that support autocomplete: relation or capture fields (uitype 10) and uitype 1 and 2 text fields. The only way to create uitype 2 text fields is by programming.
+There are three types of fields that support autocomplete: relation or capture fields (uitype 10), uitype 1 text fields, and uitype 2 text fields. Please note that uitype 2 text fields can only be created through programming.
 
-Each of those types have a **different** extended information structure as can be seen in the example above. The potentialname field has a flat value directive as it only can be searching on one module while the related_to field has a richer syntax due to the possibility of having to search on more than one related module.
+Each of these field types has a different extended information structure, as shown in the example above. The "potentialname" field uses a flat value directive since it only searches within one module. On the other hand, the "related_to" field has a more complex syntax because it allows searching across multiple related modules.
 
- ! Please apply the correct XML structure (as explained above) for your type of field or this functionality will not work correctly.
+To ensure the correct functionality, please apply the appropriate XML structure based on your field type.
 
 ## Product/Service Fields on Inventory Modules
 
-Luke from MajorLabel has done an incredible job of applying the autocomplete search functionality to the product/service capture in the inventory modules. Not only adding the functionality there but extending it to all the specific requirements of those lines and taking it further with some additional features.
+Luke from MajorLabel has made remarkable progress in implementing the autocomplete search functionality for product/service capture in the inventory modules. Not only did he add the functionality, but he also extended it to meet specific requirements for those lines and introduced additional features.
 
-As if that wasn't enough he went and [wrote extensively about it](https://gist.github.com/Luke1982/d886a67eb661db777d93e7e645076ecc) ([PDF](fine-tuning_the_products_services_autocomplete.pdf)).
+If you're interested, Luke has provided extensive documentation on this topic, which you can find [here](https://gist.github.com/Luke1982/d886a67eb661db777d93e7e645076ecc) ([PDF](fine-tuning_the_products_services_autocomplete.pdf)).
 
-**Thanks!!**
+**A big thanks to Luke for his contributions!**
 
 ## MultiSelect Autocomplete Fields
 
-MultiSelect Autocomplete Fields work exactly the same. The **uitype is 1025** and the extended field information is exactly the same as a normal select autocomplete field.
+For MultiSelect Autocomplete Fields, the uitype is 1025, and the extended field information follows the same structure as a normal select autocomplete field.
 
-This is what my test field definition for a **uitype 1025** in the potentials module looks like:
+Here's an example of a test field definition for a uitype 1025 in the potentials module:
 
 ```XML
 <field>
@@ -228,3 +228,5 @@ This is what my test field definition for a **uitype 1025** in the potentials mo
   </features>
 </field>
 ```
+
+Please make sure to use the correct XML structure for your specific field type to ensure the proper functionality.

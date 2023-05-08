@@ -19,27 +19,20 @@ taxonomy:
         - webservicecall
 ---
 
-## REST/SOAP call and retrieval Mapping
+This workflow task type, named "**Run Web Service**" can be used to launch a REST or SOAP call to another system and retrieve the results to be saved in fields of coreBOS or to be passed along the workflow set of tasks to be consumed in other workflow tasks by using the **getContext** function.
 
-This workflow task type, named "**Run Web Service**" can be used to
-launch a REST or SOAP call to another system and retrieve the results to
-be saved in fields of coreBOS or to be passed along the workflow set of
-tasks to be consumed in other workflow tasks by using the **getContext**
-function.
+===
 
-To use this task type we need a map of type **Webservice Mapping**. This
-map must be selected in the workflow task.
+To use this task type we need a map of type **Webservice Mapping**. This map must be selected in the workflow task.
 
 ![](1.png?width=100%)
 
-In the task, we can attach just one map which can be selected using the
-input field.
+In the task, we can attach just one map which can be selected using the input field.
 
 ![](2.png?width=100%)
 ![](3.png?width=100%)
 
-The "**Web Service Mapping**" defines the web service method parameters
-that will be launched and is divided into three sections:
+The "**Web Service Mapping**" defines the web service method parameters that will be launched and is divided into three sections:
 
 - **wsconfig** where we define the necessary settings to make the call
 - **fields** which define the parameters of the call and will permit us to capture values from the coreBOS application
@@ -92,7 +85,7 @@ this section is processed by the same engine that is used in the [Field Mapping 
 #### An example of Map for SOAP Call:
 
 ```xml
-    <map>
+<map>
     <originmodule>
     <originname>Accounts</originname>
     </originmodule>
@@ -154,13 +147,13 @@ this section is processed by the same engine that is used in the [Field Mapping 
     </destination>
     </field>
     </Response>
-    </map>
+</map>
 ```
 
 #### An example of Map for REST Call:
 
 ```xml
-    <map>
+<map>
     <originmodule>
     <originname>Accounts</originname>
     </originmodule>
@@ -208,7 +201,7 @@ this section is processed by the same engine that is used in the [Field Mapping 
     </destination>
     </field>
     </Response>
-    </map>
+</map>
 ```
 
 Note how the $coddivisa variable in the URL `http://localhost/facturascripts/api/3/divisas/$coddivisa` will be substituted by the actual value that we have in coreBOS as defined in the fields section. In this case, the value of the tickersymbol field in the Account will be read and $coddivisa will be substituted with that value.
@@ -218,7 +211,7 @@ Note how the $coddivisa variable in the URL `http://localhost/facturascripts/api
 This first map executes an authentication call and loads the authorization token into the workflow context and the second task uses that value to make an operation call.
 
 ```xml
-    <map>
+<map>
     <originmodule>
     <originname>Accounts</originname>
     </originmodule>
@@ -256,11 +249,11 @@ This first map executes an authentication call and loads the authorization token
     </destination>
     </field>
     </Response>
-    </map>
+</map>
 ```
 
 ```xml
-    <map>
+<map>
     <originmodule>
     <originname>Accounts</originname>
     </originmodule>
@@ -308,7 +301,7 @@ This first map executes an authentication call and loads the authorization token
     </destination>
     </field>
     </Response>
-    </map>
+</map>
 ```
 
 ### Related Articles

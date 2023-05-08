@@ -21,13 +21,11 @@ taxonomy:
         - combobox
 ---
 
----
+The functionality of a Combobox with static values is useful for input fields where users can enter any text they want, but you want to suggest a predefined set of standard or accepted values.
 
-This type of functionality applies to normal input fields where the user can type in any text they want but you want to suggest a preferred set of standard/accepted values.
+To implement this functionality, you can refer to the [definition here](https://www.lightningdesignsystem.com/components/combobox/#Autocomplete-Combobox).
 
-The definition can be [found here](https://www.lightningdesignsystem.com/components/combobox/#Autocomplete-Combobox).
-
-The map looks like this:
+The map for configuring a Combobox with static values looks like this:
 
 ```XML
 <field>
@@ -45,3 +43,7 @@ The map looks like this:
   </features>
 </field>
 ```
+
+In this map, the `<fieldname>` element specifies the name of the field you want to configure as a Combobox. The `<values>` element contains a list of static values that will be suggested to the user when they interact with the field. You can add as many `<value>` elements as needed to define the desired set of values.
+
+By using this configuration, the Combobox will present the predefined values as suggestions to the user, enhancing the user experience and ensuring consistent data entry.

@@ -19,26 +19,26 @@ taxonomy:
     tag:
         - moduleset
 ---
----
 
-The purpose of this mapping is to define a heterogeneous set of module
-names. Simply a bunch of modules. This could be used to define a set of
-modules to launch a mass operation upon or a set of modules that must be
-excluded from some global process.
+The Module Set Mapping serves the purpose of defining a heterogeneous set of module names. It allows you to gather a collection of modules for various use cases, such as performing mass operations or excluding specific modules from a global process.
 
-The accepted format is:
+The accepted format for the mapping is as follows:
+
 ```xml
-    <map>
-      <modules>
-        <module>ModuleName</module>
-        <module>ModuleName2</module>
-        ...
-      </modules> 
-    </map>
+<map>
+  <modules>
+    <module>ModuleName1</module>
+    <module>ModuleName2</module>
+    ...
+  </modules> 
+</map>
 ```
-You will be able to get the set of modules using the getFullModuleSet()
-method.
 
+Within the `<modules>` section, you can specify multiple `<module>` elements, each representing a module in the mapping. Simply list the names of the desired modules within the corresponding tags.
+
+Once the mapping is defined, you can utilize the `getFullModuleSet()` method to retrieve the set of modules defined in the mapping. This method provides access to the complete module set, allowing you to perform operations or make decisions based on the modules included.
+
+By utilizing the Module Set Mapping and the `getFullModuleSet()` method, you can conveniently manage and work with a defined set of modules within your coreBOS application.
 
 <br>
 ------------------------------------------------------------------------

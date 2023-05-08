@@ -20,11 +20,11 @@ taxonomy:
         - fieldinfo
 ---
 
-The purpose of this mapping is to define a set of additional features on fields. Instead of adding columns to the vtiger_field table and creating different UI settings options we add this mapping where you can configure the extra information for each field.
+The purpose of this mapping is to provide additional features for fields in a structured way. Instead of modifying the vtiger_field table and creating various UI settings options, we use this mapping to configure extra information for each field.
 
 ===
 
-The accepted format is:
+The accepted format for the mapping is as follows:
 
 ```xml
 <map>
@@ -53,10 +53,9 @@ The accepted format is:
 </map>
 ```
 
-A **feature** can have either a unique value or an array of values. If both are given, the unique value will be used.
+A **feature** can have a single unique value or an array of values. If both are provided, the unique value will take precedence.
 
-
-For example, to define an RTE field we would have:
+For example, to define a Rich Text Editor (RTE) field, use the following mapping:
 
 ```xml
 <map>
@@ -77,13 +76,15 @@ For example, to define an RTE field we would have:
 </map>
 ```
 
-The above map will activate the RTE in the SalesOrder description field.
+The above mapping will enable the RTE feature for the "description" field in the SalesOrder module.
 
-As with other Business Maps, the name of the record is what will determine if it is used or not and on what module. In this case the name of the record must be: **{MODULENAME}_FieldInfo**. For the example map above to work it must be saved in a record whose name is **SalesOrder_FieldInfo**
+Similar to other Business Maps, the record's name determines whether it is used and in which module. In this case, the record must be named `{MODULENAME}_FieldInfo`. To make the example mapping above work, save it in a record named `SalesOrder_FieldInfo`.
 
-The information in this mapping is available directly in the DetailViewUtils and EditViewUtils scripts and also in the Detail and Edit View Smarty templates. You can [study this commit](https://github.com/tsolucio/corebos/commit/97d26c2a7d32a84fee4737e40f099a8166484e64) where we access this information to add generic support for RTE fields.
+The information in this mapping is directly available in the DetailViewUtils and EditViewUtils scripts, as well as in the Detail and Edit View Smarty templates. You can refer to this commit for an example of how we access this information to add generic support for RTE fields.
 
-Another example would be to have different settings for an autocomplete field. Something like this:
+The information in this mapping is directly available in the DetailViewUtils and EditViewUtils scripts, as well as in the Detail and Edit View Smarty templates. You can refer to [this commit](https://github.com/tsolucio/corebos/commit/97d26c2a7d32a84fee4737e40f099a8166484e64) for an example of how we access this information to add generic support for RTE fields.
+
+Another example involves configuring different settings for an autocomplete field. Here's the mapping structure:
 
 ```xml
 <map>
@@ -120,9 +121,9 @@ Another example would be to have different settings for an autocomplete field. S
 </map>
 ```
 
-Which defines that the autocomplete must show the "entityfield" followed by the list of "showfields" to the user while it permits them to search on the list of "searchfields" and then will fill in the "fillfields" with the values of the indicated record fields.
+This map defines that the autocomplete field must show the "entityfield" followed by the list of "showfields" to the user, while permitting them to search on the list of "searchfields," and then filling in the "fillfields" with the values of the indicated record fields.
 
-or like this for a multioptional autocomplete field:
+Alternatively, if we want to configure a multioptional autocomplete field, we could use a map like this one:
 
 ```xml
 <map>
@@ -248,7 +249,6 @@ or like this for a multioptional autocomplete field:
   </fields>
 </map>
 ```
-
 
 <br>
 ------------------------------------------------------------------------

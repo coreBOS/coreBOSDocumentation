@@ -19,25 +19,57 @@ taxonomy:
     tag:
         - detailviewlayout
 ---
----
 
-The purpose of this mapping is to define the structure of a
-master-detail relationship between two modules that will permit us to
-construct a special module editor.
+The Master Detail Mapping in coreBOS allows you to establish a hierarchical relationship between two modules, where one module serves as the master and the other as the detail. This mapping defines the behavior and functionality associated with the master-detail relationship, such as record creation, deletion, visibility, and data synchronization.
 
-The inventory modules are examples of master-detail modules, there is a
-first section of "header" data followed by a set of lines that depend on
-it (product lines in this case).
+To create a master-detail relationship between two modules, you need to define a Master Detail Mapping using XML configuration. The accepted format for the Master Detail Mapping is as follows:
+
+```xml
+<map>
+  <mastermodule>MasterModuleName</mastermodule>
+  <detailmodule>DetailModuleName</detailmodule>
+  <relationname>relation_name</relationname>
+  <detailfields>
+    <field>
+      <fieldname>fieldname</fieldname>
+      <mandatory>0|1</mandatory>
+      <edit>0|1</edit>
+      <quickcreate>0|1</quickcreate>
+    </field>
+    ...
+  </detailfields>
+  <relationfields>
+    <field>
+      <masterfield>MasterFieldName</masterfield>
+      <detailfield>DetailFieldName</detailfield>
+    </field>
+    ...
+  </relationfields>
+</map>
+```
+
+The `<map>` element represents the Master Detail Mapping. Within the `<map>` section, you specify the following elements:
+
+- `<mastermodule>`: Specifies the name of the master module.
+- `<detailmodule>`: Specifies the name of the detail module.
+- `<relationname>`: Specifies the name of the relationship between the master and detail modules.
+- `<detailfields>`: Contains a list of `<field>` elements that define the fields in the detail module associated with the master-detail relationship. Each `<field>` element includes the `<fieldname>`, `<mandatory>`, `<edit>`, and `<quickcreate>` tags to define the field behavior.
+- `<relationfields>`: Contains a list of `<field>` elements that define the mapping between fields in the master and detail modules. Each `<field>` element includes the `<masterfield>` and `<detailfield>` tags to specify the corresponding fields in the master and detail modules.
+
+By configuring the Master Detail Mapping, you establish the relationship between the master and detail modules, define the fields and their behavior in the detail module, and specify the mapping between corresponding fields in the master and detail modules.
+
+The Master Detail Mapping in coreBOS enables you to create a structured and hierarchical data model, allowing you to manage related records, enforce data integrity, and maintain data consistency across modules. It provides a powerful mechanism for organizing and manipulating data within your coreBOS application.
+
+The inventory modules are examples of master-detail modules, there is a first section of "header" data followed by a set of lines that depend on it (product lines in this case).
 
 With this mapping we can specify:
 
--   the relationship between parent and child modules
--   the fields that we should show in the list and detail view of the
-    dependent module. if the field is a coreBOS field, the internal
-    fieldID and column name will be returned with the map definition
--   the aggregation fields that need to be calculated and shown
+- the relationship between parent and child modules
+- the fields that we should show in the list and detail view of the dependent module. if the field is a coreBOS field, the internal fieldID and column name will be returned with the map definition
+- the aggregation fields that need to be calculated and shown
 
 The full syntax of the map looks like this:
+
 ```xml
     <map>
       <originmodule>Master Module</originmodule>
@@ -233,21 +265,19 @@ The full syntax of the map looks like this:
       </aggregations>
     </map>
 ```
+
 **Other information returned with the map**
 
-Besides the information introduced in the map, the programmer will also
-get:
+Besides the information introduced in the map, the programmer will also get:
 
--   **mapnameraw** the map name
--   **mapname** the map name with no spaces nor special characters in
-    lower case (for HTML ID)
--   arrays of fields
-    -   **viewfields** fieldIDs of the fields to show
-    -   **viewfieldnames** names of the fields to show
-    -   **editfields** fieldIDs of the fields to edit
-    -   **editfieldnames** names of the fields to edit
--   **targetmoduleidfield** the corebos module ID field for the Detail
-    module
+- **mapnameraw** the map name
+- **mapname** the map name with no spaces nor special characters in lower case (for HTML ID)
+- arrays of fields
+  - **viewfields** fieldIDs of the fields to show
+  - **viewfieldnames** names of the fields to show
+  - **editfields** fieldIDs of the fields to edit
+  - **editfieldnames** names of the fields to edit
+- **targetmoduleidfield** the corebos module ID field for the Detail module
 
 Inventory type Master-Details need an interface like this:
 
@@ -269,88 +299,75 @@ necessary map and actions.
 
 For this to work, we have to follow some rules and set up two actions.
 
--   In the business map record, the **target module** picklist field
-    **MUST** be the detail module
--   The **sortfield MUST** be an integer
--   You must create a business action with the Master-Detail widget,
-    something like this
-```
-    block://MasterDetailGridLayoutWidget:modules/Utilities/MasterDetailGridLayoutWidget.php:PID=$RECORD$&mapname=Project-ProjectTask
-```
-The link type is **DETAILVIEWWIDGET** and the module it is on has to be
-the Master module (Projects in the example above)
+- In the business map record, the **target module** picklist field **MUST** be the detail module
+- The **sortfield MUST** be an integer
+- You must create a business action with the Master-Detail widget, something like this
 
--   You must create a business action that loads the Master-Detail
-    javascript code, something like this
+```
+  block://MasterDetailGridLayoutWidget:modules/Utilities/MasterDetailGridLayoutWidget.php:PID=$RECORD$&mapname=Project-ProjectTask
+```
+
+The link type is **DETAILVIEWWIDGET** and the module it is on has to be the Master module (Projects in the example above)
+
+- You must create a business action that loads the Master-Detail javascript code, something like this
+
 ```js
-    include/js/masterdetailgrid.js
+  include/js/masterdetailgrid.js
 ```
-     
 
-The link type is **HEADERSCRIPT** and the module it is on has to be the
-Master module (Projects in the example above)
+The link type is **HEADERSCRIPT** and the module it is on has to be the Master module (Projects in the example above)
 
--   List view datasource: the special value **corebos** means that the
-    detail is a normal coreBOS module
--   icon: in the header of the master-detail block we follow the LDS
-    guidelines and prefix the title with an icon if given here. You can
-    select any valid icon from LDS
+- List view datasource: the special value **corebos** means that the detail is a normal coreBOS module
+- icon: in the header of the master-detail block we follow the LDS guidelines and prefix the title with an icon if given here. You can select any valid icon from LDS
 
 [Read about the Making of the Generic Editor](../05.creatinggenericeditor)
 
 Master Detail on Inventory Modules
 ==================================
 
-There is a special implementation where this mapping can be used. The
-four existing inventory modules will look for specific master-detail
-mapping with the InventoryDetail module and, if found, they will permit
-you to edit fields on that module in the product lines. This makes it
-easy to track a serial number, add an expiration date, track units
-served, or calculate costs for each line.
+There is a special implementation where this mapping can be used. The four existing inventory modules will look for specific master-detail mapping with the InventoryDetail module and, if found, they will permit you to edit fields on that module in the product lines. This makes it easy to track a serial number, add an expiration date, track units served, or calculate costs for each line.
 
-As usual with Business Mappings the name is the means that the system
-uses to detect the ones to apply and, in this case, the name must be
-**{ModuleName}InventoryDetails**
+As usual with Business Mappings the name is the means that the system uses to detect the ones to apply and, in this case, the name must be **{ModuleName}InventoryDetails**
 
-Here is a Master-Detail mapping for the PurchaseOrder module
-(PurchaseOrderInventoryDetails) that will permit you to edit
-units\_delivered\_received, a custom field and the product cost:
+Here is a Master-Detail mapping for the PurchaseOrder module (PurchaseOrderInventoryDetails) that will permit you to edit units\_delivered\_received, a custom field and the product cost:
+
 ```xml
-    <map>
-      <originmodule>PurchaseOrder</originmodule>
-      <targetmodule>InventoryDetails</targetmodule>
-      <linkfields>
-      <originfield>lineitem_id</originfield>
-      <targetfield>lineitem_id</targetfield>
-      </linkfields>
-      <sortfield>sequence_no</sortfield>
-      <detailview>
-        <fields>
-          <field>
-            <fieldtype>corebos</fieldtype>
-            <fieldname>units_delivered_received</fieldname>
-            <editable>1</editable>
-            <mandatory>1</mandatory>
-            <hidden>0</hidden>
-          </field>
-          <field>
-            <fieldtype>corebos</fieldtype>
-            <fieldname>cf_795</fieldname>
-            <editable>1</editable>
-            <mandatory>1</mandatory>
-            <hidden>0</hidden>
-          </field>
-          <field>
-            <fieldtype>corebos</fieldtype>
-            <fieldname>cost_price</fieldname>
-            <editable>1</editable>
-            <mandatory>1</mandatory>
-            <hidden>0</hidden>
-          </field>
-       </fields>
-      </detailview>
-    </map>
+<map>
+  <originmodule>PurchaseOrder</originmodule>
+  <targetmodule>InventoryDetails</targetmodule>
+  <linkfields>
+  <originfield>lineitem_id</originfield>
+  <targetfield>lineitem_id</targetfield>
+  </linkfields>
+  <sortfield>sequence_no</sortfield>
+  <detailview>
+    <fields>
+      <field>
+        <fieldtype>corebos</fieldtype>
+        <fieldname>units_delivered_received</fieldname>
+        <editable>1</editable>
+        <mandatory>1</mandatory>
+        <hidden>0</hidden>
+      </field>
+      <field>
+        <fieldtype>corebos</fieldtype>
+        <fieldname>cf_795</fieldname>
+        <editable>1</editable>
+        <mandatory>1</mandatory>
+        <hidden>0</hidden>
+      </field>
+      <field>
+        <fieldtype>corebos</fieldtype>
+        <fieldname>cost_price</fieldname>
+        <editable>1</editable>
+        <mandatory>1</mandatory>
+        <hidden>0</hidden>
+      </field>
+    </fields>
+  </detailview>
+</map>
 ```
+
 See this video for a demonstration:
 
 <iframe width="578" height="361" src="https://www.youtube.com/embed/zfuEuGUhKm0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

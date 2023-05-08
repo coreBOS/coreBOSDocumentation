@@ -20,17 +20,55 @@ taxonomy:
         - mapping
         - field
 ---
----
 
-This business rule serves the purpose of filling in fields of a new record when coming from another module's record or setting default values for the module you are creating. For example, when creating an Invoice from a SalesOrder or an Opportunity from a Contact.
+Field Mapping Business Mapping is a powerful tool that allows users to define field mappings and set default values when creating new records in different modules. It provides flexibility and efficiency by automatically populating fields based on predefined rules and conditions. In this article, we will explore the structure and functionality of Field Mapping Business Mapping and how it can be used to streamline record creation processes.
 
 ===
 
-It will permit you to define what values you want to copy from the origin module or simply what values you want to set by default when creating in the way.
+The format of the Field Mapping Business Mapping is based on XML. It consists of several elements that define the origin module, target module, and the fields to be mapped. Let's break down the structure of the XML file:
+
+1. **Origin Module**: This element specifies the module from which the record is originating. It contains the `<originname>` tag, which identifies the name of the origin module.
+
+2. **Target Module**: This element defines the module in which the new record will be created. It includes the `<targetname>` tag, which indicates the name of the target module.
+
+3. **Fields**: This section contains the mappings for individual fields. Each `<field>` element represents a field to be mapped. Within the `<field>` element, the following sub-elements are defined:
+
+4. **Field Name**: This element, denoted by `<fieldname>`, specifies the name of the field in the target module.
+
+5. **Origin Fields**: This element, denoted by `<Orgfields>`, defines the origin fields that provide values for the target field. Multiple origin fields can be specified, and their values can be concatenated using a delimiter.
+    * **Origin Field**: Each origin field is enclosed within the `<Orgfield>` element. It consists of the following sub-elements:
+      * **Origin Field Name**: This element, denoted by `<OrgfieldName>`, specifies the name of the origin field.
+      * **Origin Field ID**: This element, denoted by `<OrgfieldID>`, indicates the type of the origin field. It can have values like FIELD, CONST, TEMPLATE, EXPRESSION, or RULE.
+
+    * **Delimiter**: This element, denoted by `<delimiter>`, defines the delimiter used to concatenate multiple origin fields.
+
+    * **Master**: This element, denoted by `<master>`, is an optional field used for integration mapping between two systems.
+
+4. **OrgfieldID Directives**: The `<OrgfieldID>` element within each `<Orgfield>` element specifies the type of the origin field. Depending on the type, different actions can be performed. The available types are:
+
+   * **FIELD**: The origin field contains a field or field expression.
+   * **CONST**: The origin field is used as is, without any transformation.
+   * **TEMPLATE**: The origin field is treated as a string template parsed by the Message engine.
+   * **EXPRESSION**: The origin field contains a workflow expression to be parsed by the workflow engine.
+   * **RULE**: The origin field contains the ID or name of a business rule. See below.
+
+Each `<OrgfieldID>` directive can also have a `<postProcess>` directive, which allows additional processing of the field value.
+
+**Mapping Name**: To apply the mapping, the name of the mapping must follow a specific format:
+
+`{OriginModule}2{TargetModule}`
+
+The mapping must be created with this name, and the module names must match their internal module names. If multiple mappings are required based on the user, a new entry in the Global Variable name picklist called
+
+`BusinessMapping_{OriginModule}2{TargetModule}`
+
+must be created, and a corresponding Global Variable of this type should be defined.
+
+This map will permit you to define what values you want to copy from the origin module or simply what values you want to set by default when creating a new record.
 
  !!! When creating a new record you always have access to all the fields of the current user using the FIELD or TEMPLATE types. For example: `$(assigned_user_id : (Users) first_name)`
 
-The accepted format is:
+A commented example of the accepted format is:
 
 ```xml
 <map>
@@ -94,21 +132,13 @@ The accepted format is:
       </Orgfields>
     </field>
     <field>
-      .....
+      ...
     </field>
   </fields>
 </map>
 ```
 
-The `OrgfieldID` directive may have 5 values:
-
-* FIELD: the OrgfieldName contains a field or field expression
-* CONST: the OrgfieldName will be used "as is", no transformation applied
-* TEMPLATE: the OrgfieldName will be used as a string template parsed by the Message engine (like an email)
-* EXPRESSION: the OrgfieldName contains a workflow expression and will be parsed by the workflow engine using the context of the record
-* RULE: the OrgfieldName will contain the ID or name of a business rule. See below for more information.
-
-Each `OrgfieldID` directive may have a `postProcess` directive. This permits us to do some additional processing in cases where the `OrgfieldID` directive is not expressive enough. Usually this is used to specify the format of the result to be used in the mapping. For example, in general coreBOS uses strings for all its' results but we may need to use an integer or float or strip slashes that are returned from the expression before inserting it into the resulting array. Some of the methods that can be used are:
+Each `OrgfieldID` directive may have a `postProcess` directive. This permits us to do some additional processing in cases where the `OrgfieldID` directive is not expressive enough. Usually this is used to specify the format of the result to be used in the mapping. For example, in general, coreBOS uses strings for all its' results but we may need to use an integer or float or strip slashes that are returned from the expression before inserting it into the resulting array. Some of the methods that can be used are:
 
 - intval - Get the integer value of a variable
 - boolval - Get the boolean value of a variable
@@ -120,20 +150,7 @@ Each `OrgfieldID` directive may have a `postProcess` directive. This permits us 
 - json_encode
 - json_decode
 
-For this map to be applied, the name of the mapping must follow a specific format which is
-
-```
-{OriginModule}2{TargetModule}
-```
-you must create the mapping exactly with that name and the module names must be exactly their internal module name. If you want to have more than one mapping that will be applied depending on the user you must also create a new entry in the Global Variable name picklist called
-
-```
-BusinessMapping_{OriginModule}2{TargetModule}
-```
-
-and then define a Global Variable of this type and select the corresponding Business Mapping.
-
-For example, if you create a Mapping called *Contacts2Potentials* and set it's mapping to the one below, you will get the name set to the contact's name, the closing date set to 30 days from now and the sales stage set to Qualifying.
+For example, if you create a Mapping called *Contacts2Potentials* and set it's mapping to the one below, you will get the name set to the contact's name, the closing date set to 30 days from now and the sales stage set to `Qualifying`.
 
 Then call the create page of Potentials from a link passing in the variable **cbfromid** or from a related list, which already has this variable.
 
@@ -151,9 +168,11 @@ Then call the create page of Potentials from a link passing in the variable **cb
       <Orgfields>
         <Orgfield>
           <OrgfieldName>firstname</OrgfieldName>
+          <OrgfieldID>field</OrgfieldID>
         </Orgfield>
         <Orgfield>
           <OrgfieldName>lastname</OrgfieldName>
+          <OrgfieldID>field</OrgfieldID>
         </Orgfield>
         <delimiter> </delimiter>
       </Orgfields>
@@ -282,7 +301,7 @@ Let's suppose we called this business map "getContactFromSeller", then we would 
 
 ## Accessing via web service
 
-This type of map can be processed using the **ProcessMap** end-point
+Field Mapping Business Mapping can be processed using the **ProcessMap** endpoint in the web service. This allows seamless integration with other systems and enables automated record creation with predefined field
 
 <br>
 ------------------------------------------------------------------------

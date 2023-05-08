@@ -19,86 +19,66 @@ taxonomy:
     tag:
         - duplicaterecords
 ---
----
 
-The accepted format is
+The purpose of the duplicate map is to define which related modules should be duplicated when executing the Duplicate Records workflow task.
 
 ===
 
+This is a workflow configuration map. It permits you to define the related modules that will be duplicated when launching a Duplicate Records workflow task.
+
+The accepted format is
+
 ```xml
-    <map>
-        <originmodule>
-            <originname>Contacts</originname> {optional}
-        </originmodule>
-        <relatedmodules>
-            <relatedmodule>
-                <module></module>
-                <relation>m:m</relation> {optional}
-            </relatedmodule>
-            ...
-            <relatedmodule>
-                <module></module>
-                <relation>1:1</relation>
-            </relatedmodule>
-        </relatedmodules>
-        <DuplicateDirectRelations>false</DuplicateDirectRelations> Allowed values: true, false
-    </map>
+<map>
+  <originmodule>
+    <originname>ModuleName</originname> {optional}
+  </originmodule>
+  <relatedmodules>
+    <relatedmodule>
+      <module></module>
+      <relation>m:m</relation> {optional}
+    </relatedmodule>
+    ...
+    <relatedmodule>
+      <module></module>
+      <relation>1:1</relation>
+    </relatedmodule>
+  </relatedmodules>
+  <DuplicateDirectRelations>false</DuplicateDirectRelations> Allowed values: true, false
+  <LaunchWorkflows>
+    <workflow>name or ID</workflow>
+  </LaunchWorkflows>
+</map>
 ```
-This is a workflow configuration map. It permits you to define the
-related modules that will be duplicated when launching a Duplicate
-Records workflow task.
 
-The coreBOS application supports mass duplication of records by means of
-the **Duplicate Records** workflow task. The idea is that you can
-duplicate a record and all its related information in one step. The task
-will do the next set of steps when launched:
+The coreBOS application supports mass duplication of records by means of the **Duplicate Records** workflow task. The idea is that you can duplicate a record and all its related information in one step. The task will do the next set of steps when launched:
 
--   duplicate the record launching the workflow
--   relate the duplicated record with all the records the main record is
-    related with by m:m
--   create new related records for all the directly related records
-    (1:n), which effectively mass creates many records, duplicates
-    themselves of all the records related to the main record
+- duplicate the record launching the workflow
+- relate the duplicated record with all the records the main record is related with by m:m
+- create new related records for all the directly related records (1:n), which effectively mass creates many records, duplicates themselves of all the records related to the main record
 
 This map permits us to tune the way we want this duplication to work.
 
-By default, those records which are directly related to the one being
-duplicated are **NOT** duplicated. This means, for example, that if we
-are duplicating a Contact which is related to Account X, the new
-duplicated Contact will still be related to the same Account X. If we
-set the **DuplicateDirectRelations** directive to TRUE, then a new
-record will be created for each direct relation. In the previous
-example, the duplicated Contact would be related to a new Account Y
-which would be a duplicate of Account X.
+By default, those records which are directly related to the one being duplicated are **NOT** duplicated. This means, for example, that if we are duplicating a Contact which is related to Account X, the new duplicated Contact will still be related to the same Account X. If we set the **DuplicateDirectRelations** directive to TRUE, then a new record will be created for each direct relation. In the previous example, the duplicated Contact would be related to a new Account Y which would be a duplicate of Account X.
 
-Also, by default, the mass duplicate task will duplicate all relations
-of the record. If it is an m:m relation the records will end up being
-related to both records; the original and the duplicate. If the relation
-is 1:n, then new records will be created and related to the duplicate
-record.
+Also, by default, the mass duplicate task will duplicate all relations of the record. If it is an m:m relation the records will end up being related to both records; the original and the duplicate. If the relation is 1:n, then new records will be created and related to the duplicate record.
 
 <div class="notices blue">
-Only standard vtlib relations are
-supported (get\_dependents\_list and get\_related\_list)
+Only standard vtlib relations are supported (get_dependents_list and get_related_list)
 </div>
 
-Using the **relatedmodule** directives we can limit the relations we
-want to be duplicated in order to avoid doing more work than necessary
-and duplicating information that does not need to be repeated.
+Using the **relatedmodule** directives we can limit the relations we want to be duplicated in order to avoid doing more work than necessary and duplicating information that does not need to be repeated.
 
 Infinite loops
 --------------
 
-Workflows are not launched on the main record being duplicated, so we
-avoid getting into an infinite loop at this first stage.
+Workflows are not launched on the main record being duplicated, so we avoid getting into an infinite loop at this first stage.
 
-Workflows are launched on all related records that are created, which
-opens the possibility of infinite loops. For example, if the
-**DuplicateDirectRelations** directive is set to true on the related
-records they will create a new record in the main module for sure.
+Workflows are launched on all related records that are created, which opens the possibility of infinite loops. For example, if the **DuplicateDirectRelations** directive is set to true on the related records they will create a new record in the main module for sure.
 
-So be very careful with the rules and configurations you set when
-duplicating.
+So be very careful with the rules and configurations you set when duplicating.
+
+Sometimes it is necessary to execute some workflows on the main record being duplicated. For this case, the map supports the `<LaunchWorkflows>` directive. This directive contains a list of workflow IDs or names that will be executed on the main duplicated record. Please be very careful as this can easily create infinite loops.
 
 Duplicating second level records
 --------------------------------
@@ -142,47 +122,42 @@ also a helpful field to have around. You can set it to displaytype 3 or
 4 if you don't want to have it on the display.
 
 This is the code to add the field:
+
 ```php
-    <?php
+<?php
 
-    // Turn on debugging level
-    $Vtiger_Utils_Log = true;
+// Turn on debugging level
+$Vtiger_Utils_Log = true;
 
-    include_once('vtlib/Vtiger/Module.php');
+include_once('vtlib/Vtiger/Module.php');
 
-    $modname = 'Potentials'; // Or whatever module you want to have this on.
-    $module = Vtiger_Module::getInstance($modname);
+$modname = 'Potentials'; // Or whatever module you want to have this on.
+$module = Vtiger_Module::getInstance($modname);
 
-    if($module) {
-        $blockInstances = Vtiger_Block::getAllForModule($module);
-        $blockInstance = reset($blockInstances); // get first block
-
-        if($blockInstance) {
-
-            $field = new Vtiger_Field();
-            $field->name = 'isduplicatedfromrecordid';
-            $field->label= 'isduplicatedfromrecordid';
-            $field->table = $module->basetable;
-            $field->column = 'isduplicatedfromrecordid';
-            $field->columntype = 'INT(11)';
-            $field->uitype = 10;
-            $field->displaytype = 1;
-            $field->typeofdata = 'I~O';
-            $field->presence = 0;
-            $blockInstance->addField($field);
-            $field->setRelatedModules(Array($modname));
-            
-            echo "<br><b>Added Field to $modname module.</b><br>";
-
-        } else {
-            echo "<b>Failed to find $modname block</b><br>";
-        }
-
+if ($module) {
+    $blockInstances = Vtiger_Block::getAllForModule($module);
+    $blockInstance = reset($blockInstances); // get first block
+    if ($blockInstance) {
+        $field = new Vtiger_Field();
+        $field->name = 'isduplicatedfromrecordid';
+        $field->label= 'isduplicatedfromrecordid';
+        $field->table = $module->basetable;
+        $field->column = 'isduplicatedfromrecordid';
+        $field->columntype = 'INT(11)';
+        $field->uitype = 10;
+        $field->displaytype = 1;
+        $field->typeofdata = 'I~O';
+        $field->presence = 0;
+        $blockInstance->addField($field);
+        $field->setRelatedModules(Array($modname));
+        echo "<br><b>Added Field to $modname module.</b><br>";
     } else {
-        echo "<b>Failed to find $modname module.</b><br>";
+        echo "<b>Failed to find $modname block</b><br>";
     }
-
-    ?>
+} else {
+    echo "<b>Failed to find $modname module.</b><br>";
+}
+?>
 ```
 
 <br>

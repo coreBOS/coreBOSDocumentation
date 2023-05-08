@@ -19,200 +19,186 @@ taxonomy:
     tag:
         - fielddependency
 ---
----
 
-This type of map permits you to define dependencies between fields in
-edit mode. For example, it will permit you to make a field read-only
-(not editable) or not depending on the value selected in a given field
-or to change the available values in a picklist depending on the value.
+The CoreBOS Field Dependency Business Mapping is a mechanism that allows you to define dependencies between fields in different modules within the CoreBOS CRM system. It enables you to establish relationships and dependencies among fields, which determine their visibility and availability based on the values of other fields.
 
-The goal of this mapping is to define a set of rules/conditions and
-actions to be applied while editing a field in a coreBOS form.
+===
 
-The trigger event will be the onChange HTML event. Whenever a field
-changes its’ value in a form we will evaluate a given set of conditions
-and if they are true we will apply a set of actions.
+By defining field dependencies using the coreBOS Field Dependency Business Mapping, you can configure complex relationships between fields in different modules. This helps to enforce data integrity, streamline user interactions, and ensure that the right fields are available at the right time based on specific conditions.
 
-Since we will be evaluating the field on a per-module basis and to avoid
-additional time looking for related values via AJAX, the conditions will
-be evaluated using only information located on the form.
+The mapping is typically used in customizations and extensions of the CoreBOS CRM system to tailor the behavior of fields and modules according to specific business requirements and workflows.
 
-The supported condition operators are the same ones we support in the
-custom view filter system (see [Conditional Popup](../../../10.developer-guide/04.development_framework/11.develtutorials/19.conditional_popup) and [Popup Open Hook](../../../10.developer-guide/04.development_framework/11.develtutorials/19.conditional_popup):
+The mapping is defined using an XML format. Here's an abstraction of the structure:
 
--   e: igual | equal | "="
--   n: distinto | not equal | "&lt;&gt;"
--   s: empieza con | begins with | "LIKE" ("$value%")
--   Ns: | does not begin with | "LIKE" !("$value%")
--   ew: termina con | ends with | "LIKE" ("%$value")
--   New: | does not end with | "LIKE" !("$value%")
--   c: contiene | like | "LIKE" ("%$value%")
--   k: no contiene | not like | "NOT LIKE" ("%$value")
--   l: menor que | less than | "&lt;"
--   b: menor que | less than | "&lt;"
--   g: mayor que | greater than | "&gt;"
--   a: mayor que | greater than | "&gt;"
--   m: menor o igual | less or equal | "&lt;="
--   h: mayor o igual | greater or equal | "&gt;="
+```xml
+<map>
+  <originmodule>
+    <originname>Module_Name</originname>
+  </originmodule>
+  <dependencies>
+    <dependency>
+      <mode></mode> <!-- optional -->
+      <field>Field_Name</field>
+      <conditions>
+        <!-- Define the conditions for the field dependency -->
+        <condition>[...]</condition>
+        ...
+      </conditions>
+      <actions>
+        <!-- Define the actions to be performed when the conditions are met -->
+        <mode></mode> <!-- optional -->
+        ...
+      </actions>
+    </dependency>
+    ...
+  </dependencies>
+</map>
+```
 
-Group conditions can be created concatenating with the typical AND/OR
-operators. We will be using a similar concept to the one used for
-filters:
+Now let's break down the structure:
+
+- **`<map>`**: The root element that encapsulates the entire mapping.
+- **`<originmodule>`**: Specifies the module where the field dependencies originate.
+- **`<originname>`**: Specifies the name of the module for which field dependencies are being defined.
+- **`<dependencies>`**: Contains the list of field dependencies within the module.
+- **`<dependency>`**: Represents a specific field dependency.
+- **`<field>`**: Specifies the name of the field for which the dependency is being defined.
+- **`<conditions>`**: Contains the conditions that determine when the field dependency is triggered.
+- **`<condition>`**: Defines a specific condition for the field dependency.
+- **`<actions>`**: Contains the actions to be performed when the conditions are met.
+
+Within the `<conditions>` element, you can define one or more `<condition>` elements that specify the conditions for the field dependency. These conditions can include various comparisons, logical operators, and values.
+
+Similarly, within the `<actions>` element, you can define the actions to be performed when the conditions are met. These actions can include showing or hiding fields, setting field values, executing workflows, invoking custom functions, and more.
+
+This type of map works both in edit and details view, permiting you to define dependencies between fields. For example, it will permit you to make a field read-only (not editable) or not depending on the value selected in a given field or to change the available values in a picklist depending on the value.
+
+The goal of this mapping is to define a set of rules/conditions and actions to be applied while editing a field in a coreBOS form.
+
+The trigger event will be the `onChange` HTML event. Whenever a field changes its’ value in a form we will evaluate a given set of conditions and if they are true we will apply a set of actions.
+
+Since we will be evaluating the field on a per-module basis and to avoid additional time looking for related values via AJAX, the conditions will be evaluated using only information located on the form.
+
+The supported condition operators are the same ones we support in the custom view filter system (see [Conditional Popup](../../../10.developer-guide/04.development_framework/11.develtutorials/19.conditional_popup) and [Popup Open Hook](../../../10.developer-guide/04.development_framework/11.develtutorials/19.conditional_popup):
+
+- e: igual | equal | "="
+- n: distinto | not equal | "&lt;&gt;"
+- s: empieza con | begins with | "LIKE" ("$value%")
+- Ns: | does not begin with | "LIKE" !("$value%")
+- ew: termina con | ends with | "LIKE" ("%$value")
+- New: | does not end with | "LIKE" !("$value%")
+- c: contiene | like | "LIKE" ("%$value%")
+- k: no contiene | not like | "NOT LIKE" ("%$value")
+- l: menor que | less than | "&lt;"
+- b: menor que | less than | "&lt;"
+- g: mayor que | greater than | "&gt;"
+- a: mayor que | greater than | "&gt;"
+- m: menor o igual | less or equal | "&lt;="
+- h: mayor o igual | greater or equal | "&gt;="
+
+Group conditions can be created concatenating with the typical AND/OR operators. We will be using a similar concept to the one used for filters:
 
 ```
-     "groupid":"number that identifies the group of conditions",
-     "columnname":"coreBOS column identifier or simply the column/field name"
-     "comparator":"comparison operator"
-     "value":"text to look"
-     "columncondition":"and|or" (logical operator to join with the next condition)
+"groupid":"number that identifies the group of conditions",
+"columnname":"coreBOS column identifier or simply the column/field name"
+"comparator":"comparison operator"
+"value":"text to look"
+"columncondition":"and|or" (logical operator to join with the next condition)
  ```
 
 The actions supported are:
 
--   change: will assign a value or set of values to another field
--   setoptions: will add selectable options in a picklist
--   deloptions: will eliminate selectable options from a picklist
--   hide: hide a field and its’ label
--   show: show a field and its’ label
--   collapse: will collapse a block
--   open: will open a block
--   disappear: will hide a block
--   appear: will show a block
--   readonly: will make a field read-only
--   editable: will make a field not read-only
--   enable: will enable a field
--   disable: will disable a field
--   setclass: set CSS class
--   function: will call the given function with the parameters:
-    -   change\_field, action\_field, new\_value, old\_value, any
-        additional parameters in XML
+- **change**: will assign a value or set of values to another field
+- **setoptions**: will add selectable options in a picklist
+- **deloptions**: will eliminate selectable options from a picklist
+- **hide**: hide a field and its’ label
+- **show**: show a field and its’ label
+- **collapse**: will collapse a block
+- **open**: will open a block
+- **disappear**: will hide a block
+- **appear**: will show a block
+- **readonly**: will make a field read-only
+- **editable**: will make a field not read-only
+- **enable**: will enable a field
+- **disable**: will disable a field
+- **setclass**: set CSS class
+- **function**: will call the given function with the parameters:
+  - change\_field, action\_field, new\_value, old\_value, any additional parameters in XML
+  - this option leaves the door open to all sorts of options, giving total control to the programmer
+  -  There are a set of common functions that can be used:
+    - **fieldDep\_AssignNewValue**: return new value in the action\_field
+    - **fieldDep\_CopyFieldValue**: copies the value in the field defined by the first parameter into the action field
+    - **fieldDep\_AddDays**: add the given number of days to new\_value and return the result
+    - **fieldDep\_SubDays**: subtract the given number of days from new\_value and return the result
+    - **fieldDep\_OnlyNumbers**: return all numbers in new\_value
+    - **fieldDep\_OnlyLetters**: return all letters in new\_value
+    - **fieldDep\_GetField**: will use getFieldValuesFromRecord to retrieve the value of the given field from a related record. In other words, this works on related capture fields in the record and retrieves information from the selected related record
+    - **fieldDep\_AssignUser**: set the assigned user to the given (user) ID parameter
+    - **fieldDep\_AssignGroup**: set the assigned user to the given (group) ID parameter
+    - **fieldDep\_AssignUserSelect**: set the assigned user to the given user ID parameter for uitype 101 fields
+    - **fieldDep\_GetFieldSearch**: searches for a field as reference in order to map other fields
+    - **fieldDep\_ChangeLabel**: will permit changing the label of a field **NOT IMPLEMENTED YET**
+    - **fieldDep\_Format**: return sprintf formatting of new\_value (use sprintf javascript library: <https://github.com/alexei/sprintf.js>) **NOT IMPLEMENTED YET**
 
-"Function" leaves the door open to all sorts of options, giving total
-control to the programmer. We will provide a set of common functions to
-be used:
+This looks something like this:
 
--   fieldDep\_AssignNewValue: return new value in the action\_field
--   fieldDep\_CopyFieldValue: copies the value in the field defined by
-    the first parameter into the action field 
-
-          <function>
-              <field>description</field>
-              <name>fieldDep_CopyFieldValue</name>
-              <parameters>
-                <parameter>template_language</parameter>
-              </parameters>
-          </function>
-
-
--   fieldDep\_AddDays: add the given number of days to new\_value and
-    return the result
--   fieldDep\_SubDays: subtract the given number of days from new\_value
-    and return the result
--   fieldDep\_OnlyNumbers: return all numbers in new\_value
--   fieldDep\_OnlyLetters: return all letters in new\_value
--   fieldDep\_GetField: will use getFieldValuesFromRecord to retrieve
-    the value of the given field from a related record. In other words,
-    this works on related capture fields in the record and retrieves
-    information from the selected related record
--   fieldDep\_AssignUser: set the assigned user to the given (user) ID
-    parameter
--   fieldDep\_AssignGroup: set the assigned user to the given (group) ID
-    parameter
--   fieldDep\_AssignUserSelect: set the assigned user to the given user
-    ID parameter for uitype 101 fields
-
-    ### New!
-     fieldDep\_GetFieldSearch: searches for a field as reference in order to map other fields
-
--   **NOT IMPLEMENTED YET**
--   fieldDep\_ChangeLabel: will permit changing the label of a field
--   fieldDep\_Format: return sprintf formatting of new\_value (use
-    sprintf javascript library: <https://github.com/alexei/sprintf.js>)
-
-XML Format
-----------
-
-The accepted format is:
 ```xml
-     <map>
-      <originmodule>
-        <originname>SalesOrder</originname>
-      </originmodule>
-    <dependencies>
+<map>
+  <originmodule>
+    <originname>SalesOrder</originname>
+  </originmodule>
+  <dependencies>
     <dependency>
-        <field>campaignname</field>
-        <condition>[{...}]</condition>
-        <actions>
-            <change>
-                <field>sponsor</field>
-                <value>Sponzori</value>
-            </change>
-            <change>
-                <field>campaignname</field>
-                <value>2323232</value>
-            </change>
-            <hide>
-                <field>targetaudience</field>
-            </hide>
-            <readonly>
-                <field>campaignname</field>
-            </readonly>
-            <setclass>
-                <field>somefield</field>
-                <fieldclass>someCSSclass</fieldclass>
-                <labelclass>someOtherCSSclass</labelclass>
-            </setclass>
-            <collapse>
-            <block>sponsor</block>
-            </collapse>
-        </actions>
+      <field>campaignname</field>
+      <condition>[{...}]</condition>
+      <actions>
+        <change>
+          <field>sponsor</field>
+          <value>Sponzori</value>
+        </change>
+        <change>
+          <field>campaignname</field>
+          <value>2323232</value>
+        </change>
+        <hide>
+          <field>targetaudience</field>
+        </hide>
+        <readonly>
+          <field>campaignname</field>
+        </readonly>
+        <setclass>
+          <field>somefield</field>
+          <fieldclass>someCSSclass</fieldclass>
+          <labelclass>someOtherCSSclass</labelclass>
+        </setclass>
+        <collapse>
+          <block>sponsor</block>
+        </collapse>
+      </actions>
     </dependency>
     <dependency>
     …
     </dependency>
-    </dependencies>
-    </map>
+  </dependencies>
+</map>
 ```
+
 **Notes**
 
--   This functionality totally overlaps with the native Picklist
-    dependency, so we have moved that functionality to the map and
-    eliminated the code that manages picklist dependency in javascript.
-    The graphical editor in settings is still valid.
--   When we manually assign a value to a field we have to launch the
-    change event against that field so the dependencies get calculated
-    again, but we have to make sure that we don’t enter an infinite loop
-    by not launching the event against the same field we just modified.
--   The mappings will be named **\[modulename\]\_FieldDependency** (to
-    follow the logic of all the others)
--   In EditView script we will search and load a mapping called
-    $current\_module.’\_FieldDependency’. This will be done using
-    GlobalVariable (like the others)
--   If more than one is found we will load the first one found with no
-    special preference. There should be only one.
--   The mapping interface will have a method called getJSON (or
-    similar). This method will return the conditions, fields and any
-    other information the browser needs to implement the dependencies.
-    We will load one or more variables into Smarty and modify the
-    templates to load those values in javascript variables
--   We will add a javascript library to process the mapping on the
-    onChange events
--   In MassEdit we have to do the same as in EditView
--   In DetailView we will load the mapping and use another method called
-    getFieldsWithDependency (or similar) to modify those fields in the
-    detail view so they are not editable (as we do now with picklist
-    fields that have dependencies). This is because we can’t guarantee
-    their dependencies when editing one field individually. Note: it is
-    very possible that this can be done directly in the getBlocks
-    function.
--   It is very possible that we have to modify the fields edit templates
-    to add the onchange events. I would like that to be generic. I mean,
-    we call a generic onChange event and add some hooks so anyone can
-    add their own functionality. We use this hook to add the Field
-    Dependency functionality.
+- This functionality overlaps with the native Picklist dependency, so we have moved that functionality to the map and eliminated the code that manages picklist dependency in javascript. The picklist dependency graphical editor in settings is still valid.
+- When we manually assign a value to a field we have to launch the change event against that field so the dependencies get calculated again, but we have to make sure that we don’t enter an infinite loop by not launching the event against the same field we just modified.
+- The mappings will be named **{modulename}\_FieldDependency** (to follow the logic of all the others)
+- In EditView script we will search and load a mapping called `$current_module.'_FieldDependency'`. This will be done using the Global Variable module (like the others)
+- If more than one is found we will load the first one found with no special preference. There should be only one.
+- The mapping interface will have a method called getJSON (or similar). This method will return the conditions, fields and any other information the browser needs to implement the dependencies. We will load one or more variables into Smarty and modify the templates to load those values in javascript variables
+- We will add a javascript library to process the mapping on the onChange events
+- In MassEdit we have to do the same as in EditView
+- In DetailView we will load the mapping and use another method called getFieldsWithDependency (or similar) to modify those fields in the detail view so they are not editable (as we do now with picklist fields that have dependencies). This is because we can’t guarantee their dependencies when editing one field individually. Note: it is very possible that this can be done directly in the getBlocks function.
+- It is very possible that we have to modify the fields edit templates to add the onchange events. I would like that to be generic. I mean, we call a generic onChange event and add some hooks so anyone can add their own functionality. We use this hook to add the Field Dependency functionality.
 
 Examples
 --------
+
 <div class="notices blue">
 If payment is negative then set category to Infrastructure
 </div>
@@ -241,9 +227,9 @@ If payment is negative then set category to Infrastructure
     </dependencies>
     </map>
 ```
+
 <div class="notices blue">
-If payment is negative then category
-must be Infrastructure
+If payment is negative then category must be Infrastructure
 </div>
 
 ```xml
@@ -312,9 +298,7 @@ Or this one can also be done like this:
 ```
 
 <div class="notices blue">
- If (employees &lt; 100 and
-bill_country is Spain) or (employees &gt; 100 and bill_country is
-Albania) Then hide ownership collapse address block 
+if (employees &lt; 100 and bill_country is Spain) or (employees &gt; 100 and bill_country is Albania) then hide ownership collapse address block
 </div>
 
 ```xml
@@ -346,7 +330,8 @@ Albania) Then hide ownership collapse address block
         </condition>
         <actions>
             <hide>
-                <field>ownership</field>
+           <br>
+     <field>ownership</field>
             </hide>
             <collapse>
                 <block>LBL_ADDRESS_INFORMATION</block>
@@ -390,8 +375,7 @@ Albania) Then hide ownership collapse address block
 ```
 
 <div class="notices blue">
-On the invoice, set due date to 30
-days more than invoice date
+On the invoice, set due date to 30 days more than invoice date
 </div>
 
 ```xml
@@ -414,8 +398,7 @@ days more than invoice date
     </map>
 ```
 <div class="notices blue">
-On Contact change phone to contain
-only numbers 
+On Contact change phone to contain only numbers 
 </div>
 
 ```xml
@@ -436,8 +419,7 @@ only numbers
 ```
 
 <div class="notices blue">
-On Contact set description to
-description of the selected account
+On Contact set description to description of the selected account
 </div>
 
 ```xml
@@ -464,9 +446,7 @@ description of the selected account
 ```
 
 <div class="notices blue">
-IF (bill country starts with "A") SET
-paymentcategory to infrastructure and make it readonly ELSE make
-paymentcategory editable 
+IF (bill country starts with "A") SET paymentcategory to infrastructure and make it readonly ELSE make paymentcategory editable 
 </div>
 
 ```xml
@@ -516,7 +496,8 @@ paymentcategory editable
     </map>
 ```
 
- Another Example:
+Another Example:
+
 ```xml
     <map>
       <originmodule>
@@ -610,8 +591,7 @@ paymentcategory editable
 ```
 
 <div class="notices blue">
-Change tax percentage when picklist
-with tax type changes
+Change tax percentage when picklist with tax type changes
 </div>
 
 ```xml
@@ -632,6 +612,7 @@ with tax type changes
     </dependencies>
     </map>
 ```
+
 ```js
 function changeTaxDetails(change_field, action_field, new_value, old_value) {
     if (action_field == 'cf_879') {
@@ -646,17 +627,17 @@ function changeTaxDetails(change_field, action_field, new_value, old_value) {
 ```
 
 you can load the JS from a file in the footer with:
+
 ```js
-    BusinessActions::addLink(getTabid("Invoice"), 'FOOTERSCRIPT', 'corebosjshookinvoice', 'modules/Invoice/corebosjshookinvoice.js', '', 0, null, false);
+BusinessActions::addLink(getTabid("Invoice"), 'FOOTERSCRIPT', 'corebosjshookinvoice', 'modules/Invoice/corebosjshookinvoice.js', '', 0, null, false);
 ```
 
 <div class="notices blue">
-Force execution of functions on the
-load of the edit screen. 
+Force execution of functions on the load of the edit screen.
 </div>
 
-The application is constructed to not permit this so we have to use a
-trick to consciously force this.
+NOTE: The application is constructed to not permit this so we have to use a trick to consciously force this.
+
 ```xml
     <map>
       <originmodule>
@@ -666,7 +647,6 @@ trick to consciously force this.
     <dependency>
         <field>cyp_no</field>
         <actions>
-
             <function>
                 <field>cyp_no</field>
                 <name>doNothing</name>
@@ -688,13 +668,15 @@ trick to consciously force this.
                   <parameter>5</parameter>
                 </parameters>
             </function>
-
         </actions>
     </dependency>
     </dependencies>
     </map>
 ```
-> ####Another example using the new functionality fieldDep_GetFieldSearch. Here we want to map some fields in AssetDetails which values will be copied from Assets using a reference field to make the search:####
+
+<div class="notices blue">
+example using the fieldDep_GetFieldSearch functionality. Here we want to map some fields in AssetDetails whose values will be copied from Assets using a reference field to make the search:
+</div>
 
 ```xml
 <map>
@@ -702,7 +684,7 @@ trick to consciously force this.
     <originname>AssetDetails</originname> {the target module}
   </originmodule>
 <dependencies>
-<dependency>
+  <dependency>
     <field>related_assets</field>  {reference field, so filling this field we will trigger the search for the other ones}
     <actions>
         <function>
@@ -714,35 +696,100 @@ trick to consciously force this.
               <parameter>new value</parameter>   {default parameter; to set new values to the fields}
               <parameter>e</parameter> {operator; in this case means: equal}
               <parameter>related_ad_servicecontact,account_name</parameter> {fields where we will copy the values,in this case AssetDetils; the fields must be separated by coma in respective order with the above fields from Assets}
-</parameters>
-
-            </function>
+            </parameters>
+        </function>
     </actions>
-</dependency>
-
-<dependency>
+  </dependency>
+  <dependency>
     <field>related_productcomponent</field>
     <actions>
         <function>
             <name>fieldDep_GetFieldSearch</name>
-  <parameters>
+            <parameters>
               <parameter>ProductComponent</parameter> 
               <parameter>maintenance_buyingprice,maintenance_sellingprice</parameter>      
               <parameter>id</parameter>
               <parameter>new value</parameter>   
               <parameter>e</parameter>
               <parameter>vendor_maintenance_purchasevalue,customer_maintenance_salesvalue</parameter>
-</parameters>
-
-            </function>
+            </parameters>
+        </function>
     </actions>
+  </dependency>
+</dependencies>
+</map>
+```
+
+You can add as many dependencies to copy-paste field values from different modules. As you see above we have used two `<dependency>` tags in order to take values from **Assets** when we fill the `related_assets` and to take from **ProductComponent** filling the `related_productcomponent` between `<field>` tags.
+
+### Mode functionality
+
+Both the `<dependency>` and the `<action>` directives accept an optional directive named `<mode>`. If given, this directive indicates if the dependency/action will be applied or not depending on the current mode of the record.
+
+Valid mode values are:
+
+- 'create', '1': only applied in create view
+- 'edit', '2': only applied in edit view
+- 'detail', '3': only applied in detail view
+- a CSV string with the values above
+- anything else which will be evaluated to ALL modes
+
+### Include maps functionality
+
+This type of map tends to get very complicated, with a lot of different options and conditions. It can also happen that we may have different variations of the map for the same module depending on the `mode`.
+
+To help manage this complexity, the field dependency map permits including sections from other records.
+
+The `<dependencies>`, the `<dependency>`, and the `<action>` directives can be imported from another Business map record.
+
+**Invoice_FieldDependency Business Map**
+
+```xml
+<map>
+  <originmodule>  <originname>Invoice</originname> </originmodule>
+<dependencies>
+<dependency>
+<loadfrom>InvoiceDependency</loadfrom>
 </dependency>
 </dependencies>
 </map>
-<br>
 ```
----
-You can add as many dependencies to copy-paste field values from different modules. As you see above we have used two `<dependency>` tags in order to take values from **Assets** when we fill the `related_assets` and to take from **ProductComponent** filling the `related_productcomponent` between `<field>` tags.
+
+**InvoiceDependency Business Map**
+
+```xml
+<dependency>
+<field>invoicedate</field>
+    <actions>
+<loadfrom>InvoiceActions</loadfrom>
+    </actions>
+</dependency>
+```
+
+**InvoiceActions Business Map**
+
+```xml
+<action>
+  <function>
+    <field>duedate</field>
+    <name>fieldDep_AddDays</name>
+    <parameters>
+        <parameter>30</parameter>
+    </parameters>
+  </function>
+</action>
+```
+
+```xml
+<map>
+  <originmodule>
+    <originname>LandlordInfo</originname>
+  </originmodule>
+  <dependencies>
+    <loadfrom>Test</loadfrom>
+  </dependencies>
+</map>
+```
 
 ------------------------------------------------------------------------
 

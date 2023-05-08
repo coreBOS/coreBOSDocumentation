@@ -19,11 +19,12 @@ taxonomy:
     tag:
         - detailviewlayout
 ---
----
 
-The purpose of this mapping is to define **a block layout for a module**. It holds equivalent information to the layout editor in the application settings. The difference is that blocks can be defined to contain different options and that we can have many maps/configurations for the same module, whereas in settings you can have only one layout for all users of the application.
+The coreBOS Detail View Layout Mapping is a configuration setting that allows you to customize the layout of the detail view for modules in the coreBOS application. The mapping defines the arrangement and appearance of fields, blocks, and related lists in the detail view of a module.
 
 ===
+
+The purpose of this mapping is to define **a block layout for a module**. It holds equivalent information to the layout editor in the application settings. The difference is that blocks can be defined to contain different options and that we can have many maps/configurations for the same module, whereas in settings you can have only one layout for all users of the application.
 
 This map can be used inside the application with the `Detail View Layout Widget` (see below), but its primary goal is to export different layouts to portal/external applications.
 
@@ -36,11 +37,12 @@ There are 6 types of blocks:
 - **CodeWithoutHeader**: this will open a "div" and directly include your code inside
 - **CodeWithHeader**: this will add a header following the look and feel of the default related-list blocks and then open a "div" and directly include your code inside
 
-The accepted format is:
+The Detail View Layout Mapping is specified using XML format. Here is an example of the mapping structure:
+
 ```xml
 <map>
   <originmodule>
-    <originname></originname>
+    <originname>ModuleName</originname>
   </originmodule>
   <blocks>
     <block>
@@ -89,6 +91,8 @@ $dvl = new handler_class();
 $dvl->handler();
 ```
 
+By customizing the Detail View Layout Mapping, you can arrange fields and related lists according to your specific requirements. This provides flexibility in designing the detail view layout, allowing you to organize information in a way that best suits your business processes and user preferences.
+
 ## Detail View Layout Widget
 
 Constructing on this map we have created a widget that reads the different options and adds the result into a block in a modules' detail view. This permits us, for example, to show fields from a directly related module, or the result of some code.
@@ -109,9 +113,7 @@ to get it in the right action panel you would use:
 module=Utilities&action=UtilitiesAjax&file=showSetOfFieldsWidget&MODULE=HelpDesk&RECORDID=$RECORD$&dvmodule=Products&dvrecord=$product_id&mapid=detailviewlayout_mapid
 ```
 
-The **ApplicationFields** and **FieldList** types require two additional
-parameters which represent the module (dvmodule) and record (dvrecord)
-from where they are supposed to get the fields to show.
+The **ApplicationFields** and **FieldList** types require two additional parameters which represent the module (dvmodule) and record (dvrecord) from where they are supposed to get the fields to show.
 
 ```
 block://showSetOfFieldsWidget:modules/Utilities/showSetOfFieldsWidget.php:record_id=$RECORD$&dvmodule=module_to_show&dvrecord=field_with_recordid&mapid=detailviewlayout_mapid
@@ -138,6 +140,7 @@ You can find next the relation of maps I used for testing in the video presentat
 ```
 
 **Application Fields**
+
 ```xml
 <map>
 <originmodule>
@@ -153,6 +156,7 @@ You can find next the relation of maps I used for testing in the video presentat
 ```
 
 **Code With/Without Header**
+
 ```xml
 <map>
 <blocks>

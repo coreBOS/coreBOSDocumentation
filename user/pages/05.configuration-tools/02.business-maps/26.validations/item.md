@@ -20,22 +20,20 @@ taxonomy:
         - validations
 ---
 
-## Validation Business Mapping
-
-This type of map will permit you to add different types of validations on the fields of a module.
+The coreBOS Validation Business Mapping allows you to define custom validation rules for fields within the coreBOS CRM system. It enables you to specify conditions that must be met for a field's value to be considered valid, ensuring data integrity and enforcing business rules.
 
 ===
 
-The accepted format is
+The mapping structure follows this format:
 
 ```xml
 <map>
   <originmodule>
-    <originname>SalesOrder</originname>
+    <originname>Module_Name</originname>
   </originmodule>
   <fields>
     <field>
-      <fieldname>subject</fieldname>   {field to validate}
+      <fieldname>Field_Name</fieldname>   {field to validate}
       <validations>  {if more than one is present they must all pass to accept the value}
         <validation>
           <rule>{rule_name}</rule>
@@ -44,17 +42,35 @@ The accepted format is
           </restrictions>
           <message>This is my custom msg for field: {field}</message>  {optional}
         </validation>
-        .....
+        ...
       </validations>
     </field>
     <field>
-     .....
+     ...
     </field>
   </fields>
 </map>
 ```
 
-where {rule_name} can be:
+Let's break down the structure:
+
+- `<map>`: The root element that encapsulates the entire mapping.
+- `<originmodule>`: Specifies the module where the validation rules originate.
+- `<originname>`: Specifies the name of the module for which validation rules are being defined.
+- `<fields>`: Contains the list of field validations within the module.
+- `<field>`: Represents a specific field validation rule.
+- `<fieldname>`: Specifies the name of the field for which the validation rule is being defined.
+- `<validations>`: Contains the set of validations to apply on the field. If more than one is given they must all pass.
+- `<validation>`: Defines a specific evaluation for the validation rule.
+- `<message>`: Specifies the error message to display when the validation rule is violated.
+
+Within the `<validations>` element, you can define one or more `<validation>` elements that specify the conditions for the validation rule. These conditions can include various comparisons, logical operators, and values.
+
+The `<message>` element allows you to provide a custom error message that will be displayed when the validation rule is violated. This message can provide useful information to the user regarding the validation failure.
+
+By using the coreBOS Validation Business Mapping, you can implement complex validation logic, such as checking for valid date ranges, enforcing unique values, validating input formats, and more. These validation rules help maintain data quality and consistency within the coreBOS CRM system and ensure that the entered data adheres to your organization's specific business requirements.
+
+The supported set of validation rules ({rule_name}) can be:
 
 * required - Required field
   * restrictions: none
@@ -161,26 +177,12 @@ All of the rules above accept an optional directive named `message` where you ca
 ```xml
 <message>This is my custom msg for field: {field}</message>
 ```
-Besides this option, which covers almost all the use cases, we have run
-into an edge case where we needed the message to be dynamically set. The
-problem with this is that the way the valitron library works we need to
-give it all the rules and messages before we start but in this case, we
-didn't know the message until the validation was launched. So we added
-support for defining the message before validating the rule for custom
-functions.
 
-To retrieve the message to be used, the validation map will look for a
-function with the same name as custom function concatenated with the
-string "GetMessage". So, if we have a custom rule named
-"validateFlowStep" and we define another function named
-"validateFlowStepGetMessage", then the validation map will execute this
-second function giving it the same parameters as the validation function
-plus the current validation message. This way your custom validation
-function can determine which message to return. This is almost like
-launching the validation twice, so it comes at a price.
+Besides this option, which covers almost all the use cases, we have run into an edge case where we needed the message to be dynamically set. The problem with this is that the way the valitron library works we need to give it all the rules and messages before we start but in this case, we didn't know the message until the validation was launched. So we added support for defining the message before validating the rule for custom functions.
 
-You can see an example of this in the [BPM Process Flow
-Perspective](https://github.com/coreBOS/ProcessFlowPerspective). Look in
+To retrieve the message to be used, the validation map will look for a function with the same name as custom function concatenated with the string "GetMessage". So, if we have a custom rule named "validateFlowStep" and we define another function named "validateFlowStepGetMessage", then the validation map will execute this second function giving it the same parameters as the validation function plus the current validation message. This way your custom validation function can determine which message to return. This is almost like launching the validation twice, so it comes at a price.
+
+You can see an example of this in the [BPM Process Flow Perspective](https://github.com/coreBOS/ProcessFlowPerspective). Look in
 the Process Flow module for the validateFlowStep script.
 
 ### Activating the validation maps
@@ -246,6 +248,7 @@ In order to enhance the set of possible validations that can be done, the valida
 When editing a record it is possible to want to compare the value
 introduced by the user with the value that is currently saved in that
 same field or some other field with which it may have some dependency.
+
 In this case you can access these values prefixing the string
 "current_" to the variable name. For example, let's suppose that we are
 editing an Account, the user has changed the Industry picklist value and
@@ -440,7 +443,7 @@ These are the two validation maps I used while developing the integration of the
 ```
 
 ```xml
-map>
+<map>
   <originmodule>
     <originname>Accounts</originname>
   </originmodule>
@@ -494,7 +497,9 @@ function validate_testacccemail($field) {
     </field>
   </fields>
 </map>
+```
 
+```xml
 <map>
   <expression>if employees > 10 then 1 else 0 end</expression>
 </map>
