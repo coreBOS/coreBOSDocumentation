@@ -22,6 +22,8 @@ taxonomy:
 
 The Master Detail Mapping in coreBOS allows you to establish a hierarchical relationship between two modules, where one module serves as the master and the other as the detail. This mapping defines the behavior and functionality associated with the master-detail relationship, such as record creation, deletion, visibility, and data synchronization.
 
+===
+
 To create a master-detail relationship between two modules, you need to define a Master Detail Mapping using XML configuration. The accepted format for the Master Detail Mapping is as follows:
 
 ```xml

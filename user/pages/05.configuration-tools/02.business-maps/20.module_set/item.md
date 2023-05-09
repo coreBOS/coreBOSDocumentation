@@ -22,6 +22,8 @@ taxonomy:
 
 The Module Set Mapping serves the purpose of defining a heterogeneous set of module names. It allows you to gather a collection of modules for various use cases, such as performing mass operations or excluding specific modules from a global process.
 
+===
+
 The accepted format for the mapping is as follows:
 
 ```xml

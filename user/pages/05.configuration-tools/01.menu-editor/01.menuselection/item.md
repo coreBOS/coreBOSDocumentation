@@ -18,10 +18,9 @@ taxonomy:
     tag:
         - certification
 ---
----
 
 coreBOS needs a better, more flexible menu system than what we inherited
-from vtiger CRM. So we set out to look for some options with some of
+from coreBOS CRM. So we set out to look for some options with some of
 these goals in mind:
 
 -   Dropdown menu system fully configurable by the user
@@ -150,6 +149,6 @@ So, as of the end of December 2016, coreBOS now has an advanced menu
 system based on Lightning Design System.
 
 <div class="notices blue">
-Thank you
-<a href="https://github.com/SkeLa-"> SkeLa!</a></div>
-  
+Thank you <a href="https://github.com/SkeLa-"> SkeLa!</a>
+</div>
+

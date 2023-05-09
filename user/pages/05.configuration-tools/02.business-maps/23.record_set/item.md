@@ -22,6 +22,8 @@ taxonomy:
 
 The purpose of the Record ID Mapping is to define a heterogeneous set of record IDs. It allows you to gather CRMIDs from different modules into a single mapping. This can be useful for various purposes, such as performing mass operations on a specific set of records or excluding certain records from a global process.
 
+===
+
 In essence, the Record ID Mapping is similar to the [Condition Query Mapping](../04.condition-query) in terms of retrieving a set of records. However, the key difference is that the Record ID Mapping allows you to mix records from different modules without any specific conditions or queries. You simply provide the CRMIDs of the desired records, making it straightforward and hassle-free.
 
 It's important to note that the set of records should be relatively small to ensure easy maintenance and avoid complexity.

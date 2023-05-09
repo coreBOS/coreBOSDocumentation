@@ -23,6 +23,8 @@ taxonomy:
 
 Workflows are a very powerful part of the application. They permit us to automate our business logic to some extent making it possible to standardize process and have the application do some of the repetitive tasks our business requires.
 
+===
+
 It is necessary to execute four steps to configure and setup a workflow:
 
 - Select a module against which the workflow will be executed and give it a name

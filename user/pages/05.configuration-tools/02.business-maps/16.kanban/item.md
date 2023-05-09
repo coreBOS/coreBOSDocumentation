@@ -25,6 +25,8 @@ records of a module. This map is in the "View Business Map" category as
 it serves the purpose of showing the records of a module in a different
 way than we usually see them in the list view.
 
+===
+
 With this map, we will be able to divide the records into kanban lanes
 based on the distinct values in a field of the module as well as filter
 the records based on a search or custom view settings. The kanban view

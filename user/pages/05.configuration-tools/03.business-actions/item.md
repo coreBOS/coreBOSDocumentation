@@ -19,9 +19,10 @@ taxonomy:
     tag:
         - businessaction
 ---
----
 
-Business Actions are things that can happen inside the application. They enhance the vtiger CRM link system and they can affect any part of the application.
+Business Actions are things that can happen inside the application. They enhance the coreBOS CRM link system and they can affect any part of the application.
+
+===
 
 They are shown/applied depending on the field permission values set on each record which may include conditional business maps.
 

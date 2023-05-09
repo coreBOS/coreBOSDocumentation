@@ -22,6 +22,8 @@ taxonomy:
 
 The List Columns mapping feature allows you to customize the columns displayed in related and popup lists for a module in coreBOS. By overriding the default columns, you can adapt the lists to your specific requirements without the need for code modifications. This flexibility enables you to show relevant information or provide additional details for users who need them.
 
+===
+
 The purpose of this mapping is to override the predefined columns that appear on the related and popup lists for a module. Each module has two hard coded lists of columns, one defines the columns that are showed when the module is on a related lists (list_fields) and the other defines the columns that are shown in the module's popup capture screen (search_fields). Many times we want to be able to change these columns because the default ones aren't important for us or some users need more information in the popup screen. Using the List Columns mapping you can adapt these lists to your requirements without modifying the code.
 
 The mapping follows the accepted XML format:
