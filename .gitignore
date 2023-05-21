@@ -24,6 +24,7 @@ user/data/notifications/*
 user/data/flex/indexes/*
 user/themes/*
 !user/themes/.*
+!user/themes/templates
 user/localhost/config/security.yaml
 user/config/security.yaml
 
