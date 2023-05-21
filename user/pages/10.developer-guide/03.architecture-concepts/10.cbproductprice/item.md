@@ -24,7 +24,7 @@ Entity Relation
 ---------------
 
 -  [Entity Relation Diagram](cbproductpriceer.pdf)
--  [Entity Relation Diagram](cbproductpriceer.odg) 
+-  [Entity Relation Diagram](cbproductpriceer.odg)
 
 Services
 --------
