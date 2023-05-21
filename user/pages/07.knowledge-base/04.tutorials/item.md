@@ -29,4 +29,3 @@ These documents teach users specific things that they can do with the applicatio
 - [Shopify Integration](02.shopifyintegration)
 - [Apache Tika ](04.Tika)
 - [BPM Example](03.bpmexample)
-- [Web Service Documentation](05.webservice)
