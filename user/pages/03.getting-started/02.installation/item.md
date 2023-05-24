@@ -68,7 +68,7 @@ Following extensions should be enabled for your PHP setup
 <tr>
 <td>DOM (php-xml)</td>
 <td>Mandatory</td>
-<td>For coreBOS Updater</td>
+<td>For coreBOS Updater and GenDoc (at least)</td>
 </tr>
 <tr>
 <td>OpenSSL</td>
@@ -82,8 +82,8 @@ Following extensions should be enabled for your PHP setup
 </tr>
 <tr>
 <td>MBString</td>
-<td>Optional</td>
-<td>This one is optional but mandatory if you want to use GenDoc</td>
+<td>Mandatory</td>
+<td>Used everywhere now that we support PHP 8</td>
 </tr>
 </tbody>
 </table>
