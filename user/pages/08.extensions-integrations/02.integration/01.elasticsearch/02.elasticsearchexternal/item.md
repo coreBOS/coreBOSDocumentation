@@ -60,17 +60,15 @@ deleted ones, which will be marked with their "deleted" field set to 1.
 As with the special "deleted" field, each record also contains a few
 other common fields:
 
--   **deleted**: 0 if the records is available in the CRM and 1 if not
--   **record\_id**: the internal crmid of the record
--   **record\_module**: the internal english name of the module:
-    Potentials, HelpDesk, ...|
--   **creatorid**: internal USERID of the user who created the record
--   **apptags**: list of tags associated to the record
+- **deleted**: 0 if the records is available in the CRM and 1 if not
+- **record\_id**: the internal crmid of the record
+- **record\_module**: the internal english name of the module: Potentials, HelpDesk, ...|
+- **creatorid**: internal USERID of the user who created the record
+- **apptags**: list of tags associated to the record
 
 ### companydatachange index
 
-This index contains a list of each individual change occurred on any
-record in the crm. The structure is like this:
+This index contains a list of each individual change occurred on any record in the crm. The structure is like this:
 
 <table class="table table-striped">
 <tbody>

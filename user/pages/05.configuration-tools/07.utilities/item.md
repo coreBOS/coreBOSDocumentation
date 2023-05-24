@@ -19,10 +19,7 @@ taxonomy:
         - utilities
 ---
 
-- [Cache-layer-activation](./cache-layer-activation)
-- [Elastic-search](./elastic-search)
-- [Hubspot-activation](./hubspot-activation)
-- [Saml-activation](./saml-activation)
-- [Two-factor-auth](./two-factor-auth)
-- [User-imap-smtp](./user-imap-smtp)
-- [Whatsapp-activation](./whatsapp-activation)
+- [Elastic Search](../../08.extensions-integrations/02.integration/01.elasticsearch)
+- [Hubspot](../../08.extensions-integrations/02.integration/13.hubspot/)
+- [Two Factor Authentication](../../09.security-guide/05.users_auth/item.md#two-factor-authentication)
+- [Whatsapp](../../08.extensions-integrations/02.integration/11.whatsapp/)
