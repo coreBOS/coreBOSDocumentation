@@ -23,8 +23,8 @@ taxonomy:
 
 ### Importing Data
 
-- [Basic functionality](../../../../../../04.user-manual/importingdata/01.import_basic)
-- [Import of Inventory modules (Quotes, SO, PO and Invoices)](../../../../../../04.user-manual/importingdata/02.import_inventory_module)
-- [Special references and comments](../../../../../../04.user-manual/importingdata/import_special)
-- [Extended Export Options](../../../../../../04.user-manual/importingdata/import_special/item.md#extended-export-options)
-- [Update individual fields when importing](../../../../../../04.user-manual/importingdata/05.import_updatefields)
+- [Basic functionality](../../../../../../user-manual/importingdata/import_basic)
+- [Import of Inventory modules (Quotes, SO, PO and Invoices)](../../../../../../user-manual/importingdata/import_inventory_module)
+- [Special references and comments](../../../../../../user-manual/importingdata/import_special)
+- [Extended Export Options](../../../../../../user-manual/importingdata/import_special#extended-export-options)
+- [Update individual fields when importing](../../../../../../user-manual/importingdata/import_updatefields)
