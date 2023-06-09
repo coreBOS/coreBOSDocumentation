@@ -18,24 +18,16 @@ taxonomy:
     tag:
         - fields
 ---
----
+
 Example of how to use
 ---------------------
 
--   First I need a CSV file prepared to import into coreBOS. I will do
-    the example with contacts (any other importable coreBOS module works
-    the same). To obtain the file I export information from coreBOS demo
-    site. This is the image:
+- First I need a CSV file prepared to import into coreBOS. I will do the example with contacts (any other importable coreBOS module works the same). To obtain the file I export information from coreBOS demo site. This is the image:
 
--   ![](upsert_export.png?width=100%)
+- ![](upsert_export.png?width=100%)
 
--   This gives me a ![file with a lot of columns and row](contacts_raw.csv) of contact information
--   I eliminate most of them for the sake of the example. I am supposing
-    that I need to update ONLY the department field of the contact
-    without modifying the others. I am going to eliminate most columns
-    to make the import file smaller but I am still going to leave some
-    columns I do not want to import, just ignore them. So I end up with
-    <a href="contacts_update.csv" download="this file">, which has this inside:
+- This gives me a ![file with a lot of columns and row](contacts_raw.csv) of contact information
+- I eliminate most of them for the sake of the example. I am supposing that I need to update ONLY the department field of the contact without modifying the others. I am going to eliminate most columns to make the import file smaller but I am still going to leave some columns I do not want to import, just ignore them. So I end up with <a href="contacts_update.csv" download="this file">, which has this inside:
 
 <table class="table table-striped">
 <th>First Name</th>
@@ -154,33 +146,27 @@ Example of how to use
 </tbody>
 </table>
 
--   Note that I have eliminated most columns except the ones I need to
-    do the matching for update and the ones I want to ignore for the
-    sake of the example. I have modified all the departments.
--   Now I import as you normally would in coreBOS. I map ONLY the fields
-    I want to be updated **and the mandatory fields** of the import
-    (usually the ones you are going to be merging on), all the others
-    are directly ignored. I select automerging, update and indicate the
-    criteria for matching.
+- Note that I have eliminated most columns except the ones I need to do the matching for update and the ones I want to ignore for the sake of the example. I have modified all the departments.
+- Now I import as you normally would in coreBOS. I map ONLY the fields I want to be updated **and the mandatory fields** of the import (usually the ones you are going to be merging on), all the others are directly ignored. I select automerging, update and indicate the criteria for matching.
 
--   ![](upsert_import.png?width=100%)
--   Before and After images:
+- ![](upsert_import.png?width=100%)
+- Before and After images:
 
 **Before update List View**  
 
 ![](before_upsertlv.png?width=100%)
- 
-  
+
+
 **Before update Detail View**  
 
 ![](before_upsertdv.png?width=100%)
 
-  
+
 **After update List View**
 
 ![](after_upsertlv.png?width=100%)
-  
-  
+
+
 **After update Detail View**  
 
 ![](after_upsertdv.png?width=100%)

@@ -1,7 +1,7 @@
 ---
 title: 'Global Search'
 metadata:
-    description: 'Webservice general'
+    description: 'Web service Global Search end point'
     author: 'Joe Bordes'
 content:
     items:
@@ -19,12 +19,10 @@ taxonomy:
     tag:
         - search
 ---
----
-<br>
-------------------------------------------------------------------------
-### Global Search
 
 Global search, unlike the search button located on each module, searches all modules in coreBOS. By default, Global Search will search the entire system. Currently, Global Search is able to search for accounts, potentials, leads, documents and other modules within the system.
+
+===
 
 #### getSearchResults -Operation
 
@@ -33,10 +31,7 @@ The operation you need for the simple global search
 GET URL Format :
 
 ```
-http://144.91.100.102:8880/corebos/webservice.php?operation
-=getSearchResults&sessionName={{sessionName}}&query=lin
-&serch_onlyin=&restrictionids={"userId":"module_rest_idxrecordid",
-"accountId":"module_rest_idxrecordid","contactId":"module_rest_idxrecordid"}
+http://144.91.100.102:8880/corebos/webservice.php?operation=getSearchResults&sessionName={{sessionName}}&query=lin&serch_onlyin=&restrictionids={"userId":"module_rest_idxrecordid","accountId":"module_rest_idxrecordid","contactId":"module_rest_idxrecordid"}
 ```
 
 **Query parameters**

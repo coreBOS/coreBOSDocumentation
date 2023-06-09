@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - analytics
 ---
----
 
 ## SQL Query. Filter Conditions
 

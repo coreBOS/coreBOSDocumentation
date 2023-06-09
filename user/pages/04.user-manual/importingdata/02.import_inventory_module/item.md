@@ -19,7 +19,6 @@ taxonomy:
         - data
         - import
 ---
----
 
 Import of Inventory modules (Quotes, SO, PO and Invoices) is very similar to the normal import process, the only difference appears in the mapping of fields.
 
@@ -97,8 +96,6 @@ The import process will group lines by the <strong> "Subject" </strong> column s
 </div>
 
 See next the contents of the CSV file described.
-
-
 
 
 <table class="table table-striped">
