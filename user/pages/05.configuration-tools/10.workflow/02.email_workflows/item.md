@@ -52,11 +52,7 @@ where:
 </tr>
 <tr>
 <td><strong>num</strong></td>
-<td>engine to be used for processing templates. Handlebars is the default</td>
-</tr>
-<tr>
-<td><strong>dateformat</strong></td>
-<td>picklist</td>
+<td>Indicates the number of comments you want, 0 will retrieve all comments</td>
 </tr>
 <tr>
 <td><strong>sort</strong></td>
@@ -137,8 +133,7 @@ The **date field** will be formatted to the settings of the user assigned to the
 
 <div class="notices blue">
 If you want to completely set the date format you can use the standard PHP date formatting right after the date field. This only works when retrieving the date field individually:
-$(general : (__VtigerMeta__) comments_1d_text_dated.m.Y - H:i).
-
+$(general : (__VtigerMeta__) comments_1d_text_dated.m.Y - H:i)
 </div>
 
 The **comment field** will be stripped of any inline style or scripts to avoid potential hacks or compromises of clients' computers.
@@ -149,7 +144,7 @@ The whole set of comments will be enclosed in a DIV element.
 
 So the structure looks like this:
 
-```php
+```html
 <div class="comments">
   <div class="commentdetails">
     <ul class="commentfields">
@@ -161,11 +156,12 @@ So the structure looks like this:
   ...
 </div>
 ```
+
 Since each element has its own class you can add inline CSS to your email and format the comments as you like.
 
 As an example, this CSS:
 
-```php
+```css
 <style type="text/css">
 .comments {
   margin: 10px
