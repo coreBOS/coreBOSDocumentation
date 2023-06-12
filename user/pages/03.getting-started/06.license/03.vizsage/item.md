@@ -19,7 +19,6 @@ taxonomy:
         - license
         - vizsage
 ---
----
 
 ![Vizsage Project Logo](vizsage-logo-180.png?resize=150&classes=float-right)
 

@@ -19,7 +19,6 @@ taxonomy:
         - install
         - getting-started
 ---
----
 
 ## Requirements
 

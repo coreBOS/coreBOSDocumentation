@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - filter
 ---
----
+
 The View Management module permits us to fine tune the sharing rules of filters on each module and a view itself.
 
 The record has **two "modes"**, one for the settings of a filter and another for the default permissions of the module. This dual mode is defined by the value of the "Default Setting" checkbox.

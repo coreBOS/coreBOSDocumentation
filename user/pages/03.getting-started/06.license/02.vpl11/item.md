@@ -19,7 +19,6 @@ taxonomy:
         - license
         - vpl
 ---
----
 
 **REPRODUCED HERE FOR FUTURE REFERENCE, Copied from here: [Vtiger Public License Version
 1.1](https://www.vtiger.com/vtiger-public-license-1-1/)**

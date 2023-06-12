@@ -8,7 +8,6 @@ taxonomy:
     tag:
         - awesomazing
 ---
----
 
 # core Business Operating System
 

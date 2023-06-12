@@ -18,65 +18,52 @@ taxonomy:
     tag:
         - howto
 ---
----
 
-The Workflow module provides a number of options to trigger actions
-based on events in the application or time based events.
+The Workflow module provides a number of options to trigger actions based on events in the application or time based events.
 
-To configure a workflow for a module enter the application as an admin
-user, go to the *Settings* page and click on the *Workflows* link (this
-can be found under the *Other Settings* block)
+To configure a workflow for a module enter the application as an admin user, go to the *Settings* page and click on the *Workflows* link (this can be found under the *Other Settings* block)
 
 ![](step1mw.png?width=80%)
 
-This will bring up the list of all defined workflows (by default all
-workflows are listed).
+This will bring up the list of all defined workflows (by default all workflows are listed).
 
-You can see all the available workflow for any particular module using
-the *Select Module* dropdown on the page.
+You can see all the available workflow for any particular module using the *Select Module* dropdown on the page.
 
 ![](step2mw.png?width=80%)
 
 The Workflow extension provides options to
 
-    *create a new workflow 
-    *edit an existing workflow 
-    *delete an existing workflow
+- create a new workflow 
+- edit an existing workflow 
+- delete an existing workflow
 
 Create Workflow
 ---------------
 
-Click on the *New Workflow* button. A popup will appear listing the
-available modules.
+Click on the *New Workflow* button. A popup will appear listing the available modules.
 
 ![](step3mw.png?width=80%)
 
-Select a module and click *Create*. You will be taken to an edit page
-for the workflow.
+Select a module and click *Create*. You will be taken to an edit page for the workflow.
 
 Add a Description for the workflow. You can specify here [when the workflow should run](../10.workflow_launch_conditions).
 
 ![](step4mw.png?width=80%)
 
-You can [add more conditions](../08.workflow_conditions) by clicking the
-*New Condition* button.
+You can [add more conditions](../08.workflow_conditions) by clicking the *New Condition* button.
 
 ![](step5mw.png?width=80%)
 
 Click the 'Save' Button to save the new workflow.
 
-Once you have saved the workflow, you will be presented with a screen
-where you can add the tasks for the workflow. These task(s) will be
-executed once the workflow conditions are satisfied.
+Once you have saved the workflow, you will be presented with a screen where you can add the tasks for the workflow. These task(s) will be executed once the workflow conditions are satisfied.
 
 ![](step6mw.png?width=80%)
 
 Create tasks
 ------------
 
-Click on the *New Task* button to add a new task. You will get a popup
-to select the type of task you can create. There are multiple types of
-tasks, among which you may find:
+Click on the *New Task* button to add a new task. You will get a popup to select the type of task you can create. There are multiple types of tasks, among which you may find:
 
     *//Send Email// task which can be used to send emails
     *//Invoke custom function// task which will call certain specific methods on the entity objects.

@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - gendoc
 ---
----
 
 - [Motor Vehicle Bill of Sale template](../motorvehiclebillofsale.odt)
 - [Motor Vehicle Bill of Sale example](../motorvehiclebillofsale.pdf)

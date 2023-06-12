@@ -21,75 +21,56 @@ taxonomy:
         - payment
         
 ---
----
 
-The goal of this extension is to be able to register any incoming or
-outgoing payment made by our company and associate that payment with
-other entities in the coreBOS application. The extension permits to
-register payments that we will receive or will have to make in the
-future so it is easy to create a report on payments forecast. With a
-little effort we could calculate cash-flow or even the money in the cash
-register at the end of the day.
+The goal of this extension is to be able to register any incoming or outgoing payment made by our company and associate that payment with other entities in the coreBOS application. The extension permits to register payments that we will receive or will have to make in the future so it is easy to create a report on payments forecast. With a little effort we could calculate cash-flow or even the money in the cash register at the end of the day.
 
-This module permits us to register payments made against any of the
-following entities, among others:
+This module permits us to register payments made against any of the following entities, among others:
 
-    *Invoice
-    *PO
-    *SO
-    *Quote
-    *Campaigns
-    *Potentials
-    *Trouble Ticket
-    *Projects and Project Tasks
-    *Assets
-    *Products
-    *Services
-    *Service Contracts
+- Invoice
+- PO
+- SO
+- Quote
+- Campaigns
+- Potentials
+- Trouble Ticket
+- Projects and Project Tasks
+- Assets
+- Products
+- Services
+- Service Contracts
 
 by an Account, Contact, Vendor or Lead
 
 The information fields that can be saved are:
 
-    ***Assigned user**
-    ***Reference**: free text for payment reference
-    ***Date**: date payment is registered in the system
-    ***Due date**: date we should get paid or pay
-    ***Paid**: check box indicating if payment is done or not. Used for filtering and reporting
-    ***Credit**: check box to indicate if we are receiving or paying (debit)
-    ***Payment mode**: dropdown selectbox (Cash, Check, Visa,...)
-    ***Payment category**: dropdown selectbox, basically open for unforeseen usage but could be very useful for filling up with accounting groups for ledger control
-    ***Amount** paid/received: how much we are given or how much we are giving
-    ***Cost** how much does it cost us to deliver this service
-    ***Benefit**: is automatically calculated. Useful for reporting.
-    ***Related User**: Used to assign the money movement to a user. Very useful for calculating commissions.
-    ***Description**: free text for comments
+- **Assigned user**
+- **Reference**: free text for payment reference
+- **Date**: date payment is registered in the system
+- **Due date**: date we should get paid or pay
+- **Paid**: check box indicating if payment is done or not. Used for filtering and reporting
+- **Credit**: check box to indicate if we are receiving or paying (debit)
+- **Payment mode**: dropdown selectbox (Cash, Check, Visa,...)
+- **Payment category**: dropdown selectbox, basically open for unforeseen usage but could be very useful for filling up with accounting groups for ledger control
+- **Amount** paid/received: how much we are given or how much we are giving
+- **Cost** how much does it cost us to deliver this service
+- **Benefit**: is automatically calculated. Useful for reporting.
+- **Related User**: Used to assign the money movement to a user. Very useful for calculating commissions.
+- **Description**: free text for comments
 
-You can use coreBOS's reporting engine to get reports on this module.  
-The module is vtlib compatible and respects the normal coreBOS features
-as role permission control, custom fields, picklist editing,
-import/export, ...
+You can use coreBOS's reporting engine to get reports on this module. The module is vtlib compatible and respects the normal coreBOS features as role permission control, custom fields, picklist editing, import/export, ...
 
-Some of the many features that can be added from this starting point
-could be:
+Some of the many features that can be added from this starting point could be:
 
-    *prepayments are accepted and automatically inserted when creating a SO or Invoice (for example)
-    *balance due is automatically calculated and printed on PDF
-    *relation of payments made on SO or Invoice show up on their "More Information" tab
-    *...
+- prepayments are accepted and automatically inserted when creating a SO or Invoice (for example)
+- balance due is automatically calculated and printed on PDF
+- relation of payments made on SO or Invoice show up on their "More Information" tab
+- ...
 
-Without these enhancements you would have to create a new payment each
-time a payment is made. The enhancements I propose are just to make
-workflow easier and are very dependent on how each company works, the
-payment module "as is" is already very useful if you need to control the
-money moving around in your company.
+Without these enhancements you would have to create a new payment each time a payment is made. The enhancements I propose are just to make workflow easier and are very dependent on how each company works, the payment module "as is" is already very useful if you need to control the money moving around in your company.
 
-The module has a basic **Payment History** tab where information about
-the changes can be consulted.
+The module has a basic **Payment History** tab where information about the changes can be consulted.
 
-We also have this module integrated into our [business intelligence integration](http://bievolutivo.com/) for special reporting to get
-weekly, monthly and yearly ratios of the money in the company. Among
-others, like OLAP navigation of the payments.
+We also have this module integrated into our [business intelligence integration](http://bievolutivo.com/) for special reporting to get weekly, monthly and yearly ratios of the money in the company. Among others, like OLAP navigation of the payments.
 
 We also have a simple patch that enhances the module with capability to
 easily support **partial payments**. We add a few fields on the invoice

@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - calendar
 ---
----
+
 How to add an activity or event
 -------------------------------
 

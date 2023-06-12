@@ -19,7 +19,7 @@ taxonomy:
         - picklist
         - picklisteditor
 ---
----
+
 As the name itself says, picklist is a dropdown field with a list of options available, within which, only one option can be selected. For instance, *Lead status* in the *Leads* module.
 
 **Picklist Editor** can be used to customize the picklist values in different modules. Select a role before performing global actions such as add, edit and, delete; as the picklist values vary across roles.

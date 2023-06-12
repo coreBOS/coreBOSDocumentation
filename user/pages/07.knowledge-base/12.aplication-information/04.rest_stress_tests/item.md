@@ -18,22 +18,15 @@ taxonomy:
     tag:
         - mobile
 ---
----
 
 Select with limit and related
 -----------------------------
 
-Using the very useful [RESTful Stress Chrome application](https://chrome.google.com/webstore/detail/restful-stress/lljgneahfmgjmpglpbhmkangancgdgeb)
-I ran a set of test on some of the webservice interface functionality.
+Using the very useful [RESTful Stress Chrome application](https://chrome.google.com/webstore/detail/restful-stress/lljgneahfmgjmpglpbhmkangancgdgeb) I ran a set of test on some of the webservice interface functionality.
 
-This is definitely not rigorous nor exact, I have not controlled any of
-the many variables that can influence the results. I just launched the
-tests while I was working against a live server. None the less I
-understand that the results must mean something and, at least, give some
-orientation.
+This is definitely not rigorous nor exact, I have not controlled any of the many variables that can influence the results. I just launched the tests while I was working against a live server. None the less I understand that the results must mean something and, at least, give some orientation.
 
-This is the general setup screen: I launched each select query 100 times
-after 4 warmup calls with an interval of 1 second between each call.
+This is the general setup screen: I launched each select query 100 times after 4 warmup calls with an interval of 1 second between each call.
 
 ![](rest_stress_setup.png?width=70%)
 

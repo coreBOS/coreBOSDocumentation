@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - emails
 ---
----
 
 ### vtigercron: scheduler
 

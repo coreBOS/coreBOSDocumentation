@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - cla
 ---
----
+
 Extracted from [In Defense of Contributor License Agreements](http://julien.ponge.org/blog/in-defense-of-contributor-license-agreements/):
 
  !!! **Great, so do I really need a CLA?**

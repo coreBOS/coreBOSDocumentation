@@ -19,31 +19,20 @@ taxonomy:
         
         - invoice
 ---
----
+
 Recurring Invoice feature, permits you to use a Sales Order as a template to generate Invoices on a regular frequency.
 
 ===
 
 ### Usage
 
-A cron script in the system will launch once a day looking for all Sales
-Orders that have the **Enable Recurring** check box marked. For all of
-those it will look if the current date is inside the **Start and End
-Period** and finally if the **Recurring Frequency** is due on this date.
-If so a new Invoice will be created with the indicated **Invoice
-Status** and setting the **due date** for the generated Invoice to **(
-Generated date + payment duration )**.
+A cron script in the system will launch once a day looking for all Sales Orders that have the **Enable Recurring** check box marked. For all of those it will look if the current date is inside the **Start and End Period** and finally if the **Recurring Frequency** is due on this date. If so a new Invoice will be created with the indicated **Invoice Status** and setting the **due date** for the generated Invoice to **(Generated date + payment duration)**.
 
 <div class="notices red">
-The first invoice generated is
-the <strong>NEXT</strong> one after the start period. In other words, the expected
-behavior is to create a recurring Sales Order, set the start period to
-the first invoice to be generated and then create that first one
-manually. Then the system will take care of all the rest until the end
-period.</div>
+The first invoice generated is the <strong>NEXT</strong> one after the start period. In other words, the expected behavior is to create a recurring Sales Order, set the start period to the first invoice to be generated and then create that first one manually. Then the system will take care of all the rest until the end period.
+</div>
 
-The recurring frequencies supported are: Daily, Weekly, Monthly,
-Quarterly, Half-Year, Yearly.
+The recurring frequencies supported are: Daily, Weekly, Monthly, Quarterly, Half-Year, Yearly.
 
 Following is a snapshot of the Sales Order creation page:
 
@@ -51,8 +40,7 @@ Following is a snapshot of the Sales Order creation page:
 
 ### FAQ
 
-
-<div class="notices blue"> <h2>last_recurring_date field isn't updated when modifying recurring frequency</h2>    
+<div class="notices blue"> <h2>last_recurring_date field isn't updated when modifying recurring frequency</h2> 
 <a href="http://trac.vtiger.com/cgi-bin/trac.cgi/ticket/8614">Trac Ticket</a>
 <a href="https://discussions.corebos.org/documentation/lib/exe/fetch.php?media=en:corebos:trac8614.pdf">Trac Ticket</a>
 
@@ -67,4 +55,4 @@ I guess we could detect if the frequency is lower than the current one (bigger o
 
 HTH
 
- </div>
+</div>

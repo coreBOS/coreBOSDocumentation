@@ -20,7 +20,7 @@ taxonomy:
         - scheduled time
         - workflow
 ---
----
+
 **Scheduled Workflows** are time based, not event based, so they are triggered on a certain date/time. That totally defines and limits the way they work and the way they must be constructed, which is slightly different than the save event based workflows.
 
 Scheduled Workflows enable you to run periodic tasks to automate your business. You can program the tasks to be executed when a certain time arrives so you can dedicate your attention to other business operations.

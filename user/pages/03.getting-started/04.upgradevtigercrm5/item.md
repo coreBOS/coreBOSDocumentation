@@ -20,7 +20,6 @@ taxonomy:
         - install
         - vtigercrm
 ---
----
 
 Upgrade from vtiger CRM 5.4.0 and 5.x to coreBOS using coreBOS Updater
 

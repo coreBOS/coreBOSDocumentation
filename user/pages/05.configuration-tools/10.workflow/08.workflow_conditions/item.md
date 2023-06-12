@@ -20,7 +20,6 @@ taxonomy:
         - condition
         
 ---
----
 
 *TBD FIXME: Explain how the different conditions work.*
 

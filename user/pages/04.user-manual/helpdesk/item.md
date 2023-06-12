@@ -18,7 +18,6 @@ taxonomy:
     tag:
         -help desk
 ---
----
 
 - [Is it possible to make coreBOS work using "block hours" or "term contracts"?](../../04.user-manual/helpdesk#is-it-possible-to-make-corebos-work-using-block-hours-or-term-contracts)
 

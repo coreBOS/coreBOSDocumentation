@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - contacts
 ---
----
 
 Google Contacts Synchronization
 -------------------------------

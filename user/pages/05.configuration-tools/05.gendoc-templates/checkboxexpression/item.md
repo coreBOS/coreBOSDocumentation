@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - gendoc
 ---
----
 
 - [checkboxes on module template](../checkbox_expression_conditions.odt)
 - [checkboxes on module example](../organization_chemex_labs_ltd.odt)

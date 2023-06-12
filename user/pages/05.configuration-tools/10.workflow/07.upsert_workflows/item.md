@@ -21,7 +21,6 @@ taxonomy:
         - updatefield
         - workflow
 ---
----
 
 This workflow task will permit us to create or update records in the application. It is like the create workflow task but not limited to related modules and the update workflow task all in one.
 
@@ -29,10 +28,10 @@ You must select the module you want to create/update the record in. You can only
 
 Then you select a condition business map. This condition defines the action that will be taken:
 
--   if the business map returns a positive integer, the task will look for a record with that ID and update it
--   if the business map returns a zero, the task will create a new record
--   if the business map returns a negative number that row will be skipped
--   if there is no map, we always create
+- if the business map returns a positive integer, the task will look for a record with that ID and update it
+- if the business map returns a zero, the task will create a new record
+- if the business map returns a negative number that row will be skipped
+- if there is no map, we always create
 
 Finally, you have to define a value for each field you want to create and update. Note that since there can be no relation between the module triggering the workflow task and the module where the new record is being created you must establish a value for the relation fields (getIDof is your friend here).
 

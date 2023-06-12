@@ -19,8 +19,6 @@ taxonomy:
     tag:
         - workflow
         - emails
-        
----
 ---
 
 ## Meta Variables
@@ -31,11 +29,12 @@ taxonomy:
 This metavariable was created to support the help desk process and permits you to add and format a list of the comments on the ticket to your email.
 
 It also supports the FAQ module and all the other modules that have comments. So, although unlikely, you could send all the comments on an opportunity to the related account or contact, or, more interesting, send them to the user in charge of the opportunity when one is added.
+
+===
+
 <div class="notices blue">
 Note that the generic ModComments module is supported separately in the workflow settings, so you can send emails with the comments from there directly and probably have more conditions.
 </div>
-
-===
 
 The syntax of this meta variable is:
 
@@ -57,12 +56,10 @@ where:
 <tr>
 <td><strong>sort</strong></td>
 <td>Indicates the number of comments you want, 0 will retrieve all comments</td>
-
 </tr>
 <tr>
 <td><strong>format</strong></td>
 <td>text, HTML or table</td>
-
 </tr>
 <tr>
 <td><strong>field</strong></td>
@@ -71,12 +68,7 @@ where:
 </tbody>
 </table>
 
-
-
-##
-
 ### Examples
-
 
 <table class="table table-striped">
 <tbody>
@@ -118,10 +110,6 @@ where:
 </tr>
 </tbody>
 </table>
-
-
-##
-
 
 ### Styles and Formats
 
@@ -226,10 +214,6 @@ where:
 </tr>
 </tbody>
 </table>
-
-
-##
-
 
 ### Related Lists
 

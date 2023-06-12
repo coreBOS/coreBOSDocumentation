@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - howto
 ---
----
 
 ## Contribute to the coreBOS Open Source project
 

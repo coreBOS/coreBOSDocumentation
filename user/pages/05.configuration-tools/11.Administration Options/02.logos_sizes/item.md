@@ -18,10 +18,10 @@ taxonomy:
     tag:
         - logo
 ---
----
--   Official orange color: #ffb018
--   Official blue color: #04579b
--   Official blue background: #0B2559
+
+- Official orange color: #ffb018
+- Official blue color: #04579b
+- Official blue background: #0B2559
 
 coreBOS supports three types of logos for customizations:
 
@@ -29,13 +29,13 @@ coreBOS supports three types of logos for customizations:
 
 This is the logo that appears on the front login page above the user name and password box. The recommended size is:
 
--   width: 250px
--   height: 100px;
+- width: 250px
+- height: 100px;
 
 which gets a small icon above the login box. Another good size is
 
--   width: 581px
--   height: 237px;
+- width: 581px
+- height: 237px;
 
 which fills in the whole login box with the logo and you can acheive an effect the one seen in the next screen shot:
 

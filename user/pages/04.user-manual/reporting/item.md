@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - reporting
 ---
----
+
 - [Report Charts](../../04.user-manual/report%20charts)
 
 <div class="notices blue">
@@ -26,6 +26,5 @@ taxonomy:
 <hr> </div>
 
 !!! You can establish time based filters in step 7 (Filters) of the report configuration.
-
 
 !!! ![](timebasedreportfilters.png?width=80%)

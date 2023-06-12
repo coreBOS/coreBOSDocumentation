@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - inventory
 ---
----
+
 Financial Block and Fields
 --------------------------
 

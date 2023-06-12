@@ -57,8 +57,6 @@ cards:
         subtitle: "Give it a try"
         path: http://demo.corebos.com/
         target: corebosdemo
-
----
 ---
 
 <p style="text-align:center;font-weight: 700;font-size: 2.0rem;color:#ffb018;">core Business Operating System</p>

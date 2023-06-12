@@ -19,7 +19,6 @@ taxonomy:
     tag:
         - faq
 ---
----
 
 -   ["report to" field in user profile have some influence in hierarchy and permission?](../13.FAQ/item.md#report-to-field-in-user-profile-have-some-influence-in-hierarchy-and-permission)
 -   [How to increment maximum file upload. File upload field with message 'Maximum upload size is MB'](../13.FAQ/item.md#how-to-increment-maximum-file-upload-file-upload-field-with-message-maximum-upload-size-is-mb)
