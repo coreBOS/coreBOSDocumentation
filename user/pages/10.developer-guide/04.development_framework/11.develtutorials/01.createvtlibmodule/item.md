@@ -19,20 +19,14 @@ taxonomy:
     tag:
         - module
 ---
----
-The most important part of creating a new module is defining the module
-completely. Once you have clearly defined all the fields and the
-relation of the module with the other modules in the system the
-implementation is just copy paste and fill in.
+
+The most important part of creating a new module is defining the module completely. Once you have clearly defined all the fields and the relation of the module with the other modules in the system the implementation is just copy paste and fill in.
+
+===
 
 This is the process I follow.
 
-**Module Name**: this name will serve as the start for translation files
-and also as the internal name of the module. As with any name it should
-be significant and identify what the module represents but it also must
-be unique in your coreBOS install. I recommend prefixing a company
-identifier. The internal name must be a valid PHP identifier. For
-example
+**Module Name**: this name will serve as the start for translation files and also as the internal name of the module. As with any name it should be significant and identify what the module represents but it also must be unique in your coreBOS install. I recommend prefixing a company identifier. The internal name must be a valid PHP identifier. For example
 
 <table class="table table-striped">
 <th>Name:</th>

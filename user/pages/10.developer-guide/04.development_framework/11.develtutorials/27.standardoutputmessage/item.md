@@ -19,14 +19,15 @@ taxonomy:
     tag:
         -howto
 ---
----
-coreBOS gives the developer a standard way of sending messages to the
-user in detail and edit view. The styling is based on Lighting Design.
 
-You activate the message by settings the Smarty
-**ERROR\_MESSAGE\_CLASS** and **ERROR\_MESSAGE** template variables.
+coreBOS gives the developer a standard way of sending messages to the user in detail and edit view. The styling is based on Lighting Design.
+
+===
+
+You activate the message by settings the Smarty **ERROR\_MESSAGE\_CLASS** and **ERROR\_MESSAGE** template variables.
 
 The next script will output a message in each supported class:
+
 ```php
 <?php
 include_once('vtlib/Vtiger/Module.php');
@@ -50,13 +51,12 @@ $smarty->display('modules/Vtiger/OperationNotPermitted.tpl');
 ?>
 ```
 
-Copy the script to any module and call it directly. For example, create
-a script:
+Copy the script to any module and call it directly. For example, create a script:
 
 modules/Accounts/showAppMsg.php
 
-copy the contents above inside and save. Now go to your browser and type
-in:
+copy the contents above inside and save. Now go to your browser and type in:
+
 ```
 http://YOUR_SERVER/YOUR_coreBOS/index.php?module=Accounts&action=showAppMsg
 ```

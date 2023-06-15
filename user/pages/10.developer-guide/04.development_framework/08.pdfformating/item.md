@@ -20,12 +20,12 @@ taxonomy:
         - howto
         - obsolete
 ---
----
-<div class="notices blue">
-<h2> How to eliminate the background status watermark?</h2></div>
+
+<div class="notices blue"> <h2> How to eliminate the background status watermark?</h2></div>
+
+===
 
 <h3>The next patch shows how to do this for Invoices: </h3>
-
 
 ```
 diff --git a/modules/Invoice/InvoicePDFController.php b/modules/Invoice/InvoicePDFController.php

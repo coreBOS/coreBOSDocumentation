@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - howto
 ---
----
+
 <div class="notices blue">
 Please <a href="https://blog.corebos.org/blog/feedingdatatosave"> read this very well explained article </a> from Luke.
 </div>
@@ -28,8 +28,8 @@ Background
 
 The application gets and sends information from/to two sources:
 
--   **Database**
--   **User/Browser**
+- **Database**
+- **User/Browser**
 
 thus, it expects to get information coming from these sources in their
 native format and sends information to them in their native format. So

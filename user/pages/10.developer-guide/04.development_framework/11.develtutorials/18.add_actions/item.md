@@ -18,27 +18,22 @@ taxonomy:
     tag:
         - links
 ---
----
-Action links
-------------
 
-Action links are **hooks** into the user interface that can be created
-directly in the database without having to change any code. At most you
-will have to create new code to attend to the new actions.
+### Action links
 
-These actions will be easily upgradeable going forward as they are saved
-in the database and no base code changes are required.
+Action links are **hooks** into the user interface that can be created directly in the database without having to change any code. At most you will have to create new code to attend to the new actions.
 
-We have links to enhance the **List View**, the **Detail View** and some
-special hooks to load CSS and javascript to react to the new actions.
-See below for more information.
+===
 
-Adding a new action can be done in **two ways**. The **first** is when
-creating a module in it's manifest file. There is a specific section
-there to add custom links that looks like this:
+These actions will be easily upgradeable going forward as they are saved in the database and no base code changes are required.
 
-    <customlinks>
-    <customlink>
+We have links to enhance the **List View**, the **Detail View** and some special hooks to load CSS and javascript to react to the new actions. See below for more information.
+
+Adding a new action can be done in **two ways**. The **first** is when creating a module in it's manifest file. There is a specific section there to add custom links that looks like this:
+
+```xml
+<customlinks>
+  <customlink>
     <linktype>DETAILVIEWWIDGET</linktype>
     <linklabel>Execute</linklabel>
     <linkurl><![CDATA[module=cbupdater&action=cbupdaterAjax&file=cbupdaterWidget&record=$RECORD$]]></linkurl>
@@ -57,12 +52,11 @@ there to add custom links that looks like this:
     <handler_path><![CDATA[]]></handler_path>
     <handler_class><![CDATA[]]></handler_class>
     <handler><![CDATA[]]></handler>
-    </customlink>
-    </customlinks>
+  </customlink>
+</customlinks>
+```
 
-The above code is extracted from the coreBOSUpdater manifest.xml file.
-It adds a DETAILVIEWWIDGET and a LISTVIEWBASIC action. As can be seen
-the action has these parameters:
+The above code is extracted from the coreBOSUpdater manifest.xml file. It adds a DETAILVIEWWIDGET and a LISTVIEWBASIC action. As can be seen the action has these parameters:
 
 <table class="table table-striped">
 <th>linktype</th>
@@ -101,10 +95,7 @@ the action has these parameters:
 </tbody>
 </table>
 
-The **second** form is for when we have an already installed module and
-we want to modify it. In this case we have to load the vtlib programming
-API, get a link to our module and execute the **addLink()** method. This
-looks like this:
+The **second** form is for when we have an already installed module and we want to modify it. In this case we have to load the vtlib programming API, get a link to our module and execute the **addLink()** method. This looks like this:
 
     include_once('vtlib/Vtiger/Module.php');
     $module = Vtiger_Module::getInstance('Contacts');
@@ -116,58 +107,35 @@ or
     $mod_acc = Vtiger_Module::getInstance('Accounts');
     $mod_acc->addLink('DETAILVIEWBASIC', 'Add Ticket', 'index.php?module=HelpDesk&action=EditView&parent_id=$RECORD$');
 
-The first example adds a button to the list view of the contacts module
-while the second adds a link to the right action panel of accounts.
+The first example adds a button to the list view of the contacts module while the second adds a link to the right action panel of accounts.
 
 You can get a copy of the full script in the [build/HelperScripts directory of coreBOS](https://github.com/tsolucio/corebos/tree/master/build/HelperScripts).
 
-Action links on List View
--------------------------
+### Action links on List View
 
-We have two possible options on the list view. The **LISTVIEWBASIC**
-value will add a new button on the list view exactly the same as the
-already existing buttons, while the **LISTVIEW** value will add the link
-to a "More actions" drop down menu.
+We have two possible options on the list view. The **LISTVIEWBASIC** value will add a new button on the list view exactly the same as the already existing buttons, while the **LISTVIEW** value will add the link to a "More actions" drop down menu.
 
-Action links on Detail View
----------------------------
+### Action links on Detail View
 
-We have three types of possible actions on the detail view screen. The
-**DETAILVIEWBASIC** option will add a link to the right action panel, at
-the same level as the normal existing links. The **DETAILVIEW** option
-will add the link inside a "More Actions" drop down menu. This is useful
-when we have many options.
+We have three types of possible actions on the detail view screen. The **DETAILVIEWBASIC** option will add a link to the right action panel, at the same level as the normal existing links. The **DETAILVIEW** option will add the link inside a "More Actions" drop down menu. This is useful when we have many options.
 
-Finally the **DETAILVIEWWIDGET** option will permit us to add a small
-widget (box) on the right action panel, within which we will be able to
-execute some actions. Very useful to add functionality to the module.
+Finally the **DETAILVIEWWIDGET** option will permit us to add a small widget (box) on the right action panel, within which we will be able to execute some actions. Very useful to add functionality to the module.
 
-The **DETAILVIEWWIDGET** URL is called within the context of the
-application, it does not need index.php because that will be called
-always. You simply have to add the MVC parameters. This will normally be
-in the form;
+The **DETAILVIEWWIDGET** URL is called within the context of the application, it does not need index.php because that will be called always. You simply have to add the MVC parameters. This will normally be in the form;
 
     module={MODULE}&action={MODULE}Ajax&file={ACTION}...
 
 <div class="notices blue">
-As of coreBOS January 2015 any
-javascript code sent with the widget content will be executed
-automatically making it easy to load some additional libraries and/or
-execute some process.
+As of coreBOS January 2015 any javascript code sent with the widget content will be executed automatically making it easy to load some additional libraries and/or execute some process.
 
-You can study the <a href="https://github.com/tsolucio/Timecontrol"><i>Timecontrol</i></a>
-module stop watch widget and also the  <a href="https://github.com/tsolucio/corebos/commit/cbfb301b12688d260fc3c5d7144cdea163da5868"><i>Mass Image Upload widget on Products</i></a> </div>
+You can study the <a href="https://github.com/tsolucio/Timecontrol"><i>Timecontrol</i></a> module stop watch widget and also the  <a href="https://github.com/tsolucio/corebos/commit/cbfb301b12688d260fc3c5d7144cdea163da5868"><i>Mass Image Upload widget on Products</i></a>
+</div>
 
-Other Action links
-------------------
+### Other Action links
 
-Three other types of links exist that will permit us to insert CSS
-(**HEADERCSS**), javascript (**HEADERSCRIPT**) and a global drop down
-menu (**HEADERLINK**) with actions on the upper right button bar. See
-the next section for more information.
+Three other types of links exist that will permit us to insert CSS (**HEADERCSS**), javascript (**HEADERSCRIPT**) and a global drop down menu (**HEADERLINK**) with actions on the upper right button bar. See the next section for more information.
 
-Summary of Action link types
-----------------------------
+### Summary of Action link types
 
 <table class="table table-striped">
 <th>Linktype</th>
@@ -210,7 +178,6 @@ Summary of Action link types
 </tbody>
 </table>
 
-Business Actions
-----------------
+### Business Actions
 
 [Read about the Business Actions module for an easy way to add links without coding](../../../../05.configuration-tools/03.business-actions)

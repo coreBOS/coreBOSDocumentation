@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - store
 ---
----
+
 As of April 2017 coreBOS has a generic, system-wide, **Key-Value store** available to all developers.
 
 coreBOS Settings permits any module or extension to easily save values persistently in the database without the need to create their own tables.

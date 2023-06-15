@@ -19,34 +19,22 @@ taxonomy:
     tag:
         - structure
 ---
----
-Display Types for Fields in Modules
------------------------------------
 
-Each field has to be displayed in two different ways for the Detail view
-and Edit view. Display type column defines a field to be displayed
-either in Edit view or the Detail view or both.
+### Display Types for Fields in Modules
+
+Each field has to be displayed in two different ways for the Detail view and Edit view. Display type column defines a field to be displayed either in Edit view or the Detail view or both.
+
+===
 
 The following are some of the display types that are used:
 
--   **1** - Displayed both in Detail view and Edit view
--   **2** - Displayed only in the Detail view (Ex. Created time,
-    Modified time) Read-only field. The application will never update
-    this type of field, the only way to set a value is using direct SQL
-    (save\_module or custom handler, for example)
--   **3** - It is not displayed either in DetailView nor EditView, but
-    can be shown in ListView. For example Total, subtotal in Invoice
-    Module. These Fields are not tied to any block.
--   **4** - a Read-Only field that can be modified with workflows.
-    **NOTE** if you want to save a displaytype 4 field from inside your
-    custom code using the normal "save" method, you **MUST** trick that
-    save to think it is being called from the workflow system by setting
-    the $from\_wf global variable to true before the save (and back to
-    false after)
--   **5** - Only in create mode. Cannot be used in workflows
+- **1** - Displayed both in Detail view and Edit view
+- **2** - Displayed only in the Detail view (Ex. Created time, Modified time) Read-only field. The application will never update this type of field, the only way to set a value is using direct SQL (save\_module or custom handler, for example)
+- **3** - It is not displayed either in DetailView nor EditView, but can be shown in ListView. For example Total, subtotal in Invoice Module. These Fields are not tied to any block.
+- **4** - a Read-Only field that can be modified with workflows. **NOTE** if you want to save a displaytype 4 field from inside your custom code using the normal "save" method, you **MUST** trick that save to think it is being called from the workflow system by setting the $from\_wf global variable to true before the save (and back to false after)
+- **5** - Only in create mode. Cannot be used in workflows
 
-typeofdata for Fields in Modules
---------------------------------
+### typeofdata for Fields in Modules
 
 <table class="table table-striped">
 <td>typeofdata</td>
@@ -209,48 +197,38 @@ In the above examples:
     *M; Indicates Mandatory field 
     *O; Indicates Optional field
 
-Basic Validations on Numbers and Dates
---------------------------------------
+### Basic Validations on Numbers and Dates
 
-On numeric and date fields you can add some more information on the
-typeofdata column in order to perform some basic validations when
-editing.
+On numeric and date fields you can add some more information on the typeofdata column in order to perform some basic validations when editing.
 
-Numeric fields accept a comparison operator followed by a number to use
-in the comparison.
+Numeric fields accept a comparison operator followed by a number to use in the comparison.
 
     N~O~LE~22
 
 will assure that the number in this field is smaller or equal to 22
 
-Date fields accept the same comparison operator followed by the field
-name of another date field being edited in the browser and will make
-sure that the relation indicated by the operator is true.
+Date fields accept the same comparison operator followed by the field name of another date field being edited in the browser and will make sure that the relation indicated by the operator is true.
 
     D~O~OTH~GE~dateinservice~Date in Service
 
-the date in this field will be equal to or bigger than the value in
-dateinservice field
+the date in this field will be equal to or bigger than the value in dateinservice field
 
 Accepted comparators are: L,LE,E,NE,G,GE
 
-Mass Edit
----------
+### Mass Edit
 
--   0 is blocked non editable, it cannot be activated in layout editor
--   1 is mass editable
--   2 is disabled mass editable but can be enabled in layout editor
+-  0 is blocked non editable, it cannot be activated in layout editor
+-  1 is mass editable
+-  2 is disabled mass editable but can be enabled in layout editor
 
-Quick Create
-------------
+### Quick Create
 
--   0 is always shown and cannot be deactivated in the layout editor
--   1 is not shown but can be set in the layout editor
--   2 is shown but can be unset in the layout editor
--   3 is never shown and cannot be activated in the layout editor
+-  0 is always shown and cannot be deactivated in the layout editor
+-  1 is not shown but can be set in the layout editor
+-  2 is shown but can be unset in the layout editor
+-  3 is never shown and cannot be activated in the layout editor
 
-Presence
---------
+### Presence
 
 -   0 always active, cannot be modified in layout editor
 -   1 inactive

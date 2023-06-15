@@ -19,8 +19,10 @@ taxonomy:
     tag:
         - integration
 ---
----
+
 Artículo publicado [en este blog](http://robert-sp-86.blogspot.com/2012/03/vtiger-popup-llamada-entrante-cola.html) y replciado aquí para que no se pierda.
+
+===
 
 Se supone configurado el módulo PBX Manager del Vtiger CRM correctamente.
 

@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - bug
 ---
----
+
 There is a plethora of information and narritive prose on the issue and I'm not going to add anything more to it. Basically, make sure you are using the latest version and that you can reproduce the issue consistently, open a ticket and explain the steps to reproduce and the environment the best you can.
 
 Launch an internet a search to read at some of the interesting literature on the subject. I add a few links here that I like:

@@ -18,11 +18,13 @@ taxonomy:
     tag:
         - upgrade
 ---
----
+
 This release is about updating and stabilizing our code base along with enhancements in two directions:
 
 - open the application to third party projects through a much more powerful REST interface, so we can grow upon the core system creating incredible applications on top of it
 - change the package distribution system, so it is much easier to distribute new modules and new changes without having to go through a traumatic process of patching and manually executing code
+
+===
 
 But we still slipped in a few interesting features on reporting and importing among others :-)
 

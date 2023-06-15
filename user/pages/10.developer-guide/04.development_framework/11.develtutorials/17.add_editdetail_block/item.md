@@ -18,34 +18,24 @@ taxonomy:
     tag:
         - template
 ---
----
-The goal of this tutorial is to show how we could add a new block in the
-edit or detail view of a module where we could add some special
-functionality that we may need.
 
-To use this strategy you simply have to create a template with the same
-label as the block followed by *\_edit* or *\_detail* inside the
-module's template directory.
+The goal of this tutorial is to show how we could add a new block in the edit or detail view of a module where we could add some special functionality that we may need.
 
-Inside that file, you will be able to use all the variables and
-functionality of Smarty and a new *$FIELDS* variable which contains the
-values of the fields of the record being shown/edited.
+===
 
-No additional functionality is given. You, as a programmer, must create
-the code to do any magic you need inside this block.
+To use this strategy you simply have to create a template with the same label as the block followed by *\_edit* or *\_detail* inside the module's template directory.
 
-If you need to add a new block this can be done easily both in the
-layout editor and by using vtlib API.
+Inside that file, you will be able to use all the variables and functionality of Smarty and a new *$FIELDS* variable which contains the values of the fields of the record being shown/edited.
 
-Next, I am going to walk through a simple example by creating a new
-block called **Process Workflow** which will show an image to move to
-next phase of a given business process if it is possible in *Detail
-View* and a status message in *Edit View*.
+No additional functionality is given. You, as a programmer, must create the code to do any magic you need inside this block.
+
+If you need to add a new block this can be done easily both in the layout editor and by using vtlib API.
+
+Next, I am going to walk through a simple example by creating a new block called **Process Workflow** which will show an image to move to next phase of a given business process if it is possible in *Detail View* and a status message in *Edit View*.
 
 To create the block we use this vtlib code:
 
-<div class="notices blue"> We could use the module manager "Add
-Block" feature with the same result. </div>
+<div class="notices blue"> We could use the module manager "Add Block" feature with the same result. </div>
 
 ```php
 $modname = 'Potentials';

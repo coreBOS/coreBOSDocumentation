@@ -19,12 +19,10 @@ taxonomy:
     tag:
         - helper
 ---
----
-In the **build/HelperScripts** directory you can find a series of small
-scripts and tools that are useful to achieve some of those special tasks
-that help adapt the system to your specific needs. Some of these should
-be done directly inside the application, and hopefully, someday they
-will be, but in the meantime, these are the steps to get it working.
+
+In the **build/HelperScripts** directory you can find a series of small scripts and tools that are useful to achieve some of those special tasks that help adapt the system to your specific needs. Some of these should be done directly inside the application, and hopefully, someday they will be, but in the meantime, these are the steps to get it working.
+
+===
 
 addActionLink.php
 -----------------

@@ -18,18 +18,15 @@ taxonomy:
     tag:
         - debug.log
 ---
----
-Due to the popularity of javascript and it's importance inside web
-applications (coreBOS), as of June 2018 coreBOS has added functionality
-to be able to log messages that happen in your javascript code to the
-backend logging system.
+
+Due to the popularity of javascript and it's importance inside web applications (coreBOS), as of June 2018 coreBOS has added functionality to be able to log messages that happen in your javascript code to the backend logging system.
+
+===
 
 to get this to work we must:
 
--   load the coreBOS webservice library in order to make web services
-    calls
--   load the logging javascript library. This can be done by adding this
-    code to your project:
+- load the coreBOS webservice library in order to make web services calls
+- load the logging javascript library. This can be done by adding this code to your project:
 
 <!-- -->
 

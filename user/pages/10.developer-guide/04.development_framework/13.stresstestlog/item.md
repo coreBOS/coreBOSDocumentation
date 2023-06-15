@@ -20,9 +20,8 @@ taxonomy:
         - debug
         - log
 ---
----
-While working on coreBOS I ran into [this email](http://permalink.gmane.org/gmane.comp.web.vtigercrm.devel/5131)
-(which was ignored on the developers list) from Adam Heinz:
+
+While working on coreBOS I ran into [this email](http://permalink.gmane.org/gmane.comp.web.vtigercrm.devel/5131) (which was ignored on the developers list) from Adam Heinz:
 
 I reproduce it here as a reference:
 
@@ -58,27 +57,17 @@ performance hit hammering my sandbox (virtual machine, 512MB, 1/4 Opteron CPU). 
 archives -- would whoever had the original performance problems like to weigh in? I think this is the right
 direction to take the code, but I don't have a load test environment.
 ```
-I
-The code above looked really correct (as most of Adam's changes did) but
-I needed to find out if we could really eliminate completely the mock up
-logging library, so I created a stress test script which now [can be found on github](https://github.com/tsolucio/corebos/blob/master/build/HelperScripts/stressTest.php)
-in the coreBOS project's build/HelperScripts directory.
 
-This stress script creates 100 contacts in batches of 10, retrieves them
-and deletes them.
+The code above looked really correct (as most of Adam's changes did) but I needed to find out if we could really eliminate completely the mock up logging library, so I created a stress test script which now [can be found on github](https://github.com/tsolucio/corebos/blob/master/build/HelperScripts/stressTest.php) in the coreBOS project's build/HelperScripts directory.
+
+This stress script creates 100 contacts in batches of 10, retrieves them and deletes them.
 
 The table below shows the results. The conclusions are:
 
--   Upgrading the library produced little difference which is good,
-    besides the security bug fixes we may get some performance benefits
-    on higher PHP versions
--   There is a significant difference between the mock up library and
-    the full logging library: we keep this structure and
-    *config.performance.LOG4PHP\_DEBUG* **MUST** be set to false in
-    production
+- Upgrading the library produced little difference which is good, besides the security bug fixes we may get some performance benefits on higher PHP versions
+- There is a significant difference between the mock up library and the full logging library: we keep this structure and *config.performance.LOG4PHP\_DEBUG* **MUST** be set to false in production
 
 ```
-
     Stress Test         Php = 5.3                       
     Before upgrade      Log4php = 1.9           After upgrade       Log4php = 2.3       
     Log load    operation           Log load    operation       

@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - howto
 ---
----
+
 [Reference: Migrating from PrototypeJS to jQuery](https://andykdocs.de/development/JavaScript/Migrating+from+PrototypeJS+to+jQuery/#3-Events)
 
 <table class="table table-striped">

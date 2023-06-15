@@ -19,18 +19,17 @@ taxonomy:
     tag:
         - workflow
 ---
----
+
 <div class="notices yellow">
 <a href="https://producingoss.com/en/share-management.html#translation-manager">Based on Produccing Open Source Software</a></div>
 
+## coreBOS Translation Module
 
-coreBOS Translation Module
---------------------------
+===
 
 [coreBOS Translation module](../01.cbtranslation)
 
-Translating Application
------------------------
+# Translating Application
 
 ### Translating from within the application
 

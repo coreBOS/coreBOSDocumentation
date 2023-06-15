@@ -21,10 +21,12 @@ taxonomy:
         - permission, 
         - rac 
 ---
----
+
 ### What is it for?
 
 The coreBOS custom permission hooks serve the purpose of modifying the existing permission system with custom programming. Using these hooks we will be able to completely override the existing permission decision or construct upon them to enhance the decision of showing or editing a set of records without having to modify the base code to do it.
+
+===
 
 <div class="notices red"> 
 You will need to learn and understand how the current permission system works to be able to modify it!
