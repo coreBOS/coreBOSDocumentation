@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - query
 ---
----
+
 Query
 -----
 

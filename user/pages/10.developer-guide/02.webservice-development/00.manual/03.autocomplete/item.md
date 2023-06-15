@@ -19,13 +19,12 @@ taxonomy:
     tag:
         - autocomplete
 ---
----
-Autocomplete functionality is so typical for a backend that coreBOS had
-to have this functionality natively. We have two methods that permit us
-to easily implement this functionality.
+
+Autocomplete functionality is so typical for a backend that coreBOS had to have this functionality natively. We have two methods that permit us to easily implement this functionality.
+
+===
 
 ### Methods
-
 
 <table class="table table-striped">
 <tbody>
@@ -201,16 +200,10 @@ autocomplete
     </body>
     </html>
 ```
-1.  We load the javascript promise based library, create the necessary
-    HTML and connect to our coreBOS from line 1 to line 37.
-2.  recordTemplate is just to fill in the drop-down with the values
-    returned from the call
-3.  getRecords is the operative function that sends the search term to
-    coreBOS method **getReferenceAutocomplete** with the correct
-    parameters to search in the Accounts and Contacts module.
-4.  doSearch triggers when the user types in the characters, makes the
-    call and loads the results
-
+1. We load the javascript promise based library, create the necessary HTML and connect to our coreBOS from line 1 to line 37.
+2. recordTemplate is just to fill in the drop-down with the values returned from the call
+3. getRecords is the operative function that sends the search term to coreBOS method **getReferenceAutocomplete** with the correct parameters to search in the Accounts and Contacts module.
+4. doSearch triggers when the user types in the characters, makes the call and loads the results
 
 <br>
 ------------------------------------------------------------------------

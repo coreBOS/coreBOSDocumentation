@@ -21,7 +21,6 @@ taxonomy:
         - guide
         - license
 ---
----
 
 ## Guide License
 

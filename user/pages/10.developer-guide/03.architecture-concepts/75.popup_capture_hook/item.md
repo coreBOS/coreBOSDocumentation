@@ -18,8 +18,7 @@ taxonomy:
         - event
     tag:
         - hooks
-        - popup 
----
+        - popup
 ---
 
 ## Popup capture hooks

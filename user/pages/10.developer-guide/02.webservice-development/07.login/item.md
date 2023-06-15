@@ -20,30 +20,20 @@ taxonomy:
         - login
         
 ---
----
+
 ## Access to the System
 
-You need a valid coreBOS user to access the webservice. All the
-operations you can do through the REST interface will be limited by the
-coreBOS permission system of the connected user.
+You need a valid coreBOS user to access the webservice. All the operations you can do through the REST interface will be limited by the coreBOS permission system of the connected user.
 
-The REST API does not use the users password to connect. Instead it
-needs the user's access key which is a unique identifier created for
-each user that can be found in the user's preferences page.
+The REST API does not use the users password to connect. Instead it needs the user's access key which is a unique identifier created for each user that can be found in the user's preferences page.
 
 ![](accesskey.png?width=100%)
 
-The login operation establishes a session between the REST client and
-the coreBOS application, validates the user and returns a session
-identifier which must be used in all subsequent calls to coreBOS.
+The login operation establishes a session between the REST client and the coreBOS application, validates the user and returns a session identifier which must be used in all subsequent calls to coreBOS.
 
-This login process is done in two steps, first we ask coreBOS for a
-challenge sequence and then we use the returned string to encode our
-access key for the final validation.
+This login process is done in two steps, first we ask coreBOS for a challenge sequence and then we use the returned string to encode our access key for the final validation.
 
 ## Get Challenge
-
-
 
 <table class="table table-striped">
 <tbody>

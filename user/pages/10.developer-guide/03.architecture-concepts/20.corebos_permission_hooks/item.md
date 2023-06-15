@@ -1,65 +1,28 @@
 ---
 title: 'coreBOS Custom Permission Hooks'
 ---
----
 
 ## What is it for?
----------------
 
-The coreBOS custom permission hooks serve the purpose of modifying the
-existing permission system with custom programming. Using these hooks we
-will be able to completely override the existing permission decision or
-construct upon them to enhance the decision of showing or editing a set
-of records without having to modify the base code to do it.
+The coreBOS custom permission hooks serve the purpose of modifying the existing permission system with custom programming. Using these hooks we will be able to completely override the existing permission decision or construct upon them to enhance the decision of showing or editing a set of records without having to modify the base code to do it.
 
-<div class="alert-danger">You will need to learn and understand how the current permission system works to be able to modify
-it!</div>
-
-<br>
+<div class="alert-danger">You will need to learn and understand how the current permission system works to be able to modify it!</div>
 
 ## Why not use Record Access Control?
 
-coreBOS has a powerful configuration option through Business Mappings.
-Using these we can configure many parts of the application to adapt them
-to the exact requirements of each implementation. One of these options
-is [Record Access Control](../../../05.configuration-tools/02.business-maps/22.record_access_control/item.md). With
-this very powerful mapping, we can hide/show create, retrieve, edit and
-delete actions using advanced conditions based on the record upon which
-the action should take place.
+coreBOS has a powerful configuration option through Business Mappings. Using these we can configure many parts of the application to adapt them to the exact requirements of each implementation. One of these options is [Record Access Control](../../../05.configuration-tools/02.business-maps/22.record_access_control/item.md). With this very powerful mapping, we can hide/show create, retrieve, edit and delete actions using advanced conditions based on the record upon which the action should take place.
 
-RAC (Record Access Control) is ideal for additional logic upon the
-existing permission system. For example, we can hide the Add button on
-Project Task whose Project is closed or block editing of the existing
-project tasks of a closed project. In this scenario, the user already
-has access to the Project and the Project Tasks, but the business wants
-the application to stop any attempt to create/edit a project task
-related to a closed project.
+RAC (Record Access Control) is ideal for additional logic upon the existing permission system. For example, we can hide the Add button on Project Task whose Project is closed or block editing of the existing project tasks of a closed project. In this scenario, the user already has access to the Project and the Project Tasks, but the business wants the application to stop any attempt to create/edit a project task related to a closed project.
 
-Although a LOT of configuration can be done using RAC it falls short in
-a couple of situations.
+Although a LOT of configuration can be done using RAC it falls short in a couple of situations.
 
-One is when the decision to be made has to be done globally. RAC
-requires to have access to the record to make a decision, but when we
-are retrieving a whole set of records to list or report the decision is
-made directly in the database using SQL, in this case, we can't use
-record by record conditions that are executed in PHP. This scenario
-arises when the coreBOS permission system isn't enough to express the
-access rules. For example, if we want to give access to a record based
-on the value of a field or based on it's relation to another module,
-this can effectively change the set of records that the coreBOS
-permission system would return. In this case, we could eliminate from
-the set a record that coreBOS would include or, the reverse, add a
-record that the application would not include.
+One is when the decision to be made has to be done globally. RAC requires to have access to the record to make a decision, but when we are retrieving a whole set of records to list or report the decision is made directly in the database using SQL, in this case, we can't use record by record conditions that are executed in PHP. This scenario arises when the coreBOS permission system isn't enough to express the access rules. For example, if we want to give access to a record based on the value of a field or based on it's relation to another module, this can effectively change the set of records that the coreBOS permission system would return. In this case, we could eliminate from the set a record that coreBOS would include or, the reverse, add a record that the application would not include.
 
-The other situations is when the decision requires a complex set of
-conditions and methods that would be hard to express using workflow or
-condition mappings.
+The other situations is when the decision requires a complex set of conditions and methods that would be hard to express using workflow or condition mappings.
 
-For these two situations, more for the first, we need more power than
-the RAC system can offer and that is where these hooks come in.
+For these two situations, more for the first, we need more power than the RAC system can offer and that is where these hooks come in.
 
-The hooks
----------
+### The hooks
 
 <table>
 <thead>

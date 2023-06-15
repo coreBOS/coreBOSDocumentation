@@ -20,7 +20,7 @@ taxonomy:
     tag:
         - guide
 ---
----
+
 # Security Guide
 
 This book describes the concept of role-based security and other security features as it has been implemented by coreBOS

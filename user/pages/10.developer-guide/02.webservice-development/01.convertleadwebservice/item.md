@@ -19,15 +19,16 @@ taxonomy:
     tag:
         - lead
 ---
----
-Usage example of convert lead web service in order to convert an
-existing Leads into Accounts, Contacts & Opportunity using Webservice.
+
+Usage example of convert lead web service in order to convert an existing Leads into Accounts, Contacts & Opportunity using Webservice.
+
+===
 
 Important points to note before using the following code:
 
--   Check table vtiger_ws_entity to know the "id" (Webservice module ID) of the "Leads" module. Ensure that the Lead ID passed to vtws_convertleads function is in 'x' format.
--   Following example uses standard vtwsclib library.
--   Sample code:
+- Check table vtiger_ws_entity to know the "id" (Webservice module ID) of the "Leads" module. Ensure that the Lead ID passed to vtws_convertleads function is in 'x' format.
+- Following example uses standard vtwsclib library.
+- Sample code:
 
 ```php
 <?php

@@ -18,12 +18,14 @@ taxonomy:
     tag:
         - mobile
 ---
----
+
 ## 1.- What is CoreBOS Mobile?
 
 It is a **module** created by [CRM-NOW](https://www.crm-now.de/), which has been integrated into coreBOS by default, to support it and add new functionalities.
 
 This module allows us to have a mobile interface to access a large part of the coreBOS data.
+
+===
 
 ## 2.- What is it for?
 

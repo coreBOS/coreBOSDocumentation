@@ -19,26 +19,22 @@ taxonomy:
     tag:
         - mautic
 ---
----
-The current state of the integration with Mautic is a bidirectional
-synchronization of contacts and companies.
 
-All the work happens on the coreBOS side. Two workflows are in charge of
-sending the modifications to Mautic via its API and two notification
-webhooks are responsible for receiving information from Mautic and
-updating records inside coreBOS.
+The current state of the integration with Mautic is a bidirectional synchronization of contacts and companies.
+
+All the work happens on the coreBOS side. Two workflows are in charge of sending the modifications to Mautic via its API and two notification webhooks are responsible for receiving information from Mautic and updating records inside coreBOS.
+
+===
 
 To get the synchronization working we must configure both applications.
 
 ## Configure Mautic
 
-First, we must activate the API so coreBOS can send the information to
-Mautic.
+First, we must activate the API so coreBOS can send the information to Mautic.
 
 ![Mautic API Enable](mauticapienable.png?width=100%)
 
-Then we configure two webhooks to send the Account/Company and Contact
-information from Mautic to coreBOS
+Then we configure two webhooks to send the Account/Company and Contact information from Mautic to coreBOS
 
 ![Mautic Contact webhook](mauticcontactwebhook.png?width=100%)
 
@@ -55,15 +51,11 @@ Finally, we must create two custom fields on the Contacts and Company modules to
 
 ## Configure coreBOS
 
-In coreBOS we go to the Utilities page and click on Mautic card.
-Activate the integration and fill in the URL of your Mautic install and
-the credentials of the user to use to synchronize the information.
+In coreBOS we go to the Utilities page and click on Mautic card. Activate the integration and fill in the URL of your Mautic install and the credentials of the user to use to synchronize the information.
 
 ![coreBOS Mautic Activation](corebosmauticactivation.png?width=100%)
 
-Next, we must create three workflows for each module. One to control the
-creation, the other for the update, and the last one for the delete
-operation. A total of six workflows that look like this:
+Next, we must create three workflows for each module. One to control the creation, the other for the update, and the last one for the delete operation. A total of six workflows that look like this:
 
 ![coreBOS Contacts workflows](coreboscontactsworkflows.png?width=100%)
 

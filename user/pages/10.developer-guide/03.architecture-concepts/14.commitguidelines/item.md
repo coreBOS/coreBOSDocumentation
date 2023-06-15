@@ -20,7 +20,7 @@ taxonomy:
         - guidelines
         - format
 ---
----
+
 [AngularJS Git Commit Message Conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/mobilebasic?pli=1)
 
     <type>(<scope>) <subject>

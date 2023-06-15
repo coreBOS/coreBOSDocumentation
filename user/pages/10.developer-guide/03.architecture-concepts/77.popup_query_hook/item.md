@@ -20,8 +20,10 @@ taxonomy:
         - hooks
         - popup
 ---
----
+
 This hook permits us to directly manipulate the query to be executed in the Pop-up capture screen for our module.
+
+===
 
 Although the Pop-up capture screen has some very advanced searching capabilities that can be directly used through [pop-up open hook as can be read here.](../76.popup_open_hook)
  That hook grows on coreBOS search system which is limited to fields directly on the module being searched, so we can restrict the list of records shown based on any combination of fields directly ON the module, but we can not limit it by fields on some other related module. That is where this hook comes into play.

@@ -20,10 +20,12 @@ taxonomy:
         - hooks
         - popup
 ---
----
+
 ## Popup open hook
 
 This hook permits us to customize the action that will be taken when a user clicks on the select icon of a uitype10/capture field.
+
+===
 
 The need for this type of hook appears basically when we want to add some special filtering or conditions on the records that will appear in the popup screen. Normally this will be because we have a dependency between the records of the popup module and the underlying module, in such a way that we can restrict the records shown to a subset of records that will be related.
 

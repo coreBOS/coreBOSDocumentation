@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - faq
 ---
----
+
 ## Using the count(*) operator in VQL, How do I get the number from the returned result?
 
 <div class="notices blue">
@@ -27,8 +27,8 @@ The result returned is an array of one row, that contains an array with one elem
 </div>
 
 ```php
-Array(
-   [0] => Array(
+array(
+   [0] => array(
        [count] => 12
    )
 )

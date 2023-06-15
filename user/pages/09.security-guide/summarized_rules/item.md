@@ -21,7 +21,7 @@ taxonomy:
         - guide
         - rule
 ---
----
+
 You should configure your system in the following order:
 
 1. **Settings &gt; Users &gt; Admin: On/Off** With marking the Admin checkbox any user will be assigned administration privileges and become an administrator user. Administrator users have unlimited privileges for the CRM. `**Never use a user login with administrator privileges for your daily work with CRM system.**`

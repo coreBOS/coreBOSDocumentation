@@ -1,5 +1,4 @@
 ---
 title: 'Developer Guide'
 ---
----
 

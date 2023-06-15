@@ -21,18 +21,16 @@ taxonomy:
         - rule
         - question
         - action
-
 ---
----
-<br>
-------------------------------------------------------------------------
 
 ### Workflows, Rules, Questions and Actions
+
 #### ExecuteWorkflow-Operation 
 
-Workflows are a very powerful part of the application. They permit us to automate our business logic to some extent making it possible to standardize process and have the application do some of the repetitive tasks our business requires. When you want to trigger a workflow, only from outside of the coreBOS,ie. from the portal or anywhere else and you don't have access to activate it from the corebos system, then it should be set to System Mass Actions .
+Workflows are a very powerful part of the application. They permit us to automate our business logic to some extent making it possible to standardize process and have the application do some of the repetitive tasks our business requires. When you want to trigger a workflow, only from outside of the coreBOS,ie. from the portal or anywhere else and you don't have access to activate it from the corebos system, then it should be set to System Mass Actions.
 
 **GET URL Format :**
+
 ```
 http://144.91.100.102:8880/corebos/webservice.php?operation=ExecuteWorkflow&sessionName={{sessionName}}&workflow=46&entities=["module_rest_idx77"]
 ```

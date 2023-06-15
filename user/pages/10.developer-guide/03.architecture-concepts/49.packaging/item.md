@@ -1,7 +1,6 @@
 ---
 title: 'Packaging and Release Numbers'
 ---
----
 
 <div class="notices blue"> We don't use version numbers, <a href="https://blog.corebos.org/blog/nomoreversions">it makes no sense in our project.</a>
 </div>

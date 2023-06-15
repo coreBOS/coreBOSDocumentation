@@ -19,7 +19,7 @@ taxonomy:
     tag:
         - backup
 ---
----
+
 The application has an extension that can be used to configure regular backups and create ad hoc backups.
 
 You can use the Menu Editor to create an access point to this URL:

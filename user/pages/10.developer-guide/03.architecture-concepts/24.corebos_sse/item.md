@@ -20,7 +20,7 @@ taxonomy:
         - howto
         - sse
 ---
----
+
 coreBOS supports Server Side Events.
 
 ===

@@ -19,11 +19,10 @@ taxonomy:
     tag:
         - howto
 ---
----
-In the default behaviour, a web service call to either **revise** or
-**update** will demand you to make sure all fields are sent to coreBOS
-in the format of your current user. This applies in particular to number
-and currency fields, but also to date fields.
+
+In the default behaviour, a web service call to either **revise** or **update** will demand you to make sure all fields are sent to coreBOS in the format of your current user. This applies in particular to number and currency fields, but also to date fields.
+
+===
 
 Let’s say you use user ‘John’ to login to coreBOS through a web service
 in a remote application (maybe some customer portal). John has his
@@ -40,30 +39,14 @@ In the database, however, the number would be stored like this:
 
 1234.56 if it was, for instance, a percentage.
 
-When you send a record or part of a record to either the **revise** or
-**update** web service methods, you would be expected to send in the
-data in the format of the user that sends the data in. So for John, he
-would have to send in ‘1.234,56’ on a currency field to end up with
-‘1234.560000’ in the database. When logged in to coreBOS, coreBOS would
-take care of the correct formatting when John views or edits a record.
+When you send a record or part of a record to either the **revise** or **update** web service methods, you would be expected to send in the data in the format of the user that sends the data in. So for John, he would have to send in ‘1.234,56’ on a currency field to end up with ‘1234.560000’ in the database. When logged in to coreBOS, coreBOS would take care of the correct formatting when John views or edits a record.
 
-But what if John sends in the value in database-format? What if he would
-send in ‘1234.560000’ for his currency field? Well, coreBOS wouldn’t
-understand that and try to convert it to the database format anyway.
-Since John uses the dot as his thousands separator, coreBOS would remove
-that from the value first, since databases don’t know this concept. Then
-coreBOS would apply decimals if there weren’t any to start with. CoreBOS
-would expect those to be indicated with a comma since it knows it’s John
-that sends in the data.
+But what if John sends in the value in database-format? What if he would send in ‘1234.560000’ for his currency field? Well, coreBOS wouldn’t understand that and try to convert it to the database format anyway. Since John uses the dot as his thousands separator, coreBOS would remove that from the value first, since databases don’t know this concept. Then coreBOS would apply decimals if there weren’t any to start with. CoreBOS would expect those to be indicated with a comma since it knows it’s John that sends in the data.
 
-Now John would end up with the number ‘1234560000.000000’ in the
-database. In the application, he would see ‘1.234.560.000,00’, which is
-not what he wanted. So John has to make sure he sends in all currency
-and number fields in the format he specified in his user preferences.
+Now John would end up with the number ‘1234560000.000000’ in the database. In the application, he would see ‘1.234.560.000,00’, which is not what he wanted. So John has to make sure he sends in all currency and number fields in the format he specified in his user preferences.
 
-But, **since 26-07-2018**, he could also do something else. He could add
-a special flag (or multiple) to his data, that tells coreBOS what to
-expect. Say John is updating a Potential with this data:
+But, **since 26-07-2018**, he could also do something else. He could add a special flag (or multiple) to his data, that tells coreBOS what to expect. Say John is updating a Potential with this data:
+
 ```php
     $input_array =  array (
             'amount' => '1234.56',

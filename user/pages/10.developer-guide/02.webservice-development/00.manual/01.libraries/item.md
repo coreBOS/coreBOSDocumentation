@@ -19,37 +19,28 @@ taxonomy:
     tag:
         - library
 ---
----
 
-In order to make programming with the web service API easier, we have
-created an abstraction library that hides the details of connection and
-low-level conversation going on and permits us to create applications
-faster.
+In order to make programming with the web service API easier, we have created an abstraction library that hides the details of connection and low-level conversation going on and permits us to create applications faster.
 
-For example, instead of going through the two-step login process, we can
-use the library and simply call **doLogin**, that method will execute
-the tow-step process and return the result.
+===
 
-In a similar manner, we can execute **doUpdate** and not have to worry
-if it is a GET or a POST nor if we have to add the session id to the
-call.
+For example, instead of going through the two-step login process, we can use the library and simply call **doLogin**, that method will execute the tow-step process and return the result.
 
-We have libraries for many languages and they all follow a similar
-structure which is the method prefixed with "do":
+In a similar manner, we can execute **doUpdate** and not have to worry if it is a GET or a POST nor if we have to add the session id to the call.
 
--   doLogin
--   doListTypes
--   doDescribe
--   doCreate
--   doRetrieve
--   doQuery
--   doInvoke
+We have libraries for many languages and they all follow a similar structure which is the method prefixed with "do":
 
-There are many of these functions and depending on the maintenance team
-of each library there will be more or less.
+- doLogin
+- doListTypes
+- doDescribe
+- doCreate
+- doRetrieve
+- doQuery
+- doInvoke
 
-One very important function is **doInvoke** which permits us to execute
-any web service method.
+There are many of these functions and depending on the maintenance team of each library there will be more or less.
+
+One very important function is **doInvoke** which permits us to execute any web service method.
 
 <table class="table table-striped">
 <tbody>
@@ -82,9 +73,6 @@ any web service method.
 </tbody>
 </table>
 
-
-
-[You can find the libraries
-here.](https://github.com/tsolucio/coreBOSwsLibrary)
+[You can find the libraries here.](https://github.com/tsolucio/coreBOSwsLibrary)
 
 

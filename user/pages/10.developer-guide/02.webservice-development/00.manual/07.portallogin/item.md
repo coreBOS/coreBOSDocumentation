@@ -19,39 +19,27 @@ taxonomy:
     tag:
         - login
 ---
----
-A common use case for coreBOS is to permit our clients or employees to
-access information in the application and even manage certain parts of
-that information. This is what we call a **Customer Portal** application
-or, simply **external applications** because there are so many possible
-use cases.
 
-The most typical scenario is for clients to be able to access some
-application where they can create issues (Support Tickets) about our
-service.
+A common use case for coreBOS is to permit our clients or employees to access information in the application and even manage certain parts of that information. This is what we call a **Customer Portal** application or, simply **external applications** because there are so many possible use cases.
+
+The most typical scenario is for clients to be able to access some application where they can create issues (Support Tickets) about our service.
+
+===
 
 Other use cases are:
 
--   client access to their invoices
--   client can create purchases (although this is usually better through
-    an e-commerce integration)
--   employees can access their monthly salaries
--   employees can access protocols and documentation
--   employees can manage projects and project tasks
--   employees can add time control records
+- client access to their invoices
+- client can create purchases (although this is usually better through an e-commerce integration)
+- employees can access their monthly salaries
+- employees can access protocols and documentation
+- employees can manage projects and project tasks
+- employees can add time control records
 
 the list of functionality goes on.
 
-These are just some examples of external applications. In some cases, we
-can use ONE normal coreBOS user to access the information. The idea
-would be that we create a login page where we validate our
-client/employee using the **authenticateContact** endpoint, we access
-coreBOS using a normal user, then we restrict all the queries and
-operations based on the contact that has logged in.
+These are just some examples of external applications. In some cases, we can use ONE normal coreBOS user to access the information. The idea would be that we create a login page where we validate our client/employee using the **authenticateContact** endpoint, we access coreBOS using a normal user, then we restrict all the queries and operations based on the contact that has logged in.
 
 The profile of the authenticateContact endpoint looks like this:
-
-
 
 <table class="table table-striped">
 <tbody>
