@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 Module to register the relation between accounts, contacts, vendors or leads against project or tickets. Representing their interest as stake holders on the project or ticket.
 
 ===

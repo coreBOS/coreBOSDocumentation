@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 Contract-like module to register information about condtions of payment agreed upon for a work to be done.
 This is part of the **Attorney's Back Office** extensions, to control the retainments.
 

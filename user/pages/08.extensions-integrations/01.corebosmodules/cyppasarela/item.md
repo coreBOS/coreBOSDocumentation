@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - paymentgateway
 ---
----
+
 The Payment module of coreBOS includes a payment gateway that we can configure to use any of the online payment services supported. Once configured, we just have to include the necessary HTML code to send the user to the gateway and the rest of the process is automatic.
 
 ## Configuration

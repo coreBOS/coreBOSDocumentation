@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - module
 ---
----
 
 This module registers the different payment ranges our company works with and permits relating our staff with each one.
 This is part of the **Attorney's Back Office Human Resources** extensions.

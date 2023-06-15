@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 This business settings module will permit you to define discounts per product/service line and/or clients.
 
 ===

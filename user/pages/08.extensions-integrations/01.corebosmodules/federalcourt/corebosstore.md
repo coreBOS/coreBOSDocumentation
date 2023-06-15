@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - module
 ---
----
 
 Module to record US Federal Courts
 

@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 This module permits defining the function or responsibility of people working on a litigation. We can define the role each team member working on the matter has as they participate on different litigations.
 It is a part of the team management extensions of **Attorney's Back Office**.
 

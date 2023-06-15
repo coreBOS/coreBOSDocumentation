@@ -18,8 +18,9 @@ taxonomy:
     tag:
         - module
 ---
----
+
 General Ledger Accounts module.
+
 This is part of the Attorney's BackOffice **accounting extensions**.
 
 ===

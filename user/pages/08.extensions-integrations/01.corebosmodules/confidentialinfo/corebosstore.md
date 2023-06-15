@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 Extension to safely store sensitive information. Data will be encrypted and only accessible by users with the appropriate credentials. The goal of the module is to protect sensitive information both from unauthorized access from within the company and from anybody who could somehow get a hold of our full database, be them ill-intentioned or simply third parties that require access to support or solve problems.
 
 ===

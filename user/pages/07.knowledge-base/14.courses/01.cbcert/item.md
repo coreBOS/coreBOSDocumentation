@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - certification
 ---
----
 
 The **coreBOS Certification Program** is divided into three parts:
 

@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 Product to product relation. Permits establishing a relation between products to indicate things like what date range a product is Required,Incompatible,Optional,Marketing,Obsolete,Substitute by another.
 
 ===

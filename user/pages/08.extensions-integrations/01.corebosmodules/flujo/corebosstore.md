@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 This module is part of the [Adequacy functionality](../../01.corebosmodules/adecuaciones/id:d51886e9ff11c8667ddda0973c2757e8/store:corebosmodule). It represents the exact sequence of steps that must be taken to achieve the implementation process in the company. The idea of this module is to permit creating as many business process flow as needed and then instantiate then using [Adequacy](../../01.corebosmodules/adecuaciones/id:d51886e9ff11c8667ddda0973c2757e8/store:corebosmodule). A business flow is an exact sequence of [business steps](../../01.corebosmodules/pasos/id:e8a8b14fbef3ee9d0e6fd9d76475b64f/store:corebosmodule).
 
 ===

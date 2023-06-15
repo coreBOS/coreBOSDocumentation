@@ -19,7 +19,6 @@ taxonomy:
         - geolocation
         - coordinates
 ---
----
 
 An extension that will permit us to geolocalize our clients, potentials, tickets or any module with an address using Google Maps or OpenStreetMaps integration.
 

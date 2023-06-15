@@ -18,8 +18,9 @@ taxonomy:
     tag:
         - module
 ---
----
+
 Module to register the relation between two accounts, contacts, vendors or leads.
+
 The module enables you to record and analyze relationships of a lead, an account or a contact for a better understanding of its roles, dependencies and influences.
 
 ===

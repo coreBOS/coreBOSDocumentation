@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - module
 ---
----
 
 This extension permits mass conversion of different inventory modules into other inventory modules with optional grouping on accounts and products. For example you will be able to convert a set of SalesOrders into Invoices or PurchaseOrders and vice versa. All six (6) inventory modules are supported in possible conversions.
 

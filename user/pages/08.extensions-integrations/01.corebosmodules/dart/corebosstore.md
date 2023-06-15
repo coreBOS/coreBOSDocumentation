@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 This extension permits you to see what changes happened in the application and by who each day.
 
 ===

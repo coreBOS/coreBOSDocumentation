@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 Skills information module to register information about the skills and talents of your employees and contacts.
 This is part of the **Attorney's Back Office Human Resources** extensions.
 

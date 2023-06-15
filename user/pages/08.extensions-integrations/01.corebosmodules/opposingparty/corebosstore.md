@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 Contact-like module to register information about the Opposing Party we face in litigation matters.
 This is part of the **Attorney's Back Office**.
 

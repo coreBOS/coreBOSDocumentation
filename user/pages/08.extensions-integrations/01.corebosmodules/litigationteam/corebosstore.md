@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 This module permits defining the details and people working on a litigation. It is a very basic team management module.
 This is part of the **Attorney's Back Office** extensions.
 

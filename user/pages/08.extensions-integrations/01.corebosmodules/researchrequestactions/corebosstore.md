@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 This module is related with [Research Request module](../../01.corebosmodules/researchrequest/id:5a49190bde7baeebdc60cde9dc28f9b5/store:corebosmodule) and details the different actions or steps taken to resolve or attend the request.
 
 ===

@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 Module to control Quality Claims, used to enforce and document ISO standards. It should capture the details of the claim, who is attending it, the date references and the outcome. This module is related with [Quality Actions module](../../01.corebosmodules/qualityactions/id:61447d2f5490fd70eeed1fa95a0ddf6e/store:corebosmodule) where each exact step is recorded.
 
 

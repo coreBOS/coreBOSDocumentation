@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - module
 ---
----
 
 Picklist-like module to record different frequencies.
 

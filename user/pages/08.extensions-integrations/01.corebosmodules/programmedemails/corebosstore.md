@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 Set of various modules that will permit you to create powerful email templates and send them out on determined schedule.
 
 ===

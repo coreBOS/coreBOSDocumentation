@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 This module is related with [Quality Claims module](../../01.corebosmodules/qualityclaims/id:414901aa79ca8a68ffcfad4da662d4ee/store:corebosmodule) and details the diferent actions or steps taken to resolve or attend the quality claim.
 
 ===

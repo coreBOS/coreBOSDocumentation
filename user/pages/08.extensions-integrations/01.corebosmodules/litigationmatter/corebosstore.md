@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 This project-like module permits defining the details of a litigation matter our business is working on.
 This is part of the **Attorney's Back Office** extensions.
 

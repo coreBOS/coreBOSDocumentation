@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 This module permits relating users to different projects in the system. It is a very basic team management module.
 This is part of the **Attorney's Back Office Human Resources** extensions.
 

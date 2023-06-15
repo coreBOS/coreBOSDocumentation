@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 This extension permits exporting information about many to many relations between records from one coreBOS install to another.
 [Get more information on the projects repository](https://github.com/tsolucio/coreBOSIERelations)
 

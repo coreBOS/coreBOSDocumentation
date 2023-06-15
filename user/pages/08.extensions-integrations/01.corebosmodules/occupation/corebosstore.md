@@ -18,7 +18,6 @@ taxonomy:
     tag:
         - module
 ---
----
 
 Occupation module to register official SOC Code information types.
 This is part of the **Attorney's Back Office Human Resources** extensions.

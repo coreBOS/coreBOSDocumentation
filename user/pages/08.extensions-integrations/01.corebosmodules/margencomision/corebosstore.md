@@ -18,7 +18,7 @@ taxonomy:
     tag:
         - module
 ---
----
+
 Module to register commission ranges. This module will permit you to record a start and end number associated to a commission, which can then be used in other modules to establish payments or similar.
 
 ===
