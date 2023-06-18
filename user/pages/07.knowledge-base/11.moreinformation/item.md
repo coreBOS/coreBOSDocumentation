@@ -47,3 +47,4 @@ taxonomy:
 * **Italy, Brescia** February 2010. Presentation of new Offices of Studio Synthesis and vtiger CRM Solution Providers Conference
 * [Italy, Brescia. September 2013](vtgt2013)
 * CRM Meeting Together Vtiger Cancún México 2018
+* [University at Tirana. March 2023](coreboslifehacks)
