@@ -232,8 +232,7 @@ types:
     type: file
     thumb: media/thumb-json.png
     mime: application/json
-
-    csv:
+  csv:
     type: file
     thumb: media/thumb-csv.png
     mime: text/csv
