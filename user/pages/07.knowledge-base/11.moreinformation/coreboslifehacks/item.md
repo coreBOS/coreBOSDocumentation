@@ -25,4 +25,6 @@ A few weeks ago I was invited to speak to students at a university in Tirana. Af
 
 You can get a [copy of the slides here](./CreatingDreams.odp) and [watch the recording we did on youtube](https://youtu.be/JFnpjQYGUJk). I also wrote a blog post about it which you [can read here](https://joebordes.com/the-danger-of-finding-your-purpose-and-passion).
 
+Thanks Ksandra for thinking about me for that and inviting me. It was an honor and a pleasure.
+
 Thanks Desi for helping and recording.
