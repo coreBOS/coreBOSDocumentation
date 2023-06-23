@@ -37,4 +37,5 @@ You can find an old version of a manual [in OpenOffice](./CoreBOSManualUA.odt) a
 - [Inventory Modules](../inventorymodules)
 - [Deduplication](../deduplication)
 - [Convert Lead](../convertir_precontacto/)
+- [Use Comments or Activities?](../commentsactvities/)
 - [Issues](../issue/)
