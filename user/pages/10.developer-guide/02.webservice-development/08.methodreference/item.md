@@ -362,8 +362,7 @@ that we are going to delete.
 <br>
 
 
-Users have two other additional endpoints that permit them to change
-their password and Access Key.
+Users have two other additional endpoints that permit them to change their password and Access Key.
 
 <table class="table table-striped">
 <tbody>
@@ -386,7 +385,7 @@ their password and Access Key.
 <tr>
 <td><strong>Parameters:</td>
 <td>=&gt; id: user web service ID<br />
-=&gt; oldPassword<br />
+=&gt; oldPassword. you can set this value to the special string `nocheck_old_password` to force not validating the old password<br />
 =&gt; newPassword<br />
 =&gt; confirmPassword</td>
 </tr>
