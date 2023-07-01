@@ -137,6 +137,7 @@ The actions supported are:
     - **fieldDep\_AssignGroup**: set the assigned user to the given (group) ID parameter
     - **fieldDep\_AssignUserSelect**: set the assigned user to the given user ID parameter for uitype 101 fields
     - **fieldDep\_GetFieldSearch**: searches for a field as reference in order to map other fields
+    - **fieldDep\_LaunchWorkflow**: launch the workflow ID given as a parameter with the record triggering the dependency
     - **fieldDep\_ChangeLabel**: will permit changing the label of a field **NOT IMPLEMENTED YET**
     - **fieldDep\_Format**: return sprintf formatting of new\_value (use sprintf javascript library: <https://github.com/alexei/sprintf.js>) **NOT IMPLEMENTED YET**
 
