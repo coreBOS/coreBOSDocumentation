@@ -1,7 +1,7 @@
 ---
 title: 'Developer Tips and Tricks'
 metadata:
-    description: 'Design your login page'
+    description: 'Developer Tips and Tricks. Questions and answers'
     author: 'Joe Bordes'
 content:
     items:
@@ -19,6 +19,10 @@ taxonomy:
     tag:
         - guidelines
 ---
+
+Find here a set of questions and answers about developing and fine tuning the application from within
+
+===
 
 - [How can I activate Single Pane for only one (my) module, independent of the system settings?](../develtips#how-can-i-activate-single-pane-for-only-one-my-module-independent-of-the-system-settings)
 - [Custom date fields load by default "today". We need a custom date field to be empty by default, how can we accomplish this.](../develtips#custom-date-fields-load-by-default-today-we-need-a-custom-date-field-to-be-empty-by-default-how-can-)
@@ -45,6 +49,7 @@ taxonomy:
 - [I would like to be able to return to the newly created entity after creation, instead of returning to the previous one. For instance, when an invoice is created from an account, I would like to return to the newly created invoice instead of the account.](../develtips#i-would-like-to-be-able-to-return-to-the-newly-created-entity-after-creation-instead-of-returning-to)
 - [Suppose I want to create a bunch of new modules with a set of data fields, but each module will also need some specific fields unique to it. I can think of two ways of doing this:](../develtips#suppose-i-want-to-create-a-bunch-of-new-modules-with-a-set-of-data-fields-but-each-module-will-also-)
 - [How would I be able to mass print a set of invoices or sales orders?](../develtips#how-would-i-be-able-to-mass-print-a-set-of-invoices-or-sales-orders)
+- [Mail Manager attachment relations. Update createdtime](../develtips#mail-manager-attachment-relations-update-createdtime)
 
 
 <div class="notices blue">
@@ -537,3 +542,40 @@ Go to the Business Actions module and add a LISTVIEWBASIC button with this actio
 ```
 massPrint(gVTModule)
 ```
+---
+<br>
+
+<div class="notices blue">
+<h2>Mail Manager attachment relations. Update createdtime</h2> </div>
+
+**PLEASE be careful with the update SQL commands. Test them thoroughly**
+
+```SQL
+SELECT FROM_UNIXTIME(`lastsavedtime`),`lastsavedtime`, createdtime, modifiedtime
+FROM `vtiger_mailmanager_mailattachments`
+inner join vtiger_crmentity on crmid = attachid;
+```
+
+```SQL
+UPDATE vtiger_crmentity
+INNER JOIN `vtiger_mailmanager_mailattachments` ON crmid = attachid
+SET createdtime = FROM_UNIXTIME(`lastsavedtime`), modifiedtime = FROM_UNIXTIME(`lastsavedtime`)
+WHERE some condition
+```
+
+```SQL
+SELECT *
+FROM `vtiger_mailmanager_mailattachments`
+inner join vtiger_crmentity on muid=crmid
+```
+
+```SQL
+UPDATE vtiger_crmentity as matt
+INNER JOIN vtiger_mailmanager_mailattachments ON matt.crmid = vtiger_mailmanager_mailattachments.attachid
+INNER JOIN vtiger_crmentity as mail ON mail.crmid = vtiger_mailmanager_mailattachments.muid
+SET matt.createdtime = mail.createdtime, matt.modifiedtime = mail.modifiedtime
+WHERE some condition
+```
+
+---
+<br>
