@@ -1,10 +1,28 @@
 ---
 title: 'Webservice Development'
+metadata:
+    description: 'Webservice Development documentation index'
+    author: 'Joe Bordes'
+content:
+    items:
+        - '@self.children'
+    limit: 5
+    order:
+        by: date
+        dir: desc
+    pagination: true
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - development
+        - webservice
 ---
 
 ## Web service documentation
 
 This documentation describes the available application programming interface (API) or REST web service interface in coreBOS through examples. It is understood as a reference and learning document for programmers wanting to use the API. For the most part, it is a set of code examples on each of the available functions and a gathering of information on this topic.
+
+===
 
 - [Documentation](../../02.webservice-development)
 

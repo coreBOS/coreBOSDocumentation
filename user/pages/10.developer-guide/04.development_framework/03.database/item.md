@@ -17,36 +17,71 @@ taxonomy:
         - development
     tag:
         - database
+        - structure
 ---
 
-Emails
-------
+In this page you will find some basic information about the internal database structure and the relations between the entities and the tables.
+
+===
+
+## Emails
+
 ![](emailer.png?width=100%)
 
-vtiger\_def\_org\_field
------------------------
+## vtiger\_def\_org\_field
 
-Settings &gt; Fields Access: Define global field-level access in each
-module
+Settings &gt; Fields Access: Define global field-level access in each module
 
-Picklists
----------
+## Picklists
+
 ![](picklister.png?width=100%)
 
+## Entity Relations
 
-Entity Relations
-----------------
-![](accountrelations.png?width=100%)
-![](campaignrelations.png?width=100%)
-![](contactrelations.png?width=100%)
-![](helpdeskrelations.png?width=100%)
-![](invoicerelations.png?width=100%)
-![](leadsrelations.png?width=100%)
-![](potentialrelations.png?width=100%)
-![](productrelations.png?width=100%)
-![](purchaseorderrelations.png?width=100%)
-![](quoterelations.png?width=100%)
-![](salesorderrelations.png?width=100%)
-![](vendorrelations.png?width=100%)
+### Accounts
 
+![Accounts](accountrelations.png?width=100%)
 
+### Campaigns
+
+![Campaigns](campaignrelations.png?width=100%)
+
+### Contacts
+
+![Contacts](contactrelations.png?width=100%)
+
+### HelpDesk
+
+![HelpDesk](helpdeskrelations.png?width=100%)
+
+### Invoice
+
+![Invoice](invoicerelations.png?width=100%)
+
+### Leads
+
+![Leads](leadsrelations.png?width=100%)
+
+### Potentials
+
+![Potentials](potentialrelations.png?width=100%)
+
+### Products
+
+![Products](productrelations.png?width=100%)
+
+### Purchase Order
+
+![PurchaseOrder](purchaseorderrelations.png?width=100%)
+
+### Quotes
+
+![Quotes](quoterelations.png?width=100%)
+
+### Sales Order
+
+![SalesOrder](salesorderrelations.png?width=100%)
+
+### Vendors
+
+![Vendors](vendorrelations.png?width=100%)
