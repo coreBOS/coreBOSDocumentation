@@ -19,6 +19,11 @@ taxonomy:
     tag:
         - fieldmapping
 ---
+
+This map fills in the Purchase Order Billing address when a vendor is selected
+
+===
+
 ```php
 <map>
   <originmodule>

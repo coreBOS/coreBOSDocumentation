@@ -20,6 +20,10 @@ taxonomy:
         - fieldmapping
 ---
 
+Business Map to Duplicate Sales Orders
+
+===
+
 ```xml
 <map>
 <originmodule>

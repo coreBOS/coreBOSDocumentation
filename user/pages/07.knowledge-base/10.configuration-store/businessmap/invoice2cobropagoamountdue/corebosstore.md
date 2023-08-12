@@ -22,6 +22,8 @@ taxonomy:
 
 In coreBOSCRM, there is a financial block to control the status of partial payments and pending amounts. This Field Mapping will copy the pending Amount Due field instead of Total Amount when adding Payments to an Invoice.
 
+===
+
 ```php
 <map>
   <originmodule>

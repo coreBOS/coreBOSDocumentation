@@ -20,6 +20,10 @@ taxonomy:
         - fieldmapping
 ---
 
+Business Map to convert Contacts to Accounts
+
+===
+
 ```xml
 <map>
   <originmodule>

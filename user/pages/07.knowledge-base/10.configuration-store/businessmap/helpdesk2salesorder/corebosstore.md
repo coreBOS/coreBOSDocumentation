@@ -18,7 +18,10 @@ taxonomy:
     tag:
         - fieldmapping
 ---
-If you create a direct (1:M) relation between HelpDesk and SalesOrder,<a href="http://discussions.corebos.org/thread-633.html">this mapping created by Luke</a> will fill in some fields on the SalesOrder
+
+If you create a direct (1:M) relation between HelpDesk and SalesOrder, [this mapping created by Luke](http://discussions.corebos.org/thread-633.html) will fill in some fields on the SalesOrder
+
+===
 
 ```php
 <map>

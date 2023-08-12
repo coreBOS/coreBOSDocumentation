@@ -18,14 +18,17 @@ taxonomy:
     tag:
         - fieldmapping
 ---
+
+Convert a SalesOrder into a PurchaseOrder
+
+===
+
 ```php
 <map>
 <originmodule>
-  <originid>22</originid>
   <originname>SalesOrder</originname>
 </originmodule>
 <targetmodule>
-  <targetid>21</targetid>
   <targetname>PurchaseOrder</targetname>
 </targetmodule>
 <fields>
