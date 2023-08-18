@@ -68,6 +68,12 @@ We have a special helper extension that can be found under the Tools menu called
   - negative case of **{foreach…}**
 - **{foreach entity [field1 op value1 && field2 op value2 || field3 op value3]}…{/foreach}**
   - advanced conditions on fields with fields and operations (=,>,<,>=,<=,!=) and limited logical connectors || (or) and && (and)
+- **{foreach entity.field [condition] \*sort directive\*}…{/foreach}**
+  - `{foreach Timecontrol [title=MyTitle && tcunits>5] *date_start DESC*}`
+  - `{foreach Timecontrol *date_start DESC* [title=MyTitle && tcunits>5]}`
+  - `{foreach Timecontrol *date_start DESC*}`
+  - [feat(Gendoc) Allow sorting in foreach loop](https://github.com/tsolucio/corebos/pull/710)
+  - [Inventory Details sequence number sorting](https://discussions.corebos.org/showthread.php?tid=1834)
 - **iteration**: inside the {foreach} blocks you can reference a special variable called {iteration} whose value will be that of the current loop iteration. This can be useful to enumerate the elements or to print conditional text based on the iteration. See [Examples](../02.gendocejemplos).
 - **{include Document_Num}**
   - With this instruction, we can include any document saved in the coreBOS document module inside the main document. For example, if we have a document with reference number DOC699, we can put at the beginning of a new paragraph {include DOC699} in the position where we wish to insert the document. During the merging process, all the contents in DOC699 will be inserted in the position where the {include} directive is and the directive will be eliminated.
