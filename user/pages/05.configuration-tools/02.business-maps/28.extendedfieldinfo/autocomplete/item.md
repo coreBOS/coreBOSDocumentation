@@ -155,6 +155,8 @@ If you're interested, Luke has provided extensive documentation on this topic, w
 
 For MultiSelect Autocomplete Fields, the uitype is 1025, and the extended field information follows the same structure as a normal select autocomplete field.
 
+This feature allows support for multiple selectable modules, but it's important to note that you can only choose records from one specific module at a time.
+
 Here's an example of a test field definition for a uitype 1025 in the potentials module:
 
 ```XML
