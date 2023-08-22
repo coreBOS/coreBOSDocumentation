@@ -577,5 +577,12 @@ SET matt.createdtime = mail.createdtime, matt.modifiedtime = mail.modifiedtime
 WHERE some condition
 ```
 
+```SQL
+SELECT FROM_UNIXTIME(vtiger_mailmanager_mailrecord.lastsavedtime) AS unixLastSaved, vtiger_mailmanager_mailrecord.lastsavedtime, vtiger_mailmanager_mailrecord.muid, createdtime, modifiedtime, attachid, crmid
+FROM vtiger_mailmanager_mailattachments
+inner join vtiger_mailmanager_mailrecord on vtiger_mailmanager_mailattachments.muid = vtiger_mailmanager_mailrecord.muid
+inner join vtiger_crmentity on crmid=attachid;
+```
+
 ---
 <br>
