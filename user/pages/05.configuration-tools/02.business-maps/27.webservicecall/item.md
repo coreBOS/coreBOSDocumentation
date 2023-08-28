@@ -304,6 +304,24 @@ This first map executes an authentication call and loads the authorization token
 </map>
 ```
 
+### Utilizing getGlobalVariable, getContext, and getSetting
+You have the flexibility to employ the functions `getGlobalVariable`, `getContext`, and `getSetting` within both the wsurl property and the headers of your application.
+
+For instance, to incorporate a GlobalVariable, the following format can be used:
+```xml
+<wsurl>getGlobalVariable(HOST_GV_EXAMPLE)/corebostsolucio/webservice.php?operation=testcontext2</wsurl>
+```
+
+Similarly, for a getContext function, the syntax is as follows:
+```xml
+<wsurl>getContext(HOST_CONTEXT_EXAMPLE)/corebostsolucio/webservice.php?operation=testcontext2</wsurl>
+```
+
+To specify a getSetting function, you can use the following pattern:
+```xml
+<wsurl>getSetting(HOST_SETTING_EXAMPLE)/corebostsolucio/webservice.php?operation=testcontext2</wsurl>
+```
+
 ### Related Articles
 
 - [Run Web Service Workflow Task](https://blog.corebos.org/blog/runwswftask)
