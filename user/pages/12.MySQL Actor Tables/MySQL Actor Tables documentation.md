@@ -1,6 +1,23 @@
 ---
 title: 'MySQL Actor Tables documentation'
 body_classes: title-center title-h1h2
+
+metadata:
+    description: 'How to configure the application to access an internal or external MySQL table as if it were an internal module.'
+    author: 'Arlind Ismalaja'
+content:
+    items:
+        - '@self.children'
+    order:
+        by: date
+        dir: desc
+    url_taxonomy_filters: true
+taxonomy:
+    category:
+        - webservice
+        - application
+    tag:
+        - howto
 ---
 
 MySql Flat Tables Documentation
@@ -8,7 +25,7 @@ MySql Flat Tables Documentation
 
   [TOC]
 
-# Prerequisites
+## Prerequisites
 ===
 
 !! **Note**: The table that you are referring to has to always have a **Primary Key**!
@@ -30,7 +47,7 @@ MySql Flat Tables Documentation
     3. The table **`cb_ws_permissiontables`** needs to be loaded along with the menu, thus is not present as a changeset. It is defined and created in **`evvtMenuUtils.php`**.
 
 
-# How to access
+## How to access
 ===
 
 Once you land on the home page of any (CoreBOS, Evolutivo) install:
@@ -39,7 +56,7 @@ Once you land on the home page of any (CoreBOS, Evolutivo) install:
 2. Go to `Permission Mapping`.
 3. Navigate the configuration.
 
-# How to use
+## How to use
 ===
 
 !!! * You can start working only after the **`no errors found`** prompt.
@@ -205,19 +222,17 @@ When using the feature in the **test** environment, set the hostname as the cont
 
 As of 2023, the install's DB container is called **`db`**, while the **`Microsoft SQL Server`** is called **`mssql`**.
 
----
-
-Known Issues
+## Known Issues
 ===
 * The installation will crash if there is at least one wrong configuration. You can notice it in the **`Home`** module, or **`Webservice Playground (CBWSDev)`**. There are no apparent Apache logs, so keep that in mind.
 * If you have a foreign module and then select **`--None--`** as the **`Real Module`**, the **`Is Foreign`** box will be disabled.
 * **`Handler Path`** and **`Handler Class`** columns will be removed on a future update and instead added as optional settings in **`Actions`**.
 * Sometimes the window will not reload. You can try hard-reloading it using **`CTRL + Shift + R`**. Notice if there are configuration issues.
 
-What's Next
+## What's Next
 ===
 
-### How was MSSQL Supported
+#### How was MSSQL Supported
 Inside **`VtigerActorOperation`** there is a function called **`query($q)`**. This executes the generated query. We further enhanced the functionality to translate the query before executing. We have laid the ground to allow support for DB Engines other than MySQL. Below you can have a look at the code. Using **SQL Parser** is highly appreciated.
 ```php
 public function query($q) {
