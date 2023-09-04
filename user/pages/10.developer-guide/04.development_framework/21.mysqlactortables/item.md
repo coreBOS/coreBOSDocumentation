@@ -19,7 +19,7 @@ taxonomy:
         - howto
 ---
 
-How to configure the application to access an internal or external flat MySQL tables as if they were internal modules
+How to configure the application to access internal or external flat MySQL tables as if they were internal modules
 
 ===
 
@@ -27,7 +27,7 @@ How to configure the application to access an internal or external flat MySQL ta
 
 ## Prerequisites
 
-!! **Note**: The table that you are referring to has to always have a **Primary Key**!
+!! **Note**: The table you are referring to must always have a **Primary Key** or an **autoincrement** field named **`id`**!
 
 #### For Users
 
@@ -40,7 +40,7 @@ How to configure the application to access an internal or external flat MySQL ta
 
 #### For developers
 
-1. On **`foreign modules`**, be mindful that the first thing to check for is the necessary drivers for the connection to establish. One indication of this is this error: **```Uncaught Error: Call to undefined function 'driverHandler'_query()```**.
+1. On **`foreign modules`**, be mindful that the first thing to check for is the necessary drivers for the connection to be established. One indication of this is this error: **```Uncaught Error: Call to undefined function 'driverHandler'_query()```**.
 2. The main database tables that this implementation inserts into are:
   * **cb_ws_permissiontables**: Here resides the permission mapping.
   * **vtiger_ws_entity**: For the **`WS`** to refer to the new table, the new entry has to be present here.
@@ -77,9 +77,9 @@ Once you land on the home page of any (CoreBOS, Evolutivo) install:
   - **`Table Name`**: This field is the DB table the **actor** represents .
   - **`Name Fields`**: This field represents the name of the **`Primary Column`** of the DB Table. If unsure, leave it empty.
   - **`Handler Path`**: This field represents the path of the **Handler File**.
-  > This field is autocompleted at all cases, **don't edit unless necessary**.
+  > This field is autocompleted in all cases, **don't edit unless necessary**.
   - **`Handler Class`**: This field represents the working class inside the **Handler Path**.
-  > This field is autocompleted at all cases, **don't edit unless necessary**.
+  > This field is autocompleted in all cases, **don't edit unless necessary**.
   - **`Is Module`**: This boolean is required only if the entry represents a **`Module`** and not an **`Actor`**.
   - **`Is Foreign`**: This boolean is required only if the entry represents a table in a remote environment. When foreign, the user is prompted to provide the necessary DB configuration to create a connection.
   - **`A C R W`**: This boolean group represents the permissions of the **Actor** module. Corresponding to: **Access**, **Create**, **Read**, **Write**.
