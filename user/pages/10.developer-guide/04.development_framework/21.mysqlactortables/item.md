@@ -1,7 +1,6 @@
 ---
 title: 'MySQL Actor Tables documentation'
 body_classes: title-center title-h1h2
-
 metadata:
     description: 'How to configure the application to access an internal or external MySQL table as if it were an internal module.'
     author: 'Arlind Ismalaja'
@@ -20,35 +19,36 @@ taxonomy:
         - howto
 ---
 
-MySql Flat Tables Documentation
+How to configure the application to access an internal or external flat MySQL tables as if they were internal modules
+
 ===
 
   [TOC]
 
 ## Prerequisites
-===
 
 !! **Note**: The table that you are referring to has to always have a **Primary Key**!
 
-* #### For Users
-    1. You need to be logged in as **`admin`**.
-    2. There are entries that **have to be present** for the installation to work normally. The core ones are protected by deletion, but either way, mind your footing.
-    3. The implementation is very delicate and everything you define has to be accurate.
-    4. There are multiple fail-safes implemented to make the work as smooth as possible. Otherwise, the main indication of a bad configuration is in the **`Home`** module, where it fails to load.
-    5. When using foreign modules, don't forget to **define their permissions**.
-    6. Normally when everything goes right, the page will reload. If it doesn't, try hard-reloading by using **`CTRL + Shift + R`**. If there is an issue, there is a message that will tell you which module failed to insert and where. Otherwise, look out for things that misbehave.
-* #### For developers
-    1. On **`foreign modules`**, be mindful that the first thing to check for is the necessary drivers for the connection to establish. One indication of this is this error: **```Uncaught Error: Call to undefined function 'driverHandler'_query()```**.
-    2. The main database tables that this implementation inserts into are:
-        * **cb_ws_permissiontables**: Here resides the permission mapping.
-        * **vtiger_ws_entity**: For the **`WS`** to refer to the new table, the new entry has to be present here.
-        * **vtiger_ws_entity_tables**: This links the **`WS Entity`** insert with its corresponding table.
-        * **vtiger_ws_entity_name**: This links the **`WS Entity`** insert with the name that youre defining it as.
-    3. The table **`cb_ws_permissiontables`** needs to be loaded along with the menu, thus is not present as a changeset. It is defined and created in **`evvtMenuUtils.php`**.
+#### For Users
 
+1. You need to be logged in as **`admin`**.
+2. There are entries that **have to be present** for the installation to work normally. The core ones are protected by deletion, but either way, mind your footing.
+3. The implementation is very delicate and everything you define has to be accurate.
+4. There are multiple fail-safes implemented to make the work as smooth as possible. Otherwise, the main indication of a bad configuration is in the **`Home`** module, where it fails to load.
+5. When using foreign modules, don't forget to **define their permissions**.
+6. Normally when everything goes right, the page will reload. If it doesn't, try hard-reloading by using **`CTRL + Shift + R`**. If there is an issue, there is a message that will tell you which module failed to insert and where. Otherwise, look out for things that misbehave.
+
+#### For developers
+
+1. On **`foreign modules`**, be mindful that the first thing to check for is the necessary drivers for the connection to establish. One indication of this is this error: **```Uncaught Error: Call to undefined function 'driverHandler'_query()```**.
+2. The main database tables that this implementation inserts into are:
+  * **cb_ws_permissiontables**: Here resides the permission mapping.
+  * **vtiger_ws_entity**: For the **`WS`** to refer to the new table, the new entry has to be present here.
+  * **vtiger_ws_entity_tables**: This links the **`WS Entity`** insert with its corresponding table.
+  * **vtiger_ws_entity_name**: This links the **`WS Entity`** insert with the name that youre defining it as.
+3. The table **`cb_ws_permissiontables`** needs to be loaded along with the menu, thus is not present as a changeset. It is defined and created in **`evvtMenuUtils.php`**.
 
 ## How to access
-===
 
 Once you land on the home page of any (CoreBOS, Evolutivo) install:
 
@@ -57,7 +57,6 @@ Once you land on the home page of any (CoreBOS, Evolutivo) install:
 3. Navigate the configuration.
 
 ## How to use
-===
 
 !!! * You can start working only after the **`no errors found`** prompt.
 !!! * On window load, the feature checks the current DB configuration. This can also be done manually using the **`Check DB Configuration`** button.
@@ -67,35 +66,39 @@ Once you land on the home page of any (CoreBOS, Evolutivo) install:
 * You can use the implementation to create new **`Actor`** modules which are represented by flat tables. There are two scenarios:
     - The flat table is local, in the same environment.
     - The flat table is foreign, in a remote environment.
-* #### Local Environment Actor Tables:
-    **Defining a new local `Actor`**:
-    1. Click on the **`Add Row`** button.
-    2. The fields presented are as follows:
-        - **`Alias`**: This field represents the name of the new **Actor**. You are going to use this name whenever you refer to the **Actor**.
-        - **`Real Module`**: This dropdown represents the module where the **actor** should take the permissions from. If set to **`--None--`**, you are allowed to define custom permissions.
-        - **`Table Name`**: This field is the DB table the **actor** represents .
-        - **`Name Fields`**: This field represents the name of the **`Primary Column`** of the DB Table. If unsure, leave it empty.
-        - **`Handler Path`**: This field represents the path of the **Handler File**.
-        > This field is autocompleted at all cases, **don't edit unless necessary**.
-        - **`Handler Class`**: This field represents the working class inside the **Handler Path**.
-        > This field is autocompleted at all cases, **don't edit unless necessary**.
-        - **`Is Module`**: This boolean is required only if the entry represents a **`Module`** and not an **`Actor`**.
-        - **`Is Foreign`**: This boolean is required only if the entry represents a table in a remote environment. When foreign, the user is prompted to provide the necessary DB configuration to create a connection.
-        - **`A C R W`**: This boolean group represents the permissions of the **Actor** module. Corresponding to: **Access**, **Create**, **Read**, **Write**.
-            > This group is only available if the **`Real Module`** is set to **`--None--`**.
-        - **`Actions`**: This button is used to remove the configuration entry.
-            > Can only be done if there are no present errors.
-    3. Click **`Save`**, the window should reload. The user is prompted If there is any error during the procedure.
 
-* #### Remote Environment Actor Tables:
-    !!! It is not necessary to fill the **`Table Name`** field when defining remote actors.
+#### Local Environment Actor Tables:
 
-    **Defining a new remote `Actor`**:
-    1. Fill in the:
-        - **`Alias`** field.
-        - Define the permissions using either the **`Real Module`** dropdown, or the **`Permissions`** grouping.
-    2. Tick the **`Is Foreign`** box and fill in the DB Configuration. Once done, click **`Save`**. The window will close.
-    3. Click **`Save`** to update the permission mapping. The window should reload if the process was completed successfully.
+**Defining a new local `Actor`**:
+1. Click on the **`Add Row`** button.
+2. The fields presented are as follows:
+  - **`Alias`**: This field represents the name of the new **Actor**. You are going to use this name whenever you refer to the **Actor**.
+  - **`Real Module`**: This dropdown represents the module where the **actor** should take the permissions from. If set to **`--None--`**, you are allowed to define custom permissions.
+  - **`Table Name`**: This field is the DB table the **actor** represents .
+  - **`Name Fields`**: This field represents the name of the **`Primary Column`** of the DB Table. If unsure, leave it empty.
+  - **`Handler Path`**: This field represents the path of the **Handler File**.
+  > This field is autocompleted at all cases, **don't edit unless necessary**.
+  - **`Handler Class`**: This field represents the working class inside the **Handler Path**.
+  > This field is autocompleted at all cases, **don't edit unless necessary**.
+  - **`Is Module`**: This boolean is required only if the entry represents a **`Module`** and not an **`Actor`**.
+  - **`Is Foreign`**: This boolean is required only if the entry represents a table in a remote environment. When foreign, the user is prompted to provide the necessary DB configuration to create a connection.
+  - **`A C R W`**: This boolean group represents the permissions of the **Actor** module. Corresponding to: **Access**, **Create**, **Read**, **Write**.
+      > This group is only available if the **`Real Module`** is set to **`--None--`**.
+  - **`Actions`**: This button is used to remove the configuration entry.
+         > Can only be done if there are no present errors.
+1. Click **`Save`**, the window should reload. The user is prompted If there is any error during the procedure.
+
+#### Remote Environment Actor Tables:
+
+!!! It is not necessary to fill the **`Table Name`** field when defining remote actors.
+
+**Defining a new remote `Actor`**:
+
+1. Fill in the:
+  - **`Alias`** field.
+  - Define the permissions using either the **`Real Module`** dropdown, or the **`Permissions`** grouping.
+2. Tick the **`Is Foreign`** box and fill in the DB Configuration. Once done, click **`Save`**. The window will close.
+3. Click **`Save`** to update the permission mapping. The window should reload if the process was completed successfully.
 
 ## Connecting to a Remote Database Server
 
@@ -107,10 +110,10 @@ Once you land on the home page of any (CoreBOS, Evolutivo) install:
 ! * Take note of the hostname you're using and what environment the install is running on.
 
 #### Connecting to a MySQL Server
+
 To connect to a **`MySQL Server`**, use **`mysqli`** as the **`database type`** when defining the DB Configuration of a foreign module. It's fully compatible with all **`CRUD`** operations. **No additional driver install is required**.
 
 #### Connecting to an MSSQL Server
-
 
 ! **MSSQL requires an additional driver to work with PHP.**
 ! You can find the documentation (Ubuntu, MacOS) in the links below:
@@ -190,7 +193,9 @@ To connect to a **`MySQL Server`**, use **`mysqli`** as the **`database type`** 
 ! ```
 
 To connect to a **`MSSQL Server`**, use **`mssqlnative`** as the **`database type`** when defining the DB Configuration of a foreign module. As of this date, only **`SELECT`** operations are supported.
+
 The following queries have been tested to be working correctly:
+
 1. **Nested SELECT**:
 ```sql
 SELECT (SELECT id_num from new_employees WHERE id_num = 1)
@@ -217,23 +222,23 @@ Other operations are not supported due to **Microsoft SQL Engine** syntax differ
 
 !!! **Note**: We created a MSSQL container in the **`yaml`** file of the dockerized CoreBOS. The credentials are **`username: sa`** and **`password: root`**. The main reason is to be able to support unit testing for the feature.
 
-
 When using the feature in the **test** environment, set the hostname as the container name. Be sure to confirm if you have trouble connecting.
 
 As of 2023, the install's DB container is called **`db`**, while the **`Microsoft SQL Server`** is called **`mssql`**.
 
 ## Known Issues
-===
+
 * The installation will crash if there is at least one wrong configuration. You can notice it in the **`Home`** module, or **`Webservice Playground (CBWSDev)`**. There are no apparent Apache logs, so keep that in mind.
 * If you have a foreign module and then select **`--None--`** as the **`Real Module`**, the **`Is Foreign`** box will be disabled.
 * **`Handler Path`** and **`Handler Class`** columns will be removed on a future update and instead added as optional settings in **`Actions`**.
 * Sometimes the window will not reload. You can try hard-reloading it using **`CTRL + Shift + R`**. Notice if there are configuration issues.
 
 ## What's Next
-===
 
-#### How was MSSQL Supported
+### How was MSSQL Supported
+
 Inside **`VtigerActorOperation`** there is a function called **`query($q)`**. This executes the generated query. We further enhanced the functionality to translate the query before executing. We have laid the ground to allow support for DB Engines other than MySQL. Below you can have a look at the code. Using **SQL Parser** is highly appreciated.
+
 ```php
 public function query($q) {
     $mysql_query = $this->wsVTQL2SQL($q, $meta, $queryRelatedModules);
@@ -289,7 +294,9 @@ if (($dbField->not_null && !$dataKey) || (isset($dbField->unique_key) && $dbFiel
     $typeOfData = $fieldType.'~O';
 }
 ```
+
 Lastly, the queries inside the **`CBForeignActorOperation`** have been adjusted. For reliability concerns, the handler tests the DB connection before instantiating the class. To support the **MSSQL**, the following `switch / case` has been implemented.
+
 ```php
 switch ($dbtype) {
 	case 'mssqlnative':
@@ -300,8 +307,8 @@ switch ($dbtype) {
 		throw new WebServiceException(WebServiceErrorCode::$UNKNOWNOPERATION, 'Unsupported database type');
 		break;
 }
-
 ```
 
 ## Further support for MSSQL operations
+
 The main issue remains the syntax incompatibility. At no point were we able to get the rest of the **`CRUD`** operations working smoothly since the **WS** is built ground-up using MySQL. As mentioned in the section above, you **CAN** use a query translator to pick up the work.
