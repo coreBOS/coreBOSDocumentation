@@ -111,8 +111,6 @@ Once you land on the home page of any (CoreBOS, Evolutivo) install:
 To connect to a **`MySQL Server`**, use **`mysqli`** as the **`database type`** when defining the DB Configuration of a foreign module. It's fully compatible with all **`CRUD`** operations. **No additional driver install is required**.
 
 #### Connecting to an MSSQL Server
-
-
 ! **MSSQL requires an additional driver to work with PHP.**
 ! You can find the documentation (Ubuntu, MacOS) in the links below:
 ! > https://learn.microsoft.com/en-us/sql/connect/php/installation-tutorial-linux-mac?view=sql-server-ver16
