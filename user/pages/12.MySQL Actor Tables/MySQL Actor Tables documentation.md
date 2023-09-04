@@ -29,6 +29,7 @@ MySql Flat Tables Documentation
 ===
 
 !! **Note**: The table that you are referring to has to always have a **Primary Key**!
+!! Be sure to set the **Primary Key** to Auto Incremement before proceeding!
 
 * #### For Users
     1. You need to be logged in as **`admin`**.
