@@ -220,7 +220,7 @@ Other operations are not supported due to **Microsoft SQL Engine** syntax differ
 
 #### Using the test environment
 
-!!! **Note**: We created a MSSQL container in the **`yaml`** file of the dockerized CoreBOS. The credentials are **`username: sa`** and **`password: root`**. The main reason is to be able to support unit testing for the feature.
+!!! **Note**: We created a MSSQL container in the **`yaml`** file of the dockerized CoreBOS. The credentials are **`username: sa`** and **`password: 121212AbAbAb`**. The main reason is to be able to support unit testing for the feature.
 
 When using the feature in the **test** environment, set the hostname as the container name. Be sure to confirm if you have trouble connecting.
 
