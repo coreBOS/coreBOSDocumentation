@@ -254,3 +254,7 @@ then I edit the php.ini directive putting the same value and adding the current 
 > I have problems installing/recovering the database
 
 apply this change in my.cnf `max_allowed_packet = 16M` <https://discussions.corebos.org/showthread.php?tid=1550>
+
+> Checkout this cool oneline install process from one of our users!
+
+[plugin:youtube](https://youtu.be/_c-8Dgxan5Q?si=fgGkvlQdL5yzhtmz)

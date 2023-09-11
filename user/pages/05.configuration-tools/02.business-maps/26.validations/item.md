@@ -172,11 +172,19 @@ The supported set of validation rules ({rule_name}) can be:
 
 ### Validation Message
 
-All of the rules above accept an optional directive named `message` where you can set the error message you want the user to see when an error on that field happens. If this is not established, a standard error message will be returned. Inside this custom message you can use the curly brace `field` tag to indicate where you want the field name to appear:
+All of the rules above accept an optional directive named `message` where you can set the error message you want the user to see when an error on that field happens. If this is not defined, a standard error message will be returned. Inside this custom message you can use the curly brace `field` tag to indicate where you want the field name to appear:
 
 ```xml
 <message>This is my custom msg for field: {field}</message>
 ```
+
+We also support asking the user for confirmation by prefixing the message with the special string `%%%CONFIRM%%%`. This will produce a screen that will ask for confirmation using the text following the CONFIRM prefix.
+
+```xml
+<message>%%%CONFIRM%%%This is my custom msg for field: {field}</message>
+```
+
+If the user clicks on the accept button the save will proceed as normal if all the other validations pass. If the user presses on the cancel button he will stay in the edit screen where he can change whatever he wants before saving again.
 
 Besides this option, which covers almost all the use cases, we have run into an edge case where we needed the message to be dynamically set. The problem with this is that the way the valitron library works we need to give it all the rules and messages before we start but in this case, we didn't know the message until the validation was launched. So we added support for defining the message before validating the rule for custom functions.
 

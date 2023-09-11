@@ -138,7 +138,7 @@ $result = coreBOS_Rule::evaluate(
 
 Continue reading these resources to understand how Decision Tables work.
 
-- [Decision Table Business Map](../../../../05.configuration-tools/02.business-maps/06.decisiontable e)
+- [Decision Table Business Map](../../../../05.configuration-tools/02.business-maps/06.decisiontable/)
 - [Decision Table Blog Post](http://blog.corebos.org/blog/decisiontable)
 
 ### Credits

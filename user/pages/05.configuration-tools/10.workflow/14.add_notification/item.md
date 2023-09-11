@@ -19,10 +19,8 @@ taxonomy:
         - howto
 ---
 
-## Add Notification ##
+The **add notification** Workflow task helps us build an automation that notifies the user inside the CRM through a popup window for specific eminders and pending tasks according to the conditions we set. These notifications will appear in the **notification panel and Pending Action widget**.
 
-The add notification Workflow task helps us build an automation that notifies the user inside the CRM through a popup window for specific eminders and pending tasks according to the conditions we set.  
-These notifications will appear in the notification panel and Pending Action widget.
 ===
 
 To implement this feature we need to have in mind the following rules: 
@@ -30,7 +28,7 @@ To implement this feature we need to have in mind the following rules:
     The workflow should be created in the module that we want to see the notification for.
 
 
-### The body of the workflow task: ###
+### The body of the workflow task:
 
 **Module**: We specify the module for the Notification window. By default will be the module triggering the workflow.
 
