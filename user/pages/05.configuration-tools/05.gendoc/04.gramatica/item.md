@@ -143,6 +143,31 @@ It can be used more than once in the same document but the TOC will be the same.
      ```
   - In this example all related Soportes will be listed and if the account belongs to Alicante it will also incorporate the block XXXXXXXXXXX.
 
+  - {conditional} directives can be nested. We can use {conditional} inside {foreach} and define one or some conditions. For example:
+  - Compiling against a Potential record with a foreach CobroPago.
+     ```
+     The following payments are higher than 500$
+     {foreach CobroPago}
+     {conditional CobroPago.amount > 500}
+        {CobroPago.parent_id}
+     {/conditional}
+     {/foreach}
+     ```
+  - In this case the Payment parent Id will be shown for each record of Payment in related list of Potentials that has an amount higher than 500$.
+  - Example 2:
+     ```
+     {foreach CobroPago}
+     {conditional CobroPago.paid==1}
+     {conditional CobroPago.paymentmode in (Cash)}
+      Potential has carried out an operation with value {CobroPago.amount} and paymentdate  {CobroPago.paymentdate}
+     {/conditional}
+     {/conditional}
+     {/foreach}
+     ```
+  - In this example we have defined 2 conditions, so if we want to use more than one condition inside foreach we can do that by adding one after the other, so if the payments have been paid and the payment mode has been Cash the information inside the conditional block will be added to the end result, if not it will be excluded from the end result.
+
+
+
 ##  Special Text Formatting in Labels
 
 This is to allow the formatting of text that is coming from the application. This feature allows you to format the text within a label, inside vtiger CRM. In other words, the format is introduced when creating the text in the appropriate field of the application, then the document generator will convert these formats directly into comprehensible elements in OpenOffice. Only 4 types of formatting items are allowed, with which it is possible to apply any OpenOffice format to the text.
