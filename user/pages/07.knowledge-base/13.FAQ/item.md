@@ -15,26 +15,26 @@ content:
 taxonomy:
     category:
         - adminmanual
- 
     tag:
         - faq
 ---
 
--   ["report to" field in user profile have some influence in hierarchy and permission?](../13.FAQ/item.md#report-to-field-in-user-profile-have-some-influence-in-hierarchy-and-permission)
--   [How to increment maximum file upload. File upload field with message 'Maximum upload size is MB'](../13.FAQ/item.md#how-to-increment-maximum-file-upload-file-upload-field-with-message-maximum-upload-size-is-mb)
--   [Hi, I'm looking at including the Project ID in a email sent from a workflow on project creation (to make a URL link in the email)](../13.FAQ/item.md#hi-i-m-looking-at-including-the-project-id-in-a-email-sent-from-a-workflow-on-project-creation-to-ma)
--   [My vtigercron.php script isn't working because I don't have PHP CLI installed. How can I fix that?](../13.FAQ/item.md#my-vtigercron-php-script-isn-t-working-because-i-don-t-have-php-cli-installed-how-can-i-fix-that)
--   [My vtigercron.php script isn't working because I don't have PHP CLI installed. I changed the CLI to apache2handler following the previous question. Can that produce any problems?](../13.FAQ/item.md#my-vtigercron-php-script-isn-t-working-because-i-don-t-have-php-cli-installed-i-changed-the-cli-to-a)
--   [I know as a security feature vtigercrm and coreBOS will auto log out a user after a certain time. Is there a way to adjust how long the system waits before auto logging out a user?](../13.FAQ/item.md#i-know-as-a-security-feature-vtigercrm-and-corebos-will-auto-log-out-a-user-after-a-certain-time-is-)
--   [How to extend the session. I keep getting logged out of the program](../13.FAQ/item.md#how-to-extend-the-session-i-keep-getting-logged-out-of-the-program)
--   [From Portal column doesn't display the correct value. It seems that even though my customers create tickets from the Customer Portal, the column From Portal is NO for all the tickets. How does this work? Should it not be YES for the tickets created from Customer Portal?](../13.FAQ/item.md#from-portal-column-doesn-t-display-the-correct-value-it-seems-that-even-though-my-customers-create-t)
--   [Automatic number fields are not sorting correctly. For example, I get TT1, TT11, TT12, TT2,... instead of TT1, TT2, TT3, ..., TT11, TT12](../13.FAQ/item.md#automatic-number-fields-are-not-sorting-correctly-for-example-i-get-tt1-tt11-tt12-tt2-instead-of-tt1)
--   [How can I reset the admin user password?](../13.FAQ/item.md#how-can-i-reset-the-admin-user-password)
--   [How can I deactivate the "Don't show this dialog" or "evitar que este pagina cree dialogo" checkbox on alert messages?](../13.FAQ/item.md#how-can-i-deactivate-the-don-t-show-this-dialog-or-evitar-que-este-pagina-cree-dialogo-checkbox-on-a)
--   [How can I hide the Tag Cloud for all users?](../13.FAQ/item.md#how-can-i-hide-the-tag-cloud-for-all-users)
--   [Is there a way to make a shortcut (web based) that takes a user directly to a trouble ticket that is associated with a specific asset? In other words, simply clicking on a link it would add a new trouble ticket to the asset.](../13.FAQ/item.md#is-there-a-way-to-make-a-shortcut-web-based-that-takes-a-user-directly-to-a-trouble-ticket-that-is-a)
--   [My user has blocked access to his account due to too many login attempts. How can I reset his access?](../13.FAQ/item.md#my-user-has-blocked-access-to-his-account-due-to-too-many-login-attempts-how-can-i-reset-his-access)
--   [How can we rollback a mass edit?](../13.FAQ/item.md#how-can-we-rollback-a-mass-edit)
+- ["report to" field in user profile have some influence in hierarchy and permission?](../13.FAQ/item.md#report-to-field-in-user-profile-have-some-influence-in-hierarchy-and-permission)
+- [How to increment maximum file upload. File upload field with message 'Maximum upload size is MB'](../13.FAQ/item.md#how-to-increment-maximum-file-upload-file-upload-field-with-message-maximum-upload-size-is-mb)
+- [Hi, I'm looking at including the Project ID in a email sent from a workflow on project creation (to make a URL link in the email)](../13.FAQ/item.md#hi-i-m-looking-at-including-the-project-id-in-a-email-sent-from-a-workflow-on-project-creation-to-ma)
+- [My vtigercron.php script isn't working because I don't have PHP CLI installed. How can I fix that?](../13.FAQ/item.md#my-vtigercron-php-script-isn-t-working-because-i-don-t-have-php-cli-installed-how-can-i-fix-that)
+- [My vtigercron.php script isn't working because I don't have PHP CLI installed. I changed the CLI to apache2handler following the previous question. Can that produce any problems?](../13.FAQ/item.md#my-vtigercron-php-script-isn-t-working-because-i-don-t-have-php-cli-installed-i-changed-the-cli-to-a)
+- [I know as a security feature vtigercrm and coreBOS will auto log out a user after a certain time. Is there a way to adjust how long the system waits before auto logging out a user?](../13.FAQ/item.md#i-know-as-a-security-feature-vtigercrm-and-corebos-will-auto-log-out-a-user-after-a-certain-time-is-)
+- [How to extend the session. I keep getting logged out of the program](../13.FAQ/item.md#how-to-extend-the-session-i-keep-getting-logged-out-of-the-program)
+- [From Portal column doesn't display the correct value. It seems that even though my customers create tickets from the Customer Portal, the column From Portal is NO for all the tickets. How does this work? Should it not be YES for the tickets created from Customer Portal?](../13.FAQ/item.md#from-portal-column-doesn-t-display-the-correct-value-it-seems-that-even-though-my-customers-create-t)
+- [Automatic number fields are not sorting correctly. For example, I get TT1, TT11, TT12, TT2,... instead of TT1, TT2, TT3, ..., TT11, TT12](../13.FAQ/item.md#automatic-number-fields-are-not-sorting-correctly-for-example-i-get-tt1-tt11-tt12-tt2-instead-of-tt1)
+- [How can I reset the admin user password?](../13.FAQ/item.md#how-can-i-reset-the-admin-user-password)
+- [How can I deactivate the "Don't show this dialog" or "evitar que este pagina cree dialogo" checkbox on alert messages?](../13.FAQ/item.md#how-can-i-deactivate-the-don-t-show-this-dialog-or-evitar-que-este-pagina-cree-dialogo-checkbox-on-a)
+- [How can I hide the Tag Cloud for all users?](../13.FAQ/item.md#how-can-i-hide-the-tag-cloud-for-all-users)
+- [Is there a way to make a shortcut (web based) that takes a user directly to a trouble ticket that is associated with a specific asset? In other words, simply clicking on a link it would add a new trouble ticket to the asset.](../13.FAQ/item.md#is-there-a-way-to-make-a-shortcut-web-based-that-takes-a-user-directly-to-a-trouble-ticket-that-is-a)
+- [My user has blocked access to his account due to too many login attempts. How can I reset his access?](../13.FAQ/item.md#my-user-has-blocked-access-to-his-account-due-to-too-many-login-attempts-how-can-i-reset-his-access)
+- [How can we rollback a mass edit?](../13.FAQ/item.md#how-can-we-rollback-a-mass-edit)
+- [Inventory module Purchase Order does not permit inline edit when total and subtotal are negative](../13.FAQ/item.md#inventory-module-purchase-order-does-not-permit-inline-edit-when-total-and-subtotal-are-negative)
 
 <br>
 <div class="notices blue">
@@ -77,7 +77,7 @@ Versions of coreBOS after February 2015 have a new meta-variable called RecordId
 
 <h3>I found this solution via google, so I guess more people have had problems. I changed line 19 of vtigercron.php into:</h3>
 
-```
+```php
 if (PHP_SAPI === "apache2handler" || (isset($_SESSION["auth...
 ```
 <h3>Originally the ‘apache2handler’ is set to ‘cgi’ if I remember correctly. I remember having to add a temporary line to the vtigercron.php file to check what my setting needed to be, so this could be used as a selector. <br><br>
@@ -92,15 +92,15 @@ After some debugging, I found that the error occuring in [vtiger ]/vtigercron.ph
 ERROR LOCATION <br>
 </h3>
 
-```
-if(PHP_SAPI === "cli" || (isset($_SESSION["authenticated_user_id"]) && isset($_SESSION["app_unique_key"]) && $_SESSION["app_unique_key"] == $application_unique_key)){
+```php
+if (PHP_SAPI === "cli" || (isset($_SESSION["authenticated_user_id"]) && isset($_SESSION["app_unique_key"]) && $_SESSION["app_unique_key"] == $application_unique_key)) {
 ```
 <h3>This statement fails because PHP_SAPI <> "cli", furthermore session variables $_SESSION["app_unique_key"] and $_SESSION["authenticated_user_id"] are blank.<br><br>
 FIX INSTRUCTIONS <br><br>
 </h3>
 
 1.  To fix, add the following line above that statement to find out what value PHP_SAPI is for YOUR server.
-```
+```php
 echo(PHP_SAPI);
 ```
 2.  Check your adminstrative email for the cron job or check the log. You will notice that the value of PHP_SAPI is not "cli" but rather something like "cgi-fcgi" (or fast cgi).
@@ -146,16 +146,16 @@ You can also increase <strong>session.gc_maxlifetime</strong> in php.ini.</h3>
 <h2>From Portal column doesn't display the correct value. It seems that even though my customers create tickets from the Customer Portal, the column From Portal is NO for all the tickets. How does this work? Should it not be YES for the tickets created from Customer Portal?</h2>
 </div>
 
-<h3>The From Portal field is really an internal field for ticket notification management. So it's value is forced so that the workflow notifications work correctly. The value of this internal field is changed so that the notifications go out when they should.<br><br>
+<h3>The From Portal field is really an internal field for ticket notification management. So it's value is forced so that the workflow notifications work correctly. The value of this internal field is changed so that the notifications go out when they should.</h3>
 
-If you need a way to determine if a given ticket came from the portal or not I would recommend you do this:<br><br>
+If you need a way to determine if a given ticket came from the portal or not I would recommend you do this:<br>
 
--  create yourself a custom field checkbox called "Created by portal" (or something like that)<br>
--  modify the "Workflow for Ticket Created from Portal" workflow by adding an "Update Field" task and set your custom field to true<br>
--  use your custom field for filtering and reports<br>
--  forget that the from_portal field exists :-) <br><br>
+- create yourself a custom field checkbox called "Created by portal" (or something like that)
+- modify the "Workflow for Ticket Created from Portal" workflow by adding an "Update Field" task and set your custom field to true
+- use your custom field for filtering and reports
+- forget that the from_portal field exists :-)
 
-In any case if you do want to go down the path of changing the way that field works and adapting the workflows accordingly it all happens in the file: modules/HelpDesk/HelpDeskHandler.php</h3>
+In any case if you do want to go down the path of changing the way that field works and adapting the workflows accordingly it all happens in the file: modules/HelpDesk/HelpDeskHandler.php
 
 ---
 <br>
@@ -169,7 +169,7 @@ To fix this, the solution is to add as many zeros 0 as you think you will have n
 
 Since you most probably have an incorrect setup you can play around with this query, you will need to run multiple queries based on the Ticket number length. It will add 0's to the number. Thanks VTE</h3>
 
-```
+```sql
 ### SELECT - Testing
 SELECT 
   ticketid,
@@ -182,7 +182,7 @@ FROM
 WHERE LENGTH(ticket_no) < 6  AND LENGTH(ticket_no) >= 5
 ```
 
-```
+```sql
 ### Update
 UPDATE
   `vtiger_troubletickets` 
@@ -208,8 +208,9 @@ thanks Peter! </div>
 
 <h3>Execute this SQL in your database:</h3>
 
-```
-UPDATE vtiger_users SET user_password='$1$ad$hsl2KFybNRnbXBa.b.WWv.', crypt_type='MD5', failed_login_attempts=0 WHERE id=1;
+```sql
+UPDATE vtiger_users SET user_password='$1$ad$hsl2KFybNRnbXBa.b.WWv.',
+  crypt_type='MD5', failed_login_attempts=0 WHERE id=1;
 ```
 ---
 <br>
@@ -229,7 +230,7 @@ In case you have already checked it, Log out of the application, close the brows
 
 <h3>Directly in the database:</h3>
 
-```
+```sql
 UPDATE `vtiger_homestuff` SET `visible`=1 WHERE `stufftype`='Tag Cloud'
 ```
 ---
@@ -266,9 +267,23 @@ If you have blocked all the admin users you will have to go directly to the data
 <h2>How can we rollback a mass edit?</h2>
 </div>
 
-<h3>Some ideas come to mind, all rather "techy": <br><br>
+<h3>Some ideas come to mind, all rather "techy":</h3>
 
--  Recover from a backup of the database. This is the easiest option with the only downside of losing information/work since the last backup, but you are doing frequent backups anyway, right? :-) <br>
--  If the amount of work done doesn't permit you to recover from the database then you can recover the backup database into a copy, extract the table with the lost data, and copy it into the production database. Now create an update SQL command to update the incorrectly updated fields from the backup table. This option is a surgical backup recovery only of the fields you have updated instead of a full backup recovery. [You can read the exact steps here.](../04.tutorials/01.recovermasseditchange) <br>
--   Another similar alternative to the last step is using the coreBOS history tracker. If you have ModTracker activated on the module you have mass edited, then you have a register of the old and new value in the ModTracker database tables. So you can manually handcraft update SQL commands to recover the original values. This is like recovering from the backup table but harder and you must have ModTracker active before doing the mass edit.<br>
--  If you have Record Versioning active on the module with the mass edit error then it is REALLY simple, you just set the previous version as the active record. I don't remember if that can be done as a mass action but since all the other solutions require going to the database, you can go there also to make the previous version active if it can't be done through the UI.</h3>
+- Recover from a backup of the database. This is the easiest option with the only downside of losing information/work since the last backup, but you are doing frequent backups anyway, right? :-)
+- If the amount of work done doesn't permit you to recover from the database then you can recover the backup database into a copy, extract the table with the lost data, and copy it into the production database. Now create an update SQL command to update the incorrectly updated fields from the backup table. This option is a surgical backup recovery only of the fields you have updated instead of a full backup recovery. [You can read the exact steps here.](../04.tutorials/01.recovermasseditchange)
+- Another similar alternative to the last step is using the coreBOS history tracker. If you have ModTracker activated on the module you have mass edited, then you have a register of the old and new value in the ModTracker database tables. So you can manually handcraft update SQL commands to recover the original values. This is like recovering from the backup table but harder and you must have ModTracker active before doing the mass edit.
+- If you have Record Versioning active on the module with the mass edit error then it is REALLY simple, you just set the previous version as the active record. I don't remember if that can be done as a mass action but since all the other solutions require going to the database, you can go there also to make the previous version active if it can't be done through the UI.
+
+---
+<br>
+<div class="notices blue">
+<h2>Inventory module Purchase Order does not permit inline edit when total and subtotal are negative</h2>
+</div>
+
+This is due to the validation of typeofdata field that the application does. The typeofdata column for those two fields is set to `N~O`, a non negative number. We have to set it to a Negative Number (`NN`) with this SQL
+
+```sql
+UPDATE `vtiger_field` SET `typeofdata` = 'NN~O'
+WHERE `vtiger_field`.`fieldname` in ("hdnGrandTotal","hdnSubTotal")
+  AND tablename = "vtiger_purchaseorder"
+```
