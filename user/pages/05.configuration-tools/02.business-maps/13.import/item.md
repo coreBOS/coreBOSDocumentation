@@ -110,6 +110,7 @@ The accepted format is
   </matches>
   <options>
     <update>FIRST/LAST/ALL</update>
+    <orderby>column1, column2 ASC|DESC</orderby>
   </options>
 </map>
 ```
