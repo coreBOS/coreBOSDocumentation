@@ -39,11 +39,11 @@ This guide has been written mainly for coreBOS administrators. We expect that re
 
 The first chapter of this book deals with security concept only, i.e. there are no prerequisites in terms of setting up coreBOS. It is helpful to have a basic knowledge of security-related concepts and terms. With regard to the real world example, however, having access to a CRM installation would obviously be an advantage as you could duplicate the setup and investigate your own tweaks to the security configuration. This manual is divided into two parts:
 
-[Chapter 1: Introduction to Role-Based Security.](../02.Introduction%20to%20Role-Based%20Security/)
+[Chapter 1: Introduction to Role-Based Security.](../introduction_too_roleBased_security)
 
 Describes how role-based security works. Explains in simple terms how to prepare yourself to start working with the CRM's security features. Provides all the information required to understand role-based security supported by the CRM System. Lists all the possibilities of different security settings.
 
-[Chapter 2: Examples](../03.Examples/)
+[Chapter 2: Examples](../examples)
 
 Explains, with examples, how to use the CRM system to assign privileges. Shows real-world examples for setting up complex user hierarchies
 
@@ -73,7 +73,7 @@ We thank the countless people who contributed to this manual with informal revie
 
 ------------------------------------------------------------------------
 
-[Next](../02.Introduction%20to%20Role-Based%20Security/) | Chapter 1: Introduction to Role-Based Security.
+[Next](../introduction_too_roleBased_security) | Chapter 1: Introduction to Role-Based Security.
 
 ------------------------------------------------------------------------
 
