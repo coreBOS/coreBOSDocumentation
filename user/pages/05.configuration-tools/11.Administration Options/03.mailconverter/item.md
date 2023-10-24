@@ -170,3 +170,5 @@ Now click on the *Scan Now* button. It might take long time based on the amount 
 ![](scannowbutton.png?width=80%)
 
 As soon as scanning is finished you will get changes according to the rules you have set for creating and updating Trouble Ticket or adding an e-mail to Organizations or Contacts.
+
+!!! **Note:** When using WorkFlows, the module `MailConverter` uses is actually `Messages`, not `E-Mails`.
