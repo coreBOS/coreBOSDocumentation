@@ -138,6 +138,7 @@ The actions supported are:
     - **fieldDep\_AssignUserSelect**: set the assigned user to the given user ID parameter for uitype 101 fields
     - **fieldDep\_GetFieldSearch**: searches for a field as reference in order to map other fields
     - **fieldDep\_LaunchWorkflow**: launch the workflow ID given as a parameter with the record triggering the dependency
+    - **fieldDep\_doJS**: [launch any generic javascript code](#fielddep-dojs)
     - **fieldDep\_ChangeLabel**: will permit changing the label of a field **NOT IMPLEMENTED YET**
     - **fieldDep\_Format**: return sprintf formatting of new\_value (use sprintf javascript library: <https://github.com/alexei/sprintf.js>) **NOT IMPLEMENTED YET**
 
@@ -790,6 +791,45 @@ The `<dependencies>`, the `<dependency>`, and the `<action>` directives can be i
     <loadfrom>Test</loadfrom>
   </dependencies>
 </map>
+```
+
+### fieldDep\_doJS
+
+`fieldDep_doJS` is a powerful function that basically executes any javascript code inside of the application. The structure of the map is as below, where `return '{{$committente}}' + '{{$insp_type}}'` is the javascript code that is going to be executed:
+
+```xml
+<dependency>
+  <field>committente</field>
+  <actions>
+    <function>
+      <field>accountname</field>
+      <name>fieldDep_doJS</name>
+      <parameters>
+        <parameter>return '{{$firstname}}' + '{{$lastname}}'</parameter>
+      </parameters>
+    </function>
+  </actions>
+</dependency>
+```
+
+- `{{$fieldname}}` is a field in the application (Detailview/Editview) that you want to get the value of
+- keyword `return` is a ''must'' for every code that you have to add it represents the value the Field Dependency will use to update the target field
+- make sure to validate all datatypes when you create a new code for using it (this can break your code). this is powerful and dangerous
+- **NOTE: DO NOT USE NEWLINES.** add all the code inline `<parameter>you code here without new lines</parameters>`
+
+#### Some examples that you can use
+
+- concat
+```js
+return '{{$firstname}}' + '{{$lastname}}'
+```
+- date (today)
+```js
+return new Date().toJSON().slice(0, 10);
+```
+- date (+30 days)
+```js
+const inputDate = '{{$datarichiestaintegrinsp}}';const parts = inputDate.split('-');const formattedDate = `${parts[2]}-${parts[1]}-${parts[0]}`;const givenDate = new Date(formattedDate);givenDate.setDate(givenDate.getDate() + 30); return givenDate.toISOString().slice(0, 10);
 ```
 
 ------------------------------------------------------------------------
