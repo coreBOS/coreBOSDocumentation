@@ -29,7 +29,7 @@ This book is based on the official Open Source release. Your individual configur
 
 ------------------------------------------------------------------------
 
-[Next](01.Table%20of%20Contents/item.md) | Table of Contents
+[Next](tableofcontents) | Table of Contents
 
 ------------------------------------------------------------------------
 
