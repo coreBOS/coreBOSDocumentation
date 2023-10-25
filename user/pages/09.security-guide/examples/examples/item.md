@@ -34,7 +34,7 @@ Let us assume we have a sales team as shown in Figure: Example Sales Team 1. The
 
 **Figure 2.1. Example Sales Team 1**
 
-![Figure 2.1. Example Sales Team 1](../../02.Role%20Based%20Security%20Basics/sampleteam1.png)
+![Figure 2.1. Example Sales Team 1](../../role_based_security_basics/sampleteam1.png)
 
 Let us also assume we would like to have the following rules for Leads implemented:
 
@@ -79,7 +79,7 @@ Let us assume we have a sales team as shown in `Figure: Example Sales Team 2`. T
 
 **Figure 2.2. Example Sales Team 2**
 
-![Figure: Example Sales Team 2](../../02.Role%20Based%20Security%20Basics/sampleteam2.png)
+![Figure: Example Sales Team 2](../../role_based_security_basics/sampleteam2.png)
 
 Let us also assume we would like to have the following rules for Leads implemented:
 
@@ -138,7 +138,7 @@ Consider a very small organization with almost no hierarchical order as shown in
 
 **Figure 2.3. Small Sample Organization**
 
-![Figure: Small Sample Organization](../../02.Role%20Based%20Security%20Basics/smallsampleorg.png)
+![Figure: Small Sample Organization](../../role_based_security_basics/smallsampleorg.png)
 
 For this company, we would probably be perfect with two roles, one for
 the administrator and one for the company staff. However, we will
@@ -167,7 +167,7 @@ We set the privileges so that all users have access to all data as shown in `Fig
 
 **Figure 2.4. Organization Sharing Access for Small Company**
 
-![Figure: Organization Sharing Access for Small Company](../../02.Role%20Based%20Security%20Basics/orgsharingprivglobalsmall.png)
+![Figure: Organization Sharing Access for Small Company](../../role_based_security_basics/orgsharingprivglobalsmall.png)
 
 **Default Organisation Fields Access**
 
@@ -185,7 +185,7 @@ All privileges for edit and view any data should be given as shown in `Figure: G
 
 **Figure 2.5. Global Privileges for Sales**
 
-![Figure: Global Privileges for Sales](../../02.Role%20Based%20Security%20Basics/globalprivteama.png)
+![Figure: Global Privileges for Sales](../../role_based_security_basics/globalprivteama.png)
 
 **Tab Privileges:**
 
@@ -193,7 +193,7 @@ We do not restrict the access to the CRM modules for the sales representatives a
 
 **Figure 2.6. Tab Privileges Sales Team**
 
-![Figure: Tab Privileges Sales Team](../../02.Role%20Based%20Security%20Basics/tabprivsales.png)
+![Figure: Tab Privileges Sales Team](../../role_based_security_basics/tabprivsales.png)
 
 **Standard Privileges:**
 
@@ -202,7 +202,7 @@ Privileges Sales Team. The Create/Edit, as well as the Delete privileges for the
 
 **Figure 2.7. Standard Privileges Sales Team**
 
-![Figure: Standard Privileges Sales Team](../../02.Role%20Based%20Security%20Basics/standardprivsales.png)
+![Figure: Standard Privileges Sales Team](../../role_based_security_basics/standardprivsales.png)
 
 **Field Privileges:**
 
@@ -222,7 +222,7 @@ We do not want the service to delete sales related data. Therefore some privileg
 
 **Figure 2.8. Standard Privileges Service**
 
-![Figure: Standard PrivilegesService](../../02.Role%20Based%20Security%20Basics/standardprivservicesmall.png)
+![Figure: Standard PrivilegesService](../../role_based_security_basics/standardprivservicesmall.png)
 
 **Accounting Profile**
 
@@ -236,7 +236,7 @@ The accountant may see any data as allowed by the settings shown in `Figure: Glo
 
 **Figure 2.9. Global Privileges Accounting**
 
-![Figure: Global Privileges Accounting](../../02.Role%20Based%20Security%20Basics/globalprivaccounting.png)
+![Figure: Global Privileges Accounting](../../role_based_security_basics/globalprivaccounting.png)
 
 **Tab Privileges:**
 
@@ -254,7 +254,7 @@ We do not want the service to delete sales related data. Therefore some privileg
 
 **Figure 2.11. Standard Privileges Accounting**
 
-![Figure: Standard Privileges Accounting](../../02.Role%20Based%20Security%20Basics/standardprivaccounting.png)
+![Figure: Standard Privileges Accounting](../../role_based_security_basics/standardprivaccounting.png)
 
 **Corp Head Profile**
 
@@ -274,7 +274,7 @@ To have the structure shown in Figure: Small Sample Organization represented by 
 
 **Figure 2.12. Sample Role Setup**
 
-![Figure: Sample Role Setup](../../02.Role%20Based%20Security%20Basics/samplerolesetupsmall.png)
+![Figure: Sample Role Setup](../../role_based_security_basics/samplerolesetupsmall.png)
 
 ### Sample Role Setup
 
@@ -346,7 +346,7 @@ Consider a small organization with 14 CRM users as shown in `Figure: Sample Orga
 
 **Figure 2.13. Sample Organization**
 
-![Figure: Sample Organization](../../02.Role%20Based%20Security%20Basics/sampleorg.png)
+![Figure: Sample Organization](../../role_based_security_basics/sampleorg.png)
 
 In this environment, there are 11 roles such as corp_manager, admin, m_assistant, sm_manager, s_manager, m_manager, s_assistant, s_team_a, s_team_b, head_service, and service. Accounting, Production, and R&D do not use the CRM system.
 
@@ -396,7 +396,7 @@ users calendar since that is common practice in companies.
 
 **Figure 2.14. Default Organization Sharing Access**
 
-![Figure: Default Organization Sharing Access](../../02.Role%20Based%20Security%20Basics/orgsharingprivglobal.png)
+![Figure: Default Organization Sharing Access](../../role_based_security_basics/orgsharingprivglobal.png)
 
 **Note** As a consequence, each individual user is only capable to browse, create, modify or delete the data that has been assigned to:
 
@@ -431,7 +431,7 @@ All privileges for edit and view any data should be given as shown in `Figure: G
 
 **Figure 2.15. Global Privileges for Sales Team**
 
-![Figure: Global Privileges for Sales Team](../../02.Role%20Based%20Security%20Basics/globalprivteama.png)
+![Figure: Global Privileges for Sales Team](../../role_based_security_basics/globalprivteama.png)
 
 **Tab Privileges:**
 
@@ -439,7 +439,7 @@ We restrict the access of the sales representatives to the tabs that are necessa
 
 **Figure 2.16. Tab Privileges Sales Team**
 
-![Figure: Tab Privileges Sales Team](../../02.Role%20Based%20Security%20Basics/tabprivsales.png)
+![Figure: Tab Privileges Sales Team](../../role_based_security_basics/tabprivsales.png)
 
 **Standard Privileges:**
 
@@ -447,7 +447,7 @@ We also limit some privileges to some modules as shown in `Figure: Standard Priv
 
 **Figure 2.17. Standard Privileges Sales Team**
 
-![Figure: Standard Privileges Sales Team](../../02.Role%20Based%20Security%20Basics/standardprivteama.png)
+![Figure: Standard Privileges Sales Team](../../role_based_security_basics/standardprivteama.png)
 
 **Field Privileges:**
 
@@ -467,7 +467,7 @@ Only the privilege to view any sales related data should be given as shown in `F
 
 **Figure 2.18. Standard Privileges Marketing**
 
-![Figure: Standard Privileges Marketing](../../02.Role%20Based%20Security%20Basics/standardprivmarketing.png)
+![Figure: Standard Privileges Marketing](../../role_based_security_basics/standardprivmarketing.png)
 
 **Head Sales Marketing Profile:**
 
@@ -481,7 +481,7 @@ as shown in `Figure 2.19, Tab Privileges Head Sales Marketing`.
 
 **Figure 2.19. Tab Privileges Head Sales Marketing**
 
-![Figure: Tab Privileges Head Sales Marketing](../../02.Role%20Based%20Security%20Basics/tabprivheads.png)
+![Figure: Tab Privileges Head Sales Marketing](../../role_based_security_basics/tabprivheads.png)
 
 **Utility Privileges:**
 
@@ -501,7 +501,7 @@ All tabs related to the service are allowed as shown in `Figure: Tab Privileges 
 
 **Figure 2.20. Tab Privileges Service**
 
-![Figure: Tab Privileges Service](../../02.Role%20Based%20Security%20Basics/tabprivservice.png)
+![Figure: Tab Privileges Service](../../role_based_security_basics/tabprivservice.png)
 
 **Standard Privileges:**
 
@@ -511,7 +511,7 @@ Therefore some privileges are revoked as shown in `Figure: Standard Privileges S
 
 **Figure 2.21. Standard Privileges Service**
 
-![Figure: Standard Privileges Service](../../02.Role%20Based%20Security%20Basics/standardprivservice.png)
+![Figure: Standard Privileges Service](../../role_based_security_basics/standardprivservice.png)
 
 **Field Privileges:**
 
@@ -531,7 +531,7 @@ In addition to the Service Profile, we allow report functions as shown in `Figur
 
 **Figure 2.22. Tab Privileges Head Service**
 
-![Figure: Tab Privileges Service](../../02.Role%20Based%20Security%20Basics/tabprivheadservice.png)
+![Figure: Tab Privileges Service](../../role_based_security_basics/tabprivheadservice.png)
 
 **Utility Privileges:**
 
@@ -583,7 +583,7 @@ To have the structure shown in Figure: Sample Organization represented by the CR
 
 **Figure 2.23. Sample Role Setup**
 
-![Figure: Tab Privileges Service](../../02.Role%20Based%20Security%20Basics/samplerolesetup.png)
+![Figure: Tab Privileges Service](../../role_based_security_basics/samplerolesetup.png)
 
 Each individual user of the CRM system must be assigned to an appropriate role.
 
@@ -692,7 +692,7 @@ At the last step, the privileges defined will be assigned to the users as shown 
 
 ------------------------------------------------------------------------
 
-[Next](../../03.Summarized%20Rules/) | Summarized Rules
+[Next](../../summarized_rules/) | Summarized Rules
 
 ------------------------------------------------------------------------
 
