@@ -581,7 +581,7 @@ For example, let us assume a profile allows to view the website field in leads. 
 
 ------------------------------------------------------------------------
 
-[Next](../03.Examples) | Chapter 2. Examples
+[Next](../examples) | Chapter 2. Examples
 
 ------------------------------------------------------------------------
 
