@@ -1,6 +1,5 @@
 ---
 title: 'How to add expression functions'
-media_order: 'Screenshot from 2023-10-25 10-41-28.png'
 metadata:
     description: 'How to add expression functions inside the expression picker.'
     author: 'Arlind Ismalaja'
@@ -75,7 +74,8 @@ The files you need to change are:
     * This part has language support, and as such you would need to modify multiple files (ex. **en_us.fndefs.php**)
     * Here, you define the function help description as shown below.
 
-         ![Screenshot%20from%202023-10-25%2010-41-28](Screenshot%20from%202023-10-25%2010-41-28.png "Screenshot%20from%202023-10-25%2010-41-28")
+        ![workflow expression](workflowexpression.png?width=100%)
+
     * Follow the previous examples, but the main line of logic is this:
         ```php
         'function name' => array( // see functions in modules/com_vtiger_workflow/expression_engine/VTExpressionsManager.inc
