@@ -22,7 +22,7 @@ taxonomy:
 The article provides a guide on adding new expression functions inside the expression picker. 
 Below you can find the necessary steps and considerations for integrating custom functions.
 
----
+===
 
 !! **Note:** Please consider the current implementations before proceeding.
 
