@@ -2,7 +2,7 @@
 title: 'How to add expression functions'
 media_order: 'Screenshot from 2023-10-25 10-41-28.png'
 metadata:
-    description: 'How to add expression functions.'
+    description: 'How to add expression functions inside the expression picker.'
     author: 'Arlind Ismalaja'
 content:
     items:
@@ -17,6 +17,11 @@ taxonomy:
         - application
     tag:
         - howto
+---
+
+The article provides a guide on adding new expression functions inside the expression picker. 
+Below you can find the necessary steps and considerations for integrating custom functions.
+
 ---
 
 !! **Note:** Please consider the current implementations before proceeding.
