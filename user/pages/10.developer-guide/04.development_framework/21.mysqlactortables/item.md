@@ -39,6 +39,7 @@ How to configure the application to access internal or external flat MySQL table
 6. Normally when everything goes right, the page will reload. If it doesn't, try hard-reloading by using **`CTRL + Shift + R`**. If there is an issue, there is a message that will tell you which module failed to insert and where. Otherwise, look out for things that misbehave.
 
 #### For developers
+!! **Note:** If you are getting any errors related to mssql, be sure that both the container and the database are built correctly. The script for inserting the **`unit test data`** for MSSQL is called **`insertMssqlEntries.sh`** and can be located in the root directory of the folder. Since this integration is optional, **THE SCRIPT IS NOT RUN BY DEFAULT !**
 
 1. On **`foreign modules`**, be mindful that the first thing to check for is the necessary drivers for the connection to be established. One indication of this is this error: **```Uncaught Error: Call to undefined function 'driverHandler'_query()```**.
 2. The main database tables that this implementation inserts into are:
@@ -229,7 +230,7 @@ As of 2023, the install's DB container is called **`db`**, while the **`Microsof
 ## Known Issues
 
 * The installation will crash if there is at least one wrong configuration. You can notice it in the **`Home`** module, or **`Webservice Playground (CBWSDev)`**. There are no apparent Apache logs, so keep that in mind.
-* If you have a foreign module and then select **`--None--`** as the **`Real Module`**, the **`Is Foreign`** box will be disabled.
+* ~~If you have a foreign module and then select **`--None--`** as the **`Real Module`**, the **`Is Foreign`** box will be disabled.~~
 * **`Handler Path`** and **`Handler Class`** columns will be removed on a future update and instead added as optional settings in **`Actions`**.
 * Sometimes the window will not reload. You can try hard-reloading it using **`CTRL + Shift + R`**. Notice if there are configuration issues.
 
