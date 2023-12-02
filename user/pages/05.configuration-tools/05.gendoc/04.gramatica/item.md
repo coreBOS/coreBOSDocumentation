@@ -74,7 +74,7 @@ We have a special helper extension that can be found under the Tools menu called
   - `{foreach Timecontrol *date_start DESC*}`
   - [feat(Gendoc) Allow sorting in foreach loop](https://github.com/tsolucio/corebos/pull/710)
   - [Inventory Details sequence number sorting](https://discussions.corebos.org/showthread.php?tid=1834)
-- **iteration**: inside the {foreach} blocks you can reference a special variable called {iteration} whose value will be that of the current loop iteration. This can be useful to enumerate the elements or to print conditional text based on the iteration. See [Examples](../02.gendocejemplos).
+- **{iteration}**: inside the {foreach} blocks you can reference a special variable called {iteration} whose value will be that of the current loop iteration. This can be useful to enumerate the elements or to print conditional text based on the iteration. See [Examples](../02.gendocejemplos).
 - **{include Document_Num}**
   - With this instruction, we can include any document saved in the coreBOS document module inside the main document. For example, if we have a document with reference number DOC699, we can put at the beginning of a new paragraph {include DOC699} in the position where we wish to insert the document. During the merging process, all the contents in DOC699 will be inserted in the position where the {include} directive is and the directive will be eliminated.
   - You can use any other directive within the included document, following the same rules as any other document
@@ -85,9 +85,10 @@ We have a special helper extension that can be found under the Tools menu called
   - You can use any other directive within the included document, following the same rules as any other document
   - Nesting of {include} directives is not supported (truth is that we haven't tried it)
   - At the beginning of the page that includes the document, check the Format» Paragraph» Text Flow» Breaks, that the page number is set to 0 to keep the page counter from starting to count again.
-- **{insertindex}**
-A table of contents will be created from the outline of the document.
-It can be used more than once in the same document but the TOC will be the same.
+- ~~**{insertindex}**~~
+  - A table of contents will be created from the outline of the document. It can be used more than once in the same document but the TOC will be the same.
+  - **This directive is deprecated.** We do not recommend its usage. If you need an index, insert it normally and apply any styling you want. You can leave the index without any update as it will automatically be updated before converting the result to any format (PDF). In other words, you do not need to insert the index with any special directive, just add the index wherever you want as you would normally and GenDoc will recalculate it when converting to PDF.
+  - It's important to mention that GenDoc will not recalculate the index when downloading the document in OpenOffice format. In this case, you will need to manually update the index as needed.
 - **{image entity}**
   - This directive must be at the start of a paragraph.
   - The paragraph with the directive will be completely eliminated
