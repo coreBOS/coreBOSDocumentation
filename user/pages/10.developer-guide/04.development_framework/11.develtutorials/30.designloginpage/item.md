@@ -79,7 +79,7 @@ The best way to understand all the above is studying the existing login layouts 
 
 ## Login Page Customisation
 
-Starting from 11th December 2023 we add a feature to choose the login template using the "Login Template" picklist / dropdown found in the cbCompany module. By choosing the template from that field the login page will change accordingly.
+Starting from 11th December 2023 we added a feature to choose the login template using the "Login Template" picklist / dropdown found in the cbCompany module. By choosing the template from that field the login page will change accordingly.
 
 After you create your new login template you will need to add its name to the "Login Template" picklist using the changeset.
 
