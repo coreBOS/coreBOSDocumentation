@@ -77,6 +77,43 @@ The last step is to set the new login page as the one to use. Currently this is 
 
 The best way to understand all the above is studying the existing login layouts and discussing your doubts with us in the forum or gitter live chat.
 
+## Login Page Customisation
+
+Starting from 11th December 2023 we added a feature to choose the login template using the "Login Template" picklist / dropdown found in the cbCompany module. By choosing the template from that field the login page will change accordingly.
+
+After you create your new login template you will need to add its name to the "Login Template" picklist using the changeset.
+
+The changeset can be in this format;
+
+```php
+class addMyCustomLoginTemplate extends cbupdaterWorker {
+
+	public function applyChange() {
+		if ($this->hasError()) {
+			$this->sendError();
+		}
+		if ($this->isApplied()) {
+			$this->sendMsg('Changeset ' . get_class($this) . ' already applied!');
+		} else {
+			$module = Vtiger_Module::getInstance('cbCompany');
+			$field = Vtiger_Field::getInstance('login_template', $module);
+			if ($field) {
+                // $template_name - should hold the value of your new login template,
+                // incase you created: MyCustomLogin.tpl and MyCustomLogin2fa.tpl
+                // then the template_name should be 'MyCustomLogin'
+                // i.e. only the actual template will be used and not the one with 2fa
+                // and the name should be without .tpl
+                $template_name = 'MyCustomLogin';
+				$field->setPicklistValues(array($template_name));
+			}
+			$this->sendMsg('Changeset ' . get_class($this) . ' applied!');
+			$this->markApplied(false);
+		}
+		$this->finishExecution();
+	}
+}
+```
+
 Don't hesitate to share your designs with the community!!
 
 Here you have some ideas in case you need inspiration:
