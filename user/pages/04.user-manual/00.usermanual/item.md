@@ -35,6 +35,8 @@ You can find an old version of a manual [in OpenOffice](./CoreBOSManualUA.odt) a
 - [SMSNotifier](../smsnotifier)
 - [Mobile Interface](../../08.extensions-integrations/04.mobileui/01.introduction)
 - [Inventory Modules](../inventorymodules)
+- [Credit Invoice](../abonofactura)
+- [Taxes and Retentions](../taxesretention)
 - [Deduplication](../deduplication)
 - [Convert Lead](../convertir_precontacto/)
 - [Use Comments or Activities?](../commentsactvities/)

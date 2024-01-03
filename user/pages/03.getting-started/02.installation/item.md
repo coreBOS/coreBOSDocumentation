@@ -23,8 +23,8 @@ taxonomy:
 ## Requirements
 
 - Apache 2.x or above.
-- MySQL 5.x and 8.x
-- PHP from 7.2.x to 7.4.x. PHP 7.4 is recommended.
+- MySQL 8.x
+- PHP from 7.4.x to 8.1. PHP 8.1 is recommended.
 
 <span></span>
 
@@ -39,6 +39,10 @@ Please make sure to review MySQL configuration (my.cnf or server start parameter
 <tr>
 <td>ENGINE=InnoDB</td>
 <td>Should be available. (Turn off --skip-innodb)</td>
+</tr>
+<tr>
+<td>ANSI Mode</td>
+<td>Should be disabled</td>
 </tr>
 </tbody>
 </table>
