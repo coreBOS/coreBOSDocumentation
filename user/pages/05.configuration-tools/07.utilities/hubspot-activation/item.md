@@ -1,7 +1,7 @@
 ---
 title: 'coreBOS-Hubspot Integration'
 metadata:
-    description: 'WooCommerce is an ecommerce plugin for WordPress. It makes creating and managing an online store simple, with reasonable levels of flexibility and several vital features such as inventory and tax management, secure payments, and shipping integration.'
+    description: 'Hubspot is CRM-like online service to manage your leads and inbound marketing.'
     author: 'Joe Bordes'
 content:
     items:
