@@ -66,12 +66,14 @@ The configuration has two parts, one in coreBOS and the other in WooCommerce.
     
     2.  Check that you have the sames taxes on your coreBOS
     ![](corebos-taxes.png?width=100%)
+
+    3. Set global variable **Inventory_Tax_Type_Default** in corebos to value equal to **individual**
     
-    3. Found the internal values for each tax on you woocommerce, inspecting code on the picklist that we showed you in step 1.
+    4. Found the internal values for each tax on you woocommerce, inspecting code on the picklist that we showed you in step 1.
     ![](inspect-taxes-picklist-to-know-names.png?width=100%)
     Standar tax, always will be an empty value. Don't worry we have controlled on our corebos code integration if you indicate the name standart.
     
-    4. Go to Business Maps module in your corebos and create a new map to indicate tax names in woocommerce what tax are in corebos, with the next name.
+    5. Go to Business Maps module in your corebos and create a new map to indicate tax names in woocommerce what tax are in corebos, with the next name.
 
     **WC2ProductsTaxes**
 
@@ -114,8 +116,8 @@ The configuration has two parts, one in coreBOS and the other in WooCommerce.
   </fields>
 </map>
 ```
-  5. Now just you need to create an ohter map but in the other way with the next name.
-  
+  6. Now just you need to create an ohter map but in the other way with the next name.
+
   **Products2WCTaxes**
 
 ```xml
