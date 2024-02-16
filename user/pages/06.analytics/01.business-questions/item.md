@@ -103,7 +103,8 @@ The File type has an extended properties syntax that permits us to define the de
       "label": "l1",
       "type": "float"
     }
-  ]
+  ],
+  "nodatesuffix": true //definition of not adding the date to the filename
 }
 ```
 
