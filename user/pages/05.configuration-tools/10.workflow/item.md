@@ -21,7 +21,7 @@ taxonomy:
         
 ---
 
-Workflows are a very powerful part of the application. They permit us to automate our business logic to some extent making it possible to standardize process and have the application do some of the repetitive tasks our business requires.
+Workflows are a very powerful part of the application. They permit us to automate our business logic to some extent making it possible to standardize processes and have the application do some of the repetitive tasks our business requires.
 
 ===
 
@@ -32,11 +32,11 @@ It is necessary to execute four steps to configure and setup a workflow:
 - Select any conditions that restrict for what records the workflow must take it's actions
 - Define and configure the different tasks that the workflow will perform
 
-In the next sections you will be able to find more information on these steps.
+In the next sections, you will be able to find more information on these steps.
 
 - [Workflow launch conditions](10.workflow/10.workflow_launch_conditions)
-- [Workflow step by step explanation](11.workflow_stepbystep)
-- [Scheduled Time based Workflows](05.scheduled_workflows)
+- [Workflow step-by-step explanation](11.workflow_stepbystep)
+- [Scheduled Time-based Workflows](05.scheduled_workflows)
 - [Workflow conditions](08.workflow_conditions)
 
 ## Workflow Tasks
@@ -51,5 +51,5 @@ In the next sections you will be able to find more information on these steps.
 ## Workflow Examples
 
 - [Workflow Examples](09.workflow_examples)
-- [How to send emails/sms on specific week days](13.workflow_weekendwarning)
+- [How to send emails/SMS on specific weekdays](13.workflow_weekendwarning)
 - [Workflow tricks and tips](12.workflow_tricksandtips)

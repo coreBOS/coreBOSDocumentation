@@ -37,9 +37,9 @@ The files you need to change are:
             }
         ```
     * There are a few standards you have to follow:
-        * It is reccommended that your function starts with **`__cb_`**.
+        * It is recommended that your function starts with **`__cb_`**.
         * Your function should have **only one parameter** called **`$arr`**, regardless of how many inputs your implementation actually has. As named, your input at this point is going to come as an array (of your parameters).
-        * **[file]** is a placeholder for the category function belongs. For example, if your function does string manipulation, it belongs to the file `strings.php`; if it's a math operation, it belongs to `math.php` etc. Your function can belong to any file in this directory, otherwise is highly advised to create a new one.
+        * **[file]** is a placeholder for the category function. For example, if your function does string manipulation, it belongs to the file `strings.php`; if it's a math operation, it belongs to `math.php`, etc. Your function can belong to any file in this directory, otherwise is highly advised to create a new one.
 
 * **`modules/com_vtiger_workflow/expression_engine/VTExpressionEvaluater.inc`**
     * Here, you link the function with an abstract name. This referral name is going to be used in the expression picker.
@@ -50,7 +50,7 @@ The files you need to change are:
                 'FunctionName' => '__cb_functionname'
             )
         ```
-    * There is something to take into consideration before adding the entry inside this file. There are a few **[categories]** your function should fall depending on the parameters it expects.
+    * There is something to take into consideration before adding the entry inside this file. There are a few **[categories]** your function should fall into depending on the parameters it expects.
         * **Operators:** This array holds basic operations (ex. sum, sub, mul, etc.)
         * **Functions:** This holds a list of all the available functions
         * **operationsSQL:** This holds a list of all the functions that are available for the scheduled task conditions
@@ -94,5 +94,5 @@ The files you need to change are:
         )
         ```
 ---
-This is pretty much all you need. You can find a commit example [here](https://code.spike.studio/EvolutivoCode/EvolutivoFW/commit/6ba209b894ad7af2d98d79d1a60caa778093b3a2).
+This is pretty much all you need. You can find an example commit [here](https://code.spike.studio/EvolutivoCode/EvolutivoFW/commit/6ba209b894ad7af2d98d79d1a60caa778093b3a2).
 
