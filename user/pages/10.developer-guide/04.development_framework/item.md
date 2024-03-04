@@ -23,6 +23,7 @@ taxonomy:
 - [coreBOS Translation Module](01.cbtranslation)
 - [Vtiger + popup + llamada entrante + cola](02.llamadaentrantecola)
 - [Database Structure](03.database)
+- [Development Security](23.develsecurity)
 - [Debugging](04.debuging)
 - [Developer Tips and Tricks](05.develtips)
 - [Helper Scripts](06.helperscripts)
@@ -41,3 +42,4 @@ taxonomy:
 - [Calendar Development](19.calendar)
 - [Module Import Permission Call Stack](20.moduleimport)
 - [MySQL Actor Tables](21.mysqlactortables)
+- [How to add Workflow Functions](22.workflow-functions)
