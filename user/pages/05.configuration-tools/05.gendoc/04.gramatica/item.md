@@ -29,7 +29,7 @@ We have a special helper extension that can be found under the Tools menu called
   - will be substituted by the named field of the named entity, these fields can be consulted in the OOMerge Fields extension if the field cannot be found it will be left unmodified, for example, {nonexistent_entity.fieldname}, {entity.nonexistent_field}, {sihubiera} or {sinexiste}
   - examples: {account.accountname}, {contact.bill_address}, {product.productcode}
 - **{ifexists entity}…{/ifexists}**
-  - all text contained inside the {ifexists} and {/ifexists} will be added to the final document if there exists at least one entity related to the main entity of the merge if none exist or entity is not defined the whole block will be eliminated inside the block fields of the first entity found may be used
+  - all text contained inside the {ifexists} and {/ifexists} will be added to the final document if there exists at least one entity related to the main entity of the merge if none exist or the entity is not defined the whole block will be eliminated inside the block fields of the first entity found may be used
   - examples: {ifexists asset}, {ifexists contact}, {ifexists campaign}, {ifexists product}, {ifexists invoice}
 - **{ifexists entity.field=value}…{/ifexists}**
   - all text contained inside the {ifexists} and {/ifexists} will be added to the final document if there exists at least one entity related to the main entity of the merge whose indicated field has the indicated value. For fields with multiple values (multiple select picklist), the string |##| must be used to separate the values and ALL values in the field must be the same as the value for the entity to qualify as equal.
@@ -53,14 +53,14 @@ We have a special helper extension that can be found under the Tools menu called
   - other operators are supported: > < >= <= == !=
   - examples: {conditional asset.type==Fichero}, {conditional contact.type==Responsable Seguridad}, {conditional campaign!=GAdwords Noviembre08}
 - **{foreach entity}…{/foreach}**
-  - for each related entity of the main merge entity we will merge the whole text contained between the two commands and add the result to the final document
+  - for each related entity of the main merge entity, we will merge the whole text contained between the two commands and add the result to the final document
   - if no related entity is found the whole block will be ignored
 - **{foreach entity.field=value}…{/foreach}**
-  - for each related entity of the main merge entity whose indicated field has the indicated value we will merge the whole text contained between the two commands and add the result to the final document. For fields with multiple values (multiple select picklist), the string |##| must be used to separate the values and ALL values in the field must be the same as the value for the entity to qualify as equal.
+  - for each related entity of the main merge entity whose indicated field has the indicated value, we will merge the whole text contained between the two commands and add the result to the final document. For fields with multiple values (multiple select picklist), the string |##| must be used to separate the values and ALL values in the field must be the same as the value for the entity to qualify as equal.
   - if no related entity is found the whole block will be ignored
   - other operators are supported: > < >= <= = !=
 - **{foreach entity.field in (value1,value2,value3)}…{/foreach}**
-  - for each related entity of the main merge entity whose indicated field has at least one of the indicated value we will merge the whole text contained between the two commands and add the result to the final document. Fields with multiple values (multiple select picklist) are directly supported, no special syntax is needed.
+  - for each related entity of the main merge entity whose indicated field has at least one of the indicated value, we will merge the whole text contained between the two commands and add the result to the final document. Fields with multiple values (a multiple select picklist) are directly supported, no special syntax is needed.
   - if no related entity is found the whole block will be ignored
 - **{foreach entity.field!=value}…{/foreach}**
   - negative case of **{foreach…}**
@@ -68,7 +68,7 @@ We have a special helper extension that can be found under the Tools menu called
   - negative case of **{foreach…}**
 - **{foreach entity [field1 op value1 && field2 op value2 || field3 op value3]}…{/foreach}**
   - advanced conditions on fields with fields and operations (=,>,<,>=,<=,!=) and limited logical connectors || (or) and && (and)
-- **{foreach entity.field [condition] \*sort directive\*}…{/foreach}**
+- **{foreach ... \*sort directive\*}…{/foreach}**
   - `{foreach Timecontrol [title=MyTitle && tcunits>5] *date_start DESC*}`
   - `{foreach Timecontrol *date_start DESC* [title=MyTitle && tcunits>5]}`
   - `{foreach Timecontrol *date_start DESC*}`
@@ -78,16 +78,16 @@ We have a special helper extension that can be found under the Tools menu called
 - **{include Document_Num}**
   - With this instruction, we can include any document saved in the coreBOS document module inside the main document. For example, if we have a document with reference number DOC699, we can put at the beginning of a new paragraph {include DOC699} in the position where we wish to insert the document. During the merging process, all the contents in DOC699 will be inserted in the position where the {include} directive is and the directive will be eliminated.
   - You can use any other directive within the included document, following the same rules as any other document
-  - Nesting of {include} directives is not supported (truth is that we haven't tried it)
+  - Nesting of {include} directives is not supported (the truth is that we haven't tried it)
   - At the beginning of the page that includes the document, check the Format» Paragraph» Text Flow» Breaks, that the page number is set to 0 to keep the page counter from starting to count again.
 - **{include entity}**
-  - With this command, we can include, in the template, any document in the coroeBOS document module that is associated with an entity directly related to the main entity of the merge. For example, if we have an entity *Backups* related to the main entity on which you compile the document, we can put at the beginning of a new paragraph {include Backups} (in this case it would seem logical to be inside a {foreach} loop because an account probably has more than one backup) in the position where we want to insert the document. When compiling all the documents related to the Backups will be inserted in substitution of the {include} directive.
+  - With this command, we can include, in the template, any document in the coreBOS document module that is associated with an entity directly related to the main entity of the merge. For example, if we have an entity *Backups* related to the main entity on which you compile the document, we can put `{include Backups}` at the beginning of a new paragraph (in this case it would seem logical to be inside a {foreach} loop because an account probably has more than one backup) in the position where we want to insert the document. When compiling all the documents related to the Backups will be inserted in substitution of the {include} directive.
   - You can use any other directive within the included document, following the same rules as any other document
-  - Nesting of {include} directives is not supported (truth is that we haven't tried it)
+  - Nesting of {include} directives is not supported (the truth is that we haven't tried it)
   - At the beginning of the page that includes the document, check the Format» Paragraph» Text Flow» Breaks, that the page number is set to 0 to keep the page counter from starting to count again.
 - ~~**{insertindex}**~~
   - A table of contents will be created from the outline of the document. It can be used more than once in the same document but the TOC will be the same.
-  - **This directive is deprecated.** We do not recommend its usage. If you need an index, insert it normally and apply any styling you want. You can leave the index without any update as it will automatically be updated before converting the result to any format (PDF). In other words, you do not need to insert the index with any special directive, just add the index wherever you want as you would normally and GenDoc will recalculate it when converting to PDF.
+  - **This directive is deprecated.** We do not recommend its usage. If you need an index, insert it normally and apply any styling you want. You can leave the index without any update as it will automatically be updated before converting the result to any format (PDF). In other words, you do not need to insert the index with any special directive, just add the index wherever you want as you would normally and GenDoc will recalculate it when converting to PDF. [Read about it here](https://blog.evolutivo.it/blog/gendocindex)
   - It's important to mention that GenDoc will not recalculate the index when downloading the document in OpenOffice format. In this case, you will need to manually update the index as needed.
 - **{image entity}**
   - This directive must be at the start of a paragraph.
@@ -95,7 +95,7 @@ We have a special helper extension that can be found under the Tools menu called
   - The next paragraph must contain an image that will be the one substituted by the actual entity image
   - In the case of needing various images, each image to be substituted must be different
   - All the configurations made on the image will be respected, only the image will be substituted
-  - We treat the image directives in a special way. The idea is that there are so many possible configuration options for an image (width, height, alignment, …) that it would be complicated to include them in the image directive to indicate how the image should be rendered. So we decided that you include any image, format it as you need using the options that OpenOffice gives you for this and then we will substitute only the image leaving all the formating as you defined it.
+  - We treat the image directives in a special way. The idea is that there are so many possible configuration options for an image (width, height, alignment, …) that it would be complicated to include them in the image directive to indicate how the image should be rendered. So we decided that you include any image, format it as you need using the options that OpenOffice gives you for this and then we will substitute only the image leaving all the formatting as you defined it.
   - In case there is more than one image field on the module you can specify which one you want using the dot notation: Contacts.myimage.
   - There is a special case in the Project module to retrieve the GanttChart: **Project.GanttChart**
 
@@ -133,7 +133,7 @@ We have a special helper extension that can be found under the Tools menu called
      {/foreach}
     ```
 
- - In this case, the {ifexists} will evaluate the same entity as the {foreach}, and will fail. In general we can put {ifexists} inside a {foreach} if we are testing against a diferent entity, for example, this IS CORRECT:
+ - In this case, the {ifexists} will evaluate the same entity as the {foreach} and will fail. In general, we can put {ifexists} inside a {foreach} if we are testing against a different entity, for example, this IS CORRECT:
 
      ```
      {foreach Soportes}
@@ -142,7 +142,7 @@ We have a special helper extension that can be found under the Tools menu called
      {/ifexists}
      {/foreach}
      ```
-  - In this example all related Soportes will be listed and if the account belongs to Alicante it will also incorporate the block XXXXXXXXXXX.
+  - In this example, all related Soportes will be listed and if the account belongs to Alicante it will also incorporate the block XXXXXXXXXXX.
 
   - {conditional} directives can be nested. We can use {conditional} inside {foreach} and define one or some conditions. For example:
   - Compiling against a Potential record with a foreach CobroPago.
@@ -154,7 +154,7 @@ We have a special helper extension that can be found under the Tools menu called
      {/conditional}
      {/foreach}
      ```
-  - In this case the Payment parent Id will be shown for each record of Payment in related list of Potentials that has an amount higher than 500$.
+  - In this case, the Payment parent ID will be shown for each record of Payment in the related list of Potentials that has an amount higher than 500$.
   - Example 2:
      ```
      {foreach CobroPago}
@@ -165,13 +165,11 @@ We have a special helper extension that can be found under the Tools menu called
      {/conditional}
      {/foreach}
      ```
-  - In this example we have defined 2 conditions, so if we want to use more than one condition inside foreach we can do that by adding one after the other, so if the payments have been paid and the payment mode has been Cash the information inside the conditional block will be added to the end result, if not it will be excluded from the end result.
-
-
+  - In this example, we have defined 2 conditions, so if we want to use more than one condition inside foreach we can do that by adding one after the other, so if the payments have been paid and the payment mode has been Cash the information inside the conditional block will be added to the end result, if not it will be excluded from the end result.
 
 ##  Special Text Formatting in Labels
 
-This is to allow the formatting of text that is coming from the application. This feature allows you to format the text within a label, inside vtiger CRM. In other words, the format is introduced when creating the text in the appropriate field of the application, then the document generator will convert these formats directly into comprehensible elements in OpenOffice. Only 4 types of formatting items are allowed, with which it is possible to apply any OpenOffice format to the text.
+This is to allow the formatting of text that is coming from the application. This feature allows you to format the text within a label, inside the application. In other words, the format is introduced when creating the text in the appropriate field of the application, then the document generator will convert these formats directly into comprehensible elements in OpenOffice. Only 4 types of formatting items are allowed, with which it is possible to apply any OpenOffice format to the text.
 
 ```
 <b>text</b>, OpenOffice SIGPAC_BOLD style will be applied
@@ -205,7 +203,7 @@ This is an example of how the text looks inside the field of vtiger CRM.
 
 We can also access the company information configured in the Settings section of the application using the meta label Organization as you can see in the OOmerge Labels extension.
 
-Since the information available on the company settings section is rather limited and you could need more, the install process created the global variable **GenDoc_Company_Account** where you can set the accountid of any Accounts record from which you wish to access your company's information. The idea is that you create an account record for your company and use all the fields there.
+Since the information available in the company settings section is rather limited and you could need more, the install process created the global variable **GenDoc_Company_Account** where you can set the accountid of any Accounts record from which you wish to access your company's information. The idea is that you create an account record for your company and use all the fields there.
 
 ## FAQ
 
