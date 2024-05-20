@@ -111,8 +111,8 @@ The actions supported are:
 - **change**: will assign a value or set of values to another field
 - **setoptions**: will add selectable options in a picklist
 - **deloptions**: will eliminate selectable options from a picklist
-- **hide**: hide a field and its’ label
-- **show**: show a field and its’ label
+- **hide**: hide a field and its label
+- **show**: show a field and its label
 - **collapse**: will collapse a block
 - **open**: will open a block
 - **disappear**: will hide a block
@@ -421,7 +421,34 @@ On Contact change phone to contain only numbers
 ```
 
 <div class="notices blue">
-On Contact set description to description of the selected account
+On Contact, set description to description of the selected account
+</div>
+
+```xml
+    <map>
+      <originmodule>
+        <originname>Contacts</originname>
+      </originmodule>
+    <dependencies>
+    <dependency>
+        <field>firstname</field>
+        <actions>
+            <function>
+                <field>description</field>
+                <name>fieldDep_GetField</name>
+                <parameters>
+                  <parameter>Accounts.description</parameter>
+                  <parameter>description</parameter>
+                </parameters>
+            </function>
+        </actions>
+    </dependency>
+    </dependencies>
+    </map>
+```
+
+<div class="notices blue">
+On Potential, set potential name to the industry of the related account and the next step field to the email of the related account
 </div>
 
 ```xml
