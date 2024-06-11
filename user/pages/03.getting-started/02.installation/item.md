@@ -171,11 +171,11 @@ Make sure to verify if your PHP configuration meets the recommended values.
  ! 
  ! After this, you must restart your apache server.
 
- !! For security reasons it is **VERY** important that you set the value of **request_order** to **GP**.
+ !! For security reasons, it is **VERY** important that you set the value of **request_order** to **GP**.
  !! 
  !! coreBOS barely uses cookies and it does not look for them in the $\_REQUEST superglobal.
  !! 
- !! Most modern linux servers already set this value to GP by default so you are probably already covered but check just in case.
+ !! Most modern Linux servers already set this value to GP by default so you are probably already covered but check just in case.
  !! 
  !! You can [read a little more about this here](https://www.owasp.org/index.php/PHP_Security_Cheat_Sheet#Use_of_.24_REQUEST).
 
@@ -245,11 +245,11 @@ For additional security it is recommended that you take three more steps:
 
 > I installed in windows but the Popup screen is empty.
 
-XAMMP configures your PHP to load files only from a couple of directories. By default it does not look for files in the current directory which is something that coreBOS depends upon. You must edit your php.ini file, look for the include_path directive and add the current directory. Something like this;
+XAMMP configures your PHP to load files only from a couple of directories. By default, it does not look for files in the current directory which is something that coreBOS depends upon. You must edit your php.ini file, look for the include_path directive and add the current directory. Something like this;
 
 `include_path = ".;C:\php\pear;C:\wamp\www"`
 
-What I usually do when I have to install on windows is edit config.inc.php and add this line towards the end:
+What I usually do when I have to install on Windows is edit config.inc.php and add this line towards the end:
 
 `echo get_include_path();`
 
@@ -261,4 +261,5 @@ apply this change in my.cnf `max_allowed_packet = 16M` <https://discussions.core
 
 > Checkout this cool oneline install process from one of our users!
 
-[plugin:youtube](https://youtu.be/_c-8Dgxan5Q?si=fgGkvlQdL5yzhtmz)
+[plugin:youtube](https://youtu.be/_c-8Dgxan5Q)
+
