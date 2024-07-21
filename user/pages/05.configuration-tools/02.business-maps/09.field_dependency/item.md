@@ -202,7 +202,7 @@ Examples
 --------
 
 <div class="notices blue">
-If payment is negative then set category to Infrastructure
+If payment is negative then set the category to `Infrastructure`
 </div>
 
 ```xml
@@ -231,7 +231,7 @@ If payment is negative then set category to Infrastructure
 ```
 
 <div class="notices blue">
-If payment is negative then category must be Infrastructure
+If payment is negative then the category field must be `Infrastructure`
 </div>
 
 ```xml
@@ -377,7 +377,7 @@ if (employees &lt; 100 and bill_country is Spain) or (employees &gt; 100 and bil
 ```
 
 <div class="notices blue">
-On the invoice, set due date to 30 days more than invoice date
+On the invoice, set the due date field to 30 days more than the invoice date field
 </div>
 
 ```xml
@@ -400,7 +400,7 @@ On the invoice, set due date to 30 days more than invoice date
     </map>
 ```
 <div class="notices blue">
-On Contact change phone to contain only numbers 
+On Contact change the phone field to contain only numbers 
 </div>
 
 ```xml
@@ -421,7 +421,7 @@ On Contact change phone to contain only numbers
 ```
 
 <div class="notices blue">
-On Contact, set description to description of the selected account
+On Contact, set the description field to the value of the description field of the selected account
 </div>
 
 ```xml
@@ -448,7 +448,7 @@ On Contact, set description to description of the selected account
 ```
 
 <div class="notices blue">
-On Potential, set potential name to the industry of the related account and the next step field to the email of the related account
+On Potential, set the potential name field to the industry of the related account and the next step field to the email of the related account
 </div>
 
 ```xml
@@ -475,7 +475,7 @@ On Potential, set potential name to the industry of the related account and the 
 ```
 
 <div class="notices blue">
-IF (bill country starts with "A") SET paymentcategory to infrastructure and make it readonly ELSE make paymentcategory editable 
+IF (bill country starts with "A") SET the paymentcategory field to `infrastructure` and make it read-only ELSE make the paymentcategory field editable
 </div>
 
 ```xml
@@ -750,6 +750,14 @@ example using the fieldDep_GetFieldSearch functionality. Here we want to map som
 ```
 
 You can add as many dependencies to copy-paste field values from different modules. As you see above we have used two `<dependency>` tags in order to take values from **Assets** when we fill the `related_assets` and to take from **ProductComponent** filling the `related_productcomponent` between `<field>` tags.
+
+### Example of conditions on read-only fields
+
+When we set a field to display type 2 or 4, that field will not be present in the edit view of the record because they are fields that will be automatically filled in the background when saved. This is a problem for Field Dependencies because these happen completely in the browser. The change and the evaluation of the conditions are done in the browser when editing, where the read-only value is not present. If we need to add a dependency with a condition based on a read-only value we have to get the value into the browser. To achieve that we have to add an `EDITVIEWHTML` business action with this structure:
+
+`<input type="hidden" id="cf_1329" name="cf_1329" value="{$FIELDS['cf_1329']}">`
+
+This will add the input with the read-only field value to the browser where the field dependency code can read it and evaluate the conditions.
 
 ### Mode functionality
 
