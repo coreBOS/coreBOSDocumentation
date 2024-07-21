@@ -24,7 +24,7 @@ This extension permits creating advanced templates using [OpenOffice](https://ww
 Documentation.
 ==============
 
-[Have a look at the Documentation Template ](gendocdocumentation.odt) andcompare it with [this validation merge.](gendocdocumentation.pdf)
+[Have a look at the Documentation Template](gendocdocumentation.odt) and compare it with [this validation merge.](gendocdocumentation.pdf)
 
 - [How To Use](./howto)
 - [Template Grammar](./gramatica)
