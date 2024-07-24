@@ -74,3 +74,12 @@ This trick can be applied to any numeric field but it is common when showing tax
 
 and shows another way of calculating (dynamically) the **tax percentage**.
 
+### Converting Numbers to Text
+
+A typical request is to convert a number into a text string explanation of the number. In other words, convert `123.3` into `One Hundred and Twenty three dot three`. We have a workflow that does this. Actually, we have a translation service in the application that gives various functions among which is this one. So, this brings us two ways of doing this:
+
+1.- Create a custom field and update it using the workflow expression `num2str(amount, 'en')`
+2.- Directly use the expression in the template `{expressionnum2str(amount, 'en')}`
+
+The supported translations can be seen in the `cbtranslation/number2string.php` script around line 184.
+
