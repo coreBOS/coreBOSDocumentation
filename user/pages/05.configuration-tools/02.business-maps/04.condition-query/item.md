@@ -33,7 +33,7 @@ Condition Query Business Mapping allows us to assess an SQL command within the a
 <sql>some SQL command with question mark placeholders for parameters</sql>
 <parameters> {optional}
 <parameter></parameter>
-<parameters>
+</parameters>
 <return>{fieldname|count|recordset}</return> 
 </map>
 ```

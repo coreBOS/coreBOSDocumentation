@@ -21,4 +21,4 @@ taxonomy:
         - smtp
 ---
 
-[Imap/SMTP](../../../05.configuration-tools/11.Administration Options/05.outgoingservergmail/item.md)
+[Imap/SMTP](../../../05.configuration-tools/11.Administration%20Options/05.outgoingservergmail/item.md)
