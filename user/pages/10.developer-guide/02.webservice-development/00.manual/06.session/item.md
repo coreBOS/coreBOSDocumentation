@@ -21,16 +21,7 @@ taxonomy:
         - session
 ---
 
----
-
-The extend session service permits us to access the web service API from
-within coreBOS itself. If the user has already validated his session in
-the application we can use that information to log in to the web service
-API and execute commands as if we were connecting from outside the
-application. It is worth noting that both sessions become dependent so
-if the user logs out of either he will automatically be logged out of
-the other connection.
-
+The extend session service permits us to access the web service API from within coreBOS itself. If the user has already validated his session in the application we can use that information to log in to the web service API and execute commands as if we were connecting from outside the application. It is worth noting that both sessions become dependent so if the user logs out of either he will automatically be logged out of the other connection.
 
 <table class="table table-striped">
 <tbody>
