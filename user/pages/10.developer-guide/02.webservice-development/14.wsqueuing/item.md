@@ -82,6 +82,6 @@ This script reads the pending web service operation messages from the queue and 
 <br>
 ------------------------------------------------------------------------
 
-[Next](../../02.coreboswsbrowser)| Chapter 15: coreBOS Web Service Developer Tool.
+[Next](../15.wsidempotent/item.md)| Idempotent operations
 
 ------------------------------------------------------------------------

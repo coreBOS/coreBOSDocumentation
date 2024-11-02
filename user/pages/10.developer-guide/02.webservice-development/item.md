@@ -37,6 +37,7 @@ taxonomy:
   - [Portal user login](manual/portallogin)
   - [Extend Session and Logout](manual/session)
   - [Putting operations in the queue](wsqueuing)
+  - [Idempotent operations](wsidempotent)
   - [coreBOS Web Service Developer Tool](coreboswsbrowser)
   - [coreBOS Webservice Webform](../../08.extensions-integrations/14.coreboswswebform/)
   - [Skip convert fields](skipconvertfields)
