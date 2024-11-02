@@ -37,7 +37,7 @@ connected user as if he were inside coreBOS itself.
 </tr>
 <tr>
 <td><strong>Profile:</strong></td>
-<td>sendRecoverPassword(username:String):Status</td>
+<td>create(elementType:String, element:Object):Object</td>
 </tr>
 <tr>
 <td><strong>Send Type:</td>
