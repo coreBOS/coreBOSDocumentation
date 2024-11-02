@@ -20,7 +20,7 @@ taxonomy:
         - import
 ---
 
-The import feature enables users to import data or records from various sources into coreBOS. Currently, CSV format and VCF (Vcard) format are allowed to import. (Exceptionally iCal import is supported for Calendar module).
+The import feature enables users to import data or records from various sources into coreBOS. Currently, CSV, JSON and VCF (Vcard) format are allowed to import. (Exceptionally iCal import is supported for Calendar module).
 
 ===
 
@@ -175,6 +175,56 @@ This error indicates that the Import on the module that user is trying to import
 
 
 When a non-admin user triggers an import, and admin user tries to import to the same module, at the same time, admin user will not get Import locked error. Instead, admin user will be able to see the current status of the Import triggered by the non-admin user and will also be able to Cancel the import. In this case, when non-admin user is in the middle of the import and the admin user cancels the import, the error message above is shown to the non-admin user.
+
+JSON File Format
+--------------------------
+
+The format of the JSON file is an array of objects that represent the records to be imported. The properties of the object are the names of the fields for the mapping.
+
+```json
+[
+    {
+        "Salutation": "--None--",
+        "First Name": "Lina",
+        "Contact No.": "CON1",
+        "Last Name": "Schwiebert",
+        "Office Phone": "03-3608-5660",
+        "Organization Name": "Chemex Labs Ltd",
+        "Mobile": "0487-835-113",
+        "Lead Source": "Web Site",
+        "Home Phone": "",
+        "Title": "VP Supply Chain",
+        "Other Phone": "",
+        "Department": "Marketing",
+        "Fax": "",
+        "Email": "lina@yahoo.com",
+        "Birthdate": "02-08-1992",
+        "Assistant": "",
+        "Reports To Contact": "",
+        "Unique Identifier": "a609725772dc91ad733b19e4100cf68bb30195d1"
+    },
+    {
+        "Salutation": "--None--",
+        "First Name": "Julieta",
+        "Contact No.": "CON2",
+        "Last Name": "Cropsey",
+        "Office Phone": "07-4217-6258",
+        "Organization Name": "Atrium Marketing Inc",
+        "Mobile": "0420-286-404",
+        "Lead Source": "Self Generated",
+        "Home Phone": "",
+        "Title": "VP Supply Chain",
+        "Other Phone": "",
+        "Department": "Management",
+        "Fax": "",
+        "Email": "julieta@yahoo.com",
+        "Birthdate": "07-12-1996",
+        "Assistant": "",
+        "Reports To Contact": "",
+        "Unique Identifier": "d9692723137a4f119c900157b38189738e692fc4"
+    }
+]
+```
 
 Frequently Asked Questions
 --------------------------
