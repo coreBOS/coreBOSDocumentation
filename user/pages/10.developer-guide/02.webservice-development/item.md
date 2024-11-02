@@ -36,6 +36,7 @@ taxonomy:
   - [Convert Lead Webservice](convertleadwebservice)
   - [Portal user login](manual/portallogin)
   - [Extend Session and Logout](manual/session)
+  - [Putting operations in the queue](wsqueuing)
   - [coreBOS Web Service Developer Tool](coreboswsbrowser)
   - [coreBOS Webservice Webform](../../08.extensions-integrations/14.coreboswswebform/)
   - [Skip convert fields](skipconvertfields)

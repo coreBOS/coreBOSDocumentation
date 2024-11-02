@@ -84,12 +84,10 @@ The extend session service permits us to access the web service API from within 
 </tbody>
 </table>
 
-
-
 <br>
 ------------------------------------------------------------------------
 
-[Next](../../02.coreboswsbrowser)| Chapter 15: coreBOS Web Service Developer Tool.
+[Next](../../14.wsqueuing)| Putting operations in the queue
 
 ------------------------------------------------------------------------
 
