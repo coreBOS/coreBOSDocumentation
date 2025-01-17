@@ -715,6 +715,22 @@ This is what the Contacts maps looked like in my tests.
 * you have full control of the fields that are synced through the maps
 * records are not really deleted: in coreBOS they will be marked as deleted setting a check box field in the record and in Mautic the corebos_id and company_corebos_id fields will be set to blank to stop the synchronization between the two applications for this record.
 
+## Mautic Form Integration
+
+Besides the bidirectional Contact/Account integration we also support forms. This part of the integration permits Evolutivo to receive the fields of a form created in Mautic and create a Contact and, optionally, a Potential directly in Evolutivo. This is exactly what the [web forms](https://blog.evolutivo.it/blog/mail2entity) and [web service webforms](https://corebos.com/docs_grav/extensions-integrations/coreboswswebform) extension do but, using Mautic you get the extra benefit of all the automation magic Mautic brings to the table.
+
+To get this working, in Mautic we must configure another webhook to send the form data to Evolutivo:
+
+![mautic form webhook](./mauticformwebhook.png)
+
+Remember to add ALL the mandatory fields in the Contact module to the forms you create in Mautic.
+
+![mautic form fields](./mauticformfields.png)
+
+On the Evolutivo side, you need to configure two things. One is to fill in the webhook secret in the Mautic integration configuration field and the other is to set the global variable `Mautic_CreatePotential_OnFormSubmission` to 1 if you want to have the form create also a potential record for you.
+
+Note that if the contact filling the form already has a record in Mautic/Evolutivo, the record will be updated and a new potential record will be added.
+
 ## Going Forward
 
 Some of the future goals are:
