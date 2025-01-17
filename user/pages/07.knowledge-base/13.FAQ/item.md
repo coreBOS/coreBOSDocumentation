@@ -24,7 +24,7 @@ taxonomy:
 - [Hi, I'm looking at including the Project ID in a email sent from a workflow on project creation (to make a URL link in the email)](../13.FAQ/item.md#hi-i-m-looking-at-including-the-project-id-in-a-email-sent-from-a-workflow-on-project-creation-to-ma)
 - [My vtigercron.php script isn't working because I don't have PHP CLI installed. How can I fix that?](../13.FAQ/item.md#my-vtigercron-php-script-isn-t-working-because-i-don-t-have-php-cli-installed-how-can-i-fix-that)
 - [My vtigercron.php script isn't working because I don't have PHP CLI installed. I changed the CLI to apache2handler following the previous question. Can that produce any problems?](../13.FAQ/item.md#my-vtigercron-php-script-isn-t-working-because-i-don-t-have-php-cli-installed-i-changed-the-cli-to-a)
-- [I know as a security feature vtiger CRM and coreBOS will auto log out a user after a certain time. Is there a way to adjust how long the system waits before auto logging out a user?](../13.FAQ/item.md#i-know-as-a-security-feature-vtiger CRM-and-corebos-will-auto-log-out-a-user-after-a-certain-time-is-)
+- [I know as a security feature vtiger CRM/coreBOS will auto log out a user after a certain time. Is there a way to adjust how long the system waits before auto logging out a user?](../13.FAQ/item.md#i-know-as-a-security-feature-vtiger%20CRM-and-corebos-will-auto-log-out-a-user-after-a-certain-time-is-)
 - [How to extend the session. I keep getting logged out of the program](../13.FAQ/item.md#how-to-extend-the-session-i-keep-getting-logged-out-of-the-program)
 - [From Portal column doesn't display the correct value. It seems that even though my customers create tickets from the Customer Portal, the column From Portal is NO for all the tickets. How does this work? Should it not be YES for the tickets created from Customer Portal?](../13.FAQ/item.md#from-portal-column-doesn-t-display-the-correct-value-it-seems-that-even-though-my-customers-create-t)
 - [Automatic number fields are not sorting correctly. For example, I get TT1, TT11, TT12, TT2,... instead of TT1, TT2, TT3, ..., TT11, TT12](../13.FAQ/item.md#automatic-number-fields-are-not-sorting-correctly-for-example-i-get-tt1-tt11-tt12-tt2-instead-of-tt1)
@@ -103,8 +103,8 @@ FIX INSTRUCTIONS <br><br>
 ```php
 echo(PHP_SAPI);
 ```
-2.  Check your adminstrative email for the cron job or check the log. You will notice that the value of PHP_SAPI is not "cli" but rather something like "cgi-fcgi" (or fast cgi).
-3.  In the statement above , if(PHP_SAPI === "cli" …. , replace "cli" with "cgi-fcgi" or whatever your value of PHP_SAPI is. And of course, you can now delete the echo statement.
+1.  Check your adminstrative email for the cron job or check the log. You will notice that the value of PHP_SAPI is not "cli" but rather something like "cgi-fcgi" (or fast cgi).
+2.  In the statement above , if(PHP_SAPI === "cli" …. , replace "cli" with "cgi-fcgi" or whatever your value of PHP_SAPI is. And of course, you can now delete the echo statement.
 
 ---
 <br>
