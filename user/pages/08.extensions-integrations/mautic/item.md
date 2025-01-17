@@ -721,11 +721,11 @@ Besides the bidirectional Contact/Account integration we also support forms. Thi
 
 To get this working, in Mautic we must configure another webhook to send the form data to Evolutivo:
 
-![mautic form webhook](./mauticformwebhook.png?width=100%)
+![mautic form webhook](mauticformwebhook.png?width=100%)
 
 Remember to add ALL the mandatory fields in the Contact module to the forms you create in Mautic.
 
-![mautic form fields](./mauticformfields.png?width=100%)
+![mautic form fields](mauticformfields.png?width=100%)
 
 On the Evolutivo side, you need to configure two things. One is to fill in the webhook secret in the Mautic integration configuration field and the other is to set the global variable `Mautic_CreatePotential_OnFormSubmission` to 1 if you want to have the form create also a potential record for you.
 
