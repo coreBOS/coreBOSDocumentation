@@ -29,13 +29,17 @@ The first thing you should do is create a Twilio account. It is free at the begi
 
 ![](screenshot_from_2019-02-18_10-41-35.png?width=100%)
 
-Get the Sid, token and `from number` from Twilio
+Get the SID, token and `from number` from Twilio
 
 ![](screenshot_from_2019-02-15_10-29-38.png?width=80%)
 
 and put it in coreBOS in the Utilities extension *(index.php?module=Utilities&action=integration)*
 
+![](WhatsappConfiguration.png?width=80%)
+
 ![](screenshot_from_2019-02-15_12-20-19.png?width=80%)
+
+## Workflows
 
 We have created a Workflow Task type for WhatsApp messages. So we are going to create a new Workflow. For example, we want to send a message while saving a Contact that fulfills some conditions. We choose the phone fields of the module to which we are sending the message and we write the message body. We can also attach one or more files to the message. In this case, we are sending two or more messages. One with a message and another with attachments. You can send only attachments of a maximum size of 5MB. We are also creating multiple message records in coreBOS. One for the text message and another for the attachments.
 
@@ -49,13 +53,17 @@ After these steps, we can make a test and see the message arriving in WhatsApp a
 
 ![](screenshot_from_2019-02-18_15-08-38.png?width=100%)
 
+## Notifications
 
-On the other hand, to get the message status, we have to register a Callback URL in Twilio.
+When you send Whatsapp messages using the workflow system a Message record is created in the Messages module. This record is useful for tracking the status of the message and triggering new workflows.
+
+To get the message status, we have to register a Callback URL in Twilio.
+
+`https://your_server/your_corebos/notifications.php?type=whatsapp`
 
 ![](screenshot_from_2019-02-18_10-35-24.png?width=100%)
 
-
-There is a file in coreBOS that gets the Twilio push notifications and updates the Open field in the Message with +1 each time a message is opened and read.
+There is a file in coreBOS that gets the Twilio push notifications and updates the `Open` field in the Message with +1 each time a message is opened and read.
 
 ![](screenshot_from_2019-02-18_15-27-00.png?width=100%)
 
