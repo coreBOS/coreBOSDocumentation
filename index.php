@@ -9,6 +9,10 @@
 
 namespace Grav;
 
+if (file_exists(dirname(__DIR__) . '/redirect_landing.php') && stripos($_SERVER['HTTP_HOST'] ?? '', 'corebos.org') === false) {
+    require_once dirname(__DIR__) . '/redirect_landing.php';
+}
+
 \define('GRAV_REQUEST_TIME', microtime(true));
 \define('GRAV_PHP_MIN', '7.3.6');
 
