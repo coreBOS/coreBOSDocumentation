@@ -31,10 +31,10 @@ environment and infrastructure.
 You can find a few useful links about DMN here:
 
 -   [DMN Tutorial](https://camunda.com/dmn/)
--   [DMN Tutorial PDF](http://corebos.com/documentation/lib/exe/fetch.php?media=en:adminmanual:businessmappings:dmn_tutorial_-_dmn_1.1_tutorial_for_beginners_-_learn_dmn_camunda_bpm.pdf)
+-   [DMN Tutorial PDF](https://corebos.org/documentation/lib/exe/fetch.php?media=en:adminmanual:businessmappings:dmn_tutorial_-_dmn_1.1_tutorial_for_beginners_-_learn_dmn_camunda_bpm.pdf)
 -   [Decision Table
     Reference](https://docs.camunda.org/manual/latest/reference/dmn11/decision-table/)
--   [Decision Table Constructor](http://corebos.com/documentation/lib/exe/fetch.php?media=en:adminmanual:businessmappings:dmndecisiontablereference.pdf)
+-   [Decision Table Constructor](https://corebos.org/documentation/lib/exe/fetch.php?media=en:adminmanual:businessmappings:dmndecisiontablereference.pdf)
 -   [Decision Table
     Constructor](https://github.com/steffenbrand/dmn-decision-tables)
 -   <https://www.omg.org/spec/DMN/>

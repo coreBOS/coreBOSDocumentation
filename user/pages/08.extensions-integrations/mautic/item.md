@@ -717,7 +717,7 @@ This is what the Contacts maps looked like in my tests.
 
 ## Mautic Form Integration
 
-Besides the bidirectional Contact/Account integration we also support forms. This part of the integration permits Evolutivo to receive the fields of a form created in Mautic and create a Contact and, optionally, a Potential directly in Evolutivo. This is exactly what the [web forms](https://blog.evolutivo.it/blog/mail2entity) and [web service webforms](https://corebos.com/docs_grav/extensions-integrations/coreboswswebform) extension do but, using Mautic you get the extra benefit of all the automation magic Mautic brings to the table.
+Besides the bidirectional Contact/Account integration we also support forms. This part of the integration permits Evolutivo to receive the fields of a form created in Mautic and create a Contact and, optionally, a Potential directly in Evolutivo. This is exactly what the [web forms](https://blog.evolutivo.it/blog/mail2entity) and [web service webforms](https://corebos.org/docs_grav/extensions-integrations/coreboswswebform) extension do but, using Mautic you get the extra benefit of all the automation magic Mautic brings to the table.
 
 To get this working, in Mautic we must configure another webhook to send the form data to Evolutivo:
 

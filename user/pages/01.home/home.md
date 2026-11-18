@@ -15,7 +15,7 @@ cards:
     -
         title: "Web Site"
         subtitle: "Extolling the project"
-        path: https://corebos.com
+        path: https://corebos.org
         target: corebosweb
     -
         title: "Blog"
@@ -28,19 +28,9 @@ cards:
         path: https://www.youtube.com/channel/UCmUzoelIqe2eL3YvEv5kLYw
         target: corebosyt
     -
-        title: "Discussions"
-        subtitle: "Sharing knowledge"
-        path: https://discussions.corebos.org/
-        target: corebosforum
-    -
-        title: "Chat"
-        subtitle: "Live community support"
-        path: https://gitter.im/corebos/discuss
-        target: coreboschat
-    -
         title: "Family"
         subtitle: "More awesomeness"
-        path: https://corebos.com/corebos/corebos-family
+        path: https://corebos.org/corebos/corebos-family
         target: corebosfam
     -
         title: "Code"
@@ -52,11 +42,6 @@ cards:
         subtitle: "Tracking progress"
         path: https://github.com/tsolucio/corebos/issues
         target: corebosissues
-    -
-        title: "Demo Site"
-        subtitle: "Give it a try"
-        path: http://demo.corebos.com/
-        target: corebosdemo
 ---
 
 <p style="text-align:center;font-weight: 700;font-size: 2.0rem;color:#ffb018;">core Business Operating System</p>

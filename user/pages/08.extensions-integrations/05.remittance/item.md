@@ -91,7 +91,7 @@ Vídeo con una demostración aquí:
 
 Como con casi todas nuestras extensiones la hemos adaptado para diversos clientes, haciendo, por ejemplo, las remesas contra nuestro módulo de Cobros y Pagos, permitiendo, así hacer remesas de cobros parciales en vez de facturas enteras.
 
-Ponte en [contacto con nosotros para más información](https://corebos.com/contact).
+Ponte en [contacto con nosotros para más información](https://corebos.org/contact).
 
 <div class="notices blue">
 <h3>¿Donde añades la cuenta bancaria del deudor de la factura?</h3>

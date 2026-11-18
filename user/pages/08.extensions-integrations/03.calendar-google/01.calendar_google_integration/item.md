@@ -98,7 +98,7 @@ Due to Google Security issues, integration does not require user's email passwor
 
 ![](pantalla_de_autorizacion.png?width=70%)
 
-7.- Now you can finish to config the Client ID, here is important that you write the url to your coreBOS/sync.php in Redirect URI. For example: **<http://yourcorebos.com/sync,php>**.
+7.- Now you can finish to config the Client ID, here is important that you write the url to your coreBOS/sync.php in Redirect URI. For example: **<https://yourcorebos.org/sync.php>**.
 
 ![](crear_id_cliente_2.png?width=70%)
 
